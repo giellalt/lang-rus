@@ -1,0 +1,3 @@
+LEXICON ADJSUF
++A+Msc+Sg+Nom:%>ой # ;
+

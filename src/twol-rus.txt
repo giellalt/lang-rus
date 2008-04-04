@@ -1,4 +1,4 @@
-! Kildin Sámi TWOLC file
+! Russian TWOLC file
 !
 ! $Id$
 !
@@ -10,8 +10,14 @@ Alphabet
   о О п П р Р с С т Т у У ф Ф 
   х Х ц Ц ч Ч ш Ш щ Щ ъ Ъ ы Ы 
   ь Ь э Э ю Ю я Я ё Ё 
+!  а2:а о2:о е2:е и2:и у2:у я2:я ё2:ё ы2:ы ю2:ю э2:э
+!  А2:А О2:О Е2:Е И2:И У2:У Я2:Я Ё2:Ё Ы2:Ы Ю2:Ю Э2:Э
+  %^LV:0
   %>:0 ;
 
+
+!  а2 о2 е2 и2 у2 я2 ё2 ы2 ю2 э2
+!  А2 О2 Е2 И2 У2 Я2 Ё2 Ы2 Ю2 Э2
 
 Sets
  C	= б Б в В г Г д Д ж Ж з З й Й к К л Л м М н Н п П р Р 
@@ -19,7 +25,7 @@ Sets
  V	= а А е Е и И о О у У ы Ы ю Ю я Я ё Ё ;
  PALVOW = е Е и И ю Ю я Я ё Ё ;
  NPLVOW = а А о О у У ы Ы э Э ;
-
+ Dummy  = %^LV ;
 
 !Definitions
 !;
@@ -30,17 +36,66 @@ Rules
 
 "Palatal Suffix Vowel"
  Vx:Vy <=> ь: %>:0 _ ;
-       where Vx in ( а А э Э ы Ы o O у У )
-       	     Vy in ( я Я е Е и И ё Ё ю Ю )
+       where Vx in ( а А э Э ы Ы о О у У )
+       	     Vy in ( я Я е Е и И е Е ю Ю )
 	     matched ;
+
+!€ житель%>ов
+!€ житель0ев
 
 "Palatal Mark Deletion"
  ь:0 <=> C: _ %>:0 [ :я | :Я | :е | :Е | :и | :И | :ё | :Ё | :ю | :Ю ] ;
 
 
 "Neuter o Deletion"
-о:0 <=> V (C+) _ %>:0 ;
+Vx:0 <=> V (C+) _ (Dummy:) %>:0 ;
+	where Vx in ( а А о О я Я е Е ё Ё ) ;
 
 !€ правило%>а
 !€ правил00а
+
+"Light vowel o"
+ Vx:0 <=> _ C %^LV:0 %>:0 V ;
+       where Vx in ( о О ) ;
+       
+!€ со2н%>a
+!€ с0н0а
+
+"Light vowel e in after non-l"
+ Vx:0 <=>  [ C - [л|Л]] _ C (ь:) %^LV:0 %>:0 V ;
+ 		where Vx in ( е Е ё Ё ) ;
+
+"Light vowel e in after l"
+ Vx:ъ <=>  [л|Л] _ C %^LV:0 %>:0 V ;
+ 		where Vx in ( е Е ё Ё ) ;
+
+"Light vowel e in after Vow"
+ Vx:Vy <=>  V _ C %^LV:0 %>:0 V ;
+ 		where Vx in ( е Е ё Ё ) ;
+ 		where Vx in ( й  Й  й  Й ) ;
+ 		matched ;
+
+
+!"Light vowel o"
+! Vx:0 <=> _ C %>:0 V ;
+!       where Vx in ( о2 О2 ) ;
+!       
+!!€ со2н%>a
+!!€ с0н0а
+!
+!"Light vowel e in after non-l"
+! Vx:0 <=>  [ C - [л|Л]] _ C %>:0 V ;
+! 		where Vx in ( е2 Е2 ё2 ё2 ) ;
+!
+!"Light vowel e in after l"
+! Vx:ъ <=>  [л|Л] _ C %>:0 V ;
+! 		where Vx in ( е2 Е2 ё2 ё2 ) ;
+!
+!"Light vowel e in after Vow"
+! Vx:Vy <=>  V _ C %>:0 V ;
+! 		where Vx in ( е2 Е2 ё2 Ё2 ) ;
+! 		where Vx in ( й  Й  й  Й ) ;
+! 		matched ;
+
+
 

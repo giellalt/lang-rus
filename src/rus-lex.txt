@@ -19,6 +19,12 @@ Multichar_Symbols
 +Ord
 
 
+%^LV ! Light vowel
+
+!а2 о2 е2 и2 у2 я2 ё2 ы2 ю2 э2
+!А2 О2 Е2 И2 У2 Я2 Ё2 Ы2 Ю2 е2
+
+
 
 ! Key lexicon
 

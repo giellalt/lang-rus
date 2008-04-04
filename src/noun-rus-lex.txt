@@ -2,14 +2,60 @@
 ! Russian noun lexicon !
 ! ==================== !
 
+! Zaliznjak codes from Berkov RNO.
 ! List of lexicon types
-! 1a, 1b, 2, ... = Zaliznjak
-! m, f, n = gender info
-! a, i = animate, inanimate
+! The declension lexica consist of one
+! numeral and 3 (or four) letters, as follows
+! 1: digit = Zaliznjak declension class
+!(2: x = Zaliznjak * symbol, for light vowel)
+! 3: letter a-f = Zaliznjak stress pattern
+! 4: = m, f, n = gender info
+! 5: a, i = animate, inanimate
 
 LEXICON Noun 
 тигр 1ama "tiger" ;
 спор 1ami "strid" ;
+
+сон 1xami "søvn" ;
+орёл 1xami "ørn" ;
+лев 1xami "løve" ;
+заём 1xami "lån" ;
+
+сосна:сосена 1xafi "furu" ;
+кукла:кукола 1xafi "dokke" ;
+свадъба 1xafi "bryllup" ;
+
+число 1xani "tall" ;
+окно 1xani "vindu" ;
+писъмо 1xani "brev" ;
+
+житель 2ama "innbygger" ;
+вихрь 2ami "hvirvelvind" ;
+дождь 2bmi "regn" ;
+море 2cni "hav" ;
+бониня 2afa "gudinne" ;
+буря 2afi "storm" ;
+ступня 2bfi "fotsåle" ;
+
+пополь 2cmi "poppel" ;
+гость 2ema "gjest" ;
+конь 2fma "hest" ;
+доля 2efi "lodd" ;
+ноздря 2ffi "nesebor" ;
+
+день 2xmi "dag" ;
+огонь 2xmi "ild" ;
+
+капля 2xfi "dråpe" ;
+песня 2xfi "sang" ;
+спалъня 2xfi "soverom" ;
+бойня 2xfi "slakteri" ;
+
+
+!сон:со2н 1ami "søvn" ;
+!орёл:орё2л 1ami "ørn" ;
+!лев:ле2в 1ami "løve" ;
+!заём:за2ём 1ami "lån" ;
 
 спора 1afa "" ;
 

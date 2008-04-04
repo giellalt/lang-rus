@@ -1,0 +1,2 @@
+LEXICON Numeral
++Num+Sg+Nom:один # ;

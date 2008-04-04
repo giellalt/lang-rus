@@ -56,16 +56,17 @@ caseconv.fst: ../bin/caseconv.fst
 # This goal depends on a bunch of lexicon files
 
 rus.save: ../bin/rus.save
-../bin/rus.save: rus-lex.txt noun-rus-morph.txt noun-rus-lex.txt \
-        adj-rus-lex.txt \
-	adv-rus-lex.txt verb-rus-lex.txt pron-rus-lex.txt punct-rus-lex.txt \
-	pp-rus-lex.txt
+../bin/rus.save: ../bin/twol-rus.bin rus-lex.txt noun-rus-lex.txt noun-rus-morph.txt \
+	adj-rus-lex.txt adj-rus-morph.txt verb-rus-lex.txt verb-rus-morph.txt \
+	adv-rus-lex.txt pron-rus-lex.txt punct-rus-lex.txt cc-rus-lex.txt \
+	cs-rus-lex.txt pp-rus-lex.txt numeral-rus-lex.txt interj-rus-lex.txt
 	@echo
 	@echo "*** Building rus-lex.save ***" ;
 	@echo
-	printf "compile-source rus-lex.txt noun-rus-morph.txt noun-rus-lex.txt \
+	printf "compile-source rus-lex.txt noun-rus-lex.txt noun-rus-morph.txt \
 	adj-rus-lex.txt verb-rus-lex.txt verb-rus-morph.txt pron-rus-lex.txt \
-	adv-rus-lex.txt pp-rus-lex.txt punct-rus-lex.txt \n\
+	adj-rus-morph.txt adv-rus-lex.txt pp-rus-lex.txt punct-rus-lex.txt \
+	cc-rus-lex.txt cs-rus-lex.txt numeral-rus-lex.txt interj-rus-lex.txt \n\
 	read-rules ../bin/twol-rus.bin \n\
 	compose-result \n\
 	save-result ../bin/rus.save \n\

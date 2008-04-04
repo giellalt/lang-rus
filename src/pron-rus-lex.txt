@@ -5,10 +5,10 @@ Demonstrative ;
 Reflexive ;
 
 LEXICON Personal
-K ;
+# ;
 
 LEXICON Demonstrative
-K ;
+# ;
 
 LEXICON Reflexive
-K ;
+# ;

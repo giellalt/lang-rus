@@ -1,4 +1,6 @@
+
 LEXICON Punctuation 
+
 +CLB:%,   # ;
 +CLB:%.   # ;
 +CLB:%:   # ;
@@ -7,8 +9,8 @@ LEXICON Punctuation
 +CLB:%?	  # ;
 +PUNCT:%-  # ;
 +HYPH:%" # ;
-+HYPH:%« # ;
-+HYPH:%» # ;
++HYPH:%Â« # ;
++HYPH:%Â» # ;
 +PAR:%[ # ;
 +PAR:%] # ;
 +PAR:%( # ;

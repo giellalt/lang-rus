@@ -1,0 +1,66 @@
+
+
+! Noun classes
+! ============
+
+
+LEXICON 1ama
++N+MscSg+Acc:%>а # ;
++N+Msc:           1am ;
+
+LEXICON 1ami
++N+Msc+Sg+Acc: # ;
++N+Msc:        1am ;
+
+
+LEXICON 1ani
++N+Neu+Sg+Nom:%>о  # ;
++N+Neu+Sg+Gen:%>а  # ;
++N+Neu+Sg+Dat:%>у  # ;
++N+Neu+Sg+Acc:%>о  # ;
++N+Neu+Sg+Ins:%>ом # ;
++N+Neu+Pl+Nom:%>а  # ;
++N+Neu+Pl+Gen:%>   # ;
++N+Neu+Pl+Dat:%>ам # ;
++N+Neu+Pl+Acc:%>а  # ;
+                   LIL ; 
+
+LEXICON 1afa
++N+Fem+Pl+Acc:%> # ;
+                 1af ;
+                 
+LEXICON 1afi
++N+Fem+Pl+Acc:%>ы # ;
++N+Fem:           1af ;
+                 
+
+
+! Suffix classes
+! ==============
+
+LEXICON 1am
++Sg+Nom: # ;
++Sg+Gen:%>а # ;
++Sg+Dat:%>у # ;
++Sg+Ins:%>ом # ;
++Pl+Nom:%>Ы # ;
++Pl+Gen:%>ов # ;
++Pl+Dat:%>ам # ;
++Pl+Acc:%>ов # ;
+             LIL ;
+
+LEXICON 1af
++Sg+Nom:%>а  # ;
++Sg+Gen:%>ы  # ;
++Sg+Dat:%>е  # ;
++Sg+Acc:%>у  # ;
++Sg+Ins:%>ой # ;
++Pl+Nom:%>ы  # ;
++Pl+Gen:%>   # ;
++Pl+Dat:%>ам # ;
+             LIL ;
+                          
+LEXICON LIL
++Sg+Loc:%>е   # ;
++Pl+Ins:%>ami # ;
++Pl+Loc:%>ах  # ;

@@ -9,6 +9,18 @@
 # Here we build the final generator , an inverted transducer of the analyzer.
 # It is dependent upon rus.save
 
+XFST = xfst -utf8
+LEXC = lexc -utf8
+TWOLC = twolc -utf8
+
+ifeq (victorio.uit.no, $(shell hostname))
+XFST = /opt/sami/xerox/c-fsm/ix86-linux2.6-gcc3.4/bin/fst -utf8
+LEXC = /opt/sami/xerox/bin/lexc -utf8
+TWOLC = /opt/sami/xerox/bin/twolc -utf8
+endif
+
+
+
 irus.fst: ../bin/irus.fst
 ../bin/irus.fst: ../bin/rus.fst
 	@echo
@@ -18,7 +30,7 @@ irus.fst: ../bin/irus.fst
 	invert net \n\
 	save stack ../bin/irus.fst \n\
 	quit \n" > ../../tmp/irus-fst-script
-	@xfst -utf8 < ../../tmp/irus-fst-script
+	$(XFST) < ../../tmp/irus-fst-script
 	@rm -f ../../tmp/irus-fst-script
 
 
@@ -33,7 +45,7 @@ rus.fst: ../bin/rus.fst
 	[@\"../bin/caseconv.fst\"]] ; \n\
 	save stack ../bin/rus.fst \n\
 	quit \n" > ../../tmp/rus-fst-script
-	@xfst -utf8 < ../../tmp/rus-fst-script
+	$(XFST) < ../../tmp/rus-fst-script
 	@rm -f ../../tmp/rus-fst-script
 
 
@@ -48,7 +60,7 @@ caseconv.fst: ../bin/caseconv.fst
 	@printf "read regex < case.regex \n\
 	save stack ../bin/caseconv.fst \n\
 	quit \n" > ../../tmp/caseconv-script
-	@xfst -utf8 < ../../tmp/caseconv-script
+	$(XFST) < ../../tmp/caseconv-script
 	@rm -f ../../tmp/caseconv-script
 
 
@@ -71,7 +83,7 @@ rus.save: ../bin/rus.save
 	compose-result \n\
 	save-result ../bin/rus.save \n\
 	quit \n" > ../../tmp/rus-lex-save-script
-	@lexc -utf8 < ../../tmp/rus-lex-save-script
+	$(LEXC) < ../../tmp/rus-lex-save-script
 	rm -f ../../tmp/rus-lex-save-script
 
 # The second goal is to build xfst-rus.bin
@@ -86,7 +98,7 @@ twol-rus.bin: ../bin/two-rus.bin
 	compile \n\
 	save-binary ../bin/twol-rus.bin \n\
 	quit \n" > ../../tmp/twol-rus-script
-	@twolc -utf8 < ../../tmp/twol-rus-script
+	$(TWOLC) < ../../tmp/twol-rus-script
 	@rm -f ../../tmp/twol-rus-script
 
 clean:

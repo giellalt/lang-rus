@@ -7,8 +7,7 @@ echo <<defining Cns and Vow...>>
 define Vow       [ a | á | e | i | o | u | y | æ | ø | å | ä | ö | 
                    A | Á | E | I | O | U | Y | Æ | Ø | Å | Ä | Ö | 
 é | ó | ú | í | à | è | ò | ù | ì | ë | ü | ï | â | ê | ô | û | î | ã | ý 
-É | Ó | Ú | Í | À | È | Ò | Ù | Ì | Ë | Ü | Ï | Â | Ê | Ô | Û | Î | Ã | Ý |
-e7 | o7 ] ;
+É | Ó | Ú | Í | À | È | Ò | Ù | Ì | Ë | Ü | Ï | Â | Ê | Ô | Û | Î | Ã | Ý ] ;
 
 
 define Cns [ b | c | č | d | đ | f | g | h | j | k | l | m | n | ŋ | ñ | ń | 
@@ -25,7 +24,7 @@ define frontC c -> s , C -> S || _ [ i | e | æ | y ] ;
 define backC  c -> k , C -> K || _ [ a | o | u ] ;
 define backO  o -> u , O -> U || _ n [ g | d ] ;
 
-define diphth ø y -> о й , Ø y -> О й ;
+define diphth ø y -> о й , Ø y -> О й , e y -> е й , E y -> Є й ;
 
 
 define consassim d -> n || n _ [.#.|Cns] ,,
@@ -67,7 +66,12 @@ define Convert a -> а , A -> А ,
       ä -> я ,     Ä -> Я , 
       ö -> ё ,     Ö -> Ё , 
       æ -> я ,     Æ -> Я , 
-      ø -> ё ,     Ø -> Ё ; 
+      ø -> ё ,     Ø -> Ё ,
+      č -> ч ,     Č -> Ч ,
+      đ -> д ,     Đ -> Д ,
+      ŋ -> ӊ ,     Ŋ -> Н ,
+      š -> ш ,     Š -> Ш ,
+      Ž -> ж ,     Ž -> Ж ; 
       
 
 define CV й а -> я ,

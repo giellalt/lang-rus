@@ -1,0 +1,96 @@
+! ======
+! Conversion from lat to cyr
+! =======
+
+echo <<defining Cns and Vow...>>
+
+define Vow       [ a | á | e | i | o | u | y | æ | ø | å | ä | ö | 
+                   A | Á | E | I | O | U | Y | Æ | Ø | Å | Ä | Ö | 
+é | ó | ú | í | à | è | ò | ù | ì | ë | ü | ï | â | ê | ô | û | î | ã | ý 
+É | Ó | Ú | Í | À | È | Ò | Ù | Ì | Ë | Ü | Ï | Â | Ê | Ô | Û | Î | Ã | Ý |
+e7 | o7 ] ;
+
+
+define Cns [ b | c | č | d | đ | f | g | h | j | k | l | m | n | ŋ | ñ | ń | 
+             B | C | Č | D | Đ | F | G | H | J | K | L | M | N | Ŋ | Ñ | Ń |
+             p | q | r | s | š | t | ŧ | v | w | x | z | ž |   
+             P | Q | R | S | Š | T | Ŧ | V | W | X | Z | Ž ] ; 
+
+
+define Syll Cns* Vow+ Cns* ;
+
+echo << Rules >>
+
+define frontC c -> s , C -> S || _ [ i | e | æ | y ] ;
+define backC  c -> k , C -> K || _ [ a | o | u ] ;
+define backO  o -> u , O -> U || _ n [ g | d ] ;
+
+define diphth ø y -> о й , Ø y -> О й ;
+
+
+define consassim d -> n || n _ [.#.|Cns] ,,
+                 d -> l || l _ [.#.|Cns] ,,
+                 d -> r || r _ [.#.|Cns] ;
+
+define consgroups S j -> Ш , C h r -> К р ;
+
+define specialvow a a -> о , A a -> О ;
+
+! define initialconsgroups 
+
+define Convert a -> а , A -> А , 
+      b -> б ,     B -> Б , 
+      c -> к ,     C -> К , 
+      d -> д ,     D -> Д , 
+      e -> е ,     E -> Е , 
+      f -> ф ,     F -> Ф , 
+      g -> г ,     G -> Г , 
+      h -> х ,     H -> Х , 
+      i -> и ,     I -> И , 
+      j -> й ,     J -> Й , 
+      k -> к ,     K -> К , 
+      l -> л ,     L -> Л , 
+      m -> м ,     M -> М , 
+      n -> н ,     N -> Н , 
+  [å|o] -> о , [Å|O] -> О , 
+      p -> п ,     P -> П , 
+      q -> к ,     Q -> К , 
+      r -> р ,     R -> Р , 
+      s -> с ,     S -> С , 
+      t -> т ,     T -> Т , 
+      u -> у ,     U -> У , 
+      v -> в ,     V -> В , 
+      w -> в ,     W -> В , 
+      x -> к с ,   X -> К С , 
+      y -> ю ,     Y -> Ю , 
+      z -> з ,     Z -> З , 
+      ä -> я ,     Ä -> Я , 
+      ö -> ё ,     Ö -> Ё , 
+      æ -> я ,     Æ -> Я , 
+      ø -> ё ,     Ø -> Ё ; 
+      
+
+define CV й а -> я ,
+          И а -> Я ,
+          й е -> е ,
+          Й е -> Е ,
+          й о -> ё ,
+          Й о -> Ё ,
+          й у -> ю ,
+          Й у -> Ю ;
+
+echo << Compile... >>
+
+read regex [
+     frontC 
+ .o. diphth     
+ .o. backC  
+ .o. backO  
+ .o. consassim
+ .o. consgroups
+ .o. specialvow
+ .o. Convert
+ .o. CV
+ ] ;
+
+invert net ;

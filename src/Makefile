@@ -22,7 +22,9 @@ endif
 
 
 irus.fst: ../bin/irus.fst
-../bin/irus.fst: ../bin/rus.fst
+../bin/irus.fst: ../bin/rus.fst \
+		../bin/cyr2lat_no.fst \
+		../bin/lat2cyr_no.fst 
 	@echo
 	@echo "*** Building the inverse irus.fst ***"
 	@echo
@@ -100,6 +102,34 @@ twol-rus.bin: ../bin/two-rus.bin
 	quit \n" > ../../tmp/twol-rus-script
 	$(TWOLC) < ../../tmp/twol-rus-script
 	@rm -f ../../tmp/twol-rus-script
+
+
+# Here are two goals for making cyrillic to latin converters
+# and vice versa.
+
+cyr2lat_no.fst: ../bin/cyr2lat_no.fst
+../bin/cyr2lat_no.fst: cyr2lat_no.xfst
+	@echo
+	@echo "*** Building cyr2lat.fst ***" ;
+	@echo
+	@printf "source $< \n\
+	save stack $@ \n\
+	quit \n" > ../tmp/cyr2lat-script
+	$(XFST) < ../tmp/cyr2lat-script
+	@rm -f ../tmp/cyr2lat-script
+
+lat2cyr_no.fst: ../bin/lat2cyr_no.fst
+../bin/lat2cyr_no.fst: lat2cyr_no.xfst
+	@echo
+	@echo "*** Building lat2cyr.fst ***" ;
+	@echo
+	@printf "source $< \n\
+	save stack $@ \n\
+	quit \n" > ../tmp/lat2cyr-script
+	$(XFST) < ../tmp/lat2cyr-script
+	@rm -f ../tmp/lat2cyr-script
+
+
 
 clean:
 	@rm -f ../bin/*.bin ../bin/*.fst ../bin/*.save

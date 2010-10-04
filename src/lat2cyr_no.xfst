@@ -16,26 +16,73 @@ define Cns [ b | c | č | d | đ | f | g | h | j | k | l | m | n | ŋ | ñ | ń 
              P | Q | R | S | Š | T | Ŧ | V | W | X | Z | Ž ] ; 
 
 
+define CyrVow    [ а | э | ы | о | у | я | е | и | ё | ю
+                   А | Э | Ы | О | У | Я | Е | И | Ё | Ю ] ;
+
+define NonPalVow [ а | э | ы | о | у | я | е | и | ё | ю ] ;
+
+define PalVow    [ А | Э | Ы | О | У | Я | Е | И | Ё | Ю ] ;
+
+define CyrCns   [ б | в | г | д | ж | з | й | к | л | м | н | 
+                  п | р | с | т | ф | х | ц | ч | ш | щ |
+                  Б | В | Г | Д | Ж | З | Й | К | Л | М | Н |
+                  П | Р | С | Т | Ф | Х | Ц | Ч | Ш | Щ ] ;
+
 define Syll Cns* Vow+ Cns* ;
 
 echo << Rules >>
+
+define lexicalexceptions [
+
+{Hamsun} -> {Гамсун} ,
+{Sigurd} -> {Сигурд} , 
+{Harald} -> {Харальд} 
+
+] ;
 
 define frontC c -> s , C -> S || _ [ i | e | æ | y ] ;
 define backC  c -> k , C -> K || _ [ a | o | u ] ;
 define backO  o -> u , O -> U || _ n [ g | d ] ;
 
-define diphth ø y -> о й , Ø y -> О й , e y -> е й , E y -> Є й ;
+define diphth ø y -> о й , Ø y -> О й , 
+              e y -> е й , E y -> Є й , 
+              a u -> э у , A u -> Э у ;
+
+define shortUandO u -> у , U -> У , o -> о , O -> О || _ Cns Cns [.#.|Cns] ;
 
 
-define consassim d -> n || n _ [.#.|Cns] ,,
-                 d -> l || l _ [.#.|Cns] ,,
-                 d -> r || r _ [.#.|Cns] ;
+define consassim d -> 0 || n _ [.#.|Cns] ,,
+                 d -> 0 || l _ [.#.|Cns] ;
+#                 d -> 0 || r _ [.#.|Cns] ; # they like the -rd
 
-define consgroups S j -> Ш , C h r -> К р ;
 
 define specialvow a a -> о , A a -> О ;
 
-! define initialconsgroups 
+define specialL l -> л , L -> Л || [ o | å | a | O | Å | A ] (e|h|r) _ ;
+define generalL l -> л ь , L -> Л Ь ;
+
+
+define initialconsgroups [ 
+   C h r -> К р ,
+   G j ø -> Ё ,
+   G j o -> Ю ,
+   G j a -> Я ,
+   S k j -> Ш ,
+   S j   -> Ш , 
+   H j a -> Я ,
+   H j e -> Е ,
+   H j ø -> Ё ,
+   H j o -> Ю ,
+   K j   -> Х ,
+   k j   -> x
+   ] ;
+
+define specialO o -> у , О -> У , u -> у , U -> У || _ [ m | n g ] ;
+
+
+define silentH h -> 0 || Vow _ ;
+
+! the big conversion rule
 
 define Convert a -> а , A -> А , 
       b -> б ,     B -> Б , 
@@ -48,10 +95,9 @@ define Convert a -> а , A -> А ,
       i -> и ,     I -> И , 
       j -> й ,     J -> Й , 
       k -> к ,     K -> К , 
-      l -> л ,     L -> Л , 
       m -> м ,     M -> М , 
       n -> н ,     N -> Н , 
-  [å|o] -> о , [Å|O] -> О , 
+      o -> у ,     O -> У ,
       p -> п ,     P -> П , 
       q -> к ,     Q -> К , 
       r -> р ,     R -> Р , 
@@ -67,6 +113,7 @@ define Convert a -> а , A -> А ,
       ö -> ё ,     Ö -> Ё , 
       æ -> я ,     Æ -> Я , 
       ø -> ё ,     Ø -> Ё ,
+      å -> о ,     Å -> О , 
       č -> ч ,     Č -> Ч ,
       đ -> д ,     Đ -> Д ,
       ŋ -> ӊ ,     Ŋ -> Н ,
@@ -74,26 +121,39 @@ define Convert a -> а , A -> А ,
       Ž -> ж ,     Ž -> Ж ; 
       
 
+define CVinContext й  -> ь || CyrCns _ CyrVow ;
+
+
+define iDiphthong и -> й || CyrVow _ ;
+
 define CV й а -> я ,
-          И а -> Я ,
+          Й а -> Я ,
           й е -> е ,
           Й е -> Е ,
-          й о -> ё ,
-          Й о -> Ё ,
+          й о -> ю ,
+          Й о -> Ю ,
           й у -> ю ,
           Й у -> Ю ;
 
 echo << Compile... >>
 
 read regex [
-     frontC 
+     lexicalexceptions
+ .o. frontC 
  .o. diphth     
+ .o. shortUandO
  .o. backC  
  .o. backO  
  .o. consassim
- .o. consgroups
  .o. specialvow
+ .o. specialL
+ .o. generalL
+ .o. initialconsgroups
+ .o. specialO
+ .o. silentH
  .o. Convert
+ .o. CVinContext
+ .o. iDiphthong
  .o. CV
  ] ;
 

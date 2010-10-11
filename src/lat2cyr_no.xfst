@@ -36,7 +36,8 @@ define lexicalexceptions [
 
 {Hamsun} -> {Гамсун} ,
 {Sigurd} -> {Сигурд} , 
-{Harald} -> {Харальд} 
+{Harald} -> {Харальд} ,
+{Helsingfors} -> {Гелсингфорс}
 
 ] ;
 
@@ -69,6 +70,8 @@ define initialconsgroups [
    G j a -> Я ,
    S k j -> Ш ,
    S j   -> Ш , 
+   S k i -> Ш и ,
+   S k y -> Ш ю ,
    H j a -> Я ,
    H j e -> Е ,
    H j ø -> Ё ,

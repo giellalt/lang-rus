@@ -101,10 +101,10 @@ LEXICON 1ani
 LEXICON 1afa
 +N+Fem+Pl+Acc:%> # ;
 +N+Fem:          1af ;
-                 
-LEXICON 1afi
-+N+Fem+Pl+Acc:%>ы # ;
-+N+Fem:           1af ;
+           
+!LEXICON 1afi ! XXX error, check this
+!+N+Fem+Pl+Acc:%>ы # ;
+!+N+Fem:           1af ;
 
 LEXICON 2cni
 +N+Neu+Sg+Nom:%>е  # ;

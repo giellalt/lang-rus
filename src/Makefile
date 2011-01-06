@@ -20,6 +20,27 @@ TWOLC = /opt/sami/xerox/bin/twolc -utf8
 endif
 
 
+LEX = rus-lex.txt \
+	  noun-rus-lex.txt \
+	  noun-rus-morph.txt \
+	  propernoun-rus-lex.txt \
+	  propernoun-rus-morph.txt \
+	  adj-rus-lex.txt \
+	  adj-rus-morph.txt \
+	  verb-rus-lex.txt \
+	  verb-rus-morph.txt \
+	  adv-rus-lex.txt \
+#	  abbr-rus-lex.txt \
+#	  acro-rus-lex.txt \
+	  pron-rus-lex.txt \
+	  punct-rus-lex.txt \
+	  numeral-rus-lex.txt \
+	  pp-rus-lex.txt \
+	  cc-rus-lex.txt \
+	  cs-rus-lex.txt \
+	  interj-rus-lex.txt 
+
+
 
 irus.fst: ../bin/irus.fst
 ../bin/irus.fst: ../bin/rus.fst \
@@ -70,17 +91,11 @@ inituppercase.fst: ../bin/inituppercase.fst
 # This goal depends on a bunch of lexicon files
 
 rus.save: ../bin/rus.save
-../bin/rus.save: ../bin/twol-rus.bin rus-lex.txt noun-rus-lex.txt noun-rus-morph.txt \
-	adj-rus-lex.txt adj-rus-morph.txt verb-rus-lex.txt verb-rus-morph.txt \
-	adv-rus-lex.txt pron-rus-lex.txt punct-rus-lex.txt cc-rus-lex.txt \
-	cs-rus-lex.txt pp-rus-lex.txt numeral-rus-lex.txt interj-rus-lex.txt
+../bin/rus.save: ../bin/twol-rus.bin $(LEX)
 	@echo
 	@echo "*** Building rus-lex.save ***" ;
 	@echo
-	printf "compile-source rus-lex.txt noun-rus-lex.txt noun-rus-morph.txt \
-	adj-rus-lex.txt verb-rus-lex.txt verb-rus-morph.txt pron-rus-lex.txt \
-	adj-rus-morph.txt adv-rus-lex.txt pp-rus-lex.txt punct-rus-lex.txt \
-	cc-rus-lex.txt cs-rus-lex.txt numeral-rus-lex.txt interj-rus-lex.txt \n\
+	printf "compile-source $(LEX) \n\
 	read-rules ../bin/twol-rus.bin \n\
 	compose-result \n\
 	save-result ../bin/rus.save \n\

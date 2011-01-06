@@ -3,6 +3,7 @@ Multichar_Symbols
 ! POS
 +N +V +A 
 +Adv +CC +CS +Interj +Pron +Num
++Prop
 
 ! Verbal MSP
 +Prs +Fut +Prt +Prf 
@@ -15,7 +16,7 @@ Multichar_Symbols
 +Sg +Pl
 +Msc +Fem +Neu
 +Nom +Acc +Gen +Ins +Dat +Loc
-
++Mal +Fem +Sur +Org +Obj +Ani +Plc
 +Ord
 
 
@@ -30,6 +31,7 @@ Multichar_Symbols
 
 LEXICON Root
 
+Propernoun ;
 Noun ;
 Verb ;
 Adjective ;

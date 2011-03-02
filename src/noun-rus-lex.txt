@@ -12,36 +12,39 @@
 ! 4: = m, f, n = gender info
 ! 5: a, i = animate, inanimate
 
+! New procedure:
+! Ignore stress and light vowel
+
 LEXICON Noun 
-тигр 1ama "tiger" ;
-спор 1ami "strid" ;
+тигр 1ma "tiger" ;
+спор 1mi "strid" ;
 
-сон 1xami "søvn" ;
-орёл 1xami "ørn" ;
-лев 1xami "løve" ;
-заём 1xami "lån" ;
+сон 1mi "søvn" ;
+орёл 1xmi "ørn" ;
+лев 1xmi "løve" ;
+заём 1xmi "lån" ;
 
-сосна:сосена 1xafi "furu" ;
-кукла:кукола 1xafi "dokke" ;
-свадъба 1xafi "bryllup" ;
+сосна:сосена 1xfi "furu" ;
+кукла:кукола 1xfi "dokke" ;
+свадъба 1xfi "bryllup" ;
 
-число 1xani "tall" ;
-окно 1xani "vindu" ;
-писъмо 1xani "brev" ;
+число 1xni "tall" ;
+окно 1xni "vindu" ;
+писъмо 1xni "brev" ;
 
-житель 2ama "innbygger" ;
-вихрь 2ami "hvirvelvind" ;
-дождь 2bmi "regn" ;
-море 2cni "hav" ;
-бониня 2afa "gudinne" ;
-буря 2afi "storm" ;
-ступня 2bfi "fotsåle" ;
+житель 2ma "innbygger" ;
+вихрь 2mi "hvirvelvind" ;
+дождь 2mi "regn" ;
+море 2ni "hav" ;
+богяиня 2fa "gudinne" ;
+буря 2fi "storm" ;
+ступня 2fi "fotsåle" ;
 
-пополь 2cmi "poppel" ;
-гость 2ema "gjest" ;
-конь 2fma "hest" ;
-доля 2efi "lodd" ;
-ноздря 2ffi "nesebor" ;
+пополь 2mi "poppel" ;
+гость 2ma "gjest" ;
+конь 2ma "hest" ;
+доля 2fi "lodd" ;
+ноздря 2fi "nesebor" ;
 
 день 2xmi "dag" ;
 огонь 2xmi "ild" ;
@@ -52,13 +55,9 @@ LEXICON Noun
 бойня 2xfi "slakteri" ;
 
 
-!сон:со2н 1ami "søvn" ;
-!орёл:орё2л 1ami "ørn" ;
-!лев:ле2в 1ami "løve" ;
-!заём:за2ём 1ami "lån" ;
 
-спора 1afa "" ;
+спора 1fa "sadf" ;
 
-правило 1ani "regel" ;
-рыба 1afa "fisk" ;
-карта 1afi "kart" ;
+правило 1ni "regel" ;
+рыба 1fa "fisk" ;
+карта 1fi "kart" ;

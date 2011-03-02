@@ -7,123 +7,243 @@
 ! Masculines
 ! ----------
 
+! We ignore stress
 LEXICON 1ama
-+N+Msc+Sg+Acc:%>а # ;
-+N+Msc:           1am ;
+1ma ;
+LEXICON 1bma
+1ma ;
+LEXICON 1cma
+1ma ;
+LEXICON 1dma
+1ma ;
+LEXICON 1ema
+1ma ;
+LEXICON 1fma
+1ma ;
 
-LEXICON 1ami
-+N+Msc+Sg+Acc:%> # ;
-+N+Msc:          1am ;
-
-LEXICON 1xami
-+N+Msc+Sg+Acc:%^LV%> # ;
-+N+Msc:%^LV          1am ;
-
-
-LEXICON 2ama                 
-1ama ;
-
-LEXICON 2ami
-1ami ;
-
-LEXICON 2bmi
-1ami ;
-
-LEXICON 2cmi
-1ama ;
-
+! We ignore stress
+LEXICON 2ama
+2ma ;
+LEXICON 2bma
+2ma ;
+LEXICON 2cma
+2ma ;
+LEXICON 2dma
+2ma ;
 LEXICON 2ema
-1ama ;
-
+2ma ;
 LEXICON 2fma
-1ama ;
+2ma ;
 
-LEXICON 2xmi
-1xmi ;
+
+! Masculine class 1
+
+LEXICON 1ma
++N+Msc+Sg+Acc:%>а # ;
++N+Msc+Pl+Acc:%>ов # ;
++N+Msc:           1m ;
+
+LEXICON 1xma
++N+Msc+Sg+Acc:%^LV%>а # ;
++N+Msc+Pl+Acc:%^LV%>ов # ;
++N+Msc:%^LV           1m ;
+
+LEXICON 1mi
++N+Msc+Sg+Acc: # ;
++N+Msc+Pl+Acc:%>ы # ;
++N+Msc:          1m ;
 
 LEXICON 1xmi
++N+Msc+Sg+Acc:%^LV # ;
++N+Msc+Pl+Acc:%^LV%>ы # ;
++N+Msc:%^LV          1m ;
+
+
+! Masculine class 2
+
+LEXICON 2ma
++N+Msc+Sg+Acc:%>я # ;
++N+Msc+Pl+Acc:%>ей # ;
++N+Msc:           2m ;
+
+LEXICON 2xma
++N+Msc+Sg+Acc:%^LV%>я # ;
++N+Msc+Pl+Acc:%^LV%>ей # ;
++N+Msc:%^LV           2m ;
+
+LEXICON 2mi
++N+Msc+Sg+Acc: # ;
++N+Msc+Pl+Acc:%>и # ;
++N+Msc:          2m ;
+
+LEXICON 2xmi
++N+Msc+Sg+Acc:%^LV # ;
++N+Msc+Pl+Acc:%^LV%>и # ;
++N+Msc:%^LV          2m ;
+
+! Masculine class 3
+
+LEXICON 3ma                 
+1ma ;
+
+LEXICON 3xma
+1xma ;
+
+LEXICON 3mi
 1mi ;
+
+LEXICON 3xmi
+1xmi ;
+
+LEXICON 4ma
+1ma ;
+
+LEXICON 4xma
+1xma ;
+
+LEXICON 5ma
+1ma ;
+
+LEXICON 5xma
+1xma ;
+
+LEXICON 6ma
+1ma ;
+
+LEXICON 6xma
+1xma ;
+
+LEXICON 7ma
+1ma ;
+
+LEXICON 7xma
+1xma ;
+
+
+LEXICON 10ma
+1ma ;
+
+LEXICON 10xma
+1xma ;
+
+LEXICON 11ma
+1ma ;
+
+LEXICON 11xma
+1xma ;
+
+LEXICON 12ma
+1ma ;
+
+LEXICON 12xma
+1xma ;
+
+
+LEXICON 4mi
+1mi ;
+
+LEXICON 4xmi
+1xmi ;
+
+LEXICON 5mi
+1mi ;
+
+LEXICON 5xmi
+1xmi ;
+
+LEXICON 6mi
+1mi ;
+
+LEXICON 6xmi
+1xmi ;
+
+LEXICON 7mi
+1mi ;
+
+LEXICON 7xmi
+1xmi ;
+
+
+LEXICON 10mi
+1mi ;
+
+LEXICON 10xmi
+1xmi ;
+
+LEXICON 11mi
+1mi ;
+
+LEXICON 11xmi
+1xmi ;
+
+LEXICON 12mi
+1mi ;
+
+LEXICON 12xmi
+1xmi ;
+
 
 ! Feminines
 ! ---------
 
-LEXICON 1afi
+! Class 1
+
+LEXICON 1fi
 +N+Fem+Pl+Acc:%> # ;
-+N+Fem:          1af ;
-
-LEXICON 1xafi
-+N+Fem+Pl+Acc:%^LV%> # ;
-+N+Fem:%^LV          1af ;
-
-LEXICON 2afa
-1afa ;
-
-LEXICON 2afi
-1afi ;
-
-LEXICON 2xfi
-1xfi ;
-
-
-LEXICON 2bfi
-1afi ;
-
-LEXICON 2efi
-1afi ;
-
-LEXICON 2ffi
-1afi ;
++N+Fem:          1f ;
 
 LEXICON 1xfi
-1xafi ;
++N+Fem+Pl+Acc:%^LV%> # ;
++N+Fem:%^LV          1f ;
+
+LEXICON 1fa
++N+Fem+Pl+Acc:%> # ;
++N+Fem:          1f ;
+           
+!LEXICON 1fi ! XXX error, check this
+!+N+Fem+Pl+Acc:%>ы # ;
+!+N+Fem:           1f ;
+
+! Class 2
+
+LEXICON 2fa
++N+Fem+Pl+Acc:%>ь # ;
++N+Fem:          2f ;
+
+LEXICON 2xfa
++N+Fem+Pl+Acc:%^LV%>ь # ;
++N+Fem:%^LV          2f ;
+
+LEXICON 2fi
++N+Fem+Pl+Acc:%>и # ;
++N+Fem:          2f ;
+
+LEXICON 2xfi
++N+Fem+Pl+Acc:%^LV%>и # ;
++N+Fem:%^LV          2f ;
+
 
 
 
 ! Neuters
 ! -------
 
-LEXICON 1xani
- :%^LV          1ani ;
+LEXICON 1xni
++N+Neu:%^LV          1n ;
 
+LEXICON 1ni
++N+Neu: 1n ;
 
-LEXICON 1ani
-+N+Neu+Sg+Nom:%>о  # ;
-+N+Neu+Sg+Gen:%>а  # ;
-+N+Neu+Sg+Dat:%>у  # ;
-+N+Neu+Sg+Acc:%>о  # ;
-+N+Neu+Sg+Ins:%>ом # ;
-+N+Neu+Pl+Nom:%>а  # ;
-+N+Neu+Pl+Gen:%>   # ;
-+N+Neu+Pl+Dat:%>ам # ;
-+N+Neu+Pl+Acc:%>а  # ;
-+N+Neu:            LIL ; 
+LEXICON 2ni
++N+Neu: 2n ;
 
-LEXICON 1afa
-+N+Fem+Pl+Acc:%> # ;
-+N+Fem:          1af ;
-           
-!LEXICON 1afi ! XXX error, check this
-!+N+Fem+Pl+Acc:%>ы # ;
-!+N+Fem:           1af ;
-
-LEXICON 2cni
-+N+Neu+Sg+Nom:%>е  # ;
-+N+Neu+Sg+Gen:%>я  # ;
-+N+Neu+Sg+Dat:%>ю  # ;
-+N+Neu+Sg+Acc:%>е  # ;
-+N+Neu+Sg+Ins:%>ем # ;
-+N+Neu+Pl+Nom:%>я  # ;
-+N+Neu+Pl+Gen:%>ей # ;
-+N+Neu+Pl+Dat:%>ям # ;
-+N+Neu+Pl+Acc:%>я  # ;
-+N+Neu:            LILPAL ; 
 
 
 
 ! Suffix classes
 ! ==============
 
-LEXICON 1am
+LEXICON 1m
 +Sg+Nom: # ;
 +Sg+Gen:%>а # ;
 +Sg+Dat:%>у # ;
@@ -131,19 +251,64 @@ LEXICON 1am
 +Pl+Nom:%>ы # ;
 +Pl+Gen:%>ов # ;
 +Pl+Dat:%>ам # ;
-+Pl+Acc:%>ов # ;
              LIL ;
 
-LEXICON 1af
+LEXICON 2m
++Sg+Nom:%>ь # ;
++Sg+Gen:%>я # ;
++Sg+Dat:%>ю # ;
++Sg+Ins:%>я # ;
++Pl+Nom:%>и # ;
++Pl+Gen:%>ей # ;
++Pl+Dat:%>ям # ;
+             LILPAL ;
+
+LEXICON 1f
 +Sg+Nom:%>а  # ;
 +Sg+Gen:%>ы  # ;
 +Sg+Dat:%>е  # ;
 +Sg+Acc:%>у  # ;
 +Sg+Ins:%>ой # ;
 +Pl+Nom:%>ы  # ;
-+Pl+Gen:%>   # ;
++Pl+Gen:     # ;
 +Pl+Dat:%>ам # ;
              LIL ;
+
+LEXICON 2f
++Sg+Nom:%>я  # ;
++Sg+Gen:%>и  # ;
++Sg+Dat:%>е  # ;
++Sg+Acc:%>ю  # ;
++Sg+Ins:%>ей # ;
++Pl+Nom:%>и  # ;
++Pl+Gen:%>ь     # ;
++Pl+Dat:%>ям # ;
+             LILPAL ;
+
+LEXICON 1n
++Sg+Nom:%>о  # ;
++Sg+Gen:%>а  # ;
++Sg+Dat:%>у  # ;
++Sg+Acc:%>о  # ;
++Sg+Ins:%>ом # ;
++Pl+Nom:%>а  # ;
++Pl+Gen:%>   # ;
++Pl+Dat:%>ам # ;
++Pl+Acc:%>а  # ;
+             LIL ; 
+
+LEXICON 2n
++Sg+Nom:%>е  # ;
++Sg+Gen:%>я  # ;
++Sg+Dat:%>ю  # ;
++Sg+Acc:%>е  # ;
++Sg+Ins:%>ем # ;
++Pl+Nom:%>я  # ;
++Pl+Gen:%>ей # ;
++Pl+Dat:%>ям # ;
++Pl+Acc:%>я  # ;
+             LILPAL ; 
+
                           
 LEXICON LIL
 +Sg+Loc:%>е   # ;

@@ -41,22 +41,22 @@ LEXICON 2fma
 LEXICON 1ma
 +N+Msc+Sg+Acc:%>а # ;
 +N+Msc+Pl+Acc:%>ов # ;
-+N+Msc:           1m ;
++N+Msc:           1msuf ;
 
 LEXICON 1xma
 +N+Msc+Sg+Acc:%^LV%>а # ;
 +N+Msc+Pl+Acc:%^LV%>ов # ;
-+N+Msc:%^LV           1m ;
++N+Msc:%^LV           1msuf ;
 
 LEXICON 1mi
 +N+Msc+Sg+Acc: # ;
 +N+Msc+Pl+Acc:%>ы # ;
-+N+Msc:          1m ;
++N+Msc:          1msuf ;
 
 LEXICON 1xmi
 +N+Msc+Sg+Acc:%^LV # ;
 +N+Msc+Pl+Acc:%^LV%>ы # ;
-+N+Msc:%^LV          1m ;
++N+Msc:%^LV          1msuf ;
 
 
 ! Masculine class 2
@@ -64,24 +64,29 @@ LEXICON 1xmi
 LEXICON 2ma
 +N+Msc+Sg+Acc:%>я # ;
 +N+Msc+Pl+Acc:%>ей # ;
-+N+Msc:           2m ;
++N+Msc:           2msuf ;
 
 LEXICON 2xma
 +N+Msc+Sg+Acc:%^LV%>я # ;
 +N+Msc+Pl+Acc:%^LV%>ей # ;
-+N+Msc:%^LV           2m ;
++N+Msc:%^LV           2msuf ;
 
 LEXICON 2mi
 +N+Msc+Sg+Acc: # ;
 +N+Msc+Pl+Acc:%>и # ;
-+N+Msc:          2m ;
++N+Msc:          2msuf ;
 
 LEXICON 2xmi
 +N+Msc+Sg+Acc:%^LV # ;
 +N+Msc+Pl+Acc:%^LV%>и # ;
-+N+Msc:%^LV          2m ;
++N+Msc:%^LV          2msuf ;
 
 ! Masculine class 3
+
+! These differ from class 1 only in having
+! кгх as final consonant, and in replacing 
+! the ы suffix with и. We make a twol rule for
+! that, and uify with class 1.
 
 LEXICON 3ma                 
 1ma ;
@@ -94,6 +99,9 @@ LEXICON 3mi
 
 LEXICON 3xmi
 1xmi ;
+
+
+! Masculine class 4
 
 LEXICON 4ma
 1ma ;
@@ -190,52 +198,78 @@ LEXICON 12xmi
 
 LEXICON 1fi
 +N+Fem+Pl+Acc:%> # ;
-+N+Fem:          1f ;
++N+Fem:          1fsuf ;
 
 LEXICON 1xfi
 +N+Fem+Pl+Acc:%^LV%> # ;
-+N+Fem:%^LV          1f ;
++N+Fem:%^LV          1fsuf ;
 
 LEXICON 1fa
 +N+Fem+Pl+Acc:%> # ;
-+N+Fem:          1f ;
++N+Fem:          1fsuf ;
            
 !LEXICON 1fi ! XXX error, check this
 !+N+Fem+Pl+Acc:%>ы # ;
-!+N+Fem:           1f ;
+!+N+Fem:           1fsuf ;
 
 ! Class 2
 
 LEXICON 2fa
 +N+Fem+Pl+Acc:%>ь # ;
-+N+Fem:          2f ;
++N+Fem:          2fsuf ;
 
 LEXICON 2xfa
 +N+Fem+Pl+Acc:%^LV%>ь # ;
-+N+Fem:%^LV          2f ;
++N+Fem:%^LV          2fsuf ;
 
 LEXICON 2fi
 +N+Fem+Pl+Acc:%>и # ;
-+N+Fem:          2f ;
++N+Fem:          2fsuf ;
 
 LEXICON 2xfi
 +N+Fem+Pl+Acc:%^LV%>и # ;
-+N+Fem:%^LV          2f ;
++N+Fem:%^LV          2fsuf ;
 
+! Feminine class 3
+
+! These differ from class 1 only in having
+! кгх as final consonant, and in replacing 
+! the ы suffix with и. We make a twol rule for
+! that, and uify with class 1.
+
+
+LEXICON 3fa                 
+1fa ;
+
+LEXICON 3xfa
+1xfa ;
+
+LEXICON 3fi
+1fi ;
+
+LEXICON 3xfi
+1xfi ;
 
 
 
 ! Neuters
 ! -------
 
-LEXICON 1xni
-+N+Neu:%^LV          1n ;
+LEXICON 1xn
++N+Neu:%^LV          1nsuf ;
 
-LEXICON 1ni
+LEXICON 1n
 +N+Neu: 1n ;
 
-LEXICON 2ni
-+N+Neu: 2n ;
+LEXICON 2n
++N+Neu: 2nsuf ;
+
+LEXICON 3n
++N+Neu: 1nsuf ;
+
+LEXICON 3nko
++N+Neu+Pl+Nom:%>и # ;
++N+Neu: rest_1n_suf ;
 
 
 
@@ -243,7 +277,7 @@ LEXICON 2ni
 ! Suffix classes
 ! ==============
 
-LEXICON 1m
+LEXICON 1msuf
 +Sg+Nom: # ;
 +Sg+Gen:%>а # ;
 +Sg+Dat:%>у # ;
@@ -253,8 +287,8 @@ LEXICON 1m
 +Pl+Dat:%>ам # ;
              LIL ;
 
-LEXICON 2m
-+Sg+Nom:%>ь # ;
+LEXICON 2msuf
++Sg+Nom:%> # ;
 +Sg+Gen:%>я # ;
 +Sg+Dat:%>ю # ;
 +Sg+Ins:%>я # ;
@@ -263,7 +297,7 @@ LEXICON 2m
 +Pl+Dat:%>ям # ;
              LILPAL ;
 
-LEXICON 1f
+LEXICON 1fsuf
 +Sg+Nom:%>а  # ;
 +Sg+Gen:%>ы  # ;
 +Sg+Dat:%>е  # ;
@@ -274,7 +308,7 @@ LEXICON 1f
 +Pl+Dat:%>ам # ;
              LIL ;
 
-LEXICON 2f
+LEXICON 2fsuf
 +Sg+Nom:%>я  # ;
 +Sg+Gen:%>и  # ;
 +Sg+Dat:%>е  # ;
@@ -285,19 +319,25 @@ LEXICON 2f
 +Pl+Dat:%>ям # ;
              LILPAL ;
 
-LEXICON 1n
+LEXICON 1nsuf
+normal_1n_pl_nom ; ! not normal is 3nko
+rest_1n_suf ;
+
+LEXICON rest_1n_suf
 +Sg+Nom:%>о  # ;
 +Sg+Gen:%>а  # ;
 +Sg+Dat:%>у  # ;
 +Sg+Acc:%>о  # ;
 +Sg+Ins:%>ом # ;
-+Pl+Nom:%>а  # ;
 +Pl+Gen:%>   # ;
 +Pl+Dat:%>ам # ;
 +Pl+Acc:%>а  # ;
              LIL ; 
 
-LEXICON 2n
+LEXICON normal_1n_pl_nom
++Pl+Nom:%>а  # ;
+
+LEXICON 2nsuf
 +Sg+Nom:%>е  # ;
 +Sg+Gen:%>я  # ;
 +Sg+Dat:%>ю  # ;

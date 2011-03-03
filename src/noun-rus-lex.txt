@@ -8,14 +8,14 @@
 ! numeral and 3 (or four) letters, as follows
 ! 1: digit = Zaliznjak declension class
 !(2: x = Zaliznjak * symbol, for light vowel)
-! 3: letter a-f = Zaliznjak stress pattern
-! 4: = m, f, n = gender info
-! 5: a, i = animate, inanimate
+! 3: = m, f, n = gender info
+! 4: a, i = animate, inanimate
 
-! New procedure:
-! Ignore stress and light vowel
 
 LEXICON Noun 
+
+! Class 1
+
 тигр 1ma "tiger" ;
 спор 1mi "strid" ;
 
@@ -24,13 +24,25 @@ LEXICON Noun
 лев 1xmi "løve" ;
 заём 1xmi "lån" ;
 
+! Note: final vowel deleted in twol
+! so that stem becomes спор etc. 
+спора 1fa "sadf" ;
+рыба 1fa "fisk" ;
+карта 1fi "kart" ;
+
 сосна:сосена 1xfi "furu" ;
 кукла:кукола 1xfi "dokke" ;
 свадъба 1xfi "bryllup" ;
 
-число 1xni "tall" ;
-окно 1xni "vindu" ;
-писъмо 1xni "brev" ;
+правило 1n "regel" ;
+
+
+число 1xn "tall" ;
+окно 1xn "vindu" ;
+писъмо 1xn "brev" ;
+
+
+! Class 2
 
 житель 2ma "innbygger" ;
 вихрь 2mi "hvirvelvind" ;
@@ -55,9 +67,18 @@ LEXICON Noun
 бойня 2xfi "slakteri" ;
 
 
+! Class 3
 
-спора 1fa "sadf" ;
+бнук 3ma ;
+орех 3mi ;
 
-правило 1ni "regel" ;
-рыба 1fa "fisk" ;
-карта 1fi "kart" ;
+благо 3n "gode" ;
+веко 3nko "øyelokk" ; ! 3 class neuters in -ko have Npl -и
+
+
+
+
+
+
+
+

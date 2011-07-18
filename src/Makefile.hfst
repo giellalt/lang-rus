@@ -40,14 +40,14 @@ twol-rus.hfst: ../bin/twol-rus.hfst
 	@echo
 	@echo "*** Building $(notdir $@) ***" ;
 	@echo
-	hfst-twolc $< -o $@ 
+	hfst-twolc -i $< -o $@ 
 
 rus-gen.hfst: ../bin/rus-gen.hfst 
 ../bin/rus-gen.hfst: ../bin/lexc-rus.hfst ../bin/twol-rus.hfst
 	@echo
 	@echo "*** Building $(notdir $@) ***" ;
 	@echo
-	hfst-compose-intersect -l $+ -o $@
+	hfst-compose-intersect -1 ../bin/lexc-rus.hfst -2 ../bin/twol-rus.hfst -o $@
 
 rus.hfst: ../bin/rus.hfst
 ../bin/rus.hfst: ../bin/rus-gen.hfst
@@ -58,7 +58,7 @@ rus.hfst: ../bin/rus.hfst
 	@echo
 	@echo "*** Building lookup-optimized $(notdir $@).ol ***" ;
 	@echo
-	hfst-lookup-optimize $@ -o $@.ol
+	hfst-fst2fst -O -i ../bin/rus-gen.hfst -o ../bin/rus.hfst.ol
 
 clean:
 	rm -f ../bin/* ../tmp/*

@@ -1,0 +1,79 @@
+! Divvun & Giellatekno - open source grammars for Sámi and other languages
+! Copyright © 2000-2010 The University of Tromsø & the Norwegian Sámi Parliament
+! http://giellatekno.uit.no & http://divvun.no
+!
+! This program is free software; you can redistribute and/or modify
+! this file under the terms of the GNU General Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version. The GNU General Public License
+! is found at http://www.gnu.org/licenses/gpl.html. It is
+! also available in the file $GTHOME/LICENSE.txt.
+!
+! Other licensing options are available upon request, please contact
+! giellatekno@hum.uit.no or divvun@samediggi.no
+
+! ==================== !
+! The North Sámi dates !
+! ==================== !
+
+
+! 12.8.
+! Borgemánu guoktenuppelot beaivi
+
+!Multichar_Symbols
+
+
+LEXICON Root
+DAY ;
+
+LEXICON DAY
+первый% :1. MONTH ;
+второй% :2. MONTH ;
+третий% :3. MONTH ;
+четвёртый% :4. MONTH ;
+пятый% :5. MONTH ;
+шестой% :6. MONTH ;
+седьмой% :7. MONTH ;
+восьмой% :8. MONTH ;
+девятый% :9. MONTH ;
+десятый% :1%0. MONTH ;
+одиннадцатый% :11. MONTH ;
+двенадцатый% :12. MONTH ;
+тринадцатый% :13. MONTH ;
+четырнадцатый% :14. MONTH ;
+пятнадцатый% :15. MONTH ;
+шестнадцатый% :16. MONTH ;
+семнадцатый% :17. MONTH ;
+восемнадцатый% :18. MONTH ;
+девятнадцатый% :19. MONTH ;
+двадцатый% :2%0. MONTH ;
+двадцать% первый% :21. MONTH ;
+двадцать% второй% :22. MONTH ;
+двадцать% третий% :23. MONTH ;
+двадцать% четвёртый% :24. MONTH ;
+двадцать% пятый% :25. MONTH ;
+двадцать% шестой% :26. MONTH ;
+двадцать% седьмой% :27. MONTH ;
+двадцать% восьмой% :28. MONTH ;
+двадцать% девятый% :29. MONTH ;
+тридцатый% :3%0. MONTH ;
+тридцать% первый% :3%1. MONTH ;
+
+LEXICON MONTH
+январь:1    PUNCT ;
+февраль:2   PUNCT ;
+март:3	    PUNCT ;
+апрель:4    PUNCT ;
+май:5	    PUNCT ;
+июнь:6	    PUNCT ;
+июль:7	    PUNCT ;
+август:8    PUNCT ;
+сентябрь:10 PUNCT ;
+октябрь:9   PUNCT ;
+ноябрь:11   PUNCT ;
+декабрь:12  PUNCT ;
+
+LEXICON PUNCT 
+:. # ; ! STRICT 12.3.
+   # ; ! SLOPPY 12.3
+

@@ -1,0 +1,224 @@
+! Divvun & Giellatekno - open source grammars for Sámi and other languages
+! Copyright © 2000-2010 The University of Tromsø & the Norwegian Sámi Parliament
+! http://giellatekno.uit.no & http://divvun.no
+!
+! This program is free software; you can redistribute and/or modify
+! this file under the terms of the GNU General Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version. The GNU General Public License
+! is found at http://www.gnu.org/licenses/gpl.html. It is
+! also available in the file $GTHOME/LICENSE.txt.
+!
+! Other licensing options are available upon request, please contact
+! giellatekno@hum.uit.no or divvun@samediggi.no
+
+! ================= !
+! The Russian clock !
+! ================= !
+
+
+! 5:00 пять часов
+! 6:20 двадцать минут седьмого
+! 9:30 половина десятого
+! 9:30 полдесятого
+! 4:45 без четверти пять 
+! 4:45 без пятнадцати пять
+
+
+Multichar_Symbols
+
+@U.TIME.1@ 
+@U.TIME.2@ 
+@U.TIME.3@ 
+@U.TIME.4@ 
+@U.TIME.5@ 
+@U.TIME.6@ 
+@U.TIME.7@ 
+@U.TIME.8@ 
+@U.TIME.9@ 
+@U.TIME.10@ 
+@U.TIME.11@ 
+@U.TIME.12@ 
+
++Use/NG
+
+
+LEXICON Root
+
+BEFORE ;
+REST ;
+
+LEXICON BEFORE
+:без%    BEFOREHOURS ;
+
+LEXICON BEFOREHOURS
+%01@U.TIME.2@:@U.TIME.2@     BEF ;    !01:31 - 01:59
+%02@U.TIME.3@:@U.TIME.3@     BEF ;    !02:31 - 02:59
+%03@U.TIME.4@:@U.TIME.4@     BEF ;    !03:31 - 03:59
+%04@U.TIME.5@:@U.TIME.5@     BEF ;    !04:31 - 04:59
+%05@U.TIME.6@:@U.TIME.6@     BEF ;    !05:31 - 05:59
+%06@U.TIME.7@:@U.TIME.7@     BEF ;    !06:31 - 06:59
+%07@U.TIME.8@:@U.TIME.8@     BEF ;    !07:31 - 07:59
+%08@U.TIME.9@:@U.TIME.9@     BEF ;    !08:31 - 08:59
+%09@U.TIME.10@:@U.TIME.10@   BEF ;  !09:31 - 09:59
+1%0@U.TIME.11@:@U.TIME.11@   BEF ;  !10:31 - 10:59
+11@U.TIME.12@:@U.TIME.12@    BEF ;   !11:29 - 11:59
+12@U.TIME.1@:@U.TIME.1@      BEF ;     !12:29 - 12:59
+13@U.TIME.2@:@U.TIME.2@      BEF ;     !13:29 - 13:59
+14@U.TIME.3@:@U.TIME.3@      BEF ;     !14:29 - 14:59
+15@U.TIME.4@:@U.TIME.4@      BEF ;     !15:29 - 15:59
+16@U.TIME.5@:@U.TIME.5@      BEF ;     !16:29 - 16:59
+17@U.TIME.6@:@U.TIME.6@      BEF ;     !17:29 - 17:59
+18@U.TIME.7@:@U.TIME.7@      BEF ;     !18:29 - 18:59
+19@U.TIME.8@:@U.TIME.8@      BEF ;     !19:31 - 19:59
+2%0@U.TIME.9@:@U.TIME.9@     BEF ;    !20:31 - 20:59
+21@U.TIME.10@:@U.TIME.10@    BEF ;   !21:31 - 21:59
+22@U.TIME.11@:@U.TIME.11@    BEF ;   !22:29 - 22:59
+23@U.TIME.12@:@U.TIME.12@    BEF ;   !23:29 - 23:59
+%0%0@U.TIME.1@:@U.TIME.1@  BEF ; !00:29 - 00:59
+
+LEXICON REST
+%01@U.TIME.1@:@U.TIME.1@     AFT ;    !01:00 - 01:29
+%02@U.TIME.2@:@U.TIME.2@     AFT ;    !02:00 - 02:29
+%03@U.TIME.3@:@U.TIME.3@     AFT ;    !03:00 - 03:29
+%04@U.TIME.4@:@U.TIME.4@     AFT ;    !04:00 - 04:29
+%05@U.TIME.5@:@U.TIME.5@     AFT ;    !05:00 - 05:29
+%06@U.TIME.6@:@U.TIME.6@     AFT ;    !06:00 - 06:29
+%07@U.TIME.7@:@U.TIME.7@     AFT ;    !07:00 - 07:29
+%08@U.TIME.8@:@U.TIME.8@     AFT ;    !08:00 - 08:29
+%09@U.TIME.9@:@U.TIME.9@     AFT ;    !09:00 - 09:29
+1%0@U.TIME.10@:@U.TIME.10@   AFT ;  !10:00 - 10:29
+11@U.TIME.11@:@U.TIME.11@    AFT ;   !11:00 - 11:59
+12@U.TIME.12@:@U.TIME.12@    AFT ;   !12:00 - 12:29
+13@U.TIME.1@:@U.TIME.1@      AFT ;     !13:00 - 13:29
+14@U.TIME.2@:@U.TIME.2@      AFT ;     !14:00 - 114:29
+15@U.TIME.3@:@U.TIME.3@      AFT ;     !15:00 - 15:29
+16@U.TIME.4@:@U.TIME.4@      AFT ;     !16:00 - 16:29
+17@U.TIME.5@:@U.TIME.5@      AFT ;     !17:00 - 17:29
+18@U.TIME.6@:@U.TIME.6@      AFT ;     !18:00 - 18:29
+19@U.TIME.7@:@U.TIME.7@      AFT ;     !19:00 - 19:29
+2%0@U.TIME.8@:@U.TIME.8@     AFT ;    !20:00 - 20:29
+21@U.TIME.9@:@U.TIME.9@      AFT ;     !21:00 - 21:29
+22@U.TIME.10@:@U.TIME.10@    AFT ;   !22:00 - 22:29
+23@U.TIME.11@:@U.TIME.11@    AFT ;   !23:00 - 23:29
+%0%0@U.TIME.12@:@U.TIME.12@  AFT ; !00:00 - 00:29
+24%:%0%0:двенадцать            # ;      !24:00
+
+
+LEXICON BEF
+ %:3%0:половина%               HOUR ;
+ %:31:двадцать% девять%               TO ;
+ %:32:двадцать% восемь%              TO ;
+ %:33:двадцать% семь%              TO ;
+ %:34:двадцать% шесть%             TO ;
+ %:35:двадцать% пять%             TO ;
+ %:36:двадцать% четыре%              TO ;
+ %:37:двадцать% три%              TO ;
+ %:38:двадцать% два%             TO ; 
+ %:39:двадцать% одеин%              TO ;
+ %:4%0:двадцать%              TO ;
+ %:41:девятнадцать%     TO ;
+ %:42:восемнадцать%    TO ;
+ %:43:семнадцать%     TO ;
+ %:44:шестнадцать%     TO ;
+ %:45:пятнадцать%            TO ;
+ %:46:четырнадцать%  TO ;
+ %:47:тринадцать%    TO ;
+ %:48:двенадцать%    TO ;
+ %:49:одиннадцать%      TO ;
+ %:5%0:десять%              TO ;
+ %:51:девять%              TO ;
+ %:52:восемь%             TO ;
+ %:53:семь%              TO ;
+ %:54:шесть%              TO ;
+ %:55:пять%             TO ;  
+ %:56:четыре%           TO ;  
+ %:57:три%             TO ;
+ %:58:два%             TO ; 
+ %:59:один%               TO ;
+ %:59+Use/NG:минут%     TO ;
+
+LEXICON AFT
+%:%0%0:                    HOUR ;
+ %:%01:один%               OVER ;
+ %:%01+Use/NG:минут%     OVER ;
+ %:%02:два%             OVER ;
+ %:%03:три%             OVER ;
+ %:%04:чштыре%           OVER ;
+ %:%05:пять%             OVER ;
+ %:%06:шесть%              OVER ;
+ %:%07:семь%              OVER ;
+ %:%08:восемь%             OVER ;
+ %:%09:девять%              OVER ;
+ %:1%0:десять%               OVER ;
+ %:11:одиннадцать%       OVER ;
+ %:12:двенадцать%     OVER ;
+ %:13:тринадцать%     OVER ;
+ %:14:четырнадцать%   OVER ;
+ %:15:пятнадцать%                OVER ;
+ %:16:шестнадцать%      OVER ;
+ %:17:семнадцать%      OVER ;
+ %:18:восемнадцать%     OVER ;
+ %:19:девятнадцать%      OVER ;
+%:2%0:двадцать%               OVER ;
+ %:21:двадцать% %              OVER ;
+ %:22:двадцать% два%             OVER ;
+ %:23:двадцать% три%              OVER ;
+ %:24:двадцать% четыре%              OVER ;
+ %:25:двадцать% пять%             OVER ;  
+ %:26:двадцать% шесть%           OVER ;  
+ %:27:двадцать% семь%             OVER ;
+ %:28:двадцать% восемь%             OVER ; 
+ %:29:двадцать% девять%               OVER ;
+
+LEXICON TO ! BEFORE
+@U.TIME.1@:час@U.TIME.1@ # ;                !^N^
+@U.TIME.2@:два@U.TIME.2@ # ;              !^N^
+@U.TIME.3@:три@U.TIME.3@ # ;              !^N^
+@U.TIME.4@:четыре@U.TIME.4@ # ;            !^N^
+@U.TIME.5@:пять@U.TIME.5@ # ;              !^N^
+@U.TIME.6@:шесть@U.TIME.6@ # ;              !^N^
+@U.TIME.7@:семь@U.TIME.7@ # ;               !^N^
+@U.TIME.8@:восемь@U.TIME.8@ # ;              !^N^
+@U.TIME.9@:девять@U.TIME.9@ # ;               !^N^
+@U.TIME.10@:десять@U.TIME.10@ # ;              !^N^
+@U.TIME.11@:одиннадцать@U.TIME.11@ # ;   !^N^
+@U.TIME.12@:дванадцать@U.TIME.12@ # ; !^N^
+
+LEXICON OVER
+ :минут%   HOUR ;
+
+LEXICON HOUR
+NOMHOUR ; !^N^
+!LOCHOUR ; !^L^ 
+
+LEXICON NOMHOUR                              !^N^
+@U.TIME.1@:второго@U.TIME.1@ # ;                !^N^
+@U.TIME.2@:третого@U.TIME.2@ # ;              !^N^
+@U.TIME.3@:четвордого@U.TIME.3@ # ;              !^N^
+@U.TIME.4@:пятого@U.TIME.4@ # ;            !^N^
+@U.TIME.5@:шестого@U.TIME.5@ # ;              !^N^
+@U.TIME.6@:седмого@U.TIME.6@ # ;              !^N^
+@U.TIME.7@:восьмого@U.TIME.7@ # ;               !^N^
+@U.TIME.8@:девятого@U.TIME.8@ # ;              !^N^
+@U.TIME.9@:десятого@U.TIME.9@ # ;               !^N^
+@U.TIME.10@:одиннадцатого@U.TIME.10@ # ;              !^N^
+@U.TIME.11@:дванадцатого@U.TIME.11@ # ;   !^N^
+@U.TIME.12@:тринадцатого@U.TIME.12@ # ; !^N^
+
+! Outcommented due to Oahpa. Insert again ad lib.
+! LEXICON LOCHOUR                             !^L^
+! @U.TIME.1@:ovttas@U.TIME.1@ # ;             !^L^
+! @U.TIME.2@:guovttis@U.TIME.2@ # ;           !^L^
+! @U.TIME.3@:golmmas@U.TIME.3@ # ;            !^L^
+! @U.TIME.4@:njealjis@U.TIME.4@ # ;           !^L^
+! @U.TIME.5@:viđas@U.TIME.5@ # ;              !^L^
+! @U.TIME.6@:guđas@U.TIME.6@ # ;              !^L^
+! @U.TIME.7@:čiežas@U.TIME.7@ # ;             !^L^
+! @U.TIME.8@:gávccis@U.TIME.8@ # ;            !^L^
+! @U.TIME.9@:ovccis@U.TIME.9@ # ;             !^L^
+! @U.TIME.10@:logis@U.TIME.10@ # ;            !^L^
+! @U.TIME.11@:oktanuppelogis@U.TIME.11@ # ;   !^L^
+! @U.TIME.12@:guoktenuppelogis@U.TIME.12@ # ; !^L^
+
+

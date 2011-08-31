@@ -45,7 +45,10 @@ LEX = rus-lex.txt \
 irus.fst: ../bin/irus.fst
 ../bin/irus.fst: ../bin/rus.fst \
 		../bin/cyr2lat_no.fst \
-		../bin/lat2cyr_no.fst 
+		../bin/lat2cyr_no.fst \
+		../bin/idate-rus.fst \
+		../bin/iclock-rus.fst \
+		../bin/rus-inum.fst
 	@echo
 	@echo "*** Building the inverse irus.fst ***"
 	@echo
@@ -143,6 +146,70 @@ lat2cyr_no.fst: ../bin/lat2cyr_no.fst
 	quit \n" > ../tmp/lat2cyr-script
 	$(XFST) < ../tmp/lat2cyr-script
 	@rm -f ../tmp/lat2cyr-script
+
+
+idate-rus.fst: ../bin/idate-rus.fst
+../bin/idate-rus.fst: ../bin/date-rus.fst
+	@echo
+	@echo "*** $(@F) ***"
+	@echo
+	@$(XFST) -e "load < $<" \
+			-e "invert net" \
+			-e "save stack $@" \
+			-stop
+
+date-rus.fst: ../bin/date-rus.fst
+../bin/date-rus.fst: date-rus.lexc
+	@echo
+	@echo "*** $(@F) ***"
+	@echo
+	$(XFST) -e "read lexc $<" \
+			-e "save stack $@" \
+			-stop
+
+
+
+
+
+iclock-rus.fst: ../bin/iclock-rus.fst
+../bin/iclock-rus.fst: ../bin/clock-rus.fst
+	@echo
+	@echo "*** $(@F) ***"
+	@echo
+	@$(XFST) -e "load < $<" \
+			-e "invert net" \
+			-e "save stack $@" \
+			-stop
+
+
+clock-rus.fst: ../bin/clock-rus.fst
+../bin/clock-rus.fst: clock-rus.lexc
+	@echo
+	@echo "*** $(@F) ***"
+	@echo
+	$(XFST) -e "read lexc $<" \
+			-e "save stack $@" \
+			-stop
+
+
+rus-inum.fst: ../bin/rus-inum.fst
+../bin/rus-inum.fst: ../bin/rus-num.fst
+	@echo
+	@echo "*** $(@F) ***"
+	@echo
+	@$(XFST) -e "load < $<" \
+			-e "invert net" \
+			-e "save stack $@" \
+			-stop
+
+rus-num.fst: ../bin/rus-num.fst
+../bin/rus-num.fst: rus-num.txt
+	@echo
+	@echo "*** $(@F) ***"
+	@echo
+	$(XFST) -e "read lexc $<" \
+			-e "save stack $@" \
+			-stop
 
 
 

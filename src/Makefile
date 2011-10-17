@@ -154,7 +154,7 @@ idate-rus.fst: ../bin/idate-rus.fst
 	@echo
 	@echo "*** $(@F) ***"
 	@echo
-	@$(XFST) -e "load < $<" \
+	$(XFST) -e "load < $<" \
 			-e "invert net" \
 			-e "save stack $@" \
 			-stop

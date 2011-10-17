@@ -177,7 +177,7 @@ iclock-rus.fst: ../bin/iclock-rus.fst
 	@echo
 	@echo "*** $(@F) ***"
 	@echo
-	@$(XFST) -e "load < $<" \
+	$(XFST) -e "load < $<" \
 			-e "invert net" \
 			-e "save stack $@" \
 			-stop

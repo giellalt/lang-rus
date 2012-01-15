@@ -38,11 +38,11 @@ Noun ;
 Verb ;
 Adjective ;
 Adverb ;
-Conjunction ;
-Subjunction ;
-Interjection ;
-Numeral ;
-Pronoun ;
-Postposition ;
-Punctuation ;
+!Conjunction ;
+!Subjunction ;
+!Interjection ;
+!Numeral ;
+!Pronoun ;
+!Postposition ;
+!Punctuation ;
 

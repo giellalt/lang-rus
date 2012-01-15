@@ -15,9 +15,9 @@ LEXC = /opt/sami/xerox/bin/lexc -utf8
 TWOLC = /opt/sami/xerox/bin/twolc -utf8
 endif
 
-XFST = xfst #-utf8
-LEXC = lexc #-utf8
-TWOLC = twolc #-utf8
+#XFST = xfst #-utf8
+#LEXC = lexc #-utf8
+#TWOLC = twolc #-utf8
 
 
 

@@ -242,7 +242,7 @@ LEXICON 3fa
 1fa ;
 
 LEXICON 3xfa
-1xfa ;
+1fa ; ! fix
 
 LEXICON 3fi
 1fi ;
@@ -263,6 +263,9 @@ LEXICON 1n
 
 LEXICON 2n
 +N+Neu: 2nsuf ;
+
+LEXICON 2ni
++N+Neu: 2nsuf ; ! fix
 
 LEXICON 3n
 +N+Neu: 1nsuf ;

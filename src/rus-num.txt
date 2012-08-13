@@ -233,7 +233,7 @@ LEXICON ORD_THOUSAND
 тысяча% : ORD_HUNDREDS ;
 тысяча% :%0 ORD_10to99 ;
 тысяча% :%0%0 ORD_1to9 ;
-тысячый% :%0%0%0. # ;
+тысячный% :%0%0%0. # ;
 
 
 LEXICON ORD_HUNDREDS
@@ -315,6 +315,3 @@ LEXICON ORD_TENS
 семьдесят% :7 ORD_1to9 ;
 восемьдесят% :8 ORD_1to9 ;
 девяносто% :9  ORD_1to9 ;
-
-
-

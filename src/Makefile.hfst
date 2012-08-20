@@ -23,8 +23,8 @@ LEX = rus-lex.txt \
 	  cs-rus-lex.txt \
 	  interj-rus-lex.txt
 
-#	  propernoun-rus-lex.txt 
-#	  propernoun-rus-morph.txt 
+#	  propernoun-rus-lex.txt
+#	  propernoun-rus-morph.txt
 
 all: ../bin/rus.hfst
 
@@ -40,9 +40,9 @@ twol-rus.hfst: ../bin/twol-rus.hfst
 	@echo
 	@echo "*** Building $(notdir $@) ***" ;
 	@echo
-	hfst-twolc -i $< -o $@ 
+	hfst-twolc -i $< -o $@
 
-rus-gen.hfst: ../bin/rus-gen.hfst 
+rus-gen.hfst: ../bin/rus-gen.hfst
 ../bin/rus-gen.hfst: ../bin/lexc-rus.hfst ../bin/twol-rus.hfst
 	@echo
 	@echo "*** Building $(notdir $@) ***" ;

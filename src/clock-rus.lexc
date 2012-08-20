@@ -21,7 +21,7 @@
 ! 6:20 двадцать минут седьмого
 ! 9:30 половина десятого
 ! 9:30 полдесятого
-! 4:45 без четверти пять 
+! 4:45 без четверти пять
 ! 4:45 без пятнадцати пять
 
 ! 6:20 двадцать минут седьмого
@@ -30,18 +30,18 @@
 
 Multichar_Symbols
 
-@U.TIME.1@ 
-@U.TIME.2@ 
-@U.TIME.3@ 
-@U.TIME.4@ 
-@U.TIME.5@ 
-@U.TIME.6@ 
-@U.TIME.7@ 
-@U.TIME.8@ 
-@U.TIME.9@ 
-@U.TIME.10@ 
-@U.TIME.11@ 
-@U.TIME.12@ 
+@U.TIME.1@
+@U.TIME.2@
+@U.TIME.3@
+@U.TIME.4@
+@U.TIME.5@
+@U.TIME.6@
+@U.TIME.7@
+@U.TIME.8@
+@U.TIME.9@
+@U.TIME.10@
+@U.TIME.11@
+@U.TIME.12@
 
 +Use/NG
 
@@ -117,7 +117,7 @@ LEXICON BEF
  %:35:двадцати% пяти%             TO ;
  %:36:двадцати% четырёх%              TO ;
  %:37:двадцати% трёх%              TO ;
- %:38:двадцати% двух%             TO ; 
+ %:38:двадцати% двух%             TO ;
  %:39:двадцати% одной%              TO ;
  %:4%0:двадцати%              TO ;
  %:41:девятнадцати%     TO ;
@@ -134,15 +134,15 @@ LEXICON BEF
  %:52:восьми%             TO ;
  %:53:семи%              TO ;
  %:54:шести%              TO ;
- %:55:пяти%             TO ;  
- %:56:четырёх%           TO ;  
+ %:55:пяти%             TO ;
+ %:56:четырёх%           TO ;
  %:57:трёх%             TO ;
- %:58:двух%             TO ; 
+ %:58:двух%             TO ;
  %:59:одной%               TO ;
  %:59+Use/NG:минуты%     TO ;
 
 LEXICON AFT
-%:%0%0:                    HOUR ;
+%:%0%0:                    SHARP ;
  %:%01:одна%               1OVER ;
  %:%01+Use/NG:минут%     OVER ;
  %:%02:две%             2to4OVER ;
@@ -168,10 +168,10 @@ LEXICON AFT
  %:22:двадцать% две%             2to4OVER ;
  %:23:двадцать% три%              2to4OVER ;
  %:24:двадцать% четыре%              2to4OVER ;
- %:25:двадцать% пять%             OVER ;  
- %:26:двадцать% шесть%           OVER ;  
+ %:25:двадцать% пять%             OVER ;
+ %:26:двадцать% шесть%           OVER ;
  %:27:двадцать% семь%             OVER ;
- %:28:двадцать% восемь%             OVER ; 
+ %:28:двадцать% восемь%             OVER ;
  %:29:двадцать% девять%               OVER ;
  %:3%0:половина%               HOUR ;
 
@@ -204,7 +204,7 @@ LEXICON 15OVER
 
 LEXICON HOUR
 NOMHOUR ; !^N^
-!LOCHOUR ; !^L^ 
+!LOCHOUR ; !^L^
 
 LEXICON NOMHOUR                              !^N^
 @U.TIME.1@:второго@U.TIME.1@ # ;                !^N^
@@ -220,6 +220,30 @@ LEXICON NOMHOUR                              !^N^
 @U.TIME.11@:двенадцатого@U.TIME.11@ # ;   !^N^
 @U.TIME.12@:первого@U.TIME.12@ # ; !^N^
 
+LEXICON SHARP
+@U.TIME.1@:один@U.TIME.1@% 1HOUR ;
+@U.TIME.2@:два@U.TIME.2@% 2TO4HOUR ;
+@U.TIME.3@:три@U.TIME.3@% 2TO4HOUR;
+@U.TIME.4@:четыре@U.TIME.4@% 2TO4HOUR;
+@U.TIME.5@:пять@U.TIME.5@% 5HOUR ;
+@U.TIME.6@:шесть@U.TIME.6@% 5HOUR ;
+@U.TIME.7@:семь@U.TIME.7@% 5HOUR ;
+@U.TIME.8@:восемь@U.TIME.8@% 5HOUR ;
+@U.TIME.9@:девять@U.TIME.9@% 5HOUR ;
+@U.TIME.10@:десять@U.TIME.10@% 5HOUR ;
+@U.TIME.11@:одиннадцать@U.TIME.11@% 5HOUR ;
+@U.TIME.12@:двенадцать@U.TIME.12@% 5HOUR ;
+
+LEXICON 1HOUR
+:час # ;
+
+LEXICON 2TO4HOUR
+:часа # ;
+
+LEXICON 5HOUR
+:часов # ;
+
+
 ! Outcommented due to Oahpa. Insert again ad lib.
 ! LEXICON LOCHOUR                             !^L^
 ! @U.TIME.1@:ovttas@U.TIME.1@ # ;             !^L^
@@ -234,5 +258,3 @@ LEXICON NOMHOUR                              !^N^
 ! @U.TIME.10@:logis@U.TIME.10@ # ;            !^L^
 ! @U.TIME.11@:oktanuppelogis@U.TIME.11@ # ;   !^L^
 ! @U.TIME.12@:guoktenuppelogis@U.TIME.12@ # ; !^L^
-
-

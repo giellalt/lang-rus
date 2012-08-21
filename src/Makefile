@@ -9,6 +9,10 @@
 # Here we build the final generator , an inverted transducer of the analyzer.
 # It is dependent upon rus.save
 
+XFST = xfst
+LEXC = lexc
+TWOLC = twolc
+
 ifeq (victorio.uit.no, $(shell hostname))
 XFST = /opt/sami/xerox/c-fsm/ix86-linux2.6-gcc3.4/bin/fst -utf8
 LEXC = /opt/sami/xerox/bin/lexc -utf8
@@ -20,7 +24,6 @@ XFST = /home/pasha/bin/xfst -utf8
 LEXC = /home/pasha/bin/lexc -utf8
 TWOLC = /home/pasha/bin/twolc -utf8
 endif
-
 
 
 LEX = rus-lex.txt \

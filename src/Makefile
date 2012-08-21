@@ -51,21 +51,16 @@ LEX = $(GTLANG)-lex.txt \
 
 
 i$(GTLANG).fst: ../bin/i$(GTLANG).fst
-../bin/i$(GTLANG).fst: ../bin/$(GTLANG).save \
-		../bin/cyr2lat_no.fst \
-		../bin/lat2cyr_no.fst \
-		../bin/idate-$(GTLANG).fst \
-		../bin/iclock-$(GTLANG).fst \
-		../bin/$(GTLANG)-inum.fst
+../bin/i$(GTLANG).fst: ../bin/$(GTLANG).save
 	@echo
 	@echo "*** Building the inverse $(@F) ***"
 	@echo
 	@printf "load $< \n\
 	invert net \n\
 	save stack $@ \n\
-	quit \n" > $script
-	$(XFST) < ../../tmp/i$(GTLANG)-fst-script
-	@rm -f ../../tmp/i$(GTLANG)-fst-script
+	quit \n" > $@.script
+	$(XFST) < $@.script
+	@rm -f $@.script
 
 
 # This goal is to build the final analyser. It depends on all the files.

@@ -13,6 +13,8 @@ XFST = xfst
 LEXC = lexc
 TWOLC = twolc
 
+GTLANG=rus
+
 ifeq (victorio.uit.no, $(shell hostname))
 XFST = /opt/sami/xerox/c-fsm/ix86-linux2.6-gcc3.4/bin/fst -utf8
 LEXC = /opt/sami/xerox/bin/lexc -utf8
@@ -26,59 +28,59 @@ TWOLC = /home/pasha/bin/twolc -utf8
 endif
 
 
-LEX = rus-lex.txt \
-	  noun-rus-lex.txt \
-	  noun-rus-morph.txt \
-	  propernoun-rus-lex.txt \
-	  propernoun-rus-morph.txt \
-	  adj-rus-lex.txt \
-	  adj-rus-morph.txt \
-	  verb-rus-lex.txt \
-	  verb-rus-morph.txt \
-	  adv-rus-lex.txt \
-#	  abbr-rus-lex.txt \
-#	  acro-rus-lex.txt \
-	  pron-rus-lex.txt \
-	  punct-rus-lex.txt \
-	  numeral-rus-lex.txt \
-	  pp-rus-lex.txt \
-	  cc-rus-lex.txt \
-	  cs-rus-lex.txt \
-	  interj-rus-lex.txt
+LEX = $(GTLANG)-lex.txt \
+	  noun-$(GTLANG)-lex.txt \
+	  noun-$(GTLANG)-morph.txt \
+	  propernoun-$(GTLANG)-lex.txt \
+	  propernoun-$(GTLANG)-morph.txt \
+	  adj-$(GTLANG)-lex.txt \
+	  adj-$(GTLANG)-morph.txt \
+	  verb-$(GTLANG)-lex.txt \
+	  verb-$(GTLANG)-morph.txt \
+	  adv-$(GTLANG)-lex.txt \
+#	  abbr-$(GTLANG)-lex.txt \
+#	  acro-$(GTLANG)-lex.txt \
+	  pron-$(GTLANG)-lex.txt \
+	  punct-$(GTLANG)-lex.txt \
+	  numeral-$(GTLANG)-lex.txt \
+	  pp-$(GTLANG)-lex.txt \
+	  cc-$(GTLANG)-lex.txt \
+	  cs-$(GTLANG)-lex.txt \
+	  interj-$(GTLANG)-lex.txt
 
 
 
-irus.fst: ../bin/irus.fst
-../bin/irus.fst: ../bin/rus.fst \
+i$(GTLANG).fst: ../bin/i$(GTLANG).fst
+../bin/i$(GTLANG).fst: ../bin/$(GTLANG).save \
 		../bin/cyr2lat_no.fst \
 		../bin/lat2cyr_no.fst \
-		../bin/idate-rus.fst \
-		../bin/iclock-rus.fst \
-		../bin/rus-inum.fst
+		../bin/idate-$(GTLANG).fst \
+		../bin/iclock-$(GTLANG).fst \
+		../bin/$(GTLANG)-inum.fst
 	@echo
-	@echo "*** Building the inverse irus.fst ***"
+	@echo "*** Building the inverse $(@F) ***"
 	@echo
-	@printf "load ../bin/rus.save \n\
+	@printf "load $< \n\
 	invert net \n\
-	save stack ../bin/irus.fst \n\
-	quit \n" > ../../tmp/irus-fst-script
-	$(XFST) < ../../tmp/irus-fst-script
-	@rm -f ../../tmp/irus-fst-script
+	save stack $@ \n\
+	quit \n" > $script
+	$(XFST) < ../../tmp/i$(GTLANG)-fst-script
+	@rm -f ../../tmp/i$(GTLANG)-fst-script
 
 
 # This goal is to build the final analyser. It depends on all the files.
 
-rus.fst: ../bin/rus.fst
-../bin/rus.fst: ../bin/rus.save ../bin/inituppercase.fst
+$(GTLANG).fst: ../bin/$(GTLANG).fst
+../bin/$(GTLANG).fst: ../bin/$(GTLANG).save ../bin/inituppercase.fst
 	@echo
-	@echo "*** Building rus.fst ***" ;
+	@echo "*** Building $(GTLANG).fst ***" ;
 	@echo
-	@printf "read regex [[@\"../bin/rus.save\"] .o. \
+	@printf "read regex [[@\"../bin/$(GTLANG).save\"] .o. \
 	[@\"../bin/inituppercase.fst\"]] ; \n\
-	save stack ../bin/rus.fst \n\
-	quit \n" > ../../tmp/rus-fst-script
-	$(XFST) < ../../tmp/rus-fst-script
-	@rm -f ../../tmp/rus-fst-script
+	save stack ../bin/$(GTLANG).fst \n\
+	quit \n" > ../../tmp/$(GTLANG)-fst-script
+	$(XFST) < ../../tmp/$(GTLANG)-fst-script
+	@rm -f ../../tmp/$(GTLANG)-fst-script
 
 
 # The second goal is to build the inituppercase.fst file
@@ -96,36 +98,36 @@ inituppercase.fst: ../bin/inituppercase.fst
 	@rm -f ../../tmp/inituppercase-script
 
 
-# The first goal is to build rus-lex.save
+# The first goal is to build $(GTLANG)-lex.save
 # This goal depends on a bunch of lexicon files
 
-rus.save: ../bin/rus.save
-../bin/rus.save: ../bin/twol-rus.bin $(LEX)
+$(GTLANG).save: ../bin/$(GTLANG).save
+../bin/$(GTLANG).save: ../bin/twol-$(GTLANG).bin $(LEX)
 	@echo
-	@echo "*** Building rus-lex.save ***" ;
+	@echo "*** Building $(GTLANG)-lex.save ***" ;
 	@echo
 	printf "compile-source $(LEX) \n\
-	read-rules ../bin/twol-rus.bin \n\
+	read-rules ../bin/twol-$(GTLANG).bin \n\
 	compose-result \n\
-	save-result ../bin/rus.save \n\
-	quit \n" > ../../tmp/rus-lex-save-script
-	$(LEXC) < ../../tmp/rus-lex-save-script
-	rm -f ../../tmp/rus-lex-save-script
+	save-result ../bin/$(GTLANG).save \n\
+	quit \n" > ../../tmp/$(GTLANG)-lex-save-script
+	$(LEXC) < ../../tmp/$(GTLANG)-lex-save-script
+	rm -f ../../tmp/$(GTLANG)-lex-save-script
 
-# The second goal is to build xfst-rus.bin
-# This goal depends on xfst-rus.txt
+# The second goal is to build xfst-$(GTLANG).bin
+# This goal depends on xfst-$(GTLANG).txt
 
-twol-rus.bin: ../bin/two-rus.bin
-../bin/twol-rus.bin: twol-rus.txt
+twol-$(GTLANG).bin: ../bin/two-$(GTLANG).bin
+../bin/twol-$(GTLANG).bin: twol-$(GTLANG).txt
 	@echo
-	@echo "*** Building twol-rus.bin ***" ;
+	@echo "*** Building $(@F) ***" ;
 	@echo
-	@printf "read-grammar twol-rus.txt \n\
+	@printf "read-grammar twol-$(GTLANG).txt \n\
 	compile \n\
-	save-binary ../bin/twol-rus.bin \n\
-	quit \n" > ../../tmp/twol-rus-script
-	$(TWOLC) < ../../tmp/twol-rus-script
-	@rm -f ../../tmp/twol-rus-script
+	save-binary ../bin/twol-$(GTLANG).bin \n\
+	quit \n" > ../../tmp/twol-$(GTLANG)-script
+	$(TWOLC) < ../../tmp/twol-$(GTLANG)-script
+	@rm -f ../../tmp/twol-$(GTLANG)-script
 
 
 # Here are two goals for making cyrillic to latin converters
@@ -154,8 +156,8 @@ lat2cyr_no.fst: ../bin/lat2cyr_no.fst
 	@rm -f ../tmp/lat2cyr-script
 
 
-idate-rus.fst: ../bin/idate-rus.fst
-../bin/idate-rus.fst: ../bin/date-rus.fst
+idate-$(GTLANG).fst: ../bin/idate-$(GTLANG).fst
+../bin/idate-$(GTLANG).fst: ../bin/date-$(GTLANG).fst
 	@echo
 	@echo "*** $(@F) ***"
 	@echo
@@ -164,8 +166,8 @@ idate-rus.fst: ../bin/idate-rus.fst
 			-e "save stack $@" \
 			-stop
 
-date-rus.fst: ../bin/date-rus.fst
-../bin/date-rus.fst: date-rus.lexc
+date-$(GTLANG).fst: ../bin/date-$(GTLANG).fst
+../bin/date-$(GTLANG).fst: date-$(GTLANG).lexc
 	@echo
 	@echo "*** $(@F) ***"
 	@echo
@@ -177,8 +179,8 @@ date-rus.fst: ../bin/date-rus.fst
 
 
 
-iclock-rus.fst: ../bin/iclock-rus.fst
-../bin/iclock-rus.fst: ../bin/clock-rus.fst
+iclock-$(GTLANG).fst: ../bin/iclock-$(GTLANG).fst
+../bin/iclock-$(GTLANG).fst: ../bin/clock-$(GTLANG).fst
 	@echo
 	@echo "*** $(@F) ***"
 	@echo
@@ -188,8 +190,8 @@ iclock-rus.fst: ../bin/iclock-rus.fst
 			-stop
 
 
-clock-rus.fst: ../bin/clock-rus.fst
-../bin/clock-rus.fst: clock-rus.lexc
+clock-$(GTLANG).fst: ../bin/clock-$(GTLANG).fst
+../bin/clock-$(GTLANG).fst: clock-$(GTLANG).lexc
 	@echo
 	@echo "*** $(@F) ***"
 	@echo
@@ -198,8 +200,8 @@ clock-rus.fst: ../bin/clock-rus.fst
 			-stop
 
 
-rus-inum.fst: ../bin/rus-inum.fst
-../bin/rus-inum.fst: ../bin/rus-num.fst
+$(GTLANG)-inum.fst: ../bin/$(GTLANG)-inum.fst
+../bin/$(GTLANG)-inum.fst: ../bin/$(GTLANG)-num.fst
 	@echo
 	@echo "*** $(@F) ***"
 	@echo
@@ -208,8 +210,8 @@ rus-inum.fst: ../bin/rus-inum.fst
 			-e "save stack $@" \
 			-stop
 
-rus-num.fst: ../bin/rus-num.fst
-../bin/rus-num.fst: rus-num.txt
+$(GTLANG)-num.fst: ../bin/$(GTLANG)-num.fst
+../bin/$(GTLANG)-num.fst: $(GTLANG)-num.txt
 	@echo
 	@echo "*** $(@F) ***"
 	@echo

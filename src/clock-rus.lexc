@@ -187,7 +187,7 @@ LEXICON TO ! BEFORE
 @U.TIME.9@:девять@U.TIME.9@ # ;               !^N^
 @U.TIME.10@:десять@U.TIME.10@ # ;              !^N^
 @U.TIME.11@:одиннадцать@U.TIME.11@ # ;   !^N^
-@U.TIME.12@:двенадцать@U.TIME.12@ # ; !^N^
+@U.TIME.12@:двенадцать@U.TIME.12@  # ; !^N^
 
 
 LEXICON 1OVER
@@ -221,18 +221,18 @@ LEXICON NOMHOUR                              !^N^
 @U.TIME.12@:первого@U.TIME.12@ # ; !^N^
 
 LEXICON SHARP
-@U.TIME.1@:один@U.TIME.1@% 1HOUR ;
-@U.TIME.2@:два@U.TIME.2@% 2TO4HOUR ;
-@U.TIME.3@:три@U.TIME.3@% 2TO4HOUR;
-@U.TIME.4@:четыре@U.TIME.4@% 2TO4HOUR;
-@U.TIME.5@:пять@U.TIME.5@% 5HOUR ;
-@U.TIME.6@:шесть@U.TIME.6@% 5HOUR ;
-@U.TIME.7@:семь@U.TIME.7@% 5HOUR ;
-@U.TIME.8@:восемь@U.TIME.8@% 5HOUR ;
-@U.TIME.9@:девять@U.TIME.9@% 5HOUR ;
-@U.TIME.10@:десять@U.TIME.10@% 5HOUR ;
-@U.TIME.11@:одиннадцать@U.TIME.11@% 5HOUR ;
-@U.TIME.12@:двенадцать@U.TIME.12@% 5HOUR ;
+@U.TIME.1@:один@U.TIME.1@%  1HOUR ;
+@U.TIME.2@:два@U.TIME.2@%  2TO4HOUR ;
+@U.TIME.3@:три@U.TIME.3@%  2TO4HOUR;
+@U.TIME.4@:четыре@U.TIME.4@%  2TO4HOUR;
+@U.TIME.5@:пять@U.TIME.5@%  5HOUR ;
+@U.TIME.6@:шесть@U.TIME.6@%  5HOUR ;
+@U.TIME.7@:семь@U.TIME.7@%  5HOUR ;
+@U.TIME.8@:восемь@U.TIME.8@%  5HOUR ;
+@U.TIME.9@:девять@U.TIME.9@%  5HOUR ;
+@U.TIME.10@:десять@U.TIME.10@%  5HOUR ;
+@U.TIME.11@:одиннадцать@U.TIME.11@%  5HOUR ;
+@U.TIME.12@:двенадцать@U.TIME.12@%  5HOUR ;
 
 LEXICON 1HOUR
 :час # ;

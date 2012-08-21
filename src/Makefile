@@ -50,9 +50,10 @@ LEX = $(GTLANG)-lex.txt \
 
 all: \
 	$(GTLANG).fst        \
+	i$(GTLANG).fst       \
 	iclock-$(GTLANG).fst \
-	idate-$(GTLANG).fst \
-	$(GTLANG)-inum.fst \
+	idate-$(GTLANG).fst  \
+	$(GTLANG)-inum.fst   \
 	cyr2lat_no.fst
 
 
@@ -61,12 +62,10 @@ i$(GTLANG).fst: ../bin/i$(GTLANG).fst
 	@echo
 	@echo "*** Building the inverse $(@F) ***"
 	@echo
-	@printf "load $< \n\
-	invert net \n\
-	save stack $@ \n\
-	quit \n" > $@.script
-	$(XFST) < $@.script
-	@rm -f $@.script
+	$(XFST) -e "load < $<" \
+			-e "invert net" \
+			-e "save stack $@" \
+			-stop
 
 
 # This goal is to build the final analyser. It depends on all the files.
@@ -76,12 +75,9 @@ $(GTLANG).fst: ../bin/$(GTLANG).fst
 	@echo
 	@echo "*** Building $(@F) ***" ;
 	@echo
-	@printf "read regex [[@\"../bin/$(GTLANG).save\"] .o. \
-	[@\"../bin/inituppercase.fst\"]] ; \n\
-	save stack ../bin/$(GTLANG).fst \n\
-	quit \n" > ../../tmp/$(GTLANG)-fst-script
-	$(XFST) < ../../tmp/$(GTLANG)-fst-script
-	@rm -f ../../tmp/$(GTLANG)-fst-script
+	$(XFST) -e "read regex [[@\"$<\"] .o. [@\"../bin/inituppercase.fst\"]] ;" \
+			-e "save stack $@" \
+			-stop
 
 
 # The second goal is to build the inituppercase.fst file
@@ -92,11 +88,9 @@ inituppercase.fst: ../bin/inituppercase.fst
 	@echo
 	@echo "*** Building $(@F) ***" ;
 	@echo
-	@printf "read regex < inituppercase.regex \n\
-	save stack ../bin/inituppercase.fst \n\
-	quit \n" > ../../tmp/inituppercase-script
-	$(XFST) < ../../tmp/inituppercase-script
-	@rm -f ../../tmp/inituppercase-script
+	$(XFST) -e "read regex < $<" \
+			-e "save stack $@" \
+			-stop
 
 
 # The first goal is to build $(GTLANG)-lex.save
@@ -108,12 +102,12 @@ $(GTLANG).save: ../bin/$(GTLANG).save
 	@echo "*** Building $(@F) ***" ;
 	@echo
 	printf "compile-source $(LEX) \n\
-	read-rules ../bin/twol-$(GTLANG).bin \n\
+	read-rules $< \n\
 	compose-result \n\
-	save-result ../bin/$(GTLANG).save \n\
+	save-result $@ \n\
 	quit \n" > ../../tmp/$(GTLANG)-lex-save-script
-	$(LEXC) < ../../tmp/$(GTLANG)-lex-save-script
-	rm -f ../../tmp/$(GTLANG)-lex-save-script
+	$(LEXC) <  ../../tmp/$(GTLANG)-lex-save-script
+	rm -f      ../../tmp/$(GTLANG)-lex-save-script
 
 # The second goal is to build xfst-$(GTLANG).bin
 # This goal depends on xfst-$(GTLANG).txt
@@ -123,12 +117,12 @@ twol-$(GTLANG).bin: ../bin/two-$(GTLANG).bin
 	@echo
 	@echo "*** Building $(@F) ***" ;
 	@echo
-	@printf "read-grammar twol-$(GTLANG).txt \n\
+	@printf "read-grammar $< \n\
 	compile \n\
-	save-binary ../bin/twol-$(GTLANG).bin \n\
+	save-binary $@ \n\
 	quit \n" > ../../tmp/twol-$(GTLANG)-script
 	$(TWOLC) < ../../tmp/twol-$(GTLANG)-script
-	@rm -f ../../tmp/twol-$(GTLANG)-script
+	@rm -f     ../../tmp/twol-$(GTLANG)-script
 
 
 # Here are two goals for making cyrillic to latin converters
@@ -139,22 +133,18 @@ cyr2lat_no.fst: ../bin/cyr2lat_no.fst
 	@echo
 	@echo "*** Building $(@F) ***" ;
 	@echo
-	@printf "source $< \n\
-	save stack $@ \n\
-	quit \n" > ../tmp/cyr2lat-script
-	$(XFST) < ../tmp/cyr2lat-script
-	@rm -f ../tmp/cyr2lat-script
+	$(XFST) -e "source $<" \
+			-e "save stack $@" \
+			-stop
 
 lat2cyr_no.fst: ../bin/lat2cyr_no.fst
 ../bin/lat2cyr_no.fst: lat2cyr_no.xfst
 	@echo
-	@echo "*** Building lat2cyr.fst ***" ;
+	@echo "*** Building $(@F) ***" ;
 	@echo
-	@printf "source $< \n\
-	save stack $@ \n\
-	quit \n" > ../tmp/lat2cyr-script
-	$(XFST) < ../tmp/lat2cyr-script
-	@rm -f ../tmp/lat2cyr-script
+	$(XFST) -e "source $<" \
+			-e "save stack $@" \
+			-stop
 
 
 idate-$(GTLANG).fst: ../bin/idate-$(GTLANG).fst
@@ -175,8 +165,6 @@ date-$(GTLANG).fst: ../bin/date-$(GTLANG).fst
 	$(XFST) -e "read lexc $<" \
 			-e "save stack $@" \
 			-stop
-
-
 
 
 
@@ -206,7 +194,7 @@ $(GTLANG)-inum.fst: ../bin/$(GTLANG)-inum.fst
 	@echo
 	@echo "*** Building $(@F) ***" ;
 	@echo
-	@$(XFST) -e "load < $<" \
+	$(XFST) -e "load < $<" \
 			-e "invert net" \
 			-e "save stack $@" \
 			-stop

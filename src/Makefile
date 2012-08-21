@@ -48,6 +48,12 @@ LEX = $(GTLANG)-lex.txt \
 	  cs-$(GTLANG)-lex.txt \
 	  interj-$(GTLANG)-lex.txt
 
+all: \
+	$(GTLANG).fst        \
+	iclock-$(GTLANG).fst \
+	idate-$(GTLANG).fst \
+	$(GTLANG)-inum.fst \
+	cyr2lat_no.fst
 
 
 i$(GTLANG).fst: ../bin/i$(GTLANG).fst
@@ -68,7 +74,7 @@ i$(GTLANG).fst: ../bin/i$(GTLANG).fst
 $(GTLANG).fst: ../bin/$(GTLANG).fst
 ../bin/$(GTLANG).fst: ../bin/$(GTLANG).save ../bin/inituppercase.fst
 	@echo
-	@echo "*** Building $(GTLANG).fst ***" ;
+	@echo "*** Building $(@F) ***" ;
 	@echo
 	@printf "read regex [[@\"../bin/$(GTLANG).save\"] .o. \
 	[@\"../bin/inituppercase.fst\"]] ; \n\
@@ -84,7 +90,7 @@ $(GTLANG).fst: ../bin/$(GTLANG).fst
 inituppercase.fst: ../bin/inituppercase.fst
 ../bin/inituppercase.fst: inituppercase.regex
 	@echo
-	@echo "*** Building inituppercase.fst ***" ;
+	@echo "*** Building $(@F) ***" ;
 	@echo
 	@printf "read regex < inituppercase.regex \n\
 	save stack ../bin/inituppercase.fst \n\
@@ -99,7 +105,7 @@ inituppercase.fst: ../bin/inituppercase.fst
 $(GTLANG).save: ../bin/$(GTLANG).save
 ../bin/$(GTLANG).save: ../bin/twol-$(GTLANG).bin $(LEX)
 	@echo
-	@echo "*** Building $(GTLANG)-lex.save ***" ;
+	@echo "*** Building $(@F) ***" ;
 	@echo
 	printf "compile-source $(LEX) \n\
 	read-rules ../bin/twol-$(GTLANG).bin \n\
@@ -131,7 +137,7 @@ twol-$(GTLANG).bin: ../bin/two-$(GTLANG).bin
 cyr2lat_no.fst: ../bin/cyr2lat_no.fst
 ../bin/cyr2lat_no.fst: cyr2lat_no.xfst
 	@echo
-	@echo "*** Building cyr2lat.fst ***" ;
+	@echo "*** Building $(@F) ***" ;
 	@echo
 	@printf "source $< \n\
 	save stack $@ \n\
@@ -154,7 +160,7 @@ lat2cyr_no.fst: ../bin/lat2cyr_no.fst
 idate-$(GTLANG).fst: ../bin/idate-$(GTLANG).fst
 ../bin/idate-$(GTLANG).fst: ../bin/date-$(GTLANG).fst
 	@echo
-	@echo "*** $(@F) ***"
+	@echo "*** Building $(@F) ***" ;
 	@echo
 	$(XFST) -e "load < $<" \
 			-e "invert net" \
@@ -164,7 +170,7 @@ idate-$(GTLANG).fst: ../bin/idate-$(GTLANG).fst
 date-$(GTLANG).fst: ../bin/date-$(GTLANG).fst
 ../bin/date-$(GTLANG).fst: date-$(GTLANG).lexc
 	@echo
-	@echo "*** $(@F) ***"
+	@echo "*** Building $(@F) ***" ;
 	@echo
 	$(XFST) -e "read lexc $<" \
 			-e "save stack $@" \
@@ -177,7 +183,7 @@ date-$(GTLANG).fst: ../bin/date-$(GTLANG).fst
 iclock-$(GTLANG).fst: ../bin/iclock-$(GTLANG).fst
 ../bin/iclock-$(GTLANG).fst: ../bin/clock-$(GTLANG).fst
 	@echo
-	@echo "*** $(@F) ***"
+	@echo "*** Building $(@F) ***" ;
 	@echo
 	$(XFST) -e "load < $<" \
 			-e "invert net" \
@@ -188,7 +194,7 @@ iclock-$(GTLANG).fst: ../bin/iclock-$(GTLANG).fst
 clock-$(GTLANG).fst: ../bin/clock-$(GTLANG).fst
 ../bin/clock-$(GTLANG).fst: clock-$(GTLANG).lexc
 	@echo
-	@echo "*** $(@F) ***"
+	@echo "*** Building $(@F) ***" ;
 	@echo
 	$(XFST) -e "read lexc $<" \
 			-e "save stack $@" \
@@ -198,7 +204,7 @@ clock-$(GTLANG).fst: ../bin/clock-$(GTLANG).fst
 $(GTLANG)-inum.fst: ../bin/$(GTLANG)-inum.fst
 ../bin/$(GTLANG)-inum.fst: ../bin/$(GTLANG)-num.fst
 	@echo
-	@echo "*** $(@F) ***"
+	@echo "*** Building $(@F) ***" ;
 	@echo
 	@$(XFST) -e "load < $<" \
 			-e "invert net" \
@@ -208,7 +214,7 @@ $(GTLANG)-inum.fst: ../bin/$(GTLANG)-inum.fst
 $(GTLANG)-num.fst: ../bin/$(GTLANG)-num.fst
 ../bin/$(GTLANG)-num.fst: $(GTLANG)-num.txt
 	@echo
-	@echo "*** $(@F) ***"
+	@echo "*** Building $(@F) ***" ;
 	@echo
 	$(XFST) -e "read lexc $<" \
 			-e "save stack $@" \

@@ -71,11 +71,15 @@ i$(GTLANG).fst: ../bin/i$(GTLANG).fst
 # This goal is to build the final analyser. It depends on all the files.
 
 $(GTLANG).fst: ../bin/$(GTLANG).fst
-../bin/$(GTLANG).fst: ../bin/$(GTLANG).save ../bin/inituppercase.fst
+../bin/$(GTLANG).fst: ../bin/$(GTLANG).save \
+			../bin/inituppercase.fst \
+			../bin/spellrelax.fst
 	@echo
 	@echo "*** Building $(@F) ***" ;
 	@echo
-	$(XFST) -e "read regex [[@\"$<\"] .o. [@\"../bin/inituppercase.fst\"]] ;" \
+	$(XFST) -e "read regex [[@\"$<\"] .o. \
+			[@\"../bin/inituppercase.fst\"] .o. \
+			[@\"../bin/spellrelax.fst\"]] ;" \
 			-e "save stack $@" \
 			-stop
 
@@ -91,6 +95,20 @@ inituppercase.fst: ../bin/inituppercase.fst
 	$(XFST) -e "read regex < $<" \
 			-e "save stack $@" \
 			-stop
+
+
+# This goal is to allow for i instead of ï, and for ä/æ and ö/ø mix
+
+spellrelax.fst: ../bin/spellrelax.fst
+../bin/spellrelax.fst: ../../../gt/common/src/spellrelax.regex
+	@echo
+	@echo "*** Building spellrelax.fst ***" ;
+	@echo
+	@printf "read regex < ../../../gt/common/src/spellrelax.regex \n\
+	save stack ../bin/spellrelax.fst \n\
+	quit \n" > ../tmp/spellrelax-$(GTLANG)-script
+	$(XFST) < ../tmp/spellrelax-$(GTLANG)-script
+	@rm -f  f ../tmp/spellrelax-$(GTLANG)-script
 
 
 # The first goal is to build $(GTLANG)-lex.save

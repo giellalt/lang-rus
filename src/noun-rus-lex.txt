@@ -8,41 +8,29 @@
 ! numeral and 3 (or four) letters, as follows
 ! 1: digit = Zaliznjak declension class
 !(2: x = Zaliznjak * symbol, for light vowel)
-! 3: = m, f, n = gender info
-! 4: a, i = animate, inanimate
-
+! 3: letter a-f = Zaliznjak stress pattern
+! 4: = m, f, n = gender info
+! 5: a, i = animate, inanimate
 
 LEXICON Noun 
-
-! Class 1
-
 тигр 1ama "tiger" ;
 спор 1ami "strid" ;
 
 сон 1xami "søvn" ;
 орёл 1xami "ørn" ;
 лев 1xami "løve" ;
-заём:заём 1xami "lån" ;
-
-! Note: final vowel deleted in twol
-! so that stem becomes спор etc. 
-спора 1afa "sadf" ;
-рыба 1afa "fisk" ;
-карта 1afi "kart" ;
+заём 1xami "lån" ;
 
 сосна:сосена 1xafi "furu" ;
 кукла:кукола 1xafi "dokke" ;
 свадъба 1xafi "bryllup" ;
 
+
 правило 1an "regel" ;
 
-
-число 1xn "tall" ;
-окно 1xn "vindu" ;
-писъмо 1xn "brev" ;
-
-
-! Class 2
+число 1xani "tall" ;
+окно 1xani "vindu" ;
+писъмо 1xani "brev" ;
 
 житель 2ama "innbygger" ;
 вихрь 2ami "hvirvelvind" ;
@@ -58,8 +46,8 @@ LEXICON Noun
 доля 2efi "lodd" ;
 ноздря 2ffi "nesebor" ;
 
-день 2xami "dag" ;
-огонь 2xami "ild" ;
+день 2xmi "dag" ;
+огонь 2xmi "ild" ;
 
 капля 2xfi "dråpe" ;
 песня 2xfi "sang" ;
@@ -67,18 +55,20 @@ LEXICON Noun
 бойня 2xfi "slakteri" ;
 
 
-! Class 3
+
+спора 1afa "" ;
+
+правило 1ani "regel" ;
+рыба 1afa "fisk" ;
+карта 1afi "kart" ;
+
+
+
+! Class 3                                                                                                                                             
 
 внук 3ma ;
 орех 3mi ;
 
 благо 3n "gode" ;
-веко 3nko "øyelokk" ; ! 3 class neuters in -ko have Npl -и
-
-
-
-
-
-
-
+веко 3nko "øyelokk" ; ! 3 class neuters in -ko have Npl -и                                                                                            
 

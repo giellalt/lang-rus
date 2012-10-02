@@ -19,7 +19,7 @@ LEXICON Noun
 тигр 1ma "tiger" ;
 спор 1mi "strid" ;
 
-сон 1mi "søvn" ;
+сон 1xmi "søvn" ;
 орёл 1xmi "ørn" ;
 лев 1xmi "løve" ;
 заём 1xmi "lån" ;

@@ -7,6 +7,8 @@
 ! Masculines
 ! ----------
 
+! Animates
+
 ! We ignore stress
 LEXICON 1ama
 1ma ;
@@ -21,6 +23,53 @@ LEXICON 1ema
 LEXICON 1fma
 1ma ;
 
+! We ignore stress for light vowel words
+LEXICON 1xama
+1ma ;
+LEXICON 1xbma
+1ma ;
+LEXICON 1xcma
+1ma ;
+LEXICON 1xdma
+1ma ;
+LEXICON 1xema
+1ma ;
+LEXICON 1xfma
+1ma ;
+
+
+! Inanimates
+
+! We ignore stress
+LEXICON 1ami
+1mi ;
+LEXICON 1bmi
+1mi ;
+LEXICON 1cmi
+1mi ;
+LEXICON 1dmi
+1mi ;
+LEXICON 1emi
+1mi ;
+LEXICON 1fmi
+1mi ;
+
+! We ignore stress for light vowel words
+LEXICON 1xami
+1mi ;
+LEXICON 1xbmi
+1mi ;
+LEXICON 1xcmi
+1mi ;
+LEXICON 1xdmi
+1mi ;
+LEXICON 1xemi
+1mi ;
+LEXICON 1xfmi
+1mi ;
+
+
+
 ! We ignore stress
 LEXICON 2ama
 2ma ;
@@ -34,6 +83,50 @@ LEXICON 2ema
 2ma ;
 LEXICON 2fma
 2ma ;
+
+! We ignore stress for light vowel words
+LEXICON 2xama
+2ma ;
+LEXICON 2xbma
+2ma ;
+LEXICON 2xcma
+2ma ;
+LEXICON 2xdma
+2ma ;
+LEXICON 2xema
+2ma ;
+LEXICON 2xfma
+2ma ;
+
+
+
+! We ignore stress
+LEXICON 2ami
+2mi ;
+LEXICON 2bmi
+2mi ;
+LEXICON 2cmi
+2mi ;
+LEXICON 2dmi
+2mi ;
+LEXICON 2emi
+2mi ;
+LEXICON 2fmi
+2mi ;
+
+! We ignore stress for light vowel words
+LEXICON 2xami
+2mi ;
+LEXICON 2xbmi
+2mi ;
+LEXICON 2xcmi
+2mi ;
+LEXICON 2xdmi
+2mi ;
+LEXICON 2xemi
+2mi ;
+LEXICON 2xfmi
+2mi ;
 
 
 ! Masculine class 1
@@ -191,21 +284,34 @@ LEXICON 12xmi
 1xmi ;
 
 
+
+
+! Feminines, stripping stress
+
+
+LEXICON 1afi
+1fi ;
+
+
+LEXICON 1xafi
+1xfi ;
+
+
 ! Feminines
 ! ---------
 
 ! Class 1
 
 LEXICON 1fi
-+N+Fem+Pl+Acc:%> # ;
++N+Fem+Pl+Gen:%> # ;
 +N+Fem:          1fsuf ;
 
 LEXICON 1xfi
-+N+Fem+Pl+Acc:%^LV%> # ;
++N+Fem+Pl+Gen:%^LV%> # ;
 +N+Fem:%^LV          1fsuf ;
 
 LEXICON 1fa
-+N+Fem+Pl+Acc:%> # ;
++N+Fem+Pl+Gen:%> # ;
 +N+Fem:          1fsuf ;
            
 !LEXICON 1fi ! XXX error, check this
@@ -215,19 +321,19 @@ LEXICON 1fa
 ! Class 2
 
 LEXICON 2fa
-+N+Fem+Pl+Acc:%>ь # ;
++N+Fem+Pl+Gen:%>ь # ;
 +N+Fem:          2fsuf ;
 
 LEXICON 2xfa
-+N+Fem+Pl+Acc:%^LV%>ь # ;
++N+Fem+Pl+Gen:%^LV%>ь # ;
 +N+Fem:%^LV          2fsuf ;
 
 LEXICON 2fi
-+N+Fem+Pl+Acc:%>и # ;
++N+Fem+Pl+Gen:%>и # ;
 +N+Fem:          2fsuf ;
 
 LEXICON 2xfi
-+N+Fem+Pl+Acc:%^LV%>и # ;
++N+Fem+Pl+Gen:%^LV%>и # ;
 +N+Fem:%^LV          2fsuf ;
 
 ! Feminine class 3
@@ -299,6 +405,9 @@ LEXICON 2msuf
 +Pl+Gen:%>ей # ;
 +Pl+Dat:%>ям # ;
              LILPAL ;
+
+
+! Feminines
 
 LEXICON 1fsuf
 +Sg+Nom:%>а  # ;

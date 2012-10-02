@@ -16,25 +16,25 @@ LEXICON Noun
 
 ! Class 1
 
-тигр 1ma "tiger" ;
-спор 1mi "strid" ;
+тигр 1ama "tiger" ;
+спор 1ami "strid" ;
 
-сон 1xmi "søvn" ;
-орёл 1xmi "ørn" ;
-лев 1xmi "løve" ;
-заём 1xmi "lån" ;
+сон 1xami "søvn" ;
+орёл 1xami "ørn" ;
+лев 1xami "løve" ;
+заём:заём 1xami "lån" ;
 
 ! Note: final vowel deleted in twol
 ! so that stem becomes спор etc. 
-спора 1fa "sadf" ;
-рыба 1fa "fisk" ;
-карта 1fi "kart" ;
+спора 1afa "sadf" ;
+рыба 1afa "fisk" ;
+карта 1afi "kart" ;
 
-сосна:сосена 1xfi "furu" ;
-кукла:кукола 1xfi "dokke" ;
-свадъба 1xfi "bryllup" ;
+сосна:сосена 1xafi "furu" ;
+кукла:кукола 1xafi "dokke" ;
+свадъба 1xafi "bryllup" ;
 
-правило 1n "regel" ;
+правило 1an "regel" ;
 
 
 число 1xn "tall" ;
@@ -44,22 +44,22 @@ LEXICON Noun
 
 ! Class 2
 
-житель 2ma "innbygger" ;
-вихрь 2mi "hvirvelvind" ;
-дождь 2mi "regn" ;
-море 2ni "hav" ;
-богяиня 2fa "gudinne" ;
-буря 2fi "storm" ;
-ступня 2fi "fotsåle" ;
+житель 2ama "innbygger" ;
+вихрь 2ami "hvirvelvind" ;
+дождь 2bmi "regn" ;
+море 2cni "hav" ;
+богиня 2afa "gudinne" ;
+буря 2afi "storm" ;
+ступня 2bfi "fotsåle" ;
 
-пополь 2mi "poppel" ;
-гость 2ma "gjest" ;
-конь 2ma "hest" ;
-доля 2fi "lodd" ;
-ноздря 2fi "nesebor" ;
+пополь 2cmi "poppel" ;
+гость 2ema "gjest" ;
+конь 2fma "hest" ;
+доля 2efi "lodd" ;
+ноздря 2ffi "nesebor" ;
 
-день 2xmi "dag" ;
-огонь 2xmi "ild" ;
+день 2xami "dag" ;
+огонь 2xami "ild" ;
 
 капля 2xfi "dråpe" ;
 песня 2xfi "sang" ;
@@ -69,7 +69,7 @@ LEXICON Noun
 
 ! Class 3
 
-бнук 3ma ;
+внук 3ma ;
 орех 3mi ;
 
 благо 3n "gode" ;

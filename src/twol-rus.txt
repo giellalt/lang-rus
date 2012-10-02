@@ -36,12 +36,21 @@ Rules
 
 "Palatal Suffix Vowel"
  Vx:Vy <=> ь: %>:0 _ ;
-       where Vx in ( а А э Э ы Ы о О у У )
-       	     Vy in ( я Я е Е и И е Е ю Ю )
+       where Vx in ( а А э Э о О у У )
+       	     Vy in ( я Я е Е е Е ю Ю )
 	     matched ;
+!       where Vx in ( а А э Э ы Ы о О у У )
+!       	     Vy in ( я Я е Е и И е Е ю Ю )
+!	     matched ;
 
+ ! kan det hende at vi ikkje skal ha и/ы her?
+ 
 !€ житель%>ов
 !€ житель0ев
+
+
+"Nominal 3rd declension kgx rule"
+ ы:и <=> [ к | К | г | Г | х | Х ] %>:0 _ ;
 
 "Palatal Mark Deletion"
  ь:0 <=> C: _ %>:0 [ :я | :Я | :е | :Е | :и | :И | :ё | :Ё | :ю | :Ю ] ;
@@ -75,9 +84,7 @@ Vx:0 <=> V (C+) _ (Dummy:) %>:0 ;
  		where Vx in ( й  Й  й  Й ) ;
  		matched ;
 
-"Nominal 3rd declension kgx rule"
 
- ы:и <=> [  к | К | г | Г | х | Х ] %> _ ;
 
 !"Light vowel o"
 ! Vx:0 <=> _ C %>:0 V ;

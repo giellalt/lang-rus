@@ -26,7 +26,6 @@ LEXICON Noun
 кукла:кукола 1xafi "dokke" ;
 свадъба 1xafi "bryllup" ;
 
-
 правило 1an "regel" ;
 
 

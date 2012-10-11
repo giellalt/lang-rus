@@ -21,17 +21,20 @@ LEXICON Noun
 лев 1xami "løve" ;
 заём 1xami "lån" ;
 стол 1ami "bord" ;
+стул 1ami "stol" ;
+
 
 сосна:сосена 1xafi "furu" ;
 кукла:кукола 1xafi "dokke" ;
 свадъба 1xafi "bryllup" ;
-
+ 1xaf
 правило 1an "regel" ;
 
 
 число 1xani "tall" ;
 окно 1xani "vindu" ;
 писъмо 1xani "brev" ;
+
 
 житель 2ama "innbygger" ;
 вихрь 2ami "hvirvelvind" ;
@@ -65,11 +68,11 @@ LEXICON Noun
 
 
 
-! Class 3                                                                                                                                             
+! Class 3                            
 
 внук 3ma ;
 орех 3mi ;
 
 благо 3n "gode" ;
-веко 3nko "øyelokk" ; ! 3 class neuters in -ko have Npl -и                                                                                            
+веко 3nko "øyelokk" ; ! 3 class neuters in -ko have Npl и                                                                                    
 

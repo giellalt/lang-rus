@@ -300,48 +300,84 @@ LEXICON 1an
 
 ! Masculine class 1
 
-LEXICON 1ma
+LEXICON 1ama
 +N+Msc+Sg+Acc:%>а # ;
 +N+Msc+Pl+Acc:%>ов # ;
 +N+Msc:           1msuf ;
 
-LEXICON 1xma
+LEXICON 1xama
 +N+Msc+Sg+Acc:%^LV%>а # ;
 +N+Msc+Pl+Acc:%^LV%>ов # ;
 +N+Msc:%^LV           1msuf ;
 
-LEXICON 1mi
+LEXICON 1ami
 +N+Msc+Sg+Acc: # ;
 +N+Msc+Pl+Acc:%>ы # ;
 +N+Msc:          1msuf ;
 
-LEXICON 1xmi
+LEXICON 1xami
 +N+Msc+Sg+Acc:%^LV # ;
 +N+Msc+Pl+Acc:%^LV%>ы # ;
 +N+Msc:%^LV          1msuf ;
 
+LEXICON 1bmi
++N+Msc+Sg+Acc: # ;
++N+Msc+Pl+Acc:%>ы # ;
++N+Msc:          1msuf ;
+
+LEXICON 1cmi
++N+Msc+Sg+Acc: # ;
++N+Msc+Pl+Acc:%>ы # ;
++N+Msc:          1msuf ;
+
+LEXICON 1emi
++N+Msc+Sg+Acc: # ;
++N+Msc+Pl+Acc:%>ы # ;
++N+Msc:          1msuf ;
+
 
 ! Masculine class 2
 
-LEXICON 2ma
+LEXICON 2ama
 +N+Msc+Sg+Acc:%>я # ;
 +N+Msc+Pl+Acc:%>ей # ;
 +N+Msc:           2msuf ;
 
-LEXICON 2xma
+LEXICON 2xama
 +N+Msc+Sg+Acc:%^LV%>я # ;
 +N+Msc+Pl+Acc:%^LV%>ей # ;
 +N+Msc:%^LV           2msuf ;
 
-LEXICON 2mi
+LEXICON 2ami
 +N+Msc+Sg+Acc: # ;
 +N+Msc+Pl+Acc:%>и # ;
 +N+Msc:          2msuf ;
 
-LEXICON 2xmi
+LEXICON 2xami
 +N+Msc+Sg+Acc:%^LV # ;
 +N+Msc+Pl+Acc:%^LV%>и # ;
 +N+Msc:%^LV          2msuf ;
+
+LEXICON 2bmi
++N+Msc+Sg+Acc:%>я # ;
++N+Msc+Pl+Acc:%>ей # ;
++N+Msc:           2msuf ;
+
+LEXICON 2cmi
++N+Msc+Sg+Acc:%>я # ;
++N+Msc+Pl+Acc:%>ей # ;
++N+Msc:           2msuf ;
+
+LEXICON 2ema
++N+Msc+Sg+Acc:%>я # ;
++N+Msc+Pl+Acc:%>ей # ;
++N+Msc:           2msuf ;
+
+LEXICON 2fma
++N+Msc+Sg+Acc:%>я # ;
++N+Msc+Pl+Acc:%>ей # ;
++N+Msc:           2msuf ;
+
 
 ! Masculine class 3
 
@@ -351,45 +387,143 @@ LEXICON 2xmi
 ! that, and uify with class 1.
 
 
+!Masculine class 4
+
+LEXICON 4ama
++N+Msc+Sg+Acc:%>а # ;
++N+Msc+Sg+Ins:%>ем # ;
++N+Msc+Pl+Acc:%>ей # ;
++N+Msc:           4msuf ;
+
+LEXICON 4ami
++N+Msc+Sg+Acc: # ;
++N+Msc+Sg+Ins:%>ем # ;
++N+Msc+Pl+Acc:%>и # ;
++N+Msc:          4msuf ;
+
+LEXICON 4bma
++N+Msc+Sg+Acc:%>а # ;
++N+Msc+Sg+Ins:%>ом # ;
++N+Msc+Pl+Acc:%>и # ;
++N+Msc:          4msuf ;
+
+LEXICON 4cma
++N+Msc+Sg+Acc:%>а # ;
++N+Msc+Sg+Ins:%>ем # ;
++N+Msc+Pl+Acc:%>ей # ;
++N+Msc:          4msuf ;
+
+LEXICON 4ema
++N+Msc+Sg+Acc:%>а # ;
++N+Msc+Sg+Ins:%>ем # ;
++N+Msc+Pl+Acc:%>и # ;
++N+Msc:          4msuf ;
+
+
+
+! Class 5
+
+LEXICON 5ama
++N+Msc+Sg+Acc:%>а # ;
++N+Msc+Sg+Ins:%>ем # ;
++N+Msc+Pl+Gen:%>ев # ;
++N+Msc+Pl+Acc:%>ев # ;
++N+Msc:          5msuf ;
+
+
+LEXICON 5ami
++N+Msc+Sg+Acc:%> # ;
++N+Msc+Sg+Ins:%>ем # ;
++N+Msc+Pl+Gen:%>ев # ;
++N+Msc+Pl+Acc:%>ы # ;
++N+Msc:          5msuf ;
+
+LEXICON 5bma
++N+Msc+Sg+Acc:%>а # ;
++N+Msc+Sg+Ins:%>ом # ;
++N+Msc+Pl+Gen:%>ов # ;
++N+Msc+Pl+Acc:%>ов # ;
++N+Msc:          5msuf ;
+
 
 ! Feminines
 ! ---------
 
 ! Class 1
 
-LEXICON 1fi
+LEXICON 1afi
 +N+Fem+Pl+Gen:%> # ;
++N+Fem+Pl+Acc:%>ы # ;
 +N+Fem:          1fsuf ;
 
-LEXICON 1xfi
+LEXICON 1xafi
 +N+Fem+Pl+Gen:%^LV%> # ;
++N+Fem+Pl+Acc:%>ы # ;
 +N+Fem:%^LV          1fsuf ;
 
-LEXICON 1fa
+LEXICON 1afa
 +N+Fem+Pl+Gen:%> # ;
++N+Fem+Pl+Acc:%> # ;
 +N+Fem:          1fsuf ;
            
-!LEXICON 1fi ! XXX error, check this
-!+N+Fem+Pl+Acc:%>ы # ;
-!+N+Fem:           1fsuf ;
+LEXICON 1xafa
++N+Fem+Pl+Gen:%^LV%> # ;
++N+Fem+Pl+Acc:%> # ;
++N+Fem:%^LV          1fsuf ;
+
+LEXICON 1bfi
++N+Fem+Pl+Gen:%> # ;
++N+Fem+Pl+Acc:%>ы # ;
++N+Fem:          1fsuf ;
+
+LEXICON 1dfi
++N+Fem+Pl+Gen:%> # ;
++N+Fem+Pl+Acc:%>ы # ;
++N+Fem:          1fsuf ;
+
+LEXICON 1ffi
++N+Fem+Pl+Gen:%> # ;
++N+Fem+Pl+Acc:%>ы # ;
++N+Fem:          1fsuf ;
 
 ! Class 2
 
-LEXICON 2fa
+LEXICON 2afa
 +N+Fem+Pl+Gen:%>ь # ;
++N+Fem+Pl+Acc:%>ь # ;
 +N+Fem:          2fsuf ;
 
-LEXICON 2xfa
+LEXICON 2xafa
 +N+Fem+Pl+Gen:%^LV%>ь # ;
++N+Fem+Pl+Acc:%^LV%>ь # ;
 +N+Fem:%^LV          2fsuf ;
 
-LEXICON 2fi
-+N+Fem+Pl+Gen:%>и # ;
+LEXICON 2afi
++N+Fem+Pl+Gen:%> # ;
++N+Fem+Pl+Acc:%>и # ;
 +N+Fem:          2fsuf ;
 
-LEXICON 2xfi
-+N+Fem+Pl+Gen:%^LV%>и # ;
+LEXICON 2xafi
++N+Fem+Pl+Gen:%^LV%> # ;
++N+Fem+Pl+Acc:%^LV%> # ;
 +N+Fem:%^LV          2fsuf ;
+
+LEXICON 2bfi
++N+Fem+Pl+Gen:%>ей # ;
++N+Fem+Pl+Acc:%>и # ;
++N+Fem:          2fsuf ;
+
+LEXICON 2efi
++N+Fem+Pl+Gen:%>ей # ;
++N+Fem+Pl+Acc:%>и # ;
++N+Fem:          2fsuf ;
+
+LEXICON 2ffi
++N+Fem+Pl+Gen:%>ей # ;
++N+Fem+Pl+Acc:%>и # ;
++N+Fem:          2fsuf ;
+
+
 
 ! Feminine class 3
 
@@ -398,8 +532,43 @@ LEXICON 2xfi
 ! the ы suffix with и. We make a twol rule for
 ! that, and uify with class 1.
 
+!Class 4
 
+LEXICON 4afi
++N+Fem+Sg+Ins:%>ей # ;
++N+Fem+Pl+Gen:%> # ;
++N+Fem+Pl+Acc:%>и ;
++N+Fem:          4fsuf ;
 
+LEXICON 4afa
++N+Fem+Sg+Ins:%>ей # ;
++N+Fem+Pl+Gen:%> # ;
++N+Fem+Pl+Acc:%> # ;
++N+Fem:          4fsuf ;
+
+LEXICON 4bfi
++N+Fem+Sg+Ins:%>ой # ;
++N+Fem+Pl+Gen:%>ей # ;
++N+Fem+Pl+Acc:%>и # ;
++N+Msc:          4msuf ;
+           
+
+! Class 5
+
+LEXICON 5afa
++N+Fem+Sg+Ins:%>ей # ;
++N+Fem+Pl+Acc:%> # ;
++N+Fem:          5fsuf ;
+
+LEXICON 5afi
++N+Fem+Sg+Ins:%>ей # ;
++N+Fem+Pl+Acc:%>ы # ;
++N+Fem:          5fsuf ;
+
+LEXICON 5bfi
++N+Fem+Sg+Ins:%>ой # ;
++N+Fem+Pl+Acc:%>ы # ; 
++N+Fem:          5fsuf ;
 
 ! Neuters
 ! -------
@@ -423,7 +592,34 @@ LEXICON 3nko
 +N+Neu+Pl+Nom:%>и # ;
 +N+Neu: rest_1n_suf ;
 
+LEXICON 4ana
++N+Neu+Pl+Acc:%> # ;
++N+Neu:          4nsuf ;
 
+LEXICON 4ani
++N+Neu+Pl+Acc:%> а # ;
++N+Neu:          4nsuf ;
+
+LEXICON 5ani
++N+Neu+Sg+Nom:%> е # ;
++N+Neu+Sg+Acc:%> е # ;
++N+Neu+Sg+Ins:%> ем # ;
++N+Neu+Pl+Acc:%> а # ;
++N+Neu:          5nsuf ;
+
+LEXICON 5bni
++N+Neu+Sg+Nom:%> о # ;
++N+Neu+Sg+Acc:%> о # ;
++N+Neu+Sg+Ins:%> ом # ;
++N+Neu+Pl+Acc:%> а # ;
++N+Neu:          5nsuf ;
+
+LEXICON 5bna
++N+Neu+Sg+Nom:%> о # ;
++N+Neu+Sg+Acc:%> о # ;
++N+Neu+Sg+Ins:%>  # ;
++N+Neu+Pl+Acc:%> а # ;
++N+Neu:          5nsuf ;
 
 
 ! Suffix classes
@@ -440,15 +636,31 @@ LEXICON 1msuf
              LIL ;
 
 LEXICON 2msuf
-+Sg+Nom:%> # ;
++Sg+Nom: # ;
 +Sg+Gen:%>я # ;
 +Sg+Dat:%>ю # ;
-+Sg+Ins:%>я # ;
++Sg+Ins:%>ем # ;
 +Pl+Nom:%>и # ;
 +Pl+Gen:%>ей # ;
 +Pl+Dat:%>ям # ;
              LILPAL ;
 
+LEXICON 4msuf
++Sg+Nom: # ;
++Sg+Gen:%>а # ;
++Sg+Dat:%>у # ;
++Pl+Nom:%>и # ;
++Pl+Gen:%>ей # ;
++Pl+Dat:%>ам # ;
+             LIL ;
+
+LEXICON 5msuf
++Sg+Nom: # ;
++Sg+Gen:%>а # ;
++Sg+Dat:%>у # ;
++Pl+Nom:%>ы # ;
++Pl+Dat:%>ам # ;
+             LIL ;
 
 ! Feminines
 
@@ -470,9 +682,21 @@ LEXICON 2fsuf
 +Sg+Acc:%>ю  # ;
 +Sg+Ins:%>ей # ;
 +Pl+Nom:%>и  # ;
-+Pl+Gen:%>ь     # ;
 +Pl+Dat:%>ям # ;
              LILPAL ;
+
+LEXICON 4fsuf
++Sg+Nom:%>а  # ;
++Sg+Gen:%>и  # ;
++Sg+Dat:%>е  # ;
++Sg+Acc:%>у  # ;
++Pl+Nom:%>и  # ;
++Pl+Dat:%>ам # ;
+             LIL ;
+             
+
+
+!Neuters
 
 LEXICON 1nsuf
 normal_1n_pl_nom ; ! not normal is 3nko
@@ -504,6 +728,24 @@ LEXICON 2nsuf
 +Pl+Acc:%>я  # ;
              LILPAL ; 
 
+LEXICON 4nsuf
++Sg+Nom:%>е  # ;
++Sg+Gen:%>а  # ;
++Sg+Dat:%>у  # ;
++Sg+Acc:%>е  # ;
++Sg+Ins:%>ем # ;
++Pl+Nom:%>а  # ;
++Pl+Gen:%> # ;
++Pl+Dat:%>ам # ;
+             LIL ; 
+
+LEXICON 5nsuf
++Sg+Gen:%>а  # ;
++Sg+Dat:%>у  # ;
++Pl+Nom:%>а  # ;
++Pl+Gen:%> # ;
++Pl+Dat:%>ам # ;
+             LIL ; 
                           
 LEXICON LIL
 +Sg+Loc:%>е   # ;
@@ -514,3 +756,5 @@ LEXICON LILPAL
 +Sg+Loc:%>е   # ;
 +Pl+Ins:%>ями # ;
 +Pl+Loc:%>ях  # ;
+
+

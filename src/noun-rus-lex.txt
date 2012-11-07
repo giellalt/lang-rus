@@ -15,26 +15,42 @@
 LEXICON Noun 
 тигр 1ama "tiger" ;
 спор 1ami "strid" ;
+правило 1ani "regel" ;
+рыба 1afa "fisk" ;
+карта 1afi "kart" ;
+
+стол 1bmi "bord";
+сад 1cmi "hage";
+лес 1cmi "skog";
+зуб 1emi "tann";
+вещество 1bni "stoff";
+место 1cni "sted";
+вино 1dni "vin";
+село 1dni "landsby";
+
+черта 1bfi "trekk";
+беда 1dfi "ulykke";
+жена 1dfi "kone";
+губа 1ffi "leppe";
+слеза 1ffi "tåre";
+голова 1ffi "hode";
+
+!Models with light vowels, class 1
 
 сон 1xami "søvn" ;
 орёл 1xami "ørn" ;
 лев 1xami "løve" ;
 заём 1xami "lån" ;
-стол 1ami "bord" ;
-стул 1ami "stol" ;
-
 
 сосна:сосена 1xafi "furu" ;
 кукла:кукола 1xafi "dokke" ;
-свадъба 1xafi "bryllup" ;
- 1xaf
-правило 1an "regel" ;
+свадъба:свадеб 1xafi "bryllup" ;
 
+число:чисел 1xani "tall" ;
+окно:окон 1xani "vindu" ;
+письмо:писем 1xani "brev" ;
 
-число 1xani "tall" ;
-окно 1xani "vindu" ;
-писъмо 1xani "brev" ;
-
+!Class 2
 
 житель 2ama "innbygger" ;
 вихрь 2ami "hvirvelvind" ;
@@ -44,14 +60,16 @@ LEXICON Noun
 буря 2afi "storm" ;
 ступня 2bfi "fotsåle" ;
 
-пополь 2cmi "poppel" ;
+тополь 2cmi "poppel" ;
 гость 2ema "gjest" ;
 конь 2fma "hest" ;
 доля 2efi "lodd" ;
 ноздря 2ffi "nesebor" ;
 
-день 2xmi "dag" ;
-огонь 2xmi "ild" ;
+
+!Models with light vowels, class 2
+день 2xbmi "dag" ;
+огонь 2xbmi "ild" ;
 
 капля 2xfi "dråpe" ;
 песня 2xfi "sang" ;
@@ -59,20 +77,36 @@ LEXICON Noun
 бойня 2xfi "slakteri" ;
 
 
+! Class 3                   
 
-спора 1afa "" ;
-
-правило 1ani "regel" ;
-рыба 1afa "fisk" ;
-карта 1afi "kart" ;
+благо 3ani "gode" ;
+веко 3anko "øyelokk" ; ! 3 class neuters in -ko have Npl -и                        
 
 
+!Class 4
+товарищ 4ama "kamerat";
+марш 4ami "marsj";
+врач 4bma "lege";
+чудовище 4ana "Monstrum";
+ложе 4ani "leie";
+тёща 4afa "svigermor";
+крыша 4afi "tak";
+бахча 4bfi "melonåker"
 
-! Class 3                            
+!Class 5
+принц 5ama "Prins";
+месяц 5ami "måned";
+беглец 5bma "flyktning";
+солнце 5ani "sol";
+лицо 5bni "aniskt";
+птица 5afa "fugl";
+улица 5afi "gate";
+пыльца 5bfi "pollen";
 
-внук 3ma ;
-орех 3mi ;
+!Models with light vowels, class 5
+отец:отц 5xbma "far";
+палец:пальц 5xami "finger";
+боец:бойц 5xbma "kriger";
 
-благо 3n "gode" ;
-веко 3nko "øyelokk" ; ! 3 class neuters in -ko have Npl и                                                                                    
+
 

@@ -15,8 +15,8 @@
 ! Animates
 
 ! We ignore stress
-LEXICON 1ama
-1ma ;
+!LEXICON 1ama
+!1ma ;
 LEXICON 1bma
 1ma ;
 LEXICON 1cma

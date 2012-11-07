@@ -91,7 +91,7 @@ LEXICON Noun
 ложе 4ani "leie";
 тёща 4afa "svigermor";
 крыша 4afi "tak";
-бахча 4bfi "melonåker"
+бахча 4bfi "melonåker";
 
 !Class 5
 принц 5ama "Prins";

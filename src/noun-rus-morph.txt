@@ -3,6 +3,8 @@
 ! Noun classes
 ! ============
 
+!We do not ignore stress as it is important 
+!for declination of several classes of nouns
 
 ! First removing stress info from the lexicon.
 ! When we start doing stress, we will use this info.
@@ -17,121 +19,121 @@
 ! We ignore stress
 !LEXICON 1ama
 !1ma ;
-LEXICON 1bma
-1ma ;
-LEXICON 1cma
-1ma ;
-LEXICON 1dma
-1ma ;
-LEXICON 1ema
-1ma ;
-LEXICON 1fma
-1ma ;
+!LEXICON 1bma
+!1ma ;
+!LEXICON 1cma
+!1ma ;
+!LEXICON 1dma
+!1ma ;
+!LEXICON 1ema
+!1ma ;
+!LEXICON 1fma
+!1ma ;
 
 ! We ignore stress for light vowel words
-LEXICON 1xama
-1ma ;
-LEXICON 1xbma
-1ma ;
-LEXICON 1xcma
-1ma ;
-LEXICON 1xdma
-1ma ;
-LEXICON 1xema
-1ma ;
-LEXICON 1xfma
-1ma ;
+!LEXICON 1xama
+!1ma ;
+!LEXICON 1xbma
+!1ma ;
+!LEXICON 1xcma
+!1ma ;
+!LEXICON 1xdma
+!1ma ;
+!LEXICON 1xema
+!1ma ;
+!LEXICON 1xfma
+!1ma ;
 
 
 ! Inanimates
 
 ! We ignore stress
-LEXICON 1ami
-1mi ;
-LEXICON 1bmi
-1mi ;
-LEXICON 1cmi
-1mi ;
-LEXICON 1dmi
-1mi ;
-LEXICON 1emi
-1mi ;
-LEXICON 1fmi
-1mi ;
+!LEXICON 1ami
+!1mi ;
+!LEXICON 1bmi
+!1mi ;
+!LEXICON 1cmi
+!1mi ;
+!LEXICON 1dmi
+!1mi ;
+!LEXICON 1emi
+!1mi ;
+!LEXICON 1fmi
+!1mi ;
 
 ! We ignore stress for light vowel words
-LEXICON 1xami
-1mi ;
-LEXICON 1xbmi
-1mi ;
-LEXICON 1xcmi
-1mi ;
-LEXICON 1xdmi
-1mi ;
-LEXICON 1xemi
-1mi ;
-LEXICON 1xfmi
-1mi ;
+!LEXICON 1xami
+!1mi ;
+!LEXICON 1xbmi
+!1mi ;
+!LEXICON 1xcmi
+!1mi ;
+!LEXICON 1xdmi
+!1mi ;
+!LEXICON 1xemi
+!1mi ;
+!LEXICON 1xfmi
+!1mi ;
 
 
 
 ! We ignore stress
-LEXICON 2ama
-2ma ;
-LEXICON 2bma
-2ma ;
-LEXICON 2cma
-2ma ;
-LEXICON 2dma
-2ma ;
-LEXICON 2ema
-2ma ;
-LEXICON 2fma
-2ma ;
+!LEXICON 2ama
+!2ma ;
+!LEXICON 2bma
+!2ma ;
+!LEXICON 2cma
+!2ma ;
+!LEXICON 2dma
+!2ma ;
+!LEXICON 2ema
+!2ma ;
+!LEXICON 2fma
+!2ma ;
 
 ! We ignore stress for light vowel words
-LEXICON 2xama
-2ma ;
-LEXICON 2xbma
-2ma ;
-LEXICON 2xcma
-2ma ;
-LEXICON 2xdma
-2ma ;
-LEXICON 2xema
-2ma ;
-LEXICON 2xfma
-2ma ;
+!LEXICON 2xama
+!2ma ;
+!LEXICON 2xbma
+!2ma ;
+!LEXICON 2xcma
+!2ma ;
+!LEXICON 2xdma
+!2ma ;
+!LEXICON 2xema
+!2ma ;
+!LEXICON 2xfma
+!2ma ;
 
 
 
 ! We ignore stress
-LEXICON 2ami
-2mi ;
-LEXICON 2bmi
-2mi ;
-LEXICON 2cmi
-2mi ;
-LEXICON 2dmi
-2mi ;
-LEXICON 2emi
-2mi ;
-LEXICON 2fmi
-2mi ;
+!LEXICON 2ami
+!2mi ;
+!LEXICON 2bmi
+!2mi ;
+!LEXICON 2cmi
+!2mi ;
+!LEXICON 2dmi
+!2mi ;
+!LEXICON 2emi
+!2mi ;
+!LEXICON 2fmi
+!2mi ;
 
 ! We ignore stress for light vowel words
-LEXICON 2xami
-2mi ;
-LEXICON 2xbmi
-2mi ;
-LEXICON 2xcmi
-2mi ;
-LEXICON 2xdmi
-2mi ;
-LEXICON 2xemi
-2mi ;
-LEXICON 2xfmi
-2mi ;
+!LEXICON 2xami
+!2mi ;
+!LEXICON 2xbmi
+!2mi ;
+!LEXICON 2xcmi
+!2mi ;
+!LEXICON 2xdmi
+!2mi ;
+!LEXICON 2xemi
+!2mi ;
+!LEXICON 2xfmi
+!2mi ;
 
 
 
@@ -150,92 +152,92 @@ LEXICON 3xmi
 
 ! Masculine class 4
 
-LEXICON 4ma
-1ma ;
+!LEXICON 4ma
+!1ma ;
 
-LEXICON 4xma
-1xma ;
+!LEXICON 4xma
+!1xma ;
 
-LEXICON 5ma
-1ma ;
+!LEXICON 5ma
+!1ma ;
 
-LEXICON 5xma
-1xma ;
+!LEXICON 5xma
+!1xma ;
 
-LEXICON 6ma
-1ma ;
+!LEXICON 6ma
+!1ma ;
 
-LEXICON 6xma
-1xma ;
+!LEXICON 6xma
+!1xma ;
 
-LEXICON 7ma
-1ma ;
+!LEXICON 7ma
+!1ma ;
 
-LEXICON 7xma
-1xma ;
-
-
-LEXICON 10ma
-1ma ;
-
-LEXICON 10xma
-1xma ;
-
-LEXICON 11ma
-1ma ;
-
-LEXICON 11xma
-1xma ;
-
-LEXICON 12ma
-1ma ;
-
-LEXICON 12xma
-1xma ;
+!LEXICON 7xma
+!1xma ;
 
 
-LEXICON 4mi
-1mi ;
+!LEXICON 10ma
+!1ma ;
 
-LEXICON 4xmi
-1xmi ;
+!LEXICON 10xma
+!1xma ;
 
-LEXICON 5mi
-1mi ;
+!LEXICON 11ma
+!1ma ;
 
-LEXICON 5xmi
-1xmi ;
+!LEXICON 11xma
+!1xma ;
 
-LEXICON 6mi
-1mi ;
+!LEXICON 12ma
+!1ma ;
 
-LEXICON 6xmi
-1xmi ;
-
-LEXICON 7mi
-1mi ;
-
-LEXICON 7xmi
-1xmi ;
+!LEXICON 12xma
+!1xma ;
 
 
-LEXICON 10mi
-1mi ;
+!LEXICON 4mi
+!1mi ;
 
-LEXICON 10xmi
-1xmi ;
+!LEXICON 4xmi
+!1xmi ;
 
-LEXICON 11mi
-1mi ;
+!LEXICON 5mi
+!1mi ;
 
-LEXICON 11xmi
-1xmi ;
+!LEXICON 5xmi
+!1xmi ;
 
-LEXICON 12mi
-1mi ;
+!LEXICON 6mi
+!1mi ;
 
-LEXICON 12xmi
-1xmi ;
+!LEXICON 6xmi
+!1xmi ;
+
+!LEXICON 7mi
+!1mi ;
+
+!LEXICON 7xmi
+!1xmi ;
+
+
+!LEXICON 10mi
+!1mi ;
+
+!LEXICON 10xmi
+!1xmi ;
+
+!LEXICON 11mi
+!1mi ;
+
+!LEXICON 11xmi
+!1xmi ;
+
+!LEXICON 12mi
+!1mi ;
+
+!LEXICON 12xmi
+!1xmi ;
 
 
 
@@ -243,52 +245,52 @@ LEXICON 12xmi
 ! Feminines, stripping stress
 
 
-LEXICON 1afi
-1fi ;
+!LEXICON 1afi
+!1fi ;
 
 
-LEXICON 1xafi
-1xfi ;
+!LEXICON 1xafi
+!1xfi ;
 
 
 
 ! Feminines, 3
 
-LEXICON 3fa                 
-1fa ;
+!LEXICON 3fa                 
+!1fa ;
 
-LEXICON 3xfa
-1fa ; ! fix
+!LEXICON 3xfa
+!1fa ; ! fix
 
-LEXICON 3fi
-1fi ;
+!LEXICON 3fi
+!1fi ;
 
-LEXICON 3xfi
-1xfi ;
+!LEXICON 3xfi
+!1xfi ;
 
 
 ! Miscellanious de-stressing lexica
 
-LEXICON 1xani
-1xni # ;
-LEXICON 2cni
-2ni # ;
-LEXICON 2afa
-2fa # ;
-LEXICON 2afi
-2fi # ;
-LEXICON 2bfi
-2fi # ;
-LEXICON 2efi
-2fi # ;
-LEXICON 2ffi
-2fi # ;
-LEXICON 1afa
-1fa # ;
-LEXICON 1ani
-1ni # ;
-LEXICON 1an
-1n # ;
+!LEXICON 1xani
+!1xni # ;
+!LEXICON 2cni
+!2ni # ;
+!LEXICON 2afa
+!2fa # ;
+!LEXICON 2afi
+!2fi # ;
+!LEXICON 2bfi
+!2fi # ;
+!LEXICON 2efi
+!2fi # ;
+!LEXICON 2ffi
+!2fi # ;
+!LEXICON 1afa
+!1fa # ;
+!LEXICON 1ani
+!1ni # ;
+!LEXICON 1an
+!1n # ;
 
 
 

@@ -71,10 +71,10 @@ LEXICON Noun
 день 2xbmi "dag" ;
 огонь 2xbmi "ild" ;
 
-капля 2xfi "dråpe" ;
-песня 2xfi "sang" ;
-спалъня 2xfi "soverom" ;
-бойня 2xfi "slakteri" ;
+капля 2xafi "dråpe" ;
+песня 2xafi "sang" ;
+спалъня 2xafi "soverom" ;
+бойня 2xafi "slakteri" ;
 
 
 ! Class 3                   

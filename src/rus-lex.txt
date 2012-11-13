@@ -33,11 +33,11 @@ Multichar_Symbols
 
 LEXICON Root
 
-Propernoun ;
+!Propernoun ;
 Noun ;
-Verb ;
-Adjective ;
-Adverb ;
+!Verb ;
+!Adjective ;
+!Adverb ;
 !Conjunction ;
 !Subjunction ;
 !Interjection ;

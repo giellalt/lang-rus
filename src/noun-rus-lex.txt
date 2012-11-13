@@ -14,6 +14,7 @@
 
 LEXICON Noun 
 тигр 1ama "tiger" ;
+слон 1ama "elefant";
 спор 1ami "strid" ;
 правило 1ani "regel" ;
 рыба 1afa "fisk" ;

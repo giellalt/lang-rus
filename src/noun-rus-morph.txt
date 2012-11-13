@@ -462,12 +462,12 @@ LEXICON 4fsuf
 +Pl+Dat:%>ам # ;
              LIL ;
              
-LEXICON 5fsuf ! not done XXX улица
+LEXICON 5fsuf ! not done XXX улица !done
 +Sg+Nom:%>а  # ;
-+Sg+Gen:%>и  # ;
++Sg+Gen:%>ы  # ;
 +Sg+Dat:%>е  # ;
 +Sg+Acc:%>у  # ;
-+Pl+Nom:%>и  # ;
++Pl+Nom:%>ы  # ;
 +Pl+Dat:%>ам # ;
              LIL ;
              

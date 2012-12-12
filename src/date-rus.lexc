@@ -12,13 +12,12 @@
 ! Other licensing options are available upon request, please contact
 ! giellatekno@hum.uit.no or divvun@samediggi.no
 
-! ==================== !
-! The North Sámi dates !
-! ==================== !
+! ================= !
+! The Russian dates !
+! ================= !
 
 
-! 12.8.
-! Borgemánu guoktenuppelot beaivi
+! Note that the months (but not all :-( are stress marked.
 
 !Multichar_Symbols
 
@@ -27,62 +26,62 @@ LEXICON Root
 DAY ;
 
 LEXICON DAY
-пе́рвoе% :1. 29MONTH ;
-второ́е% :2. 29MONTH ;
-тре́тье% :3. 29MONTH ;
-четвёрто́е% :4. 29MONTH ;
-пя́то́е% :5. 29MONTH ;
-шесто́е% :6. 29MONTH ;
-седьмо́е% :7. 29MONTH ;
-восьмо́е% :8. 29MONTH ;
-девя́тoе% :9. 29MONTH ;
-десято́е% :1%0. 29MONTH ;
-одинна́дцатoе% :11. 29MONTH ;
-двена́дцатoе% :12. 29MONTH ;
-трина́дцатое% :13. 29MONTH ;
-четырна́дцатое% :14. 29MONTH ;
-пятна́дцатое% :15. 29MONTH ;
-шестна́дцатое% :16. 29MONTH ;
-семна́дцатое% :17. 29MONTH ;
-восемна́дцатое% :18. 29MONTH ;
-девятна́дцатое% :19. 29MONTH ;
-два́дцатое% :2%0. 29MONTH ;
-двадцать% первое% :21. 29MONTH ;
-двадцать% второ́е% :22. 29MONTH ;
-двадцать% третье% :23. 29MONTH ;
-двадцать% четвёртое% :24. 29MONTH ;
-двадцать% пятое% :25. 29MONTH ;
-двадцать% шесто́е% :26. 29MONTH ;
-двадцать% седьмо́е% :27. 29MONTH ;
-двадцать% восьмо́е% :28. 29MONTH ;
-двадцать% девято́е% :29. 29MONTH ;
-
-тридца́тое% :3%0. 30MONTH ;
-тридцать% пе́рвое% :31. 31MONTH ;
-
-
-
+1.:пе́рвoе%  29MONTH ;
+2.:второ́е%  29MONTH ;
+3.:тре́тье%  29MONTH ;
+4.:четвёрто́е%  29MONTH ;
+5.:пя́то́е%  29MONTH ;
+6.:шесто́е%  29MONTH ;
+7.:седьмо́е%  29MONTH ;
+8.:восьмо́е%  29MONTH ;
+9.:девя́тoе%  29MONTH ;
+1%0.:десято́е%  29MONTH ;
+11.:одинна́дцатoе%  29MONTH ;
+12.:двена́дцатoе%  29MONTH ;
+13.:трина́дцатое%  29MONTH ;
+14.:четырна́дцатое%  29MONTH ;
+15.:пятна́дцатое%  29MONTH ;
+16.:шестна́дцатое%  29MONTH ;
+17.:семна́дцатое%  29MONTH ;
+18.:восемна́дцатое%  29MONTH ;
+19.:девятна́дцатое%  29MONTH ;
+2%0.:два́дцатое%  29MONTH ;
+21.:двадцать% первое%  29MONTH ;
+22.:двадцать% второ́е%  29MONTH ;
+23.:двадцать% третье%  29MONTH ;
+24.:двадцать% четвёртое%  29MONTH ;
+25.:двадцать% пятое%  29MONTH ;
+26.:двадцать% шесто́е%  29MONTH ;
+27.:двадцать% седьмо́е%  29MONTH ;
+28.:двадцать% восьмо́е%  29MONTH ;
+29.:двадцать% девято́е%  29MONTH ;
+ 
+3%0.:тридца́тое%  30MONTH ;
+31.:тридцать% пе́рвое%  31MONTH ;
+ 
+ 
+ 
 LEXICON 29MONTH
-февраля:2   PUNCT ;
-
+2:февраля PUNCT ;
+ 
 LEXICON 30MONTH
-апреля:4    PUNCT ;
-июня:6	    PUNCT ;
-сентября:9 PUNCT ;
-ноября:11   PUNCT ;
+4:апреля PUNCT ;
+6:июня PUNCT ;
+9:сентября PUNCT ;
+11:ноября PUNCT ;
 29MONTH ;
-
+ 
 LEXICON 31MONTH
-января:1    PUNCT ;
-марта:3	    PUNCT ;
-мая:5	    PUNCT ;
-июля:7	    PUNCT ;
-августа:8    PUNCT ;
-октября:1%0   PUNCT ;
-декабря:12  PUNCT ;
+1:января PUNCT ;
+3:марта PUNCT ;
+5:мая PUNCT ;
+7:июля PUNCT ;
+8:августа PUNCT ;
+1%0:октября PUNCT ;
+12:декабря PUNCT ;
 30MONTH ;
-
+ 
 LEXICON PUNCT 
-:. # ; ! STRICT 12.3.
-   # ; ! SLOPPY 12.3
-
+.: # ; ! STRICT 12.3.
+ # ; ! SLOPPY 12.3
+ 

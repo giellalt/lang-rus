@@ -1,5 +1,11 @@
-LEXICON CC
+
+LEXICON Cc
 +CC: # ;
 
-LEXICON Conjunction
-да CC ;
+LEXICON conjunctions
+
+да:да Cc  "ja" ;
+или:или Cc  "vai, tai" ;
+но:но Cc  "mutta" ;
+а:а Cc  "mutta, vaan, entä,; ja" ;
+

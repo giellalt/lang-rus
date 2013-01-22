@@ -31,6 +31,7 @@ endif
 LEX = $(GTLANG)-lex.txt \
 	  noun-$(GTLANG)-lex.txt \
 	  noun-$(GTLANG)-morph.txt \
+	  cc-$(GTLANG)-lex.txt \
 	  propernoun-$(GTLANG)-lex.txt \
 	  propernoun-$(GTLANG)-morph.txt \
 	  adj-$(GTLANG)-lex.txt \
@@ -44,7 +45,6 @@ LEX = $(GTLANG)-lex.txt \
 	  punct-$(GTLANG)-lex.txt \
 	  numeral-$(GTLANG)-lex.txt \
 	  pp-$(GTLANG)-lex.txt \
-	  cc-$(GTLANG)-lex.txt \
 	  cs-$(GTLANG)-lex.txt \
 	  interj-$(GTLANG)-lex.txt
 
@@ -97,14 +97,14 @@ inituppercase.fst: ../bin/inituppercase.fst
 			-stop
 
 
-# This goal is to allow for i instead of ï, and for ä/æ and ö/ø mix
+# This goal is to allow for e pro ë, and for stressed vowels
 
 spellrelax.fst: ../bin/spellrelax.fst
-../bin/spellrelax.fst: ../../../gt/common/src/spellrelax.regex
+../bin/spellrelax.fst: spellrelax.regex
 	@echo
 	@echo "*** Building spellrelax.fst ***" ;
 	@echo
-	@printf "read regex < ../../../gt/common/src/spellrelax.regex \n\
+	@printf "read regex < spellrelax.regex \n\
 	save stack ../bin/spellrelax.fst \n\
 	quit \n" > ../tmp/spellrelax-$(GTLANG)-script
 	$(XFST) < ../tmp/spellrelax-$(GTLANG)-script

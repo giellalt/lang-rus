@@ -35,10 +35,11 @@ LEXICON Root
 
 Adjective ;
 Noun ;
+conjunctions ;
+
 !Propernoun ;
 !Verb ;
 !Adverb ;
-!Conjunction ;
 !Subjunction ;
 !Interjection ;
 !Numeral ;

@@ -1,0 +1,49 @@
+Multichar_Symbols
+
+! POS
++N +V +A 
++Adv +CC +CS +Interj +Pron +Num
++Prop
+
+! Verbal MSP
++Prs +Fut +Prt +Prf 
++Ind +Imp +Cond +Opt
++Sg1 +Sg2 +Sg3 +Pl1 +Pl2 +Pl3
++Inf
++Pos +Neg +ConNeg
++PrsPrc +PrtPrc
++Act +Pass
+
+! Nominal MSP
++Sg +Pl
++Msc +Fem +Neu
++Nom +Acc +Gen +Ins +Dat +Loc
++Mal +Fem +Sur +Org +Obj +Ani +Plc
++Ord
+
+
+%^LV ! Light vowel
+
+!а2 о2 е2 и2 у2 я2 ё2 ы2 ю2 э2
+!А2 О2 Е2 И2 У2 Я2 Ё2 Ы2 Ю2 е2
+
+
+
+! Key lexicon
+
+LEXICON Root
+
+Adjective ;
+Noun ;
+conjunctions ;
+
+!Propernoun ;
+!Verb ;
+!Adverb ;
+!Subjunction ;
+!Interjection ;
+!Numeral ;
+!Pronoun ;
+!Postposition ;
+!Punctuation ;
+

@@ -1,0 +1,114 @@
+! ==================== !
+! Russian noun lexicon !
+! ==================== !
+
+! Zaliznjak codes from Berkov RNO.
+! List of lexicon types
+! The declension lexica consist of one
+! numeral and 3 (or four) letters, as follows
+! 1: digit = Zaliznjak declension class
+!(2: x = Zaliznjak * symbol, for light vowel)
+! 3: letter a-f = Zaliznjak stress pattern
+! 4: = m, f, n = gender info
+! 5: a, i = animate, inanimate
+
+LEXICON Noun 
+тигр 1ama "tiger" ;
+слон 1ama "elefant";
+спор 1ami "strid" ;
+стул 1ami "stol";
+правило 1ani "regel" ;
+рыба 1afa "fisk" ;
+карта 1afi "kart" ;
+
+стол 1bmi "bord";
+сад 1cmi "hage";
+лес 1cmi "skog";
+зуб 1emi "tann";
+вещество 1bni "stoff";
+место 1cni "sted";
+вино 1dni "vin";
+село 1dni "landsby";
+
+черта 1bfi "trekk";
+беда 1dfi "ulykke";
+жена 1dfi "kone";
+губа 1ffi "leppe";
+слеза 1ffi "tåre";
+голова 1ffi "hode";
+
+!Models with light vowels, class 1
+
+сон 1xami "søvn" ;
+орёл 1xami "ørn" ;
+лев 1xami "løve" ;
+заём 1xami "lån" ;
+
+сосна:сосена 1xafi "furu" ;
+кукла:кукола 1xafi "dokke" ;
+свадъба:свадеб 1xafi "bryllup" ;
+
+число:чисел 1xani "tall" ;
+окно:окон 1xani "vindu" ;
+письмо:писем 1xani "brev" ;
+
+!Class 2
+
+житель 2ama "innbygger" ;
+вихрь 2ami "hvirvelvind" ;
+дождь 2bmi "regn" ;
+море 2cni "hav" ;
+богиня 2afa "gudinne" ;
+буря 2afi "storm" ;
+ступня 2bfi "fotsåle" ;
+
+тополь 2cmi "poppel" ;
+гость 2ema "gjest" ;
+конь 2fma "hest" ;
+доля 2efi "lodd" ;
+ноздря 2ffi "nesebor" ;
+
+
+!Models with light vowels, class 2
+день 2xbmi "dag" ;
+огонь 2xbmi "ild" ;
+
+капля 2xafi "dråpe" ;
+песня 2xafi "sang" ;
+спалъня 2xafi "soverom" ;
+бойня 2xafi "slakteri" ;
+
+
+! Class 3                   
+
+благо 3ani "gode" ;
+веко 3anko "øyelokk" ; ! 3 class neuters in -ko have Npl -и                        
+
+
+!Class 4
+товарищ 4ama "kamerat";
+марш 4ami "marsj";
+врач 4bma "lege";
+чудовище 4ana "Monstrum";
+ложе 4ani "leie";
+тёща 4afa "svigermor";
+крыша 4afi "tak";
+бахча 4bfi "melonåker";
+
+!Class 5
+принц 5ama "Prins";
+месяц 5ami "måned";
+беглец 5bma "flyktning";
+солнце 5ani "sol";
+лицо 5bni "aniskt";
+птица 5afa "fugl";
+улица 5afi "gate";
+пыльца 5bfi "pollen";
+
+!Models with light vowels, class 5
+отец:отц 5xbma "far";
+палец:пальц 5xami "finger";
+боец:бойц 5xbma "kriger";
+
+
+

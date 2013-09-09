@@ -1,0 +1,193 @@
+LEXICON ADJSUF
++A+Msc+Sg+Nom:%>ой # ;
+
+! Dummy lexica:
+
+LEXICON adj0
+ ADJSUF ;
+
+LEXICON adj1*a
+ ADJSUF ;
+
+LEXICON adj1*a((1))
+ ADJSUF ;
+
+LEXICON adj1*a(1)
+ ADJSUF ;
+
+LEXICON adj1*a(1)-
+ ADJSUF ;
+
+LEXICON adj1*a(2)
+ ADJSUF ;
+
+LEXICON adj1*a-
+ ADJSUF ;
+
+LEXICON adj1*a/b
+ ADJSUF ;
+
+LEXICON adj1*a/b(2)
+ ADJSUF ;
+
+LEXICON adj1*a/c
+ ADJSUF ;
+
+LEXICON adj1*a/c◊
+ ADJSUF ;
+
+LEXICON adj1*a~
+ ADJSUF ;
+
+LEXICON adj1*b
+ ADJSUF ;
+
+LEXICON adj1*b/c◊
+ ADJSUF ;
+
+LEXICON adj1*b^
+ ADJSUF ;
+
+LEXICON adj1*b~
+ ADJSUF ;
+
+LEXICON adj1a
+ ADJSUF ;
+
+LEXICON adj1a(1)
+ ADJSUF ;
+
+LEXICON adj1a/b
+ ADJSUF ;
+
+LEXICON adj1a/c
+ ADJSUF ;
+
+LEXICON adj1a/c~
+ ADJSUF ;
+
+LEXICON adj1a/c◊
+ ADJSUF ;
+
+LEXICON adj1a^
+ ADJSUF ;
+
+LEXICON adj1b
+ ADJSUF ;
+
+LEXICON adj1b/c
+ ADJSUF ;
+
+LEXICON adj1bX
+ ADJSUF ;
+
+LEXICON adj1f
+ ADJSUF ;
+
+LEXICON adj2*a
+ ADJSUF ;
+
+LEXICON adj2*a-
+ ADJSUF ;
+
+LEXICON adj2*a^
+ ADJSUF ;
+
+LEXICON adj2*b
+ ADJSUF ;
+
+LEXICON adj2*а
+ ADJSUF ;
+
+LEXICON adj2a
+ ADJSUF ;
+
+LEXICON adj2a/c
+ ADJSUF ;
+
+LEXICON adj3*a
+ ADJSUF ;
+
+LEXICON adj3*a/b
+ ADJSUF ;
+
+LEXICON adj3*a/c
+ ADJSUF ;
+
+LEXICON adj3*a/c^
+ ADJSUF ;
+
+LEXICON adj3*a/c◊
+ ADJSUF ;
+
+LEXICON adj3*aX~
+ ADJSUF ;
+
+LEXICON adj3a
+ ADJSUF ;
+
+LEXICON adj3a/c
+ ADJSUF ;
+
+LEXICON adj3a/c◊
+ ADJSUF ;
+
+LEXICON adj3aX~
+ ADJSUF ;
+
+LEXICON adj3a^
+ ADJSUF ;
+
+LEXICON adj3a~
+ ADJSUF ;
+
+LEXICON adj3b
+ ADJSUF ;
+
+LEXICON adj3b/c
+ ADJSUF ;
+
+LEXICON adj3b/c~
+ ADJSUF ;
+
+LEXICON adj3bX~
+ ADJSUF ;
+
+LEXICON adj4a
+ ADJSUF ;
+
+LEXICON adj4a/b
+ ADJSUF ;
+
+LEXICON adj4a/b~
+ ADJSUF ;
+
+LEXICON adj4a/c
+ ADJSUF ;
+
+LEXICON adj4aX
+ ADJSUF ;
+
+LEXICON adj4aX~
+ ADJSUF ;
+
+LEXICON adj4b
+ ADJSUF ;
+
+LEXICON adj4b~^
+ ADJSUF ;
+
+LEXICON adj5a
+ ADJSUF ;
+
+LEXICON adj6*a
+ ADJSUF ;
+
+LEXICON adj6*a-
+ ADJSUF ;
+
+LEXICON adj6*b
+ ADJSUF ;
+
+LEXICON adj6a
+ ADJSUF ;

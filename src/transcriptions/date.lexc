@@ -1,0 +1,87 @@
+! Divvun & Giellatekno - open source grammars for Sámi and other languages
+! Copyright © 2000-2010 The University of Tromsø & the Norwegian Sámi Parliament
+! http://giellatekno.uit.no & http://divvun.no
+!
+! This program is free software; you can redistribute and/or modify
+! this file under the terms of the GNU General Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version. The GNU General Public License
+! is found at http://www.gnu.org/licenses/gpl.html. It is
+! also available in the file $GTHOME/LICENSE.txt.
+!
+! Other licensing options are available upon request, please contact
+! giellatekno@hum.uit.no or divvun@samediggi.no
+
+! ================= !
+! The Russian dates !
+! ================= !
+
+
+! Note that the months (but not all :-( are stress marked.
+
+!Multichar_Symbols
+
+
+LEXICON Root
+DAY ;
+
+LEXICON DAY
+1.:пе́рвoе%  29MONTH ;
+2.:второ́е%  29MONTH ;
+3.:тре́тье%  29MONTH ;
+4.:четвёрто́е%  29MONTH ;
+5.:пя́то́е%  29MONTH ;
+6.:шесто́е%  29MONTH ;
+7.:седьмо́е%  29MONTH ;
+8.:восьмо́е%  29MONTH ;
+9.:девя́тoе%  29MONTH ;
+1%0.:десято́е%  29MONTH ;
+11.:одинна́дцатoе%  29MONTH ;
+12.:двена́дцатoе%  29MONTH ;
+13.:трина́дцатое%  29MONTH ;
+14.:четырна́дцатое%  29MONTH ;
+15.:пятна́дцатое%  29MONTH ;
+16.:шестна́дцатое%  29MONTH ;
+17.:семна́дцатое%  29MONTH ;
+18.:восемна́дцатое%  29MONTH ;
+19.:девятна́дцатое%  29MONTH ;
+2%0.:два́дцатое%  29MONTH ;
+21.:двадцать% первое%  29MONTH ;
+22.:двадцать% второ́е%  29MONTH ;
+23.:двадцать% третье%  29MONTH ;
+24.:двадцать% четвёртое%  29MONTH ;
+25.:двадцать% пятое%  29MONTH ;
+26.:двадцать% шесто́е%  29MONTH ;
+27.:двадцать% седьмо́е%  29MONTH ;
+28.:двадцать% восьмо́е%  29MONTH ;
+29.:двадцать% девято́е%  29MONTH ;
+ 
+3%0.:тридца́тое%  30MONTH ;
+31.:тридцать% пе́рвое%  31MONTH ;
+ 
+ 
+ 
+LEXICON 29MONTH
+2:февраля PUNCT ;
+ 
+LEXICON 30MONTH
+4:апреля PUNCT ;
+6:июня PUNCT ;
+9:сентября PUNCT ;
+11:ноября PUNCT ;
+29MONTH ;
+ 
+LEXICON 31MONTH
+1:января PUNCT ;
+3:марта PUNCT ;
+5:мая PUNCT ;
+7:июля PUNCT ;
+8:августа PUNCT ;
+1%0:октября PUNCT ;
+12:декабря PUNCT ;
+30MONTH ;
+ 
+LEXICON PUNCT 
+.: # ; ! STRICT 12.3.
+ # ; ! SLOPPY 12.3
+ 

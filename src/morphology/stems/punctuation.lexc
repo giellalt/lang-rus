@@ -1,0 +1,18 @@
+
+LEXICON Punctuation 
+
++CLB:%,   # ;
++CLB:%.   # ;
++CLB:%:   # ;
++CLB:%;	  # ;
++CLB:%!	  # ;
++CLB:%?	  # ;
++PUNCT:%-  # ;
++HYPH:%" # ;
++HYPH:%« # ;
++HYPH:%» # ;
++PAR:%[ # ;
++PAR:%] # ;
++PAR:%( # ;
++PAR:%) # ;
+

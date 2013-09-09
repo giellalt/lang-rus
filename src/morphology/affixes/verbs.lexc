@@ -1,0 +1,101 @@
+LEXICON 1
++V+Inf:ть # ;
++V+Ind+Prs: ITPRS ;
++V+Ind+Prt: PRT ;
++V+Imp: IMP ;
++V+Ind+PrsPrc: PRSPRC ;
++V+Ind+PrtPrc: PRTPRC ;
+
+LEXICON 1r
++V: # ;
+
+LEXICON 2a
++V+Inf:ть # ;
++V+Ind+Prs: ITPRS ;
++V+Ind+Prt: PRT ;
++V+Imp: IMP ;
++V+Ind+PrsPrc: PRSPRC ;
++V+Ind+PrtPrc: PRTPRC ;
+
+LEXICON 2ap
++V+Inf:ть # ;
++V+Ind+Prs: ITPRS ;
++V+Ind+Prt: PRT ;
++V+Imp: IMP ;
++V+Ind+PrsPrc: PRSPRC ;
++V+Ind+PrtPrc: PRTPRC ;
+
+LEXICON 3a
++V+Inf:ть # ;
++V+Ind+Prs: ITPRS ;
++V+Ind+Prt: PRT ;
++V+Imp: IMP ;
++V+Ind+PrsPrc: PRSPRC ;
++V+Ind+PrtPrc: PRTPRC ;
+
+LEXICON 3b
++V+Inf:ть # ;
++V+Ind+Prs: ITPRS ;
++V+Ind+Prt: PRT ;
++V+Imp: IMP ;
++V+Ind+PrsPrc: PRSPRC ;
++V+Ind+PrtPrc: PRTPRC ;
+
+LEXICON 3c
++V+Inf:ть # ;
++V+Ind+Prs: ITPRS ;
++V+Ind+Prt: PRT ;
++V+Imp: IMP ;
++V+Ind+PrsPrc: PRSPRC ;
++V+Ind+PrtPrc: PRTPRC ;
+
+LEXICON 3r
++V: # ;
+
+LEXICON 4a
++V+Inf:ть # ;
++V+Ind+Prs: ITPRS ;
++V+Ind+Prt: PRT ;
++V+Imp: IMP ;
++V+Ind+PrsPrc: PRSPRC ;
++V+Ind+PrtPrc: PRTPRC ;
+
+
+LEXICON 4b
++V+Inf:ить # ;
++V+Ind+Prs: ITPRS ;
++V+Ind+Prt:и PRT ;
++V+Imp:и IMP ;
++V+Ind+PrsPrc: PRSPRC ;
++V+Ind+PrtPrc: PRTPRC ;
+
+LEXICON ITPRS
++Sg1:%>ю # ;
++Sg2:%>ишь # ;
++Sg3:%>ит # ;
++Pl1:%>им # ;
++Pl2:%>ите # ;
++Pl3:%>ят # ;
+
+LEXICON PRT
++Msc:%>л # ; 
++Fem:%>ла # ;
++Neu:%>ло # ;
++Pl:%>ли # ;
+
+LEXICON IMP
++Sg: # ;
++Pl:те # ;
+
+LEXICON PRSPRC
++Act:ящий # ; ! case to come
++Pass:имый # ; ! case to come
++Adv:я # ;
+
+LEXICON PRTPRC
++Act:ивший # ; ! case to come
++Pass:ённый # ; ! case to come
++Adv:ив # ;
++Adv:ивши # ;
+
+

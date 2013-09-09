@@ -1,0 +1,125 @@
+! ======
+! Conversion from lat to cyr
+! =======
+
+echo <<defining Cns and Vow...>>
+
+define Vow       [ а | э | ы | о | у | я | е | и | ё | ю
+                   А | Э | Ы | О | У | Я | Е | И | Ё | Ю ] ;
+
+define NonPalVow [ а | э | ы | о | у | я | е | и | ё | ю ] ;
+
+define PalVow    [ А | Э | Ы | О | У | Я | Е | И | Ё | Ю ] ;
+
+define Cns      [ б | в | г | д | ж | з | й | к | л | м | н | 
+                  п | р | с | т | ф | х | ц | ч | ш | щ |
+                  Б | В | Г | Д | Ж | З | Й | К | Л | М | Н |
+                  П | Р | С | Т | Ф | Х | Ц | Ч | Ш | Щ ] ;
+
+define Dental [ д | з | к | с | т  ] ;
+
+define Syll Cns* Vow+ Cns* ;
+
+echo << Rules >>
+
+
+
+define consgroups S j -> Ш , C h r -> К р ;
+
+define specialvow a a -> о , A a -> О ;
+
+define SoftSign [ ь | Ь ] ;
+
+define HardSign [ ъ | Ъ ] ;
+
+define PalSign [ SoftSign | HardSign ] ;
+
+define PalVow  е -> j e , Е -> J e || [.#.|Vow|PalSign] _ ;
+
+               
+
+
+define transfer [
+      а -> a ,
+      б -> b ,
+      в -> v ,
+      г -> g ,
+      д -> d ,
+      е -> e ,
+      ё -> j o ,
+      ж -> d z j ,
+      з -> z ,
+      и -> i ,
+      й -> j ,
+      к -> k ,
+      л -> l ,
+      м -> m ,
+      н -> n ,
+      о -> o ,
+      п -> p ,
+      р -> r ,
+      с -> s ,
+      т -> t ,
+      у -> u ,
+      ф -> f ,
+      х -> k h ,
+      ц -> t s ,
+      ч -> t s j ,
+      ш -> s j ,
+      щ -> s j t s j ,
+      ы -> y ,
+      э -> e ,
+      ю -> j u ,
+      я -> j a ,
+      А -> A ,
+      Б -> B ,
+      В -> V ,
+      Г -> G ,
+      Д -> D ,
+      Е -> E ,
+      Ë -> J o ,
+      Ж -> D z j ,
+      З -> Z ,
+      И -> I ,
+      Й -> J ,
+      К -> K ,
+      Л -> L ,
+      М -> M ,
+      Н -> N ,
+      О -> O ,
+      П -> P ,
+      Р -> R ,
+      С -> S ,
+      Т -> T ,
+      У -> U ,
+      Ф -> F ,
+      Х -> K h ,
+      Ц -> T s ,
+      Ч -> T s j ,
+      Ш -> S j ,
+      Щ -> S j t s j ,
+      Ы -> Y ,
+      Э -> E ,
+      Ю -> J u ,
+      Я -> J a ] ;
+
+
+define jBeforeSoft j -> i || Dental _ Vow ;
+
+define SoftMarking SoftSign -> ’ ;
+define SoftMarking SoftSign -> ’ ;
+!define SoftMarking SoftSign -> ’ ;
+
+define PalDeletion PalSign -> 0 ;
+
+echo << Compile... >>
+
+read regex [
+     PalVow
+ .o. transfer 
+ .o. jBeforeSoft
+ .o. SoftMarking
+ .o. PalDeletion
+ ] ;
+
+invert net ;

@@ -1,5 +1,9 @@
 Multichar_Symbols
 
+!Stressed vowels
+а́ е́ и́ о́ у́ ы́ э́ ю́ я́ 
+А́ Е́ И́ О́ У́ Ы́   Ю́ Я́ ! Cannot put stress on capital Э
+
 ! POS
 +N +V +A 
 +Adv +CC +CS +Interj +Pron +Num
@@ -21,13 +25,10 @@ Multichar_Symbols
 +Mal +Fem +Sur +Org +Obj +Ani +Plc
 +Ord
 
-
 %^LV ! Light vowel
 
 !а2 о2 е2 и2 у2 я2 ё2 ы2 ю2 э2
 !А2 О2 Е2 И2 У2 Я2 Ё2 Ы2 Ю2 е2
-
-
 
 ! Key lexicon
 

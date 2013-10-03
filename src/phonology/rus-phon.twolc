@@ -1,111 +1,118 @@
-! Russian TWOLC file
-!
-! $Id$
-!
-!
-
 Alphabet
-  а А б Б в В г Г д Д е Е ж Ж 
-  з З и И й Й к К л Л м М н Н 
-  о О п П р Р с С т Т у У ф Ф 
-  х Х ц Ц ч Ч ш Ш щ Щ ъ Ъ ы Ы 
-  ь Ь э Э ю Ю я Я ё Ё 
-!  а2:а о2:о е2:е и2:и у2:у я2:я ё2:ё ы2:ы ю2:ю э2:э
-!  А2:А О2:О Е2:Е И2:И У2:У Я2:Я Ё2:Ё Ы2:Ы Ю2:Ю Э2:Э
-  %^LV:0
-  %>:0 ;
 
+      %>:0 !End of stem
+      %^GenPl:0 %^GenPlEnd:0
+      M:0 ! Marks masculine stems (used for GenPl)
+      S:0 ! Marks soft-consonant stems with a zero NomSg (also could be marked by ь+M, redundant?)
+      s:0 ! Marks soft-consonant stems with a vowel NomSg (also could be marked by ь-M, redundant?)
+      Z:0 Z:ь Z:й ! Zero NomSg
+      F:0 ! placed immediately before fleeting vowels Fа Fе Fо Fи Fя Fа́ Fе́ Fё Fо́ Fи́ Fя́
+      а б в г д е ё ж з и й к л м н о п р с т у ф х ц ч ш щ ъ ы ь э ю я 
+      А Б В Г Д Е Ё Ж З И Й К Л М Н О П Р С Т У Ф Х Ц Ч Ш Щ Ъ Ы Ь Э Ю Я 
+      а́         е́       и́           о́         у́               ы́   э́ ю́ я́
+      А́         Е́       И́           О́         У́               Ы́   Э́ Ю́ Я́ ;
 
-!  а2 о2 е2 и2 у2 я2 ё2 ы2 ю2 э2
-!  А2 О2 Е2 И2 У2 Я2 Ё2 Ы2 Ю2 Э2
+Definitions
 
 Sets
- C	= б Б в В г Г д Д ж Ж з З й Й к К л Л м М н Н п П р Р 
-          с С т Т ф Ф х Х ц Ц ч Ч ш Ш щ Щ ъ Ъ ь Ь э Э ;
- V	= а А е Е и И о О у У ы Ы ю Ю я Я ё Ё ;
- PALVOW = е Е и И ю Ю я Я ё Ё ;
- NPLVOW = а А о О у У ы Ы э Э ;
- Dummy  = %^LV ;
 
-!Definitions
-!;
+Letter = а б в г д е ё ж з и й к л м н о п р с т у ф х ц ч ш щ ъ ы ь э ю я 
+         А Б В Г Д Е Ё Ж З И Й К Л М Н О П Р С Т У Ф Х Ц Ч Ш Щ Ъ Ы Ь Э Ю Я 
+         а́         е́       и́           о́         у́               ы́   э́ ю́ я́
+         А́         Е́       И́           О́         У́               Ы́   Э́ Ю́ Я́ ;
+C = б в г д ж з й к л м н п р с т ф х ц ч ш щ 
+    Б В Г Д Ж З Й К Л М Н П Р С Т Ф Х Ц Ч Ш Щ ;
+HUSH = ж ш щ ч 
+       Ж Ш Щ Ч ;
+VEL = г к х 
+      Г К Х ;
+V = а э о у ы я е ё ю и а́ е́ и́ о́ у́ ы́ э́ ю́ я́
+    А Э О У Ы Я Е Ё Ю И А́ Е́ И́ О́ У́ Ы́ Э́ Ю́ Я́ ;
+StressedV = а́ е́ ё и́ о́ у́ ы́ э́ ю́ я́
+            А́ Е́ Ё И́ О́ У́ Ы́ Э́ Ю́ Я́ ;
 
 Rules
 
+"о>е"
+о:е <=> [ HUSH | ц | Ц | V ] %>:0 (й:0) (M:0) _ ;
+        [ C - [ VEL | HUSH | ц | Ц ] ] %>:0 [ S:0 | s:0 ] (M:0) _ ;
 
+"ы>и (stressed or unstressed)"
+Vx:Vy <=> [ VEL | HUSH | V ] %>:0 ([ й:0 | S:0 | s:0 ]) (M:0) _ ;
+          [ C - [ й: | :ь | VEL | HUSH | ц | Ц ] ] %>:0 [ S:0 | s:0 ] (M:0) _ ;
+          [ й: | :ь ] %>:0 (M:0) _ ;
+where Vx in ( ы ы́ )
+      Vy in ( и и́ )
+    matched;
 
-"Palatal Suffix Vowel"
- Vx:Vy <=> ь: %>:0 _ ;
-       where Vx in ( а А э Э о О у У )
-       	     Vy in ( я Я е Е е Е ю Ю )
-	     matched ;
-!       where Vx in ( а А э Э ы Ы о О у У )
-!       	     Vy in ( я Я е Е и И е Е ю Ю )
-!	     matched ;
+"ю>у and я>а (stressed or unstressed) after a velar, husher, or ц"
+Vx:Vy <=> [ VEL | HUSH | ц | Ц ] %>:0 (M:0) _ ;
+where Vx in ( ю ю́ я я́ )
+      Vy in ( у у́ а а́ )
+    matched;
 
- ! kan det hende at vi ikkje skal ha и/ы her?
- 
-!€ житель%>ов
-!€ житель0ев
+"Masc NomSg zero spelling after hard-consonant stems and й-stems"
+Z:0 <=> [ C | й: | :ь ] %>:0 (M:0) _ ;
 
+"Masc NomSg ь spelling after soft-consonant stems"
+Z:ь <=> [ C - [ й | Й | VEL | HUSH | ц | Ц ] ] %>:0 S:0 (M:0) _ ;
 
-"Nominal 3rd declension kgx rule"
- ы:и <=> [ к | К | г | Г | х | Х ] %>:0 _ ;
+"Masc NomSg й spelling after vowel stems"
+Z:й <=> V %>:0 (й:0) (M:0) _ ;
 
-"Palatal Mark Deletion"
- ь:0 <=> C: _ %>:0 [ :я | :Я | :е | :Е | :и | :И | :ё | :Ё | :ю | :Ю ] ;
+"[а у а́ о́ у́] > [я ю я́ ё ю́] after soft-consonant stems (including й: муравей, семья, бельё, etc) and vowel stems (музей, критерий, понятие, Мария, etc)"
+Vx:Vy <=> [ C - [ й: | :ь | VEL | HUSH | ц | Ц ] ] %>:0 [ S:0 | s:0 ] (M:0) _ ;
+          [ й: | :ь ] %>:0 (M:0) _ ;
+          V %>:0 (й:0) (M:0) _ ;
+where Vx in ( а у а́ о́ у́ )
+      Vy in ( я ю я́ ё ю́ )
+    matched;
 
+"е>и (stressed or unstressed) after и-stems"
+Vx:Vy <=> [ и | И | и́ | И́ ] %>:0 (й:0) (M:0) _ ;
+where Vx in ( е е́ )
+      Vy in ( и и́ )
+    matched;
 
-"Neuter o Deletion"
-Vx:0 <=> V (C+) _ (Dummy:) %>:0 ;
-	where Vx in ( а А о О я Я е Е ё Ё ) ;
+"Fleeting vowel deletion with vowel-containing ending"
+Fx:0 <=> F:0 _ ?* %>:0 ([ й:0 | S:0 | s:0 ]) (M:0) [%^GenPl:ов | %^GenPlEnd:о́в | %^GenPl:ев | %^GenPlEnd:ёв | %^GenPl:ей | %^GenPlEnd:е́й | :V ] ;
+where Fx in ( а е ё о и я а́ е́ о́ и́ я́ ) ;
 
-!€ правило%>а
-!€ правил00а
+"Remove all but right-most stress mark"
+Vx:Vy <=> .#. Letter* _ $[ %^GenPlEnd:о́в | %^GenPlEnd:ёв | %^GenPlEnd:е́й | :StressedV ] ;
+where Vx in ( а́ э́ о́ у́ ы́ я́ е́ ё ю́ и́ )
+      Vy in ( а э о у ы я е е ю и )
+    matched ;
 
-"Light vowel o"
- Vx:0 <=> _ C %^LV:0 %>:0 V ;
-       where Vx in ( о О ) ;
-       
-!€ со2н%>a
-!€ с0н0а
+"й/ь deletion before fleeting vowels (копейка~копеек, яйцо~яиц)"
+[ й:0 | ь:0 ] <=> _ F:0 V ;
 
-"Light vowel e in after non-l"
- Vx:0 <=>  [ C - [л|Л]] _ C (ь:) %^LV:0 %>:0 V ;
- 		where Vx in ( е Е ё Ё ) ;
+"й>ь alternation before vowels (муравей > муравья)"
+й:ь <=> F:0 V:0 _ %>:0 ([ й:0 | S:0 | s:0 ]) (M:0) [%^GenPl:ов | %^GenPlEnd:о́в | %^GenPl:ев | %^GenPlEnd:ёв | :V ] ;
 
-"Light vowel e in after l"
- Vx:ъ <=>  [л|Л] _ C %^LV:0 %>:0 V ;
- 		where Vx in ( е Е ё Ё ) ;
+"ь>й alternation before zero (семья > семей)"
+ь:й <=> F:0 V _ %>:0 :0+ .#. ;
 
-"Light vowel e in after Vow"
- Vx:Vy <=>  V _ C %^LV:0 %>:0 V ;
- 		where Vx in ( е Е ё Ё ) ;
- 		where Vx in ( й  Й  й  Й ) ;
- 		matched ;
+"Genitive Plural: unstressed ов"
+%^GenPl:ов <=> [ C - [ й | Й | HUSH | ц | Ц ] ] %>:0 M:0 _ ;
+"Genitive Plural: stressed о́в"
+%^GenPlEnd:о́в <=> [ C - [ й | Й | HUSH ] ] %>:0 M:0 _ ;
+"Genitive Plural: unstressed ев"
+%^GenPl:ев <=> V %>:0 (й:0) M:0 _ ;
+               ц %>:0 M:0 _ ;
+"Genitive Plural: stressed ёв"
+%^GenPlEnd:ёв <=> й:ь %>:0 M:0 _ ;
 
+"Genitive Plural: ей"
+Ix:Iy <=> HUSH %>:0 M:0 _ ;
+          [ C - [ й | Й | VEL | ц | Ц ] ] %>:0 S:0 ( M:0 ) _ ;
+where Ix in ( %^GenPl %^GenPlEnd )
+      Iy in ( ей е́й )
+    matched;
 
-
-!"Light vowel o"
-! Vx:0 <=> _ C %>:0 V ;
-!       where Vx in ( о2 О2 ) ;
-!       
-!!€ со2н%>a
-!!€ с0н0а
-!
-!"Light vowel e in after non-l"
-! Vx:0 <=>  [ C - [л|Л]] _ C %>:0 V ;
-! 		where Vx in ( е2 Е2 ё2 ё2 ) ;
-!
-!"Light vowel e in after l"
-! Vx:ъ <=>  [л|Л] _ C %>:0 V ;
-! 		where Vx in ( е2 Е2 ё2 ё2 ) ;
-!
-!"Light vowel e in after Vow"
-! Vx:Vy <=>  V _ C %>:0 V ;
-! 		where Vx in ( е2 Е2 ё2 Ё2 ) ;
-! 		where Vx in ( й  Й  й  Й ) ;
-! 		matched ;
-
-
-
+"Genitive Plural: zero after hard C = 0"
+[ %^GenPl:0 | %^GenPlEnd:0 ] <=> C %>:0 _ ;
+"Genitive Plural: zero after soft C =  ь"
+[ %^GenPl:ь | %^GenPlEnd:ь ] <=> [ C - [ й | Й | VEL | HUSH | ц | Ц ] ] %>:0 s:0 _ ;
+"Genitive Plural: zero after V = й"
+[ %^GenPl:й | %^GenPlEnd:й ] <=> V %>:0 ( й:0 ) _ ;

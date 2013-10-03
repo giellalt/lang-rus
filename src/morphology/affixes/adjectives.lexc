@@ -1,5 +1,104 @@
+
+
+!! Roberts
+
+
+
+LEXICON AdjStem
++A+Sg+Msc+Nom:ый  # ;
++A+Sg+Msc+Acc+Inan:ый  # ;
++A+Sg+Msc+Acc+Anim:ого  # ;
++A+Sg+Msc+Gen:ого  # ;
++A+Sg+Msc+Loc:ом  # ;
++A+Sg+Msc+Dat:ому  # ;
++A+Sg+Msc+Ins:ым  # ;
++A+Sg+Neu+Nom:ое  # ;
++A+Sg+Neu+Acc:ое  # ;
++A+Sg+Neu+Gen:ого  # ;
++A+Sg+Neu+Loc:ом  # ;
++A+Sg+Neu+Dat:ому  # ;
++A+Sg+Neu+Ins:ым  # ;
++A+Sg+Fem+Nom:ая  # ;
++A+Sg+Fem+Acc:ую  # ;
++A+Sg+Fem+Gen:ой  # ;
++A+Sg+Fem+Loc:ой  # ;
++A+Sg+Fem+Dat:ой  # ;
++A+Sg+Fem+Ins:ой  # ;
++A+Pl+Nom:ые  # ;
++A+Pl+Acc+Inan:ые  # ;
++A+Pl+Acc+Anim:ых  # ;
++A+Pl+Gen:ых  # ;
++A+Pl+Loc:ых  # ;
++A+Pl+Dat:ым  # ;
++A+Pl+Ins:ыми  # ;
+
+LEXICON AdjEnd
++A+Msc+Nom:о́й  # ;
++A+Msc+Acc+Inan:о́й  # ;
++A+Msc+Acc+Anim:о́го  # ;
++A+Msc+Gen:о́го  # ;
++A+Msc+Loc:о́м  # ;
++A+Msc+Dat:о́му  # ;
++A+Msc+Ins:ы́м  # ;
++A+Neu+Nom:о́е  # ;
++A+Neu+Acc:о́е  # ;
++A+Neu+Gen:о́го  # ;
++A+Neu+Loc:о́м  # ;
++A+Neu+Dat:о́му  # ;
++A+Neu+Ins:ы́м  # ;
++A+Fem+Nom:а́я  # ;
++A+Fem+Acc:у́ю  # ;
++A+Fem+Gen:о́й  # ;
++A+Fem+Loc:о́й  # ;
++A+Fem+Dat:о́й  # ;
++A+Fem+Ins:о́й  # ;
++A+Pl+Nom:ы́е  # ;
++A+Pl+Acc+Inan:ы́е  # ;
++A+Pl+Acc+Anim:ы́х  # ;
++A+Pl+Gen:ы́х  # ;
++A+Pl+Loc:ы́х  # ;
++A+Pl+Dat:ы́м  # ;
++A+Pl+Ins:ы́ми  # ;
+
+
+
+
+
+
+
+
+
+!! Tronds 
+
+
+
 LEXICON ADJSUF
-+A+Msc+Sg+Nom:%>ой # ;
++A+Msc+Sg+Nom:%>ый # ;
++A+Msc+Sg+Acc:%>ый # ; 
++A+Msc+Sg+Acc+Ani:%>ого # ;
++A+Msc+Sg+Gen:%>ого # ;
++A+Msc+Sg+Loc:%>ом # ;
++A+Msc+Sg+Dat:%>ому # ;
++A+Msc+Sg+Ins:%>ым # ;
++A+Neu+Sg+Nom:%>ое # ;
++A+Neu+Sg+Acc:%>ое # ;
++A+Neu+Sg+Gen:%>ого # ;
++A+Neu+Sg+Loc:%>ом # ;
++A+Neu+Sg+Dat:%>ому # ;
++A+Neu+Sg+Ins:%>ым # ;
++A+Fem+Sg+Nom:%>ая # ;
++A+Fem+Sg+Acc:%>ую # ;
++A+Fem+Sg+Gen:%>ой # ;
++A+Fem+Sg+Loc:%>ой # ;
++A+Fem+Sg+Dat:%>ой # ;
++A+Fem+Sg+Ins:%>ой # ;
++A+Pl+Nom:%>ые # ;
++A+Pl+Acc:%>ые # ;
++A+Pl+Acc+Ani:%>ых # ;
++A+Pl+Gen:%>ых # ;
++A+Pl+Loc:%>ых # ;
++A+Pl+Dat:%>ым # ;
++A+Pl+Ins:%>ыми # ;
 
 ! Dummy lexica:
 

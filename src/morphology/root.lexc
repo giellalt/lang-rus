@@ -1,15 +1,15 @@
-Multichar_Symbols !!= !!!@CODE@
+Multichar_Symbols
 
-!! !!Stressed vowels
+!Stressed vowels
 а́ е́ и́ о́ у́ ы́ э́ ю́ я́ 
 А́ Е́ И́ О́ У́ Ы́   Ю́ Я́ ! Cannot put stress on capital Э
 
-!! !!!POS
+! POS
 +N +V +A 
 +Adv +CC +CS +Interj +Pron +Num
 +Prop
 
-!! !!Verbal MSP
+! Verbal MSP
 +Prs +Fut +Prt +Prf 
 +Ind +Imp +Cond +Opt
 +Sg1 +Sg2 +Sg3 +Pl1 +Pl2 +Pl3
@@ -18,16 +18,13 @@ Multichar_Symbols !!= !!!@CODE@
 +PrsPrc +PrtPrc
 +Act +Pass
 
-!! !!Nominal MSP
+! Nominal MSP
 +Sg +Pl
-+Msc +Fem +Neu
++Msc +Fem +Neu +Inan +Anim
 +Nom +Acc +Gen +Ins +Dat +Loc
-+Mal +Fem +Sur +Org +Obj +Ani +Plc
 +Ord
 
-!! !!Auxiliary symbols
-
-%^LV ! Light vowel
+%^FV ! Fleeting vowel
 
 !а2 о2 е2 и2 у2 я2 ё2 ы2 ю2 э2
 !А2 О2 Е2 И2 У2 Я2 Ё2 Ы2 Ю2 е2
@@ -36,9 +33,9 @@ Multichar_Symbols !!= !!!@CODE@
 
 LEXICON Root
 
-Adjective ;   !!= * @CODE@
-Noun ;   !!= * @CODE@
-conjunctions ;   !!= * @CODE@
+Adjective ;
+Noun ;
+conjunctions ;
 
 !Propernoun ;
 !Verb ;

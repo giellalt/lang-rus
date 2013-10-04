@@ -1,7 +1,3 @@
-
-
-
-
 !!!!!!!!!!!!!!!!!!!!!!!!!MASCULINE PARADIGMS!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 LEXICON Indeclin
@@ -107,7 +103,6 @@ LEXICON MSgObliqEnd
 +Dat:у́ # ;
 +Ins:о́м # ;
 
-
 !!!!!!!!!!!!!!!!!!!!!!!!!NEUTER PARADIGMS!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 LEXICON NStem
@@ -183,8 +178,12 @@ LEXICON FEnd
 +N+Fem+Pl: ыPlEnd ;
 
 LEXICON FьStem
-+N+Fem+Sg: Fь ;
++N+Fem+Sg: FьStem ;
 +N+Fem+Pl: ыPlStem ;
+
+LEXICON FьEnd
++N+Fem+Sg: FьEnd ;
++N+Fem+Pl: ыPlEnd ;
 
 LEXICON FShift2Stem
 +N+Fem+Sg: FSgEnd ;
@@ -195,7 +194,7 @@ LEXICON FEndAnom
 +N+Fem+Pl: ыPlAnom ;
 
 LEXICON FьAnom
-+N+Fem+Sg: Fь ;
++N+Fem+Sg: FьStem ;
 +N+Fem+Pl: ыPlAnom ;
 
 LEXICON FShiftRetr
@@ -215,8 +214,12 @@ LEXICON FEnd_anim
 +N+Fem+Pl: ыPlEnd_anim ;
 
 LEXICON FьStem_anim
-+N+Fem+Sg: Fь ;
++N+Fem+Sg: FьStem ;
 +N+Fem+Pl: ыPlStem_anim ;
+
+LEXICON FьEnd_anim
++N+Fem+Sg: FьEnd ;
++N+Fem+Pl: ыPlEnd ;
 
 LEXICON FShift2Stem_anim
 +N+Fem+Sg: FSgEnd ;
@@ -227,7 +230,7 @@ LEXICON FEndAnom_anim
 +N+Fem+Pl: ыPlAnom_anim ;
 
 LEXICON FьAnom_anim
-+N+Fem+Sg: Fь ;
++N+Fem+Sg: FьStem ;
 +N+Fem+Pl: ыPlAnom_anim ;
 
 LEXICON FShiftRetr_anim
@@ -261,12 +264,20 @@ LEXICON FSgObliqEnd
 +Dat:е́ # ;
 +Ins:о́й # ;
 
-LEXICON Fь
+LEXICON FьStem
 +Nom:ь # ;
 +Acc:ь # ;
 +Gen:и # ;
 +Loc:и # ;
 +Dat:и # ;
++Ins:ью # ;
+
+LEXICON FьEnd
++Nom:ь # ;
++Acc:ь # ;
++Gen:и́ # ;
++Loc:и́ # ;
++Dat:и́ # ;
 +Ins:ью # ;
 
 !!!!!!!!!!!!!!!!!!!!!!!!!PLURAL PARADIGMS!!!!!!!!!!!!!!!!!!!!!!!!!!

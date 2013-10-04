@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 LEXICON Noun
 
 !!!!!!!!!!!!!!!!!!!!!!!!!MASCULINE NOUNS!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -12,10 +5,10 @@ LEXICON Noun
 
 музей:музе́%> MStem ;
 критерий:крите́ри%> MStem ;
-студент:студе́нт%> MStem ;
+студент:студе́нт%> MStem_anim ;
 официант:официа́нт%> MStem_anim ;
-сосед+Sg:сосе́д%> MSgStem_anim ;
-сосед+Pl:сосе́д%>S ыPlStem_anim ;
+сосед+N+Sg:сосе́д%> MSgStem_anim ;
+сосед+N+Pl:сосе́д%>S ыPlStem_anim ;
 словарь:слова́р%>S MEnd ;
 муравей:муравFе́й%> MEnd_anim ;
 карандаш:каранда́ш%> MEnd ;
@@ -67,16 +60,7 @@ LEXICON Noun
 ножницы+Pl:но́жниц%> ыPlStem ;  !Plurale tantum
 старость:ста́рост%>S FьStem ;
 вещь:ве́щ%>S FьAnom ;
-!!!!!!!!!!!!!!!!!!!!!!!!! NEW WORDS !!!!!!!!!!!!!!!!!!!!!!!!!!
-
-
-
-
-
-
-
-
-
+любовь:любFо́в%>S FьEnd ;
 
 ! ==================== !
 ! Russian noun lexicon !

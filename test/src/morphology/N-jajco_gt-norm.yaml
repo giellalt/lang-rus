@@ -1,0 +1,27 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+Tests:
+# todo:
+# Proofread the gold standard (below)
+# Then: run analyser, then correct. 
+
+  Noun - яйцо M anim : # Noun - full paradigm
+      яйцо+N+Neu+Sg+Nom: яйцо́
+      яйцо+N+Neu+Sg+Acc: яйцо́
+      яйцо+N+Neu+Sg+Gen: яйца́
+      яйцо+N+Neu+Sg+Loc: яйце́
+      яйцо+N+Neu+Sg+Dat: яйцу́
+      яйцо+N+Neu+Sg+Ins: яйцо́м
+      яйцо+N+Neu+Pl+Nom: я́йца
+      яйцо+N+Neu+Pl+Acc+Inan: я́йца
+      яйцо+N+Neu+Pl+Gen: яи́ц
+      яйцо+N+Neu+Pl+Loc: я́йцах
+      яйцо+N+Neu+Pl+Dat: я́йцам
+      яйцо+N+Neu+Pl+Ins: я́йцами
+

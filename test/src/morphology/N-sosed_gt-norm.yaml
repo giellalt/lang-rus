@@ -1,0 +1,27 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+Tests:
+# todo:
+# Proofread the gold standard (below)
+# Then: run analyser, then correct. 
+
+  Noun - сосед M anim : # Noun - full paradigm
+      сосед+N+Msc+Sg+Nom: сосе́д
+      сосед+N+Msc+Sg+Acc+Anim: сосе́да
+      сосед+N+Msc+Sg+Gen: сосе́да
+      сосед+N+Msc+Sg+Loc: сосе́де
+      сосед+N+Msc+Sg+Dat: сосе́ду
+      сосед+N+Msc+Sg+Ins: сосе́дом
+      сосед+N+Msc+Pl+Nom: сосе́ди
+      сосед+N+Msc+Pl+Acc+Anim: сосе́дей
+      сосед+N+Msc+Pl+Gen: сосе́дей
+      сосед+N+Msc+Pl+Loc: сосе́дях
+      сосед+N+Msc+Pl+Dat: сосе́дям
+      сосед+N+Msc+Pl+Ins: сосе́дями
+

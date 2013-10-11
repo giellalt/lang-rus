@@ -15,15 +15,15 @@ Tests:
 
 
   Noun - студент M anim : # Noun - full paradigm
-     студент+N+Msc+Sg+Nom: студент
-     студент+N+Msc+Sg+Acc: студента
-     студент+N+Msc+Sg+Gen: студента
-     студент+N+Msc+Sg+Loc: студенте
-     студент+N+Msc+Sg+Dat: студенту
-     студент+N+Msc+Sg+Ins: студентом
-     студент+N+Msc+Pl+Nom: студенты
-     студент+N+Msc+Pl+Acc: студентов
-     студент+N+Msc+Pl+Gen: студентов
-     студент+N+Msc+Pl+Loc: студентах
-     студент+N+Msc+Pl+Dat: студентам
-     студент+N+Msc+Pl+Ins: студентами
+     студент+N+Msc+Sg+Nom: студе́нт
+     студент+N+Msc+Sg+Acc+Anim: студе́нта
+     студент+N+Msc+Sg+Gen: студе́нта
+     студент+N+Msc+Sg+Loc: студе́нте
+     студент+N+Msc+Sg+Dat: студе́нту
+     студент+N+Msc+Sg+Ins: студе́нтом
+     студент+N+Msc+Pl+Nom: студе́нты
+     студент+N+Msc+Pl+Acc+Anim: студе́нтов
+     студент+N+Msc+Pl+Gen: студе́нтов
+     студент+N+Msc+Pl+Loc: студе́нтах
+     студент+N+Msc+Pl+Dat: студе́нтам
+     студент+N+Msc+Pl+Ins: студе́нтами

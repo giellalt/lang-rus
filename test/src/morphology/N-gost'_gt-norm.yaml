@@ -1,0 +1,27 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+Tests:
+# todo:
+# Proofread the gold standard (below)
+# Then: run analyser, then correct. 
+
+  Noun - гость M anim : # Noun - full paradigm
+      гость+N+Msc+Sg+Nom: го́сть
+      гость+N+Msc+Sg+Acc+Anim: го́стя
+      гость+N+Msc+Sg+Gen: го́стя
+      гость+N+Msc+Sg+Loc: го́сте
+      гость+N+Msc+Sg+Dat: го́стю
+      гость+N+Msc+Sg+Ins: го́стем
+      гость+N+Msc+Pl+Nom: го́сти
+      гость+N+Msc+Pl+Acc+Anim: госте́й
+      гость+N+Msc+Pl+Gen: госте́й
+      гость+N+Msc+Pl+Loc: гостя́х
+      гость+N+Msc+Pl+Dat: гостя́м
+      гость+N+Msc+Pl+Ins: гостя́ми
+

@@ -1,0 +1,28 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+Tests:
+# todo:
+# Proofread the gold standard (below)
+# Then: run analyser, then correct. 
+
+  Noun - существо M anim : # Noun - full paradigm
+      существо+N+Neu+Sg+Nom: существо́
+      существо+N+Neu+Sg+Acc: существо́
+      существо+N+Neu+Sg+Gen: существа́
+      существо+N+Neu+Sg+Loc: существе́
+      существо+N+Neu+Sg+Dat: существу́
+      существо+N+Neu+Sg+Ins: существо́м
+      существо+N+Neu+Pl+Nom: существа́
+      существо+N+Neu+Pl+Acc+Inan: существа́
+      существо+N+Neu+Pl+Acc+Anim: суще́ств
+      существо+N+Neu+Pl+Gen: суще́ств
+      существо+N+Neu+Pl+Loc: существа́х
+      существо+N+Neu+Pl+Dat: существа́м
+      существо+N+Neu+Pl+Ins: существа́ми
+

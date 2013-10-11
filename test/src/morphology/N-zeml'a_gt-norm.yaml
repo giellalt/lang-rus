@@ -1,0 +1,27 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+Tests:
+# todo:
+# Proofread the gold standard (below)
+# Then: run analyser, then correct. 
+
+  Noun - земля M anim : # Noun - full paradigm
+      земля+N+Fem+Sg+Nom: земля́
+      земля+N+Fem+Sg+Acc: зе́млю
+      земля+N+Fem+Sg+Gen: земли́
+      земля+N+Fem+Sg+Loc: земле́
+      земля+N+Fem+Sg+Dat: земле́
+      земля+N+Fem+Sg+Ins: землёй
+      земля+N+Fem+Pl+Nom: зе́мли
+      земля+N+Fem+Pl+Acc+Inan: зе́мли
+      земля+N+Fem+Pl+Gen: зе́мель
+      земля+N+Fem+Pl+Loc: зе́млях
+      земля+N+Fem+Pl+Dat: зе́млям
+      земля+N+Fem+Pl+Ins: зе́млями
+

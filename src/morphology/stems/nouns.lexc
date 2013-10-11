@@ -1,66 +1,62 @@
 LEXICON Noun
-
 !!!!!!!!!!!!!!!!!!!!!!!!!MASCULINE NOUNS!!!!!!!!!!!!!!!!!!!!!!!!!!
-!! The underlying stem most closely resembles the NomSg !!!!!!!!!!
-
-музей:музе́%> MStem ;
-критерий:крите́ри%> MStem ;
-студент:студе́нт%> MStem_anim ;
-официант:официа́нт%> MStem_anim ;
-сосед+N+Sg:сосе́д%> MSgStem_anim ;
-сосед+N+Pl:сосе́д%>S ыPlStem_anim ;
-словарь:слова́р%>S MEnd ;
-муравей:муравFе́й%> MEnd_anim ;
-карандаш:каранда́ш%> MEnd ;
-язык:язы́к%> MEnd ;
-отец:отFе́ц%> MEnd_anim ;
-пол:по́л%> MShift2End ;
-крюк:крю́к%> MShift2Stem ;
-гость:го́ст%>S MStemAnom_anim ;
-конь:ко́н%>S MEndAnom_anim ;
-часы:час%> MEnd_PlTant ;
+музей:музе́й MStem ;
+критерий:крите́рий MStem ;
+студент:студе́нт MStem_anim ;
+официант:официа́нт MStem_anim ;
+сосед+N+Msc+Sg:сосе́д MSgStem_anim ;
+сосед+N+Msc+Pl:сосе́дь ыPlStem_anim ;
+словарь:слова́рь MEnd ;
+муравей:муравFе́J MEnd_anim ;
+карандаш:каранда́ш MEnd ;
+язык:язы́к MEnd ;
+отец:отFе́ц MEnd_anim ;
+пол:по́л MShift2End ;
+крюк:крю́к MShift2Stem ;
+гость:го́сть MStemAnom_anim ;
+конь:ко́нь MEndAnom_anim ;
+часы:час MEnd_PlTant ;
 !!!!!!!!!!!!!!!!!!!!!!!!!NEUTER NOUNS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!! The underlying stem most closely resembles the GenPl !!!!!!!!!!
-чувство:чу́вств%> NStem ;
-чудовище:чудо́вищ%> NStem_anim ;
-понятие:поня́ти%> NStem ;
-яблоко:я́блок%> NStem_ыPl ;
-существо:суще́ств%> NEnd ;
-существо:суще́ств%> NEnd_anim ;
-слово:сло́в%> NShift2End ;
-сердце:се́рдFе́ц%> NShift2End ;
-море:мо́р%>s NShift2End ;           !!!BAD море+Pl+Gen:морь
-море+Pl+Gen:море́й # ;
-поле:по́л%>s NShift2End ;           !!!BAD поле+Pl+Gen:поль
-поле+Pl+Gen:поле́й # ;
-окно:о́кFон%> NShift2Stem ;
-письмо:пи́сьFем%> NShift2Stem ;
-яйцо:я́йFи́ц%> NShift2Stem ;
-вино:ви́н%> NShift2Stem ;
-бельё+Sg:бель%> NSgEnd ;       !Singulare tantum
-имя:и́м мя ;
-бистро:бистро́%> Indeclin ;
-бюро:бюро́%> Indeclin ;
-
+чувство:чу́вство NStem ;
+чудовище:чудо́вище NStem_anim ;
+понятие:поня́тие NStem ;
+яблоко:я́блоко NStem_ыPl ;
+существо:суще́ство́ NEnd ;
+существо:суще́ство́ NEnd_anim ;
+слово:сло́во NShift2End ;
+сердце:се́рдFе́це NShift2End ;
+море:мо́ре NShift2End ;           !!!BAD море+Pl+Gen:морь
+море+N+Neu+Pl+Gen:море́й # ;
+поле:по́ле NShift2End ;           !!!BAD поле+Pl+Gen:поль
+поле+N+Neu+Pl+Gen:поле́й # ;
+окно:о́кFоно́ NShift2Stem ;
+письмо:пи́сьFемо́ NShift2Stem ;
+яйцо:я́йFи́цо́ NShift2Stem ;
+вино:ви́но́ NShift2Stem ;
+бельё+N+Neu+Sg:бельё NSgEnd ;       !Singulare tantum
+имя:и́мя мя ;
+бистро:бистро́ Indeclin ;
+бюро:бюро́ Indeclin ;
 !!!!!!!!!!!!!!!!!!!!!!!!!FEMININE NOUNS!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!! The underlying stem most closely resembles the GenPl !!!!!!!!!!
-книга:кни́г%> FStem ;
-копейка:копе́йFек%> FStem ;
-свадьба:сва́дьFеб%> FStem ;
-революция:револю́ци%> FStem ;
-красота:красо́т%> FEnd ;
-статья:статFе́й%> FEnd ;
-жена:жён%> FShift2Stem_anim ;
-сестра:сёстFёр%> FShift2Stem_anim ;
-семья:се́мFе́й%> FShift2Stem ;
-волна:во́лн%> FEndAnom ;
-душа:ду́ш%> FShiftRetr ;
-земля:зе́мFел%>s FShiftRetr ;
-рука:ру́к%> FAnomRetr ;
-ножницы+Pl:но́жниц%> ыPlStem ;  !Plurale tantum
-старость:ста́рост%>S FьStem ;
-вещь:ве́щ%>S FьAnom ;
-любовь:любFо́в%>S FьEnd ;
+книга:кни́га FStem ;
+копейка:копе́йFека FStem ;
+свадьба:сва́дьFеба FStem ;
+революция:револю́ция FStem ;
+красота:красо́та́ FShift2Stem ;
+статья:статFе́Jя́ FEnd ;
+жена:жёна́ FShift2Stem_anim ;
+сестра:сёстFёра́ FShift2Stem_anim ;
+семья:се́мFе́Jя́ FShift2Stem ;
+волна:во́лна́ FEndAnom ;
+душа:ду́ша́ FShiftRetr ;
+земля:зе́мFеля́ FShiftRetr ;
+рука:ру́ка́ FAnomRetr ;
+ножницы+N+Fem+Pl:но́жница ыPlStem ;  !Plurale tantum
+старость:ста́рость FьStem ;
+вещь:ве́щь FьAnom ;
+любовь:любFо́вь FьEnd ;
+асимптота:асимпто́та FStem ;
+асимптота:аси́мптота FStem ;
 
 ! ==================== !
 ! Russian noun lexicon !
@@ -75,105 +71,3 @@ LEXICON Noun
 ! 3: letter a-f = Zaliznjak stress pattern
 ! 4: = m, f, n = gender info
 ! 5: a, i = animate, inanimate
-!
-!LEXICON Noun 
-!тигр 1ama "tiger" ;
-!слон 1ama "elefant";
-!спор 1ami "strid" ;
-!стул 1ami "stol";
-!правило 1ani "regel" ;
-!рыба 1afa "fisk" ;
-!карта 1afi "kart" ;
-!
-!стол 1bmi "bord";
-!сад 1cmi "hage";
-!лес 1cmi "skog";
-!зуб 1emi "tann";
-!вещество 1bni "stoff";
-!место 1cni "sted";
-!вино 1dni "vin";
-!село 1dni "landsby";
-!
-!черта 1bfi "trekk";
-!беда 1dfi "ulykke";
-!жена 1dfi "kone";
-!губа 1ffi "leppe";
-!слеза 1ffi "tåre";
-!голова 1ffi "hode";
-!
-!!Models with Fleeting vowels, class 1
-!
-!сон 1xami "søvn" ;
-!орёл 1xami "ørn" ;
-!лев 1xami "løve" ;
-!заём 1xami "lån" ;
-!
-!сосна:сосена 1xafi "furu" ;
-!кукла:кукола 1xafi "dokke" ;
-!свадъба:свадеб 1xafi "bryllup" ;
-!
-!число:чисел 1xani "tall" ;
-!окно:окон 1xani "vindu" ;
-!письмо:писем 1xani "brev" ;
-!
-!!Class 2
-!
-!житель 2ama "innbygger" ;
-!вихрь 2ami "hvirvelvind" ;
-!дождь 2bmi "regn" ;
-!море 2cni "hav" ;
-!богиня 2afa "gudinne" ;
-!буря 2afi "storm" ;
-!ступня 2bfi "fotsåle" ;
-!
-!тополь 2cmi "poppel" ;
-!гость 2ema "gjest" ;
-!конь 2fma "hest" ;
-!доля 2efi "lodd" ;
-!ноздря 2ffi "nesebor" ;
-!
-!
-!!Models with Fleeting vowels, class 2
-!день 2xbmi "dag" ;
-!огонь 2xbmi "ild" ;
-!
-!капля 2xafi "dråpe" ;
-!песня 2xafi "sang" ;
-!спалъня 2xafi "soverom" ;
-!бойня 2xafi "slakteri" ;
-!
-!
-!! Class 3                   
-!
-!благо 3ani "gode" ;
-!слово:сло́во 3xani "gode" ;
-!веко 3anko "øyelokk" ; ! 3 class neuters in -ko have Npl -и                        
-!
-!
-!!Class 4
-!товарищ 4ama "kamerat";
-!марш 4ami "marsj";
-!врач 4bma "lege";
-!чудовище 4ana "Monstrum";
-!ложе 4ani "leie";
-!тёща 4afa "svigermor";
-!крыша 4afi "tak";
-!бахча 4bfi "melonåker";
-!
-!!Class 5
-!принц 5ama "Prins";
-!месяц 5ami "måned";
-!беглец 5bma "flyktning";
-!солнце 5ani "sol";
-!лицо 5bni "aniskt";
-!птица 5afa "fugl";
-!улица 5afi "gate";
-!пыльца 5bfi "pollen";
-!
-!!Models with Fleeting vowels, class 5
-!отец:отц 5xbma "far";
-!палец:пальц 5xami "finger";
-!боец:бойц 5xbma "kriger";
-!
-!
-!

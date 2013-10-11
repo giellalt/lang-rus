@@ -1,18 +1,12 @@
 Alphabet
 
       %>:0 !End of stem
-      %^GenPl:0 %^GenPlEnd:0
-      M:0 ! Marks masculine stems (used for GenPl)
-      S:0 ! Marks soft-consonant stems with a zero NomSg (also could be marked by ь+M, redundant?)
-      s:0 ! Marks soft-consonant stems with a vowel NomSg (also could be marked by ь-M, redundant?)
-      Z:0 Z:ь Z:й ! Zero NomSg
+      J:0 ! Marks й-stems like муравей, семья, etc.
       F:0 ! placed immediately before fleeting vowels Fа Fе Fо Fи Fя Fа́ Fе́ Fё Fо́ Fи́ Fя́
       а б в г д е ё ж з и й к л м н о п р с т у ф х ц ч ш щ ъ ы ь э ю я 
       А Б В Г Д Е Ё Ж З И Й К Л М Н О П Р С Т У Ф Х Ц Ч Ш Щ Ъ Ы Ь Э Ю Я 
       а́         е́       и́           о́         у́               ы́   э́ ю́ я́
       А́         Е́       И́           О́         У́               Ы́   Э́ Ю́ Я́ ;
-
-Definitions
 
 Sets
 
@@ -31,88 +25,98 @@ V = а э о у ы я е ё ю и а́ е́ и́ о́ у́ ы́ э́ ю́ я́
 StressedV = а́ е́ ё и́ о́ у́ ы́ э́ ю́ я́
             А́ Е́ Ё И́ О́ У́ Ы́ Э́ Ю́ Я́ ;
 
+Definitions
+
+VELEndV = VEL [ а́:0 | о́:0 | а:0 | о:0 ] %>:0 ;
+VELEndM = VEL %>:0 ;
+VELEnd = [ VELEndV | VELEndM ] ;
+HUSHEndV = HUSH [ а́:0 | о́:0 | а:0 | е:0 | ь:0 ] %>:0 ;
+HUSHEndM = HUSH %>:0 ;
+HUSHEnd = [ HUSHEndV | HUSHEndM ] ;
+цEndV = ц [ а́:0 | о́:0 | а:0 | е:0 ] %>:0 ;
+цEndM = ц %>:0 ;
+цEnd = [ цEndV | цEndM ] ;
+SCEndV = [ C - [ й: | :ь | VEL | HUSH | ц ] ] [ я́:0 | ё:0 | е́:0 | я:0 | е:0 ]  %>:0 ;
+SCEnd = [ C - [ й: | :ь | VEL | HUSH | ц ] ] [ я́:0 | ё:0 | е́:0 | я:0 | е:0 | ь:0 ]  %>:0 ;
+VEnd = V [ я́:0 | ё:0 | е́:0 | я:0 | е:0 | й:0 ]  %>:0 ;
+JEnd = [ J: | :ь ]  %>:0 ;
+
+End = [ а́:0 | о́:0 | а:0 | о:0 | я́:0 | ё:0 | е́:0 | я:0 | е:0 | ь:0 | й:0 ] ;
+
 Rules
 
+"Remove all but right-most stress mark"
+Vx:Vy <=> .#. Letter* _ \[ %>:0 ] $[ :StressedV ] ;
+where Vx in ( а́ э́ о́ у́ ы́ я́ е́ ё ю́ и́ )
+      Vy in ( а э о у ы я е е ю и )
+    matched ;
+
+"Delete lexical vowel endings (o/о́ are covered in another rule), and delete fleeting vowels with syllabic endings"
+Vx:0 <=> .#. [ Letter: | F:0 | J: ]+ _ %>:0 ; 
+         F:0 _ $[ :V ] ;
+where Vx in ( а е ё и я а́ е́ и́ я́ ) ;
+
+"Delete о/о́ in lexical endings, fleeting vowels, and GenPl after hard consonants"
+[ о:0 | о́:0 ] <=> .#. [ Letter: | F:0 | J: ]+ _  %>:0 ; 
+                  F:0 _ $[ :V ] ;
+                  [ VELEndV | HUSHEndV | цEndV | [ [ C - [ й | VEL | HUSH | ц ] ] [ а́:0 | о́:0 | а:0 | о:0 ] %>:0 ] ] _ в:0 .#. ;
+
+"Delete ь and й in lexical endings, and before fleeting vowels"
+Lx:0 <=> .#. [ Letter: | F:0 | J: ]+ _  %>:0 ;
+         .#. Letter+ _ F:0 V ;
+where Lx in ( ь й ) ;
+
+"J > й before zero ending (муравей, семей)"
+J:й <=> _  :0* .#. ;
+
+"J > ь before vowels ( муравей > муравья; семей > семья )"
+J:ь <=> F:0 V:0 _  %>:0 :V ;
+
 "о>е"
-о:е <=> [ HUSH | ц | Ц | V ] %>:0 (й:0) (M:0) _ ;
-        [ C - [ VEL | HUSH | ц | Ц ] ] %>:0 [ S:0 | s:0 ] (M:0) _ ;
+о:е <=> [ HUSHEnd | цEnd | VEnd | SCEnd | JEnd ] _ [ ?* - [ в:0 ?* ] ] .#.;
 
 "ы>и (stressed or unstressed)"
-Vx:Vy <=> [ VEL | HUSH | V ] %>:0 ([ й:0 | S:0 | s:0 ]) (M:0) _ ;
-          [ C - [ й: | :ь | VEL | HUSH | ц | Ц ] ] %>:0 [ S:0 | s:0 ] (M:0) _ ;
-          [ й: | :ь ] %>:0 (M:0) _ ;
+Vx:Vy <=> [ VELEnd | HUSHEnd | VEnd | SCEnd | JEnd ] _ ;
 where Vx in ( ы ы́ )
       Vy in ( и и́ )
     matched;
 
 "ю>у and я>а (stressed or unstressed) after a velar, husher, or ц"
-Vx:Vy <=> [ VEL | HUSH | ц | Ц ] %>:0 (M:0) _ ;
+Vx:Vy <=> [ VELEnd | HUSHEnd | цEnd ] _ ;
 where Vx in ( ю ю́ я я́ )
       Vy in ( у у́ а а́ )
     matched;
 
-"Masc NomSg zero spelling after hard-consonant stems and й-stems"
-Z:0 <=> [ C | й: | :ь ] %>:0 (M:0) _ ;
-
-"Masc NomSg ь spelling after soft-consonant stems"
-Z:ь <=> [ C - [ й | Й | VEL | HUSH | ц | Ц ] ] %>:0 S:0 (M:0) _ ;
-
-"Masc NomSg й spelling after vowel stems"
-Z:й <=> V %>:0 (й:0) (M:0) _ ;
-
 "[а у а́ о́ у́] > [я ю я́ ё ю́] after soft-consonant stems (including й: муравей, семья, бельё, etc) and vowel stems (музей, критерий, понятие, Мария, etc)"
-Vx:Vy <=> [ C - [ й: | :ь | VEL | HUSH | ц | Ц ] ] %>:0 [ S:0 | s:0 ] (M:0) _ ;
-          [ й: | :ь ] %>:0 (M:0) _ ;
-          V %>:0 (й:0) (M:0) _ ;
+Vx:Vy <=> [ SCEnd | VEnd | JEnd ] _ [ ?* - [ [ в:й | в:0 ] ?* ] ] .#. ;
 where Vx in ( а у а́ о́ у́ )
       Vy in ( я ю я́ ё ю́ )
     matched;
 
 "е>и (stressed or unstressed) after и-stems"
-Vx:Vy <=> [ и | И | и́ | И́ ] %>:0 (й:0) (M:0) _ ;
+Vx:Vy <=> [ и | и́ ] [ я́:0 | ё:0 | е́:0 | я:0 | е:0 | й:0 ]  %>:0 _ .#. ;
 where Vx in ( е е́ )
       Vy in ( и и́ )
     matched;
 
-"Fleeting vowel deletion with vowel-containing ending"
-Fx:0 <=> F:0 _ ?* %>:0 ([ й:0 | S:0 | s:0 ]) (M:0) [%^GenPl:ов | %^GenPlEnd:о́в | %^GenPl:ев | %^GenPlEnd:ёв | %^GenPl:ей | %^GenPlEnd:е́й | :V ] ;
-where Fx in ( а е ё о и я а́ е́ о́ и́ я́ ) ;
+!!DECLARE RULES FOR ов ев
 
-"Remove all but right-most stress mark"
-Vx:Vy <=> .#. Letter* _ $[ %^GenPlEnd:о́в | %^GenPlEnd:ёв | %^GenPlEnd:е́й | :StressedV ] ;
-where Vx in ( а́ э́ о́ у́ ы́ я́ е́ ё ю́ и́ )
-      Vy in ( а э о у ы я е е ю и )
-    matched ;
+"GenPl: е́й"
+о́:е́ <=> HUSH %>:0 _ в:й .#. ;
+        [ C - [ й | VEL | ц ] ] ь:0 %>:0 _ в:й .#. ;
+!"GenPl: block ов ев in context of ей"
+!о:о /<= HUSH %>:0 _ в:й .#. ;
+!        [ C - [ й | VEL | ц ] ] ь:0 %>:0 _ в:й .#. ;
+!"GenPl: block о́в ёв in context of ей"
+![ о́:о́ | о́:ё ] /<= HUSH %>:0 _ в:й .#. ;
+!                  [ C - [ й | VEL | ц ] ] ь:0 %>:0 _ в:й .#. ;
+"GenPl ей: в>й"
+в:й <=> HUSH %>:0 [ [ о:е ] | [ о́:е́ ] ] _ .#. ;
+        [ C - [ й | VEL | ц ] ] ь:0 %>:0 [ [ о:е ] | [ о́:е́ ] ] _ .#. ;
 
-"й/ь deletion before fleeting vowels (копейка~копеек, яйцо~яиц)"
-[ й:0 | ь:0 ] <=> _ F:0 V ;
-
-"й>ь alternation before vowels (муравей > муравья)"
-й:ь <=> F:0 V:0 _ %>:0 ([ й:0 | S:0 | s:0 ]) (M:0) [%^GenPl:ов | %^GenPlEnd:о́в | %^GenPl:ев | %^GenPlEnd:ёв | :V ] ;
-
-"ь>й alternation before zero (семья > семей)"
-ь:й <=> F:0 V _ %>:0 :0+ .#. ;
-
-"Genitive Plural: unstressed ов"
-%^GenPl:ов <=> [ C - [ й | Й | HUSH | ц | Ц ] ] %>:0 M:0 _ ;
-"Genitive Plural: stressed о́в"
-%^GenPlEnd:о́в <=> [ C - [ й | Й | HUSH ] ] %>:0 M:0 _ ;
-"Genitive Plural: unstressed ев"
-%^GenPl:ев <=> V %>:0 (й:0) M:0 _ ;
-               ц %>:0 M:0 _ ;
-"Genitive Plural: stressed ёв"
-%^GenPlEnd:ёв <=> й:ь %>:0 M:0 _ ;
-
-"Genitive Plural: ей"
-Ix:Iy <=> HUSH %>:0 M:0 _ ;
-          [ C - [ й | Й | VEL | ц | Ц ] ] %>:0 S:0 ( M:0 ) _ ;
-where Ix in ( %^GenPl %^GenPlEnd )
-      Iy in ( ей е́й )
-    matched;
-
-"Genitive Plural: zero after hard C = 0"
-[ %^GenPl:0 | %^GenPlEnd:0 ] <=> C %>:0 _ ;
-"Genitive Plural: zero after soft C =  ь"
-[ %^GenPl:ь | %^GenPlEnd:ь ] <=> [ C - [ й | Й | VEL | HUSH | ц | Ц ] ] %>:0 s:0 _ ;
+"Genitive Plural: zero after soft C = ь"
+[ о:ь | о́:ь ] <=> [ C - [ й | VEL | HUSH | ц ] ] [ я́:0 | ё:0 | е́:0 | я:0 | е:0 ] %>:0 _ в:0 .#. ;
 "Genitive Plural: zero after V = й"
-[ %^GenPl:й | %^GenPlEnd:й ] <=> V %>:0 ( й:0 ) _ ;
+[ о:й | о́:й ] <=> V [ я́:0 | ё:0 | е́:0 | я:0 | е:0 | й:0 ] %>:0 _ в:0 .#. ;
+"Genitive Plural: zero в:0"
+в:0 <=> %>:0 [ о:0 | о:ь | о:й | о́:0 | о́:ь | о́:й ] _ .#. ;

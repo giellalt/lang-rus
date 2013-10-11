@@ -1,69 +1,69 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!MASCULINE PARADIGMS!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-LEXICON Indeclin
-+Sg+Nom: # ;
-+Sg+Acc: # ;
-+Sg+Gen: # ;
-+Sg+Loc: # ;
-+Sg+Dat: # ;
-+Sg+Ins: # ;
-+Pl+Nom: # ;
-+Pl+Acc: # ;
-+Pl+Gen: # ;
-+Pl+Loc: # ;
-+Pl+Dat: # ;
-+Pl+Ins: # ;
+LEXICON MIndeclin
++N+Msc+Sg+Nom: # ;
++N+Msc+Sg+Acc+Inan: # ;
++N+Msc+Sg+Gen: # ;
++N+Msc+Sg+Loc: # ;
++N+Msc+Sg+Dat: # ;
++N+Msc+Sg+Ins: # ;
++N+Msc+Pl+Nom: # ;
++N+Msc+Pl+Acc+Inan: # ;
++N+Msc+Pl+Gen: # ;
++N+Msc+Pl+Loc: # ;
++N+Msc+Pl+Dat: # ;
++N+Msc+Pl+Ins: # ;
 
 LEXICON MStem
-+N+Msc+Sg:M MSgStem ;
-+N+Msc+Pl:M ыPlStem ;
++N+Msc+Sg: MSgStem ;
++N+Msc+Pl: ыPlStem ;
 
 LEXICON MEnd
-+N+Msc+Sg:M MSgEnd ;
-+N+Msc+Pl:M ыPlEnd ;
++N+Msc+Sg: MSgEnd ;
++N+Msc+Pl: ыPlEnd ;
 
 LEXICON MShift2End
-+N+Msc+Sg:M MSgStem ;
-+N+Msc+Pl:M ыPlEnd ;
++N+Msc+Sg: MSgStem ;
++N+Msc+Pl: ыPlEnd ;
 
 LEXICON MShift2Stem
-+N+Msc+Sg:M MSgEnd ;
-+N+Msc+Pl:M ыPlStem ;
++N+Msc+Sg: MSgEnd ;
++N+Msc+Pl: ыPlStem ;
 
 LEXICON MStemAnom
-+N+Msc+Sg:M MSgStem ;
-+N+Msc+Pl:M ыPlAnom ;
++N+Msc+Sg: MSgStem ;
++N+Msc+Pl: ыPlAnom ;
 
 LEXICON MEndAnom
-+N+Msc+Sg:M MSgEnd ;
-+N+Msc+Pl:M ыPlAnom ;
++N+Msc+Sg: MSgEnd ;
++N+Msc+Pl: ыPlAnom ;
 
 LEXICON MStem_anim
-+N+Msc+Sg:M MSgStem_anim ;
-+N+Msc+Pl:M ыPlStem_anim ;
++N+Msc+Sg: MSgStem_anim ;
++N+Msc+Pl: ыPlStem_anim ;
 
 LEXICON MEnd_anim
-+N+Msc+Sg:M MSgEnd_anim ;
-+N+Msc+Pl:M ыPlEnd_anim ;
++N+Msc+Sg: MSgEnd_anim ;
++N+Msc+Pl: ыPlEnd_anim ;
 
 LEXICON MShift2End_anim
-+N+Msc+Sg:M MSgStem_anim ;
-+N+Msc+Pl:M ыPlEnd_anim ;
++N+Msc+Sg: MSgStem_anim ;
++N+Msc+Pl: ыPlEnd_anim ;
 
 LEXICON MShift2Stem_anim
-+N+Msc+Sg:M MSgEnd_anim ;
-+N+Msc+Pl:M ыPlStem_anim ;
++N+Msc+Sg: MSgEnd_anim ;
++N+Msc+Pl: ыPlStem_anim ;
 
 LEXICON MStemAnom_anim
-+N+Msc+Sg:M MSgStem_anim ;
-+N+Msc+Pl:M ыPlAnom_anim ;
++N+Msc+Sg: MSgStem_anim ;
++N+Msc+Pl: ыPlAnom_anim ;
 
 LEXICON MEndAnom_anim
-+N+Msc+Sg:M MSgEnd_anim ;
-+N+Msc+Pl:M ыPlAnom_anim ;
++N+Msc+Sg: MSgEnd_anim ;
++N+Msc+Pl: ыPlAnom_anim ;
 
 LEXICON MEnd_PlTant
-+N+Msc+Pl:M ыPlEnd ;
++N+Msc+Pl: ыPlEnd ;
 
 LEXICON MSgStem !Inanimate
 MSgNomZ ;
@@ -77,31 +77,31 @@ MSgObliqEnd ;
 
 LEXICON MSgStem_anim
 MSgNomZ ;
-+Acc+Anim:а # ;
++Acc+Anim:%>а # ;
 MSgObliqStem ;
 
 LEXICON MSgEnd_anim
 MSgNomZ ;
-+Acc+Anim:а́ # ;
++Acc+Anim:%>а́ # ;
 MSgObliqEnd ;
 
 LEXICON MSgNomZ
-+Nom:Z # ;
++Nom: # ;
 
 LEXICON MSgAccZ
-+Acc+Inan:Z # ;
++Acc+Inan: # ;
 
 LEXICON MSgObliqStem
-+Gen:а # ;
-+Loc:е # ;
-+Dat:у # ;
-+Ins:ом # ;
++Gen:%>а # ;
++Loc:%>е # ;
++Dat:%>у # ;
++Ins:%>ом # ;
 
 LEXICON MSgObliqEnd
-+Gen:а́ # ;
-+Loc:е́ # ;
-+Dat:у́ # ;
-+Ins:о́м # ;
++Gen:%>а́ # ;
++Loc:%>е́ # ;
++Dat:%>у́ # ;
++Ins:%>о́м # ;
 
 !!!!!!!!!!!!!!!!!!!!!!!!!NEUTER PARADIGMS!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -147,25 +147,25 @@ LEXICON NStem_ыPl
 
 LEXICON мя_anim
 +N+Neu+Sg: мяSg ;
-+N+Neu+Pl:ён%> аPlEnd_anim ;  !Cyrillic 'а' in 'аPl'
++N+Neu+Pl:ён аPlEnd_anim ;  !Cyrillic 'а' in 'аPl'
 
 LEXICON NSgStem
-+Nom:о # ;
-+Acc:о # ;
++Nom:%>о # ;
++Acc:%>о # ;
 MSgObliqStem ;
 
 LEXICON NSgEnd
-+Nom:о́ # ;
-+Acc:о́ # ;
++Nom:%>о́ # ;
++Acc:%>о́ # ;
 MSgObliqEnd ;
 
 LEXICON мяSg
-+N+Neu+Nom:я # ;
-+N+Neu+Acc:я # ;
-+N+Neu+Gen:ени # ;
-+N+Neu+Loc:ени # ;
-+N+Neu+Dat:ени # ;
-+N+Neu+Ins:енем # ;
++N+Neu+Sg+Nom: # ;
++N+Neu+Sg+Acc: # ;
++N+Neu+Sg+Gen:%>ени # ;
++N+Neu+Sg+Loc:%>ени # ;
++N+Neu+Sg+Dat:%>ени # ;
++N+Neu+Sg+Ins:%>енем # ;
 
 !!!!!!!!!!!!!!!!!!!!!!!!!FEMININE PARADIGMS!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -178,11 +178,11 @@ LEXICON FEnd
 +N+Fem+Pl: ыPlEnd ;
 
 LEXICON FьStem
-+N+Fem+Sg: FьStem ;
++N+Fem+Sg: FьSgStem ;
 +N+Fem+Pl: ыPlStem ;
 
 LEXICON FьEnd
-+N+Fem+Sg: FьEnd ;
++N+Fem+Sg: FьSgEnd ;
 +N+Fem+Pl: ыPlEnd ;
 
 LEXICON FShift2Stem
@@ -194,7 +194,7 @@ LEXICON FEndAnom
 +N+Fem+Pl: ыPlAnom ;
 
 LEXICON FьAnom
-+N+Fem+Sg: FьStem ;
++N+Fem+Sg: FьSgStem ;
 +N+Fem+Pl: ыPlAnom ;
 
 LEXICON FShiftRetr
@@ -214,12 +214,12 @@ LEXICON FEnd_anim
 +N+Fem+Pl: ыPlEnd_anim ;
 
 LEXICON FьStem_anim
-+N+Fem+Sg: FьStem ;
++N+Fem+Sg: FьSgStem ;
 +N+Fem+Pl: ыPlStem_anim ;
 
 LEXICON FьEnd_anim
-+N+Fem+Sg: FьEnd ;
-+N+Fem+Pl: ыPlEnd ;
++N+Fem+Sg: FьSgEnd ;
++N+Fem+Pl: ыPlEnd_anim ;
 
 LEXICON FShift2Stem_anim
 +N+Fem+Sg: FSgEnd ;
@@ -230,7 +230,7 @@ LEXICON FEndAnom_anim
 +N+Fem+Pl: ыPlAnom_anim ;
 
 LEXICON FьAnom_anim
-+N+Fem+Sg: FьStem ;
++N+Fem+Sg: FьSgStem ;
 +N+Fem+Pl: ыPlAnom_anim ;
 
 LEXICON FShiftRetr_anim
@@ -242,43 +242,43 @@ LEXICON FAnomRetr_anim
 +N+Fem+Pl: ыPlAnom_anim ;
 
 LEXICON FSgStem
-+Nom:а # ;
-+Acc:у # ;
-+Gen:ы # ;
-+Loc:е # ;
-+Dat:е # ;
-+Ins:ой # ;
++Nom:%>а # ;
++Acc:%>у # ;
++Gen:%>ы # ;
++Loc:%>е # ;
++Dat:%>е # ;
++Ins:%>ой # ;
 
 LEXICON FSgEnd
-+Acc:у́ # ;
++Acc:%>у́ # ;
 FSgObliqEnd ;
 
 LEXICON FSgRetr
-+Acc:у # ;
++Acc:%>у # ;
 FSgObliqEnd ;
 
 LEXICON FSgObliqEnd
-+Nom:а́ # ;
-+Gen:ы́ # ;
-+Loc:е́ # ;
-+Dat:е́ # ;
-+Ins:о́й # ;
++Nom:%>а́ # ;
++Gen:%>ы́ # ;
++Loc:%>е́ # ;
++Dat:%>е́ # ;
++Ins:%>о́й # ;
 
-LEXICON FьStem
-+Nom:ь # ;
-+Acc:ь # ;
-+Gen:и # ;
-+Loc:и # ;
-+Dat:и # ;
-+Ins:ью # ;
+LEXICON FьSgStem
++Nom: # ;
++Acc: # ;
++Gen:%>и # ;
++Loc:%>и # ;
++Dat:%>и # ;
++Ins:%>ью # ;
 
-LEXICON FьEnd
-+Nom:ь # ;
-+Acc:ь # ;
-+Gen:и́ # ;
-+Loc:и́ # ;
-+Dat:и́ # ;
-+Ins:ью # ;
+LEXICON FьSgEnd
++Nom: # ;
++Acc: # ;
++Gen:%>и́ # ;
++Loc:%>и́ # ;
++Dat:%>и́ # ;
++Ins:%>ью # ;
 
 !!!!!!!!!!!!!!!!!!!!!!!!!PLURAL PARADIGMS!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -289,7 +289,7 @@ PlObliqStem ;
 
 LEXICON ыPlEnd       !Inanimate
 ыPlNomEnd ;
-+Acc+Inan:ы́ # ;
++Acc+Inan:%>ы́ # ;
 PlObliqEnd ;
 
 LEXICON ыPlAnom      !Inanimate
@@ -299,12 +299,12 @@ PlObliqEnd ;
 
 LEXICON аPlStem      !Inanimate
 аPlNomStem ;
-+Acc+Inan:а # ;
++Acc+Inan:%>а # ;
 PlObliqStem ;
 
 LEXICON аPlEnd       !Inanimate
 аPlNomEnd ;
-+Acc+Inan:а́ # ;
++Acc+Inan:%>а́ # ;
 PlObliqEnd ;
 
 LEXICON ыPlStem_anim
@@ -333,37 +333,37 @@ PlAccAnimEnd ;
 PlObliqEnd ;
 
 LEXICON ыPlNomStem
-+Nom:ы # ;
++Nom:%>ы # ;
 
 LEXICON ыPlNomEnd
-+Nom:ы́ # ;
++Nom:%>ы́ # ;
 
 LEXICON ыPlAccInanStem
-+Acc+Inan:ы # ;
++Acc+Inan:%>ы # ;
 
 LEXICON PlAccAnimStem
-+Acc+Anim:%^GenPl # ;
++Acc+Anim:%>ов # ;
 
 LEXICON PlAccAnimEnd
-+Acc+Anim:%^GenPlEnd # ;
++Acc+Anim:%>о́в # ;
 
 LEXICON аPlNomStem
-+Nom:а # ;
++Nom:%>а # ;
 
 LEXICON аPlNomEnd
-+Nom:а́ # ;
++Nom:%>а́ # ;
 
 LEXICON PlObliqStem
-+Gen:%^GenPl # ;
-+Loc:ах # ;
-+Dat:ам # ;
-+Ins:ами # ;
++Gen:%>ов # ;
++Loc:%>ах # ;
++Dat:%>ам # ;
++Ins:%>ами # ;
 
 LEXICON PlObliqEnd
-+Gen:%^GenPlEnd # ;
-+Loc:а́х # ;
-+Dat:а́м # ;
-+Ins:а́ми # ;
++Gen:%>о́в # ;
++Loc:%>а́х # ;
++Dat:%>а́м # ;
++Ins:%>а́ми # ;
 
 
 

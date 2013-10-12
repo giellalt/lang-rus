@@ -2,11 +2,9 @@ Multichar_Symbols
 
 !Stressed vowels
 а́ е́ и́ о́ у́ ы́ э́ ю́ я́ 
-А́ Е́ И́ О́ У́ Ы́   Ю́ Я́ ! Cannot put stress on capital Э
+А́ Е́ И́ О́ У́ Ы́ Э́ Ю́ Я́ ! Cannot put stress on capital Э
 
 %>                                    ! End-of-stem markers
-
-%^GenPl %^GenPlEnd                    ! GenPl inflection
 
 ! POS
 +N +V +A 

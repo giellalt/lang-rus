@@ -1,0 +1,27 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+Tests:
+# todo:
+# Proofread the gold standard (below)
+# Then: run analyser, then correct. 
+
+  Noun - красота M anim : # Noun - full paradigm
+      красота+N+Fem+Sg+Nom: красота́
+      красота+N+Fem+Sg+Acc: красоту́
+      красота+N+Fem+Sg+Gen: красоты́
+      красота+N+Fem+Sg+Loc: красоте́
+      красота+N+Fem+Sg+Dat: красоте́
+      красота+N+Fem+Sg+Ins: красото́й
+      красота+N+Fem+Pl+Nom: красо́ты
+      красота+N+Fem+Pl+Acc+Inan: красо́ты
+      красота+N+Fem+Pl+Gen: красо́т
+      красота+N+Fem+Pl+Loc: красо́тах
+      красота+N+Fem+Pl+Dat: красо́там
+      красота+N+Fem+Pl+Ins: красо́тами
+

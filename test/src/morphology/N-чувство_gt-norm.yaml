@@ -1,0 +1,27 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+Tests:
+# todo:
+# Proofread the gold standard (below)
+# Then: run analyser, then correct. 
+
+  Noun - чувство M anim : # Noun - full paradigm
+      чувство+N+Neu+Sg+Nom: чу́вство
+      чувство+N+Neu+Sg+Acc: чу́вство
+      чувство+N+Neu+Sg+Gen: чу́вства
+      чувство+N+Neu+Sg+Loc: чу́встве
+      чувство+N+Neu+Sg+Dat: чу́вству
+      чувство+N+Neu+Sg+Ins: чу́вством
+      чувство+N+Neu+Pl+Nom: чу́вства
+      чувство+N+Neu+Pl+Acc+Inan: чу́вства
+      чувство+N+Neu+Pl+Gen: чу́вств
+      чувство+N+Neu+Pl+Loc: чу́вствах
+      чувство+N+Neu+Pl+Dat: чу́вствам
+      чувство+N+Neu+Pl+Ins: чу́вствами
+

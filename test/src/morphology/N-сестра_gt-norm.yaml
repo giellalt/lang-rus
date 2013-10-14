@@ -1,0 +1,27 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+Tests:
+# todo:
+# Proofread the gold standard (below)
+# Then: run analyser, then correct. 
+
+  Noun - сестра M anim : # Noun - full paradigm
+      сестра+N+Fem+Sg+Nom: сестра́
+      сестра+N+Fem+Sg+Acc: сестру́
+      сестра+N+Fem+Sg+Gen: сестры́
+      сестра+N+Fem+Sg+Loc: сестре́
+      сестра+N+Fem+Sg+Dat: сестре́
+      сестра+N+Fem+Sg+Ins: сестро́й
+      сестра+N+Fem+Pl+Nom: сёстры
+      сестра+N+Fem+Pl+Acc+Anim: сестёр
+      сестра+N+Fem+Pl+Gen: сестёр
+      сестра+N+Fem+Pl+Loc: сёстрах
+      сестра+N+Fem+Pl+Dat: сёстрам
+      сестра+N+Fem+Pl+Ins: сёстрами
+

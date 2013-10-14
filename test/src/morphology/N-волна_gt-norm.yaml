@@ -1,0 +1,27 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+Tests:
+# todo:
+# Proofread the gold standard (below)
+# Then: run analyser, then correct. 
+
+  Noun - волна M anim : # Noun - full paradigm
+      волна+N+Fem+Sg+Nom: волна́
+      волна+N+Fem+Sg+Acc: волну́
+      волна+N+Fem+Sg+Gen: волны́
+      волна+N+Fem+Sg+Loc: волне́
+      волна+N+Fem+Sg+Dat: волне́
+      волна+N+Fem+Sg+Ins: волно́й
+      волна+N+Fem+Pl+Nom: во́лны
+      волна+N+Fem+Pl+Acc+Inan: во́лны
+      волна+N+Fem+Pl+Gen: во́лн
+      волна+N+Fem+Pl+Loc: волна́х
+      волна+N+Fem+Pl+Dat: волна́м
+      волна+N+Fem+Pl+Ins: волна́ми
+

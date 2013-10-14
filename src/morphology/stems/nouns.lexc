@@ -4,8 +4,7 @@ LEXICON Noun
 критерий:крите́рий MStem ;
 студент:студе́нт MStem_anim ;
 официант:официа́нт MStem_anim ;
-сосед+N+Msc+Sg:сосе́д MSgStem_anim ;
-сосед+N+Msc+Pl:сосе́дь ыPlStem_anim ;
+сосед:сосе́д SOSED ;
 словарь:слова́рь MEnd ;
 муравей:муравFе́J MEnd_anim ;
 карандаш:каранда́ш MEnd ;
@@ -15,7 +14,7 @@ LEXICON Noun
 крюк:крю́к MShift2Stem ;
 гость:го́сть MStemAnom_anim ;
 конь:ко́нь MEndAnom_anim ;
-часы:час MEnd_PlTant ;
+часы:час MыPlTantEnd ;
 !!!!!!!!!!!!!!!!!!!!!!!!!NEUTER NOUNS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 чувство:чу́вство NStem ;
 чудовище:чудо́вище NStem_anim ;
@@ -25,16 +24,14 @@ LEXICON Noun
 существо:суще́ство́ NEnd_anim ;
 слово:сло́во NShift2End ;
 сердце:се́рдFе́це NShift2End ;
-море:мо́ре NShift2End ;           !!!BAD море+Pl+Gen:морь
-море+N+Neu+Pl+Gen:море́й # ;
-поле:по́ле NShift2End ;           !!!BAD поле+Pl+Gen:поль
-поле+N+Neu+Pl+Gen:поле́й # ;
+море:мо́ре NShift2End ;
+поле:по́ле NShift2End ;
 окно:о́кFоно́ NShift2Stem ;
 письмо:пи́сьFемо́ NShift2Stem ;
 яйцо:я́йFи́цо́ NShift2Stem ;
 вино:ви́но́ NShift2Stem ;
-бельё+N+Neu+Sg:бельё NSgEnd ;       !Singulare tantum
-имя:и́мя мя ;
+бельё:бельё NSgTant ;       !Singulare tantum
+имя:и́м мя ;
 бистро:бистро́ Indeclin ;
 бюро:бюро́ Indeclin ;
 !!!!!!!!!!!!!!!!!!!!!!!!!FEMININE NOUNS!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -51,7 +48,7 @@ LEXICON Noun
 душа:ду́ша́ FShiftRetr ;
 земля:зе́мFеля́ FShiftRetr ;
 рука:ру́ка́ FAnomRetr ;
-ножницы+N+Fem+Pl:но́жница ыPlStem ;  !Plurale tantum
+ножницы:но́жница FыPlTantStem ;  !Plurale tantum
 старость:ста́рость FьStem ;
 вещь:ве́щь FьAnom ;
 любовь:любFо́вь FьEnd ;

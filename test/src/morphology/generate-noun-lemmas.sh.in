@@ -63,9 +63,15 @@ for f in $fsttype; do
 	fi
 	if [ -f "$generatorfile.$f" ]; then
 		let "transducer_found += 1"
-		sed 's/$/+N+Sg+Nom/' $lemmas | \
-				$lookuptool $generatorfile.$f > $generatedlemmas.$f.txt
-		fgrep '?' $generatedlemmas.$f.txt > $failedlemmas.$f.txt
+		sed 's/$/+N+Neu+Sg+Nom/' $lemmas | \
+				$lookuptool $generatorfile.$f > $generatedlemmas.$f.neu.txt
+		fgrep '?' $generatedlemmas.$f.neu.txt | cut -f1 | cut -d'+' -f1 \
+				| sed 's/$/+N+Msc+Sg+Nom/' | \
+				$lookuptool $generatorfile.$f > $generatedlemmas.$f.msc.txt
+		fgrep '?' $generatedlemmas.$f.msc.txt | cut -f1 | cut -d'+' -f1 \
+				| sed 's/$/+N+Fem+Sg+Nom/' | \
+				$lookuptool $generatorfile.$f > $generatedlemmas.$f.fem.txt
+		fgrep '?' $generatedlemmas.$f.fem.txt > $failedlemmas.$f.txt
 		if [ $(wc -l $failedlemmas.$f.txt | tr -s ' ' | sed 's/^ //' \
 				| cut -d' ' -f1) -gt 0 ]; then
 			# Only open the failed lemmas in see if @SEE@ is defined:

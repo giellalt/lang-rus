@@ -1,0 +1,27 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+Tests:
+# todo:
+# Proofread the gold standard (below)
+# Then: run analyser, then correct. 
+
+  Noun - чудовище M anim : # Noun - full paradigm
+      чудовище+N+Neu+Sg+Nom: чудо́вище
+      чудовище+N+Neu+Sg+Acc: чудо́вище
+      чудовище+N+Neu+Sg+Gen: чудо́вища
+      чудовище+N+Neu+Sg+Loc: чудо́вище
+      чудовище+N+Neu+Sg+Dat: чудо́вищу
+      чудовище+N+Neu+Sg+Ins: чудо́вищем
+      чудовище+N+Neu+Pl+Nom: чудо́вища
+      чудовище+N+Neu+Pl+Acc+Anim: чудо́вищ
+      чудовище+N+Neu+Pl+Gen: чудо́вищ
+      чудовище+N+Neu+Pl+Loc: чудо́вищах
+      чудовище+N+Neu+Pl+Dat: чудо́вищам
+      чудовище+N+Neu+Pl+Ins: чудо́вищами
+

@@ -1,0 +1,21 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+Tests:
+# todo:
+# Proofread the gold standard (below)
+# Then: run analyser, then correct. 
+
+  Noun - ножницы M anim : # Noun - full paradigm
+      ножницы+N+Fem+Pl+Nom: но́жницы
+      ножницы+N+Fem+Pl+Acc+Inan: но́жницы
+      ножницы+N+Fem+Pl+Gen: но́жниц
+      ножницы+N+Fem+Pl+Loc: но́жницах
+      ножницы+N+Fem+Pl+Dat: но́жницам
+      ножницы+N+Fem+Pl+Ins: но́жницами
+

@@ -1,0 +1,27 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+Tests:
+# todo:
+# Proofread the gold standard (below)
+# Then: run analyser, then correct. 
+
+  Noun - старость M anim : # Noun - full paradigm
+      старость+N+Fem+Sg+Nom: ста́рость
+      старость+N+Fem+Sg+Acc: ста́рость
+      старость+N+Fem+Sg+Gen: ста́рости
+      старость+N+Fem+Sg+Loc: ста́рости
+      старость+N+Fem+Sg+Dat: ста́рости
+      старость+N+Fem+Sg+Ins: ста́ростью
+      старость+N+Fem+Pl+Nom: ста́рости
+      старость+N+Fem+Pl+Acc+Inan: ста́рости
+      старость+N+Fem+Pl+Gen: ста́ростей
+      старость+N+Fem+Pl+Loc: ста́ростях
+      старость+N+Fem+Pl+Dat: ста́ростям
+      старость+N+Fem+Pl+Ins: ста́ростями
+

@@ -62,8 +62,9 @@ LEXICON MEndAnom_anim
 +N+Msc+Sg: MSgEnd_anim ;
 +N+Msc+Pl: ыPlAnom_anim ;
 
-LEXICON MEnd_PlTant
-+N+Msc+Pl: ыPlEnd ;
+LEXICON SOSED
++N+Msc+Sg: MSgStem_anim ;
++N+Msc+Pl:ь ыPlStem_anim ;
 
 LEXICON MSgStem !Inanimate
 MSgNomZ ;
@@ -121,9 +122,22 @@ LEXICON NShift2Stem
 +N+Neu+Sg: NSgEnd ;
 +N+Neu+Pl: аPlStem ;     !Cyrillic 'а' in 'аPl'
 
+LEXICON NSgTant
++N+Neu+Sg: NSgEnd ;
+
 LEXICON мя
-+N+Neu+Sg: мяSg ;
-+N+Neu+Pl:ён%> аPlEnd ;  !Cyrillic 'а' in 'аPl'
++N+Neu+Sg+Nom:я # ;
++N+Neu+Sg+Acc:я # ;
++N+Neu+Sg+Gen:ени # ;
++N+Neu+Sg+Loc:ени # ;
++N+Neu+Sg+Dat:ени # ;
++N+Neu+Sg+Ins:енем # ;
++N+Neu+Pl+Nom:ена́ # ;
++N+Neu+Pl+Acc+Inan:ена́ # ;
++N+Neu+Pl+Gen:ён # ;
++N+Neu+Pl+Loc:ена́х # ;
++N+Neu+Pl+Dat:ена́м # ;
++N+Neu+Pl+Ins:ена́ми # ;
 
 LEXICON NStem_anim
 +N+Neu+Sg: NSgStem ;
@@ -145,10 +159,6 @@ LEXICON NStem_ыPl
 +N+Neu+Sg: NSgStem ;
 +N+Neu+Pl: ыPlStem ;
 
-LEXICON мя_anim
-+N+Neu+Sg: мяSg ;
-+N+Neu+Pl:ён аPlEnd_anim ;  !Cyrillic 'а' in 'аPl'
-
 LEXICON NSgStem
 +Nom:%>о # ;
 +Acc:%>о # ;
@@ -158,14 +168,6 @@ LEXICON NSgEnd
 +Nom:%>о́ # ;
 +Acc:%>о́ # ;
 MSgObliqEnd ;
-
-LEXICON мяSg
-+N+Neu+Sg+Nom: # ;
-+N+Neu+Sg+Acc: # ;
-+N+Neu+Sg+Gen:%>ени # ;
-+N+Neu+Sg+Loc:%>ени # ;
-+N+Neu+Sg+Dat:%>ени # ;
-+N+Neu+Sg+Ins:%>енем # ;
 
 !!!!!!!!!!!!!!!!!!!!!!!!!FEMININE PARADIGMS!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -331,6 +333,18 @@ LEXICON аPlEnd_anim
 аPlNomEnd ;
 PlAccAnimEnd ;
 PlObliqEnd ;
+
+LEXICON MыPlTantStem
++N+Msc+Pl: ыPlStem ;
+
+LEXICON MыPlTantEnd
++N+Msc+Pl: ыPlEnd ;
+
+LEXICON FыPlTantStem
++N+Fem+Pl: ыPlStem ;
+
+LEXICON FыPlTantEnd
++N+Fem+Pl: ыPlEnd ;
 
 LEXICON ыPlNomStem
 +Nom:%>ы # ;

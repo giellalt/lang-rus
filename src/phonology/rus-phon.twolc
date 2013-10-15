@@ -20,28 +20,28 @@ StressedV = а́ е́ ё и́ о́ у́ ы́ э́ ю́ я́ ;
 Definitions
 
 !End = [ а́:0 | о́:0 | а:0 | о:0 | я́:0 | ё:0 | е́:0 | я:0 | е:0 | ь:0 | й:0 ] ;
-VELEndV = VEL [ а́:0 | о́:0 | а:0 | о:0 ] %>:0 ;
-VELEndC = VEL %>:0 ;
+VELEndV = VEL [ а́:0 | о́:0 | а:0 | о:0 ] %>:0 ; ! тоска́, молоко́, кни́га, я́блоко
+VELEndC = VEL %>:0 ; ! уче́бник
 VELEnd = [ VELEndV | VELEndC ] ;
-HUSHEndV = HUSH [ а́:0 | о́:0 | а:0 | е:0 ] %>:0 ;
-HUSHEndC = HUSH ( ь:0 ) %>:0 ;
+HUSHEndV = HUSH [ а́:0 | о́:0 | а:0 | е:0 ] %>:0 ; ! моча́, плечо́, пи́ща, чудо́вище
+HUSHEndC = HUSH ( ь:0 ) %>:0 ; ! мяч, вещь
 HUSHEnd = [ HUSHEndV | HUSHEndC ] ;
-цEndV = ц [ а́:0 | о́:0 | а:0 | е:0 ] %>:0 ;
-цEndC = ц %>:0 ;
+цEndV = ц [ а́:0 | о́:0 | а:0 | е:0 ] %>:0 ; ! рысца́, мясцо́, учи́тельница, се́рдце
+цEndC = ц %>:0 ; ! молоде́ц
 цEnd = [ цEndV | цEndC ] ;
-SCEndVN = PC [ ё:0 | е́:0 | е:0 ] %>:0 ;
-SCEndVF = PC [ я́:0 | я:0 ] %>:0 ;
+SCEndVN = PC [ е́:0 | е:0 ] %>:0 ; ! мо́ре, no е́/ё because they do not occur with paired consonants
+SCEndVF = PC [ я́:0 | я:0 ] %>:0 ; ! земля́, неде́ля
 SCEndV = [ SCEndVN | SCEndVF ] ;
-SCEndC = PC [ ь:0 ] %>:0 ;
+SCEndC = PC [ ь:0 ] %>:0 ; ! конь
 SCEnd = [ SCEndV | SCEndC ] ;
-HCEndV = PC [ а́:0 | о́:0 | а:0 | о:0 ] %>:0 ;
-HCEndC = PC %>:0 ;
+HCEndV = PC [ а́:0 | о́:0 | а:0 | о:0 ] %>:0 ; ! красота́, окно́, ве́ра, сло́во
+HCEndC = PC %>:0 ; ! пол
 HCEnd = [ HCEndV | HCEndC ] ;
-VEndV = V [ я́:0 | ё:0 | е́:0 | я:0 | е:0 ] %>:0 ;
-VEndC = V [ й:0 ] %>:0 ;
+VEndV = V [ я́:0 | ё:0 | е́:0 | я:0 | е:0 ] %>:0 ; ! судия́, остриё, житие́, Мари́я, поня́тие
+VEndC = V [ й:0 ] %>:0 ; ! музе́й
 VEnd = [ VEndV | VEndC ] ;
-JEndV = [ J: | :ь ] [ я́:0 | ё:0 ] %>:0 ;
-JEndC = [ J: | :ь ] %>:0 ;
+JEndV = [ J: | :ь ] [ я́:0 | ё:0 ] %>:0 ; ! семья́, бельё
+JEndC = [ J: | :ь ] %>:0 ; ! мураве́й
 JEnd = [ JEndV | JEndC ] ;
 
 Rules
@@ -101,13 +101,15 @@ where Vx in ( е е́ )
     matched;
 
 "GenPl ей: в>й"
-в:й <=> [ HUSHEndC | SCEndC | SCEndVN ] [ о: | о́: ] _ .#. ;
+в:й <=> [ HUSHEndC | SCEndC ] [ о: | о́: ] _ .#. ;
+        [ SCEndV ] о́: _ .#. ;
 "GenPl: stressed е́й"
-о́:е́ <=> [ HUSHEndC | SCEndC | SCEndVN ] _ в:й .#. ;
+о́:е́ <=> [ HUSHEndC | SCEndC | SCEndV ] _ в:й .#. ;
 
 "Genitive Plural: zero в:0"
-в:0 <=> [ VELEndV | HUSHEndV | цEndV | SCEndVF | HCEndV | VEndV | JEndV ] [ о: | о́: ] _ .#. ;
+в:0 <=> [ VELEndV | HUSHEndV | цEndV | HCEndV | VEndV | JEndV ] [ о: | о́: ] _ .#. ;
+        SCEndV о: _ .#. ;
 "Genitive Plural: zero after soft C = ь"
-[ о:ь | о́:ь ] <=> SCEndV _ в:0 .#. ;
+о:ь <=> SCEndV _ в:0 .#. ;
 "Genitive Plural: zero after V = й"
 [ о:й | о́:й ] <=> VEndV _ в:0 .#. ;

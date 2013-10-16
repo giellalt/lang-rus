@@ -36,7 +36,8 @@ LEXICON Root
 
 Adjective ;
 Noun ;
-conjunctions ;
+conjunction ;
+Preposition ;
 
 !Propernoun ;
 !Verb ;
@@ -45,6 +46,5 @@ conjunctions ;
 !Interjection ;
 !Numeral ;
 !Pronoun ;
-!Postposition ;
 !Punctuation ;
 

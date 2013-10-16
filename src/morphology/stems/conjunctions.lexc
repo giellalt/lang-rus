@@ -2,7 +2,7 @@
 LEXICON Cc
 +CC: # ;
 
-LEXICON conjunctions
+LEXICON Conjunction
 
 да:да Cc  "ja" ;
 или:или Cc  "vai, tai" ;

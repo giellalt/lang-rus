@@ -1,5 +1,8 @@
-LEXICON PP ! These are the indeclieable ones 
+LEXICON p ! These are the indeclieable ones 
 +Pr: # ;
 
-LEXICON Postposition
- PP ;
+LEXICON Preposition
+по p ;
+в p ;
+на p ;
+до p ;

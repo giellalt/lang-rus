@@ -2,7 +2,8 @@ Multichar_Symbols
 
 !Stressed vowels
 а́ е́ и́ о́ у́ ы́ э́ ю́ я́ 
-А́ Е́ И́ О́ У́ Ы́ Э́ Ю́ Я́ ! Cannot put stress on capital Э
+А́ Е́ И́ О́ У́ Ы́ Э́ Ю́ Я́
+а̀ ѐ ѝ о̀ у̀ ы̀ э̀ ю̀ я̀ ! Secondary stress
 
 %>                                    ! End-of-stem markers
 
@@ -23,20 +24,15 @@ Multichar_Symbols
 ! Nominal MSP
 +Sg +Pl
 +Msc +Fem +Neu +Inan +Anim
-+Nom +Acc +Gen +Ins +Dat +Loc
++Nom +Acc +Gen +Ins +Dat +Loc ! Add Lc2 and Gn2 (they have syntactic importance, but will it ever be useful for the CG?)
 +Ord
 
-
-!а2 о2 е2 и2 у2 я2 ё2 ы2 ю2 э2
-!А2 О2 Е2 И2 У2 Я2 Ё2 Ы2 Ю2 е2
-
 ! Key lexicon
-
 LEXICON Root
 
 Adjective ;
 Noun ;
-conjunction ;
+Conjunction ;
 Preposition ;
 
 !Propernoun ;

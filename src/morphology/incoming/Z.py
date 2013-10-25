@@ -55,16 +55,57 @@ def stresser ( myinput ) : # places primary stress (acute accent), then calls st
             inputList[position+1] = u'\u0301'
         return stresser (''.join(inputList))
 
-
-def CodeCleaner ( myinput ) : # remove morphologically irrelevant semantic labels and variant labels
-    output = re.sub( "\(_.*_\)" , "" , myinput )
-    output = re.sub( "\\[\\/\\/.*\\]" , "" , output )
+def CodeCleaner ( myinput ) : 
+    output = re.sub( "\(_.*?_\)" , "" , myinput )                 # remove irrelevant semantic labels
+    output = re.sub( "\\[\\/\\/.*?\\]" , "" , output )            # remove variant labels
+    output = re.sub( "\\<(.*?)\\>" , "[\\1]" , output )         # change <  > to [ ]   
+    output = output.replace( '"' , "=" )                          # change " to =    
+    output = output.replace( '<' , "'" )                          # change < to '    
     return output.strip()
 
 def NStemCodeStrip ( myinput ) : # remove stem labels and fleeting vowel markers
     output = re.sub( " [1-7]" , " " , myinput )
-    output = re.sub( "\\*" , "" , output )    
+    output = re.sub( "\\*" , "" , output )
     return output
+
+Cons = re.compile(u"[бвгджзйклмнпрстфхцчшщ]")
+Vow = re.compile(u"[аяоёеыи]")
+StressRE = re.compile(u"[<>]")
+
+def A_stemmer ( instem , code ) :
+    instem = instem[:-2]
+    if instem[-1:] == u"<" :
+        instem = instem[:-1]
+    if u'***' in code or ( not  '**' in code and '*' in code ) :    # If the code indicates that there is a fleeting vowel
+        instem = list(instem)
+        instem.insert(len(instem)-1,u"F")
+        instem = ''.join(instem)
+    return stresser ( instem )
+
+def N_stemmer ( instem , code ) :
+    if u"<П " not in code :
+        if u'***' in code or ( not  '**' in code and '*' in code ) :    # If the code indicates that there is a fleeting vowel
+            instem = instem[::-1]
+            Cindex = Cons.search(instem)
+            Vindex = Vow.search(instem)
+            Sindex = StressRE.search(instem)
+            if Cindex.start() > Vindex.start() : # if the stem ends in a vowel...
+                Findex = Cindex.start()+1
+            else :
+                if Sindex : # if the word ends in a consonant and has stress
+                    if Sindex.start() == Vindex.start()+1 : # if the word ends in a consonant and the fleeting vowel is stressed
+                        Findex = Vindex.start()+2
+                    else : # if the word ends in a consonant and the fleeting vowel is not stressed
+                        Findex = Vindex.start()+1
+                else : # if the word ends in a consonant and has no stress
+                    Findex = Vindex.start()+1
+            instem = list(instem)
+            instem.insert(Findex,u"F")
+            instem = ''.join(instem)
+            instem = instem[::-1]
+        return stresser ( instem )
+    else : # if the word is a substantivized adjective...
+        return A_stemmer ( instem , code )
 
 def AStemCodeStrip ( myinput ) :
     output = re.sub( " [1-7]" , " " , myinput )
@@ -157,50 +198,56 @@ for d , n in [ (Ndict,"noun") , (Adict,"adjective") , (Vdict,"verb") , (Advdict,
     print len(d),'\t',n,'categories in output.'
 
 with codecs.open ( "nouns.lexc" , mode='w' , encoding='utf-8' ) as Nfile :
-    print "Writing noun lexc file..."
+    print "Writing nouns.lexc ..."
     Nfile.write( u'LEXICON Noun\n' )
     for k in sorted ( Ndict , reverse=False ) :
         k2 = NStemCodeStrip (k)
         code_header = u'! '+'='*60 + u'  Types in Zaliznjak: ' + str(len(Ndict[k])) + u'\n!' + u' '*35 + k.replace(u" ",u"_") + u'\n'
         #print k + '\t' + str(len(Ndict[k]))
         Nfile.write(code_header)
+        Nfile.write(u'! THIS CATEGORY UNVERIFIED (delete this line when the computer-generated code has been verified by hand)\n')
         for v in sorted ( Ndict[k] , key=lambda x: x[0][::-1]) :
-            entry = v[0]+u":"+stresser(v[3])+u" "+k2.replace(u" ",u"_")+u" ;"
+            entry = v[0]+u":"+N_stemmer ( v[3] , k )+u" "+k2.replace(u" ",u"_")+u" ;"
             entry += u' '*(50-len(entry))+u"\t! "+v[2]+u'\t'+v[4]+u'\n'
+            if not u'\u0301' in entry :
+                entry += u'WARNING: no stress on stem\n'
             Nfile.write(entry)
         Nfile.write( u'\n' )
 
 with codecs.open ( "adjectives.lexc" , mode='w' , encoding='utf-8' ) as Afile :
-    print "Writing adjective lexc file..."
+    print "Writing adjectives.lexc ..."
     Afile.write( u'LEXICON Adjective\n' )
     for k in sorted ( Adict, key=lambda k: len(Adict[k]), reverse=True ) :
         k2 = AStemCodeStrip (k)
         code_header = u'! '+'='*60 + u'  Types in Zaliznjak: ' + str(len(Adict[k])) + u'\n!' + u' '*35 + k.replace(u" ",u"_") + u'\n'
         Afile.write(code_header)
+        Afile.write(u'! THIS CATEGORY UNVERIFIED (delete this line when the computer-generated code has been verified by hand)\n')
         for v in sorted ( Adict[k] , key=lambda x: x[0][::-1]) :
-            entry = v[0]+u":"+stresser(v[3])+u" "+k2.replace(u" ",u"_")+u" ;"
+            entry = v[0]+u":"+A_stemmer( v[3] , k )+u" "+k2.replace(u" ",u"_")+u" ;"
             entry += u' '*(50-len(entry))+u"\t! "+v[2]+u'\t'+v[4]+u'\n'
             Afile.write(entry)
 
 with codecs.open ( "verbs.lexc" , mode='w' , encoding='utf-8' ) as Vfile :
-    print "Writing verb lexc file..."
+    print "Writing verbs.lexc ..."
     Vfile.write( u'LEXICON Verb\n' )
     for k in sorted ( Vdict, key=lambda k: len(Vdict[k]), reverse=True ) :
         k2 = k
         code_header = u'! '+'='*60 + u'  Types in Zaliznjak: ' + str(len(Vdict[k])) + u'\n!' + u' '*35 + k.replace(u" ",u"_") + u'\n'
         Vfile.write(code_header)
+        Vfile.write(u'! THIS CATEGORY UNVERIFIED (delete this line when the computer-generated code has been verified by hand)\n')
         for v in sorted ( Vdict[k] , key=lambda x: x[0][::-1]) :
             entry = v[0]+u":"+stresser(v[3])+u" "+k2.replace(u" ",u"_")+u" ;"
             entry += u' '*(50-len(entry))+u"\t! "+v[2]+u'\t'+v[4]+u'\n'
             Vfile.write(entry)
 
 with codecs.open ( "numerals.lexc" , mode='w' , encoding='utf-8' ) as Numfile :
-    print "Writing numeral lexc file..."
+    print "Writing numerals.lexc ..."
     Numfile.write( u'LEXICON Numeral\n' )
     for k in sorted ( Numdict, key=lambda k: len(Numdict[k]), reverse=True ) :
         k2 = k
         code_header = u'! '+'='*60 + u'  Types in Zaliznjak: ' + str(len(Numdict[k])) + u'\n!' + u' '*35 + k.replace(u" ",u"_") + u'\n'
         Numfile.write(code_header)
+        Numfile.write(u'! THIS CATEGORY UNVERIFIED (delete this line when the computer-generated code has been verified by hand)\n')
         for v in sorted ( Numdict[k] , key=lambda x: x[0][::-1]) :
             entry = v[0]+u":"+stresser(v[3])+u" "+k2.replace(u" ",u"_")+u" ;"
             entry += u' '*(50-len(entry))+u"\t! "+v[2]+u'\t'+v[4]+u'\n'
@@ -209,13 +256,14 @@ with codecs.open ( "numerals.lexc" , mode='w' , encoding='utf-8' ) as Numfile :
 for d , f , l in [ (Advdict,"adverbs.lexc",u"Adverb") , (Cdict,"conjunctions.lexc",u"Conjunction") , (Idict,"interjections.lexc",u"Interjection") , 
                (Pdict,"prepositions.lexc",u"Preposition") , (Prodict,"pronouns.lexc",u"Pronoun") , (Sdict,"subjunctions.lexc",u"Subjunction") , 
                (Odict,"other.lexc",u"THESE LEXICA NEED TO BE CATEGORIZED AND LABELED") ] :
-    print "Writing",f,"file..."
+    print "Writing",f,"..."
     with codecs.open ( f , mode='w' , encoding='utf-8' ) as Myfile :
         Myfile.write( u'LEXICON ' + l + u'\n' )
         for k in sorted ( d, key=lambda k: len(d[k]), reverse=True ) :
             k2 = k
             code_header = u'! '+'='*60 + u'  Types in Zaliznjak: ' + str(len(d[k])) + u'\n!' + u' '*35 + k.replace(u" ",u"_") + u'\n'
             Myfile.write(code_header)
+            Myfile.write(u'! THIS CATEGORY UNVERIFIED (delete this line when the computer-generated code has been verified by hand)\n')
             for v in sorted ( d[k] , key=lambda x: x[0][::-1]) :
                 entry = v[0]+u":"+stresser(v[3])+u" "+k2.replace(u" ",u"_")+u" ;"
                 entry += u' '*(50-len(entry))+u"\t! "+v[2]+u'\t'+v[4]+u'\n'

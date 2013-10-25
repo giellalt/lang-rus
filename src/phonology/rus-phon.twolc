@@ -52,17 +52,17 @@ where Vx in ( а́ э́ о́ у́ ы́ я́ е́ ё ю́ и́ )
     matched ;
 
 "Delete lexical vowel endings (o/о́ are covered in another rule), and delete most fleeting vowels with syllabic (and other) endings"
-Vx:0 <=> .#. [ Letter: | F:0 | J: ]+ _ %>:0 ; 
-         F:0 _ [ Letter | J: ]+ (End) %>:0 :V ;
+Vx:0 <=> .#. [ Letter: | F:0 ]+ _ %>:0 ; 
+         F:0 _ [ Letter ]+ (End) %>:0 :V ;
 where Vx in ( а е ё и я а́ е́ и́ я́ ) ;
 
 "Delete о/о́ in lexical endings, fleeting vowels, and GenPl after hard consonants"
-[ о:0 | о́:0 ] <=> .#. [ Letter: | F:0 | J: ]+ _  %>:0 ; ! lexical ending
-                  F:0 _ [ Letter | J: ]+ (End) %>:0 :V ; ! fleeting vowel
+[ о:0 | о́:0 ] <=> .#. [ Letter: | F:0 ]+ _  %>:0 ; ! lexical ending
+                  F:0 _ [ Letter ]+ (End) %>:0 :V ; ! fleeting vowel
                   [ VELEndV | HUSHEndV | цEndV | HCEndV | JEndV ] _ в:0 .#. ; ! zero GenPl
 
 "Delete ь in lexical endings, and before fleeting vowels"
-ь:0 <=> .#. [ Letter: | F:0 | J: ]+ _  %>:0 ;
+ь:0 <=> .#. [ Letter: | F:0 ]+ _  %>:0 ;
          .#. Letter+ _ F:0 V ;
 
 "Delete й in lexical endings, and before fleeting vowels"

@@ -1,7 +1,6 @@
 Alphabet
 
       %>:0 !End of stem
-      J    ! Marks й-stems like муравей, семья, etc.
       F:0  ! placed immediately before fleeting vowels Fа Fе Fо Fи Fя Fа́ Fе́ Fё Fо́ Fи́ Fя́
       а б в г д е ё ж з и й к л м н о п р с т у ф х ц ч ш щ ъ ы ь э ю я 
       а́         е́       и́           о́         у́               ы́   э́ ю́ я́ ;
@@ -19,7 +18,7 @@ StressedV = а́ е́ ё и́ о́ у́ ы́ э́ ю́ я́ ;
 
 Definitions
 
-!End = [ а́:0 | о́:0 | а:0 | о:0 | я́:0 | ё:0 | е́:0 | я:0 | е:0 | ь:0 | й:0 ] ;
+End = [ а́:0 | о́:0 | а:0 | о:0 | я́:0 | ё:0 | е́:0 | я:0 | е:0 | ь:0 | й:0 ] ;
 VELEndV = VEL [ а́:0 | о́:0 | а:0 | о:0 ] %>:0 ; ! тоска́, молоко́, кни́га, я́блоко
 VELEndC = VEL %>:0 ; ! уче́бник
 VELEnd = [ VELEndV | VELEndC ] ;
@@ -40,38 +39,38 @@ HCEnd = [ HCEndV | HCEndC ] ;
 VEndV = V [ я́:0 | ё:0 | е́:0 | я:0 | е:0 ] %>:0 ; ! судия́, остриё, житие́, Мари́я, поня́тие
 VEndC = V [ й:0 ] %>:0 ; ! музе́й
 VEnd = [ VEndV | VEndC ] ;
-JEndV = [ J: | :ь ] [ я́:0 | ё:0 ] %>:0 ; ! семья́, бельё
-JEndC = [ J: | :ь ] %>:0 ; ! мураве́й
+JEndV = F:0 V: й: [ я́:0 | ё:0 | я:0 | е:0 ] %>:0 ; ! семья́, бельё, колдунья, счастье
+JEndC = F:0 V: й: %>:0 ; ! мураве́й
 JEnd = [ JEndV | JEndC ] ;
 
 Rules
 
-"Remove all but right-most stress mark"
+"Remove all but right-most stress mark" ! Does not work for a few words like железа, середа.
 Vx:Vy <=> .#. Letter* _ \[ %>:0 ] $[ :StressedV ] ;
 where Vx in ( а́ э́ о́ у́ ы́ я́ е́ ё ю́ и́ )
       Vy in ( а э о у ы я е е ю и )
     matched ;
 
-"Delete lexical vowel endings (o/о́ are covered in another rule), and delete fleeting vowels with syllabic endings"
+"Delete lexical vowel endings (o/о́ are covered in another rule), and delete most fleeting vowels with syllabic (and other) endings"
 Vx:0 <=> .#. [ Letter: | F:0 | J: ]+ _ %>:0 ; 
-         F:0 _ $[ :V ] ;
+         F:0 _ [ Letter | J: ]+ (End) %>:0 :V ;
 where Vx in ( а е ё и я а́ е́ и́ я́ ) ;
 
 "Delete о/о́ in lexical endings, fleeting vowels, and GenPl after hard consonants"
 [ о:0 | о́:0 ] <=> .#. [ Letter: | F:0 | J: ]+ _  %>:0 ; ! lexical ending
-                  F:0 _ $[ :V ] ; ! fleeting vowel
+                  F:0 _ [ Letter | J: ]+ (End) %>:0 :V ; ! fleeting vowel
                   [ VELEndV | HUSHEndV | цEndV | HCEndV | JEndV ] _ в:0 .#. ; ! zero GenPl
 
-"Delete ь and й in lexical endings, and before fleeting vowels"
-Lx:0 <=> .#. [ Letter: | F:0 | J: ]+ _  %>:0 ;
+"Delete ь in lexical endings, and before fleeting vowels"
+ь:0 <=> .#. [ Letter: | F:0 | J: ]+ _  %>:0 ;
          .#. Letter+ _ F:0 V ;
-where Lx in ( ь й ) ;
 
-"J > й before zero ending (муравей, семей)"
-J:й <=> _  :0* .#. ;
+"Delete й in lexical endings, and before fleeting vowels"
+й:0 <=> .#. [ ?* - [ F:0 ] ] V _  %>:0 ;
+         .#. Letter+ _ F:0 V ;
 
-"J > ь before vowels ( муравей > муравья; семей > семья )"
-J:ь <=> F:0 V:0 _ ([ я́:0 | ё:0 | е́:0 | я:0 | е:0 ]) %>:0 :V ;
+"stem-й > ь before vowels ( муравей > муравья; семей > семья )"
+й:ь <=> F:0 V:0 _ ([ я́:0 | ё:0 | е́:0 | я:0 | е:0 ]) %>:0 :V ;
 
 "о>е"
 о:е <=> [ HUSHEnd | цEnd | VEnd | SCEnd | JEnd ] _ [ ?* - [ в:0 ?* ] ] .#. ;
@@ -94,20 +93,18 @@ where Vx in ( а у а́ о́ у́ )
       Vy in ( я ю я́ ё ю́ )
     matched;
 
-"е>и (stressed or unstressed) after и-stems (e.g. о Марии)"
-Vx:Vy <=> [ и | и́ ] [ я́:0 | ё:0 | е́:0 | я:0 | е:0 | й:0 ]  %>:0 _ .#. ;
-where Vx in ( е е́ )
-      Vy in ( и и́ )
-    matched;
+"е>и after и-stems (e.g. о Марии)"
+е:и <=> [ и | и́ ] [ я́:0 | ё:0 | е́:0 | я:0 | е:0 | й:0 ]  %>:0 _ .#. ;
 
 "GenPl ей: в>й"
 в:й <=> [ HUSHEndC | SCEndC ] [ о: | о́: ] _ .#. ;
-        [ SCEndV ] о́: _ .#. ;
+        [ HUSHEndV | SCEndV ] о́: _ .#. ;
 "GenPl: stressed е́й"
-о́:е́ <=> [ HUSHEndC | SCEndC | SCEndV ] _ в:й .#. ;
+о́:е́ <=> [ HUSHEndC | HUSHEndV | SCEndC | SCEndV ] _ в:й .#. ;
 
 "Genitive Plural: zero в:0"
-в:0 <=> [ VELEndV | HUSHEndV | цEndV | HCEndV | VEndV | JEndV ] [ о: | о́: ] _ .#. ;
+в:0 <=> [ VELEndV | цEndV | HCEndV | VEndV | JEndV ] [ о: | о́: ] _ .#. ;
+        HUSHEndV о: _ .#. ;
         SCEndV о: _ .#. ;
 "Genitive Plural: zero after soft C = ь"
 о:ь <=> SCEndV _ в:0 .#. ;

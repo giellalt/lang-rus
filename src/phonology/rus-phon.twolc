@@ -19,34 +19,35 @@ StressedV = а́ е́ ё и́ о́ у́ ы́ э́ ю́ я́ ;
 Definitions
 
 End = [ а́:0 | о́:0 | а:0 | о:0 | я́:0 | ё:0 | е́:0 | я:0 | е:0 | ь:0 | й:0 ] ;
-VELEndV = VEL [ а́:0 | о́:0 | а:0 | о:0 ] %>:0 ; ! тоска́, молоко́, кни́га, я́блоко
-VELEndC = VEL %>:0 ; ! уче́бник
+VELEndV = VEL [ а́:0 | о́:0 | а:0 | о:0 ] %>:0 ;     ! тоска́, молоко́, кни́га, я́блоко
+VELEndC = VEL %>:0 ;                               ! уче́бник
 VELEnd = [ VELEndV | VELEndC ] ;
-HUSHEndV = HUSH [ а́:0 | о́:0 | а:0 | е:0 ] %>:0 ; ! моча́, плечо́, пи́ща, чудо́вище
-HUSHEndC = HUSH ( ь:0 ) %>:0 ; ! мяч, вещь
+HUSHEndV = HUSH [ а́:0 | о́:0 | а:0 | е:0 ] %>:0 ;   ! моча́, плечо́, пи́ща, чудо́вище
+HUSHEndC = HUSH ( ь:0 ) %>:0 ;                     ! мяч, вещь
 HUSHEnd = [ HUSHEndV | HUSHEndC ] ;
-цEndV = ц [ а́:0 | о́:0 | а:0 | е:0 ] %>:0 ; ! рысца́, мясцо́, учи́тельница, се́рдце
-цEndC = ц %>:0 ; ! молоде́ц
+цEndV = ц [ а́:0 | о́:0 | а:0 | е:0 ] %>:0 ;         ! рысца́, мясцо́, учи́тельница, се́рдце
+цEndC = ц %>:0 ;                                   ! молоде́ц
 цEnd = [ цEndV | цEndC ] ;
-SCEndVN = PC [ е́:0 | е:0 ] %>:0 ; ! мо́ре, no е́/ё because they do not occur with paired consonants
-SCEndVF = PC [ я́:0 | я:0 ] %>:0 ; ! земля́, неде́ля
+SCEndVN = PC [ е́:0 | е:0 | ё:0 ] %>:0 ;            ! мо́ре 
+SCEndVF = PC [ я́:0 | я:0 ] %>:0 ;                  ! земля́, неде́ля
 SCEndV = [ SCEndVN | SCEndVF ] ;
-SCEndC = PC [ ь:0 ] %>:0 ; ! конь
+SCEndC = PC [ ь:0 ] %>:0 ;                         ! конь
 SCEnd = [ SCEndV | SCEndC ] ;
-HCEndV = PC [ а́:0 | о́:0 | а:0 | о:0 ] %>:0 ; ! красота́, окно́, ве́ра, сло́во
-HCEndC = PC %>:0 ; ! пол
+HCEndV = PC [ а́:0 | о́:0 | а:0 | о:0 ] %>:0 ;       ! красота́, окно́, ве́ра, сло́во
+HCEndC = PC %>:0 ;                                 ! пол
 HCEnd = [ HCEndV | HCEndC ] ;
-VEndV = V [ я́:0 | ё:0 | е́:0 | я:0 | е:0 ] %>:0 ; ! судия́, остриё, житие́, Мари́я, поня́тие
-VEndC = V [ й:0 ] %>:0 ; ! музе́й
+VEndV = V [ я́:0 | ё:0 | е́:0 | я:0 | е:0 ] %>:0 ;   ! судия́, остриё, житие́, Мари́я, поня́тие
+VEndC = V [ й:0 ] %>:0 ;                           ! музе́й
 VEnd = [ VEndV | VEndC ] ;
 JEndV = F:0 V: й: [ я́:0 | ё:0 | я:0 | е:0 ] %>:0 ; ! семья́, бельё, колдунья, счастье
-JEndC = F:0 V: й: %>:0 ; ! мураве́й
+JEndC = F:0 V: й: %>:0 ;                           ! мураве́й
 JEnd = [ JEndV | JEndC ] ;
 
 Rules
 
-"Remove all but right-most stress mark" ! Does not work for a few words like железа, середа.
+"Remove extra stress marks on stem: if there is a stressed ending, or on last syllable if the ending is not a GenPl zero"
 Vx:Vy <=> .#. Letter* _ \[ %>:0 ] $[ :StressedV ] ;
+          .#. C+ StressedV: C+ _ C+ (End) %>:0 Letter: \[в:0] ; ! WARNING: stem shape might be too specific! This accommodates at least железа and середа. What other such words exist?
 where Vx in ( а́ э́ о́ у́ ы́ я́ е́ ё ю́ и́ )
       Vy in ( а э о у ы я е е ю и )
     matched ;

@@ -1,6 +1,6 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!MASCULINE PARADIGMS!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-LEXICON MIndeclin
+LEXICON М_0
 +N+Msc+Sg+Nom: # ;
 +N+Msc+Sg+Acc+Inan: # ;
 +N+Msc+Sg+Gen: # ;
@@ -14,51 +14,65 @@ LEXICON MIndeclin
 +N+Msc+Pl+Dat: # ;
 +N+Msc+Pl+Ins: # ;
 
-LEXICON MStem
+LEXICON МО_0
++N+Msc+Sg+Nom: # ;
++N+Msc+Sg+Acc+Anim: # ;
++N+Msc+Sg+Gen: # ;
++N+Msc+Sg+Loc: # ;
++N+Msc+Sg+Dat: # ;
++N+Msc+Sg+Ins: # ;
++N+Msc+Pl+Nom: # ;
++N+Msc+Pl+Acc+Anim: # ;
++N+Msc+Pl+Gen: # ;
++N+Msc+Pl+Loc: # ;
++N+Msc+Pl+Dat: # ;
++N+Msc+Pl+Ins: # ;
+
+LEXICON М_А
 +N+Msc+Sg: MSgStem ;
 +N+Msc+Pl: ыPlStem ;
 
-LEXICON MEnd
+LEXICON М_В
 +N+Msc+Sg: MSgEnd ;
 +N+Msc+Pl: ыPlEnd ;
 
-LEXICON MShift2End
+LEXICON М_С
 +N+Msc+Sg: MSgStem ;
 +N+Msc+Pl: ыPlEnd ;
 
-LEXICON MShift2Stem
+LEXICON М_Д
 +N+Msc+Sg: MSgEnd ;
 +N+Msc+Pl: ыPlStem ;
 
-LEXICON MStemAnom
+LEXICON М_Е
 +N+Msc+Sg: MSgStem ;
 +N+Msc+Pl: ыPlAnom ;
 
-LEXICON MEndAnom
+LEXICON М_Ф
 +N+Msc+Sg: MSgEnd ;
 +N+Msc+Pl: ыPlAnom ;
 
-LEXICON MStem_anim
+LEXICON МО_А
 +N+Msc+Sg: MSgStem_anim ;
 +N+Msc+Pl: ыPlStem_anim ;
 
-LEXICON MEnd_anim
+LEXICON МО_В
 +N+Msc+Sg: MSgEnd_anim ;
 +N+Msc+Pl: ыPlEnd_anim ;
 
-LEXICON MShift2End_anim
+LEXICON МО_С
 +N+Msc+Sg: MSgStem_anim ;
 +N+Msc+Pl: ыPlEnd_anim ;
 
-LEXICON MShift2Stem_anim
+LEXICON МО_Д
 +N+Msc+Sg: MSgEnd_anim ;
 +N+Msc+Pl: ыPlStem_anim ;
 
-LEXICON MStemAnom_anim
+LEXICON МО_Е
 +N+Msc+Sg: MSgStem_anim ;
 +N+Msc+Pl: ыPlAnom_anim ;
 
-LEXICON MEndAnom_anim
+LEXICON МО_Ф
 +N+Msc+Sg: MSgEnd_anim ;
 +N+Msc+Pl: ыPlAnom_anim ;
 
@@ -106,19 +120,33 @@ LEXICON MSgObliqEnd
 
 !!!!!!!!!!!!!!!!!!!!!!!!!NEUTER PARADIGMS!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-LEXICON NStem
+LEXICON С_0
++N+Neu+Sg+Nom: # ;
++N+Neu+Sg+Acc: # ;
++N+Neu+Sg+Gen: # ;
++N+Neu+Sg+Loc: # ;
++N+Neu+Sg+Dat: # ;
++N+Neu+Sg+Ins: # ;
++N+Neu+Pl+Nom: # ;
++N+Neu+Pl+Acc+Inan: # ;
++N+Neu+Pl+Gen: # ;
++N+Neu+Pl+Loc: # ;
++N+Neu+Pl+Dat: # ;
++N+Neu+Pl+Ins: # ;
+
+LEXICON С_А
 +N+Neu+Sg: NSgStem ;
 +N+Neu+Pl: аPlStem ;     !Cyrillic 'а' in 'аPl'
 
-LEXICON NEnd
+LEXICON С_В
 +N+Neu+Sg: NSgEnd ;
 +N+Neu+Pl: аPlEnd ;      !Cyrillic 'а' in 'аPl'
 
-LEXICON NShift2End
+LEXICON С_С
 +N+Neu+Sg: NSgStem ;
 +N+Neu+Pl: аPlEnd ;      !Cyrillic 'а' in 'аPl'
 
-LEXICON NShift2Stem
+LEXICON С_Д
 +N+Neu+Sg: NSgEnd ;
 +N+Neu+Pl: аPlStem ;     !Cyrillic 'а' in 'аPl'
 
@@ -139,19 +167,19 @@ LEXICON мя
 +N+Neu+Pl+Dat:ена́м # ;
 +N+Neu+Pl+Ins:ена́ми # ;
 
-LEXICON NStem_anim
+LEXICON СО_А
 +N+Neu+Sg: NSgStem ;
 +N+Neu+Pl: аPlStem_anim ;     !Cyrillic 'а' in 'аPl'
 
-LEXICON NEnd_anim
+LEXICON СО_В
 +N+Neu+Sg: NSgEnd ;
 +N+Neu+Pl: аPlEnd_anim ;      !Cyrillic 'а' in 'аPl'
 
-LEXICON NShift2End_anim
+LEXICON СО_С
 +N+Neu+Sg: NSgStem ;
 +N+Neu+Pl: аPlEnd_anim ;      !Cyrillic 'а' in 'аPl'
 
-LEXICON NShift2Stem_anim
+LEXICON СО_Д
 +N+Neu+Sg: NSgEnd ;
 +N+Neu+Pl: аPlStem_anim ;     !Cyrillic 'а' in 'аPl'
 
@@ -171,11 +199,39 @@ MSgObliqEnd ;
 
 !!!!!!!!!!!!!!!!!!!!!!!!!FEMININE PARADIGMS!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-LEXICON FStem
+LEXICON Ж_0
++N+Fem+Sg+Nom: # ;
++N+Fem+Sg+Acc: # ;
++N+Fem+Sg+Gen: # ;
++N+Fem+Sg+Loc: # ;
++N+Fem+Sg+Dat: # ;
++N+Fem+Sg+Ins: # ;
++N+Fem+Pl+Nom: # ;
++N+Fem+Pl+Acc+Inan: # ;
++N+Fem+Pl+Gen: # ;
++N+Fem+Pl+Loc: # ;
++N+Fem+Pl+Dat: # ;
++N+Fem+Pl+Ins: # ;
+
+LEXICON ЖО_0
++N+Fem+Sg+Nom: # ;
++N+Fem+Sg+Acc: # ;
++N+Fem+Sg+Gen: # ;
++N+Fem+Sg+Loc: # ;
++N+Fem+Sg+Dat: # ;
++N+Fem+Sg+Ins: # ;
++N+Fem+Pl+Nom: # ;
++N+Fem+Pl+Acc+Anim: # ;
++N+Fem+Pl+Gen: # ;
++N+Fem+Pl+Loc: # ;
++N+Fem+Pl+Dat: # ;
++N+Fem+Pl+Ins: # ;
+
+LEXICON Ж_А
 +N+Fem+Sg: FSgStem ;
 +N+Fem+Pl: ыPlStem ;
 
-LEXICON FEnd
+LEXICON Ж_В ! This also includes Ж_В' because of the fleeting vowel rule in twolc
 +N+Fem+Sg: FSgEnd ;
 +N+Fem+Pl: ыPlEnd ;
 
@@ -187,11 +243,11 @@ LEXICON FьEnd
 +N+Fem+Sg: FьSgEnd ;
 +N+Fem+Pl: ыPlEnd ;
 
-LEXICON FShift2Stem
+LEXICON Ж_Д
 +N+Fem+Sg: FSgEnd ;
 +N+Fem+Pl: ыPlStem ;
 
-LEXICON FEndAnom
+LEXICON Ж_Ф
 +N+Fem+Sg: FSgEnd ;
 +N+Fem+Pl: ыPlAnom ;
 
@@ -199,11 +255,11 @@ LEXICON FьAnom
 +N+Fem+Sg: FьSgStem ;
 +N+Fem+Pl: ыPlAnom ;
 
-LEXICON FShiftRetr
+LEXICON Ж_Д' ! Shifting retraction
 +N+Fem+Sg: FSgRetr ;
 +N+Fem+Pl: ыPlStem ;
 
-LEXICON FAnomRetr
+LEXICON Ж_Ф' ! Anomolous retraction
 +N+Fem+Sg: FSgRetr ;
 +N+Fem+Pl: ыPlAnom ;
 
@@ -223,7 +279,7 @@ LEXICON FьEnd_anim
 +N+Fem+Sg: FьSgEnd ;
 +N+Fem+Pl: ыPlEnd_anim ;
 
-LEXICON FShift2Stem_anim
+LEXICON ЖО_Д
 +N+Fem+Sg: FSgEnd ;
 +N+Fem+Pl: ыPlStem_anim ;
 
@@ -272,7 +328,7 @@ LEXICON FьSgStem
 +Gen:%>и # ;
 +Loc:%>и # ;
 +Dat:%>и # ;
-+Ins:%>ью # ;
++Ins:%>ью # ; ! no stem marker means the fleeting vowel is not deleted
 
 LEXICON FьSgEnd
 +Nom: # ;
@@ -280,7 +336,7 @@ LEXICON FьSgEnd
 +Gen:%>и́ # ;
 +Loc:%>и́ # ;
 +Dat:%>и́ # ;
-+Ins:%>ью # ;
++Ins:%>ью # ; ! no stem marker means the fleeting vowel is not deleted
 
 !!!!!!!!!!!!!!!!!!!!!!!!!PLURAL PARADIGMS!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -334,16 +390,16 @@ LEXICON аPlEnd_anim
 PlAccAnimEnd ;
 PlObliqEnd ;
 
-LEXICON MыPlTantStem
+LEXICON МН._[М_А]
 +N+Msc+Pl: ыPlStem ;
 
-LEXICON MыPlTantEnd
+LEXICON МН._[М_В]
 +N+Msc+Pl: ыPlEnd ;
 
-LEXICON FыPlTantStem
+LEXICON МН._[Ж_А]
 +N+Fem+Pl: ыPlStem ;
 
-LEXICON FыPlTantEnd
+LEXICON МН._[Ж_В]
 +N+Fem+Pl: ыPlEnd ;
 
 LEXICON ыPlNomStem

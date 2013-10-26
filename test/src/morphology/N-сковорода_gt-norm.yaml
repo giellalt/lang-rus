@@ -1,0 +1,27 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+Tests:
+# todo:
+# Proofread the gold standard (below)
+# Then: run analyser, then correct. 
+
+  Noun - сковорода M anim : # Noun - full paradigm
+      сковорода+N+Fem+Sg+Nom: сковорода́
+      сковорода+N+Fem+Sg+Acc: сковороду́
+      сковорода+N+Fem+Sg+Gen: сковороды́
+      сковорода+N+Fem+Sg+Loc: сковороде́
+      сковорода+N+Fem+Sg+Dat: сковороде́
+      сковорода+N+Fem+Sg+Ins: сковородо́й
+      сковорода+N+Fem+Pl+Nom: ско́вороды
+      сковорода+N+Fem+Pl+Acc+Inan: ско́вороды
+      сковорода+N+Fem+Pl+Gen: сковоро́д
+      сковорода+N+Fem+Pl+Loc: ско́вородах
+      сковорода+N+Fem+Pl+Dat: ско́вородам
+      сковорода+N+Fem+Pl+Ins: ско́вородами
+

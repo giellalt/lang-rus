@@ -14,20 +14,6 @@ LEXICON М_0
 +N+Msc+Pl+Dat: # ;
 +N+Msc+Pl+Ins: # ;
 
-LEXICON МО_0
-+N+Msc+Sg+Nom: # ;
-+N+Msc+Sg+Acc+Anim: # ;
-+N+Msc+Sg+Gen: # ;
-+N+Msc+Sg+Loc: # ;
-+N+Msc+Sg+Dat: # ;
-+N+Msc+Sg+Ins: # ;
-+N+Msc+Pl+Nom: # ;
-+N+Msc+Pl+Acc+Anim: # ;
-+N+Msc+Pl+Gen: # ;
-+N+Msc+Pl+Loc: # ;
-+N+Msc+Pl+Dat: # ;
-+N+Msc+Pl+Ins: # ;
-
 LEXICON М_А
 +N+Msc+Sg: MSgStem ;
 +N+Msc+Pl: ыPlStem ;
@@ -52,6 +38,60 @@ LEXICON М_Ф
 +N+Msc+Sg: MSgEnd ;
 +N+Msc+Pl: ыPlAnom ;
 
+LEXICON М_[П_А]
++N+Msc+Sg+Nom:%>ый # ;
++N+Msc+Sg+Acc+Inan:%>ый # ;
+MSg_SubstAdj_Stem ;
++N+Msc+Pl+Nom:%>ые # ;
++N+Msc+Pl+Acc+Inan:%>ые # ;
+Pl_SubstAdj_Stem ;
+
+LEXICON MSg_SubstAdj_Stem
++N+Msc+Sg+Gen:%>ого # ;
++N+Msc+Sg+Loc:%>ом # ;
++N+Msc+Sg+Dat:%>ому # ;
++N+Msc+Sg+Ins:%>ым # ;
+
+LEXICON Pl_SubstAdj_Stem
++N+Msc+Pl+Gen:%>ых # ;
++N+Msc+Pl+Loc:%>ых # ;
++N+Msc+Pl+Dat:%>ым # ;
++N+Msc+Pl+Ins:%>ыми # ;
+
+LEXICON М_[П_В]
++N+Msc+Sg+Nom:%>о́й # ;
++N+Msc+Sg+Acc+Inan:%>о́й # ;
+MSg_SubstAdj_End ;
++N+Msc+Pl+Nom:%>ы́е # ;
++N+Msc+Pl+Acc+Inan:%>ы́е # ;
+Pl_SubstAdj_End ;
+
+LEXICON MSg_SubstAdj_End
++N+Msc+Sg+Gen:%>о́го # ;
++N+Msc+Sg+Loc:%>о́м # ;
++N+Msc+Sg+Dat:%>о́му # ;
++N+Msc+Sg+Ins:%>ы́м # ;
+
+LEXICON Pl_SubstAdj_End
++N+Msc+Pl+Gen:%>ы́х # ;
++N+Msc+Pl+Loc:%>ы́х # ;
++N+Msc+Pl+Dat:%>ы́м # ;
++N+Msc+Pl+Ins:%>ы́ми # ;
+
+LEXICON МО_0
++N+Msc+Sg+Nom: # ;
++N+Msc+Sg+Acc+Anim: # ;
++N+Msc+Sg+Gen: # ;
++N+Msc+Sg+Loc: # ;
++N+Msc+Sg+Dat: # ;
++N+Msc+Sg+Ins: # ;
++N+Msc+Pl+Nom: # ;
++N+Msc+Pl+Acc+Anim: # ;
++N+Msc+Pl+Gen: # ;
++N+Msc+Pl+Loc: # ;
++N+Msc+Pl+Dat: # ;
++N+Msc+Pl+Ins: # ;
+
 LEXICON МО_А
 +N+Msc+Sg: MSgStem_anim ;
 +N+Msc+Pl: ыPlStem_anim ;
@@ -75,6 +115,22 @@ LEXICON МО_Е
 LEXICON МО_Ф
 +N+Msc+Sg: MSgEnd_anim ;
 +N+Msc+Pl: ыPlAnom_anim ;
+
+LEXICON МО_[П_А]
++N+Msc+Sg+Nom:%>ый # ;
++N+Msc+Sg+Acc+Anim:%>ого # ;
+MSg_SubstAdj ;
++N+Msc+Pl+Nom:%>ые # ;
++N+Msc+Pl+Acc+Anim:%>ых # ;
+Pl_SubstAdj ;
+
+LEXICON МО_[П_В]
++N+Msc+Sg+Nom:%>о́й # ;
++N+Msc+Sg+Acc+Anim:%>о́го # ;
+MSg_SubstAdj_End ;
++N+Msc+Pl+Nom:%>ы́е # ;
++N+Msc+Pl+Acc+Anim:%>ы́х # ;
+Pl_SubstAdj_End ;
 
 LEXICON SOSED
 +N+Msc+Sg: MSgStem_anim ;
@@ -150,6 +206,54 @@ LEXICON С_Д
 +N+Neu+Sg: NSgEnd ;
 +N+Neu+Pl: аPlStem ;     !Cyrillic 'а' in 'аPl'
 
+LEXICON СО_А
++N+Neu+Sg: NSgStem ;
++N+Neu+Pl: аPlStem_anim ;     !Cyrillic 'а' in 'аPl'
+
+LEXICON СО_В
++N+Neu+Sg: NSgEnd ;
++N+Neu+Pl: аPlEnd_anim ;      !Cyrillic 'а' in 'аPl'
+
+LEXICON СО_С
++N+Neu+Sg: NSgStem ;
++N+Neu+Pl: аPlEnd_anim ;      !Cyrillic 'а' in 'аPl'
+
+LEXICON СО_Д
++N+Neu+Sg: NSgEnd ;
++N+Neu+Pl: аPlStem_anim ;     !Cyrillic 'а' in 'аPl'
+
+LEXICON С_[П_А]
++N+Neu+Sg+Nom:%>ое # ;
++N+Neu+Sg+Acc:%>ое # ;
+MSg_SubstAdj_Stem ;
++N+Neu+Pl+Nom:%>ые # ;
++N+Neu+Pl+Acc+Inan:%>ые # ;
+Pl_SubstAdj_Stem ;
+
+LEXICON С_[П_В]
++N+Neu+Sg+Nom:%>о́е # ;
++N+Neu+Sg+Acc:%>о́е # ;
+MSg_SubstAdj_End ;
++N+Neu+Pl+Nom:%>ы́е # ;
++N+Neu+Pl+Acc+Inan:%>ы́е # ;
+Pl_SubstAdj_End ;
+
+LEXICON СО_[П_А]
++N+Neu+Sg+Nom:%>ое # ;
++N+Neu+Sg+Acc:%>ое # ;
+MSg_SubstAdj_Stem ;
++N+Neu+Pl+Nom:%>ые # ;
++N+Neu+Pl+Acc+Anim:%>ых # ;
+Pl_SubstAdj_Stem ;
+
+LEXICON СО_[П_В]
++N+Neu+Sg+Nom:%>о́е # ;
++N+Neu+Sg+Acc:%>о́е # ;
+MSg_SubstAdj_End ;
++N+Neu+Pl+Nom:%>ы́е # ;
++N+Neu+Pl+Acc+Anim:%>ы́х # ;
+Pl_SubstAdj_End ;
+
 LEXICON NSgTant
 +N+Neu+Sg: NSgEnd ;
 
@@ -166,22 +270,6 @@ LEXICON мя
 +N+Neu+Pl+Loc:ена́х # ;
 +N+Neu+Pl+Dat:ена́м # ;
 +N+Neu+Pl+Ins:ена́ми # ;
-
-LEXICON СО_А
-+N+Neu+Sg: NSgStem ;
-+N+Neu+Pl: аPlStem_anim ;     !Cyrillic 'а' in 'аPl'
-
-LEXICON СО_В
-+N+Neu+Sg: NSgEnd ;
-+N+Neu+Pl: аPlEnd_anim ;      !Cyrillic 'а' in 'аPl'
-
-LEXICON СО_С
-+N+Neu+Sg: NSgStem ;
-+N+Neu+Pl: аPlEnd_anim ;      !Cyrillic 'а' in 'аPl'
-
-LEXICON СО_Д
-+N+Neu+Sg: NSgEnd ;
-+N+Neu+Pl: аPlStem_anim ;     !Cyrillic 'а' in 'аPl'
 
 LEXICON NStem_ыPl
 +N+Neu+Sg: NSgStem ;
@@ -231,51 +319,55 @@ LEXICON Ж_А
 +N+Fem+Sg: FSgStem ;
 +N+Fem+Pl: ыPlStem ;
 
+LEXICON Ж_8А
++N+Fem+Sg: FьSgStem ;
++N+Fem+Pl: ыPlStem ;
+
 LEXICON Ж_В ! This also includes Ж_В' because of the fleeting vowel rule in twolc
 +N+Fem+Sg: FSgEnd ;
 +N+Fem+Pl: ыPlEnd ;
 
-LEXICON FьStem
-+N+Fem+Sg: FьSgStem ;
-+N+Fem+Pl: ыPlStem ;
-
-LEXICON FьEnd
+LEXICON Ж_8В
 +N+Fem+Sg: FьSgEnd ;
++N+Fem+Pl: ыPlEnd ;
+
+LEXICON Ж_С
++N+Fem+Sg: FSgStem ;
 +N+Fem+Pl: ыPlEnd ;
 
 LEXICON Ж_Д
 +N+Fem+Sg: FSgEnd ;
 +N+Fem+Pl: ыPlStem ;
 
-LEXICON Ж_Ф
-+N+Fem+Sg: FSgEnd ;
-+N+Fem+Pl: ыPlAnom ;
-
-LEXICON FьAnom
-+N+Fem+Sg: FьSgStem ;
-+N+Fem+Pl: ыPlAnom ;
-
 LEXICON Ж_Д' ! Shifting retraction
 +N+Fem+Sg: FSgRetr ;
 +N+Fem+Pl: ыPlStem ;
+
+LEXICON Ж_8Е
++N+Fem+Sg: FьSgStem ;
++N+Fem+Pl: ыPlAnom ;
+
+LEXICON Ж_Ф
++N+Fem+Sg: FSgEnd ;
++N+Fem+Pl: ыPlAnom ;
 
 LEXICON Ж_Ф' ! Anomolous retraction
 +N+Fem+Sg: FSgRetr ;
 +N+Fem+Pl: ыPlAnom ;
 
-LEXICON FStem_anim
+LEXICON ЖО_А
 +N+Fem+Sg: FSgStem ;
 +N+Fem+Pl: ыPlStem_anim ;
 
-LEXICON FEnd_anim
-+N+Fem+Sg: FSgEnd ;
-+N+Fem+Pl: ыPlEnd_anim ;
-
-LEXICON FьStem_anim
+LEXICON ЖО_8А
 +N+Fem+Sg: FьSgStem ;
 +N+Fem+Pl: ыPlStem_anim ;
 
-LEXICON FьEnd_anim
+LEXICON ЖО_В
++N+Fem+Sg: FSgEnd ;
++N+Fem+Pl: ыPlEnd_anim ;
+
+LEXICON ЖО_8В
 +N+Fem+Sg: FьSgEnd ;
 +N+Fem+Pl: ыPlEnd_anim ;
 
@@ -283,21 +375,49 @@ LEXICON ЖО_Д
 +N+Fem+Sg: FSgEnd ;
 +N+Fem+Pl: ыPlStem_anim ;
 
-LEXICON FEndAnom_anim
-+N+Fem+Sg: FSgEnd ;
-+N+Fem+Pl: ыPlAnom_anim ;
-
-LEXICON FьAnom_anim
-+N+Fem+Sg: FьSgStem ;
-+N+Fem+Pl: ыPlAnom_anim ;
-
-LEXICON FShiftRetr_anim
+LEXICON ЖО_Д'
 +N+Fem+Sg: FSgRetr ;
 +N+Fem+Pl: ыPlStem_anim ;
 
-LEXICON FAnomRetr_anim
+LEXICON ЖО_8Е
++N+Fem+Sg: FьSgStem ;
++N+Fem+Pl: ыPlAnom_anim ;
+
+LEXICON ЖО_Ф
++N+Fem+Sg: FSgEnd ;
++N+Fem+Pl: ыPlAnom_anim ;
+
+LEXICON ЖО_Ф'
 +N+Fem+Sg: FSgRetr ;
 +N+Fem+Pl: ыPlAnom_anim ;
+
+LEXICON Ж_[П_А]
++N+Fem+Sg+Nom:%>ая # ;
++N+Fem+Sg+Acc:%>ую # ;
+FSg_SubstAdj_Stem ;
++N+Fem+Pl+Nom:%>ые # ;
++N+Fem+Pl+Acc+Inan:%>ые # ;
+Pl_SubstAdj ;
+
+LEXICON FSg_SubstAdj_Stem
++N+Msc+Sg+Gen:%>ой # ;
++N+Msc+Sg+Loc:%>ой # ;
++N+Msc+Sg+Dat:%>ой # ;
++N+Msc+Sg+Ins:%>ой # ;
+
+LEXICON ЖО_[П_А]
++N+Fem+Sg+Nom:%>ая # ;
++N+Fem+Sg+Acc:%>ую # ;
+FSg_SubstAdj_Stem ;
++N+Fem+Pl+Nom:%>ые # ;
++N+Fem+Pl+Acc+Anim:%>ых # ;
+Pl_SubstAdj ;
+
+LEXICON FSg_SubstAdj_End
++N+Msc+Sg+Gen:%>о́й # ;
++N+Msc+Sg+Loc:%>о́й # ;
++N+Msc+Sg+Dat:%>о́й # ;
++N+Msc+Sg+Ins:%>о́й # ;
 
 LEXICON FSgStem
 +Nom:%>а # ;

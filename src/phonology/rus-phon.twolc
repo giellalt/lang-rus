@@ -45,9 +45,10 @@ JEnd = [ JEndV | JEndC ] ;
 
 Rules
 
-"Remove extra stress marks on stem: if there is a stressed ending, or on last syllable if the ending is not a GenPl zero"
-Vx:Vy <=> .#. Letter* _ \[ %>:0 ] $[ :StressedV ] ;
-          .#. C+ StressedV: C+ _ C+ (End) %>:0 Letter: \[в:0] ; ! WARNING: stem shape might be too specific! This accommodates at least железа and середа. What other such words exist?
+"Remove extra stress marks on stem: (1) if there is a stressed ending, (2) last syllable if the ending is not a GenPl zero"
+Vx:Vy <=> .#. C* _ \[ %>:0 ] $[ :StressedV ] ; !First syllable of stem
+          .#. [ Letter:* - [ :StressedV ] ] _ C+ (End) %>:0 :StressedV ; !Last syllable of stem without shifting stress
+          .#. C+ StressedV: (C+ [V - StressedV]) C+ _ C+ (End) %>:0 \[ о́: ] \[в:0] ; !Last syllable of stem with shifting stress
 where Vx in ( а́ э́ о́ у́ ы́ я́ е́ ё ю́ и́ )
       Vy in ( а э о у ы я е е ю и )
     matched ;

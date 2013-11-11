@@ -1,0 +1,27 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+Tests:
+# todo:
+# Proofread the gold standard (below)
+# Then: run analyser, then correct. 
+
+  Noun - сердце M anim : # Noun - full paradigm
+      сердце+N+Neu+Sg+Nom: се́рдце
+      сердце+N+Neu+Sg+Acc: се́рдце
+      сердце+N+Neu+Sg+Gen: се́рдца
+      сердце+N+Neu+Sg+Loc: се́рдце
+      сердце+N+Neu+Sg+Dat: се́рдцу
+      сердце+N+Neu+Sg+Ins: се́рдцем
+      сердце+N+Neu+Pl+Nom: сердца́
+      сердце+N+Neu+Pl+Acc+Inan: сердца́
+      сердце+N+Neu+Pl+Gen: серде́ц
+      сердце+N+Neu+Pl+Loc: сердца́х
+      сердце+N+Neu+Pl+Dat: сердца́м
+      сердце+N+Neu+Pl+Ins: сердца́ми
+

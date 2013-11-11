@@ -1,0 +1,27 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+Tests:
+# todo:
+# Proofread the gold standard (below)
+# Then: run analyser, then correct. 
+
+  Noun - письмо M anim : # Noun - full paradigm
+      письмо+N+Neu+Sg+Nom: письмо́
+      письмо+N+Neu+Sg+Acc: письмо́
+      письмо+N+Neu+Sg+Gen: письма́
+      письмо+N+Neu+Sg+Loc: письме́
+      письмо+N+Neu+Sg+Dat: письму́
+      письмо+N+Neu+Sg+Ins: письмо́м
+      письмо+N+Neu+Pl+Nom: пи́сьма
+      письмо+N+Neu+Pl+Acc+Inan: пи́сьма
+      письмо+N+Neu+Pl+Gen: пи́сем
+      письмо+N+Neu+Pl+Loc: пи́сьмах
+      письмо+N+Neu+Pl+Dat: пи́сьмам
+      письмо+N+Neu+Pl+Ins: пи́сьмами
+

@@ -1,0 +1,27 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+Tests:
+# todo:
+# Proofread the gold standard (below)
+# Then: run analyser, then correct. 
+
+  Noun - понятие M anim : # Noun - full paradigm
+      понятие+N+Neu+Sg+Nom: поня́тие
+      понятие+N+Neu+Sg+Acc: поня́тие
+      понятие+N+Neu+Sg+Gen: поня́тия
+      понятие+N+Neu+Sg+Loc: поня́тии
+      понятие+N+Neu+Sg+Dat: поня́тию
+      понятие+N+Neu+Sg+Ins: поня́тием
+      понятие+N+Neu+Pl+Nom: поня́тия
+      понятие+N+Neu+Pl+Acc+Inan: поня́тия
+      понятие+N+Neu+Pl+Gen: поня́тий
+      понятие+N+Neu+Pl+Loc: поня́тиях
+      понятие+N+Neu+Pl+Dat: поня́тиям
+      понятие+N+Neu+Pl+Ins: поня́тиями
+

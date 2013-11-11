@@ -1,0 +1,27 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+Tests:
+# todo:
+# Proofread the gold standard (below)
+# Then: run analyser, then correct. 
+
+  Noun - вино M anim : # Noun - full paradigm
+      вино+N+Neu+Sg+Nom: вино́
+      вино+N+Neu+Sg+Acc: вино́
+      вино+N+Neu+Sg+Gen: вина́
+      вино+N+Neu+Sg+Loc: вине́
+      вино+N+Neu+Sg+Dat: вину́
+      вино+N+Neu+Sg+Ins: вино́м
+      вино+N+Neu+Pl+Nom: ви́на
+      вино+N+Neu+Pl+Acc+Inan: ви́на
+      вино+N+Neu+Pl+Gen: ви́н
+      вино+N+Neu+Pl+Loc: ви́нах
+      вино+N+Neu+Pl+Dat: ви́нам
+      вино+N+Neu+Pl+Ins: ви́нами
+

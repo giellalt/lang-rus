@@ -1,0 +1,27 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+Tests:
+# todo:
+# Proofread the gold standard (below)
+# Then: run analyser, then correct. 
+
+  Noun - распутье M anim : # Noun - full paradigm
+      распутье+N+Neu+Sg+Nom: распу́тье
+      распутье+N+Neu+Sg+Acc: распу́тье
+      распутье+N+Neu+Sg+Gen: распу́тья
+      распутье+N+Neu+Sg+Loc: распу́тье
+      распутье+N+Neu+Sg+Dat: распу́тью
+      распутье+N+Neu+Sg+Ins: распу́тьем
+      распутье+N+Neu+Pl+Nom: распу́тья
+      распутье+N+Neu+Pl+Acc+Inan: распу́тья
+      распутье+N+Neu+Pl+Gen: распу́тий
+      распутье+N+Neu+Pl+Loc: распу́тьях
+      распутье+N+Neu+Pl+Dat: распу́тьям
+      распутье+N+Neu+Pl+Ins: распу́тьями
+

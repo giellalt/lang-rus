@@ -1,0 +1,27 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+Tests:
+# todo:
+# Proofread the gold standard (below)
+# Then: run analyser, then correct. 
+
+  Noun - любовь M anim : # Noun - full paradigm
+      любовь+N+Fem+Sg+Nom: любо́вь
+      любовь+N+Fem+Sg+Acc: любо́вь
+      любовь+N+Fem+Sg+Gen: любви́
+      любовь+N+Fem+Sg+Loc: любви́
+      любовь+N+Fem+Sg+Dat: любви́
+      любовь+N+Fem+Sg+Ins: любо́вью
+      любовь+N+Fem+Pl+Nom: любви́
+      любовь+N+Fem+Pl+Acc+Inan: любви́
+      любовь+N+Fem+Pl+Gen: любве́й
+      любовь+N+Fem+Pl+Loc: любвя́х
+      любовь+N+Fem+Pl+Dat: любвя́м
+      любовь+N+Fem+Pl+Ins: любвя́ми
+      

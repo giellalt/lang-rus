@@ -1,0 +1,27 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+Tests:
+# todo:
+# Proofread the gold standard (below)
+# Then: run analyser, then correct. 
+
+  Noun - душа M anim : # Noun - full paradigm
+      душа+N+Fem+Sg+Nom: душа́
+      душа+N+Fem+Sg+Acc: ду́шу
+      душа+N+Fem+Sg+Gen: души́
+      душа+N+Fem+Sg+Loc: душе́
+      душа+N+Fem+Sg+Dat: душе́
+      душа+N+Fem+Sg+Ins: душо́й
+      душа+N+Fem+Pl+Nom: ду́ши
+      душа+N+Fem+Pl+Acc+Inan: ду́ши
+      душа+N+Fem+Pl+Gen: ду́ш
+      душа+N+Fem+Pl+Loc: ду́шах
+      душа+N+Fem+Pl+Dat: ду́шам
+      душа+N+Fem+Pl+Ins: ду́шами
+

@@ -1,0 +1,27 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+Tests:
+# todo:
+# Proofread the gold standard (below)
+# Then: run analyser, then correct. 
+
+  Noun - карандаш M anim : # Noun - full paradigm
+      карандаш+N+Msc+Sg+Nom: каранда́ш
+      карандаш+N+Msc+Sg+Acc+Inan: каранда́ш
+      карандаш+N+Msc+Sg+Gen: карандаша́
+      карандаш+N+Msc+Sg+Loc: карандаше́
+      карандаш+N+Msc+Sg+Dat: карандашу́
+      карандаш+N+Msc+Sg+Ins: карандашо́м
+      карандаш+N+Msc+Pl+Nom: карандаши́
+      карандаш+N+Msc+Pl+Acc+Inan: карандаши́
+      карандаш+N+Msc+Pl+Gen: карандаше́й
+      карандаш+N+Msc+Pl+Loc: карандаша́х
+      карандаш+N+Msc+Pl+Dat: карандаша́м
+      карандаш+N+Msc+Pl+Ins: карандаша́ми
+

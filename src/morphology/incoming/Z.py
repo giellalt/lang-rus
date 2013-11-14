@@ -1,8 +1,22 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# Noun codes
 
+# RESERVED WORDS/CHARACTERS IN HFST TWOLC
+# Alphabet  Definitions  Rules  Sets 
+# !         ;            ?      :        
+# _         |            =>     <=        
+# <=>       /<=          [      ]
+# (         )            *      +
+# $         $.           ~      <
+# >         -            "      \
+# =         0            ^      #
+# %
+
+# RESERVED WORDS/CHARACTERS IN HFST LEXC
+# 
+
+# ZALIZNJAK CODES
 # м мо с со ж жо мо-жо мн. мн. неод. мн. одуш. мн. от (gender/animacy/tantumness)
 # 0-8 nominal stem type
 # * - fleeting vowel ** - кружочек means special stem changes, like имя, христианин, etc.
@@ -20,32 +34,197 @@
 # The order of equivalent forms conveys normativity
 # [] facultative variant
 # 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
 # Delimiters: , ; : TRIANGLE DIAMOND HATCHED-CIRCLE 
 
 import codecs
 import re
 
-def stresser2 ( myinput ) : # places secondary stress (grave accent)
+# RESERVED CHARACTERS IN FOMA (hfst's default lexc compiler)
+# ! " # $ % & ( ) * + , - . / 0 : ; < > ? [ \ ] ^ _ ` { | } 
+# ~ ¬ ¹ × Σ ε ⁻ ₁ ₂ → ↔ ∀ ∃ ∅ ∈ ∘ ∥ ∧ ∨ ∩ ∪ ≤ ≥ ≺ ≻
+# In each pair, the reserved character is first, what it is transformed into is given 2nd.
+# Only those characters that are in the original Zaliznjak file are included
+# NOTE THAT SOME OF THESE CHARACTERS ARE TRANSFORMED TO RARE SYMBOLS THAT LOOK VERY SIMILAR
+foma_trans   = [(u"!",u"¡"), (u'"',u"„"), (u"%",u"‰"), (u"(",u"〖"), (u")",u"〗"), 
+                (u"*",u"☆"), (u",",u"，"), (u"-",u"⟞"), (u".",u"．"), (u"/",u"／"), 
+                (u"0",u"0"), (u":",u"："), (u";",u"；"), (u"<",u"⟨"), (u">",u"⟩"), 
+                (u"?",u"¿"), (u"[",u"〔"), (u"]",u"〕"), (u"^",u"ʌ"), (u"_",u"_"), 
+                (u"{",u"｛"), (u"}",u"｝")]
+
+def foma_replace ( myinput ) :
+    for i,j in foma_trans :
+        myinput.replace(i,j)
+    return myinput
+
+def combiner ( typelist , codelist ) :
+    outputList = []
+    for i in typelist :
+        for j in codelist :
+            outputList.extend([i+u" "+j])
+    return outputList
+
+Masc = [u"М", u"МО"]
+MascFcodes = [u"1*А", u"1*В", u"1*Е", u"2*А", u"2*В", u"2*Е", u"3*А", u"3*В", u"3*Д", u"5*А", u"5*В", u"6*А", u"6*В"]
+Fem = [u"Ж", u"ЖО"]
+Fem8codes = [u"8*В'", u"8*Е"]
+Pro = [u"МС"]
+ProFcodes = [u"1*В", u"2*В", u"6*В"]
+MiscM = []
+Fgroup1 = combiner(Masc,MascFcodes) + combiner(Fem,Fem8codes) + combiner (Pro,ProFcodes) + MiscM
+# Fgroup1 = [ u"М 1*А" , u"М 1*В" , u"М 1*Е" , u"М 2*А" , u"М 2*В" , u"М 2*Е" , 
+#             u"М 3*А" , u"М 3*В" , u"М 5*А" , u"М 5*В" , u"М 6*А" , u"М 6*В" , 
+#             u"МО 1*А" , u"МО 1*В" , u"МО 1*Е" , u"МО 2*А" , u"МО 2*В" , u"МО 2*Е" , 
+#             u"МО 3*А" , u"МО 3*В" , u"МО 5*А" , u"МО 5*В" , u"МО 6*А" , u"МО 6*В" , 
+#             u"Ж 8*В'" , u"Ж 8*Е" , u"ЖО 8*В'" , u"ЖО 8*Е" , 
+#             u"МС 1*В" , u"МС 2*В" , u"МС 6*В"]
+
+FemFcodesS = [u"1*В", u"1*Е", u"1*Ф", u"2*В", u"2*Е", u"2*Ф", u"3*В", u"3*Ф", u"3*Ф'", u"5*В", u"6*В"]
+Neut = [u"С", u"СО"]
+NeutFcodesS = [u"1*В", u"1*С", u"3*В", u"3*С", u"5*В", u"5*С", u"5*Ф", u"6*В"]
+Adj = [u"П"]
+AdjFcodesS = [u"1*А/В", u"1*В"]
+MiscS = [u"МН. <М 3*В>",u"МН. <М 5*В>"] # These aren't working
+Fgroup2stressed = combiner(Fem,FemFcodesS) + combiner(Neut,NeutFcodesS) + combiner(Adj,AdjFcodesS) + MiscS
+
+FemFcodesU = [u"1*А", u"1*Д", u"2*А", u"2*Д", u"2*Д'", u"3*А", u"3*Д", u"5*А", u"5*Д", u"6*А", u"6*Д"]
+NeutFcodesU = [u"1*А", u"1*Д", u"3*А", u"3*Д", u"5*А", u"5*Д", u"6*А", u"6*Д"]
+AdjFcodesU = [u"1*А", u"1*А'", u"1*А/С", u"1*А/С'", u"1*А/С''", u"1*В/С'", u"1*В/С''", u"2*А", u"3*А", u"3*А'", u"3*А/С", u"3*А/С'", u"3*А/С''"]
+MiscU = [u"МН. <М 2*А>",u"МН. <М 3*А>",u"МН. <М 5*А>"] # These aren't working
+Fgroup2unstressed = combiner(Fem,FemFcodesU) + combiner(Neut,NeutFcodesU) + combiner(Adj,AdjFcodesU) + MiscU
+
+def fleeter ( myinput , mycode ) : # decide whether word belongs to Fgroup1 (Mfleeter) or Fgroup2 (Ffleeter, stressed or unstressed)
+    # print "Running fleeter...",myinput,mycode
+    tester1 = 0
+    for i in Fgroup1 :
+        if i in mycode :
+            tester1 += 1
+            #print i,
+    tester2 = 0
+    for i in Fgroup2stressed :
+        if i in mycode :
+            tester2 += 1
+            #print i,
+    tester3 = 0
+    for i in Fgroup2unstressed :
+        if i in mycode :
+            tester3 += 1
+            #print i,
+    if tester1 > 0 :
+        return Mfleeter (myinput,mycode)
+    elif tester2 > 0 :
+        return Ffleeter (myinput,mycode,stress="stressed")
+    elif tester3 > 0 :
+        return Ffleeter (myinput,mycode,stress="unstressed")
+    else :
+        print "Warning: Fleeting vowel added with FEM/NEUT/PL UNSTRESSED conventions (FV¿ tag) :",myinput,mycode,
+        return Ffleeter (myinput,mycode,stress="unstressed",confidence=0)
+
+def Mfleeter (myinput,mycode) : # add (or don't add) ь or й to "alternate" with fleeting vowel
+    # print "Running Mfleeter...",myinput,mycode,">>>>",
+    Findex = myinput.find(u"F")
+    if u"Fо" in myinput :
+        return myinput
+    elif (u"Fе" in myinput or u"Fё" in myinput) :
+        if myinput[Findex-1] in u"аэоуыяеёюиа́э́о́у́ы́я́е́ю́и́" :
+            return myinput[:Findex]+u"й"+myinput[Findex:]
+        elif myinput[Findex-1] == u"л" :
+            return myinput[:Findex]+u"ь"+myinput[Findex:]
+        elif myinput[Findex-1] in u"бвгдзйкмнпрстфх" and (u"М 3*" in mycode or u"МО 3*" in mycode):
+            return myinput[:Findex]+u"ь"+myinput[Findex:]
+        else :
+            return myinput
+    else :
+        print "Warning: Fleeting vowel added with FEM/NEUT/PL UNSTRESSED conventions (FV¿ tag) :",myinput,mycode,
+        return Ffleeter (myinput,mycode,stress="unstressed",confidence=0)
+
+    # MAKE WARNINGS PRINT AT THE BOTTOM OF OUTPUT FILES!
+
+
+def Ffleeter (myinput,mycode,stress,confidence=1) :
+    # print "Running Ffleeter...",myinput,mycode,stress,">>>>",
+    Findex = myinput.find(u"F")
+    if u"6*" in mycode :
+        if stress == "unstressed" :
+            TheVowel = u"и"
+        elif stress == "stressed" :
+            TheVowel = u"е́"
+    elif ( myinput[Findex-1] == u"ь" or myinput[Findex-1] == u"й" ) and myinput[Findex+1] == u"ц" :
+        if stress == "unstressed" :
+            TheVowel = u"е"
+        elif stress == "stressed" :
+            TheVowel = u"е́"
+    elif ( myinput[Findex-1] == u"ь" or myinput[Findex-1] == u"й" ) and myinput[Findex+1] != u"ц" :
+        if stress == "unstressed" :
+            TheVowel = u"е"
+        elif stress == "stressed" :
+            TheVowel = u"ё"
+    elif myinput[Findex-1] == u"к" or myinput[Findex-1] == u"г" or myinput[Findex-1] == u"х" :
+        if stress == "unstressed" :
+            TheVowel = u"о"
+        elif stress == "stressed" :
+            TheVowel = u"о́"
+    elif myinput[Findex-1] == u"ж" or myinput[Findex-1] == u"ш" or myinput[Findex-1] == u"щ" or myinput[Findex-1] == u"ч" or myinput[Findex-1] == u"ц":
+        if stress == "unstressed" :
+            TheVowel = u"е"
+        elif stress == "stressed" :
+            TheVowel = u"о́"
+    elif myinput[Findex+1] == u"к" or myinput[Findex+1] == u"г" or myinput[Findex+1] == u"х" :
+        if stress == "unstressed" :
+            TheVowel = u"о"
+        elif stress == "stressed" :
+            TheVowel = u"о́"
+    else :
+        if stress == "unstressed" :
+            TheVowel = u"е"
+        elif stress == "stressed" :
+            TheVowel = u"ё"
+    if confidence == 0 :
+        print "\t>>>>>\t"+myinput[:Findex+1]+TheVowel+myinput[Findex+1:]+u"FV¿"
+        return myinput[:Findex+1]+TheVowel+myinput[Findex+1:]+u"FV¿"
+    return myinput[:Findex+1]+TheVowel+myinput[Findex+1:]
+
+def stress_shifter ( myinput , mycode ) : # called by stresser(); places stress mark on stem for Д and Ф patterns
+    backwar = myinput[-3::-1]
+    Vcount = Vowel.findall( backwar )
+    if u"ЙО" in mycode and Vcount[0] == u"е" :
+        V2index = len(myinput)-(backwar.find(Vcount[0])+3)
+        myinput = myinput[:V2index]+u"ё"+myinput[V2index+1:]
+    else :
+        V2index = len(myinput)-(backwar.find(Vcount[0])+2)
+        myinput = myinput[:V2index]+u"\u0301"+myinput[V2index:]
+    if u"F" in myinput :
+        return fleeter (myinput,mycode)
+    else :
+        return myinput
+
+NSSfinder = re.compile(u"[1-8]\\*?[ДФ]")
+
+def stresser2 ( myinput , mycode ) : # called by stresser(); places secondary stress (grave accent)
+    # print "Running stresser2...",myinput,mycode
     position = myinput.find('>')
     if position == -1 :
-        return myinput
-    if position > -1 :
+        if NSSfinder.search(mycode) :
+            return stress_shifter(myinput,mycode)
+        elif u"F" in myinput :
+            return fleeter (myinput,mycode)
+        else :
+            return myinput
+    elif position > -1 :
         inputList = list(myinput)
         inputList[position] = inputList[position+1]
         inputList[position+1] = u'\u0300'
-        return stresser2 (''.join(inputList))
+        return stresser2 (''.join(inputList),mycode)
 
-def stresser ( myinput ) : # places primary stress (acute accent), then calls stresser2 to place 2ndary stress.
+def stresser ( myinput , mycode ) : # places primary stress (acute accent), then calls stresser2 to place 2ndary stress.
+    # print "Running stresser...",myinput,mycode
+    Vcount = Vowel.findall( myinput )
+    if len(Vcount) == 1 :
+        myoutput = myinput.replace(u'<','')
+        myoutput = myoutput[:myoutput.index(Vcount[0])+1]+u'\u0301'+myoutput[myoutput.index(Vcount[0])+1:]
+        return myoutput
     position = myinput.find('<')
     if position == -1 :
-        return stresser2 (myinput)
+        return stresser2 (myinput,mycode)
     if position > -1 :
         inputList = list(myinput)
         if inputList[position+1] == u'ё' :
@@ -53,26 +232,26 @@ def stresser ( myinput ) : # places primary stress (acute accent), then calls st
         else :
             inputList[position] = inputList[position+1]
             inputList[position+1] = u'\u0301'
-        return stresser (''.join(inputList))
+        return stresser (''.join(inputList),mycode)
 
-def CodeCleaner ( myinput ) : 
-    output = re.sub( "\(_.*?_\)" , "" , myinput )                 # remove irrelevant semantic labels
+def CodeCleaner ( myinput ) : # generates the (preliminary) name of the continuation class
+    output = myinput.split("%")[0]
+    output = re.sub( "\(_.*?_\)" , "" , output )                 # remove irrelevant semantic labels
     output = re.sub( "\\[\\/\\/.*?\\]" , "" , output )            # remove variant labels
     output = re.sub( "\\<(.*?)\\>" , "[\\1]" , output )         # change <  > to [ ]   
     output = output.replace( '"' , "=" )                          # change " to =    
-    output = output.replace( '<' , "'" )                          # change < to '    
+    output = output.replace( '<' , "'" )                          # change < to '
+    output = output.replace( '>' , "`" )                          # change > to `    
+    output = output.replace( ':' , '-' )                          # change : to -   
     return output.strip()
 
-def NStemCodeStrip ( myinput ) : # remove stem labels and fleeting vowel markers
+def NStemCodeStrip ( myinput ) : # For nouns, remove stem labels and fleeting vowel markers from continuation class name generated by CodeCleaner
     output = re.sub( " [1-7]" , " " , myinput )
     output = re.sub( "\\*" , "" , output )
     return output
 
-Cons = re.compile(u"[бвгджзйклмнпрстфхцчшщ]")
-Vow = re.compile(u"[аяоёеыи]")
-StressRE = re.compile(u"[<>]")
-
-def A_stemmer ( instem , code ) :
+def A_stemmer ( instem , code ) : # generates lexical stem for adjectives (including substantivized)
+    # print "Running A_stemmer...",instem,code
     instem = instem[:-2]
     if instem[-1:] == u"<" :
         instem = instem[:-1]
@@ -80,17 +259,32 @@ def A_stemmer ( instem , code ) :
         instem = list(instem)
         instem.insert(len(instem)-1,u"F")
         instem = ''.join(instem)
-    return stresser ( instem )
+    return stresser ( instem , code )
+
+Cons = re.compile(u"[бвгджзйклмнпрстфхцчшщ]")
+SoftSign = re.compile(u"[ь]")
+Vowel = re.compile(u"[аэоуыяеёюи]")
+VowEnd = re.compile(u"[аяоёеыи]")
+StressRE = re.compile(u"[<>]")
 
 def N_stemmer ( instem , code ) :
-    if u"<П " not in code :
+    # print "Running N_stemmer...",instem,code
+    if u"<П " not in code and u"<П, " not in code :
         if u'***' in code or ( not  '**' in code and '*' in code ) :    # If the code indicates that there is a fleeting vowel
             instem = instem[::-1]
             Cindex = Cons.search(instem)
-            Vindex = Vow.search(instem)
+            SSindex = SoftSign.search(instem)
+            Vindex = VowEnd.search(instem)
             Sindex = StressRE.search(instem)
             if Cindex.start() > Vindex.start() : # if the stem ends in a vowel...
-                Findex = Cindex.start()+1
+                if SSindex : # if there is a soft sign in the word
+                    if Cindex.start() < SSindex.start() : # if the soft sign is before the final consonant
+                        Findex = Cindex.start()+1
+                    elif Cindex.start() > SSindex.start() : # if the soft sign is after the final consonant
+                        Findex = SSindex.start()+1
+                        instem = instem[:Findex-1]+u"й"+instem[Findex:]
+                else : # if there is no soft sign in the word
+                    Findex = Cindex.start()+1
             else :
                 if Sindex : # if the word ends in a consonant and has stress
                     if Sindex.start() == Vindex.start()+1 : # if the word ends in a consonant and the fleeting vowel is stressed
@@ -103,7 +297,7 @@ def N_stemmer ( instem , code ) :
             instem.insert(Findex,u"F")
             instem = ''.join(instem)
             instem = instem[::-1]
-        return stresser ( instem )
+        return stresser ( instem , code )
     else : # if the word is a substantivized adjective...
         return A_stemmer ( instem , code )
 
@@ -203,14 +397,18 @@ with codecs.open ( "nouns.lexc" , mode='w' , encoding='utf-8' ) as Nfile :
     for k in sorted ( Ndict , reverse=False ) :
         k2 = NStemCodeStrip (k)
         code_header = u'! '+'='*60 + u'  Types in Zaliznjak: ' + str(len(Ndict[k])) + u'\n!' + u' '*35 + k.replace(u" ",u"_") + u'\n'
-        #print k + '\t' + str(len(Ndict[k]))
         Nfile.write(code_header)
         Nfile.write(u'! THIS CATEGORY UNVERIFIED (delete this line when the computer-generated code has been verified by hand)\n')
+        if len(k) > 9 and len(Ndict[k]) < 10 : # if the code is longer than 4 characters and there are less than, comment out all the entries
+            comment = u"! "
+        else :
+            comment = u""
         for v in sorted ( Ndict[k] , key=lambda x: x[0][::-1]) :
-            entry = v[0]+u":"+N_stemmer ( v[3] , k )+u" "+k2.replace(u" ",u"_")+u" ;"
-            entry += u' '*(50-len(entry))+u"\t! "+v[2]+u'\t'+v[4]+u'\n'
-            if not u'\u0301' in entry :
-                entry += u'WARNING: no stress on stem\n'
+            entry = comment + v[0]+u":"+N_stemmer ( v[3] , k )+u" "+k2.replace(u" ",u"_")+u" ;" 
+            entry += u' '*(50-len(entry))+u"\t! "+v[2]+u'\t'+v[4]  # add unmodified code as comment
+            if (not u'\u0301' in entry and not u"ё" in entry) and (not u'В' in k2) :
+                entry += u'\tWARNING: no stress on stem'
+            entry += u'\n'
             Nfile.write(entry)
         Nfile.write( u'\n' )
 
@@ -236,7 +434,7 @@ with codecs.open ( "verbs.lexc" , mode='w' , encoding='utf-8' ) as Vfile :
         Vfile.write(code_header)
         Vfile.write(u'! THIS CATEGORY UNVERIFIED (delete this line when the computer-generated code has been verified by hand)\n')
         for v in sorted ( Vdict[k] , key=lambda x: x[0][::-1]) :
-            entry = v[0]+u":"+stresser(v[3])+u" "+k2.replace(u" ",u"_")+u" ;"
+            entry = v[0]+u":"+stresser(v[3],k)+u" "+k2.replace(u" ",u"_")+u" ;"
             entry += u' '*(50-len(entry))+u"\t! "+v[2]+u'\t'+v[4]+u'\n'
             Vfile.write(entry)
 
@@ -249,7 +447,7 @@ with codecs.open ( "numerals.lexc" , mode='w' , encoding='utf-8' ) as Numfile :
         Numfile.write(code_header)
         Numfile.write(u'! THIS CATEGORY UNVERIFIED (delete this line when the computer-generated code has been verified by hand)\n')
         for v in sorted ( Numdict[k] , key=lambda x: x[0][::-1]) :
-            entry = v[0]+u":"+stresser(v[3])+u" "+k2.replace(u" ",u"_")+u" ;"
+            entry = v[0]+u":"+stresser(v[3],k)+u" "+k2.replace(u" ",u"_")+u" ;"
             entry += u' '*(50-len(entry))+u"\t! "+v[2]+u'\t'+v[4]+u'\n'
             Numfile.write(entry)
 
@@ -265,6 +463,6 @@ for d , f , l in [ (Advdict,"adverbs.lexc",u"Adverb") , (Cdict,"conjunctions.lex
             Myfile.write(code_header)
             Myfile.write(u'! THIS CATEGORY UNVERIFIED (delete this line when the computer-generated code has been verified by hand)\n')
             for v in sorted ( d[k] , key=lambda x: x[0][::-1]) :
-                entry = v[0]+u":"+stresser(v[3])+u" "+k2.replace(u" ",u"_")+u" ;"
+                entry = v[0]+u":"+stresser(v[3],k)+u" "+k2.replace(u" ",u"_")+u" ;"
                 entry += u' '*(50-len(entry))+u"\t! "+v[2]+u'\t'+v[4]+u'\n'
                 Myfile.write(entry)

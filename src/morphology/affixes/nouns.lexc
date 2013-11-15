@@ -21,13 +21,27 @@ LEXICON М_А
 +N+Msc+Sg: MSgStem ;
 +N+Msc+Pl: ыPlStem ;
 
+LEXICON М_А-
++N+Msc+Sg: MSgStem ;
++N+Msc+Pl+Prb: ыPlStem ;
+
+LEXICON МН._[М_А]
++N+Msc+Pl: ыPlStem ;
+
 LEXICON М_В
 +N+Msc+Sg: MSgEnd ;
++N+Msc+Pl: ыPlEnd ;
+
+LEXICON МН._[М_В]
 +N+Msc+Pl: ыPlEnd ;
 
 LEXICON М_С
 +N+Msc+Sg: MSgStem ;
 +N+Msc+Pl: ыPlEnd ;
+
+LEXICON М_С-
++N+Msc+Sg: MSgStem ;
++N+Msc+Pl+Prb: ыPlEnd ;
 
 LEXICON М_Д
 +N+Msc+Sg: MSgEnd ;
@@ -107,6 +121,10 @@ LEXICON МО_А
 +N+Msc+Sg: MSgStem_anim ;
 +N+Msc+Pl: ыPlStem_anim ;
 
+LEXICON МО_А_СОСЕД
++N+Msc+Sg: MSgStem_anim ;
++N+Msc+Pl:ь ыPlStem_anim ;
+
 LEXICON МО_В
 +N+Msc+Sg: MSgEnd_anim ;
 +N+Msc+Pl: ыPlEnd_anim ;
@@ -127,6 +145,34 @@ LEXICON МО_Ф
 +N+Msc+Sg: MSgEnd_anim ;
 +N+Msc+Pl: ыPlAnom_anim ;
 
+LEXICON МО-ЖО_0
+МО_0 ;
+ЖО_0 ;
+
+LEXICON МО_[ЖО_А]
++N+Msc+Sg: FSgStem ;
++N+Msc+Pl: ыPlStem_anim ;
+
+LEXICON МО-ЖО_А
+МО_[ЖО_А] ;
+ЖО_А ;
+
+LEXICON МО_[ЖО_В] ! This also includes Ж_В' because of the fleeting vowel rule in twolc
++N+Msc+Sg: FSgEnd ;
++N+Msc+Pl: ыPlEnd_anim ;
+
+LEXICON МО-ЖО_В
+МО_[ЖО_В] ;
+ЖО_В ;
+
+LEXICON МО_[ЖО_В-] ! This also includes Ж_В' because of the fleeting vowel rule in twolc
++N+Msc+Sg: FSgEnd ;
++N+Msc+Pl+Prb: ыPlEnd_anim ;
+
+LEXICON МО-ЖО_В-
+МО_[ЖО_В-] ;
+ЖО_В- ;
+
 LEXICON МО_[П_А]
 +N+Msc+Sg+Nom:%>ый # ;
 +N+Msc+Sg+Acc+Anim:%>ого # ;
@@ -142,10 +188,6 @@ MSg_SubstAdj_End ;
 +N+Msc+Pl+Nom:%>ы́е # ;
 +N+Msc+Pl+Acc+Anim:%>ы́х # ;
 Pl_SubstAdj_End ;
-
-LEXICON SOSED
-+N+Msc+Sg: MSgStem_anim ;
-+N+Msc+Pl:ь ыPlStem_anim ;
 
 LEXICON MSgStem !Inanimate
 MSgNomZ ;
@@ -200,17 +242,33 @@ LEXICON С_А
 +N+Neu+Sg: NSgStem ;
 +N+Neu+Pl: аPlStem ;     !Cyrillic 'а' in 'аPl'
 
+LEXICON С_А-
++N+Neu+Sg: NSgStem ;
++N+Neu+Pl+Prb: аPlStem ;     !Cyrillic 'а' in 'аPl'
+
 LEXICON С_В
 +N+Neu+Sg: NSgEnd ;
 +N+Neu+Pl: аPlEnd ;      !Cyrillic 'а' in 'аPl'
+
+LEXICON С_В-
++N+Neu+Sg: NSgEnd ;
++N+Neu+Pl+Prb: аPlEnd ;      !Cyrillic 'а' in 'аPl'
 
 LEXICON С_С
 +N+Neu+Sg: NSgStem ;
 +N+Neu+Pl: аPlEnd ;      !Cyrillic 'а' in 'аPl'
 
+LEXICON С_С-
++N+Neu+Sg: NSgStem ;
++N+Neu+Pl+Prb: аPlEnd ;      !Cyrillic 'а' in 'аPl'
+
 LEXICON С_Д
 +N+Neu+Sg: NSgEnd ;
 +N+Neu+Pl: аPlStem ;     !Cyrillic 'а' in 'аPl'
+
+LEXICON С_Д-
++N+Neu+Sg: NSgEnd ;
++N+Neu+Pl+Prb: аPlStem ;     !Cyrillic 'а' in 'аPl'
 
 LEXICON С_Ф
 +N+Neu+Sg: NSgEnd ;
@@ -273,7 +331,7 @@ MSg_SubstAdj_End ;
 +N+Neu+Pl+Acc+Anim:%>ы́х # ;
 Pl_SubstAdj_End ;
 
-LEXICON NSgTant
+LEXICON С_В-
 +N+Neu+Sg: NSgEnd ;
 
 LEXICON мя
@@ -315,17 +373,15 @@ LEXICON Ж_0
 +N+Fem+Sg+Ins: # ;
 Indecl_PlInan ;
 
-LEXICON ЖО_0
-+N+Fem+Sg+Nom: # ;
-+N+Fem+Sg+Acc: # ;
-+N+Fem+Sg+Gen: # ;
-+N+Fem+Sg+Loc: # ;
-+N+Fem+Sg+Dat: # ;
-+N+Fem+Sg+Ins: # ;
-Indecl_PlAnim ;
-
 LEXICON Ж_А
 +N+Fem+Sg: FSgStem ;
++N+Fem+Pl: ыPlStem ;
+
+LEXICON Ж_А-
++N+Fem+Sg: FSgStem ;
++N+Fem+Pl+Prb: ыPlStem ;
+
+LEXICON МН._[Ж_А]
 +N+Fem+Pl: ыPlStem ;
 
 LEXICON Ж_8А
@@ -336,8 +392,15 @@ LEXICON Ж_В ! This also includes Ж_В' because of the fleeting vowel rule in 
 +N+Fem+Sg: FSgEnd ;
 +N+Fem+Pl: ыPlEnd ;
 
-LEXICON Ж_8В
+LEXICON Ж_В- ! This also includes Ж_В'- because of the fleeting vowel rule in twolc
++N+Fem+Sg: FSgEnd ;
++N+Fem+Pl+Prb: ыPlEnd ;
+
+LEXICON Ж_8В ! This also includes Ж_В' because of the fleeting vowel rule in twolc
 +N+Fem+Sg: FьSgEnd ;
++N+Fem+Pl: ыPlEnd ;
+
+LEXICON МН._[Ж_В]
 +N+Fem+Pl: ыPlEnd ;
 
 LEXICON Ж_С
@@ -347,6 +410,10 @@ LEXICON Ж_С
 LEXICON Ж_Д
 +N+Fem+Sg: FSgEnd ;
 +N+Fem+Pl: ыPlStem ;
+
+LEXICON Ж_Д-
++N+Fem+Sg: FSgEnd ;
++N+Fem+Pl+Prb: ыPlStem ;
 
 LEXICON Ж_Д' ! Shifting retraction
 +N+Fem+Sg: FSgRetr ;
@@ -360,6 +427,10 @@ LEXICON Ж_8Е
 +N+Fem+Sg: FьSgStem ;
 +N+Fem+Pl: ыPlAnom ;
 
+LEXICON Ж_8Е-
++N+Fem+Sg: FьSgStem ;
++N+Fem+Pl+Prb: ыPlAnom ;
+
 LEXICON Ж_Ф
 +N+Fem+Sg: FSgEnd ;
 +N+Fem+Pl: ыPlAnom ;
@@ -367,6 +438,15 @@ LEXICON Ж_Ф
 LEXICON Ж_Ф' ! Anomolous retraction
 +N+Fem+Sg: FSgRetr ;
 +N+Fem+Pl: ыPlAnom ;
+
+LEXICON ЖО_0
++N+Fem+Sg+Nom: # ;
++N+Fem+Sg+Acc: # ;
++N+Fem+Sg+Gen: # ;
++N+Fem+Sg+Loc: # ;
++N+Fem+Sg+Dat: # ;
++N+Fem+Sg+Ins: # ;
+Indecl_PlAnim ;
 
 LEXICON ЖО_А
 +N+Fem+Sg: FSgStem ;
@@ -376,11 +456,15 @@ LEXICON ЖО_8А
 +N+Fem+Sg: FьSgStem ;
 +N+Fem+Pl: ыPlStem_anim ;
 
-LEXICON ЖО_В
+LEXICON ЖО_В ! This also includes Ж_В' because of the fleeting vowel rule in twolc
 +N+Fem+Sg: FSgEnd ;
 +N+Fem+Pl: ыPlEnd_anim ;
 
-LEXICON ЖО_8В
+LEXICON ЖО_В- ! This also includes Ж_В' because of the fleeting vowel rule in twolc
++N+Fem+Sg: FSgEnd ;
++N+Fem+Pl+Prb: ыPlEnd_anim ;
+
+LEXICON ЖО_8В ! This also includes Ж_В' because of the fleeting vowel rule in twolc
 +N+Fem+Sg: FьSgEnd ;
 +N+Fem+Pl: ыPlEnd_anim ;
 
@@ -412,6 +496,14 @@ FSg_SubstAdj_Stem ;
 +N+Fem+Pl+Acc+Inan:%>ые # ;
 Pl_SubstAdj_Stem ;
 
+LEXICON Ж_[П_В]
++N+Fem+Sg+Nom:%>а́я # ;
++N+Fem+Sg+Acc:%>у́ю # ;
+FSg_SubstAdj_End ;
++N+Fem+Pl+Nom:%>ы́е # ;
++N+Fem+Pl+Acc+Inan:%>ы́е # ;
+Pl_SubstAdj_End ;
+
 LEXICON FSg_SubstAdj_Stem
 +N+Msc+Sg+Gen:%>ой # ;
 +N+Msc+Sg+Loc:%>ой # ;
@@ -425,6 +517,14 @@ FSg_SubstAdj_Stem ;
 +N+Fem+Pl+Nom:%>ые # ;
 +N+Fem+Pl+Acc+Anim:%>ых # ;
 Pl_SubstAdj_Stem ;
+
+LEXICON ЖО_[П_В]
++N+Fem+Sg+Nom:%>а́я # ;
++N+Fem+Sg+Acc:%>у́ю # ;
+FSg_SubstAdj_End ;
++N+Fem+Pl+Nom:%>ы́е # ;
++N+Fem+Pl+Acc+Anim:%>ы́х # ;
+Pl_SubstAdj_End ;
 
 LEXICON FSg_SubstAdj_End
 +N+Msc+Sg+Gen:%>о́й # ;
@@ -530,18 +630,6 @@ LEXICON аPlEnd_anim
 аPlNomEnd ;
 PlAccAnimEnd ;
 PlObliqEnd ;
-
-LEXICON МН._[М_А]
-+N+Msc+Pl: ыPlStem ;
-
-LEXICON МН._[М_В]
-+N+Msc+Pl: ыPlEnd ;
-
-LEXICON МН._[Ж_А]
-+N+Fem+Pl: ыPlStem ;
-
-LEXICON МН._[Ж_В]
-+N+Fem+Pl: ыPlEnd ;
 
 LEXICON ыPlNomStem
 +Nom:%>ы # ;

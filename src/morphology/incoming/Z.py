@@ -42,18 +42,42 @@ import re
 # RESERVED CHARACTERS IN FOMA (hfst's default lexc compiler)
 # ! " # $ % & ( ) * + , - . / 0 : ; < > ? [ \ ] ^ _ ` { | } 
 # ~ ¬ ¹ × Σ ε ⁻ ₁ ₂ → ↔ ∀ ∃ ∅ ∈ ∘ ∥ ∧ ∨ ∩ ∪ ≤ ≥ ≺ ≻
+# Of those listed above, only the following are present in the original Zaliznjak
+# ! " % ( ) * , - . / 0 : ; < > ? [ ] ^ _ { }  # USED IN ZALIZNJAK
+# The following are ASCII characters that are not reserved in foma
+#   ' 1 2 3 4 5 6 7 8 9 = @ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z 
+# The following are ASCII characters that are not reserved in foma, 
+# and are not used in the original Zaliznjak. (== [A-Za-z])
+# A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z
+# Of these, only the following are unlikely to be confused with Russian symbols
+# F G I J L N Q R S V W Z b d f g h i j l q r s t v z
 # In each pair, the reserved character is first, what it is transformed into is given 2nd.
-# Only those characters that are in the original Zaliznjak file are included
-# NOTE THAT SOME OF THESE CHARACTERS ARE TRANSFORMED TO RARE SYMBOLS THAT LOOK VERY SIMILAR
-foma_trans   = [(u"!",u"¡"), (u'"',u"„"), (u"%",u"‰"), (u"(",u"〖"), (u")",u"〗"), 
-                (u"*",u"☆"), (u",",u"，"), (u"-",u"⟞"), (u".",u"．"), (u"/",u"／"), 
-                (u"0",u"0"), (u":",u"："), (u";",u"；"), (u"<",u"⟨"), (u">",u"⟩"), 
-                (u"?",u"¿"), (u"[",u"〔"), (u"]",u"〕"), (u"^",u"ʌ"), (u"_",u"_"), 
-                (u"{",u"｛"), (u"}",u"｝")]
+foma_trans   = [(u"!" , u"z"), 
+                (u"[" , u"["), 
+                (u"]" , u"]"), 
+                (u'"' , u"v"), 
+                (u"%" , u"%"), 
+                (u"(" , u"[["), 
+                (u")" , u"[["), 
+                (u"*" , u"*"), 
+                (u"," , u","), 
+                (u"-" , u"-"), 
+                (u"." , u"."), 
+                (u"/" , u"/"), 
+                (u"0" , u"0"), 
+                (u":" , u"_AS_IN_"), 
+                (u";" , u"_OR_"), 
+                (u"<" , u"["), 
+                (u">" , u"]"), 
+                (u"?" , u"defect"), 
+                (u"^" , u"_INCL_"), 
+                (u"_" , u"_"), 
+                (u"{" , u"[[["), 
+                (u"}" , u"]]]")]
 
 def foma_replace ( myinput ) :
     for i,j in foma_trans :
-        myinput.replace(i,j)
+        myinput = myinput.replace(i,j)
     return myinput
 
 def combiner ( typelist , codelist ) :
@@ -116,7 +140,7 @@ def fleeter ( myinput , mycode ) : # decide whether word belongs to Fgroup1 (Mfl
     elif tester3 > 0 :
         return Ffleeter (myinput,mycode,stress="unstressed")
     else :
-        print "Warning: Fleeting vowel added with FEM/NEUT/PL UNSTRESSED conventions (FV¿ tag) :",myinput,mycode,
+        print "Warning: Fleeting vowel added with FEM/NEUT/PL UNSTRESSED conventions (FV tag) :",myinput,mycode,
         return Ffleeter (myinput,mycode,stress="unstressed",confidence=0)
 
 def Mfleeter (myinput,mycode) : # add (or don't add) ь or й to "alternate" with fleeting vowel
@@ -134,7 +158,7 @@ def Mfleeter (myinput,mycode) : # add (or don't add) ь or й to "alternate" wit
         else :
             return myinput
     else :
-        print "Warning: Fleeting vowel added with FEM/NEUT/PL UNSTRESSED conventions (FV¿ tag) :",myinput,mycode,
+        print "Warning: Fleeting vowel added with FEM/NEUT/PL UNSTRESSED conventions (FV tag) :",myinput,mycode,
         return Ffleeter (myinput,mycode,stress="unstressed",confidence=0)
 
     # MAKE WARNINGS PRINT AT THE BOTTOM OF OUTPUT FILES!
@@ -179,11 +203,11 @@ def Ffleeter (myinput,mycode,stress,confidence=1) :
         elif stress == "stressed" :
             TheVowel = u"ё"
     if confidence == 0 :
-        print "\t>>>>>\t"+myinput[:Findex+1]+TheVowel+myinput[Findex+1:]+u"FV¿"
-        return myinput[:Findex+1]+TheVowel+myinput[Findex+1:]+u"FV¿"
+        print "\t>>>>>\t"+myinput[:Findex+1]+TheVowel+myinput[Findex+1:]+u"FV"
+        return myinput[:Findex+1]+TheVowel+myinput[Findex+1:]+u"FV"
     return myinput[:Findex+1]+TheVowel+myinput[Findex+1:]
 
-def stress_shifter ( myinput , mycode ) : # called by stresser(); places stress mark on stem for Д and Ф patterns
+def stress_shifter ( myinput , mycode ) : # called by stresser2(); places stress mark on stem for Д and Ф patterns
     backwar = myinput[-3::-1]
     Vcount = Vowel.findall( backwar )
     if u"ЙО" in mycode and Vcount[0] == u"е" :
@@ -236,13 +260,11 @@ def stresser ( myinput , mycode ) : # places primary stress (acute accent), then
 
 def CodeCleaner ( myinput ) : # generates the (preliminary) name of the continuation class
     output = myinput.split("%")[0]
+    output = output.split(":")[0]
     output = re.sub( "\(_.*?_\)" , "" , output )                 # remove irrelevant semantic labels
     output = re.sub( "\\[\\/\\/.*?\\]" , "" , output )            # remove variant labels
     output = re.sub( "\\<(.*?)\\>" , "[\\1]" , output )         # change <  > to [ ]   
-    output = output.replace( '"' , "=" )                          # change " to =    
-    output = output.replace( '<' , "'" )                          # change < to '
-    output = output.replace( '>' , "`" )                          # change > to `    
-    output = output.replace( ':' , '-' )                          # change : to -   
+    output = foma_replace( output )
     return output.strip()
 
 def NStemCodeStrip ( myinput ) : # For nouns, remove stem labels and fleeting vowel markers from continuation class name generated by CodeCleaner
@@ -399,7 +421,7 @@ with codecs.open ( "nouns.lexc" , mode='w' , encoding='utf-8' ) as Nfile :
         code_header = u'! '+'='*60 + u'  Types in Zaliznjak: ' + str(len(Ndict[k])) + u'\n!' + u' '*35 + k.replace(u" ",u"_") + u'\n'
         Nfile.write(code_header)
         Nfile.write(u'! THIS CATEGORY UNVERIFIED (delete this line when the computer-generated code has been verified by hand)\n')
-        if len(k) > 9 and len(Ndict[k]) < 10 : # if the code is longer than 4 characters and there are less than, comment out all the entries
+        if len(k) > 9 and len(Ndict[k]) < 100 : # if the code is longer than 4 characters and there are less than, comment out all the entries
             comment = u"! "
         else :
             comment = u""
@@ -414,6 +436,7 @@ with codecs.open ( "nouns.lexc" , mode='w' , encoding='utf-8' ) as Nfile :
 
 with codecs.open ( "adjectives.lexc" , mode='w' , encoding='utf-8' ) as Afile :
     print "Writing adjectives.lexc ..."
+    Afile.write( u"DON'T FORGET THAT ....\n adjectives 2*a ~Fений have masc short-form in 0, not ь\nDON'T FORGET!")
     Afile.write( u'LEXICON Adjective\n' )
     for k in sorted ( Adict, key=lambda k: len(Adict[k]), reverse=True ) :
         k2 = AStemCodeStrip (k)

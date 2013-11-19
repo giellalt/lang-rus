@@ -5,7 +5,10 @@ Multichar_Symbols
 А́ Е́ И́ О́ У́ Ы́ Э́ Ю́ Я́
 а̀ ѐ ѝ о̀ у̀ ы̀ э̀ ю̀ я̀ ! Secondary stress
 
-%>                                    ! End-of-stem markers
+%> ! End-of-stem marker
+%^F ! Fleeting vowel marker
+%^G ! Irregular GenPl marker (used to keep ов/ев on neuter stems, e.g. ов%^G
+%^Z ! Zero ending (resolves to 0/й/ь)
 
 ! POS
 +N +V +A 

@@ -12,10 +12,10 @@ Tests:
 # Then: run analyser, then correct. 
 
   Noun - бельё M anim : # Noun - full paradigm
-      бельё+N+Neu+Sg+Nom: бельё
-      бельё+N+Neu+Sg+Acc: бельё
-      бельё+N+Neu+Sg+Gen: белья́
-      бельё+N+Neu+Sg+Loc: белье́
-      бельё+N+Neu+Sg+Dat: белью́
-      бельё+N+Neu+Sg+Ins: бельём
+      белье+N+Neu+Sg+Nom: бельё
+      белье+N+Neu+Sg+Acc: бельё
+      белье+N+Neu+Sg+Gen: белья́
+      белье+N+Neu+Sg+Loc: белье́
+      белье+N+Neu+Sg+Dat: белью́
+      белье+N+Neu+Sg+Ins: бельём
 

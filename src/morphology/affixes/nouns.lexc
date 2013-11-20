@@ -27,7 +27,7 @@ LEXICON М_А2
 
 LEXICON М_А[2]
 М_А ;
-М_А2 ;
++Fac: М_А2 ;
 
 LEXICON М_А-
 +N+Msc+Sg: MSgStem ;
@@ -35,7 +35,27 @@ LEXICON М_А-
 
 LEXICON М_А_Р2
 М_А ;
+MscGen2 ;
+
+LEXICON MscGen2
 +N+Msc+Sg+Gn2:у # ;
+
+LEXICON MscLoc2
++N+Msc+Sg+Lc2:у́ # ;
+
+LEXICON MscLoc2на
++N+Msc+Sg+L2n:у́ # ;
+
+LEXICON MscLoc2в
++N+Msc+Sg+L2v:у́ # ;
+
+LEXICON М_А_П2
+М_А ;
+MscLoc2 ;
+
+LEXICON М_А_ёнок
++N+Msc+Sg:ён%^Fок MSgStem ;
++N+Msc+Pl:я́т аPlStem ;
 
 LEXICON МН._[М_А]
 +N+Msc+Pl: ыPlStem ;
@@ -43,6 +63,10 @@ LEXICON МН._[М_А]
 LEXICON М_В
 +N+Msc+Sg: MSgEnd ;
 +N+Msc+Pl: ыPlEnd ;
+
+LEXICON М_В1
++N+Msc+Sg: MSgEnd ;
++N+Msc+Pl: аPlEnd ;
 
 LEXICON МН._[М_В]
 +N+Msc+Pl: ыPlEnd ;
@@ -65,6 +89,9 @@ LEXICON М_Д
 
 LEXICON М_Е
 +N+Msc+Sg: MSgStem ;
++N+Msc+Pl: ыPlAnom ;
+
+LEXICON МН._[М_Е]
 +N+Msc+Pl: ыPlAnom ;
 
 LEXICON М_Ф
@@ -169,13 +196,8 @@ LEXICON МО_А_о́ночек
 +N+Msc+Sg:о́ноч%^Fек MSgStem_anim ;
 +N+Msc+Pl:а́т%^Fок ыPlStem_anim ;
 
-LEXICON Pl_ин
-+Nom:е # ;
-+Acc+Anim: # ;
-+Gen: # ;
-+Loc:ах # ;
-+Dat:ам # ;
-+Ins:ами # ;
+LEXICON МН._[МО_А]
++N+Msc+Pl: ыPlStem_anim ;
 
 LEXICON МО_А_СОСЕД
 +N+Msc+Sg: MSgStem_anim ;
@@ -314,6 +336,9 @@ LEXICON С_А-
 +N+Neu+Sg: NSgStem ;
 +N+Neu+Pl+Prb: аPlStem ;     !Cyrillic 'а' in 'аPl'
 
+LEXICON МН._[С_А]
++N+Neu+Pl: аPlStem ;     !Cyrillic 'а' in 'аPl'
+
 LEXICON С_В
 +N+Neu+Sg: NSgEnd ;
 +N+Neu+Pl: аPlEnd ;      !Cyrillic 'а' in 'аPl'
@@ -321,6 +346,9 @@ LEXICON С_В
 LEXICON С_В-
 +N+Neu+Sg: NSgEnd ;
 +N+Neu+Pl+Prb: аPlEnd ;      !Cyrillic 'а' in 'аPl'
+
+LEXICON МН._[С_В]
++N+Neu+Pl: аPlEnd ;      !Cyrillic 'а' in 'аPl'
 
 LEXICON С_С
 +N+Neu+Sg: NSgStem ;
@@ -353,6 +381,9 @@ Indecl_PlAnim ;
 
 LEXICON СО_А
 +N+Neu+Sg: NSgStem ;
++N+Neu+Pl: аPlStem_anim ;     !Cyrillic 'а' in 'аPl'
+
+LEXICON МН._[СО_А]
 +N+Neu+Pl: аPlStem_anim ;     !Cyrillic 'а' in 'аPl'
 
 LEXICON СО_В
@@ -467,6 +498,9 @@ LEXICON Ж_8А
 LEXICON Ж_8А-
 +N+Fem+Sg: FьSgStem ;
 +N+Fem+Pl+Prb: ыPlStem ;
+
+LEXICON FemLoc2
++N+Fem+Sg+Lc2:и́ # ;
 
 LEXICON Ж_В ! This also includes Ж_В' because of the fleeting vowel rule in twolc
 +N+Fem+Sg: FSgEnd ;
@@ -800,6 +834,12 @@ LEXICON PlPeriphEnd
 +Loc:%>а́х # ;
 +Dat:%>а́м # ;
 +Ins:%>а́ми # ;
+
+LEXICON Pl_ин
++Nom:е # ;
++Acc+Anim: # ;
++Gen: # ;
+PlPeriphEnd ;
 
 
 

@@ -27,8 +27,15 @@ Multichar_Symbols
 ! Nominal MSP
 +Sg +Pl
 +Msc +Fem +Neu +Inan +Anim
-+Nom +Acc +Gen +Ins +Dat +Loc ! Add Lc2 and Gn2 (they have syntactic importance, but will it ever be useful for the CG?)
++Nom +Acc +Gen +Ins +Dat +Loc
++Lc2 +L2v +L2n +Gn2
 +Ord
+
+! Other tags
++Prb ! Problematic
++Fac ! Facultative
++Obs ! Obsolete
++Sub ! Substandard
 
 ! Key lexicon
 LEXICON Root

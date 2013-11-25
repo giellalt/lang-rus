@@ -2,15 +2,18 @@ Alphabet
 
       %>:0  ! End of stem
       %^F:0  ! placed immediately before fleeting vowels Fа Fе Fо Fи Fя Fа́ Fе́ Fё Fо́ Fи́ Fя́
-      %^G:0  ! GenPl ов/ев when it "should" be zero/ей (its presence blocks the transformation rule)
+      %^G:0  ! Facilitates GenPl ов/ев when it "should" be zero/ей (its presence blocks the transformation rule)
       %^Z:0 %^Z:ь %^Z:й    ! "Zero ending" resolves to 0/ь/й (used for MascNomSg and irregular GenPl)
+      %- ! hyphen
       а б в г д е ё ж з и й к л м н о п р с т у ф х ц ч ш щ ъ ы ь э ю я 
-      а́         е́       и́           о́         у́               ы́   э́ ю́ я́ ;
+      а́         е́       и́           о́         у́               ы́   э́ ю́ я́ 
+      а̀         ѐ       ѝ           о̀         у̀               ы̀   э̀ ю̀ я̀ ;
 
 Sets
 
-Letter = а б в г д е ё ж з и й к л м н о п р с т у ф х ц ч ш щ ъ ы ь э ю я 
-         а́         е́       и́           о́         у́               ы́   э́ ю́ я́ ;
+Letter = а б в г д е ё ж з и й к л м н о п р с т у ф х ц ч ш щ ъ ы ь э ю я %-
+         а́         е́       и́           о́         у́               ы́   э́ ю́ я́ 
+         а̀         ѐ       ѝ           о̀         у̀               ы̀   э̀ ю̀ я̀ ;
 C = б в г д ж з й к л м н п р с т ф х ц ч ш щ ;
 HUSH = ж ш щ ч ;
 VEL = г к х ;
@@ -44,6 +47,9 @@ VEnd = [ VEndV | VEndC ] ;
 JEndV = %^F:0 V: й: [ я́:0 | ё:0 | я:0 | е:0 ] %>:0 ; ! семья́, бельё, колдунья, счастье
 JEndC = %^F:0 V: й: %>:0 ;                           ! мураве́й
 JEnd = [ JEndV | JEndC ] ;
+jEndV = \%^F:0 V: й:й [ я́:0 | ё:0 | я:0 | е:0 ] %>:0 ; ! вайя
+jEndC = \%^F:0 V: й:й %>:0 ;                           ! Are there any like this?
+jEnd = [ jEndV | jEndC ] ;
 
 Rules
 
@@ -67,11 +73,11 @@ where Vx in ( а е ё и я а́ е́ и́ я́ ) ;
 
 "Delete ь in lexical endings, and before fleeting vowels"
 ь:0 <=> .#. [ Letter: | %^F:0 ]+ _  %>:0 ;
-         .#. Letter+ _ %^F:0 V ;
+        .#. Letter+ _ %^F:0 V ;
 
 "Delete й in lexical endings, and before fleeting vowels"
-й:0 <=> .#. [ ?* - [ %^F:0 ] ] V _  %>:0 ;
-         .#. Letter+ _ %^F:0 V ;
+й:0 <=> .#. [ ?* - [ %^F:0 ] ] V _  %>:0 ; ! in lexical ending
+        .#. Letter+ _ %^F:0 V ; ! before fleeting vowel
 
 "Z>0"
 %^Z:0 <=> [ VELEnd | HUSHEnd | цEnd | HCEnd | JEnd ] _ .#. ;
@@ -80,16 +86,16 @@ where Vx in ( а е ё и я а́ е́ и́ я́ ) ;
 %^Z:ь <=> SCEnd _ .#. ;
 
 "Z>й"
-%^Z:й <=> Vend _ .#. ;
+%^Z:й <=> VЕnd _ .#. ;
 
 "stem-й > ь before vowels ( муравей > муравья; семей > семья )"
 й:ь <=> %^F:0 V:0 _ ([ я́:0 | ё:0 | е́:0 | я:0 | е:0 ]) %>:0 :V ;
 
 "о>е"
-о:е <=> [ HUSHEnd | цEnd | VEnd | SCEnd | JEnd ] _ [ ?* - [ в:0 ?* ] ] .#. ;
+о:е <=> [ HUSHEnd | цEnd | VEnd | SCEnd | JEnd | jEnd ] _ [ ?* - [ в:0 ?* ] ] .#. ;
 
 "ы>и (stressed or unstressed)"
-Vx:Vy <=> [ VELEnd | HUSHEnd | VEnd | SCEnd | JEnd ] _ ;
+Vx:Vy <=> [ VELEnd | HUSHEnd | VEnd | SCEnd | JEnd | jEnd ] _ ;
 where Vx in ( ы ы́ )
       Vy in ( и и́ )
     matched;
@@ -101,7 +107,7 @@ where Vx in ( ю ю́ я я́ )
     matched;
 
 "[а у а́ о́ у́] > [я ю я́ ё ю́] after soft-consonant stems (including й: муравей, семья, бельё, etc) and vowel stems (музей, критерий, понятие, Мария, etc)"
-Vx:Vy <=> [ SCEnd | VEnd | JEnd ] _ [ ?* - [ [ в:й | в:0 ] ?* ] ] .#. ;
+Vx:Vy <=> [ SCEnd | VEnd | JEnd | jEnd ] _ [ ?* - [ [ в:й | в:0 ] ?* ] ] .#. ;
 where Vx in ( а у а́ о́ у́ )
       Vy in ( я ю я́ ё ю́ )
     matched;

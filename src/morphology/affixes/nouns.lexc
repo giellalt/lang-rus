@@ -1,3 +1,17 @@
+! Divvun & Giellatekno - open source grammars for Sámi and other languages
+! Copyright © 2000-2010 The University of Tromsø & the Norwegian Sámi Parliament
+! http://giellatekno.uit.no & http://divvun.no
+
+! This program is free software; you can redistribute and/or modify
+! this file under the terms of the GNU General Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version. The GNU General Public License
+! is found at http://www.gnu.org/licenses/gpl.html. It is
+! also available in the file $GTHOME/LICENSE.txt.
+
+! Other licensing options are available upon request, please contact
+! giellatekno@hum.uit.no or divvun@samediggi.no
+
 !!!!!!!!!!!!!!!!!!!!!!!!!MASCULINE PARADIGMS!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 LEXICON М_0
@@ -28,6 +42,27 @@ LEXICON М_А_П2
 М_А ;
 MscLoc2 ;
 
+LEXICON М_А_П2В
+М_А_П2 ;
+
+LEXICON М_А_П2НА
+М_А_П2 ;
+
+LEXICON М_А_[П2]
+М_А ;
++Fac: MscLoc2 ;
+
+LEXICON М_А_[П2В]
+М_А_[П2] ;
+
+LEXICON М_А_[П2НА]
+М_А_[П2] ;
+
+LEXICON М_А_П2_Р2
+М_А ;
+MscLoc2 ;
+MscGen2 ;
+
 LEXICON М_А_[П2]_Р2
 М_А ;
 +Fac: MscLoc2 ;
@@ -52,6 +87,27 @@ LEXICON М_А[2]
 LEXICON М_А-
 +N+Msc+Sg: MSgStem ;
 +N+Msc+Pl+Prb: ыPlStem ;
+
+LEXICON М_А-_П2
+М_А- ;
+MscLoc2 ;
+
+LEXICON М_А-_П2_Р2
+М_А- ;
+MscLoc2 ;
+MscGen2 ;
+
+LEXICON М_А-_П2В
+М_А-_П2 ;
+
+LEXICON М_А-_П2НА
+М_А-_П2 ;
+
+LEXICON М_А-_П2В_Р2
+М_А-_П2_Р2 ;
+
+LEXICON М_А-_П2НА_Р2
+М_А-_П2_Р2 ;
 
 LEXICON М_А-_[П2]_Р2
 М_А- ;
@@ -85,9 +141,21 @@ LEXICON М_В_П2
 М_В ;
 MscLoc2 ;
 
+LEXICON М_В_П2В
+М_В_П2 ;
+
+LEXICON М_В_П2НА
+М_В_П2 ;
+
 LEXICON М_В_[П2]
 М_В ;
 +Fac: MscLoc2 ;
+
+LEXICON М_В_[П2В]
+М_В_[П2] ;
+
+LEXICON М_В_[П2НА]
+М_В_[П2] ;
 
 LEXICON М_В_П2_Р2
 М_В ;
@@ -117,6 +185,38 @@ LEXICON М_С_П2
 М_С ;
 MscLoc2 ;
 
+LEXICON М_С_П2В
+М_С_П2 ;
+
+LEXICON М_С_П2НА
+М_С_П2 ;
+
+LEXICON М_С_[П2]
+М_С ;
++Fac: MscLoc2 ;
+
+LEXICON М_С_[П2В]
+М_С_[П2] ;
+
+LEXICON М_С_[П2НА]
+М_С_[П2] ;
+
+LEXICON М_С_П2_Р2
+М_С ;
+MscLoc2 ;
+MscGen2 ;
+
+LEXICON М_С_П2В_Р2
+М_С_П2_Р2 ;
+
+LEXICON М_С_[П2]_Р2
+М_С ;
++Fac: MscLoc2 ;
+MscGen2 ;
+
+LEXICON М_С_[П2В]_Р2
+М_С_[П2]_Р2 ;
+
 LEXICON М_С_Р2
 М_С ;
 MscGen2 ;
@@ -129,6 +229,18 @@ LEXICON М_С-_П2
 +N+Msc+Sg: MSgStem ;
 +N+Msc+Pl+Prb: ыPlEnd ;
 MscLoc2 ;
+
+LEXICON М_С-_П2В
+М_С-_П2 ;
+
+LEXICON М_С-_[П2]_Р2
++N+Msc+Sg: MSgStem ;
++N+Msc+Pl+Prb: ыPlEnd ;
++Fac: MscLoc2 ;
+MscGen2 ;
+
+LEXICON М_С-_[П2В]_Р2
+М_С-_[П2]_Р2 ;
 
 LEXICON М_С-_Р2
 +N+Msc+Sg: MSgStem ;
@@ -143,14 +255,41 @@ LEXICON М_С1_П2
 М_С1 ;
 MscLoc2 ;
 
+LEXICON М_С1_П2В
+М_С1_П2 ;
+
+LEXICON М_С1_П2В_ГОД
+:го́д М_С1_П2В_ГОД ;
++N+Msc+Pl+Gen:ле́т # ;
+
+LEXICON М_С1_П2НА
+М_С1_П2 ;
+
 LEXICON М_С1_[П2]
 М_С1 ;
 +Fac: MscLoc2 ;
+
+LEXICON М_С1_[П2В]
+М_С1_[П2] ;
+
+LEXICON М_С1_[П2НА]
+М_С1_[П2] ;
+
+LEXICON М_С1_П2_Р2
+М_С1 ;
+MscLoc2 ;
+MscGen2 ;
+
+LEXICON М_С1_П2В_Р2
+М_С1_П2_Р2 ;
 
 LEXICON М_С1_[П2]_Р2
 М_С1 ;
 +Fac: MscLoc2 ;
 MscGen2 ;
+
+LEXICON М_С1_[П2В]_Р2
+М_С1_[П2]_Р2 ;
 
 LEXICON М_С1_Р2
 М_С1 ;
@@ -184,6 +323,17 @@ LEXICON М_Д2
 LEXICON М_Е
 +N+Msc+Sg: MSgStem ;
 +N+Msc+Pl: ыPlAnom ;
+
+LEXICON М_Е_П2
+М_Е ;
+MscLoc2 ;
+
+LEXICON М_Е_П2В
+М_Е_П2 ;
+
+LEXICON М_Е_П2В_ГОД
+:го́д М_Е_П2 ;
++N+Msc+Pl+Gen:ле́т # ;
 
 LEXICON М_Е2
 +N+Msc+Sg: MSgStem ;
@@ -696,9 +846,34 @@ LEXICON Ж_8А
 +N+Fem+Sg: FьSgStem ;
 +N+Fem+Pl: ыPlStem ;
 
+LEXICON Ж_8А_П2В
++N+Fem+Sg: FьSgStem ;
++N+Fem+Pl: ыPlStem ;
+FemLoc2 ;
+
+LEXICON Ж_8А_[П2В]
++N+Fem+Sg: FьSgStem ;
++N+Fem+Pl: ыPlStem ;
++Fac: FemLoc2 ;
+
+LEXICON Ж_8А_П2НА
++N+Fem+Sg: FьSgStem ;
++N+Fem+Pl: ыPlStem ;
+FemLoc2 ;
+
 LEXICON Ж_8А-
 +N+Fem+Sg: FьSgStem ;
 +N+Fem+Pl+Prb: ыPlStem ;
+
+LEXICON Ж_8А-_П2В
++N+Fem+Sg: FьSgStem ;
++N+Fem+Pl+Prb: ыPlStem ;
+FemLoc2 ;
+
+LEXICON Ж_8А-_П2НА
++N+Fem+Sg: FьSgStem ;
++N+Fem+Pl+Prb: ыPlStem ;
+FemLoc2 ;
 
 LEXICON FemLoc2
 +N+Fem+Sg+Lc2:и́ # ;
@@ -750,6 +925,23 @@ LEXICON Ж_8Е_П2
 +N+Fem+Pl: ыPlAnom ;
 FemLoc2 ;
 
+LEXICON Ж_8Е_[П2]
++N+Fem+Sg: FьSgStem ;
++N+Fem+Pl: ыPlAnom ;
++Fac: FemLoc2 ;
+
+LEXICON Ж_8Е_П2В
+Ж_8Е_П2 ;
+
+LEXICON Ж_8Е_[П2В]
+Ж_8Е_[П2] ;
+
+LEXICON Ж_8Е_П2НА
+Ж_8Е_П2 ;
+
+LEXICON Ж_8Е_[П2НА]
+Ж_8Е_[П2] ;
+
 LEXICON Ж_8Е-
 +N+Fem+Sg: FьSgStem ;
 +N+Fem+Pl+Prb: ыPlAnom ;
@@ -762,6 +954,12 @@ LEXICON Ж_8Ф_П2 ! This includes 8Ф'' (twolc handles InstSg stress)
 +N+Fem+Sg: FьSgEnd ;
 +N+Fem+Pl: ыPlAnom ;
 FemLoc2 ;
+
+LEXICON Ж_8Ф_П2В ! This includes 8Ф'' (twolc handles InstSg stress)
+Ж_8Ф_П2 ;
+
+LEXICON Ж_8Ф_П2НА ! This includes 8Ф'' (twolc handles InstSg stress)
+Ж_8Ф_П2 ;
 
 LEXICON Ж_Ф
 +N+Fem+Sg: FSgEnd ;

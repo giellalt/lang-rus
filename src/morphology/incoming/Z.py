@@ -55,10 +55,10 @@ import re
 foma_trans   = [(u"!" , u"z"), 
                 (u"[" , u"["), 
                 (u"]" , u"]"), 
-                (u'"' , u"v"), 
+                (u'"' , u""), 
                 (u"%" , u"%"), 
                 (u"(" , u"[["), 
-                (u")" , u"[["), 
+                (u")" , u"]]"), 
                 (u"*" , u"*"), 
                 (u"," , u","), 
                 (u"-" , u"-"), 
@@ -316,7 +316,7 @@ def N_stemmer ( instem , code ) :
                 else : # if the word ends in a consonant and has no stress
                     Findex = Vindex.start()+1
             instem = list(instem)
-            instem.insert(Findex,u"F")
+            instem.insert(Findex,u"F^%")
             instem = ''.join(instem)
             instem = instem[::-1]
         return stresser ( instem , code )
@@ -452,6 +452,7 @@ with codecs.open ( "verbs.lexc" , mode='w' , encoding='utf-8' ) as Vfile :
     print "Writing verbs.lexc ..."
     Vfile.write( u'LEXICON Verb\n' )
     for k in sorted ( Vdict, key=lambda k: len(Vdict[k]), reverse=True ) :
+        # print k
         k2 = k
         code_header = u'! '+'='*60 + u'  Types in Zaliznjak: ' + str(len(Vdict[k])) + u'\n!' + u' '*35 + k.replace(u" ",u"_") + u'\n'
         Vfile.write(code_header)

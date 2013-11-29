@@ -74,7 +74,11 @@ MscGen2 ;
 
 LEXICON М_А_ёнок
 +N+Msc+Sg:ён%^Fок MSgStem ;
-+N+Msc+Pl:я́т аPlStem ;
++N+Msc+Pl:я́т аPlStem_zero ;
+
+LEXICON М_А1_JPl
++N+Msc+Sg: MSgStem ;
++N+Msc+Pl:%^Fей аPlStem ;
 
 LEXICON М_А2
 +N+Msc+Sg: MSgStem ;
@@ -119,16 +123,16 @@ LEXICON М_А-_Р2
 +N+Msc+Pl+Prb: ыPlStem ;
 
 LEXICON MscGen2
-+N+Msc+Sg+Gn2:у # ;
++N+Msc+Sg+Gen2:у # ;
 
 LEXICON MscLoc2
-+N+Msc+Sg+Lc2:у́ # ;
++N+Msc+Sg+Loc2:у́ # ;
 
 LEXICON MscLoc2на
-+N+Msc+Sg+L2n:у́ # ;
++N+Msc+Sg+Loc2na:у́ # ;
 
 LEXICON MscLoc2в
-+N+Msc+Sg+L2v:у́ # ;
++N+Msc+Sg+Loc2v:у́ # ;
 
 LEXICON М_В
 +N+Msc+Sg: MSgEnd ;
@@ -316,6 +320,30 @@ LEXICON М_Д
 +N+Msc+Sg: MSgEnd ;
 +N+Msc+Pl: ыPlStem ;
 
+LEXICON М_Д1_JPl
++N+Msc+Sg: MSgEnd ;
++N+Msc+Pl:%^Fей аPlStem ;
+
+LEXICON М_Д1_К_ЧЬ
++N+Msc+Sg:к MSgEnd ;
++N+Msc+Pl:ч%^Fей аPlStem ;
+
+LEXICON М_Д1_П2_JPl
++N+Msc+Sg: MSgEnd ;
++N+Msc+Pl:%^Fей аPlStem ;
+MscLoc2 ;
+
+LEXICON М_Д1_П2НА_JPl
+М_Д1_П2_JPl ;
+
+LEXICON М_Д1_П2_К_ЧЬ
++N+Msc+Sg:к MSgEnd ;
+:к MscLoc2 ;
++N+Msc+Pl:ч%^Fей аPlStem ;
+
+LEXICON М_Д1_П2НА_К_ЧЬ
+М_Д1_П2_К_ЧЬ ;
+
 LEXICON М_Д2
 +N+Msc+Sg: MSgEnd ;
 +N+Msc+Pl: ыPlStem_zero ;
@@ -335,9 +363,12 @@ LEXICON М_Е_П2В_ГОД
 :го́д М_Е_П2 ;
 +N+Msc+Pl+Gen:ле́т # ;
 
-LEXICON М_Е2
-+N+Msc+Sg: MSgStem ;
-+N+Msc+Pl: ыPlAnom_zero ;
+LEXICON М_Е2_ВОЛОС
++N+Msc+Sg:ос MSgStem ;
++N+Msc+Pl:ос ыPlNomStem ;
++N+Msc+Pl:ос ыPlAccInanStem ;
++N+Msc+Pl+Gen:о́с # ;
++N+Msc+Pl:ос PlPeriphEnd ;
 
 LEXICON МН._[М_Е]
 +N+Msc+Pl: ыPlAnom ;
@@ -435,24 +466,24 @@ LEXICON МО_А_ин_Suffix
 
 LEXICON МО_А_ёнок
 +N+Msc+Sg:ён%^Fок MSgStem_anim ;
-+N+Msc+Pl:я́т аPlStem_anim ;
++N+Msc+Pl:я́т аPlStem_anim_zero ;
 
 LEXICON МО_А_ёночек
 +N+Msc+Sg:ёноч%^Fек MSgStem_anim ;
-+N+Msc+Pl:я́т%^Fок ыPlStem_anim ;
++N+Msc+Pl:я́т%^Fок ыPlStem_anim_zero ;
 
 LEXICON МО_А_о́нок
 +N+Msc+Sg:о́н%^Fок MSgStem_anim ;
-+N+Msc+Pl:а́т аPlStem_anim ;
++N+Msc+Pl:а́т аPlStem_anim_zero ;
 
 LEXICON МО_А_о́ночек
 +N+Msc+Sg:о́ноч%^Fек MSgStem_anim ;
-+N+Msc+Pl:а́т%^Fок ыPlStem_anim ;
++N+Msc+Pl:а́т%^Fок ыPlStem_anim_zero ;
 
 LEXICON МН._[МО_А]
 +N+Msc+Pl: ыPlStem_anim ;
 
-LEXICON МО_А_СОСЕД
+LEXICON МО_А_SPl
 +N+Msc+Sg: MSgStem_anim ;
 +N+Msc+Pl:ь ыPlStem_anim ;
 
@@ -468,6 +499,14 @@ LEXICON МО_С1
 +N+Msc+Sg: MSgStem_anim ;
 +N+Msc+Pl: аPlEnd_anim ;
 
+LEXICON МО_С1_JPl
++N+Msc+Sg: MSgStem_anim ;
++N+Msc+Pl:%^Fе́йя́ аPlEnd_anim ;
+
+LEXICON МО_С1_Г_ЗЬ
++N+Msc+Sg:г MSgStem_anim ;
++N+Msc+Pl:з%^Fе́йя́ аPlEnd_anim ;
+
 LEXICON МО_Д
 +N+Msc+Sg: MSgEnd_anim ;
 +N+Msc+Pl: ыPlStem_anim ;
@@ -476,6 +515,10 @@ LEXICON МО_Е
 +N+Msc+Sg: MSgStem_anim ;
 +N+Msc+Pl: ыPlAnom_anim ;
 
+LEXICON МО_Е_ЗВЕРЬ
+МО_Е ;
++N+Msc+Pl+Ins+Fac:%>ьми́ # ;
+
 LEXICON МО_Ф
 +N+Msc+Sg: MSgEnd_anim ;
 +N+Msc+Pl: ыPlAnom_anim ;
@@ -483,6 +526,29 @@ LEXICON МО_Ф
 LEXICON МО_[СО_А]
 +N+Msc+Sg: NSgStem ;
 +N+Msc+Pl: аPlStem_anim ;     !Cyrillic 'а' in 'аPl'
+
+LEXICON МО_РЕБЕНОК
++N+Msc+Sg:ребён%^Fок MSgStem_anim ;
++N+Msc+Pl:де́ть ыPlNomStem ;
++N+Msc+Pl+Acc+Anim:дете́й # ;
++N+Msc+Pl+Gen:дете́й # ;
++N+Msc+Pl+Loc:де́тях # ;
++N+Msc+Pl+Dat:де́тям # ;
++N+Msc+Pl+Ins:детьми́ # ;
+
+LEXICON МО_ЧЕЛОВЕК
++N+Msc+Pl+Use/Obs:челове́к ыPlStem_anim ;
++N+Msc+Pl+Gen:челове́к # ;
+МО_ЧЕЛОВЕК2 ;
+
+LEXICON МО_ЧЕЛОВЕК2
++N+Msc+Sg:челове́к NSgStem ;
++N+Msc+Pl:лю́дь ыPlNomStem ;
++N+Msc+Pl+Acc+Anim:люде́й # ;
++N+Msc+Pl+Gen:люде́й # ;
++N+Msc+Pl+Loc:лю́дях # ;
++N+Msc+Pl+Dat:лю́дям # ;
++N+Msc+Pl+Ins:людьми́ # ;
 
 LEXICON МО-ЖО_0
 МО_0 ;
@@ -503,6 +569,10 @@ LEXICON МО-ЖО_А
 LEXICON МО_[ЖО_В] ! This also includes ЖО_В' because of the fleeting vowel rule in twolc
 +N+Msc+Sg: FSgEnd_anim ;
 +N+Msc+Pl: ыPlEnd_anim ;
+
+LEXICON МО_[ЖО_ВgPrb] ! This also includes ЖО_В' because of the fleeting vowel rule in twolc
++N+Msc+Sg: FSgEnd_anim ;
++N+Msc+Pl: ыPlEnd_anim_gPrb ;
 
 LEXICON МО-ЖО_В
 МО_[ЖО_В] ;
@@ -527,6 +597,13 @@ LEXICON МО-ЖО_Д
 LEXICON МО_[ЖО_Ф]
 +N+Fem+Sg: FSgEnd_anim ;
 +N+Fem+Pl: ыPlAnom_anim ;
+
+LEXICON МО_[ЖО_Ф_ОВА]
++N+Msc+Sg:ова́ FSgEnd ;
++N+Msc+Pl:ова́ ыPlNomStem ;
++N+Msc+Pl+Acc+Anim:о́в # ;
++N+Msc+Pl+Gen:о́в # ;
++N+Msc+Pl:ова́ PlPeriphEnd ;
 
 LEXICON МО_[П_А]
 +N+Msc+Sg+Nom:%>ый # ;
@@ -605,12 +682,39 @@ LEXICON С_А
 +N+Neu+Sg: NSgStem ;
 +N+Neu+Pl: аPlStem ;     !Cyrillic 'а' in 'аPl'
 
+LEXICON С_АgPrb
++N+Neu+Sg: NSgStem ;
++N+Neu+Pl: аPlStem_gPrb ;     !Cyrillic 'а' in 'аPl'
+
+LEXICON С_А_JPl
++N+Neu+Sg: NSgStem ;
++N+Neu+Pl:%^Fей аPlStem ;     !Cyrillic 'а' in 'аPl'
+
+LEXICON С_А_ДЕРЕВО
++N+Neu+Sg:де́рево NSgStem ;
++N+Neu+Pl:дере́в%^Fей аPlStem ;     !Cyrillic 'а' in 'аPl'
+
+LEXICON С_А_ОЗЕРО
++N+Neu+Sg:о́зеро NSgStem ;
++N+Neu+Pl:озёро аPlStem ;     !Cyrillic 'а' in 'аPl'
+
+LEXICON С_А_УТРО
+С_А ;
++N+Neu+Sg+Gen:%>а́ # ;
++N+Neu+Sg+Dat:%>у́ # ;
++N+Neu+Pl+Dat:%>а́м # ;
++N+Neu+Pl+Ins:%>а́ми # ;
+
 LEXICON МН._[С_А]
 +N+Neu+Pl: аPlStem ;     !Cyrillic 'а' in 'аPl'
 
 LEXICON С_А1
 +N+Neu+Sg: NSgStem ;
 +N+Neu+Pl: ыPlStem ;     !Cyrillic 'а' in 'аPl'
+
+LEXICON С_А1_SPl
++N+Neu+Sg: NSgStem ;
++N+Neu+Pl:ь ыPlStem ;
 
 LEXICON С_А12
 +N+Neu+Sg: NSgStem ;
@@ -667,6 +771,10 @@ LEXICON С_С
 +N+Neu+Sg: NSgStem ;
 +N+Neu+Pl: аPlEnd ;      !Cyrillic 'а' in 'аPl'
 
+LEXICON С_С_ЕСАPl
++N+Neu+Sg:о NSgStem ;
++N+Neu+Pl:е́са́ аPlEnd ;      !Cyrillic 'а' in 'аPl'
+
 LEXICON С_С2
 +N+Neu+Sg: NSgStem ;
 +N+Neu+Pl: аPlEnd_ов ;      !Cyrillic 'а' in 'аPl'
@@ -684,6 +792,19 @@ LEXICON С_Д
 +N+Neu+Sg: NSgEnd ;
 +N+Neu+Pl: аPlStem ;     !Cyrillic 'а' in 'аPl'
 
+LEXICON С_Д_JPl
++N+Neu+Sg: NSgEnd ;
++N+Neu+Pl:%^Fей аPlStem ;     !Cyrillic 'а' in 'аPl'
+
+LEXICON С_Д_[JPl]
++N+Neu+Sg: NSgEnd ;
++N+Neu+Pl:о́ аPlStem ;     !Cyrillic 'а' in 'аPl'
++N+Neu+Pl:%^Fей аPlStem ;     !Cyrillic 'а' in 'аPl'
+
+LEXICON С_Д_ДНО
++N+Neu+Sg:д%^Fо́но́ NSgEnd ;
++N+Neu+Pl:до́н%^Fей аPlStem ;     !Cyrillic 'а' in 'аPl'
+
 LEXICON С_Д1
 +N+Neu+Sg: NSgEnd ;
 +N+Neu+Pl: ыPlStem ;     !Cyrillic 'а' in 'аPl'
@@ -699,6 +820,13 @@ LEXICON С_Д-
 LEXICON С_Ф
 +N+Neu+Sg: NSgEnd ;
 +N+Neu+Pl: аPlAnom ;     !Cyrillic 'а' in 'аPl'
+
+LEXICON С_Ф1_ПЛЕЧО
++N+Neu+Sg: NSgEnd ;
++N+Neu+Pl: ыPlNomStem ;
++N+Neu+Pl: ыPlAccInanStem ;
++N+Neu+Pl+Gen:%>%^Z # ;
++N+Neu+Pl: PlPeriphEnd ;
 
 LEXICON СО_0
 +N+Neu+Sg+Nom: # ;
@@ -829,6 +957,12 @@ LEXICON Ж_А
 LEXICON МН._[Ж_А]
 +N+Fem+Pl: ыPlStem ;
 
+LEXICON МН._[Ж_А]_ХЛОПОТЫ
++N+Fem+Pl:ота ыPlNomStem ;
++N+Fem+Pl:ота ыPlAccInanStem ;
++N+Fem+Pl+Gen:о́т # ;
++N+Fem+Pl:ота PlPeriphStem ;
+
 LEXICON Ж_А2
 +N+Fem+Sg: FSgStem ;
 +N+Fem+Pl: ыPlStem_ей ;
@@ -876,7 +1010,7 @@ LEXICON Ж_8А-_П2НА
 FemLoc2 ;
 
 LEXICON FemLoc2
-+N+Fem+Sg+Lc2:и́ # ;
++N+Fem+Sg+Loc2:и́ # ;
 
 LEXICON Ж_В ! This also includes Ж_В' because of the fleeting vowel rule in twolc
 +N+Fem+Sg: FSgEnd ;
@@ -884,6 +1018,13 @@ LEXICON Ж_В ! This also includes Ж_В' because of the fleeting vowel rule in 
 
 LEXICON МН._[Ж_В]
 +N+Fem+Pl: ыPlEnd ;
+
+LEXICON Ж_ВgPrb
++N+Fem+Sg: FSgEnd ;
++N+Fem+Pl: ыPlEnd_gPrb ;
+
+LEXICON МН._[Ж_ВgPrb]
++N+Fem+Pl: ыPlEnd_gPrb ;
 
 LEXICON Ж_В- ! This also includes Ж_В'- because of the fleeting vowel rule in twolc
 +N+Fem+Sg: FSgEnd ;
@@ -916,6 +1057,18 @@ LEXICON Ж_Е
 LEXICON МН._[Ж_Е]
 +N+Fem+Pl: ыPlAnom ;
 
+LEXICON МН._[Ж_Е]_ОНА
++N+Fem+Pl:она ыPlNomStem ;
++N+Fem+Pl:она ыPlAccInanStem ;
++N+Fem+Pl+Gen:о́н # ;
++N+Fem+Pl:она PlPeriphEnd ;
+
+LEXICON МН._[Ж_Е]_ОСА
++N+Fem+Pl:оса ыPlNomStem ;
++N+Fem+Pl:оса ыPlAccInanStem ;
++N+Fem+Pl+Gen:о́с # ;
++N+Fem+Pl:оса PlPeriphEnd ;
+
 LEXICON Ж_8Е
 +N+Fem+Sg: FьSgStem ;
 +N+Fem+Pl: ыPlAnom ;
@@ -924,6 +1077,10 @@ LEXICON Ж_8Е_П2
 +N+Fem+Sg: FьSgStem ;
 +N+Fem+Pl: ыPlAnom ;
 FemLoc2 ;
+
+LEXICON Ж_8Е_П2_ДВЕРЬ
+Ж_8Е_П2 ;
++N+Fem+Pl+Ins:%>ьми́ # ;
 
 LEXICON Ж_8Е_[П2]
 +N+Fem+Sg: FьSgStem ;
@@ -965,9 +1122,108 @@ LEXICON Ж_Ф
 +N+Fem+Sg: FSgEnd ;
 +N+Fem+Pl: ыPlAnom ;
 
+LEXICON Ж_Ф_ОЗДА
++N+Fem+Sg:озда́ FSgEnd ;
++N+Fem+Pl:озда́ ыPlNomStem ;
++N+Fem+Pl:озда́ ыPlAccInanStem ;
++N+Fem+Pl+Gen:о́зд # ;
++N+Fem+Pl:озда́ PlPeriphEnd ;
+
+LEXICON Ж_Ф_ОДА
++N+Fem+Sg:ода́ FSgEnd ;
++N+Fem+Pl:ода́ ыPlNomStem ;
++N+Fem+Pl:ода́ ыPlAccInanStem ;
++N+Fem+Pl+Gen:о́д # ;
++N+Fem+Pl:ода́ PlPeriphEnd ;
+
+LEXICON Ж_Ф_ЁЗА
++N+Fem+Sg:еза́ FSgEnd ;
++N+Fem+Pl:еза́ ыPlNomStem ;
++N+Fem+Pl:еза́ ыPlAccInanStem ;
++N+Fem+Pl+Gen:ёз # ;
++N+Fem+Pl:еза́ PlPeriphEnd ;
+
+LEXICON Ж_Ф_ОНА
++N+Fem+Sg:она́ FSgEnd ;
++N+Fem+Pl:она́ ыPlNomStem ;
++N+Fem+Pl:она́ ыPlAccInanStem ;
++N+Fem+Pl+Gen:о́н # ;
++N+Fem+Pl:она́ PlPeriphEnd ;
+
+LEXICON Ж_Ф_ИРА
++N+Fem+Sg:ира́ FSgEnd ;
++N+Fem+Pl:ира́ ыPlNomStem ;
++N+Fem+Pl:ира́ ыPlAccInanStem ;
++N+Fem+Pl+Gen:и́р # ;
++N+Fem+Pl:ира́ PlPeriphEnd ;
+
+LEXICON Ж_Ф_ОРА
++N+Fem+Sg:ора́ FSgEnd ;
++N+Fem+Pl:ора́ ыPlNomStem ;
++N+Fem+Pl:ора́ ыPlAccInanStem ;
++N+Fem+Pl+Gen:о́р # ;
++N+Fem+Pl:ора́ PlPeriphEnd ;
+
+LEXICON Ж_Ф_ОСА
++N+Fem+Sg:оса́ FSgEnd ;
++N+Fem+Pl:оса́ ыPlNomStem ;
++N+Fem+Pl:оса́ ыPlAccInanStem ;
++N+Fem+Pl+Gen:о́с # ;
++N+Fem+Pl:оса́ PlPeriphEnd ;
+
+LEXICON Ж_Ф_ПРОСТЫНЯ
++N+Fem+Sg:ыня́ FSgEnd ;
++N+Fem+Pl:ыня́ ыPlNomStem ;
++N+Fem+Pl:ыня́ ыPlAccInanStem ;
++N+Fem+Pl+Gen:ыне́й # ;
++N+Fem+Pl+Gen:ы́нь # ;
++N+Fem+Pl:ыня́ PlPeriphEnd ;
+
 LEXICON Ж_Ф' ! Anomolous retraction
 +N+Fem+Sg: FSgRetr ;
 +N+Fem+Pl: ыPlAnom ;
+
+LEXICON Ж_Ф'_ОВА
++N+Fem+Sg:ова́ FSgRetr ;
++N+Fem+Pl:ова́ ыPlNomStem ;
++N+Fem+Pl:ова́ ыPlAccInanStem ;
++N+Fem+Pl+Gen:о́в # ;
++N+Fem+Pl:ова́ PlPeriphEnd ;
+
+LEXICON Ж_Ф'_ЁДА
++N+Fem+Sg:еда́ FSgRetr ;
++N+Fem+Pl:еда́ ыPlNomStem ;
++N+Fem+Pl:еда́ ыPlAccInanStem ;
++N+Fem+Pl+Gen:ёд # ;
++N+Fem+Pl:еда́ PlPeriphEnd ;
+
+LEXICON Ж_Ф'_ОЗДА
++N+Fem+Sg:озда́ FSgRetr ;
++N+Fem+Pl:озда́ ыPlNomStem ;
++N+Fem+Pl:озда́ ыPlAccInanStem ;
++N+Fem+Pl+Gen:о́зд # ;
++N+Fem+Pl:озда́ PlPeriphEnd ;
+
+LEXICON Ж_Ф'_ОДА
++N+Fem+Sg:ода́ FSgRetr ;
++N+Fem+Pl:ода́ ыPlNomStem ;
++N+Fem+Pl:ода́ ыPlAccInanStem ;
++N+Fem+Pl+Gen:о́д # ;
++N+Fem+Pl:ода́ PlPeriphEnd ;
+
+LEXICON Ж_Ф'_ОНА
++N+Fem+Sg:она́ FSgRetr ;
++N+Fem+Pl:она́ ыPlNomStem ;
++N+Fem+Pl:она́ ыPlAccInanStem ;
++N+Fem+Pl+Gen:о́н # ;
++N+Fem+Pl:она́ PlPeriphEnd ;
+
+LEXICON Ж_Ф'_ОСА
++N+Fem+Sg:оса́ FSgRetr ;
++N+Fem+Pl:оса́ ыPlNomStem ;
++N+Fem+Pl:оса́ ыPlAccInanStem ;
++N+Fem+Pl+Gen:о́с # ;
++N+Fem+Pl:оса́ PlPeriphEnd ;
 
 LEXICON ЖО_0
 +N+Fem+Sg+Nom: # ;
@@ -999,6 +1255,13 @@ LEXICON ЖО_В ! This also includes Ж_В' because of the fleeting vowel rule i
 +N+Fem+Sg: FSgEnd ;
 +N+Fem+Pl: ыPlEnd_anim ;
 
+LEXICON ЖО_ВgPrb ! This also includes Ж_В' because of the fleeting vowel rule in twolc
++N+Fem+Sg: FSgEnd ;
++N+Fem+Pl: ыPlEnd_anim_gPrb ;
+
+LEXICON МН._[ЖО_ВgPrb]
++N+Fem+Pl: ыPlEnd_anim_gPrb ;
+
 LEXICON ЖО_В- ! This also includes Ж_В' because of the fleeting vowel rule in twolc
 +N+Fem+Sg: FSgEnd ;
 +N+Fem+Pl+Prb: ыPlEnd_anim ;
@@ -1018,6 +1281,29 @@ LEXICON ЖО_Д'
 LEXICON ЖО_8Е
 +N+Fem+Sg: FьSgStem ;
 +N+Fem+Pl: ыPlAnom_anim ;
+
+LEXICON ЖО_8Е_ДОЧЬ
++N+Fem+Sg+Nom:до́чь # ;
++N+Fem+Sg+Acc:до́чь # ;
++N+Fem+Sg+Gen:до́чери # ;
++N+Fem+Sg+Loc:до́чери # ;
++N+Fem+Sg+Dat:до́чери # ;
++N+Fem+Sg+Ins:до́черью # ;
++N+Fem+Pl:до́черь ыPlAnom_anim ;
++N+Fem+Pl+Ins:дочерьми́ # ;
+
+LEXICON ЖО_8Е_ЛОШАДЬ
+ЖО_8Е ;
++N+Fem+Pl+Ins:ми́ # ;
+
+LEXICON ЖО_8Е_МАТЬ
++N+Fem+Sg+Nom:ма́ть # ;
++N+Fem+Sg+Acc:ма́ть # ;
++N+Fem+Sg+Gen:ма́тери # ;
++N+Fem+Sg+Loc:ма́тери # ;
++N+Fem+Sg+Dat:ма́тери # ;
++N+Fem+Sg+Ins:ма́терью # ;
++N+Fem+Pl:ма́терь ыPlAnom_anim ;
 
 LEXICON ЖО_Ф
 +N+Fem+Sg: FSgEnd ;
@@ -1154,6 +1440,12 @@ LEXICON ыPlEnd       !Inanimate
 ыPlAccInanEnd ;
 PlObliqEnd ;
 
+LEXICON ыPlEnd_gPrb
+ыPlNomEnd ;
+ыPlAccInanEnd ;
++Gen+Prb:%>о́в # ;
+PlPeriphEnd ;
+
 LEXICON ыPlEnd_ей      !Inanimate
 ыPlNomEnd ;
 ыPlAccInanEnd ;
@@ -1188,10 +1480,22 @@ LEXICON аPlStem      !Inanimate
 аPlAccInanStem ;
 PlObliqStem ;
 
+LEXICON аPlStem_gPrb      !Inanimate
+аPlNomStem ;
+аPlAccInanStem ;
++Gen+Prb:%>ов # ;
+PlPeriphStem ;
+
 LEXICON аPlStem_ов      !Inanimate
 аPlNomStem ;
 аPlAccInanStem ;
 +Gen:%>ов%^G # ;
+PlPeriphStem ;
+
+LEXICON аPlStem_zero      !Inanimate
+аPlNomStem ;
+аPlAccInanStem ;
++Gen:%>%^Z # ;
 PlPeriphStem ;
 
 LEXICON аPlEnd       !Inanimate
@@ -1238,6 +1542,12 @@ LEXICON ыPlEnd_anim
 PlAccAnimEnd ;
 PlObliqEnd ;
 
+LEXICON ыPlEnd_anim_gPrb
+ыPlNomEnd ;
++Acc+Anim+Prb:%>о́в # ;
++Gen+Prb:%>о́в # ;
+PlPeriphEnd ;
+
 LEXICON ыPlEnd_anim_ов
 ыPlNomEnd ;
 +Acc+Anim:%>о́в%^G # ;
@@ -1258,6 +1568,12 @@ LEXICON аPlStem_anim_ов
 аPlNomStem ;
 +Acc+Anim:%>о́в%^G # ;
 +Gen:%>о́в%^G # ;
+PlPeriphStem ;
+
+LEXICON аPlStem_anim_zero
+аPlNomStem ;
++Acc+Anim:%>%^Z # ;
++Gen:%>%^Z # ;
 PlPeriphStem ;
 
 LEXICON аPlEnd_anim
@@ -1318,9 +1634,6 @@ LEXICON Pl_ин
 +Acc+Anim: # ;
 +Gen: # ;
 PlPeriphEnd ;
-
-
-
 
 !  
 !  

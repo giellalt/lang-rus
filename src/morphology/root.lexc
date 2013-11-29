@@ -28,14 +28,14 @@ Multichar_Symbols
 +Sg +Pl
 +Msc +Fem +Neu +Inan +Anim
 +Nom +Acc +Gen +Ins +Dat +Loc
-+Lc2 +L2v +L2n +Gn2
++Loc2 +Loc2v +Loc2na +Gen2
 +Ord
 
 ! Other tags
 +Prb ! Problematic
 +Fac ! Facultative
-+Obs ! Obsolete
-+Sub ! Substandard
++Use/Obs ! Obsolete
++Use/Sub ! Substandard
 
 ! Key lexicon
 LEXICON Root

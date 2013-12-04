@@ -1073,6 +1073,10 @@ LEXICON Ж_8Е
 +N+Fem+Sg: FьSgStem ;
 +N+Fem+Pl: ыPlAnom ;
 
+LEXICON Ж_8Е_ЦЕРКОВЬ
+:ь Ж_8Е ;
++N+Fem+Pl: PlPeriphEnd ;
+
 LEXICON Ж_8Е_П2
 +N+Fem+Sg: FьSgStem ;
 +N+Fem+Pl: ыPlAnom ;

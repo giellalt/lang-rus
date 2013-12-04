@@ -4,6 +4,9 @@ Alphabet
       %^F:0  ! placed immediately before fleeting vowels Fа Fе Fо Fи Fя Fа́ Fе́ Fё Fо́ Fи́ Fя́
       %^G:0  ! Facilitates GenPl ов/ев when it "should" be zero/ей (its presence blocks the transformation rule)
       %^Z:0 %^Z:ь %^Z:й    ! "Zero ending" resolves to 0/ь/й (used for MascNomSg and irregular GenPl)
+      %^VM:0 ! Verb stem mutation
+      %^AM:0 ! Adjective stem mutation
+
       %- ! hyphen
       а б в г д е ё ж з и й к л м н о п р с т у ф х ц ч ш щ ъ ы ь э ю я 
       а́         е́       и́           о́         у́               ы́   э́ ю́ я́ 
@@ -24,25 +27,25 @@ StressedV = а́ е́ ё и́ о́ у́ ы́ э́ ю́ я́ ;
 Definitions
 
 End = [ а́:0 | о́:0 | а:0 | о:0 | я́:0 | ё:0 | е́:0 | я:0 | е:0 | ь:0 | й:0 ] ;
-VELEndV = VEL [ а́:0 | о́:0 | а:0 | о:0 ] %>:0 ;     ! тоска́, молоко́, кни́га, я́блоко
-VELEndC = VEL %>:0 ;                               ! уче́бник
+VELEndV = :VEL [ а́:0 | о́:0 | а:0 | о:0 ] %>:0 ;     ! тоска́, молоко́, кни́га, я́блоко
+VELEndC = :VEL %>:0 ;                               ! уче́бник
 VELEnd = [ VELEndV | VELEndC ] ;
-HUSHEndV = HUSH [ а́:0 | о́:0 | а:0 | е:0 ] %>:0 ;   ! моча́, плечо́, пи́ща, чудо́вище
-HUSHEndC = HUSH ( ь:0 ) %>:0 ;                     ! мяч, вещь
+HUSHEndV = :HUSH [ а́:0 | о́:0 | а:0 | е:0 ] %>:0 ;   ! моча́, плечо́, пи́ща, чудо́вище
+HUSHEndC = :HUSH ( ь:0 ) %>:0 ;                     ! мяч, вещь
 HUSHEnd = [ HUSHEndV | HUSHEndC ] ;
-цEndV = ц [ а́:0 | о́:0 | а:0 | е:0 ] %>:0 ;         ! рысца́, мясцо́, учи́тельница, се́рдце
-цEndC = ц %>:0 ;                                   ! молоде́ц
+цEndV = :ц [ а́:0 | о́:0 | а:0 | е:0 ] %>:0 ;         ! рысца́, мясцо́, учи́тельница, се́рдце
+цEndC = :ц %>:0 ;                                   ! молоде́ц
 цEnd = [ цEndV | цEndC ] ;
-SCEndVN = PC [ е́:0 | е:0 | ё:0 ] %>:0 ;            ! мо́ре 
-SCEndVF = PC [ я́:0 | я:0 ] %>:0 ;                  ! земля́, неде́ля
+SCEndVN = :PC [ е́:0 | е:0 | ё:0 ] %>:0 ;            ! мо́ре 
+SCEndVF = :PC [ я́:0 | я:0 ] %>:0 ;                  ! земля́, неде́ля
 SCEndV = [ SCEndVN | SCEndVF ] ;
-SCEndC = PC [ ь:0 ] %>:0 ;                         ! конь
+SCEndC = :PC [ ь:0 ] %>:0 ;                         ! конь
 SCEnd = [ SCEndV | SCEndC ] ;
-HCEndV = PC [ а́:0 | о́:0 | а:0 | о:0 ] %>:0 ;       ! красота́, окно́, ве́ра, сло́во
-HCEndC = PC %>:0 ;                                 ! пол
+HCEndV = :PC [ а́:0 | о́:0 | а:0 | о:0 ] %>:0 ;       ! красота́, окно́, ве́ра, сло́во
+HCEndC = :PC %>:0 ;                                 ! пол
 HCEnd = [ HCEndV | HCEndC ] ;
-VEndV = V [ я́:0 | ё:0 | е́:0 | я:0 | е:0 ] %>:0 ;   ! судия́, остриё, житие́, Мари́я, поня́тие
-VEndC = V [ й:0 ] %>:0 ;                           ! музе́й
+VEndV = :V [ я́:0 | ё:0 | е́:0 | я:0 | е:0 ] %>:0 ;   ! судия́, остриё, житие́, Мари́я, поня́тие
+VEndC = :V [ й:0 ] %>:0 ;                           ! музе́й
 VEnd = [ VEndV | VEndC ] ;
 JEndV = %^F:0 V: й: [ я́:0 | ё:0 | я:0 | е:0 ] %>:0 ; ! семья́, бельё, колдунья, счастье
 JEndC = %^F:0 V: й: %>:0 ;                           ! мураве́й
@@ -50,6 +53,7 @@ JEnd = [ JEndV | JEndC ] ;
 jEndV = \%^F:0 V: й:й [ я́:0 | ё:0 | я:0 | е:0 ] %>:0 ; ! вайя
 jEndC = \%^F:0 V: й:й %>:0 ;                           ! Are there any like this?
 jEnd = [ jEndV | jEndC ] ;
+V2 = [ :HUSH | :VEL | :ц ] %^VM:0 %>:0 ;
 
 Rules
 
@@ -69,7 +73,7 @@ where Vx in ( а е ё и я а́ е́ и́ я́ ) ;
 "Delete о/о́ in lexical endings, fleeting vowels, and GenPl after hard consonants"
 [ о:0 | о́:0 ] <=> .#. [ Letter: | %^F:0 ]+ _  %>:0 ; ! lexical ending
                   %^F:0 _ [ Letter ]+ (End) %>:0 :V ; ! fleeting vowel
-                  [ VELEndV | HUSHEndV | цEndV | HCEndV | JEndV ] _ в:0 .#. ; ! zero GenPl
+                  [ VELEndV | HUSHEndV | цEndV | HCEndV | JEndV | jEnd ] _ в:0 .#. ; ! zero GenPl
 
 "Delete ь in lexical endings, and before fleeting vowels"
 ь:0 <=> .#. [ Letter: | %^F:0 ]+ _  %>:0 ;
@@ -101,7 +105,7 @@ where Vx in ( ы ы́ )
     matched;
 
 "ю>у and я>а (stressed or unstressed) after a velar, husher, or ц"
-Vx:Vy <=> [ VELEnd | HUSHEnd | цEnd ] _ ;
+Vx:Vy <=> [ VELEnd | HUSHEnd | цEnd | V2 ] _ ;
 where Vx in ( ю ю́ я я́ )
       Vy in ( у у́ а а́ )
     matched;
@@ -122,7 +126,7 @@ where Vx in ( а у а́ о́ у́ )
 о́:е́ <=> [ HUSHEndC | HUSHEndV | SCEndC | SCEndV ] _ в:й .#. ;
 
 "Genitive Plural: zero в:0"
-в:0 <=> [ VELEndV | цEndV | HCEndV | VEndV | JEndV ] [ о: | о́: ] _ .#. ;
+в:0 <=> [ VELEndV | цEndV | HCEndV | VEndV | JEndV | jEnd ] [ о: | о́: ] _ .#. ;
         HUSHEndV о: _ .#. ;
         SCEndV о: _ .#. ;
 "Genitive Plural: zero after soft C = ь"

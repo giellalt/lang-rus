@@ -9,6 +9,8 @@ Multichar_Symbols
 %^F ! Fleeting vowel marker
 %^G ! Irregular GenPl marker (used to keep ов/ев on neuter stems, e.g. ов%^G
 %^Z ! Zero ending (resolves to 0/й/ь)
+%^VM ! Verb stem mutation
+%^AM ! Adjective stem mutation
 
 ! POS
 +N +V +A 
@@ -16,12 +18,11 @@ Multichar_Symbols
 +Prop
 
 ! Verbal MSP
-+Prs +Fut +Prt +Prf 
-+Ind +Imp +Cond +Opt
++Prs +Fut +Pst 
++Inf +Ind +Imp +Cond
 +Sg1 +Sg2 +Sg3 +Pl1 +Pl2 +Pl3
-+Inf
-+Pos +Neg +ConNeg
-+PrsPrc +PrtPrc
++Pos +Neg
++PrsPrc +PstPrc
 +Act +Pass
 
 ! Nominal MSP
@@ -44,9 +45,9 @@ Adjective ;
 Noun ;
 Conjunction ;
 Preposition ;
+Verb ;
 
 !Propernoun ;
-!Verb ;
 !Adverb ;
 !Subjunction ;
 !Interjection ;

@@ -13,15 +13,18 @@ Multichar_Symbols
 %^AM ! Adjective stem mutation
 
 ! POS
-+N +V +A 
-+Adv +CC +CS +Interj +Pron +Num
++N +V +A
++Pron +Num
++Adv +Pr +CC +CS +Interj !ради can be a postposition. Do we need a tag for it?
 +Prop
++Particle
 
 ! Verbal MSP
-+Prs +Fut +Pst 
++Impf +Perf
++Intrans +Trans
++Prs +Fut +Pst ! Technically this should be +Pst and +NonPst (mystem has настоящ. непрошед. and прошед. Why present?)
 +Inf +Ind +Imp +Cond
 +Sg1 +Sg2 +Sg3 +Pl1 +Pl2 +Pl3
-+Pos +Neg
 +PrsPrc +PstPrc
 +Act +Pass
 
@@ -30,27 +33,60 @@ Multichar_Symbols
 +Msc +Fem +Neu +Inan +Anim
 +Nom +Acc +Gen +Ins +Dat +Loc
 +Loc2 +Loc2v +Loc2na +Gen2
++Voc
 +Ord
++Cmpar +Super
+! Tag for collective nouns? +Coll
+! Tag for possessives? +Poss
 
 ! Other tags
-+Prb ! Problematic
++Prb ! затруднительно - +Prb(lematic); предположительно - +Hyp(othetical); нет - +Gap
 +Fac ! Facultative
 +Use/Obs ! Obsolete
 +Use/Sub ! Substandard
+! More use tags: 
+! ласкательное - +Use/Aff(ectionate)
+! литературное - +Use/Lit(erary)
+! народнопоэтическое - +Use/Flk (folk poetry)
+! областное - +Use/Dia(lectal)
+! поэтический - +Use/Poet(ic)
+! просторечное - +Use/Sub(standard)
+! профессиональо - +Use/Prof(essional) 
+! старинное - +Use/Anc(ient)
+! увеличительное - +Use/Aug(mentative)
+! уменьшительное - +Use/Dim(inutive)
+! устаревающее - +Use/Old (going out of date)
+! устаревшее - +Use/Ant(iquated)
+! anatomical - +Use/Anat
+! biological - +Use/Bio
+! botanical - +Use/Bot
+! geological - +Use/Geo
+! grammatical - +Use/Gram
+! zoological - +Use/Zoo
+! historical - +Use/Hist(orical)
+! mathematical - +Use/Math
+! medical - +Use/Med
+! musical - +Use/Mus
+! agriculatural - +Use/Agr
+! technical - +Use/Tech
+! chemical - +Use/Chem
+! church - +Use/Relig
+! law - +Use/Law
+! etc. +Use/Mari(time)
 
 ! Key lexicon
 LEXICON Root
 
 Adjective ;
-Noun ;
+Adverb ;
 Conjunction ;
+Interjection ;
+Noun ;
 Preposition ;
 Verb ;
 
 !Propernoun ;
-!Adverb ;
 !Subjunction ;
-!Interjection ;
 !Numeral ;
 !Pronoun ;
 !Punctuation ;

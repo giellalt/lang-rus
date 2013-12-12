@@ -1,292 +1,645 @@
+LEXICON П_0
++Sg+Msc+Nom: # ;
++Sg+Msc+Acc+Inan: # ;
++Sg+Msc+Acc+Anim: # ;
++Sg+Msc+Gen: # ;
++Sg+Msc+Loc: # ;
++Sg+Msc+Dat: # ;
++Sg+Msc+Ins: # ;
++Sg+Neu+Nom: # ;
++Sg+Neu+Acc: # ;
++Sg+Neu+Gen: # ;
++Sg+Neu+Loc: # ;
++Sg+Neu+Dat: # ;
++Sg+Neu+Ins: # ;
++Sg+Fem+Nom: # ;
++Sg+Fem+Acc: # ;
++Sg+Fem+Gen: # ;
++Sg+Fem+Loc: # ;
++Sg+Fem+Dat: # ;
++Sg+Fem+Ins: # ;
++Pl+Nom: # ;
++Pl+Acc+Inan: # ;
++Pl+Acc+Anim: # ;
++Pl+Gen: # ;
++Pl+Loc: # ;
++Pl+Dat: # ;
++Pl+Ins: # ;
+
+LEXICON П_А
++A: LF_stem ;
++A: SF_a ;
++A: SF_comp_stem ;
+
+LEXICON П_А_noLF
++A: SF_a ;
++A: SF_comp_stem ;
+
+LEXICON П_А_compPrb
++A: LF_stem ;
++A: SF_a ;
++A+Prb: SF_comp_stem ;
+
+LEXICON П_А_sfcompPrb
++A: LF_stem ;
++A+Prb: SF_a ;
++A+Prb: SF_comp_stem ;
+
+LEXICON П_А'
++A: LF_stem ;
++A: SF_a' ;
++A: SF_comp_stem ;
+
+LEXICON П_А'_FemsfPrb
++A: LF_stem ;
++A: SF_a'_FemPrb ;
++A: SF_comp_stem ;
+
+LEXICON П_А'А
++A: LF_stem ;
++A: SF_a' ;
+
+LEXICON П_А'А_FemsfPrb
++A: LF_stem ;
++A: SF_a'_FemPrb ;
+
+LEXICON П_А'_compPrb
++A: LF_stem ;
++A: SF_a' ;
++A+Prb: SF_comp_stem ;
+
+LEXICON П_А/В
++A: LF_stem ;
++A: SF_b ;
++A: SF_comp_stem ;
+
+LEXICON П_А/ВА
++A: LF_stem ;
++A: SF_b ;
+
+LEXICON П_А/ВsА
++A: LF_stem ;
++A: SF_b ;
+
+LEXICON П_А/В'
++A: LF_stem ;
++A: SF_b' ;
++A: SF_comp_stem ;
+
+LEXICON П_А/С
++A: LF_stem ;
++A: SF_c ;
++A: SF_comp_stem ;
+
+LEXICON П_А/С_FemsfPrb
++A: LF_stem ;
++A: SF_c_FemPrb ;
++A: SF_comp_stem ;
+
+LEXICON П_А/СsА
++A: LF_stem ;
++A+Prb: SF_c ;
+
+LEXICON П_А/СА
++A: LF_stem ;
++A: SF_c ;
+
+LEXICON П_А/СА_FemsfPrb
++A: LF_stem ;
++A: SF_c_FemPrb ;
+
+LEXICON П_А/СА_noLF
++A: SF_c ;
+
+LEXICON П_А/С_compPrb
++A: LF_stem ;
++A: SF_c ;
++A+Prb: SF_comp_stem ;
+
+LEXICON П_А/С'
++A: LF_stem ;
++A: SF_c' ;
++A: SF_comp_stem ;
+
+LEXICON П_А/С'sА
++A: LF_stem ;
++A+Prb: SF_c' ;
+
+LEXICON П_А/С'А
++A: LF_stem ;
++A: SF_c' ;
+
+LEXICON П_А/С''
++A: LF_stem ;
++A: SF_c'' ;
++A: SF_comp_stem ;
+
+LEXICON П_А/С''А
++A: LF_stem ;
++A: SF_c'' ;
+
+LEXICON П_Аs
++A: LF_stem ;
++A+Prb: SF_a ;
++A: SF_comp_stem ;
+
+LEXICON П_АsА
++A: LF_stem ;
++A+Prb: SF_a ;
+
+LEXICON П_АА
++A: LF_stem ;
++A: SF_a ;
+
+LEXICON П_А?А
++A: LF_stem ;
++A+Prb: SF_a ;
+
+LEXICON П_АА_FemsfPrb
++A: LF_stem ;
++A: SF_a_FemPrb ;
+
+LEXICON П_АА_noLF
++A: SF_a ;
+
+LEXICON П_А-
++A: LF_stem ;
++A: SF-_a ;
++A: SF_comp_stem ;
+
+LEXICON П_А1
++A:н LF_stem ;
++A: SF1_a ;
++A:н SF_comp_stem ;
+
+LEXICON П_А1-
++A:н LF_stem ;
++A: SF1-_a ;
++A:н SF_comp_stem ;
+
+LEXICON П_А[1]
++A:н LF_stem ;
++A:н SF_a ;
++A+Fac: SF1_a ;
++A:н SF_comp_stem ;
+
+LEXICON П_А2
++A:н LF_stem ;
++A: SF_a ;
++A:н SF_comp_stem ;
+
+LEXICON П_А/В2
++A:н LF_stem ;
++A: SF_b ;
++A:н SF_comp_stem ;
+
+LEXICON П_В
++A: LF_end ;
++A: SF_b ;
++A: SF_comp_end ;
+
+LEXICON П_ВА
++A: LF_end ;
++A: SF_b ;
+
+LEXICON П_ВА_noLF
++A: SF_b ;
+
+LEXICON П_В/С
++A: LF_end ;
++A: SF_c ;
++A: SF_comp_end ;
+
+LEXICON П_В/Сs
++A: LF_end ;
++A+Prb: SF_c ;
++A: SF_comp_end ;
+
+LEXICON П_В/СА
++A: LF_end ;
++A: SF_c ;
+
+LEXICON П_В/СsА
++A: LF_end ;
++A+Prb: SF_c ;
+
+LEXICON П_В/С'
++A: LF_end ;
++A: SF_c' ;
++A: SF_comp_end ;
+
+LEXICON П_В/С'_compPrb
++A: LF_end ;
++A: SF_c' ;
++A+Prb: SF_comp_end ;
+
+LEXICON П_В/С'А
++A: LF_end ;
++A: SF_c' ;
+
+LEXICON П_В/С'sА
++A: LF_end ;
++A+Prb: SF_c' ;
+
+LEXICON П_В/С''
++A: LF_end ;
++A: SF_c'' ;
++A: SF_comp_end ;
+
+LEXICON П_В-
++A: LF_end ;
++A: SF-_b ;
++A: SF_comp_end ;
+
+LEXICON П_В?
++A: LF_end ;
++A+Prb: SF_b ;    ! Technically, this isn't what Zaliznjak says. According to Zaliznjak, the Masc short-form is "hypothetical".
++A: SF_comp_end ;
+
+LEXICON П_В?А
++A: LF_end ;
++A+Prb: SF_b ;    ! Technically, this isn't what Zaliznjak says. According to Zaliznjak, the Masc short-form is "hypothetical".
+
+LEXICON LF_stem
++Sg+Msc+Nom:%>ый  # ;
++Sg+Msc+Acc+Inan:%>ый  # ;
++Sg+Msc+Acc+Anim:%>ого  # ;
++Sg+Msc+Gen:%>ого  # ;
++Sg+Msc+Loc:%>ом  # ;
++Sg+Msc+Dat:%>ому  # ;
++Sg+Msc+Ins:%>ым  # ;
++Sg+Neu+Nom:%>ое  # ;
++Sg+Neu+Acc:%>ое  # ;
++Sg+Neu+Gen:%>ого  # ;
++Sg+Neu+Loc:%>ом  # ;
++Sg+Neu+Dat:%>ому  # ;
++Sg+Neu+Ins:%>ым  # ;
++Sg+Fem+Nom:%>ая  # ;
++Sg+Fem+Acc:%>ую  # ;
++Sg+Fem+Gen:%>ой  # ;
++Sg+Fem+Loc:%>ой  # ;
++Sg+Fem+Dat:%>ой  # ;
++Sg+Fem+Ins:%>ой  # ;
++Pl+Nom:%>ые  # ;
++Pl+Acc+Inan:%>ые  # ;
++Pl+Acc+Anim:%>ых  # ;
++Pl+Gen:%>ых  # ;
++Pl+Loc:%>ых  # ;
++Pl+Dat:%>ым  # ;
++Pl+Ins:%>ыми  # ;
+
+LEXICON LF_end
++Sg+Msc+Nom:%>о́й  # ;
++Sg+Msc+Acc+Inan:%>о́й  # ;
++Sg+Msc+Acc+Anim:%>о́го  # ;
++Sg+Msc+Gen:%>о́го  # ;
++Sg+Msc+Loc:%>о́м  # ;
++Sg+Msc+Dat:%>о́му  # ;
++Sg+Msc+Ins:%>ы́м  # ;
++Sg+Neu+Nom:%>о́е  # ;
++Sg+Neu+Acc:%>о́е  # ;
++Sg+Neu+Gen:%>о́го  # ;
++Sg+Neu+Loc:%>о́м  # ;
++Sg+Neu+Dat:%>о́му  # ;
++Sg+Neu+Ins:%>ы́м  # ;
++Sg+Fem+Nom:%>а́я  # ;
++Sg+Fem+Acc:%>у́ю  # ;
++Sg+Fem+Gen:%>о́й  # ;
++Sg+Fem+Loc:%>о́й  # ;
++Sg+Fem+Dat:%>о́й  # ;
++Sg+Fem+Ins:%>о́й  # ;
++Pl+Nom:%>ы́е  # ;
++Pl+Acc+Inan:%>ы́е  # ;
++Pl+Acc+Anim:%>ы́х  # ;
++Pl+Gen:%>ы́х  # ;
++Pl+Loc:%>ы́х  # ;
++Pl+Dat:%>ы́м  # ;
++Pl+Ins:%>ы́ми  # ;
+
+LEXICON SF_a
++Sg+Msc+Pred:%>%^Z # ;
++Sg+Neu+Pred:%>о # ;
++Sg+Fem+Pred:%>а # ;
++Pl+Pred:%>ы # ;
+
+LEXICON SF_a_FemPrb
++Sg+Msc+Pred:%>%^Z # ;
++Sg+Neu+Pred:%>о # ;
++Sg+Fem+Pred+Prb:%>а # ;
++Pl+Pred:%>ы # ;
+
+LEXICON SF-_a
++Sg+Msc+Pred+Prb:%>%^Z # ;
++Sg+Neu+Pred:%>о # ;
++Sg+Fem+Pred:%>а # ;
++Pl+Pred:%>ы # ;
+
+LEXICON SF1_a
++Sg+Msc+Pred:%>%^Z # ;
++Sg+Neu+Pred:н%>о # ;
++Sg+Fem+Pred:н%>а # ;
++Pl+Pred:н%>ы # ;
+
+LEXICON SF1-_a
++Sg+Msc+Pred+Prb:%>%^Z # ;
++Sg+Neu+Pred:н%>о # ;
++Sg+Fem+Pred:н%>а # ;
++Pl+Pred:н%>ы # ;
+
+LEXICON SF_a'
++Sg+Msc+Pred:%>%^Z # ;
++Sg+Neu+Pred:%>о # ;
++Sg+Fem+Pred:%>а # ;
++Sg+Fem+Pred:%>а́ # ;
++Pl+Pred:%>ы # ;
+
+LEXICON SF_a'_FemPrb
++Sg+Msc+Pred:%>%^Z # ;
++Sg+Neu+Pred:%>о # ;
++Sg+Fem+Pred+Prb:%>а # ;
++Sg+Fem+Pred+Prb:%>а́ # ;
++Pl+Pred:%>ы # ;
+
+LEXICON SF_b
++Sg+Msc+Pred:%>%^Z # ;
++Sg+Neu+Pred:%>о́ # ;
++Sg+Fem+Pred:%>а́ # ;
++Pl+Pred:%>ы́ # ;
+
+LEXICON SF-_b
++Sg+Msc+Pred+Prb:%>%^Z # ;
++Sg+Neu+Pred:%>о́ # ;
++Sg+Fem+Pred:%>а́ # ;
++Pl+Pred:%>ы́ # ;
+
+LEXICON SF_b'
++Sg+Msc+Pred:%>%^Z # ;
++Sg+Neu+Pred:%>о́ # ;
++Sg+Fem+Pred:%>а́ # ;
++Pl+Pred:%>ы # ;
++Pl+Pred:%>ы́ # ;
+
+LEXICON SF_c
++Sg+Msc+Pred:%>%^Z # ;
++Sg+Neu+Pred:%>о # ;
++Sg+Fem+Pred:%>а́ # ;
++Pl+Pred:%>ы # ;
+
+LEXICON SF_c_FemPrb
++Sg+Msc+Pred:%>%^Z # ;
++Sg+Neu+Pred:%>о # ;
++Sg+Fem+Pred+Prb:%>а́ # ;
++Pl+Pred:%>ы # ;
+
+LEXICON SF_c'
++Sg+Msc+Pred:%>%^Z # ;
++Sg+Neu+Pred:%>о # ;
++Sg+Fem+Pred:%>а́ # ;
++Pl+Pred:%>ы # ;
++Pl+Pred:%>ы́ # ;
+
+LEXICON SF_c''
++Sg+Msc+Pred:%>%^Z # ;
++Sg+Neu+Pred:%>о # ;
++Sg+Neu+Pred:%>о́ # ;
++Sg+Fem+Pred:%>а́ # ;
++Pl+Pred:%>ы # ;
++Pl+Pred:%>ы́ # ;
+
+LEXICON SF_comp_stem
++Cmpar+Pred:%>ее # ;
++Cmpar+Pred:%>ей # ;
+
+LEXICON SF_comp_end
++Cmpar+Pred:%>е́е # ;
++Cmpar+Pred:%>е́й # ;
 
 
-!! Roberts
-
-
-
-LEXICON AdjStem
-+A+Sg+Msc+Nom:ый  # ;
-+A+Sg+Msc+Acc+Inan:ый  # ;
-+A+Sg+Msc+Acc+Anim:ого  # ;
-+A+Sg+Msc+Gen:ого  # ;
-+A+Sg+Msc+Loc:ом  # ;
-+A+Sg+Msc+Dat:ому  # ;
-+A+Sg+Msc+Ins:ым  # ;
-+A+Sg+Neu+Nom:ое  # ;
-+A+Sg+Neu+Acc:ое  # ;
-+A+Sg+Neu+Gen:ого  # ;
-+A+Sg+Neu+Loc:ом  # ;
-+A+Sg+Neu+Dat:ому  # ;
-+A+Sg+Neu+Ins:ым  # ;
-+A+Sg+Fem+Nom:ая  # ;
-+A+Sg+Fem+Acc:ую  # ;
-+A+Sg+Fem+Gen:ой  # ;
-+A+Sg+Fem+Loc:ой  # ;
-+A+Sg+Fem+Dat:ой  # ;
-+A+Sg+Fem+Ins:ой  # ;
-+A+Pl+Nom:ые  # ;
-+A+Pl+Acc+Inan:ые  # ;
-+A+Pl+Acc+Anim:ых  # ;
-+A+Pl+Gen:ых  # ;
-+A+Pl+Loc:ых  # ;
-+A+Pl+Dat:ым  # ;
-+A+Pl+Ins:ыми  # ;
-
-LEXICON AdjEnd
-+A+Msc+Nom:о́й  # ;
-+A+Msc+Acc+Inan:о́й  # ;
-+A+Msc+Acc+Anim:о́го  # ;
-+A+Msc+Gen:о́го  # ;
-+A+Msc+Loc:о́м  # ;
-+A+Msc+Dat:о́му  # ;
-+A+Msc+Ins:ы́м  # ;
-+A+Neu+Nom:о́е  # ;
-+A+Neu+Acc:о́е  # ;
-+A+Neu+Gen:о́го  # ;
-+A+Neu+Loc:о́м  # ;
-+A+Neu+Dat:о́му  # ;
-+A+Neu+Ins:ы́м  # ;
-+A+Fem+Nom:а́я  # ;
-+A+Fem+Acc:у́ю  # ;
-+A+Fem+Gen:о́й  # ;
-+A+Fem+Loc:о́й  # ;
-+A+Fem+Dat:о́й  # ;
-+A+Fem+Ins:о́й  # ;
-+A+Pl+Nom:ы́е  # ;
-+A+Pl+Acc+Inan:ы́е  # ;
-+A+Pl+Acc+Anim:ы́х  # ;
-+A+Pl+Gen:ы́х  # ;
-+A+Pl+Loc:ы́х  # ;
-+A+Pl+Dat:ы́м  # ;
-+A+Pl+Ins:ы́ми  # ;
 
 
 
 
-
-
-
-
-
+!===========================================================
+!===========================================================
 !! Tronds 
-
-
-
-LEXICON ADJSUF
-+A+Msc+Sg+Nom:%>ый # ;
-+A+Msc+Sg+Acc:%>ый # ; 
-+A+Msc+Sg+Acc+Ani:%>ого # ;
-+A+Msc+Sg+Gen:%>ого # ;
-+A+Msc+Sg+Loc:%>ом # ;
-+A+Msc+Sg+Dat:%>ому # ;
-+A+Msc+Sg+Ins:%>ым # ;
-+A+Neu+Sg+Nom:%>ое # ;
-+A+Neu+Sg+Acc:%>ое # ;
-+A+Neu+Sg+Gen:%>ого # ;
-+A+Neu+Sg+Loc:%>ом # ;
-+A+Neu+Sg+Dat:%>ому # ;
-+A+Neu+Sg+Ins:%>ым # ;
-+A+Fem+Sg+Nom:%>ая # ;
-+A+Fem+Sg+Acc:%>ую # ;
-+A+Fem+Sg+Gen:%>ой # ;
-+A+Fem+Sg+Loc:%>ой # ;
-+A+Fem+Sg+Dat:%>ой # ;
-+A+Fem+Sg+Ins:%>ой # ;
-+A+Pl+Nom:%>ые # ;
-+A+Pl+Acc:%>ые # ;
-+A+Pl+Acc+Ani:%>ых # ;
-+A+Pl+Gen:%>ых # ;
-+A+Pl+Loc:%>ых # ;
-+A+Pl+Dat:%>ым # ;
-+A+Pl+Ins:%>ыми # ;
-
-! Dummy lexica:
-
-LEXICON adj0
- ADJSUF ;
-
-LEXICON adj1*a
- ADJSUF ;
-
-LEXICON adj1*a((1))
- ADJSUF ;
-
-LEXICON adj1*a(1)
- ADJSUF ;
-
-LEXICON adj1*a(1)-
- ADJSUF ;
-
-LEXICON adj1*a(2)
- ADJSUF ;
-
-LEXICON adj1*a-
- ADJSUF ;
-
-LEXICON adj1*a/b
- ADJSUF ;
-
-LEXICON adj1*a/b(2)
- ADJSUF ;
-
-LEXICON adj1*a/c
- ADJSUF ;
-
-LEXICON adj1*a/c◊
- ADJSUF ;
-
-LEXICON adj1*a~
- ADJSUF ;
-
-LEXICON adj1*b
- ADJSUF ;
-
-LEXICON adj1*b/c◊
- ADJSUF ;
-
-LEXICON adj1*b^
- ADJSUF ;
-
-LEXICON adj1*b~
- ADJSUF ;
-
-LEXICON adj1a
- ADJSUF ;
-
-LEXICON adj1a(1)
- ADJSUF ;
-
-LEXICON adj1a/b
- ADJSUF ;
-
-LEXICON adj1a/c
- ADJSUF ;
-
-LEXICON adj1a/c~
- ADJSUF ;
-
-LEXICON adj1a/c◊
- ADJSUF ;
-
-LEXICON adj1a^
- ADJSUF ;
-
-LEXICON adj1b
- ADJSUF ;
-
-LEXICON adj1b/c
- ADJSUF ;
-
-LEXICON adj1bX
- ADJSUF ;
-
-LEXICON adj1f
- ADJSUF ;
-
-LEXICON adj2*a
- ADJSUF ;
-
-LEXICON adj2*a-
- ADJSUF ;
-
-LEXICON adj2*a^
- ADJSUF ;
-
-LEXICON adj2*b
- ADJSUF ;
-
-LEXICON adj2*а
- ADJSUF ;
-
-LEXICON adj2a
- ADJSUF ;
-
-LEXICON adj2a/c
- ADJSUF ;
-
-LEXICON adj3*a
- ADJSUF ;
-
-LEXICON adj3*a/b
- ADJSUF ;
-
-LEXICON adj3*a/c
- ADJSUF ;
-
-LEXICON adj3*a/c^
- ADJSUF ;
-
-LEXICON adj3*a/c◊
- ADJSUF ;
-
-LEXICON adj3*aX~
- ADJSUF ;
-
-LEXICON adj3a
- ADJSUF ;
-
-LEXICON adj3a/c
- ADJSUF ;
-
-LEXICON adj3a/c◊
- ADJSUF ;
-
-LEXICON adj3aX~
- ADJSUF ;
-
-LEXICON adj3a^
- ADJSUF ;
-
-LEXICON adj3a~
- ADJSUF ;
-
-LEXICON adj3b
- ADJSUF ;
-
-LEXICON adj3b/c
- ADJSUF ;
-
-LEXICON adj3b/c~
- ADJSUF ;
-
-LEXICON adj3bX~
- ADJSUF ;
-
-LEXICON adj4a
- ADJSUF ;
-
-LEXICON adj4a/b
- ADJSUF ;
-
-LEXICON adj4a/b~
- ADJSUF ;
-
-LEXICON adj4a/c
- ADJSUF ;
-
-LEXICON adj4aX
- ADJSUF ;
-
-LEXICON adj4aX~
- ADJSUF ;
-
-LEXICON adj4b
- ADJSUF ;
-
-LEXICON adj4b~^
- ADJSUF ;
-
-LEXICON adj5a
- ADJSUF ;
-
-LEXICON adj6*a
- ADJSUF ;
-
-LEXICON adj6*a-
- ADJSUF ;
-
-LEXICON adj6*b
- ADJSUF ;
-
-LEXICON adj6a
- ADJSUF ;
+!
+!
+!
+!LEXICON ADJSUF
+!+A+Msc+Sg+Nom:%>ый # ;
+!+A+Msc+Sg+Acc:%>ый # ; 
+!+A+Msc+Sg+Acc+Ani:%>ого # ;
+!+A+Msc+Sg+Gen:%>ого # ;
+!+A+Msc+Sg+Loc:%>ом # ;
+!+A+Msc+Sg+Dat:%>ому # ;
+!+A+Msc+Sg+Ins:%>ым # ;
+!+A+Neu+Sg+Nom:%>ое # ;
+!+A+Neu+Sg+Acc:%>ое # ;
+!+A+Neu+Sg+Gen:%>ого # ;
+!+A+Neu+Sg+Loc:%>ом # ;
+!+A+Neu+Sg+Dat:%>ому # ;
+!+A+Neu+Sg+Ins:%>ым # ;
+!+A+Fem+Sg+Nom:%>ая # ;
+!+A+Fem+Sg+Acc:%>ую # ;
+!+A+Fem+Sg+Gen:%>ой # ;
+!+A+Fem+Sg+Loc:%>ой # ;
+!+A+Fem+Sg+Dat:%>ой # ;
+!+A+Fem+Sg+Ins:%>ой # ;
+!+A+Pl+Nom:%>ые # ;
+!+A+Pl+Acc:%>ые # ;
+!+A+Pl+Acc+Ani:%>ых # ;
+!+A+Pl+Gen:%>ых # ;
+!+A+Pl+Loc:%>ых # ;
+!+A+Pl+Dat:%>ым # ;
+!+A+Pl+Ins:%>ыми # ;
+!
+!! Dummy lexica:
+!
+!LEXICON adj0
+! ADJSUF ;
+!
+!LEXICON adj1*a
+! ADJSUF ;
+!
+!LEXICON adj1*a((1))
+! ADJSUF ;
+!
+!LEXICON adj1*a(1)
+! ADJSUF ;
+!
+!LEXICON adj1*a(1)-
+! ADJSUF ;
+!
+!LEXICON adj1*a(2)
+! ADJSUF ;
+!
+!LEXICON adj1*a-
+! ADJSUF ;
+!
+!LEXICON adj1*a/b
+! ADJSUF ;
+!
+!LEXICON adj1*a/b(2)
+! ADJSUF ;
+!
+!LEXICON adj1*a/c
+! ADJSUF ;
+!
+!LEXICON adj1*a/c◊
+! ADJSUF ;
+!
+!LEXICON adj1*a~
+! ADJSUF ;
+!
+!LEXICON adj1*b
+! ADJSUF ;
+!
+!LEXICON adj1*b/c◊
+! ADJSUF ;
+!
+!LEXICON adj1*b^
+! ADJSUF ;
+!
+!LEXICON adj1*b~
+! ADJSUF ;
+!
+!LEXICON adj1a
+! ADJSUF ;
+!
+!LEXICON adj1a(1)
+! ADJSUF ;
+!
+!LEXICON adj1a/b
+! ADJSUF ;
+!
+!LEXICON adj1a/c
+! ADJSUF ;
+!
+!LEXICON adj1a/c~
+! ADJSUF ;
+!
+!LEXICON adj1a/c◊
+! ADJSUF ;
+!
+!LEXICON adj1a^
+! ADJSUF ;
+!
+!LEXICON adj1b
+! ADJSUF ;
+!
+!LEXICON adj1b/c
+! ADJSUF ;
+!
+!LEXICON adj1bX
+! ADJSUF ;
+!
+!LEXICON adj1f
+! ADJSUF ;
+!
+!LEXICON adj2*a
+! ADJSUF ;
+!
+!LEXICON adj2*a-
+! ADJSUF ;
+!
+!LEXICON adj2*a^
+! ADJSUF ;
+!
+!LEXICON adj2*b
+! ADJSUF ;
+!
+!LEXICON adj2*а
+! ADJSUF ;
+!
+!LEXICON adj2a
+! ADJSUF ;
+!
+!LEXICON adj2a/c
+! ADJSUF ;
+!
+!LEXICON adj3*a
+! ADJSUF ;
+!
+!LEXICON adj3*a/b
+! ADJSUF ;
+!
+!LEXICON adj3*a/c
+! ADJSUF ;
+!
+!LEXICON adj3*a/c^
+! ADJSUF ;
+!
+!LEXICON adj3*a/c◊
+! ADJSUF ;
+!
+!LEXICON adj3*aX~
+! ADJSUF ;
+!
+!LEXICON adj3a
+! ADJSUF ;
+!
+!LEXICON adj3a/c
+! ADJSUF ;
+!
+!LEXICON adj3a/c◊
+! ADJSUF ;
+!
+!LEXICON adj3aX~
+! ADJSUF ;
+!
+!LEXICON adj3a^
+! ADJSUF ;
+!
+!LEXICON adj3a~
+! ADJSUF ;
+!
+!LEXICON adj3b
+! ADJSUF ;
+!
+!LEXICON adj3b/c
+! ADJSUF ;
+!
+!LEXICON adj3b/c~
+! ADJSUF ;
+!
+!LEXICON adj3bX~
+! ADJSUF ;
+!
+!LEXICON adj4a
+! ADJSUF ;
+!
+!LEXICON adj4a/b
+! ADJSUF ;
+!
+!LEXICON adj4a/b~
+! ADJSUF ;
+!
+!LEXICON adj4a/c
+! ADJSUF ;
+!
+!LEXICON adj4aX
+! ADJSUF ;
+!
+!LEXICON adj4aX~
+! ADJSUF ;
+!
+!LEXICON adj4b
+! ADJSUF ;
+!
+!LEXICON adj4b~^
+! ADJSUF ;
+!
+!LEXICON adj5a
+! ADJSUF ;
+!
+!LEXICON adj6*a
+! ADJSUF ;
+!
+!LEXICON adj6*a-
+! ADJSUF ;
+!
+!LEXICON adj6*b
+! ADJSUF ;
+!
+!LEXICON adj6a
+! ADJSUF ;

@@ -825,7 +825,7 @@ LEXICON С_Ф1_ПЛЕЧО
 +N+Neu+Sg: NSgEnd ;
 +N+Neu+Pl: ыPlNomStem ;
 +N+Neu+Pl: ыPlAccInanStem ;
-+N+Neu+Pl+Gen:%>%^Z # ;
++N+Neu+Pl+Gen:%> # ;
 +N+Neu+Pl: PlPeriphEnd ;
 
 LEXICON СО_0
@@ -921,9 +921,6 @@ LEXICON мяPl
 +Acc+Inan:ена́ # ;
 +Gen:ён # ;
 :ен PlPeriphEnd ;
-
-LEXICON GenZero
-+Gen:%^Z # ;
 
 LEXICON NStem_ыPl
 +N+Neu+Sg: NSgStem ;
@@ -1436,7 +1433,7 @@ PlPeriphStem ;
 LEXICON ыPlStem_zero      !Inanimate
 ыPlNomStem ;
 ыPlAccInanStem ;
-+Gen:%>%^Z # ;
++Gen:%> # ;
 PlPeriphStem ;
 
 LEXICON ыPlEnd       !Inanimate
@@ -1465,7 +1462,7 @@ PlPeriphEnd ;
 LEXICON ыPlEnd_zero      !Inanimate
 ыPlNomEnd ;
 ыPlAccInanEnd ;
-+Gen:%>%^Z # ;
++Gen:%> # ;
 PlPeriphEnd ;
 
 LEXICON ыPlAnom      !Inanimate
@@ -1476,7 +1473,7 @@ PlObliqEnd ;
 LEXICON ыPlAnom_zero      !Inanimate
 ыPlNomStem ;
 ыPlAccInanStem ;
-+Gen:%>%^Z # ;
++Gen:%> # ;
 PlPeriphEnd ;
 
 LEXICON аPlStem      !Inanimate
@@ -1499,7 +1496,7 @@ PlPeriphStem ;
 LEXICON аPlStem_zero      !Inanimate
 аPlNomStem ;
 аPlAccInanStem ;
-+Gen:%>%^Z # ;
++Gen:%> # ;
 PlPeriphStem ;
 
 LEXICON аPlEnd       !Inanimate
@@ -1537,8 +1534,8 @@ PlPeriphStem ;
 
 LEXICON ыPlStem_anim_zero
 ыPlNomStem ;
-+Acc+Anim:%>%^Z # ;
-+Gen:%>%^Z # ;
++Acc+Anim:%> # ;
++Gen:%> # ;
 PlObliqStem ;
 
 LEXICON ыPlEnd_anim
@@ -1576,8 +1573,8 @@ PlPeriphStem ;
 
 LEXICON аPlStem_anim_zero
 аPlNomStem ;
-+Acc+Anim:%>%^Z # ;
-+Gen:%>%^Z # ;
++Acc+Anim:%> # ;
++Gen:%> # ;
 PlPeriphStem ;
 
 LEXICON аPlEnd_anim

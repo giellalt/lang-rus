@@ -5,12 +5,11 @@ Multichar_Symbols
 А́ Е́ И́ О́ У́ Ы́ Э́ Ю́ Я́
 а̀ ѐ ѝ о̀ у̀ ы̀ э̀ ю̀ я̀ ! Secondary stress
 
-%> ! End-of-stem marker
-%^F ! Fleeting vowel marker
-%^G ! Irregular GenPl marker (used to keep ов/ев on neuter stems, e.g. ов%^G
-%^Z ! Zero ending (resolves to 0/й/ь)
-%^VM ! Verb stem mutation
-%^AM ! Adjective stem mutation
+%>   ! End-of-stem marker
+%^F  ! Fleeting vowel marker
+%^G  ! Irregular GenPl marker (used to keep ов/ев on neuter stems, e.g. ов%^G
+%^Z  ! Zero ending (resolves to 0/й/ь)
+%^M ! Verb stem mutation
 
 ! POS
 +N +V +A
@@ -36,6 +35,7 @@ Multichar_Symbols
 +Voc
 +Ord
 +Cmpar +Super
++Pred
 ! Tag for collective nouns? +Coll
 ! Tag for possessives? +Poss
 

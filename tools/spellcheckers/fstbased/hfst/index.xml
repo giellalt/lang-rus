@@ -16,15 +16,13 @@
   </info>
   <acceptor type="general" id="acceptor.default.hfst">
     <title>Giellatekno/Divvun/UiT dictionary Russian</title>
-    <description>
-        Giellatekno/Divvun/UiT dictionary for Russian compiled for HFST.
-    </description>
+    <description>Giellatekno/Divvun/UiT dictionary for
+    Russian compiled for HFST.</description>
   </acceptor>
   <errmodel id="errmodel.default.hfst">
     <title>Levenshtein edit distance transducer</title>
-    <description>
-        Correction model for keyboard misstrokes, at most 2 per word.
-    </description>
+    <description>Correction model for keyboard misstrokes, at most 2 per
+    word.</description>
         <type type="default"/>
         <model>errormodel.default.hfst</model>
     </errmodel>

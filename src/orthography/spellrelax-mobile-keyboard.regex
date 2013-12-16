@@ -1,6 +1,8 @@
 # Russian dummy mobile keyboard file
 
 S (->) S 
+# ё (->) е, # Russian stressed vowel, accept je pro jo
+# Ё (->) Е # Russian stressed vowel, accept je pro jo
  ;
 
 # This is a dummy awaiting a bright idea

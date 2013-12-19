@@ -3,7 +3,7 @@ Multichar_Symbols
 !Stressed vowels
 а́ е́ и́ о́ у́ ы́ э́ ю́ я́ 
 А́ Е́ И́ О́ У́ Ы́ Э́ Ю́ Я́
-а̀ ѐ ѝ о̀ у̀ ы̀ э̀ ю̀ я̀ ! Secondary stress
+а̀ ѐ ѝ о̀ у̀ ы̀ э̀ ю̀ я̀ ё̀ ! Secondary stress
 
 %>   ! End-of-stem marker
 %^F  ! Fleeting vowel marker

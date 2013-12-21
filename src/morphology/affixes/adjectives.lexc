@@ -1,30 +1,33 @@
 LEXICON П_0
-+A+Sg+Msc+Nom: # ;
-+A+Sg+Msc+Acc+Inan: # ;
-+A+Sg+Msc+Acc+Anim: # ;
-+A+Sg+Msc+Gen: # ;
-+A+Sg+Msc+Loc: # ;
-+A+Sg+Msc+Dat: # ;
-+A+Sg+Msc+Ins: # ;
-+A+Sg+Neu+Nom: # ;
-+A+Sg+Neu+Acc: # ;
-+A+Sg+Neu+Gen: # ;
-+A+Sg+Neu+Loc: # ;
-+A+Sg+Neu+Dat: # ;
-+A+Sg+Neu+Ins: # ;
-+A+Sg+Fem+Nom: # ;
-+A+Sg+Fem+Acc: # ;
-+A+Sg+Fem+Gen: # ;
-+A+Sg+Fem+Loc: # ;
-+A+Sg+Fem+Dat: # ;
-+A+Sg+Fem+Ins: # ;
-+A+Pl+Nom: # ;
-+A+Pl+Acc+Inan: # ;
-+A+Pl+Acc+Anim: # ;
-+A+Pl+Gen: # ;
-+A+Pl+Loc: # ;
-+A+Pl+Dat: # ;
-+A+Pl+Ins: # ;
++A: П_0_inflect ;
+
+LEXICON П_0_inflect
++Sg+Msc+Nom: # ;
++Sg+Msc+Acc+Inan: # ;
++Sg+Msc+Acc+Anim: # ;
++Sg+Msc+Gen: # ;
++Sg+Msc+Loc: # ;
++Sg+Msc+Dat: # ;
++Sg+Msc+Ins: # ;
++Sg+Neu+Nom: # ;
++Sg+Neu+Acc: # ;
++Sg+Neu+Gen: # ;
++Sg+Neu+Loc: # ;
++Sg+Neu+Dat: # ;
++Sg+Neu+Ins: # ;
++Sg+Fem+Nom: # ;
++Sg+Fem+Acc: # ;
++Sg+Fem+Gen: # ;
++Sg+Fem+Loc: # ;
++Sg+Fem+Dat: # ;
++Sg+Fem+Ins: # ;
++Pl+Nom: # ;
++Pl+Acc+Inan: # ;
++Pl+Acc+Anim: # ;
++Pl+Gen: # ;
++Pl+Loc: # ;
++Pl+Dat: # ;
++Pl+Ins: # ;
 
 LEXICON П_А
 +A: LF_stem ;
@@ -746,8 +749,8 @@ LEXICON SF_comp_ЩЕ
 +Cmpar+Pred:ще # ;
 
 LEXICON П_[МС_6_А]
-+A+Sg+Msc+Nom:%>й # ;
-+A+Sg+Msc+Acc+Inan:%>й  # ;
++A+Sg+Msc+Nom: # ;
++A+Sg+Msc+Acc+Inan:  # ;
 +A+Sg+Msc+Acc+Anim:%>ого  # ;
 +A+Sg+Msc+Gen:%>ого  # ;
 +A+Sg+Msc+Loc:%>ом  # ;

@@ -36,6 +36,9 @@ Multichar_Symbols
 +Ord
 +Cmpar +Super
 +Pred
++PObj ! object of preposition, e.g. его~него
++Refl ! Pronoun себя
++Introg ! Interrogative: кто, что, какой, ли, etc.
 ! Tag for collective nouns? +Coll
 ! Tag for possessives? +Poss
 
@@ -83,11 +86,11 @@ Conjunction ;
 Interjection ;
 Noun ;
 Preposition ;
+Pronoun ;
 Verb ;
 
 !Propernoun ;
 !Subjunction ;
 !Numeral ;
-!Pronoun ;
 !Punctuation ;
 

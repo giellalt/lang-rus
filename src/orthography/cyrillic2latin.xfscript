@@ -122,4 +122,4 @@ read regex [
  .o. PalDeletion
  ] ;
 
-invert net ;
+

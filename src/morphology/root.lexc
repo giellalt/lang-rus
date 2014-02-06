@@ -9,38 +9,49 @@ Multichar_Symbols
 %^F  ! Fleeting vowel marker
 %^G  ! Irregular GenPl marker (used to keep ов/ев on neuter stems, e.g. ов%^G
 %^Z  ! Zero ending (resolves to 0/й/ь)
-%^M ! Verb stem mutation
+%^M  ! Verb stem mutation
+%^Iu ! Imperative ending (unstressed)
+%^Is ! Imperative ending (stressed)
 
 ! POS
 +N +V +A
 +Pron +Num
-+Adv +Pr +CC +CS +Interj !ради can be a postposition. Do we need a tag for it?
-+Prop
-+Particle
++Adv +Pr +Po    ! ради can be a postposition (+Po)
++CC +CS +Interj
++Pcle
+
++Prop   ! Proper
++Pers   ! Personal
++Dem    ! Demonstrative
++Interr ! Interrogative: кто, что, какой, ли, etc.
++Refl   ! Pronoun себя
++Def    ! Definite
++Indef  ! Indefinite
++Coll   ! Collective numerals
++MWE    ! Multi-word expressions
 
 ! Verbal MSP
-+Impf +Perf
-+Intrans +Trans
-+Prs +Fut +Pst ! Technically this should be +Pst and +NonPst (mystem has настоящ. непрошед. and прошед. Why present?)
-+Inf +Ind +Imp +Cond
-+Sg1 +Sg2 +Sg3 +Pl1 +Pl2 +Pl3
-+PrsPrc +PstPrc
-+Act +Pass
++Impf +Perf                     ! Imperfective, perfective
++IV +TV                         ! Intransitive, transitive
++UniD +MltD                     ! Unidirectional, multidirectional (14 verbs of motion)
++Inf +Ind +Subj +Imp2 +Imp1     ! Imperatives: 2nd person = читай, 1st person = прочитаем
++Pst +Prs +Fut                  ! Past, present, future
++Sg1 +Sg2 +Sg3 +Pl1 +Pl2 +Pl3   ! 
++PrsAct +PrsPss +PstAct +PstPss ! 
++Act +Pass ! Is +Act needed?
 
 ! Nominal MSP
 +Sg +Pl
-+Msc +Fem +Neu +Inan +Anim
-+Nom +Acc +Gen +Ins +Dat +Loc
-+Loc2 +Loc2v +Loc2na +Gen2
-+Voc
++Msc +Fem +Neu +
++Nom +Acc +Gen +Ins +Dat +Loc +Loc2 +Loc2v +Loc2na +Gen2 +Voc
++Inan +Anim     ! Only tagged in conjunction with +Acc
+
+
 +Ord
 +Cmpar +Super
 +Pred
 +PObj ! object of preposition, e.g. его~него
-+Refl ! Pronoun себя
-+Introg ! Interrogative: кто, что, какой, ли, etc.
-! Tag for collective nouns? +Coll
-! Tag for possessives? +Poss
++Poss ! possessive
 
 ! Other tags
 +Prb ! затруднительно - +Prb(lematic); предположительно - +Hyp(othetical); нет - +Gap

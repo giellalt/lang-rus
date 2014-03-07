@@ -14,42 +14,52 @@ Multichar_Symbols
 %^Is ! Imperative ending (stressed)
 
 ! POS
-+N +V +A
-+Pron +Num
-+Adv +Pr +Po    ! ради can be a postposition (+Po)
-+CC +CS +Interj
-+Pcle
++N      ! Noun
++V      ! Verb
++A      ! Adjective
++Pron   ! Pronoun
++Det    ! Determiner
++Num    ! Numeral
++Adv    ! Adverb
++Pr     ! Preposition
++Po     ! Postposition (ради is the only possible postposition)
++CC     ! Coordinating conjunction
++CS     ! Subordinating conjunction
++Interj ! Interjection
++Pcle   ! Particle
 
 +Prop   ! Proper
 +Pers   ! Personal
 +Dem    ! Demonstrative
 +Interr ! Interrogative: кто, что, какой, ли, etc.
-+Refl   ! Pronoun себя
-+Def    ! Definite
++Refl   ! Pronoun себя, possessive свой
 +Indef  ! Indefinite
 +Coll   ! Collective numerals
 +MWE    ! Multi-word expressions
 
 ! Verbal MSP
-+Impf +Perf                     ! Imperfective, perfective
-+IV +TV                         ! Intransitive, transitive
-+UniD +MltD                     ! Unidirectional, multidirectional (14 verbs of motion)
-+Inf +Ind +Subj +Imp2 +Imp1     ! Imperatives: 2nd person = читай, 1st person = прочитаем
++Impf +Perf +Dvuv               ! Imperfective, perfective, biaspectual
++IV +TV                         ! Intransitive, transitive   (generate both if either is possible)
++Inf +Imp                       ! Imperatives: 2nd person = читай, 1st person = прочитаем
 +Pst +Prs +Fut                  ! Past, present, future
-+Sg1 +Sg2 +Sg3 +Pl1 +Pl2 +Pl3   ! 
-+PrsAct +PrsPss +PstAct +PstPss ! 
-+Act +Pass ! Is +Act needed?
++Sg1 +Sg2 +Sg3 +Pl1 +Pl2 +Pl3   ! person/number
++PrsAct +PrsPss +PstAct +PstPss ! Participles (+PrsAct+Adv and +PstAct+Adv are used for the verbal adverbs)
++Pass                           ! Passive
 
 ! Nominal MSP
++Msc +Fem +Neu +MscFem      ! +MscFem = common gender
 +Sg +Pl
-+Msc +Fem +Neu +
-+Nom +Acc +Gen +Ins +Dat +Loc +Loc2 +Loc2v +Loc2na +Gen2 +Voc
++Nom +Acc +Gen +Ins +Dat +Loc +Loc2 +Gen2 +Voc
 +Inan +Anim     ! Only tagged in conjunction with +Acc
 
 
 +Ord
-+Cmpar +Super
-+Pred
++Cmpar  ! 
++Sint   ! Synthetic comparative is possible, e.g. старее
++An     ! Animate placeholder for non-accusative cases
++Pred   ! "Predicate", used for short-form adjectives
++Cmpnd  ! "Compound", used for compounding adjectives, such as русско-английский
+
 +PObj ! object of preposition, e.g. его~него
 +Poss ! possessive
 

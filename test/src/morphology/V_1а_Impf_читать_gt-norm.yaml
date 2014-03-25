@@ -1,0 +1,151 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+Tests:
+# todo:
+# Proofread the gold standard (below)
+# Then: run analyser, then correct. 
+
+  Verb - читать : # Verb - full paradigm
+    читать+V+Impf+TV+Inf: чита́ть
+    читать+V+Impf+TV+Pst+Msc+Sg: чита́л
+    читать+V+Impf+TV+Pst+Neu+Sg: чита́ло
+    читать+V+Impf+TV+Pst+Fem+Sg: чита́ла
+    читать+V+Impf+TV+Pst+Pl: чита́ли
+
+    читать+V+Impf+TV+Prs+Sg1: чита́ю
+    читать+V+Impf+TV+Prs+Sg2: чита́ешь
+    читать+V+Impf+TV+Prs+Sg3: чита́ет
+    читать+V+Impf+TV+Prs+Pl1: чита́ем
+    читать+V+Impf+TV+Prs+Pl2: чита́ете
+    читать+V+Impf+TV+Prs+Pl3: чита́ют
+    читать+V+Impf+TV+Imp+Sg2: чита́й
+    читать+V+Impf+TV+Imp+Pl2: чита́йте
+    
+    читать+V+Impf+TV+Inf+Pass: чита́ться
+    читать+V+Impf+TV+Pst+Msc+Sg+Pass: чита́лся
+    читать+V+Impf+TV+Pst+Neu+Sg+Pass: чита́лось
+    читать+V+Impf+TV+Pst+Fem+Sg+Pass: чита́лась
+    читать+V+Impf+TV+Pst+Pl+Pass: чита́лись
+
+    читать+V+Impf+TV+Prs+Sg1+Pass+Fac: чита́юсь
+    читать+V+Impf+TV+Prs+Sg2+Pass+Fac: чита́ешься
+    читать+V+Impf+TV+Prs+Sg3+Pass: чита́ется
+    читать+V+Impf+TV+Prs+Pl1+Pass+Fac: чита́емся
+    читать+V+Impf+TV+Prs+Pl2+Pass+Fac: чита́етесь
+    читать+V+Impf+TV+Prs+Pl3+Pass: чита́ются
+
+    читать+V+Impf+TV+PrsAct+Adv: чита́я
+    читать+V+Impf+TV+PstAct+Adv+Fac: чита́в
+    читать+V+Impf+TV+PstAct+Adv+Fac+Use/Obs: чита́вши
+    
+    читать+V+Impf+IV+Inf: чита́ть
+    читать+V+Impf+IV+Pst+Msc+Sg: чита́л
+    читать+V+Impf+IV+Pst+Neu+Sg: чита́ло
+    читать+V+Impf+IV+Pst+Fem+Sg: чита́ла
+    читать+V+Impf+IV+Pst+Pl: чита́ли
+
+    читать+V+Impf+IV+Prs+Sg1: чита́ю
+    читать+V+Impf+IV+Prs+Sg2: чита́ешь
+    читать+V+Impf+IV+Prs+Sg3: чита́ет
+    читать+V+Impf+IV+Prs+Pl1: чита́ем
+    читать+V+Impf+IV+Prs+Pl2: чита́ете
+    читать+V+Impf+IV+Prs+Pl3: чита́ют
+    читать+V+Impf+IV+Imp+Sg2: чита́й
+    читать+V+Impf+IV+Imp+Pl2: чита́йте
+    
+    читать+V+Impf+IV+PrsAct+Adv: чита́я
+    читать+V+Impf+IV+PstAct+Adv+Fac: чита́в
+    читать+V+Impf+IV+PstAct+Adv+Fac+Use/Obs: чита́вши
+    
+    читать+V+Impf+TV+PrsAct+Msc+Sg+Nom: чита́ющий
+    читать+V+Impf+TV+PrsAct+Msc+Sg+Acc+Inan: чита́ющий
+    читать+V+Impf+TV+PrsAct+Msc+Sg+Acc+Anim: чита́ющего
+    читать+V+Impf+TV+PrsAct+Msc+Sg+Gen: чита́ющего
+    читать+V+Impf+TV+PrsAct+Msc+Sg+Loc: чита́ющем
+    читать+V+Impf+TV+PrsAct+Msc+Sg+Dat: чита́ющему
+    читать+V+Impf+TV+PrsAct+Msc+Sg+Ins: чита́ющим
+    читать+V+Impf+TV+PrsAct+Neu+Sg+Nom: чита́ющее
+    читать+V+Impf+TV+PrsAct+Neu+Sg+Acc: чита́ющее
+    читать+V+Impf+TV+PrsAct+Neu+Sg+Gen: чита́ющего
+    читать+V+Impf+TV+PrsAct+Neu+Sg+Loc: чита́ющем
+    читать+V+Impf+TV+PrsAct+Neu+Sg+Dat: чита́ющему
+    читать+V+Impf+TV+PrsAct+Neu+Sg+Ins: чита́ющим
+    читать+V+Impf+TV+PrsAct+Fem+Sg+Nom: чита́ющая
+    читать+V+Impf+TV+PrsAct+Fem+Sg+Acc: чита́ющую
+    читать+V+Impf+TV+PrsAct+Fem+Sg+Gen: чита́ющей
+    читать+V+Impf+TV+PrsAct+Fem+Sg+Loc: чита́ющей
+    читать+V+Impf+TV+PrsAct+Fem+Sg+Dat: чита́ющей
+    читать+V+Impf+TV+PrsAct+Fem+Sg+Ins: чита́ющей
+    читать+V+Impf+TV+PrsAct+Pl+Nom: чита́ющие
+    читать+V+Impf+TV+PrsAct+Pl+Acc+Inan: чита́ющие
+    читать+V+Impf+TV+PrsAct+Pl+Acc+Anim: чита́ющих
+    читать+V+Impf+TV+PrsAct+Pl+Gen: чита́ющих
+    читать+V+Impf+TV+PrsAct+Pl+Loc: чита́ющих
+    читать+V+Impf+TV+PrsAct+Pl+Dat: чита́ющим
+    читать+V+Impf+TV+PrsAct+Pl+Ins: чита́ющими
+
+    читать+V+Impf+IV+PrsAct+Msc+Sg+Nom: чита́ющий
+    читать+V+Impf+IV+PrsAct+Msc+Sg+Acc+Inan: чита́ющий
+    читать+V+Impf+IV+PrsAct+Msc+Sg+Acc+Anim: чита́ющего
+    читать+V+Impf+IV+PrsAct+Msc+Sg+Gen: чита́ющего
+    читать+V+Impf+IV+PrsAct+Msc+Sg+Loc: чита́ющем
+    читать+V+Impf+IV+PrsAct+Msc+Sg+Dat: чита́ющему
+    читать+V+Impf+IV+PrsAct+Msc+Sg+Ins: чита́ющим
+    читать+V+Impf+IV+PrsAct+Neu+Sg+Nom: чита́ющее
+    читать+V+Impf+IV+PrsAct+Neu+Sg+Acc: чита́ющее
+    читать+V+Impf+IV+PrsAct+Neu+Sg+Gen: чита́ющего
+    читать+V+Impf+IV+PrsAct+Neu+Sg+Loc: чита́ющем
+    читать+V+Impf+IV+PrsAct+Neu+Sg+Dat: чита́ющему
+    читать+V+Impf+IV+PrsAct+Neu+Sg+Ins: чита́ющим
+    читать+V+Impf+IV+PrsAct+Fem+Sg+Nom: чита́ющая
+    читать+V+Impf+IV+PrsAct+Fem+Sg+Acc: чита́ющую
+    читать+V+Impf+IV+PrsAct+Fem+Sg+Gen: чита́ющей
+    читать+V+Impf+IV+PrsAct+Fem+Sg+Loc: чита́ющей
+    читать+V+Impf+IV+PrsAct+Fem+Sg+Dat: чита́ющей
+    читать+V+Impf+IV+PrsAct+Fem+Sg+Ins: чита́ющей
+    читать+V+Impf+IV+PrsAct+Pl+Nom: чита́ющие
+    читать+V+Impf+IV+PrsAct+Pl+Acc+Inan: чита́ющие
+    читать+V+Impf+IV+PrsAct+Pl+Acc+Anim: чита́ющих
+    читать+V+Impf+IV+PrsAct+Pl+Gen: чита́ющих
+    читать+V+Impf+IV+PrsAct+Pl+Loc: чита́ющих
+    читать+V+Impf+IV+PrsAct+Pl+Dat: чита́ющим
+    читать+V+Impf+IV+PrsAct+Pl+Ins: чита́ющими
+
+    читать+V+Impf+TV+PrsPss+Msc+Sg+Nom: чита́емый
+    читать+V+Impf+TV+PrsPss+Msc+Sg+Acc+Inan: чита́емый
+    читать+V+Impf+TV+PrsPss+Msc+Sg+Acc+Anim: чита́емого
+    читать+V+Impf+TV+PrsPss+Msc+Sg+Gen: чита́емого
+    читать+V+Impf+TV+PrsPss+Msc+Sg+Loc: чита́емом
+    читать+V+Impf+TV+PrsPss+Msc+Sg+Dat: чита́емому
+    читать+V+Impf+TV+PrsPss+Msc+Sg+Ins: чита́емым
+    читать+V+Impf+TV+PrsPss+Neu+Sg+Nom: чита́емое
+    читать+V+Impf+TV+PrsPss+Neu+Sg+Acc: чита́емое
+    читать+V+Impf+TV+PrsPss+Neu+Sg+Gen: чита́емого
+    читать+V+Impf+TV+PrsPss+Neu+Sg+Loc: чита́емом
+    читать+V+Impf+TV+PrsPss+Neu+Sg+Dat: чита́емому
+    читать+V+Impf+TV+PrsPss+Neu+Sg+Ins: чита́емым
+    читать+V+Impf+TV+PrsPss+Fem+Sg+Nom: чита́емая
+    читать+V+Impf+TV+PrsPss+Fem+Sg+Acc: чита́емую
+    читать+V+Impf+TV+PrsPss+Fem+Sg+Gen: чита́емой
+    читать+V+Impf+TV+PrsPss+Fem+Sg+Loc: чита́емой
+    читать+V+Impf+TV+PrsPss+Fem+Sg+Dat: чита́емой
+    читать+V+Impf+TV+PrsPss+Fem+Sg+Ins: чита́емой
+    читать+V+Impf+TV+PrsPss+Pl+Nom: чита́емые
+    читать+V+Impf+TV+PrsPss+Pl+Acc+Inan: чита́емые
+    читать+V+Impf+TV+PrsPss+Pl+Acc+Anim: чита́емых
+    читать+V+Impf+TV+PrsPss+Pl+Gen: чита́емых
+    читать+V+Impf+TV+PrsPss+Pl+Loc: чита́емых
+    читать+V+Impf+TV+PrsPss+Pl+Dat: чита́емым
+    читать+V+Impf+TV+PrsPss+Pl+Ins: чита́емыми
+    читать+V+Impf+TV+PrsPss+Msc+Sg+Pred: чита́ем
+    читать+V+Impf+TV+PrsPss+Neu+Sg+Pred: чита́емо
+    читать+V+Impf+TV+PrsPss+Fem+Sg+Pred: чита́ема
+    читать+V+Impf+TV+PrsPss+Pl+Pred: чита́емы
+
+    

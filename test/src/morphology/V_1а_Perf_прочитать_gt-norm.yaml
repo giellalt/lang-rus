@@ -1,0 +1,137 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+Tests:
+# todo:
+# Proofread the gold standard (below)
+# Then: run analyser, then correct. 
+
+  Verb - прочитать : # Verb - full paradigm
+    прочитать+V+Perf+TV+Inf: прочита́ть
+    прочитать+V+Perf+TV+Pst+Msc+Sg: прочита́л
+    прочитать+V+Perf+TV+Pst+Neu+Sg: прочита́ло
+    прочитать+V+Perf+TV+Pst+Fem+Sg: прочита́ла
+    прочитать+V+Perf+TV+Pst+Pl: прочита́ли
+
+    прочитать+V+Perf+TV+Fut+Sg1: прочита́ю
+    прочитать+V+Perf+TV+Fut+Sg2: прочита́ешь
+    прочитать+V+Perf+TV+Fut+Sg3: прочита́ет
+    прочитать+V+Perf+TV+Fut+Pl1: прочита́ем
+    прочитать+V+Perf+TV+Fut+Pl2: прочита́ете
+    прочитать+V+Perf+TV+Fut+Pl3: прочита́ют
+    
+    прочитать+V+Perf+TV+Imp+Sg2: прочита́й
+    прочитать+V+Perf+TV+Imp+Pl2: прочита́йте
+    
+    прочитать+V+Perf+TV+PstAct+Adv: прочита́в
+    прочитать+V+Perf+TV+PstAct+Adv+Use/Obs: прочита́вши
+    
+    прочитать+V+Perf+IV+Inf: прочита́ть
+    прочитать+V+Perf+IV+Pst+Msc+Sg: прочита́л
+    прочитать+V+Perf+IV+Pst+Neu+Sg: прочита́ло
+    прочитать+V+Perf+IV+Pst+Fem+Sg: прочита́ла
+    прочитать+V+Perf+IV+Pst+Pl: прочита́ли
+
+    прочитать+V+Perf+IV+Fut+Sg1: прочита́ю
+    прочитать+V+Perf+IV+Fut+Sg2: прочита́ешь
+    прочитать+V+Perf+IV+Fut+Sg3: прочита́ет
+    прочитать+V+Perf+IV+Fut+Pl1: прочита́ем
+    прочитать+V+Perf+IV+Fut+Pl2: прочита́ете
+    прочитать+V+Perf+IV+Fut+Pl3: прочита́ют
+    прочитать+V+Perf+IV+Imp+Sg2: прочита́й
+    прочитать+V+Perf+IV+Imp+Pl2: прочита́йте
+    
+    прочитать+V+Perf+IV+PstAct+Adv: прочита́в
+    прочитать+V+Perf+IV+PstAct+Adv+Use/Obs: прочита́вши
+    
+    прочитать+V+Perf+TV+PstAct+Msc+Sg+Nom: прочита́вший
+    прочитать+V+Perf+TV+PstAct+Msc+Sg+Acc+Inan: прочита́вший
+    прочитать+V+Perf+TV+PstAct+Msc+Sg+Acc+Anim: прочита́вшего
+    прочитать+V+Perf+TV+PstAct+Msc+Sg+Gen: прочита́вшего
+    прочитать+V+Perf+TV+PstAct+Msc+Sg+Loc: прочита́вшем
+    прочитать+V+Perf+TV+PstAct+Msc+Sg+Dat: прочита́вшему
+    прочитать+V+Perf+TV+PstAct+Msc+Sg+Ins: прочита́вшим
+    прочитать+V+Perf+TV+PstAct+Neu+Sg+Nom: прочита́вшее
+    прочитать+V+Perf+TV+PstAct+Neu+Sg+Acc: прочита́вшее
+    прочитать+V+Perf+TV+PstAct+Neu+Sg+Gen: прочита́вшего
+    прочитать+V+Perf+TV+PstAct+Neu+Sg+Loc: прочита́вшем
+    прочитать+V+Perf+TV+PstAct+Neu+Sg+Dat: прочита́вшему
+    прочитать+V+Perf+TV+PstAct+Neu+Sg+Ins: прочита́вшим
+    прочитать+V+Perf+TV+PstAct+Fem+Sg+Nom: прочита́вшая
+    прочитать+V+Perf+TV+PstAct+Fem+Sg+Acc: прочита́вшую
+    прочитать+V+Perf+TV+PstAct+Fem+Sg+Gen: прочита́вшей
+    прочитать+V+Perf+TV+PstAct+Fem+Sg+Loc: прочита́вшей
+    прочитать+V+Perf+TV+PstAct+Fem+Sg+Dat: прочита́вшей
+    прочитать+V+Perf+TV+PstAct+Fem+Sg+Ins: прочита́вшей
+    прочитать+V+Perf+TV+PstAct+Pl+Nom: прочита́вшие
+    прочитать+V+Perf+TV+PstAct+Pl+Acc+Inan: прочита́вшие
+    прочитать+V+Perf+TV+PstAct+Pl+Acc+Anim: прочита́вших
+    прочитать+V+Perf+TV+PstAct+Pl+Gen: прочита́вших
+    прочитать+V+Perf+TV+PstAct+Pl+Loc: прочита́вших
+    прочитать+V+Perf+TV+PstAct+Pl+Dat: прочита́вшим
+    прочитать+V+Perf+TV+PstAct+Pl+Ins: прочита́вшими
+
+    прочитать+V+Perf+IV+PstAct+Msc+Sg+Nom: прочита́вший
+    прочитать+V+Perf+IV+PstAct+Msc+Sg+Acc+Inan: прочита́вший
+    прочитать+V+Perf+IV+PstAct+Msc+Sg+Acc+Anim: прочита́вшего
+    прочитать+V+Perf+IV+PstAct+Msc+Sg+Gen: прочита́вшего
+    прочитать+V+Perf+IV+PstAct+Msc+Sg+Loc: прочита́вшем
+    прочитать+V+Perf+IV+PstAct+Msc+Sg+Dat: прочита́вшему
+    прочитать+V+Perf+IV+PstAct+Msc+Sg+Ins: прочита́вшим
+    прочитать+V+Perf+IV+PstAct+Neu+Sg+Nom: прочита́вшее
+    прочитать+V+Perf+IV+PstAct+Neu+Sg+Acc: прочита́вшее
+    прочитать+V+Perf+IV+PstAct+Neu+Sg+Gen: прочита́вшего
+    прочитать+V+Perf+IV+PstAct+Neu+Sg+Loc: прочита́вшем
+    прочитать+V+Perf+IV+PstAct+Neu+Sg+Dat: прочита́вшему
+    прочитать+V+Perf+IV+PstAct+Neu+Sg+Ins: прочита́вшим
+    прочитать+V+Perf+IV+PstAct+Fem+Sg+Nom: прочита́вшая
+    прочитать+V+Perf+IV+PstAct+Fem+Sg+Acc: прочита́вшую
+    прочитать+V+Perf+IV+PstAct+Fem+Sg+Gen: прочита́вшей
+    прочитать+V+Perf+IV+PstAct+Fem+Sg+Loc: прочита́вшей
+    прочитать+V+Perf+IV+PstAct+Fem+Sg+Dat: прочита́вшей
+    прочитать+V+Perf+IV+PstAct+Fem+Sg+Ins: прочита́вшей
+    прочитать+V+Perf+IV+PstAct+Pl+Nom: прочита́вшие
+    прочитать+V+Perf+IV+PstAct+Pl+Acc+Inan: прочита́вшие
+    прочитать+V+Perf+IV+PstAct+Pl+Acc+Anim: прочита́вших
+    прочитать+V+Perf+IV+PstAct+Pl+Gen: прочита́вших
+    прочитать+V+Perf+IV+PstAct+Pl+Loc: прочита́вших
+    прочитать+V+Perf+IV+PstAct+Pl+Dat: прочита́вшим
+    прочитать+V+Perf+IV+PstAct+Pl+Ins: прочита́вшими
+
+    прочитать+V+Perf+TV+PstPss+Msc+Sg+Nom: прочи́танный
+    прочитать+V+Perf+TV+PstPss+Msc+Sg+Acc+Inan: прочи́танный
+    прочитать+V+Perf+TV+PstPss+Msc+Sg+Acc+Anim: прочи́танного
+    прочитать+V+Perf+TV+PstPss+Msc+Sg+Gen: прочи́танного
+    прочитать+V+Perf+TV+PstPss+Msc+Sg+Loc: прочи́танном
+    прочитать+V+Perf+TV+PstPss+Msc+Sg+Dat: прочи́танному
+    прочитать+V+Perf+TV+PstPss+Msc+Sg+Ins: прочи́танным
+    прочитать+V+Perf+TV+PstPss+Neu+Sg+Nom: прочи́танное
+    прочитать+V+Perf+TV+PstPss+Neu+Sg+Acc: прочи́танное
+    прочитать+V+Perf+TV+PstPss+Neu+Sg+Gen: прочи́танного
+    прочитать+V+Perf+TV+PstPss+Neu+Sg+Loc: прочи́танном
+    прочитать+V+Perf+TV+PstPss+Neu+Sg+Dat: прочи́танному
+    прочитать+V+Perf+TV+PstPss+Neu+Sg+Ins: прочи́танным
+    прочитать+V+Perf+TV+PstPss+Fem+Sg+Nom: прочи́танная
+    прочитать+V+Perf+TV+PstPss+Fem+Sg+Acc: прочи́танную
+    прочитать+V+Perf+TV+PstPss+Fem+Sg+Gen: прочи́танной
+    прочитать+V+Perf+TV+PstPss+Fem+Sg+Loc: прочи́танной
+    прочитать+V+Perf+TV+PstPss+Fem+Sg+Dat: прочи́танной
+    прочитать+V+Perf+TV+PstPss+Fem+Sg+Ins: прочи́танной
+    прочитать+V+Perf+TV+PstPss+Pl+Nom: прочи́танные
+    прочитать+V+Perf+TV+PstPss+Pl+Acc+Inan: прочи́танные
+    прочитать+V+Perf+TV+PstPss+Pl+Acc+Anim: прочи́танных
+    прочитать+V+Perf+TV+PstPss+Pl+Gen: прочи́танных
+    прочитать+V+Perf+TV+PstPss+Pl+Loc: прочи́танных
+    прочитать+V+Perf+TV+PstPss+Pl+Dat: прочи́танным
+    прочитать+V+Perf+TV+PstPss+Pl+Ins: прочи́танными
+    прочитать+V+Perf+TV+PstPss+Msc+Sg+Pred: прочи́тан
+    прочитать+V+Perf+TV+PstPss+Neu+Sg+Pred: прочи́тано
+    прочитать+V+Perf+TV+PstPss+Fem+Sg+Pred: прочи́тана
+    прочитать+V+Perf+TV+PstPss+Pl+Pred: прочи́таны
+
+    

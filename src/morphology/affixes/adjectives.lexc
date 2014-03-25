@@ -603,6 +603,62 @@ LEXICON LF_stem
 +Pl+Dat:%>ым  # ;
 +Pl+Ins:%>ыми  # ;
 
+LEXICON LF_stem_Prb
++Msc+Sg+Nom+Prb:%>ый  # ;
++Msc+Sg+Acc+Inan+Prb:%>ый  # ;
++Msc+Sg+Acc+Anim+Prb:%>ого  # ;
++Msc+Sg+Gen+Prb:%>ого  # ;
++Msc+Sg+Loc+Prb:%>ом  # ;
++Msc+Sg+Dat+Prb:%>ому  # ;
++Msc+Sg+Ins+Prb:%>ым  # ;
++Neu+Sg+Nom+Prb:%>ое  # ;
++Neu+Sg+Acc+Prb:%>ое  # ;
++Neu+Sg+Gen+Prb:%>ого  # ;
++Neu+Sg+Loc+Prb:%>ом  # ;
++Neu+Sg+Dat+Prb:%>ому  # ;
++Neu+Sg+Ins+Prb:%>ым  # ;
++Fem+Sg+Nom+Prb:%>ая  # ;
++Fem+Sg+Acc+Prb:%>ую  # ;
++Fem+Sg+Gen+Prb:%>ой  # ;
++Fem+Sg+Loc+Prb:%>ой  # ;
++Fem+Sg+Dat+Prb:%>ой  # ;
++Fem+Sg+Ins+Prb:%>ой  # ;
++Pl+Nom+Prb:%>ые  # ;
++Pl+Acc+Inan+Prb:%>ые  # ;
++Pl+Acc+Anim+Prb:%>ых  # ;
++Pl+Gen+Prb:%>ых  # ;
++Pl+Loc+Prb:%>ых  # ;
++Pl+Dat+Prb:%>ым  # ;
++Pl+Ins+Prb:%>ыми  # ;
+
+LEXICON LF_stem_Fac
++Msc+Sg+Nom+Fac:%>ый  # ;
++Msc+Sg+Acc+Inan+Fac:%>ый  # ;
++Msc+Sg+Acc+Anim+Fac:%>ого  # ;
++Msc+Sg+Gen+Fac:%>ого  # ;
++Msc+Sg+Loc+Fac:%>ом  # ;
++Msc+Sg+Dat+Fac:%>ому  # ;
++Msc+Sg+Ins+Fac:%>ым  # ;
++Neu+Sg+Nom+Fac:%>ое  # ;
++Neu+Sg+Acc+Fac:%>ое  # ;
++Neu+Sg+Gen+Fac:%>ого  # ;
++Neu+Sg+Loc+Fac:%>ом  # ;
++Neu+Sg+Dat+Fac:%>ому  # ;
++Neu+Sg+Ins+Fac:%>ым  # ;
++Fem+Sg+Nom+Fac:%>ая  # ;
++Fem+Sg+Acc+Fac:%>ую  # ;
++Fem+Sg+Gen+Fac:%>ой  # ;
++Fem+Sg+Loc+Fac:%>ой  # ;
++Fem+Sg+Dat+Fac:%>ой  # ;
++Fem+Sg+Ins+Fac:%>ой  # ;
++Pl+Nom+Fac:%>ые  # ;
++Pl+Acc+Inan+Fac:%>ые  # ;
++Pl+Acc+Anim+Fac:%>ых  # ;
++Pl+Gen+Fac:%>ых  # ;
++Pl+Loc+Fac:%>ых  # ;
++Pl+Dat+Fac:%>ым  # ;
++Pl+Ins+Fac:%>ыми  # ;
+
 LEXICON LF_stem_R
 +Msc+Sg+Nom:%>ыйся # ;
 +Msc+Sg+Acc+Inan:%>ыйся # ;
@@ -693,6 +749,18 @@ LEXICON SF_a
 +Fem+Sg+Pred:%>а # ;
 +Pl+Pred:%>ы # ;
 
+LEXICON SF_a_Fac
++Msc+Sg+Pred+Fac:%>%^Z # ;
++Neu+Sg+Pred+Fac:%>о # ;
++Fem+Sg+Pred+Fac:%>а # ;
++Pl+Pred+Fac:%>ы # ;
+
+LEXICON SF_a_Prb
++Msc+Sg+Pred+Prb:%>%^Z # ;
++Neu+Sg+Pred+Prb:%>о # ;
++Fem+Sg+Pred+Prb:%>а # ;
++Pl+Pred+Prb:%>ы # ;
+
 LEXICON SF_a_FemPrb
 +Msc+Sg+Pred:%>%^Z # ;
 +Neu+Sg+Pred:%>о # ;
@@ -743,6 +811,12 @@ LEXICON SF_b
 +Neu+Sg+Pred:%>о́ # ;
 +Fem+Sg+Pred:%>а́ # ;
 +Pl+Pred:%>ы́ # ;
+
+LEXICON SF_b_Prb
++Msc+Sg+Pred+Prb:%>%^Z # ;
++Neu+Sg+Pred+Prb:%>о́ # ;
++Fem+Sg+Pred+Prb:%>а́ # ;
++Pl+Pred+Prb:%>ы́ # ;
 
 LEXICON SF-_b
 +Msc+Sg+Pred+Prb:%>%^Z # ;

@@ -38,6 +38,8 @@
 
 import codecs
 import re
+import itertools
+import copy
 
 # RESERVED CHARACTERS IN FOMA (hfst's default lexc compiler)
 # ! " # $ % & ( ) * + , - . / 0 : ; < > ? [ \ ] ^ _ ` { | } 
@@ -242,18 +244,14 @@ def stresser2 ( myinput , mycode ) : # called by stresser(); places secondary st
 
 def Vstresser ( myinput ) : # places primary stress (acute accent), then calls stresser2 to place 2ndary stress.
     # print "Running Vstresser..." , myinput , stress2 , stress1 , mycode
-    #if u'c' in myinput['paradigm'] :   # if verb has shifting stress, then add a primary stress mark to stem
-    #    Vcount = Vowel.findall( myinput['lexeme'] )
-    #    print 'SHIFTING STRESS for ' + myinput['lemma'] + '! Vcount is ', Vcount
     mystresses = []
     if myinput['stress1'] == [] :
         print 'Stress index missing for' , myinput['lemma']
         return myinput
-
     for i in myinput['stress1'] :
-        if i <= len (myinput['lexeme']) :
+        if i <= len (myinput['lexeme']) and myinput['lexeme'][i-1] != u'ё' :
             mystresses.append((i,u'\u0301'))
-    for i in myinput['stress2'] : 
+    for i in myinput['stress2'] :
         if i <= len (myinput['lexeme']) :
             mystresses.append((i,u'\u0300'))
     mystresses = sorted( mystresses , key = lambda x : x[0] , reverse = True )
@@ -328,59 +326,139 @@ def N_stemmer ( instem , code ) :
     else : # if the word is a substantivized adjective...
         return A_stemmer ( instem , code )
 
+def add_yo ( inputString ) : # converts the final 'е' in the string to 'ё'
+    inputString = inputString[::-1]
+    theIndex = inputString.find(u'е')
+    inputString = inputString[:theIndex] + u'ё' + inputString[theIndex+1:]
+    return inputString[::-1]
+
 def V_add_stress ( myinput ) : # adds stress index for the last syllable of the stem
-    if len(myinput['UnstressedVowelPositions']) > 0 :
-        myinput['stress1'].append(myinput['UnstressedVowelPositions'][-1])
-        myinput['stress1'].sort()
+    if len(myinput['PotentialStressPositions']) > 0 :
+        if myinput['PotentialStressPositions'][-1] < myinput['stress1'][-1] :
+            myinput['stress1'].append(myinput['PotentialStressPositions'][-1])
+            myinput['stress1'].sort()
     return myinput
 
-def V_add_suffix_to_code ( myinput ) : # adds stressed suffix to paradigm code (e.g. а́ть)
-    myinput['paradigm'] = myinput['paradigm'] + u'_' + myinput['lexeme'][-1] + u'́ть'
-    myinput['lexeme'] = myinput['lexeme'][:-1]
+def V_add_suffix_to_code ( myinput , mylength ) : # adds suffix to paradigm code (e.g. ать, а́ть, еть, е́ть, etc.)
+    mylemma = DeNumber ( myinput['lemma'] )
+    if mylemma[-2] == u"с" :
+        mylemma = mylemma[:-2]
+    if myinput['stress1'][-1] > len(mylemma) - mylength : # if the suffix is stressed
+        removed_chars = mylemma[:-mylength]
+        mysuffix = mylemma[-mylength:]
+        stress_index_for_suffix = myinput['stress1'][-1] - len(removed_chars)
+        mysuffix = mysuffix[:stress_index_for_suffix] + u'́' + mysuffix[stress_index_for_suffix:]
+    else :
+        mysuffix = mylemma[-mylength:]
+    myinput['paradigm'] = myinput['paradigm'] + u'_' + mysuffix
+    myinput['lexeme'] = myinput['lexeme'][:-mylength+2]
     return myinput
 
 def V_stemmer ( myinput ) : # generates lexical stem for verbs
-    #print "Running V_stemmer...",repr(myinput)
+    # print "Running V_stemmer...",repr(myinput).decode("unicode-escape")
     # Remove infinitive ending (ть, ться, чь, чься, ти, тись)
     if myinput['lexeme'][-2:] == u"ся" or myinput['lexeme'][-2:] == u"сь" :
         myinput['lexeme'] = myinput['lexeme'][:-4]
     else :
         myinput['lexeme'] = myinput['lexeme'][:-2]
+    if myinput['paradigm'][:3] == u'нсв' and myinput['lemma'][-2] != u'с' and myinput['aspect_pair'] == u'' :
+        myinput['paradigm'] += u'pp'
     
     # Remove more, depending on inflection class
+    if myinput['paradigm'][:2] == '16' or myinput['paradigm'][:5] == u"нп 16" :
+        completely_useless_variable = 0
+    if myinput['paradigm'][:2] == '15' or myinput['paradigm'][:5] == u"нп 15" :
+        completely_useless_variable = 0
     if myinput['paradigm'][:2] == '14' or myinput['paradigm'][:5] == u"нп 14" :
-        myinput['lexeme'] = myinput['lexeme'][:-1]
+        myinput = V_add_suffix_to_code(myinput,3)
     elif myinput['paradigm'][:2] == '13' or myinput['paradigm'][:5] == u"нп 13" :
         myinput['lexeme'] = myinput['lexeme'][:-2]
     elif myinput['paradigm'][:2] == '12' or myinput['paradigm'][:5] == u"нп 12" :
-        myinput['lexeme'] = myinput['lexeme'][:-1]
+        if myinput['lexeme'][-1] == u'ы' :
+            myinput = V_add_suffix_to_code(myinput,3)
+        elif myinput['lexeme'][-1] == u'и' or myinput['lexeme'][-1] == u'у' :
+            myinput['lexeme'] = myinput['lexeme'][:-1]
     elif myinput['paradigm'][:2] == '11' or myinput['paradigm'][:5] == u"нп 11" :
         myinput['lexeme'] = myinput['lexeme'][:-1]
     elif myinput['paradigm'][:2] == '10' or myinput['paradigm'][:5] == u"нп 10" :
-        myinput['lexeme'] = myinput['lexeme'][:-1]
+        if myinput['lexeme'][-2] == u'р' :
+            myinput = V_add_suffix_to_code(myinput,4)
+        else :
+            myinput['lexeme'] = myinput['lexeme'][:-1]
     elif myinput['paradigm'][:1] == '9' or myinput['paradigm'][:4] == u"нп 9" :
         myinput['lexeme'] = myinput['lexeme'][:-3]
+    elif myinput['paradigm'][:1] == '8' or myinput['paradigm'][:4] == u"нп 8" :
+        if u'ё' in myinput['paradigm'] and myinput['lexeme'][-1] == u'е' :
+            myinput['lexeme'] = myinput['lexeme'][:-1]+u'ё'
+            myinput['paradigm'] = myinput['paradigm'].replace(u'ё',u'')
+        elif u'ё' in myinput['paradigm'] :
+            print "Trouble placing ё in stem of",myinput['lemma']
+        if u'(-к-)' in myinput['paradigm'] :
+            myinput['lexeme'] = myinput['lexeme']+u'к'
+            myinput['paradigm'] = myinput['paradigm'].replace(u'(-к-)',u'')
+        elif u'(-г-)' in myinput['paradigm'] :
+            myinput['lexeme'] = myinput['lexeme']+u'г'
+            myinput['paradigm'] = myinput['paradigm'].replace(u'(-г-)',u'')
+        else : print "Trouble placing г/к in stem of",myinput['lemma']
+    elif myinput['paradigm'][:1] == '7' or myinput['paradigm'][:4] == u"нп 7" :
+        while myinput['lexeme'][-1] != u'з' and myinput['lexeme'][-1] != u'с' :
+            myinput['lexeme'] = myinput['lexeme'][:-1]
+        if myinput['lexeme'][-1] == u'с' :
+            myinput['lexeme'] = myinput['lexeme'][:-1]
+            if u'(-д-)' in myinput['paradigm'] :
+                myinput['lexeme'] += u'д'
+            elif u'(-т-)' in myinput['paradigm'] :
+                myinput['lexeme'] += u'т'
+            elif u'(-с-)' in myinput['paradigm'] :
+                myinput['lexeme'] += u'с'
+            elif u'(-ст-)' in myinput['paradigm'] :
+                myinput['lexeme'] += u'ст'
+            elif u'(-б-)' in myinput['paradigm'] :
+                myinput['lexeme'] += u'б'
+            else : print 'V_stemmer WARNING: trouble finishing stem of',myinput['lemma'],myinput['paradigm'],myinput['lexeme']
+            if u'ё' in myinput['paradigm'] :
+                while myinput['lexeme'][-1] != u'е' :
+                    myinput['lexeme'] = myinput['lexeme'][:-1]
+                myinput['lexeme'] = myinput['lexeme'][:-1]
     elif myinput['paradigm'][:1] == '6' or myinput['paradigm'][:4] == u"нп 6" :
-        myinput['lexeme'] = myinput['lexeme'][:-1]
-    elif myinput['paradigm'][:1] == '5' or myinput['paradigm'][:4] == u"нп 5" :
-        myinput['lexeme'] = myinput['lexeme'][:-1]
-        if myinput['pos'][:2] == u'св' :  # If the verb is perfective or biaspectual
+        if u'ё' in myinput['paradigm'] :
+            suffix_length = len(DeNumber(myinput['lemma']))-myinput['PotentialStressPositions'][-1]+1
+            myinput = V_add_suffix_to_code(myinput,suffix_length)
+        else :
+            myinput = V_add_suffix_to_code(myinput,3)
+        if u'6b' in myinput['paradigm'] :
+            myinput['paradigm'] = myinput['paradigm'].replace(u'6b',u'6°b')
+            if u'беру/,_ёт' in myinput['paradigm_details'] : 
+                while myinput['lexeme'][-1] != u'б' : myinput['lexeme'] = myinput['lexeme'][-1]
+        if u'6c' in myinput['paradigm'] :
+            myinput = V_add_stress(myinput)
+        elif myinput['pos'][:2] == u'св' or myinput['pos'][:3] == u'нсв' and myinput['aspect_pair'] == u'' :  # If the verb is transitive perfective/biaspectual or imperfective without an aspectual partner
             if myinput['stress1'][-1] == len(myinput['lexeme']) :
-                myinput = V_add_suffix_to_code(myinput)
-
+                myinput = V_add_stress(myinput)
+    elif myinput['paradigm'][:1] == '5' or myinput['paradigm'][:4] == u"нп 5" :
+        myinput = V_add_suffix_to_code(myinput,3)
     elif myinput['paradigm'][:1] == '4' or myinput['paradigm'][:4] == u"нп 4" :
         myinput['lexeme'] = myinput['lexeme'][:-1]
+        if u'%8%' in myinput['paradigm'] :
+            myinput = V_add_stress(myinput)
     elif myinput['paradigm'][:1] == '3' or myinput['paradigm'][:4] == u"нп 3" : # уть
         myinput['lexeme'] = myinput['lexeme'][:-1]
         if u'3°a' in myinput['paradigm'] :
-            myinput['paradigm'] = myinput['paradigm'].replace(u'3°a',u'3a_zero')
-        if u'3b' in myinput['paradigm'] :
-            if len(myinput['VowelPositions']) > 2 and myinput['lemma'][-2:] != u'ся' :
-                myinput['paradigm'] = myinput['paradigm'] + u'_multisyll'
+            myinput['paradigm'] = myinput['paradigm'].replace(u'3°a',u'3a zero')
+        elif u'3b' in myinput['paradigm'] and myinput['lemma'][-2:] != u'ся' and u'нп' not in myinput['paradigm']:
+            if u'ё' in myinput['paradigm'] :
+                myinput['paradigm'] = myinput['paradigm'].replace(u'ё',u'')
+                myinput['lexeme'] = add_yo(myinput['lexeme'])
+            else :
                 myinput = V_add_stress(myinput)
-            elif len(myinput['VowelPositions']) == 2 and myinput['lemma'][-2:] != u'ся' :
-                myinput['paradigm'] = myinput['paradigm'] + u'_unisyll'
+        elif u'3c' in myinput['paradigm'] :
+            if u'ё' in myinput['paradigm'] :
+                suffix_length = len(DeNumber(myinput['lemma']))-myinput['PotentialStressPositions'][-1]+1
+                myinput = V_add_suffix_to_code(myinput,suffix_length)
+            myinput = V_add_stress(myinput)
     elif myinput['paradigm'][:1] == '2' or myinput['paradigm'][:4] == u"нп 2" : # овать
+        if u' о' in myinput['paradigm'] :
+            myinput['paradigm'] = myinput['paradigm'].replace(u' о',u'')
         if myinput['lexeme'][-3] == u'о' :
             myinput['lexeme'] = myinput['lexeme'][:-3]
         elif myinput['lexeme'][-3] == u'е' :
@@ -395,38 +473,128 @@ def V_stemmer ( myinput ) : # generates lexical stem for verbs
         elif myinput['lexeme'][-3] == u'ё' :
             if myinput['lexeme'][-4] in u'жшщчц' :
                 myinput['lexeme'] = myinput['lexeme'][:-3]
-                myinput['paradigm'] += u'_ёва́'
+                myinput['paradigm'] += u' ёва́'
             elif myinput['lexeme'][-4] in u'аэоуыяеёюи' :
                 myinput['lexeme'] = myinput['lexeme'][:-3]
                 myinput['lexeme'] = myinput['lexeme'] + u'й'
             elif myinput['lexeme'][-4] in u'бвдзлмнпрстф' :
                 myinput['lexeme'] = myinput['lexeme'][:-3]
                 myinput['lexeme'] = myinput['lexeme'] + u'ь'
-        else : print "WARNING: V_stemmer function is not processing",myinput['lemma'],'correctly.'
+        else : print "V_stemmer WARNING: not processing",myinput['lemma'],'correctly.'
         if len(myinput['stress1']) >= 1 :
             if myinput['stress1'][-1] > len(myinput['lexeme']) : # if the suffix is stressed, i.e. ова́ть
                 #print myinput['lexeme'],'|',len(myinput['lexeme']),'|',myinput['stress1'][-1]
-                if myinput['paradigm'][-5:] != u'_ёва́' and myinput['paradigm'][1] != u'b' :
-                    myinput['paradigm'] = myinput['paradigm'] + u'_ова́'
+                if myinput['paradigm'][-5:] != u' ёва́' and myinput['paradigm'][1] != u'b' :
+                    myinput['paradigm'] = myinput['paradigm'] + u' ова́'
                 #print myinput['paradigm']
-    elif myinput['paradigm'][:1] == '1' and u'%[x]%' not in myinput['paradigm'] :
-        if myinput['pos'][:2] == u'св' :  # If the verb is perfective or biaspectual
-            if myinput['stress1'][-1] == len(myinput['lexeme']) :
-                myinput = V_add_suffix_to_code(myinput)
-                myinput = V_add_stress(myinput)
+    elif myinput['paradigm'][:1] == '1' or myinput['paradigm'][:4] == u"нп 1" :
+        if u'%[x]%' not in myinput['paradigm'] and myinput['lemma'][-2] != u'с' and myinput['paradigm'][:2] != u"нп" :
+            if u'ё' in myinput['paradigm'] :
+                suffix_length = len(DeNumber(myinput['lemma']))-myinput['PotentialStressPositions'][-1]+1
+                myinput = V_add_suffix_to_code(myinput,suffix_length)
+            elif myinput['pos'][:2] == u'св' or u'pp' in myinput['paradigm'] :  # If the verb is transitive perfective/biaspectual or imperfective without an aspectual partner
+                if myinput['stress1'][-1] == len(myinput['lexeme']) :
+                    myinput = V_add_suffix_to_code(myinput,3)
+                    myinput = V_add_stress(myinput)
+#    else : 
+#        if u'см. ' not in myinput['paradigm_details'] :
+#            print "V_Stemmer WARNING: Code not found for",myinput['lemma'],myinput['paradigm'],'---',myinput['paradigm_details']
     myinput = VCodeCleaner (myinput)
     return Vstresser ( myinput )
 
+fiveO = [u'предо']
+four = [u'пред']
+fourO = u'возо надо низо подо разо'.split()
+three = u'над под воз низ раз'.split()
+threeS = u'вос нис рас'.split()
+threeO = u'обо ото взо изо'.split()
+two = u'об от вз из'.split()
+twoS = u'вс ис'.split()
+twoO = u'во со'.split()
+one = u'в с'.split()
+prefixes_with_fleeting_vowels = fiveO + four + fourO + three + threeS + threeO + two + twoS + twoO + one
+
+def V_star ( myinput ) : # add fleeting vowel prefixes with * in paradigm
+    myinput['paradigm'] = myinput['paradigm'].replace(u'*','')
+    for p in prefixes_with_fleeting_vowels :
+        if p in myinput['lexeme'] :
+            if p[-1] == u'о' :
+                myinput['lexeme'] = re.sub(p,p[:-1]+u'%^Fо',myinput['lexeme'],1)
+                return myinput
+            elif p[-1] == u'с' and len(p) > 1 :
+                myinput['lexeme'] = re.sub(p,p[:-1]+u'з%^Fо',myinput['lexeme'],1)
+                return myinput
+            else :
+                myinput['lexeme'] = re.sub(p,p+u'%^Fо',myinput['lexeme'],1)
+                return myinput
+
 def VCodeCleaner ( myinput ) :
     for codefields in ['paradigm','paradigm_details'] :
-        for old , new in [(u'%tr%',u''),(u'%[x]%',u'?'),(u'%x%',u's'),(u'%1%',u'1'),(u'%2%',u'2'),(u'%3%',u'3'),(u'%4%',u'4'),(u'%5%',u'5'),(u'%6%',u'6'),(u'%7%',u'7'),(u'%8%',u'8'),(u'%9%',u'9'),(u'§ ',u'')] :
+        myinput[codefields] = myinput[codefields].replace(u'_',u' ')
+        myinput[codefields] = myinput[codefields].strip()
+        for old , new in [(u'|',u''),(u':',u''),(u';',u''),(u'%tr%',u''),(u'%[x]%',u'?'),(u'%x%',u's'),(u'%1%',u'1'),(u'%2%',u'2'),(u'%3%',u'3'),(u'%4%',u'4'),(u'%5%',u'5'),(u'%6%',u'6'),(u'%7%',u'7'),(u'%8%',u'8'),(u'%9%',u'9'),(u'§ ',u''),(u'  ',u' '),(u'   ',u' '),(u'    ',u' ')] :
             myinput[codefields] = myinput[codefields].replace(old,new)
+        if myinput[codefields] == u' ' :
+            myinput[codefields] = u''            
     return myinput
 
 def AStemCodeStrip ( myinput ) :
     output = re.sub( " [1-7]" , " " , myinput )
     output = re.sub( "\\*" , "" , output )    
     return output
+
+def expand_variation ( myinput ) : # create multiple entries for pos/paradigms with ";" or "//"
+    outList = []
+    for myPOS in myinput['pos'].split(u';') :
+        tempDict = copy.deepcopy(myinput)
+        tempDict['pos'] = myPOS
+        outList.append(tempDict)
+    outList2 = []
+    for d in outList : # d is a dict object
+        for myPOS in d['pos'].split(u'// ') :
+            tempDict2 = copy.deepcopy(d)
+            tempDict2['pos'] = myPOS
+            outList2.append(tempDict2)
+    outList3 = []
+    for d in outList2 :
+        outList3.extend(expand_variation_paradigm(d))
+    return outList3
+    
+def expand_variation_paradigm ( myinput ) :
+    myParadigm = myinput['paradigm']
+    outList = []
+    if u'//' in myParadigm :
+        if myParadigm[0] == u'<' :
+            myParadigm = myParadigm[1:-1]
+            if u',' in myParadigm :
+                scoper = myParadigm.split(u',')
+                for i in range(len(scoper)) :
+                    scoper[i] = scoper[i].split(u'// ')
+                for i in list(itertools.product(*scoper)) :
+                    tempDict = copy.deepcopy(myinput)
+                    tempDict['paradigm'] = u'<' + u' '.join(m.replace(',','').strip() for m in i) + u'>'
+                    outList.append(tempDict)
+            else : # if there is no comma
+                print myinput['lemma'] , myParadigm , '\t\t\tPROBLEM A'
+        else : # if does not begin with <
+            if u',' in myParadigm :
+                scoper = myParadigm.split(u',')
+                for i in range(len(scoper)) :
+                    scoper[i] = scoper[i].split(u'// ')
+                for i in list(itertools.product(*scoper)) :
+                    tempDict = copy.deepcopy(myinput)
+                    tempDict['paradigm'] = ' '.join(m.replace(',','').strip() for m in i)
+                    outList.append(tempDict)
+            else : # if does not begin with < and there is no comma
+                for paradigm in myParadigm.split(u'// ') :
+                    tempDict = copy.deepcopy(myinput)
+                    tempDict['paradigm'] = paradigm.replace(',','')
+                    outList.append(tempDict)
+    else :
+        tempDict = copy.deepcopy(myinput)
+        tempDict['paradigm'] = tempDict['paradigm'].replace(',','')
+        outList.append(tempDict)
+    return outList
 
 def DeNumber ( lemmaname ) : # remove leading numbers from lemma, e.g. 2есть > есть
     if lemmaname[0] in u'0123456789-' :
@@ -446,6 +614,70 @@ def Yoer ( myDict ) :
     else :
         print "WARNING: no 'е' in" , myDict['lexeme'] , "to convert to 'ё'"
         return myDict['lexeme'] , myDict['paradigm']
+
+def dictionary_sorter ( myEntryDict ) :
+    codes = myEntryDict['pos'].strip() + u' ' + myEntryDict['paradigm'].strip() + u' ' + myEntryDict['paradigm_details'].strip()
+    while u'  ' in codes :
+        codes = codes.replace(u'  ',u' ')
+
+    if myEntryDict['pos'].split() :
+        if myEntryDict['pos'].split()[0] in u'м мо мо-жо с со ж жо мн.'.split() :
+            if codes in Ndict :
+                Ndict[codes].append(myEntryDict)
+            else :
+                Ndict[codes] = [myEntryDict]
+        elif myEntryDict['pos'].split()[0] in u'п' :
+            if codes in Adict :
+                Adict[codes].append(myEntryDict)
+            else :
+                Adict[codes] = [myEntryDict]
+        elif myEntryDict['pos'].split()[0] in u'нсв св св-нсв нсв, св, св-нсв,'.split() :
+            if myEntryDict['lexeme'][-2] == u'с' and myEntryDict['PotentialStressPositions'][-1] == len(DeNumber(myEntryDict['lexeme'])) :
+                myEntryDict['PotentialStressPositions'] = myEntryDict['PotentialStressPositions'][:-1]
+            if codes in Vdict :
+                Vdict[codes].append(myEntryDict)
+            else :
+                Vdict[codes] = [myEntryDict]
+        elif myEntryDict['pos'] == u'н' :
+            if codes in Advdict :
+                Advdict[codes].append(myEntryDict)
+            else :
+                Advdict[codes] = [myEntryDict]
+        elif myEntryDict['pos'] == u'союз' :
+            if codes in Cdict :
+                Cdict[codes].append(myEntryDict)
+            else :
+                Cdict[codes] = [myEntryDict]
+        elif myEntryDict['pos'] == u'межд.' :
+            if codes in Idict :
+                Idict[codes].append(myEntryDict)
+            else :
+                Idict[codes] = [myEntryDict]
+        elif myEntryDict['pos'] == u'числ. числ.-п' :
+            if codes in Numdict :
+                Numdict[codes].append(myEntryDict)
+            else :
+                Numdict[codes] = [myEntryDict]
+        elif myEntryDict['pos'] == u'предл.' :
+            if codes in Pdict :
+                Pdict[codes].append(myEntryDict)
+            else :
+                Pdict[codes] = [myEntryDict]
+        elif myEntryDict['pos'] in u'мс мс-п'.split() :
+            if codes in Prodict :
+                Prodict[codes].append(myEntryDict)
+            else :
+                Prodict[codes] = [myEntryDict]
+        else : 
+            if codes in Odict :
+                Odict[codes].append(myEntryDict)
+            else :
+                Odict[codes] = [myEntryDict]
+    else :
+        if codes in Odict :  # leftovers
+            Odict[codes].append(myEntryDict)
+        else :
+            Odict[codes] = [myEntryDict]
 
 myFile = codecs.open ( 'gram_studentam_preprocessed.csv' , mode='r' , encoding='utf-8' )
 Zlist = myFile.readlines() # Put the file into a list object
@@ -482,13 +714,13 @@ for n in range(len(Zlist)) : # Parse each line and the put entries in one of the
     if entryDict['stress1'] == [''] or entryDict['stress1'] == ['x'] :
         entryDict['stress1'] = []
     else : entryDict['stress1'] = sorted([ int(i) for i in entryDict['stress1'] ])
-    entryDict['UnstressedVowelPositions'] = sorted(list(set(entryDict['VowelPositions']) - set(entryDict['stress1']) - set(entryDict['stress2'])))
+    entryDict['PotentialStressPositions'] = sorted(list(set(entryDict['VowelPositions']) - set(entryDict['stress1']) - set(entryDict['stress2'])))
     if entryDict['lemma'] == "" :
         entryDict['lemma'] = entryDict['lexeme'] # if lemma is empty, copy lexeme
-    if entryDict['pos'] == "" :
-        entryDict['pos'] = u"UNLABELLED"
-    if entryDict['paradigm'] == "" :
-        entryDict['paradigm'] = u"UNLABELLED"
+#    if entryDict['pos'] == "" :
+#        entryDict['pos'] = u"_"
+#    if entryDict['paradigm'] == "" :
+#        entryDict['paradigm'] = u""
     if u'ё' in entryDict['lemma'] and u'ё' not in entryDict['lexeme'] : # if the lemma has a ё and lexeme doesn't, switch them
         if DeNumber(entryDict['lemma']).replace(u'ё',u'е') == entryDict['lexeme'] :
             entryDict['lexeme'] = DeNumber(entryDict['lemma']).replace(u'ё',u'е')
@@ -498,72 +730,25 @@ for n in range(len(Zlist)) : # Parse each line and the put entries in one of the
     if u', ё' in entryDict['paradigm'] and u'св' not in entryDict['pos'] : # non-verbs with ', ё' in Z's code
         entryDict['lexeme'] , entryDict['paradigm'] = Yoer ( entryDict ) # put ё into lexeme of nominals
 
+    entryDict = expand_variation(entryDict) # this embeds the entryDict(s) in list
 
-    codes = entryDict['pos'] + " " + entryDict['paradigm'] + " " + entryDict['paradigm_details']
-    codes = codes.strip()
-
-    if entryDict['pos'].split()[0] in u'м мо мо-жо с со ж жо мн.'.split() :
-        if codes in Ndict :
-            Ndict[codes].append(entryDict)
-        else :
-            Ndict[codes] = [entryDict]
-    elif entryDict['pos'].split()[0] in u'п' :
-        if codes in Adict :
-            Adict[codes].append(entryDict)
-        else :
-            Adict[codes] = [entryDict]
-    elif entryDict['pos'].split()[0] in u'нсв св св-нсв нсв, св, св-нсв,'.split() :
-        if codes in Vdict :
-            Vdict[codes].append(entryDict)
-        else :
-            Vdict[codes] = [entryDict]
-    elif entryDict['pos'][0] in u'н' :
-        if codes in Advdict :
-            Advdict[codes].append(entryDict)
-        else :
-            Advdict[codes] = [entryDict]
-    elif entryDict['pos'] in u'союз' :
-        if codes in Cdict :
-            Cdict[codes].append(entryDict)
-        else :
-            Cdict[codes] = [entryDict]
-    elif entryDict['pos'] in u'межд.' :
-        if codes in Idict :
-            Idict[codes].append(entryDict)
-        else :
-            Idict[codes] = [entryDict]
-    elif entryDict['pos'] in u'числ. числ.-п' :
-        if codes in Numdict :
-            Numdict[codes].append(entryDict)
-        else :
-            Numdict[codes] = [entryDict]
-    elif entryDict['pos'] in u'предл.' :
-        if codes in Pdict :
-            Pdict[codes].append(entryDict)
-        else :
-            Pdict[codes] = [entryDict]
-    elif entryDict['pos'] in u'мс мс-п' :
-        if codes in Prodict :
-            Prodict[codes].append(entryDict)
-        else :
-            Prodict[codes] = [entryDict]
-    elif entryDict['pos'] in u'' :
-        if codes in Sdict :
-            Sdict[codes].append(entryDict)
-        else :
-            Sdict[codes] = [entryDict]
-    else :
-        if codes in Odict :  # leftovers
-            Odict[codes].append(entryDict)
-        else :
-            Odict[codes] = [entryDict]
+    for e in entryDict :
+        dictionary_sorter ( e )
 
 print len(Zlist),"lines in input."
-print len(Ndict)+len(Adict)+len(Vdict)+len(Odict),'categories in output.'
+print len(Ndict)+len(Adict)+len(Vdict)+len(Odict),'categories in input.'
 for d , n in [ (Ndict,"noun") , (Adict,"adjective") , (Vdict,"verb") , (Advdict,"adverb") , 
                (Cdict,"conjunction") , (Idict,"interjection") , (Numdict,"numeral") , 
                (Pdict,"preposition") , (Prodict,"pronoun") , (Sdict,"subjunction") , (Odict,"miscellaneous") ] :
-    print len(d),'\t',n,'categories in output.'
+    print len(d),'\t',n,'categories in input.'
+
+lexc_header = u'! ===================================================================\n'*5 +\
+              u'! This lexc file is automatically generated by ../incoming/Z2.py. In \n' +\
+              u"! order to permanently change this file, you must change the script's\n" +\
+              u"! xslx input. Instructions can be found in the 'README' sheet of the \n" +\
+              u"! Excel workbook.\n" +\
+              u'! ===================================================================\n'*5 +\
+              u'\n\n'
 
 with codecs.open ( "../stems/verbs.lexc" , mode='w' , encoding='utf-8' ) as Vfile :
     print "Preparing verbs.lexc ...",
@@ -571,11 +756,13 @@ with codecs.open ( "../stems/verbs.lexc" , mode='w' , encoding='utf-8' ) as Vfil
     for code in Vdict :
         for entry in Vdict[code] :
             entry = V_stemmer(entry)
-            entry['paradigm'] = entry['paradigm'].replace("*","")
+            if u'*' in entry['paradigm'] : entry = V_star(entry)
             if entry['lemma'][-2] == u"с" :
-                entry['paradigm'] += u"_R"
-            lexicon = entry['pos'] + " " + entry['paradigm'] + " " + entry['paradigm_details']
+                entry['paradigm'] += u" R"
+            lexicon = entry['pos'] + u' ' + entry['paradigm'] + u' ' + entry['paradigm_details']
             lexicon = lexicon.strip()
+            while u'  ' in lexicon :
+                lexicon = lexicon.replace(u'  ',u' ')
             if lexicon in newVdict :
                 newVdict[lexicon].append(entry)
             else :
@@ -583,28 +770,39 @@ with codecs.open ( "../stems/verbs.lexc" , mode='w' , encoding='utf-8' ) as Vfil
     print len(newVdict),'categories in verbs.lexc ...',
     print "writing verbs.lexc ...",
     Vcatslist = []
+    Vfile.write( lexc_header )
     Vfile.write( u'LEXICON Verb\n' )
     for each_code in sorted ( newVdict, reverse=False ) : # for each grammar code in the verb dictionary
-        Vcatslist.append([len(newVdict[each_code]),each_code,newVdict[each_code][0]['lemma']])
-        #print each_code
+        Vcatslist.append([len(newVdict[each_code]),each_code,newVdict[each_code][0]['lemma'],newVdict[each_code][0]['lexeme'],])
         code_header = u'! '+'='*60 + u'  Types in Zaliznjak: ' + str(len(newVdict[each_code])) + u'\n!' + u' '*35 + each_code.replace(u" ",u"_") + u'\n'
-        #print code_header
         Vfile.write(code_header)
         #Vfile.write(u'! THIS CATEGORY UNVERIFIED (delete this line when the computer-generated code has been verified by hand)\n')
         for each_lemma in sorted ( newVdict[each_code] , key=lambda x: x['lemma'][::-1]) :
             if each_lemma['skip'] == u'1' :
                 skipper = u"! "
-            elif len(newVdict[each_code]) < 100 and each_lemma['skip'] != u'-1' : # -1 in the skip column blocks that lemma from being commented out
+            elif len(newVdict[each_code]) < 18 and each_lemma['skip'] != u'-1' : # -1 in the skip column blocks that lemma from being commented out
                 skipper = u"! "
             else : skipper = u""
+            if each_lemma['do_not_skip'] == u'1' :
+                skipper = u""
             entry = skipper + each_lemma['lemma'] + u":" + each_lemma['lexeme'] + u" " + each_code.replace(" ","_") + u" ;"
             #entry += u' '*(50-len(entry)) + u"\t! " + each_lemma['pos'] + u' ' + each_lemma['paradigm'] + u' ' + each_lemma['paradigm_details']
             entry += u'\n'
             Vfile.write(entry)
-    Vcatsfile = codecs.open ( "verb_cats.txt" , mode='w' , encoding='utf-8' )
-    for i,j,k in sorted (Vcatslist,key=lambda x : x[0],reverse=True) :
-        Vcatsfile.write(str(i)+'\t\t'+j+'\t\t'+k+"\n")
-    Vcatsfile.close()    
+    Vcatsfile_freq = codecs.open ( "verb_cats_freq.txt" , mode='w' , encoding='utf-8' )
+    Vcats_counter = 0.0
+    V_total = sum(i for i,j,k,l in Vcatslist)
+    for i,j,k,l in sorted (Vcatslist,key=lambda x : x[0],reverse=True) :
+        Vcats_counter += i
+        Vcatsfile_freq.write(str(i)+'\t\t'+'{:.2%}'.format(Vcats_counter/V_total)+'\t\t'+j.replace(' ','_')+'\t\t'+k+'\t\t'+l+"\n")
+    Vcatsfile_freq.close()    
+    Vcatsfile_alph = codecs.open ( "verb_cats_alph.txt" , mode='w' , encoding='utf-8' )
+    Vcats_counter = 0.0
+    V_total = sum(i for i,j,k,l in Vcatslist)
+    for i,j,k,l in sorted (Vcatslist,key=lambda x : ' '.join(x[1].split()[1:]).replace(' ','_'),reverse=False) :
+        Vcats_counter += i
+        Vcatsfile_alph.write(str(i)+'\t\t'+'{:.2%}'.format(Vcats_counter/V_total)+'\t\t'+j.replace(' ','_')+'\t\t'+k+'\t\t'+l+"\n")
+    Vcatsfile_alph.close()
     print "verbs.lexc done!"
 
 with codecs.open ( "nouns.lexc" , mode='w' , encoding='utf-8' ) as Nfile :

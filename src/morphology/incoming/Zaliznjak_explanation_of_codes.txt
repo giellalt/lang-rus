@@ -1,0 +1,342 @@
+============================== Nouns ==================================
+Noun Gender
+м               masculine inanimate
+мо              masculine animate
+с               neuter inanimate
+со              neuter animate
+ж               feminine inanimate
+жо              feminine animate
+мо-жо           masculine/feminine animate
+мн.             plurale tantum
+мн. неод.       plurale inanimate
+мн. одуш.       plurale animate
+мн. от          plurale from (lexeme)
+
+Noun Stems
+0               Indeclinable (technically not a stem type)
+1               Hard paired consonant
+2               Soft paired consonant
+3               Velars: г, к, х
+4               Hushers: ж, ш, щ, ч
+5               ц
+6               Vowels other than и: а, о у ы, я, е, ё, ю
+7               и
+8               Feminine soft-sign, such as вещь (technically not a stem type, but a declension class)
+*               fleeting vowel
+**      °       special stem alternations (ребенок~ребята, имя~имена)
+
+Noun Stress Pattern
+                SG      PL
+А       a       stem    stem
+В       b       end     end
+В'      b'      end*    end         * InsSg is stem-stressed: вошь, вши, вшам, во́шью
+С       c       stem    end
+Д       d       end     stem
+Д'      d'      end*    stem        * Fem AccSg is stem-stressed: спина́, спи́ну
+Е       e       stem    anomolous   ("anomolous" = NomPl/AccPlInan on stem, all other plural on end)
+Ф       f       end     anomolous
+Ф'      f'      end*    anomolous   * Fem AccSg is stem-stressed: рука́, ру́ку
+Ф''     f''     end*    anomolous   * InsSg is stem stressed (this pattern only occurs in variation with pattern e, e.g. грудь, гру́ди/груди́, гру́дью)
+
+"1" =1= ①      irregular NomPl: M-а́, N-ы
+"2" =2= ②      irregular GenPl: M-zero, N-ов, F-ей
+
+йо      «ё»     indicates alternation of e/ё in stem
+
+<>              e.g. мо < жо 1а > indicates that the noun is Masc Anim, but declines like Fem Anim 1a
+
+-               Plural forms are hypothetical (singulare tantum)
+^П2     П2      2nd locative
+^Р2     Р2      2nd genitive
+
+{1      §1      пол~ (pg 73)
+{2      §2      пол~...~ого (pg 74)
+{3      §3      No singular for morphological reasons (pg 74)
+{4      §4      Masculine ~ище, in colloquial speech, feminine endings occur (pg 74)
+{5      §5      Masculine ~ишко, in colloquial speech, feminine endings occur (pg 74)
+{6      §6      ~ина
+
+@       ∆       Irregular morphology
+%       ♢       Set phrases in which morphology differs from the norm
+
+============================== Adjectives ==================================
+
+Adjective Stems
+0               Indeclinable (technically not a stem type)
+1               Hard paired consonant
+2               Soft paired consonant
+3               Velars: г, к, х
+4               Hushers: ж, ш, щ, ч
+5               ц
+6               Vowels other than и: а, о у ы, я, е, ё, ю
+7               и
+8               Feminine soft-sign, such as вещь (technically not a stem type, but a declension class)
+*               fleeting vowel
+
+Adjective Stress (two symbols given, long-form/short-form; if only 1 symbol, then both are the same)
+Long-form
+А       a       stem
+В       b       end
+Short-form
+                M       N       F       Pl
+А       a       stem    stem    stem    stem
+А'      a'      stem    stem    both    stem
+В       b       end*    end     end     end     * in M, stress is on last syllable of stem
+В'      b'      end*    end     end     both    * in M, stress is on last syllable of stem
+С       c       stem    stem    end     stem
+С'      c'      stem    stem    end     both
+С''     c''     stem    both    end     both
+
+The following two symbols are only used for adjectives in ~нный/~нний
+"1"  1  ①      final н is dropped for MSg short-form
+"2"  2  ②      final н is dropped for all short-forms
+
+йо      «ё»     indicates alternation of e/ё in stem
+
+-       -       M short-form is hypothetical (pg 68)
+!   s   ×       Short-forms are problematic (pg 68)
+?       ⊠       M short-form is hypothetical, other short-forms are problematic (pg 68)
+А       ~       No comparative form (pg 68)
+
+{7      §7      short-forms avoided because they would be identical to short forms of related participles (pg 75)
+{8      §8      index in these entries refers only to the headword, not to the (identical) participle
+{9      §9      index in these entries refers only to the headword, not to the (identical) participle
+{10     §10     short-forms avoided because they match past tense of related verbs
+{11     §11     -оньк/-еньк short-forms are virtually never used (redundant: already marked by !)
+{12     §12     Pronouns in не- ни- кое- кой- друг друга: PREPOSITIONS are interposed
+
+@       ∆       Irregular morphology
+%       ♢       Set phrases in which morphology differs from the norm
+
+============================== Verbs ==================================
+
+Aspect
+св              perfective
+нсв             imperfective
+св-нсв          biaspectual
+
+Transitivity
+нп              non-reflexive that is intransitive in all its meanings, or governs genitive
+                transitive verbs are not marked
+
+безл.           impersonal in all its meanings
+многокр.        iterative
+
+Verb Stems (2nd conjugation is codes 4 and 5; all other stems are 1st conjugation)
+1               ать, ять, еть
+2               овать, евать
+3               нуть
+4               ить (2nd conj)
+5               ать, ять, еть (2nd conj)
+6               ать, ять (скажу, etc.)
+7               зти, зть, сти, сть
+8               чь
+9               ереть
+10              оть
+11              ить (бить, вить, лить, пить, шить)
+12              ыть, уть, ить
+13              авать
+14              ать/ять (занять, взять, etc.)
+15              ть>ну (стать)
+16              ть>ву (жить)
+*               fleeting vowel (о) at the end of the prefix, etc.
+**      °       special (non)alternations in stem (засохнуть, сосать)
+***     °*      both fleeting vowel and special alternation
+
+Verb Stress
+Non-past
+А       a       stem
+В       b       end 
+С       c       shifting (пишу́, пи́шешь, пи́шет, пи́шем, пи́шете, пи́шут)
+Past
+                M       N       F       Pl
+А       a       stem    stem    stem    stem
+В       b       end*    end     end     end     * in M, stress is on last syllable of stem
+С       c       stem    stem    end     stem
+С''     c''     both*   both    end     both    Mix of B and C
+
+"1"  1  ①      stress in past tense and short-form ppl one syllable to left (except Fem)
+"2"  2  ②      Command form: ь/й instead of и
+"3"  3  ③      Command form: и instead of ь in singular
+"4"  4  ④      Present active participle: stress one syllable to the left
+"5"  5  ⑤      In 3**, -ну- is kept in the masc past tense
+"6"  6  ⑥      In 3**, -ну- is kept in past active participle and past verbal adverb
+"7"  7  ⑦      In past passive participle, stress is immediately before нный (=ённый)
+"8"  8  ⑧      In past passive participle, stress is 3 syllables from the end (=´-енный)
+"9"  9  ⑨      Pf verbs: Past gerund in -я/a
+
+йо      «ё»     indicates alternation of e/ё in stem
+о       «о»     indicates alternation of е/о in stem (only in verbs in -цевать)
+
+
+!   s   ×       Past passive participle is problematic (pg 136)
+?       ⊠       Past passive participle is absent (pg 136)
+
+@       ∆       Irregular morphology
+%       ♢       Set phrases in which morphology differs from the norm
+()      ◍       Shows aspectual partner
+
+{13     §13     Vascillate between class 1 and class 6
+                    - Pres/Fut and Pres Pppl from class 6 (class 1 is substandard)
+{14     §14     Vascillate between class 1 and class 6
+                    - Imper and VAdv from class 1 (class 6 is archaic)
+                    - Pres/Fut and Pres Pppl from both, but significant preference is given to the form listed first in the dictionary
+{15     §15     стели́ть and derivatives (see pg 141)
+{16     §16     мучи́ть, ме́рить and their derivatives (see pg 142)
+{17     §17     14-ять, defective paradigms (see pg 142)
+                    - внять is unique within code
+                    - forms listed in entry are not literary/high register
+{18     §18     Imperative (Perf) does not follow usual tendencies regarding politeness (one-time action, when speaker is interested only in the result, Perf is more polite). For these verbs, the imperfective is polite.
+
+=================================
+Verbal formation (and exceptions)
+=================================
+
+ЛИЧНЫЕ ФОРМЫ
+Present tense 
+    stem: 1st all the same, or for чь verbs 1sg=3pl and all the rest are mutated
+Past tense 
+    stem: same as infinitive
+        -Exceptions
+        3**: lose ну
+        7 and 8: stem from 1sg (if 1sg ends in д/т, then it is dropped)
+        9: ереть loses e
+Impf Fut: add буду, etc.
+Imperative
+    stem: 3pl
+        -Exceptions
+        13: infinitive stem давая
+    stress: 1sg
+    ending:
+        Vowel: й
+            -Exceptions
+            4a-вы́ has и
+            4b, 4c have и́
+        Consonant:
+            1 consonant: 
+                end/shifting have и́
+                stem has ь
+                    -Exceptions
+                    2 consonants (or щ or CьC) has и
+                    вы́ has и
+        Exceptions
+            11: бить/бью has бей
+    1st person imperative: only perfectives and идти, ехать, бежать, лететь, плыть, лезть, ползти
+        = 1pl (+те)
+Subjunctive = past plus бы
+Passive reflexives: from Impf transitive verbs (and only from them)
+    Formed the same +ся
+        -Exceptions
+            /c > /c''
+    Every form above, except imperatives
+        -1st and 2nd person extremely rare
+    
+НЕЛИЧНЫЕ ФОРМЫ
+Present Active Participle
+    Imperfective only
+    = 3pl т > щий (п 4а; no short forms)
+    Stress:
+        1st conj: 3sg; 2nd conj: 1sg
+Present Verbal Adverb
+    Imperfective only, but not 3, 8, 9, 11, 14, 15
+    3pl + я (spelling rule after hushers)
+        Exceptions: 13 stem comes from infinitive
+    Stress: 1sg
+Past Active Participle
+    Both aspects
+    = (в)ший (п 4а; no short forms) (в is dropped after consonant stems)
+    Stem: infinitive
+        Exceptions: 7 т/д
+    Stress: Masc past tense
+        Exceptions: code 1 (except class 9), stress is same as infinitive
+Past Verbal Adverb
+    Both aspects (Impf is rare, but is seen with negation; usually replaced by PresAct Participle)
+    (в)/ши or (в)шись
+    Exceptions:
+        Class 9 Perf has both ерши and ерев
+        Code 9
+Present Passive Participle
+    Impf only, but only the following groups
+        -Vем (not ём), i.e. 1a, 2a, 6a-ять, 12a.
+        -Classes 4, 13 (high/archaic register)
+        -Certain verbs of classes 5, 6-ать, 6**, 7. (rare)
+    = 1pl + ый (but ём > о́м) (п 1а; WITH short forms)
+        -Exceptions: 13 from infinitive даваемый
+    Stress:
+        1st conj: 1pl
+        2nd conj: 1sg
+Past Passive Participle
+    Transitive Perf verbs
+    Transitive Impf verbs w/o aspectual counterpart (rare)
+    ать/ять (except class 14): +нный
+        stress:
+            -default same as infinitive
+            -multi-syllabic stems stressed on last: stress moves left 1
+    4 and 5-еть: енный/ённый
+        stress: 
+            4: 3sg
+            5: -default same as infinitive 
+               -multi-syllabic stems stressed on last: stress moves left 1
+                    -only одолеть, преодолеть и глаголы на -печатлеть
+    7 and 8: 3sg + енный/ённый
+        Stress same as Fem Past (counting from left)
+    3, 3**, 10: Infinitive + тый (п 1а, but Pres/Fut shifting stress: п 1a/c)
+        stress:
+            -default same as infinitive 
+            -multi-syllabic stems stressed on last: stress moves left 1
+    9, 11, 12, 14, 15, 16: MascPast (drop л)+тый (п 1а, but Pres/Fut shifting stress: п 1a/c)
+        stress same as MascPast
+Passive reflexives: from Impf transitive verbs (and only from them)
+    infinitive
+    past "active"
+    present "active"
+    -щийся = -мый (semantically)
+
+========================================================================
+Compiled verbal exceptions (other than those explicitly encoded in the morphological index)
+========================================================================
+1
+    1а has present passive
+2
+    2а has present passive
+3
+    3** lose ну in past
+    no pres verbal adv
+4
+    Imperatives of 4a-вы́ has и
+    Imperatives of 4b and 4c have и́
+    4 has present passive (high register)
+5
+    some verbs have present passive
+6
+    some 6a-ать verbs have present passives
+    6а-ять has present passive
+    some 6** verbs have present passive
+7
+    past stem from 1sg (if 1sg ends in д/т, then it is dropped)
+    past active participle with д/т
+    some 7 verbs have present passive
+8
+    past stem from 1sg
+    no pres verbal adv
+9
+    past stem loses е
+    no pres verbal adv
+    past active participle stress with code 1
+    past verbal adverb has both ерши and ерев
+10
+11
+    Imperative бей
+    no pres verbal adv
+12
+    12а has present passive
+13
+    Imperative from infinitive stem
+    pres verbal adv stem from infinitive
+    has present passive (high register), stem from infinitive
+14
+    no pres verbal adv
+    past passive not in нный, but тый
+15
+    no pres verbal adv
+16

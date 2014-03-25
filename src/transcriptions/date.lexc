@@ -19,8 +19,9 @@
 
 ! Note that the months (but not all :-( are stress marked.
 
-!Multichar_Symbols
+Multichar_Symbols
 
++Use/NG
 
 LEXICON Root
 DAY ;
@@ -82,6 +83,6 @@ LEXICON 31MONTH
 30MONTH ;
  
 LEXICON PUNCT 
-.: # ; ! STRICT 12.3.
- # ; ! SLOPPY 12.3
+     %.: # ; ! STRICT 12.3.
++Use/NG: # ; ! SLOPPY 12.3
  

@@ -472,12 +472,12 @@ with codecs.open ( "adjectives.lexc" , mode='w' , encoding='utf-8' ) as Afile :
 with codecs.open ( "verbs.lexc" , mode='w' , encoding='utf-8' ) as Vfile :
     print "Writing verbs.lexc ..."
     Vfile.write( u'LEXICON Verb\n' )
-    for k in sorted ( Vdict, key=lambda k: len(Vdict[k]), reverse=True ) :
+    for k in sorted ( Vdict, reverse=False ) :
         # print k
         code_header = u'! '+'='*60 + u'  Types in Zaliznjak: ' + str(len(Vdict[k])) + u'\n!' + u' '*35 + k.replace(u" ",u"_") + u'\n'
         Vfile.write(code_header)
         Vfile.write(u'! THIS CATEGORY UNVERIFIED (delete this line when the computer-generated code has been verified by hand)\n')
-        if len(k) > 9 and len(Vdict[k]) < 100 : # if the code is longer than 9 characters and there are less than 100 lemmas, comment out all the entries
+        if len(Vdict[k]) < 30 : # if there are less than 30 lemmas, comment out all the entries
             comment = u"! "
         else :
             comment = u""

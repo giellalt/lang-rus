@@ -1,72 +1,87 @@
 Multichar_Symbols
 
-!Stressed vowels
-а́ е́ и́ о́ у́ ы́ э́ ю́ я́ ё́
-а̀ ѐ ѝ о̀ у̀ ы̀ э̀ ю̀ я̀ ё̀ ! Secondary stress
+<<<<<<< .mine
+!! !!!Russian tags
 
-%>   ! End-of-stem marker
-%^F  ! Fleeting vowel marker
-%^G  ! Irregular GenPl marker (used to keep ов/ев on neuter stems, e.g. ов%^G
-%^Z  ! Zero ending (resolves to 0/й/ь)
-%^M  ! Verb stem mutation
-%^Iu ! Imperative ending (unstressed)
-%^Is ! Imperative ending (stressed)
+!! !!Stressed vowels
 
-! POS
-+N      ! Noun
-+V      ! Verb
-+A      ! Adjective
-+Pron   ! Pronoun
-+Det    ! Determiner
-+Num    ! Numeral
-+Adv    ! Adverb
-+Pr     ! Preposition
-+Po     ! Postposition (ради is the only possible postposition)
-+CC     ! Coordinating conjunction
-+CS     ! Subordinating conjunction
-+Interj ! Interjection
-+Pcle   ! Particle
+а́ е́ и́ о́ у́ ы́ э́ ю́ я́ ё́    !!= * @CODE@ 
+а̀ ѐ ѝ о̀ у̀ ы̀ э̀ ю̀ я̀ ё̀    !!= * @CODE@  Secondary stress
 
-+Prop   ! Proper
-+Pers   ! Personal
-+Dem    ! Demonstrative
-+Interr ! Interrogative: кто, что, какой, ли, etc.
-+Refl   ! Pronoun себя, possessive свой
-+Indef  ! Indefinite
-+Coll   ! Collective numerals
-+MWE    ! Multi-word expressions
-
-! Verbal MSP
-+Impf +Perf +Dvuv               ! Imperfective, perfective, biaspectual
-+IV +TV                         ! Intransitive, transitive   (generate both if either is possible)
-+Inf +Imp                       ! Imperatives: 2nd person = читай, 1st person = прочитаем
-+Pst +Prs +Fut                  ! Past, present, future
-+Sg1 +Sg2 +Sg3 +Pl1 +Pl2 +Pl3   ! person/number
-+PrsAct +PrsPss +PstAct +PstPss ! Participles (+PrsAct+Adv and +PstAct+Adv are used for the verbal adverbs)
-+Pass                           ! Passive
-
-! Nominal MSP
-+Msc +Fem +Neu +MscFem      ! +MscFem = common gender
-+Sg +Pl
-+Nom +Acc +Gen +Ins +Dat +Loc +Loc2 +Gen2 +Voc
-+Inan +Anim     ! Only tagged in conjunction with +Acc
+А́ Е́ И́ О́ У́ Ы́ Э́ Ю́ Я́   !!= * @CODE@
 
 
-+Ord
-+Cmpar  ! 
-+Sint   ! Synthetic comparative is possible, e.g. старее
-+An     ! Animate placeholder for non-accusative cases
-+Pred   ! "Predicate", used for short-form adjectives
-+Cmpnd  ! "Compound", used for compounding adjectives, such as русско-английский
 
-+PObj ! object of preposition, e.g. его~него
-+Poss ! possessive
+!! !!Markers
 
-! Other tags
-+Prb ! затруднительно - +Prb(lematic); предположительно - +Hyp(othetical); нет - +Gap
-+Fac ! Facultative
-+Use/Obs ! Obsolete
-+Use/Sub ! Substandard
+%>   !!= * @CODE@ = End-of-stem marker
+%^F  !!= * @CODE@ = Fleeting vowel marker
+%^G  !!= * @CODE@ = Irregular GenPl marker (to keep ов/ев on n stems, e.g. ов%^G
+%^Z  !!= * @CODE@ = Zero ending (resolves to 0/й/ь)
+%^M  !!= * @CODE@ = Verb stem mutation
+%^Iu !!= * @CODE@ = Imperative ending (unstressed)
+%^Is !!= * @CODE@ = Imperative ending (stressed)
+
+!! !!POS
++N      !!= * @CODE@ = Noun
++V      !!= * @CODE@ = Verb
++A      !!= * @CODE@ = Adjective
++Pron   !!= * @CODE@ = Pronoun
++Det    !!= * @CODE@ = Determiner
++Num    !!= * @CODE@ = Numeral
++Adv    !!= * @CODE@ = Adverb
++Pr     !!= * @CODE@ = Preposition
++Po     !!= * @CODE@ = Postposition (ради is the only possible postposition)
++CC     !!= * @CODE@ = Coordinating conjunction
++CS     !!= * @CODE@ = Subordinating conjunction
++Interj !!= * @CODE@ = Interjection
++Pcle   !!= * @CODE@ = Particle
+
+!! !!Sub-POS
++Prop   !!= * @CODE@ = Proper
++Pers   !!= * @CODE@ = Personal
++Dem    !!= * @CODE@ = Demonstrative
++Interr !!= * @CODE@ = Interrogative: кто, что, какой, ли, etc.
++Refl   !!= * @CODE@ = Pronoun себя, possessive свой
++Indef  !!= * @CODE@ = Indefinite
++Coll   !!= * @CODE@ = Collective numerals
++MWE    !!= * @CODE@ = Multi-word expressions
+
+!! !!Verbal MSP
++Impf +Perf +Dvuv !!= * @CODE@ = Imperfective, perfective, biaspectual
++IV +TV           !!= * @CODE@ = Intransitive, transitive   (generate both if either is possible)
++Inf +Imp         !!= * @CODE@ = Imperatives: 2nd person = читай, 1st person = прочитаем
++Pst +Prs +Fut    !!= * @CODE@ = Past, present, future
++Sg1 +Sg2 +Sg3    !!= * @CODE@ = person sg
++Pl1 +Pl2 +Pl3    !!= * @CODE@ = person pl
++PrsAct +PrsPss   !!= * @CODE@ = 
++PstAct +PstPss   !!= * @CODE@ = Participles (+PrsAct+Adv and +PstAct+Adv are used for the verbal adverbs)
++Pass             !!= * @CODE@ = Passive
+
+!! !!Nominal MSP
++Msc +Fem +Neu +MscFem      !!= * @CODE@ = gender,  +MscFem = common gender
++Sg +Pl                     !!= * @CODE@ = number
++Nom +Acc +Gen      !!= * @CODE@ 
++Ins +Dat +Loc      !!= * @CODE@ 
++Loc2 +Gen2 +Voc    !!= * @CODE@ 
++Inan +Anim     !!= * @CODE@ = Only tagged in conjunction with +Acc
+
+
++Ord    !!= * @CODE@ 
++Cmpar  !!= * @CODE@  
++Sint   !!= * @CODE@  = Synthetic comparative is possible, e.g. старее
++An     !!= * @CODE@  = Animate placeholder for non-accusative cases
++Pred   !!= * @CODE@  = "Predicate", used for short-form adjectives
++Cmpnd  !!= * @CODE@  = "Compound", used for compounding adjectives, such as русско-английский
+
++PObj !!= * @CODE@ = object of preposition, e.g. его~него
++Poss !!= * @CODE@ = possessive
+
+!! !!Other tags
++Prb !!= * @CODE@ = затруднительно - +Prb(lematic); предположительно - +Hyp(othetical); нет - +Gap
++Fac !!= * @CODE@ = Facultative
++Use/Obs !!= * @CODE@ = Obsolete
++Use/Sub !!= * @CODE@ = Substandard
 ! More use tags: 
 ! ласкательное - +Use/Aff(ectionate)
 ! литературное - +Use/Lit(erary)
@@ -97,17 +112,18 @@ Multichar_Symbols
 ! law - +Use/Law
 ! etc. +Use/Mari(time)
 
-! Key lexicon
-LEXICON Root
+!! !!!Key lexicon
 
-Adjective ;
-Adverb ;
-Conjunction ;
-Interjection ;
-Noun ;
-Preposition ;
-Pronoun ;
-Verb ;
+LEXICON Root    !!= * @CODE@ 
+
+Adjective ;	    !!= * @CODE@ 
+Adverb ;	    !!= * @CODE@ 
+Conjunction ;   !!= * @CODE@ 
+Interjection ;  !!= * @CODE@ 
+Noun ;		    !!= * @CODE@ 
+Preposition ;   !!= * @CODE@ 
+Pronoun ;	    !!= * @CODE@ 
+Verb ;		    !!= * @CODE@ 
 
 !Propernoun ;
 !Subjunction ;

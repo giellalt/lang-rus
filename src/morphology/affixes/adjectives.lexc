@@ -687,6 +687,34 @@ LEXICON LF_stem_R
 +Pl+Dat:%>ымся # ;
 +Pl+Ins:%>ымися # ;
 
+LEXICON LF_stem_R_Fac
++Msc+Sg+Nom+Fac:%>ыйся # ;
++Msc+Sg+Acc+Inan+Fac:%>ыйся # ;
++Msc+Sg+Acc+Anim+Fac:%>огося # ;
++Msc+Sg+Gen+Fac:%>огося # ;
++Msc+Sg+Loc+Fac:%>омся # ;
++Msc+Sg+Dat+Fac:%>омуся # ;
++Msc+Sg+Ins+Fac:%>ымся # ;
++Neu+Sg+Nom+Fac:%>оеся # ;
++Neu+Sg+Acc+Fac:%>оеся # ;
++Neu+Sg+Gen+Fac:%>огося # ;
++Neu+Sg+Loc+Fac:%>омся # ;
++Neu+Sg+Dat+Fac:%>омуся # ;
++Neu+Sg+Ins+Fac:%>ымся # ;
++Fem+Sg+Nom+Fac:%>аяся # ;
++Fem+Sg+Acc+Fac:%>уюся # ;
++Fem+Sg+Gen+Fac:%>ойся # ;
++Fem+Sg+Loc+Fac:%>ойся # ;
++Fem+Sg+Dat+Fac:%>ойся # ;
++Fem+Sg+Ins+Fac:%>ойся # ;
++Pl+Nom+Fac:%>ыеся # ;
++Pl+Acc+Inan+Fac:%>ыеся # ;
++Pl+Acc+Anim+Fac:%>ыхся # ;
++Pl+Gen+Fac:%>ыхся # ;
++Pl+Loc+Fac:%>ыхся # ;
++Pl+Dat+Fac:%>ымся # ;
++Pl+Ins+Fac:%>ымися # ;
+
 LEXICON LF_end
 +Msc+Sg+Nom:%>о́й  # ;
 +Msc+Sg+Acc+Inan:%>о́й  # ;

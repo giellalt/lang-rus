@@ -298,22 +298,22 @@ LEXICON МС-П_[П_В]
 +Pron: LF_end ;
 
 LEXICON МС_КТО
-+Pron+Introg+Sg+Msc+Nom:кто́ # ;
-+Pron+Introg+Sg+Fem+Nom:кто́ # ;
-+Pron+Introg+Pl+Nom:кто́ # ;
-+Pron+Introg+Acc+Anim:кого́ # ;
-+Pron+Introg+Gen:кого́ # ;
-+Pron+Introg+Loc:ко́м # ;
-+Pron+Introg+Dat:кому́ # ;
-+Pron+Introg+Ins:ке́м # ;
++Pron+Interr+Sg+Msc+Nom:кто́ # ;
++Pron+Interr+Sg+Fem+Nom:кто́ # ;
++Pron+Interr+Pl+Nom:кто́ # ;
++Pron+Interr+Acc+Anim:кого́ # ;
++Pron+Interr+Gen:кого́ # ;
++Pron+Interr+Loc:ко́м # ;
++Pron+Interr+Dat:кому́ # ;
++Pron+Interr+Ins:ке́м # ;
 
 LEXICON МС_ЧТО
-+Pron+Introg+Sg+Neu+Nom:что́ # ;
-+Pron+Introg+Acc:что́ # ;
-+Pron+Introg+Gen:чего́ # ;
-+Pron+Introg+Loc:чём # ;
-+Pron+Introg+Dat:чему́ # ;
-+Pron+Introg+Ins:че́м # ;
++Pron+Interr+Sg+Neu+Nom:что́ # ;
++Pron+Interr+Acc:что́ # ;
++Pron+Interr+Gen:чего́ # ;
++Pron+Interr+Loc:чём # ;
++Pron+Interr+Dat:чему́ # ;
++Pron+Interr+Ins:че́м # ;
 
 LEXICON МС_Я
 +Pron+Sg1+Nom:я́ # ;

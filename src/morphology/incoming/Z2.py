@@ -376,8 +376,6 @@ def V_stemmer ( myinput ) : # generates lexical stem for verbs
     elif myinput['paradigm'][:2] == '12' or myinput['paradigm'][:5] == u"нп 12" :
         if myinput['lexeme'][-1] == u'ы' :
             myinput = V_add_suffix_to_code(myinput,3)
-        elif myinput['lexeme'][-1] == u'и' or myinput['lexeme'][-1] == u'у' :
-            myinput['lexeme'] = myinput['lexeme'][:-1]
     elif myinput['paradigm'][:2] == '11' or myinput['paradigm'][:5] == u"нп 11" :
         myinput['lexeme'] = myinput['lexeme'][:-1]
     elif myinput['paradigm'][:2] == '10' or myinput['paradigm'][:5] == u"нп 10" :
@@ -532,7 +530,7 @@ def VCodeCleaner ( myinput ) :
     for codefields in ['paradigm','paradigm_details'] :
         myinput[codefields] = myinput[codefields].replace(u'_',u' ')
         myinput[codefields] = myinput[codefields].strip()
-        for old , new in [(u'|',u''),(u':',u''),(u';',u''),(u'%tr%',u''),(u'%[x]%',u'?'),(u'%x%',u's'),(u'%1%',u'1'),(u'%2%',u'2'),(u'%3%',u'3'),(u'%4%',u'4'),(u'%5%',u'5'),(u'%6%',u'6'),(u'%7%',u'7'),(u'%8%',u'8'),(u'%9%',u'9'),(u'§ ',u''),(u'  ',u' '),(u'   ',u' '),(u'    ',u' ')] :
+        for old , new in [(u':',u''),(u';',u''),(u'%tr%',u''),(u'%[x]%',u'?'),(u'%x%',u's'),(u'%1%',u'1'),(u'%2%',u'2'),(u'%3%',u'3'),(u'%4%',u'4'),(u'%5%',u'5'),(u'%6%',u'6'),(u'%7%',u'7'),(u'%8%',u'8'),(u'%9%',u'9'),(u'§ ',u''),(u'  ',u' '),(u'   ',u' '),(u'    ',u' ')] :
             myinput[codefields] = myinput[codefields].replace(old,new)
         if myinput[codefields] == u' ' :
             myinput[codefields] = u''            
@@ -800,8 +798,9 @@ with codecs.open ( "../stems/verbs.lexc" , mode='w' , encoding='utf-8' ) as Vfil
     Vcats_counter = 0.0
     V_total = sum(i for i,j,k,l in Vcatslist)
     for i,j,k,l in sorted (Vcatslist,key=lambda x : ' '.join(x[1].split()[1:]).replace(' ','_'),reverse=False) :
-        Vcats_counter += i
-        Vcatsfile_alph.write(str(i)+'\t\t'+'{:.2%}'.format(Vcats_counter/V_total)+'\t\t'+j.replace(' ','_')+'\t\t'+k+'\t\t'+l+"\n")
+        if i > 2 :
+            Vcats_counter += i
+            Vcatsfile_alph.write(str(i)+'\t\t'+'{:.2%}'.format(Vcats_counter/V_total)+'\t\t'+j.replace(' ','_')+'\t\t'+k+'\t\t'+l+"\n")
     Vcatsfile_alph.close()
     print "verbs.lexc done!"
 

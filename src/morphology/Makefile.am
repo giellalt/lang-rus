@@ -27,6 +27,7 @@ GT_LEXC_SRCS=\
 			 stems/interjections.lexc \
 			 stems/nouns.lexc \
 			 stems/numerals.lexc \
+			 stems/other.lexc \
 			 stems/prepositions.lexc \
 			 stems/pronouns.lexc \
 			 stems/propernouns.lexc \

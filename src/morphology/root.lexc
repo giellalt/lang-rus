@@ -13,7 +13,8 @@ Multichar_Symbols
 
 !! !!Markers
 
-%>   !!= * @CODE@ = End-of-stem marker
+%>   !!= * @CODE@ = End-of-stem marker (nominals)
+%<   !!= * @CODE@ = End-of-stem marker (verbs)
 %^F  !!= * @CODE@ = Fleeting vowel marker
 %^G  !!= * @CODE@ = Irregular GenPl marker (to keep ов/ев on n stems, e.g. ов%^G
 %^Z  !!= * @CODE@ = Zero ending (resolves to 0/й/ь)
@@ -30,7 +31,7 @@ Multichar_Symbols
 +Num    !!= * @CODE@ = Numeral
 +Adv    !!= * @CODE@ = Adverb
 +Pr     !!= * @CODE@ = Preposition
-+Po     !!= * @CODE@ = Postposition (ради is the only possible postposition)
++Po     !!= * @CODE@ = Postposition (ради is the only postposition)
 +CC     !!= * @CODE@ = Coordinating conjunction
 +CS     !!= * @CODE@ = Subordinating conjunction
 +Interj !!= * @CODE@ = Interjection
@@ -117,15 +118,19 @@ LEXICON Root    !!= * @CODE@
 
 Adjective ;	    !!= * @CODE@ 
 Adverb ;	    !!= * @CODE@ 
+Comparative ; 
 Conjunction ;   !!= * @CODE@ 
 Interjection ;  !!= * @CODE@ 
 Noun ;		    !!= * @CODE@ 
+Numeral ;       !!= * @CODE@
+Parenthetical ;
+Particle ;
+Predicative ;
 Preposition ;   !!= * @CODE@ 
 Pronoun ;	    !!= * @CODE@ 
 Verb ;		    !!= * @CODE@ 
 
 !Propernoun ;
 !Subjunction ;
-!Numeral ;
 !Punctuation ;
 

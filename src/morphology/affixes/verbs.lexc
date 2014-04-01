@@ -39,6 +39,12 @@ LEXICON нсв_1a
 +V+Impf+TV: PresVrbAdv_stem ;
 +V+Impf+TV:е PresPass ;
 
+LEXICON нсв_1a_страд._нет
+нсв_нп_1a ;
++V+Impf+TV: Impf_Inf_V_stem ;
++V+Impf+TV: Impf_Pres_1_stem ;
++V+Impf+TV: PresVrbAdv_stem ;
+
 LEXICON нсв_1a_pp
 нсв_1a ;
 +V+Impf+TV: PastPass_нн_stem ;
@@ -780,6 +786,12 @@ LEXICON св_4b8
 +V+Perf+TV: Perf_Fut_2_end ;
 +V+Perf+TV+PstPss:%^Mе PastPass_нн_stem ;
 
+LEXICON св-нсв_4b/c''_(прош._м_роди/лся/)_(в_св)_и_4b_(в_нсв)_R
++V+Impf+IV:и́ Impf_Inf_stem_R ;
++V+Impf+IV: Impf_Pres_2_end_R ;
++V+Perf+IV:и́ Perf_Inf_shift''_R ;
++V+Perf+IV: Perf_Fut_2_end_R ;
+
 LEXICON нсв_4c
 нсв_нп_4c ;
 +V+Impf+TV:и́ Impf_Inf_V_stem_w/Pass ;
@@ -826,6 +838,10 @@ LEXICON св_нп_4c
 ! Some 5 verbs have present passive ppl
 
 
+LEXICON нсв_нп_5a_еть
++V+Impf+IV:е Impf_Inf_V_stem ;
++V+Impf+IV: Impf_Pres_2_stem ;
+
 LEXICON нсв_5b_а́ть
 нсв_нп_5b_а́ть ;
 +V+Impf+TV:а́ Impf_Inf_V_stem_w/Pass ;
@@ -853,6 +869,12 @@ LEXICON нсв_5b_е́ть_R
 LEXICON нсв_нп_5b_е́ть
 +V+Impf+IV:е́ Impf_Inf_V_stem ;
 +V+Impf+IV: Impf_Pres_2_end ;
+
+LEXICON нсв_нп_5b_я́ть_повел._затрудн.
++V+Impf+IV:я́ Impf_Inf_V_stem ;
++V+Impf+IV+Prs: PresFut_2_end ;
++V+Impf+IV: Imper_stressed_Prb ;
++V+Impf+IV:%<я́ PresAct ;
 
 LEXICON св_5b_а́ть
 св_5b?_а́ть ;
@@ -906,6 +928,12 @@ LEXICON св_5b?_я́ть
 +V+Perf+TV: Perf_Fut_2_end ;
 
 LEXICON нсв_5c_а́ть
+нсв_нп_5c_а́ть ;
++V+Impf+TV:а́ Impf_Inf_V_stem_w/Pass ;
++V+Impf+TV: Impf_Pres_2_shift_w/Pass ;
++V+Impf+TV+PrsPss+Use/Ant:и́ PresPass ;
+
+LEXICON нсв_5c?_а́ть
 нсв_нп_5c_а́ть ;
 +V+Impf+TV:а́ Impf_Inf_V_stem_w/Pass ;
 +V+Impf+TV: Impf_Pres_2_shift_w/Pass ;
@@ -1320,6 +1348,11 @@ LEXICON св_нп_8b/b
 +V+Perf+IV: Perf_Inf_C_end ;
 +V+Perf+IV: Perf_Fut_1_end ;
 
+LEXICON нсв_нп_8c/b
++V+Impf+IV: Impf_Inf_C_end ;
++V+Impf+IV: Impf_Pres_1_shift ;
+
+
 !====================================== Stem type 9 ======================================
 !                                           ереть
 ! No present verbal adverb
@@ -1383,11 +1416,19 @@ LEXICON св_9b_ё_R
 +V+Perf+IV:ёр Past_stem_R ;
 +V+Perf+IV:ёр Perf_PastVrbAdv_R ;
 +V+Perf+IV:ере́ Perf_PastVrbAdv_R ;
++V+Perf+IV:ёр PastAct_R ;
++V+Perf+IV:ере́ PastAct_R ;
 +V+Perf+IV+Fut:р PresFut_1_end_R ;
 +V+Perf+IV+Imp+Pl1:рёмся # ;
 +V+Perf+IV:р Imper_stressed_R ; 
-+V+Perf+IV:ёр PastAct_R ;
-+V+Perf+IV:ере́ PastAct_R ;
+
+LEXICON св_нп_9b/c1_прич._прош._ме/рший
++V+Perf+IV:ере́ть # ;
++V+Perf+IV:ер Past_shift ;
++V+Perf+IV:ер Perf_PastVrbAdv_C ;
++V+Perf+IV:ере́ Perf_PastVrbAdv_V ;
++V+Perf+IV:е́р PastAct ;                ! CHECK THIS STRESS у́мерший или уме́рший
++V+Perf+IV:р Perf_Fut_1_end ;
 
 !====================================== Stem type 10 =====================================
 !                                           оть
@@ -1431,16 +1472,16 @@ LEXICON св_10a
 
 LEXICON св_10a_R
 +V+Perf+IV:о Perf_Inf_stem_R ;
-+V+Perf+IV: Perf_Fut_1_mut_stem_R ;
++V+Perf+IV: Perf_Fut_1_stem_R ;
 
 LEXICON св_нп_10a
 +V+Perf+IV:о Perf_Inf_V_stem ;
-+V+Perf+IV: Perf_Fut_1_mut_stem ;
++V+Perf+IV: Perf_Fut_1_stem ;
 
 LEXICON св_10a?
 св_нп_10a ;
 +V+Perf+TV:о Perf_Inf_V_stem ;
-+V+Perf+TV: Perf_Fut_1_mut_stem ;
++V+Perf+TV: Perf_Fut_1_stem ;
 
 LEXICON св_10c
 св_10c? ;
@@ -1448,20 +1489,20 @@ LEXICON св_10c
 
 LEXICON св_10c_R
 +V+Perf+IV:о́ Perf_Inf_stem_R ;
-+V+Perf+IV: Perf_Fut_1_mut_shift_R ;
++V+Perf+IV: Perf_Fut_1_shift_R ;
 
 LEXICON св_10c_R_буд._мелю/сь,_ме/лется,_ме/лются
 +V+Perf+IV:оло́ Perf_Inf_stem_R ;
-+V+Perf+IV:е́л Perf_Fut_1_mut_shift_R ;
++V+Perf+IV:е́л Perf_Fut_1_shift_R ;
 
 LEXICON св_нп_10c
 +V+Perf+IV:о́ Perf_Inf_V_stem ;
-+V+Perf+IV: Perf_Fut_1_mut_shift ;
++V+Perf+IV: Perf_Fut_1_shift ;
 
 LEXICON св_10c?
 св_нп_10c ;
 +V+Perf+TV:о́ Perf_Inf_V_stem ;
-+V+Perf+TV: Perf_Fut_1_mut_shift ;
++V+Perf+TV: Perf_Fut_1_shift ;
 
 LEXICON св_10c_ро́ть
 +V+Perf+TV:ро́ Perf_Inf_V_stem ;
@@ -1719,6 +1760,20 @@ LEXICON св_14b_(-н-)_я́ть
 +V+Perf+IV:я́ Perf_Inf_V_stem ;
 +V+Perf+IV:н Perf_Fut_1_end ;
 
+LEXICON св_14b/b_(-н-)_а́ть_R_прош._м_начался/
++V+Perf+IV+Inf:а́ться # ;
++V+Perf+IV:а́ Past_end_R'' ;
++V+Perf+IV:а́ Perf_PastVrbAdv_R ;
++V+Perf+IV:а́ PastAct_R ;
++V+Perf+IV:н Perf_Fut_1_end_R ;
+
+LEXICON св_14b/c_(-н-)1_а́ть
++V+Perf+TV: Perf_Inf_V_shift1_а́ть ;
++V+Perf+TV:н Perf_Fut_1_shift ;
++V+Perf+IV: Perf_Inf_V_shift1_а́ть ;
++V+Perf+IV:н Perf_Fut_1_shift ;
++V+Perf+TV:ат PastPass_stem ;
+
 LEXICON св_14b/c_я́ть_(йм-)_[1]_(но_прич._страд._только_а/нятый)
 +V+Perf+TV:н Perf_Inf_V_shift[1]_я́ть ;
 +V+Perf+TV:йм Perf_Fut_1_end ;
@@ -1732,6 +1787,13 @@ LEXICON св_14c/c_я́ть_(-иму/)
 +V+Perf+IV:я́ Perf_Inf_V_shift ;
 +V+Perf+IV:и́м Perf_Fut_1_shift ;
 +V+Perf+TV:ят PastPass_stem ;
+
+LEXICON св_14c/c_я́ть_(прим-)_1
++V+Perf+TV:н Perf_Inf_V_shift1_я́ть ;
++V+Perf+TV:м Perf_Fut_1_shift ;
++V+Perf+IV:н Perf_Inf_V_shift1_я́ть ;
++V+Perf+IV:м Perf_Fut_1_shift ;
++V+Perf+TV:нят PastPass_stem ;
 
 !====================================== Stem type 15 =====================================
 !                                       стать, etc.
@@ -1768,6 +1830,46 @@ LEXICON св_16b/c[1]_и́ть
 LEXICON св_16b/c''_R
 +V+Perf+IV: Perf_Inf_shift''_R ;
 +V+Perf+IV:в Perf_Fut_1_end_R ;
+
+!====================================== Miscellaneous stem types =====================================
+
+
+LEXICON нсв_нп_a/c_быть
++V+Impf+IV:бы́ Impf_Inf_V_shift ;
++V+Impf+IV+Fut:бу́д PresFut_1_stem ;
++V+Impf+IV+Fut:бу́д Imper_unstressed ;
++V+Impf+IV+PrsAct+Adv:бу́дучи # ;
++V+Impf+IV+Prs:е́сть PresFut_0 ; 
++V+Impf+IV+Prs+Pl3:су́ть # ;
+
+LEXICON св_нп_a9_выйти
++V+Perf+IV+Inf:йти # ;
++V+Perf+IV:ш%^Fе Past_stem ;
++V+Perf+IV:йд Perf_PastVrbAdv_я_stem ;
++V+Perf+IV:ш%^Fед PastAct ;
++V+Perf+IV:йд Perf_Fut_1_stem ;
+
+LEXICON св_нп_b/b9_b/b9_буд._йду/,_-ёт_прош._шёл,_-шла/,_ше/дши
++V+Perf+IV+Inf:йти́ # ;
++V+Perf+IV:ш%^G%^Fё Past_end ;
++V+Perf+IV:йд Perf_PastVrbAdv_я_end ;
++V+Perf+IV:ше́д PastAct ;
++V+Perf+IV:йд Perf_Fut_1_end ;
+
+LEXICON св_b/c''_R_даться
++V+Perf+IV+Inf:да́ться # ;
++V+Perf+IV:да́ Past_shift''_R_Fac ;
++V+Perf+IV:да́ Past_end_R ;
++V+Perf+IV:да́ Perf_PastVrbAdv_R ;
++V+Perf+IV:да́ PastAct_R ;
++V+Perf+IV+Fut+Sg1:да́мся # ;
++V+Perf+IV+Fut+Sg2:да́шься # ;
++V+Perf+IV+Fut+Sg3:да́стся # ;
++V+Perf+IV+Fut+Pl1:дади́мся # ;
++V+Perf+IV+Fut+Pl2:дади́тесь # ;
++V+Perf+IV+Fut+Pl3:даду́тся # ;
++V+Perf+IV+Imp+Pl1:дади́мся # ;
++V+Perf+IV:да́ Imper_stressed_R ;
 
 !=========================================================================================
 !=========================================================================================
@@ -2010,15 +2112,35 @@ Past_shift ;
 Perf_PastVrbAdv_V ;
 PastAct ;
 
+LEXICON Perf_Inf_V_shift1_а́ть
++Inf:%<я́ть # ;
+:а Past_shift ;
+:а́ Perf_PastVrbAdv_V ;
+:а́ PastAct ;
+
+LEXICON Perf_Inf_V_shift[1]_а́ть
++Inf:%<я́ть # ;
+:а́ Past_shift ;
+:а Past_shift_Fac ;
+:а́ Perf_PastVrbAdv_V ;
+:а́ PastAct ;
+
 LEXICON Perf_Inf_V_shift[1]_и́ть
 +Inf:%<и́ть # ;
 :и Past_shift ;
 :и́ Perf_PastVrbAdv_V ;
 :и́ PastAct ;
 
-LEXICON Perf_Inf_V_shift[1]_я́ть
+LEXICON Perf_Inf_V_shift1_я́ть
 +Inf:%<я́ть # ;
 :я Past_shift ;
+:я́ Perf_PastVrbAdv_V ;
+:я́ PastAct ;
+
+LEXICON Perf_Inf_V_shift[1]_я́ть
++Inf:%<я́ть # ;
+:я́ Past_shift ;
+:я Past_shift_Fac ;
 :я́ Perf_PastVrbAdv_V ;
 :я́ PastAct ;
 
@@ -2389,6 +2511,12 @@ LEXICON Past_end_R
 +Pst+Neu+Sg:%<ло́сь # ;
 +Pst+Pl:%<ли́сь # ;
 
+LEXICON Past_end_R''
++Pst+Msc+Sg:%<лся́ # ; 
++Pst+Fem+Sg:%<ла́сь # ;
++Pst+Neu+Sg:%<ло́сь # ;
++Pst+Pl:%<ли́сь # ;
+
 LEXICON Past_end_Pass
 +Pst+Msc+Sg+Pass:%<лся # ; 
 +Pst+Fem+Sg+Pass:%<ла́сь # ;
@@ -2425,6 +2553,12 @@ LEXICON Past_shift
 +Pst+Neu+Sg:%<ло # ;
 +Pst+Pl:%<ли # ;
 
+LEXICON Past_shift_Fac
++Pst+Msc+Sg+Fac:%<л # ; 
++Pst+Fem+Sg+Fac:%<ла́ # ;
++Pst+Neu+Sg+Fac:%<ло # ;
++Pst+Pl+Fac:%<ли # ;
+
 LEXICON Past_shift_R
 +Pst+Msc+Sg:%<лся # ; 
 +Pst+Fem+Sg:%<ла́сь # ;
@@ -2437,6 +2571,13 @@ LEXICON Past_shift''_R
 +Pst+Fem+Sg:%<ла́сь # ;
 +Pst+Neu+Sg:%<лось # ;
 +Pst+Pl:%<лись # ;
+
+LEXICON Past_shift''_R_Fac
++Pst+Msc+Sg+Fac:%<лся # ; 
++Pst+Msc+Sg+Fac:%<лся́ # ; 
++Pst+Fem+Sg+Fac:%<ла́сь # ;
++Pst+Neu+Sg+Fac:%<лось # ;
++Pst+Pl+Fac:%<лись # ;
 
 LEXICON Past_shift''_Pass
 +Pst+Msc+Sg+Pass:%<лся # ; 
@@ -2453,6 +2594,14 @@ LEXICON ImpfFut_R
 
 LEXICON ImpfFut_Pass
 +Fut+Pass:%<ться% бу́д PresFut_1_stem ;
+
+LEXICON PresFut_0
++Sg1: # ;
++Sg2: # ;
++Sg3: # ;
++Pl1: # ;
++Pl2: # ;
++Pl3: # ;
 
 LEXICON PresFut_1_stem
 +Sg1:%<у # ;
@@ -2725,6 +2874,10 @@ LEXICON Imper_unstressed_R
 LEXICON Imper_stressed
 +Imp+Sg2:%<%^Is # ;
 +Imp+Pl2:%<%^Isте # ;
+
+LEXICON Imper_stressed_Prb
++Imp+Sg2+Prb:%<%^Is # ;
++Imp+Pl2+Prb:%<%^Isте # ;
 
 LEXICON Imper_stressed_R
 +Imp+Sg2:%<%^Isся # ;

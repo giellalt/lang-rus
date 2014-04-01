@@ -84,6 +84,7 @@ where Vx in ( а́ э́ о́ у́ ы́ я́ ё ю́ и́ )
 Vx:0 <=> .#. [ Letter: | %^F:0 ]+ _ %>:0 ; 
          %^F:0 _ [ Letter ]+ (End) %>:0 :V ; ! This does not delete люб(о)вью, since the ь is 1st
          %^F:0 _ й: %<:0 :V ;
+         %^F:0 _ %<:0 :л :V ( :с :ь ) .#. ;
 where Vx in ( а е́ ё и я а́ и́ я́ ) ;
 
 "е>0: 1) Delete lexical vowel endings; 2) Delete fleeting vowels where ending begins with a vowel; 3) Delete е/е́ after comparative adjective stem mutation."
@@ -94,11 +95,11 @@ where Vx in ( а е́ ё и я а́ и́ я́ ) ;
 "о/о́>0 in lexical endings, fleeting vowels (including verbal prefixes), and GenPl after hard consonants"
 [ о:0 | о́:0 ] <=> .#. [ Letter: | %^F:0 ]+ _  %>:0 ; ! lexical ending
                   %^F:0 _ [ Letter ]+ (End) %>:0 :V ; ! fleeting vowel
-                  .#. [ в | н а д | о б | о т | п о д | п р е д | с | в з: | в о з: | и з: | н и з: | р а з: ] %^F:0 _ C (%^F:0) V ; ! Fleeting vowels in prefixes, like об(о)звал ~ об()зову
+                  [ в | н а д | о б | о т | п о д | п р е д | с | в з: | в о з: | и з: | н и з: | р а з: ] %^F:0 _ C (%^F:0) V ; ! Fleeting vowels in prefixes, like об(о)звал ~ об()зову
                   [ VELEndV | HUSHEndV | цEndV | HCEndV | FVn0 | JEndV | jEnd ] _ в:0 .#. ; ! zero GenPl
 
 "з>с in some verbal prefixes with dropped fleeting vowels, when the following consonant is unvoiced"
-з:с <=> .#. [ в | в о | и | н и | р а ] _ %^F:0 о:0 UnvoicedC ;
+з:с <=> [ в | в о | и | н и | р а ] _ %^F:0 о:0 UnvoicedC ;
 
 "ь>0 in lexical endings, and before fleeting vowels"
 ь:0 <=> .#. [ Letter: | %^F:0 ]+ _  %>:0 ;
@@ -148,7 +149,7 @@ where Vx in ( а а́ о́ )
 
 "у>ю (1) after soft-consonant stems (including й: муравей, семья, бельё, etc) and vowel stems (музей, критерий, понятие, Мария, etc) including 1st conj verbs like читать, болеть, воевать, etc. (2) in 1st conjugation after л or ь"
 Vx:Vy <=> [ SCEnd | VEnd | JEnd | jEnd | 1ConjV | 1ConjJ ] _ [ ?* - [ [ в:й | в:0 ] ?* ] ] .#. ;
-          %^M:л %<:0 _ ;
+          :л %<:0 _ ;
 where Vx in ( у у́ )
       Vy in ( ю ю́ )
     matched;
@@ -166,9 +167,9 @@ where Vx in ( у у́ )
 в:0 <=> [ VELEndV | цEndV | HCEndV | VEndV | JEndV | jEnd ] [ о: | о́: ] _ .#. ;
         HUSHEndV о: _ .#. ;
         SCEndV о: _ .#. ;
-        CNoDT: %<:0 _ ( с я ) .#. ; ! Past verbal adverb
-        CNoDT: %<:0 _ (ш и ( с :ь ) ) .#. ; ! Past verbal adverb reflexive
-        CNoDT: %<:0 _ ш %>:0 :V [ C | V ] (V) ( с я ) .#. ; ! Past active ppl BROKEN? BROKEN? BROKEN?
+        C: %<:0 _ ( с я ) .#. ; ! Past verbal adverb
+        C: %<:0 _ (ш и ( с :ь ) ) .#. ; ! Past verbal adverb reflexive
+        C: %<:0 _ ш %>:0 :V [ C (V) | V ] ( с я ) .#. ; ! Past active ppl BROKEN? BROKEN? BROKEN?
 "о>ь: GenPl zero after soft C"
 о:ь <=> SCEndVNoN _ в:0 .#. ; ! However, Fem 2*a in ~ня go to 0, not ь (characterized by F V н я)
         \[%^F:0] V: н: я:0 %>:0 _ в:0 .#. ; ! However, Fem 2*a in н, e.g. башня~башен
@@ -204,7 +205,6 @@ where Cx in ( г к ) ;
 
 "д/т>0 before past tense"
 Cx:0 <=> _ %<:0 л ( [ V ( с :ь ) | с [ :я | :я́ ] ] ) .#.  ;
-         _ %<:0 в ;
 where Cx in ( д т ) ;
 
 "[бдт]>с in before infinitive endings"

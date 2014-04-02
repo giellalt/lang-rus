@@ -1,11 +1,99 @@
 
+!!!Russian tags
+
+!!Stressed vowels
+
+ * а́ е́ и́ о́ у́ ы́ э́ ю́ я́ ё́     
+ * а̀ ѐ ѝ о̀ у̀ ы̀ э̀ ю̀ я̀ ё̀      Secondary stress
+
+ * А́ Е́ И́ О́ У́ Ы́ Э́ Ю́ Я́   
 
 
 
+!!Markers
+
+ * %>    = End-of-stem marker (nominals)
+ * %<    = End-of-stem marker (verbs)
+ * %^F   = Fleeting vowel marker
+ * %^G   = Irregular GenPl marker (to keep ов/ев on n stems, e.g. ов%^G
+ * %^Z   = Zero ending (resolves to 0/й/ь)
+ * %^M   = Verb stem mutation
+ * %^Iu  = Imperative ending (unstressed)
+ * %^Is  = Imperative ending (stressed)
+
+!!POS
+ * +N       = Noun
+ * +V       = Verb
+ * +A       = Adjective
+ * +Pron    = Pronoun
+ * +Det     = Determiner
+ * +Num     = Numeral
+ * +Adv     = Adverb
+ * +Pr      = Preposition
+ * +Po      = Postposition (ради is the only postposition)
+ * +CC      = Coordinating conjunction
+ * +CS      = Subordinating conjunction
+ * +Interj  = Interjection
+ * +Pcle    = Particle
+
+!!Sub-POS
+ * +Prop    = Proper
+ * +Pers    = Personal
+ * +Dem     = Demonstrative
+ * +Interr  = Interrogative: кто, что, какой, ли, etc.
+ * +Refl    = Pronoun себя, possessive свой
+ * +Indef   = Indefinite
+ * +Coll    = Collective numerals
+ * +MWE     = Multi-word expressions
+
+!!Verbal MSP
+ * +Impf +Perf +Dvuv  = Imperfective, perfective, biaspectual
+ * +IV +TV            = Intransitive, transitive   (generate both if either is possible)
+ * +Inf +Imp          = Imperatives: 2nd person = читай, 1st person = прочитаем
+ * +Pst +Prs +Fut     = Past, present, future
+ * +Sg1 +Sg2 +Sg3     = person sg
+ * +Pl1 +Pl2 +Pl3     = person pl
+ * +PrsAct +PrsPss    = 
+ * +PstAct +PstPss    = Participles (+PrsAct+Adv and +PstAct+Adv are used for the verbal adverbs)
+ * +Pass              = Passive
+
+!!Nominal MSP
+ * +Msc +Fem +Neu +MscFem       = gender,  +MscFem = common gender
+ * +Sg +Pl                      = number
+ * +Nom +Acc +Gen       
+ * +Ins +Dat +Loc       
+ * +Loc2 +Gen2 +Voc     
+ * +Inan +Anim      = Only tagged in conjunction with +Acc
 
 
+ * +Ord     
+ * +Cmpar    
+ * +Sint     = Synthetic comparative is possible, e.g. старее
+ * +An       = Animate placeholder for non-accusative cases
+ * +Pred     = "Predicate", used for short-form adjectives
+ * +Cmpnd    = "Compound", used for compounding adjectives, such as русско-английский
+
+ * +PObj  = object of preposition, e.g. его~него
+ * +Poss  = possessive
+
+!!Other tags
+ * +Prb  = затруднительно - +Prb(lematic); предположительно - +Hyp(othetical); нет - +Gap
+ * +Fac  = Facultative
+ * +Use/Obs  = Obsolete
+ * +Use/Sub  = Substandard
+
+!!!Key lexicon
+
+ * LEXICON Root     
+
+ * Adjective ;	     
+ * Adverb ;	     
+ * Conjunction ;    
+ * Interjection ;   
+ * Noun ;		     
+ * Numeral ;       
+ * Preposition ;    
+ * Pronoun ;	     
+ * Verb ;		     
 
 
-
-
-There was no content!

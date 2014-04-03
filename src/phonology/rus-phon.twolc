@@ -69,7 +69,8 @@ Rules
 Vx:Vy <=> .#. C* _ \[ %>:0 ] $[ :StressedV ] ; ! First syllable of stem
           .#. [ [ Letter: | %^M:]* - [ :StressedV ] ] _ C+ (End) %>:0 :StressedV ; ! Last syllable of stem without shifting stress
           .#. C+ StressedV: (C+ [V - StressedV]) C+ _ C+ (End) %>:0 ~[ о́: в:0 ] ; ! Last syllable of stem with shifting stress
-          .#. Letter* _ C* :StressedV $[ %<:0 ] ; ! Any syllable on verbs
+          .#. Letter* _ [Letter | %^F:0 | %^M:0 ]* %<:0 $[:StressedV] ; ! Verbs (end-stressed)
+          .#. Letter* _ [Letter | %^F:0 | %^M:0 ]* :StressedV $%<:0 ;   ! Verbs (later-on-stem-stressed)
 where Vx in ( а́ э́ о́ у́ ы́ я́ ё ю́ и́ )
       Vy in ( а э о у ы я е ю и )
     matched ;
@@ -79,6 +80,8 @@ where Vx in ( а́ э́ о́ у́ ы́ я́ ё ю́ и́ )
         .#. [ Letter:* - [ :StressedV ] ] _ C+ (End) %>:0 :StressedV ; ! Last syllable of stem without shifting stress
         .#. C+ StressedV: (C+ [V - StressedV]) C+ _ C+ (End) %>:0 \[ о́: ] \[в:0] ; ! Last syllable of stem with shifting stress
         [ г: | к: | х: ] %>:0 _ [ е: | й: ] .#. ; ! After velar mutation with comparative adjectives
+        .#. Letter* _ [Letter | %^F:0 | %^M:0 ]* %<:0 $[:StressedV] ; ! Verbs (end-stressed)
+        .#. Letter* _ [Letter | %^F:0 | %^M:0 ]* :StressedV $%<:0 ;   ! Verbs (later-on-stem-stressed)
 
 "V>0: Delete lexical vowel endings (o/о́ and е are covered in other rules), and delete most fleeting vowels with syllabic endings"
 Vx:0 <=> .#. [ Letter: | %^F:0 ]+ _ %>:0 ; 

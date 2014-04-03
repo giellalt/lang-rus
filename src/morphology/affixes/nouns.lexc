@@ -507,6 +507,10 @@ LEXICON МО_С1_Г_ЗЬ
 +N+Msc+Sg:г MSgStem_anim ;
 +N+Msc+Pl:з%^Fе́йя́ аPlEnd_anim ;
 
+LEXICON МО_С1_Ь_ЕЙ
++N+Msc+Sg:ь MSgStem_anim ;
++N+Msc+Pl:%^Fе́йя́ аPlEnd_anim ;
+
 LEXICON МО_Д
 +N+Msc+Sg: MSgEnd_anim ;
 +N+Msc+Pl: ыPlStem_anim ;

@@ -8,7 +8,7 @@
   / [affixes|https://victorio.uit.no/langtech/trunk/langs/rus/src/morphology/affixes/] 
   / [syntax|https://victorio.uit.no/langtech/trunk/langs/rus/src/syntax] 
   / [twolc|https://victorio.uit.no/langtech/trunk/langs/rus/src/phonology/rus-phon.twolc]   
-  / [yaml|https://victorio.uit.no/langtech/trunk/langs/rus/test/src/morphology/]
+  / [yaml|https://victorio.uit.no/langtech/trunk/langs/rus/test/src/gt-norm-yamls/]
 
 !!! Grammatical issues
 

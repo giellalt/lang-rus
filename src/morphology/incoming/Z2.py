@@ -90,112 +90,102 @@ def combiner ( typelist , codelist ) :
             outputList.extend([i+u" "+j])
     return outputList
 
-Masc = [u"М", u"МО"]
-MascFcodes = [u"1*А", u"1*В", u"1*Е", u"2*А", u"2*В", u"2*Е", u"3*А", u"3*В", u"3*Д", u"5*А", u"5*В", u"6*А", u"6*В"]
-Fem = [u"Ж", u"ЖО"]
-Fem8codes = [u"8*В'", u"8*Е"]
-Pro = [u"МС"]
-ProFcodes = [u"1*В", u"2*В", u"6*В"]
+Masc = [u"м", u"мо"]
+MascFcodes = [u"1a", u"1b", u"1e", u"2a", u"2b", u"2e", u"3a", u"3b", u"3d", u"5a", u"5b", u"6a", u"6b"]
+Fem = [u"ж", u"жо"]
+Fem8codes = [u"8b'", u"8e"]
+Pro = [u"мс"]
+ProFcodes = [] # [u"1b", u"2b", u"6b"]
 MiscM = []
 Fgroup1 = combiner(Masc,MascFcodes) + combiner(Fem,Fem8codes) + combiner (Pro,ProFcodes) + MiscM
-# Fgroup1 = [ u"М 1*А" , u"М 1*В" , u"М 1*Е" , u"М 2*А" , u"М 2*В" , u"М 2*Е" , 
-#             u"М 3*А" , u"М 3*В" , u"М 5*А" , u"М 5*В" , u"М 6*А" , u"М 6*В" , 
-#             u"МО 1*А" , u"МО 1*В" , u"МО 1*Е" , u"МО 2*А" , u"МО 2*В" , u"МО 2*Е" , 
-#             u"МО 3*А" , u"МО 3*В" , u"МО 5*А" , u"МО 5*В" , u"МО 6*А" , u"МО 6*В" , 
-#             u"Ж 8*В'" , u"Ж 8*Е" , u"ЖО 8*В'" , u"ЖО 8*Е" , 
-#             u"МС 1*В" , u"МС 2*В" , u"МС 6*В"]
 
-FemFcodesS = [u"1*В", u"1*Е", u"1*Ф", u"2*В", u"2*Е", u"2*Ф", u"3*В", u"3*Ф", u"3*Ф'", u"5*В", u"6*В"]
-Neut = [u"С", u"СО"]
-NeutFcodesS = [u"1*В", u"1*С", u"3*В", u"3*С", u"5*В", u"5*С", u"5*Ф", u"6*В"]
-Adj = [u"П"]
-AdjFcodesS = [u"1*А/В", u"1*В"]
-MiscS = [u"МН. <М 3*В>",u"МН. <М 5*В>"] # These aren't working
+FemFcodesS = [u"1b", u"1e", u"1f", u"2b", u"2e", u"2f", u"3b", u"3f", u"3f'", u"5b", u"6b"]
+Neut = [u"с", u"со"]
+NeutFcodesS = [u"1b", u"1c", u"3b", u"3c", u"5b", u"5c", u"5f", u"6b"]
+Adj = [u"п"]
+AdjFcodesS = [u"1a/b", u"1b"]
+MiscS = [u"мн. <м 3b>",u"мн. <м 5b>"] # These aren't working
 Fgroup2stressed = combiner(Fem,FemFcodesS) + combiner(Neut,NeutFcodesS) + combiner(Adj,AdjFcodesS) + MiscS
 
-FemFcodesU = [u"1*А", u"1*Д", u"2*А", u"2*Д", u"2*Д'", u"3*А", u"3*Д", u"5*А", u"5*Д", u"6*А", u"6*Д"]
-NeutFcodesU = [u"1*А", u"1*Д", u"3*А", u"3*Д", u"5*А", u"5*Д", u"6*А", u"6*Д"]
-AdjFcodesU = [u"1*А", u"1*А'", u"1*А/С", u"1*А/С'", u"1*А/С''", u"1*В/С'", u"1*В/С''", u"2*А", u"3*А", u"3*А'", u"3*А/С", u"3*А/С'", u"3*А/С''"]
-MiscU = [u"МН. <М 2*А>",u"МН. <М 3*А>",u"МН. <М 5*А>"] # These aren't working
+FemFcodesU = [u"1a", u"1d", u"2a", u"2d", u"2d'", u"3a", u"3d", u"5a", u"5d", u"6a", u"6d"]
+NeutFcodesU = [u"1a", u"1d", u"3a", u"3d", u"5a", u"5d", u"6a", u"6d"]
+AdjFcodesU = [u"1a", u"1a'", u"1a/c", u"1a/c'", u"1a/c''", u"1b/c'", u"1b/c''", u"2a", u"3a", u"3a'", u"3a/c", u"3a/c'", u"3a/c''"]
+MiscU = [u"мн. <м 2a>",u"мн. <м 3a>",u"мн. <м 5a>"] # These aren't working
 Fgroup2unstressed = combiner(Fem,FemFcodesU) + combiner(Neut,NeutFcodesU) + combiner(Adj,AdjFcodesU) + MiscU
 
-def fleeter ( myinput , mycode ) : # decide whether word belongs to Fgroup1 (Mfleeter) or Fgroup2 (Ffleeter, stressed or unstressed)
-    # print "Running fleeter...",myinput,mycode
-    tester1 = 0
-    for i in Fgroup1 :
-        if i in mycode :
-            tester1 += 1
-            #print i,
-    tester2 = 0
-    for i in Fgroup2stressed :
-        if i in mycode :
-            tester2 += 1
-            #print i,
-    tester3 = 0
-    for i in Fgroup2unstressed :
-        if i in mycode :
-            tester3 += 1
-            #print i,
-    if tester1 > 0 :
-        return Mfleeter (myinput,mycode)
-    elif tester2 > 0 :
-        return Ffleeter (myinput,mycode,stress="stressed")
-    elif tester3 > 0 :
-        return Ffleeter (myinput,mycode,stress="unstressed")
+def fleeter ( myinput ) : # decide whether word belongs to Fgroup1 (Mfleeter) or Fgroup2 (Ffleeter, stressed or unstressed)
+    # print "Running fleeter...",myinput['lemma'],'(',myinput['lexeme'],')',myinput['pos'],myinput['paradigm']
+    if myinput['FV'] != u'' :
+        return Ffleeter ( myinput , "stressed" ) # could be "unstressed", bypassed anyway
+    if u'мс ' in myinput['pos'] + u' ' + myinput['paradigm'] or myinput['pos'] == u'п' and myinput['lemma'][-1] != u'й' :
+        return Mfleeter (myinput)
+    for c in Fgroup2stressed :
+        if c in myinput['pos'] + u' ' + myinput['paradigm'] :
+            return Ffleeter (myinput,"stressed")
+    for c in Fgroup2unstressed :
+        if c in myinput['pos'] + u' ' + myinput['paradigm'] :
+            return Ffleeter (myinput,"unstressed")
+    for c in Fgroup1 :
+        if c in myinput['pos'] + u' ' + myinput['paradigm'] :
+            return Mfleeter (myinput)
     else :
-        print "Warning: Fleeting vowel added with FEM/NEUT/PL UNSTRESSED conventions (FV tag) :",myinput,mycode,
-        return Ffleeter (myinput,mycode,stress="unstressed",confidence=0)
+        print "Warning A: Fleeting vowel added with FEM/NEUT/PL UNSTRESSED conventions (FV tag) :",myinput['lemma'],myinput['lexeme'],myinput['pos'],myinput['paradigm']
+        return Ffleeter (myinput,"unstressed",confidence=0)
 
-def Mfleeter (myinput,mycode) : # add (or don't add) ь or й to "alternate" with fleeting vowel
-    # print "Running Mfleeter...",myinput,mycode,">>>>",
-    Findex = myinput.find(u"F")
-    if u"Fо" in myinput :
+def Mfleeter (myinput) : # add (or don't add) ь or й to "alternate" with fleeting vowel
+    # print "Running Mfleeter...",myinput['lemma'],myinput['lexeme'],myinput['paradigm'],">>>>",
+    mylexeme = myinput['lexeme']
+    Findex = mylexeme.find(u"F")
+    if mylexeme[Findex+1] == u'́' : # If stress is on the F symbol, put it on preceding vowel
+        mylexeme = mylexeme[:Findex-2] + u'́%^F' + mylexeme[Findex+2:]
+    if u"Fо" in mylexeme :
         return myinput
-    elif (u"Fе" in myinput or u"Fё" in myinput) :
-        if myinput[Findex-1] in u"аэоуыяеёюиа́э́о́у́ы́я́е́ю́и́" :
-            return myinput[:Findex]+u"й"+myinput[Findex:]
-        elif myinput[Findex-1] == u"л" :
-            return myinput[:Findex]+u"ь"+myinput[Findex:]
-        elif myinput[Findex-1] in u"бвгдзйкмнпрстфх" and (u"М 3*" in mycode or u"МО 3*" in mycode):
-            return myinput[:Findex]+u"ь"+myinput[Findex:]
-        else :
-            return myinput
+    elif mylexeme[mylexeme.find(u'F')+1] in u"аеёяи" :
+        if mylexeme[Findex-3] in u"а э о у ы я е ё ю и ́".split() :
+            mylexeme = mylexeme[:Findex]+u"й"+mylexeme[Findex:]
+        elif mylexeme[Findex-3] == u"л" :
+            mylexeme = mylexeme[:Findex]+u"ь"+mylexeme[Findex:]
+        elif mylexeme[Findex-3] in u"бвгдзйкмнпрстфх" and (u"м 3" in myinput['paradigm'] or u"мо 3" in myinput['paradigm']):
+            mylexeme = mylexeme[:Findex]+u"ь"+mylexeme[Findex:]
+        myinput['lexeme'] = mylexeme
+        return myinput
+    elif mylexeme[mylexeme.find(u'F')+1] in u"аеёяи" :
+        return myinput
     else :
-        print "Warning: Fleeting vowel added with FEM/NEUT/PL UNSTRESSED conventions (FV tag) :",myinput,mycode,
-        return Ffleeter (myinput,mycode,stress="unstressed",confidence=0)
+        print "Warning B: Fleeting vowel added with FEM/NEUT/PL UNSTRESSED conventions (FV tag) :",myinput['lemma'],myinput['lexeme'],myinput['pos'],myinput['paradigm'],
+        return Ffleeter (myinput,"unstressed",confidence=0)
 
-    # MAKE WARNINGS PRINT AT THE BOTTOM OF OUTPUT FILES!
-
-
-def Ffleeter (myinput,mycode,stress,confidence=1) :
+def Ffleeter (myinput,stress,confidence=1) :
     # print "Running Ffleeter...",myinput,mycode,stress,">>>>",
-    Findex = myinput.find(u"F")
-    if u"6*" in mycode :
+    Findex = myinput['lexeme'].find(u"F")
+    if myinput['FV'] != u'' :
+        TheVowel = myinput['FV'].split(u'/')[0]
+    elif u"6" in myinput['paradigm'] :
         if stress == "unstressed" :
             TheVowel = u"и"
         elif stress == "stressed" :
             TheVowel = u"е́"
-    elif ( myinput[Findex-1] == u"ь" or myinput[Findex-1] == u"й" ) and myinput[Findex+1] == u"ц" :
+    elif ( myinput['lexeme'][Findex-1] == u"ь" or myinput['lexeme'][Findex-1] == u"й" ) and myinput['lexeme'][Findex+1] == u"ц" :
         if stress == "unstressed" :
             TheVowel = u"е"
         elif stress == "stressed" :
             TheVowel = u"е́"
-    elif ( myinput[Findex-1] == u"ь" or myinput[Findex-1] == u"й" ) and myinput[Findex+1] != u"ц" :
+    elif ( myinput['lexeme'][Findex-1] == u"ь" or myinput['lexeme'][Findex-1] == u"й" ) and myinput['lexeme'][Findex+1] != u"ц" :
         if stress == "unstressed" :
             TheVowel = u"е"
         elif stress == "stressed" :
             TheVowel = u"ё"
-    elif myinput[Findex-1] == u"к" or myinput[Findex-1] == u"г" or myinput[Findex-1] == u"х" :
+    elif myinput['lexeme'][Findex-1] == u"к" or myinput['lexeme'][Findex-1] == u"г" or myinput['lexeme'][Findex-1] == u"х" :
         if stress == "unstressed" :
             TheVowel = u"о"
         elif stress == "stressed" :
             TheVowel = u"о́"
-    elif myinput[Findex-1] == u"ж" or myinput[Findex-1] == u"ш" or myinput[Findex-1] == u"щ" or myinput[Findex-1] == u"ч" or myinput[Findex-1] == u"ц":
+    elif myinput['lexeme'][Findex-1] == u"ж" or myinput['lexeme'][Findex-1] == u"ш" or myinput['lexeme'][Findex-1] == u"щ" or myinput['lexeme'][Findex-1] == u"ч" or myinput['lexeme'][Findex-1] == u"ц":
         if stress == "unstressed" :
             TheVowel = u"е"
         elif stress == "stressed" :
             TheVowel = u"о́"
-    elif myinput[Findex+1] == u"к" or myinput[Findex+1] == u"г" or myinput[Findex+1] == u"х" :
+    elif myinput['lexeme'][Findex+1] == u"к" or myinput['lexeme'][Findex+1] == u"г" or myinput['lexeme'][Findex+1] == u"х" :
         if stress == "unstressed" :
             TheVowel = u"о"
         elif stress == "stressed" :
@@ -206,9 +196,11 @@ def Ffleeter (myinput,mycode,stress,confidence=1) :
         elif stress == "stressed" :
             TheVowel = u"ё"
     if confidence == 0 :
-        print "\t>>>>>\t"+myinput[:Findex+1]+TheVowel+myinput[Findex+1:]+u"FV"
-        return myinput[:Findex+1]+TheVowel+myinput[Findex+1:]+u"FV"
-    return myinput[:Findex+1]+TheVowel+myinput[Findex+1:]
+        print "\t>>>>>\t"+myinput['lexeme'][:Findex+1]+TheVowel+myinput['lexeme'][Findex+1:]+u"FV"
+        myinput['lexeme'] = myinput['lexeme'][:Findex+1]+TheVowel+myinput['lexeme'][Findex+1:]+u"FV"
+    else : 
+        myinput['lexeme'] = myinput['lexeme'][:Findex+1]+TheVowel+myinput['lexeme'][Findex+1:]
+    return myinput
 
 def stress_shifter ( myinput , mycode ) : # called by stresser2(); places stress mark on stem for Д and Ф patterns
     backwar = myinput[-3::-1]
@@ -224,30 +216,14 @@ def stress_shifter ( myinput , mycode ) : # called by stresser2(); places stress
     else :
         return myinput
 
-NSSfinder = re.compile(u"[1-8]\\*?[ДФ]")
-
-def stresser2 ( myinput , mycode ) : # called by stresser(); places secondary stress (grave accent)
-    # print "Running stresser2...",myinput,mycode
-    position = myinput.find('>')
-    if position == -1 :
-        if NSSfinder.search(mycode) :
-            return stress_shifter(myinput,mycode)
-        elif u"F" in myinput :
-            return fleeter (myinput,mycode)
-        else :
-            return myinput
-    elif position > -1 :
-        inputList = list(myinput)
-        inputList[position] = inputList[position+1]
-        inputList[position+1] = u'\u0300'
-        return stresser2 (''.join(inputList),mycode)
-
-def Vstresser ( myinput ) : # places primary stress (acute accent), then calls stresser2 to place 2ndary stress.
-    # print "Running Vstresser..." , myinput , stress2 , stress1 , mycode
+def stresser ( myinput ) : # places primary stress (acute), and secondary stress (grave).
     mystresses = []
     if myinput['stress1'] == [] :
-        print 'Stress index missing for' , myinput['lemma']
+        #print 'Stress index missing for' , myinput['lemma']
         return myinput
+    Fposition = myinput['lexeme'].find(u'%^F')
+    if Fposition >= 0 :
+        myinput['lexeme'] = myinput['lexeme'].replace(u'%^F',u'')
     for i in myinput['stress1'] :
         if i <= len (myinput['lexeme']) and myinput['lexeme'][i-1] != u'ё' :
             mystresses.append((i,u'\u0301'))
@@ -262,29 +238,52 @@ def Vstresser ( myinput ) : # places primary stress (acute accent), then calls s
         lexemeList.insert( i , j )
     #print ''.join(lexemeList)
     myinput['lexeme'] = ''.join(lexemeList)
-    return myinput
+    if Fposition >= 0 and myinput['pos'] not in [u'св',u'св-нсв',u'нсв'] :
+        newFposition = Fposition + len([i for i in myinput['stress1']+myinput['stress2'] if i < Fposition])
+        newFposition = newFposition - myinput['lexeme'][:newFposition].count(u'ё')
+        myinput['lexeme'] = myinput['lexeme'][:newFposition] + u'%^F' + myinput['lexeme'][newFposition:]
+        return fleeter (myinput)
+    else :
+        return myinput
 
-def CodeCleaner ( myinput ) : # generates the (preliminary) name of the continuation class
-    output = re.sub( "\\<(.*?)\\>" , "[\\1]" , myinput )         # change <  > to [ ]   
-    output = foma_replace( output )
-    output = output.strip()
-    return output.strip()
+# def CodeCleaner ( myinput ) : # generates the (preliminary) name of the continuation class
+#     output = re.sub( "\\<(.*?)\\>" , "[\\1]" , myinput )         # change <  > to [ ]   
+#     output = foma_replace( output )
+#     output = output.strip()
+#     return output.strip()
 
-def NStemCodeStrip ( myinput ) : # For nouns, remove stem labels and fleeting vowel markers from continuation class name generated by CodeCleaner
+def NCodeStrip ( myinput ) : # For nouns, remove stem labels and fleeting vowel markers from continuation class name generated by CodeCleaner
     output = re.sub( " [1-7]" , " " , myinput )
     output = re.sub( "\\*" , "" , output )
     return output
 
-def A_stemmer ( instem , code ) : # generates lexical stem for adjectives (including substantivized)
-    # print "Running A_stemmer...",instem,code
-    instem = instem[:-2]
-    if instem[-1:] == u"<" :
-        instem = instem[:-1]
-    if u'***' in code or ( not  '**' in code and '*' in code ) :    # If the code indicates that there is a fleeting vowel
-        instem = list(instem)
-        instem.insert(len(instem)-1,u"%^F")
+def A_stemmer ( myinput ) : # generates lexical stem for adjectives (including substantivized)
+    # print "Running A_stemmer...",myinput['lemma'],myinput['paradigm'],myinput['paradigm_details']
+    if myinput['lexc_stem'] != u'' :
+        myinput['lexeme'] = myinput['lexc_stem']
+        return myinput
+    elif myinput['lexeme'][-2:] in [u'ый',u'ой'] :
+        myinput['lexeme'] = myinput['lexeme'][:-2]
+    elif myinput['lexeme'][-2:] in [u'ий'] and u'<мс ' not in myinput['paradigm']:
+        myinput['lexeme'] = myinput['lexeme'][:-2]
+        if myinput['lexeme'][-1] == u'н' :
+            myinput['lexeme'] += u'ь'
+    if u'***' in myinput['paradigm'] or ( not  '**' in myinput['paradigm'] and '*' in myinput['paradigm'] ) :    # If the code indicates that there is a fleeting vowel
+        AFchecker = 0
+        for c in AdjFcodesU : 
+            if c in myinput['paradigm'] :
+                AFchecker += 1
+        if AFchecker > 0 :
+            myinput = add_stress (myinput)
+        instem = list(myinput['lexeme'])
+        if u'<мс ' in myinput['paradigm'] or myinput['lemma'][-1] != u'й' :
+            instem.insert(len(instem)-2,u"%^F")
+        else :
+            instem.insert(len(instem)-1,u"%^F")
         instem = ''.join(instem)
-    return stresser ( instem , code )
+        myinput['lexeme'] = instem
+    myinput['paradigm'] = re.sub( "\\*" , "" , myinput['paradigm'] )
+    return stresser ( myinput )
 
 Cons = re.compile(u"[бвгджзйклмнпрстфхцчшщ]")
 SoftSign = re.compile(u"[ь]")
@@ -292,11 +291,15 @@ Vowel = re.compile(u"[аэоуыяеёюи]")
 VowEnd = re.compile(u"[аяоёеыи]")
 StressRE = re.compile(u"[<>]")
 
-def N_stemmer ( instem , code ) :
+def N_stemmer ( myinput ) :
     # print "Running N_stemmer...",instem,code
-    if u"<П " not in code and u"<П, " not in code :
-        if u'***' in code or ( not  '**' in code and '*' in code ) :    # If the code indicates that there is a fleeting vowel
-            instem = instem[::-1]
+    # need to add a stress mark for d and f
+    if myinput['lexc_stem'] != u'' :
+        myinput['lexeme'] = myinput['lexc_stem']
+        return myinput
+    elif u"<п " not in myinput['paradigm'] :
+        if u'***' in myinput['paradigm'] or ( not  '**' in myinput['paradigm'] and '*' in myinput['paradigm'] ) :    # If the code indicates that there is a fleeting vowel
+            instem = myinput['lexeme'][::-1]
             Cindex = Cons.search(instem)
             SSindex = SoftSign.search(instem)
             Vindex = VowEnd.search(instem)
@@ -322,9 +325,11 @@ def N_stemmer ( instem , code ) :
             instem.insert(Findex,u"F^%")
             instem = ''.join(instem)
             instem = instem[::-1]
-        return stresser ( instem , code )
+            myinput['lexeme'] = instem
+            myinput['paradigm'] = re.sub( "\\*" , "" , myinput['paradigm'] )
+        return stresser ( myinput )
     else : # if the word is a substantivized adjective...
-        return A_stemmer ( instem , code )
+        return A_stemmer ( myinput )
 
 def add_yo ( inputString ) : # converts the final 'е' in the string to 'ё'
     inputString = inputString[::-1]
@@ -332,16 +337,17 @@ def add_yo ( inputString ) : # converts the final 'е' in the string to 'ё'
     inputString = inputString[:theIndex] + u'ё' + inputString[theIndex+1:]
     return inputString[::-1]
 
-def V_add_stress ( myinput ) : # adds stress index for the last syllable of the stem
+def add_stress ( myinput ) : # adds stress index for the last syllable of the stem
     if len(myinput['PotentialStressPositions']) > 0 :
         if myinput['PotentialStressPositions'][-1] < myinput['stress1'][-1] :
             myinput['stress1'].append(myinput['PotentialStressPositions'][-1])
             myinput['stress1'].sort()
+            myinput['PotentialStressPositions'] = myinput['PotentialStressPositions'][:-1]
     return myinput
 
 def V_add_suffix_to_code ( myinput , mylength ) : # adds suffix to paradigm code (e.g. ать, а́ть, еть, е́ть, etc.)
     mylemma = DeNumber ( myinput['lemma'] )
-    if mylemma[-2] == u"с" :
+    if mylemma[-2] == u"с" : # remove reflexive suffix
         mylemma = mylemma[:-2]
     if myinput['stress1'][-1] > len(mylemma) - mylength : # if the suffix is stressed
         removed_chars = mylemma[:-mylength]
@@ -357,34 +363,61 @@ def V_add_suffix_to_code ( myinput , mylength ) : # adds suffix to paradigm code
 def V_stemmer ( myinput ) : # generates lexical stem for verbs
     # print "Running V_stemmer...",repr(myinput).decode("unicode-escape")
     # Remove infinitive ending (ть, ться, чь, чься, ти, тись)
+    if myinput['lexc_stem'] != u'' :
+        myinput['lexeme'] = myinput['lexc_stem']
+        myinput = CodeCleaner (myinput)
+        myinput['paradigm'] += myinput['lexc_suffix'] # for most words, this represents no change
+        return myinput
     if myinput['lexeme'][-2:] == u"ся" or myinput['lexeme'][-2:] == u"сь" :
         myinput['lexeme'] = myinput['lexeme'][:-4]
     else :
         myinput['lexeme'] = myinput['lexeme'][:-2]
+    # Add "pp" to paradigm of all transitive imperfectives without an aspectual partner
     if myinput['paradigm'][:3] == u'нсв' and myinput['lemma'][-2] != u'с' and myinput['aspect_pair'] == u'' :
         myinput['paradigm'] += u'pp'
     
     # Remove more, depending on inflection class
-    if myinput['paradigm'][:2] == '16' or myinput['paradigm'][:5] == u"нп 16" :
+
+    # if the source file dictates a lexc_code override, then follow the override (and not the )
+    if myinput['lexc_code'] != u'' :
+        if myinput['stem_drop'] != u'' : dropper = int(myinput['stem_drop'])
+        else : dropper = 0
+        if dropper > 0 :
+            myinput['lexeme'] = myinput['lexeme'][:-dropper]
+        myinput['paradigm_details'] = myinput['lexc_code']
+
+    if u'%1%' in myinput['paradigm'] or u'%4%' in myinput['paradigm'] :  # add stress to verbs with помета 1
+        myinput = add_stress( myinput )
+
+    
+    elif myinput['paradigm'][:2] == '16' or myinput['paradigm'][:5] == u"нп 16" :
         completely_useless_variable = 0
-    if myinput['paradigm'][:2] == '15' or myinput['paradigm'][:5] == u"нп 15" :
+    
+    elif myinput['paradigm'][:2] == '15' or myinput['paradigm'][:5] == u"нп 15" :
         completely_useless_variable = 0
-    if myinput['paradigm'][:2] == '14' or myinput['paradigm'][:5] == u"нп 14" :
+    
+    elif myinput['paradigm'][:2] == '14' or myinput['paradigm'][:5] == u"нп 14" :
         myinput = V_add_suffix_to_code(myinput,3)
+    
     elif myinput['paradigm'][:2] == '13' or myinput['paradigm'][:5] == u"нп 13" :
         myinput['lexeme'] = myinput['lexeme'][:-2]
+    
     elif myinput['paradigm'][:2] == '12' or myinput['paradigm'][:5] == u"нп 12" :
         if myinput['lexeme'][-1] == u'ы' :
             myinput = V_add_suffix_to_code(myinput,3)
+    
     elif myinput['paradigm'][:2] == '11' or myinput['paradigm'][:5] == u"нп 11" :
         myinput['lexeme'] = myinput['lexeme'][:-1]
+    
     elif myinput['paradigm'][:2] == '10' or myinput['paradigm'][:5] == u"нп 10" :
         if myinput['lexeme'][-2] == u'р' :
             myinput = V_add_suffix_to_code(myinput,4)
         else :
             myinput['lexeme'] = myinput['lexeme'][:-1]
+    
     elif myinput['paradigm'][:1] == '9' or myinput['paradigm'][:4] == u"нп 9" :
         myinput['lexeme'] = myinput['lexeme'][:-3]
+    
     elif myinput['paradigm'][:1] == '8' or myinput['paradigm'][:4] == u"нп 8" :
         if u'ё' in myinput['paradigm'] and myinput['lexeme'][-1] == u'е' :
             myinput['lexeme'] = myinput['lexeme'][:-1]+u'ё'
@@ -398,6 +431,7 @@ def V_stemmer ( myinput ) : # generates lexical stem for verbs
             myinput['lexeme'] = myinput['lexeme']+u'г'
             myinput['paradigm'] = myinput['paradigm'].replace(u'(-г-)',u'')
         else : print "Trouble placing г/к in stem of",myinput['lemma']
+    
     elif myinput['paradigm'][:1] == '7' or myinput['paradigm'][:4] == u"нп 7" :
         while myinput['lexeme'][-1] != u'з' and myinput['lexeme'][-1] != u'с' :
             myinput['lexeme'] = myinput['lexeme'][:-1]
@@ -418,6 +452,10 @@ def V_stemmer ( myinput ) : # generates lexical stem for verbs
                 while myinput['lexeme'][-1] != u'е' :
                     myinput['lexeme'] = myinput['lexeme'][:-1]
                 myinput['lexeme'] = myinput['lexeme'][:-1]
+        else :
+            if u'ё' in myinput['paradigm'] :
+                myinput['lexeme'] = add_yo ( myinput['lexeme'] )
+    
     elif myinput['paradigm'][:1] == '6' or myinput['paradigm'][:4] == u"нп 6" :
         if u'ё' in myinput['paradigm'] :
             suffix_length = len(DeNumber(myinput['lemma']))-myinput['PotentialStressPositions'][-1]+1
@@ -426,21 +464,30 @@ def V_stemmer ( myinput ) : # generates lexical stem for verbs
             myinput = V_add_suffix_to_code(myinput,3)
         if u'6b' in myinput['paradigm'] :
             myinput['paradigm'] = myinput['paradigm'].replace(u'6b',u'6°b')
-            if u'беру/,_ёт' in myinput['paradigm_details'] : 
-                while myinput['lexeme'][-1] != u'б' : myinput['lexeme'] = myinput['lexeme'][-1]
+        if u'6°b' in myinput['paradigm'] : 
+            if myinput['paradigm'][:2] != u'нп' and myinput['lemma'][-2] != u'с' :
+                if myinput['pos'][:2] == u'св' or myinput['pos'][:3] == u'нсв' and myinput['aspect_pair'] == u'' :
+                    myinput = add_stress(myinput)
         if u'6c' in myinput['paradigm'] :
-            myinput = V_add_stress(myinput)
+            myinput = add_stress(myinput)
         elif myinput['pos'][:2] == u'св' or myinput['pos'][:3] == u'нсв' and myinput['aspect_pair'] == u'' :  # If the verb is transitive perfective/biaspectual or imperfective without an aspectual partner
             if myinput['stress1'][-1] == len(myinput['lexeme']) :
-                myinput = V_add_stress(myinput)
+                myinput = add_stress(myinput)
+    
     elif myinput['paradigm'][:1] == '5' or myinput['paradigm'][:4] == u"нп 5" :
         myinput = V_add_suffix_to_code(myinput,3)
+        if u'5c' in myinput['paradigm'] :
+            myinput = add_stress(myinput)
+    
     elif myinput['paradigm'][:1] == '4' or myinput['paradigm'][:4] == u"нп 4" :
         myinput['lexeme'] = myinput['lexeme'][:-1]
         if u'%8%' in myinput['paradigm'] :
-            myinput = V_add_stress(myinput)
-    elif myinput['paradigm'][:1] == '3' or myinput['paradigm'][:4] == u"нп 3" : # уть
-        myinput['lexeme'] = myinput['lexeme'][:-1]
+            myinput = add_stress(myinput)
+        if u'-жд-' in myinput['paradigm_details']:
+            myinput['lexeme'] = myinput['lexeme'][:-1]
+    
+    elif myinput['paradigm'][:1] == '3' or myinput['paradigm'][:4] == u"нп 3" : # нуть
+        myinput['lexeme'] = myinput['lexeme'][:-2]
         if u'3°a' in myinput['paradigm'] :
             myinput['paradigm'] = myinput['paradigm'].replace(u'3°a',u'3a zero')
         elif u'3b' in myinput['paradigm'] and myinput['lemma'][-2:] != u'ся' and u'нп' not in myinput['paradigm']:
@@ -448,12 +495,13 @@ def V_stemmer ( myinput ) : # generates lexical stem for verbs
                 myinput['paradigm'] = myinput['paradigm'].replace(u'ё',u'')
                 myinput['lexeme'] = add_yo(myinput['lexeme'])
             else :
-                myinput = V_add_stress(myinput)
+                myinput = add_stress(myinput)
         elif u'3c' in myinput['paradigm'] :
             if u'ё' in myinput['paradigm'] :
                 suffix_length = len(DeNumber(myinput['lemma']))-myinput['PotentialStressPositions'][-1]+1
                 myinput = V_add_suffix_to_code(myinput,suffix_length)
-            myinput = V_add_stress(myinput)
+            myinput = add_stress(myinput)
+    
     elif myinput['paradigm'][:1] == '2' or myinput['paradigm'][:4] == u"нп 2" : # овать
         if u' о' in myinput['paradigm'] :
             myinput['paradigm'] = myinput['paradigm'].replace(u' о',u'')
@@ -485,6 +533,7 @@ def V_stemmer ( myinput ) : # generates lexical stem for verbs
                 if myinput['paradigm'][-5:] != u' ёва́' and myinput['paradigm'][1] != u'b' :
                     myinput['paradigm'] = myinput['paradigm'] + u' ова́'
                 #print myinput['paradigm']
+    
     elif myinput['paradigm'][:1] == '1' or myinput['paradigm'][:4] == u"нп 1" :
         if u'%[x]%' not in myinput['paradigm'] and myinput['lemma'][-2] != u'с' and myinput['paradigm'][:2] != u"нп" :
             if u'ё' in myinput['paradigm'] :
@@ -493,27 +542,28 @@ def V_stemmer ( myinput ) : # generates lexical stem for verbs
             elif myinput['pos'][:2] == u'св' or u'pp' in myinput['paradigm'] :  # If the verb is transitive perfective/biaspectual or imperfective without an aspectual partner
                 if myinput['stress1'][-1] == len(myinput['lexeme']) :
                     myinput = V_add_suffix_to_code(myinput,3)
-                    myinput = V_add_stress(myinput)
+                    myinput = add_stress(myinput)
+    myinput['paradigm'] += myinput['lexc_suffix'] # for most words, this represents no change
 #    else : 
 #        if u'см. ' not in myinput['paradigm_details'] :
 #            print "V_Stemmer WARNING: Code not found for",myinput['lemma'],myinput['paradigm'],'---',myinput['paradigm_details']
-    myinput = VCodeCleaner (myinput)
-    return Vstresser ( myinput )
+    myinput = CodeCleaner (myinput)
+    return stresser ( myinput )
 
-fiveO = [u'предо']
-four = [u'пред']
-fourO = u'возо надо низо подо разо'.split()
-three = u'над под воз низ раз'.split()
-threeS = u'вос нис рас'.split()
-threeO = u'обо ото взо изо'.split()
-two = u'об от вз из'.split()
-twoS = u'вс ис'.split()
-twoO = u'во со'.split()
+fiveO = [u'предо',u'пре́до']
+four = [u'пред',u'пре́д']
+fourO = u'возо надо низо подо разо возо́ надо́ низо́ подо́ разо́'.split()
+three = u'над под воз низ раз на́д по́д во́з ни́з ра́з'.split()
+threeS = u'вос нис рас во́с ни́с ра́с'.split()
+threeO = u'обо ото взо изо обо́ ото́ взо́ изо́'.split()
+two = u'об от вз из о́б о́т и́з'.split()
+twoS = u'вс ис и́с'.split()
+twoO = u'во со во́ со́'.split()
 one = u'в с'.split()
 prefixes_with_fleeting_vowels = fiveO + four + fourO + three + threeS + threeO + two + twoS + twoO + one
 
 def V_star ( myinput ) : # add fleeting vowel prefixes with * in paradigm
-    myinput['paradigm'] = myinput['paradigm'].replace(u'*','')
+    myinput['paradigm'] = myinput['paradigm'].replace(u'*',u'')
     for p in prefixes_with_fleeting_vowels :
         if p in myinput['lexeme'] :
             if p[-1] == u'о' :
@@ -522,24 +572,32 @@ def V_star ( myinput ) : # add fleeting vowel prefixes with * in paradigm
             elif p[-1] == u'с' and len(p) > 1 :
                 myinput['lexeme'] = re.sub(p,p[:-1]+u'з%^Fо',myinput['lexeme'],1)
                 return myinput
-            else :
+            elif len(p) >= 2 :
+                if p[:-2] == u'о́' :
+                    myinput['lexeme'] = re.sub(p,p[:-2]+u'%^Fо́',myinput['lexeme'],1)
+                    return myinput
+                else:
+                    myinput['lexeme'] = re.sub(p,p+u'%^Fо',myinput['lexeme'],1)
+                    return myinput
+            else:
                 myinput['lexeme'] = re.sub(p,p+u'%^Fо',myinput['lexeme'],1)
                 return myinput
+    print "ERROR: cannot add fleeting vowel to prefix in",myinput['lemma'],myinput['lexeme']
+    return myinput
 
-def VCodeCleaner ( myinput ) :
+def CodeCleaner ( myinput ) :
     for codefields in ['paradigm','paradigm_details'] :
         myinput[codefields] = myinput[codefields].replace(u'_',u' ')
         myinput[codefields] = myinput[codefields].strip()
-        for old , new in [(u':',u''),(u';',u''),(u'%tr%',u''),(u'%[x]%',u'?'),(u'%x%',u's'),(u'%1%',u'1'),(u'%2%',u'2'),(u'%3%',u'3'),(u'%4%',u'4'),(u'%5%',u'5'),(u'%6%',u'6'),(u'%7%',u'7'),(u'%8%',u'8'),(u'%9%',u'9'),(u'§ ',u''),(u'  ',u' '),(u'   ',u' '),(u'    ',u' ')] :
+        for old , new in [(u':',u''),(u';',u''),(u'%tr%',u''),(u'%[x]%',u'?'),(u'%x%',u's'),
+                        (u'%1%',u'1'),(u'%2%',u'2'),(u'%3%',u'3'),(u'%4%',u'4'),(u'%5%',u'5'),
+                        (u'%6%',u'6'),(u'%7%',u'7'),(u'%8%',u'8'),(u'%9%',u'9'),(u' § 7',u'x'),
+                        (u'§ 8',u''),(u'§ 9',u''),(u' § 10',u'x'),(u' § 11',u'x'),(u'§ 12',u''),
+                        (u'§ ',u''),(u'  ',u' '),(u'   ',u' '),(u'    ',u' '),(u'<',u'['),(u'>',u']')] :
             myinput[codefields] = myinput[codefields].replace(old,new)
         if myinput[codefields] == u' ' :
-            myinput[codefields] = u''            
+            myinput[codefields] = u''
     return myinput
-
-def AStemCodeStrip ( myinput ) :
-    output = re.sub( " [1-7]" , " " , myinput )
-    output = re.sub( "\\*" , "" , output )    
-    return output
 
 def expand_variation ( myinput ) : # create multiple entries for pos/paradigms with ";" or "//"
     outList = []
@@ -610,7 +668,7 @@ def Yoer ( myDict ) :
         myList.reverse()
         return ''.join(myList) , myDict['paradigm'].replace( u", ё" , u'' )
     else :
-        print "WARNING: no 'е' in" , myDict['lexeme'] , "to convert to 'ё'"
+        #print "WARNING: no 'е' in" , myDict['lexeme'] , "to convert to 'ё'"
         return myDict['lexeme'] , myDict['paradigm']
 
 def dictionary_sorter ( myEntryDict ) :
@@ -619,7 +677,7 @@ def dictionary_sorter ( myEntryDict ) :
         codes = codes.replace(u'  ',u' ')
 
     if myEntryDict['pos'].split() :
-        if myEntryDict['pos'].split()[0] in u'м мо мо-жо с со ж жо мн.'.split() :
+        if myEntryDict['pos'].split()[0] in u'м мо мо-жо с со ж жо мн. ф.'.split() or u'соб' in myEntryDict['pos'] :
             if codes in Ndict :
                 Ndict[codes].append(myEntryDict)
             else :
@@ -652,6 +710,7 @@ def dictionary_sorter ( myEntryDict ) :
             else :
                 Idict[codes] = [myEntryDict]
         elif myEntryDict['pos'] == u'числ. числ.-п' :
+            print myEntryDict['lemma']
             if codes in Numdict :
                 Numdict[codes].append(myEntryDict)
             else :
@@ -677,7 +736,7 @@ def dictionary_sorter ( myEntryDict ) :
         else :
             Odict[codes] = [myEntryDict]
 
-myFile = codecs.open ( 'gram_studentam_preprocessed.csv' , mode='r' , encoding='utf-8' )
+myFile = codecs.open ( 'ZalAll.csv' , mode='r' , encoding='utf-8' )
 Zlist = myFile.readlines() # Put the file into a list object
 
 Ndict = {} # Nouns dictionary
@@ -727,6 +786,8 @@ for n in range(len(Zlist)) : # Parse each line and the put entries in one of the
     entryDict['lemma'] = entryDict['lemma'].replace(u'ё',u'е') # remove ё from all lemmas
     if u', ё' in entryDict['paradigm'] and u'св' not in entryDict['pos'] : # non-verbs with ', ё' in Z's code
         entryDict['lexeme'] , entryDict['paradigm'] = Yoer ( entryDict ) # put ё into lexeme of nominals
+    if entryDict['FV'] != u'' :
+        entryDict['paradigm_details'] = u''
 
     entryDict = expand_variation(entryDict) # this embeds the entryDict(s) in list
 
@@ -734,11 +795,14 @@ for n in range(len(Zlist)) : # Parse each line and the put entries in one of the
         dictionary_sorter ( e )
 
 print len(Zlist),"lines in input."
-print len(Ndict)+len(Adict)+len(Vdict)+len(Odict),'categories in input.'
+catCounter = 0
 for d , n in [ (Ndict,"noun") , (Adict,"adjective") , (Vdict,"verb") , (Advdict,"adverb") , 
                (Cdict,"conjunction") , (Idict,"interjection") , (Numdict,"numeral") , 
                (Pdict,"preposition") , (Prodict,"pronoun") , (Sdict,"subjunction") , (Odict,"miscellaneous") ] :
     print len(d),'\t',n,'categories in input.'
+    catCounter += len(d)
+print "="*20
+print "TOTAL categories:",catCounter
 
 lexc_header = u'! ===================================================================\n'*5 +\
               u'! This lexc file is automatically generated by ../incoming/Z2.py. In \n' +\
@@ -748,15 +812,31 @@ lexc_header = u'! ==============================================================
               u'! ===================================================================\n'*5 +\
               u'\n\n'
 
+V_lexc_paradigms = codecs.open ( "../affixes/verbs.lexc" , mode='r' , encoding='utf-8' )
+V_LEXICA = set([ i.split()[1] for i in V_lexc_paradigms if u'LEXICON' in i ])
+
+A_lexc_paradigms = codecs.open ( "../affixes/adjectives.lexc" , mode='r' , encoding='utf-8' )
+A_LEXICA = set([ i.split()[1] for i in A_lexc_paradigms if u'LEXICON' in i ])
+
+N_lexc_paradigms = codecs.open ( "../affixes/nouns.lexc" , mode='r' , encoding='utf-8' )
+N_LEXICA = set([ i.split()[1] for i in N_lexc_paradigms if u'LEXICON' in i ])
+
 with codecs.open ( "../stems/verbs.lexc" , mode='w' , encoding='utf-8' ) as Vfile :
     print "Preparing verbs.lexc ...",
     newVdict = {}
     for code in Vdict :
         for entry in Vdict[code] :
             entry = V_stemmer(entry)
-            if u'*' in entry['paradigm'] : entry = V_star(entry)
+            if entry['lexc_stem'] != u'' : 
+                entry['lexeme'] = entry['lexc_stem']
+            elif u'*' in entry['paradigm'] :
+                entry = V_star(entry)
             if entry['lemma'][-2] == u"с" :
                 entry['paradigm'] += u" R"
+
+            # Reduce combined length of produced LEXICON name to 56 characters (maximum for xfst compiler)
+            if len(entry['pos'] + u' ' + entry['paradigm'] + u' ' + entry['paradigm_details']) > 56 :
+                entry['paradigm_details'] = entry['paradigm_details'][:(56-len(entry['pos'] + u' ' + entry['paradigm'] + u' '))]
             lexicon = entry['pos'] + u' ' + entry['paradigm'] + u' ' + entry['paradigm_details']
             lexicon = lexicon.strip()
             while u'  ' in lexicon :
@@ -776,9 +856,9 @@ with codecs.open ( "../stems/verbs.lexc" , mode='w' , encoding='utf-8' ) as Vfil
         Vfile.write(code_header)
         #Vfile.write(u'! THIS CATEGORY UNVERIFIED (delete this line when the computer-generated code has been verified by hand)\n')
         for each_lemma in sorted ( newVdict[each_code] , key=lambda x: x['lemma'][::-1]) :
-            if each_lemma['skip'] == u'1' :
+            if each_lemma['skip'] == u'1' or each_code.replace(" ","_") not in V_LEXICA :
                 skipper = u"! "
-            elif len(newVdict[each_code]) < 18 and each_lemma['skip'] != u'-1' : # -1 in the skip column blocks that lemma from being commented out
+            elif len(newVdict[each_code]) < 30 and each_code.replace(" ","_") not in V_LEXICA :
                 skipper = u"! "
             else : skipper = u""
             if each_lemma['do_not_skip'] == u'1' :
@@ -791,83 +871,192 @@ with codecs.open ( "../stems/verbs.lexc" , mode='w' , encoding='utf-8' ) as Vfil
     Vcats_counter = 0.0
     V_total = sum(i for i,j,k,l in Vcatslist)
     for i,j,k,l in sorted (Vcatslist,key=lambda x : x[0],reverse=True) :
+        if j.replace(" ","_") in V_LEXICA :
+            h = u''
+        else :
+            h = u'*****'
         Vcats_counter += i
-        Vcatsfile_freq.write(str(i)+'\t\t'+'{:.2%}'.format(Vcats_counter/V_total)+'\t\t'+j.replace(' ','_')+'\t\t'+k+'\t\t'+l+"\n")
+        Vcatsfile_freq.write(h+str(i)+'\t\t'+'{:.2%}'.format(Vcats_counter/V_total)+'\t\t'+j.replace(' ','_')+'\t\t'+k+'\t\t'+l+"\n")
     Vcatsfile_freq.close()    
     Vcatsfile_alph = codecs.open ( "verb_cats_alph.txt" , mode='w' , encoding='utf-8' )
     Vcats_counter = 0.0
     V_total = sum(i for i,j,k,l in Vcatslist)
     for i,j,k,l in sorted (Vcatslist,key=lambda x : ' '.join(x[1].split()[1:]).replace(' ','_'),reverse=False) :
+        if j.replace(" ","_") in V_LEXICA :
+            h = u''
+        else :
+            h = u'*****'
         if i > 2 :
             Vcats_counter += i
-            Vcatsfile_alph.write(str(i)+'\t\t'+'{:.2%}'.format(Vcats_counter/V_total)+'\t\t'+j.replace(' ','_')+'\t\t'+k+'\t\t'+l+"\n")
+            Vcatsfile_alph.write(h+str(i)+'\t\t'+'{:.2%}'.format(Vcats_counter/V_total)+'\t\t'+j.replace(' ','_')+'\t\t'+k+'\t\t'+l+"\n")
     Vcatsfile_alph.close()
     print "verbs.lexc done!"
 
-with codecs.open ( "nouns.lexc" , mode='w' , encoding='utf-8' ) as Nfile :
-    print "Writing nouns.lexc ..."
-    Nfile.write( u'LEXICON Noun\n' )
-    for k in sorted ( Ndict , reverse=False ) :
-        k2 = NStemCodeStrip (k)
-        code_header = u'! '+'='*60 + u'  Types in Zaliznjak: ' + str(len(Ndict[k])) + u'\n!' + u' '*35 + k.replace(u" ",u"_") + u'\n'
-        Nfile.write(code_header)
-        Nfile.write(u'! THIS CATEGORY UNVERIFIED (delete this line when the computer-generated code has been verified by hand)\n')
-        if len(k) > 9 and len(Ndict[k]) < 100 : # if the code is longer than 4 characters and there are less than, comment out all the entries
-            comment = u"! "
-        else :
-            comment = u""
-        for v in sorted ( Ndict[k] , key=lambda x: x[0][::-1]) :
-            entry = comment + v[0]+u":"+N_stemmer ( v[3] , k )+u" "+k2.replace(u" ",u"_")+u" ;" 
-            entry += u' '*(50-len(entry))+u"\t! "+v[4]  # add unmodified code as comment
-            if (not u'\u0301' in entry and not u"ё" in entry) and (not u'В' in k2) :
-                entry += u'\tWARNING: no stress on stem'
-            entry += u'\n'
-            Nfile.write(entry)
-        Nfile.write( u'\n' )
+# for d , f , l in [ (Advdict,"adverbs.lexc",u"Adverb") , (Cdict,"conjunctions.lexc",u"Conjunction") , (Idict,"interjections.lexc",u"Interjection") , 
+#                (Pdict,"prepositions.lexc",u"Preposition") , (Prodict,"pronouns.lexc",u"Pronoun") , (Sdict,"subjunctions.lexc",u"Subjunction") , 
+#                (Numdict,"numerals.lexc",u"Numeral") , (Odict,"other.lexc",u"THESE LEXICA NEED TO BE CATEGORIZED AND LABELED") ] :
+#     print "Writing",f,"...",
+#     with codecs.open ( f , mode='w' , encoding='utf-8' ) as Myfile :
+#         Myfile.write( u'LEXICON ' + l + u'\n' )
+#         for each_code in sorted ( d, reverse=False ) : # for each grammar code in the verb dictionary
+#             code_header = u'! '+'='*60 + u'  Types in Zaliznjak: ' + str(len(d[each_code])) + u'\n!' + u' '*35 + each_code.replace(u" ",u"_") + u'\n'
+#             Myfile.write(code_header)
+#             #Vfile.write(u'! THIS CATEGORY UNVERIFIED (delete this line when the computer-generated code has been verified by hand)\n')
+#             for each_lemma in sorted ( d[each_code] , key=lambda x: x['lemma'][::-1]) :
+#                 each_lemma = stresser(each_lemma)
+#                 if each_lemma['skip'] == u'1' :
+#                     skipper = u"! "
+#                 elif len(d[each_code]) < 30 and each_lemma['skip'] != u'-1' : # -1 in the skip column blocks that lemma from being commented out
+#                     skipper = u"! "
+#                 else : skipper = u""
+#                 if each_lemma['do_not_skip'] == u'1' :
+#                     skipper = u""
+#                 entry = skipper + each_lemma['lemma'] + u":" + each_lemma['lexeme'] + u" " + each_code.replace(" ","_") + u" ;"
+#                 #entry += u' '*(50-len(entry)) + u"\t! " + each_lemma['pos'] + u' ' + each_lemma['paradigm'] + u' ' + each_lemma['paradigm_details']
+#                 entry += u'\n'
+#                 Myfile.write(entry)
+#     print "Done!"
 
 with codecs.open ( "adjectives.lexc" , mode='w' , encoding='utf-8' ) as Afile :
-    print "Writing adjectives.lexc ..."
-    Afile.write( u"DON'T FORGET THAT ....\n adjectives 2*a ~Fений have masc short-form in 0, not ь\n! DON'T FORGET!!\n\n")
+    print "Preparing adjectives.lexc ...",
+    newAdict = {}
+    for code in Adict :
+        for entry in Adict[code] :
+            entry = A_stemmer(entry)
+            if u'<мс' not in entry['paradigm'] :
+                entry['paradigm'] = re.sub( "[1-7]" , "" , entry['paradigm'] , count = 1 )
+            else : # if it is a pronoun declension
+                if entry['lemma'][-2] == u'́' :
+                    entry['paradigm'] += entry['lemma'][-3:]
+                else :
+                    entry['paradigm'] += entry['lemma'][-2:]
+            entry = CodeCleaner(entry)
+            if entry['lexc_stem'] != u'' :
+                entry['lexeme'] = entry['lexc_stem']
+
+            # Reduce combined length of produced LEXICON name to 56 characters (maximum for xfst compiler)
+            if len(entry['pos'] + u' ' + entry['paradigm'] + u' ' + entry['paradigm_details']) > 56 :
+                entry['paradigm_details'] = entry['paradigm_details'][:(56-len(entry['pos'] + u' ' + entry['paradigm'] + u' '))]
+            lexicon = entry['pos'] + u' ' + entry['paradigm'] + u' ' + entry['paradigm_details']
+            lexicon = lexicon.strip()
+            while u'  ' in lexicon :
+                lexicon = lexicon.replace(u'  ',u' ')
+            if lexicon in newAdict :
+                newAdict[lexicon].append(entry)
+            else :
+                newAdict[lexicon] = [entry]
+    print len(newAdict),'categories in adjectives.lexc ...',
+    print "writing adjectives.lexc ...",
+    Acatslist = []
+    Afile.write( lexc_header )
+    Afile.write( u"! DON'T FORGET THAT ....\n ! adjectives 2*a ~Fений have masc short-form in 0, not ь\n! DON'T FORGET!!\n\n")
     Afile.write( u'LEXICON Adjective\n' )
-    for k in sorted ( Adict, key=lambda k: len(Adict[k]), reverse=True ) :
-        k2 = AStemCodeStrip (k)
-        code_header = u'! '+'='*60 + u'  Types in Zaliznjak: ' + str(len(Adict[k])) + u'\n!' + u' '*35 + k.replace(u" ",u"_") + u'\n'
+    for each_code in sorted ( newAdict, reverse=False ) : # for each grammar code in the verb dictionary
+        Acatslist.append([len(newAdict[each_code]),each_code,newAdict[each_code][0]['lemma'],newAdict[each_code][0]['lexeme'],])
+        code_header = u'! '+'='*60 + u'  Types in Zaliznjak: ' + str(len(newAdict[each_code])) + u'\n!' + u' '*35 + each_code.replace(u" ",u"_") + u'\n'
         Afile.write(code_header)
-        Afile.write(u'! THIS CATEGORY UNVERIFIED (delete this line when the computer-generated code has been verified by hand)\n')
-        if len(Adict[k]) < 250 : # if there are less than 250 lemmas, comment out all the entries
-            comment = u"! "
-        else :
-            comment = u""
-        for v in sorted ( Adict[k] , key=lambda x: x[0][::-1]) :
-            entry = comment + v[0]+u":"+A_stemmer( v[3] , k )+u" "+k2.replace(u" ",u"_")+u" ;"
-            entry += u' '*(50-len(entry))+u"\t! "+v[4]+u'\n'
+        #Afile.write(u'! THIS CATEGORY UNVERIFIED (delete this line when the computer-generated code has been verified by hand)\n')
+        for each_lemma in sorted ( newAdict[each_code] , key=lambda x: x['lemma'][::-1]) :
+            if each_lemma['skip'] == u'1' or each_code.replace(" ","_") not in A_LEXICA :
+                skipper = u"! "
+            elif len(newAdict[each_code]) < 30 and each_code.replace(" ","_") not in A_LEXICA :
+                skipper = u"! "
+            else : skipper = u""
+            if each_lemma['do_not_skip'] == u'1' :
+                skipper = u""
+            entry = skipper + each_lemma['lemma'] + u":" + each_lemma['lexeme'] + u" " + each_code.replace(" ","_") + u" ;"
+            #entry += u' '*(50-len(entry)) + u"\t! " + each_lemma['pos'] + u' ' + each_lemma['paradigm'] + u' ' + each_lemma['paradigm_details']
+            entry += u'\n'
             Afile.write(entry)
+    Acatsfile_freq = codecs.open ( "adj_cats_freq.txt" , mode='w' , encoding='utf-8' )
+    Acats_counter = 0.0
+    A_total = sum(i for i,j,k,l in Acatslist)
+    for i,j,k,l in sorted (Acatslist,key=lambda x : x[0],reverse=True) :
+        if j.replace(" ","_") in A_LEXICA :
+            h = u''
+        else :
+            h = u'*****'
+        Acats_counter += i
+        Acatsfile_freq.write(h+str(i)+'\t\t'+'{:.2%}'.format(Acats_counter/A_total)+'\t\t'+j.replace(' ','_')+'\t\t'+k+'\t\t'+l+"\n")
+    Acatsfile_freq.close()    
+    Acatsfile_alph = codecs.open ( "adj_cats_alph.txt" , mode='w' , encoding='utf-8' )
+    Acats_counter = 0.0
+    A_total = sum(i for i,j,k,l in Acatslist)
+    for i,j,k,l in sorted (Acatslist,key=lambda x : ' '.join(x[1].split()[1:]).replace(' ','_'),reverse=False) :
+        if j.replace(" ","_") in A_LEXICA :
+            h = u''
+        else :
+            h = u'*****'
+        Acats_counter += i
+        Acatsfile_alph.write(h+str(i)+'\t\t'+'{:.2%}'.format(Acats_counter/A_total)+'\t\t'+j.replace(' ','_')+'\t\t'+k+'\t\t'+l+"\n")
+    Acatsfile_alph.close()
+    print "adjectives.lexc done!"
 
-with codecs.open ( "numerals.lexc" , mode='w' , encoding='utf-8' ) as Numfile :
-    print "Writing numerals.lexc ..."
-    Numfile.write( u'LEXICON Numeral\n' )
-    for k in sorted ( Numdict, key=lambda k: len(Numdict[k]), reverse=True ) :
-        k2 = k
-        code_header = u'! '+'='*60 + u'  Types in Zaliznjak: ' + str(len(Numdict[k])) + u'\n!' + u' '*35 + k.replace(u" ",u"_") + u'\n'
-        Numfile.write(code_header)
-        Numfile.write(u'! THIS CATEGORY UNVERIFIED (delete this line when the computer-generated code has been verified by hand)\n')
-        for v in sorted ( Numdict[k] , key=lambda x: x[0][::-1]) :
-            entry = v[0]+u":"+stresser(v[3],k)+u" "+k2.replace(u" ",u"_")+u" ;"
-            entry += u' '*(50-len(entry))+u"\t! "+v[4]+u'\n'
-            Numfile.write(entry)
+with codecs.open ( "nouns.lexc" , mode='w' , encoding='utf-8' ) as Nfile :
+    print "Preparing nouns.lexc ...",
+    newNdict = {}
+    for code in Ndict :
+        for entry in Ndict[code] :
+            entry = N_stemmer(entry)
+            entry['paradigm'] = re.sub( "[1-7]" , "" , entry['paradigm'] , count = 1 )
+            entry = CodeCleaner(entry)
+            if entry['lexc_stem'] != u'' :
+                entry['lexeme'] = entry['lexc_stem']
 
-for d , f , l in [ (Advdict,"adverbs.lexc",u"Adverb") , (Cdict,"conjunctions.lexc",u"Conjunction") , (Idict,"interjections.lexc",u"Interjection") , 
-               (Pdict,"prepositions.lexc",u"Preposition") , (Prodict,"pronouns.lexc",u"Pronoun") , (Sdict,"subjunctions.lexc",u"Subjunction") , 
-               (Odict,"other.lexc",u"THESE LEXICA NEED TO BE CATEGORIZED AND LABELED") ] :
-    print "Writing",f,"..."
-    with codecs.open ( f , mode='w' , encoding='utf-8' ) as Myfile :
-        Myfile.write( u'LEXICON ' + l + u'\n' )
-        for k in sorted ( d, key=lambda k: len(d[k]), reverse=True ) :
-            k2 = k
-            code_header = u'! '+'='*60 + u'  Types in Zaliznjak: ' + str(len(d[k])) + u'\n!' + u' '*35 + k.replace(u" ",u"_") + u'\n'
-            Myfile.write(code_header)
-            Myfile.write(u'! THIS CATEGORY UNVERIFIED (delete this line when the computer-generated code has been verified by hand)\n')
-            for v in sorted ( d[k] , key=lambda x: x[0][::-1]) :
-                entry = v[0]+u":"+stresser(v[3],k)+u" "+k2.replace(u" ",u"_")+u" ;"
-                entry += u' '*(50-len(entry))+u"\t! "+v[4]+u'\n'
-                Myfile.write(entry)
+            # Reduce combined length of produced LEXICON name to 56 characters (maximum for xfst compiler)
+            if len(entry['pos'] + u' ' + entry['paradigm'] + u' ' + entry['paradigm_details']) > 56 :
+                entry['paradigm_details'] = entry['paradigm_details'][:(56-len(entry['pos'] + u' ' + entry['paradigm'] + u' '))]
+            lexicon = entry['pos'] + u' ' + entry['paradigm'] + u' ' + entry['paradigm_details']
+            lexicon = lexicon.strip()
+            while u'  ' in lexicon :
+                lexicon = lexicon.replace(u'  ',u' ')
+            if lexicon in newNdict :
+                newNdict[lexicon].append(entry)
+            else :
+                newNdict[lexicon] = [entry]
+    print len(newNdict),'categories in nouns.lexc ...',
+    print "writing nouns.lexc ...",
+    Ncatslist = []
+    Nfile.write( lexc_header )
+    Nfile.write( u'LEXICON Noun\n' )
+    for each_code in sorted ( newNdict, reverse=False ) : # for each grammar code in the verb dictionary
+        Ncatslist.append([len(newNdict[each_code]),each_code,newNdict[each_code][0]['lemma'],newNdict[each_code][0]['lexeme'],])
+        code_header = u'! '+'='*60 + u'  Types in Zaliznjak: ' + str(len(newNdict[each_code])) + u'\n!' + u' '*35 + each_code.replace(u" ",u"_") + u'\n'
+        Nfile.write(code_header)
+        #Nfile.write(u'! THIS CATEGORY UNVERIFIED (delete this line when the computer-generated code has been verified by hand)\n')
+        for each_lemma in sorted ( newNdict[each_code] , key=lambda x: x['lemma'][::-1]) :
+            if each_lemma['skip'] == u'1' or each_code.replace(" ","_") not in N_LEXICA :
+                skipper = u"! "
+            elif len(newNdict[each_code]) < 15 and each_code.replace(" ","_") not in N_LEXICA :
+                skipper = u"! "
+            else : skipper = u""
+            if each_lemma['do_not_skip'] == u'1' :
+                skipper = u""
+            entry = skipper + each_lemma['lemma'] + u":" + each_lemma['lexeme'] + u" " + each_code.replace(" ","_") + u" ;"
+            #entry += u' '*(50-len(entry)) + u"\t! " + each_lemma['pos'] + u' ' + each_lemma['paradigm'] + u' ' + each_lemma['paradigm_details']
+            entry += u'\n'
+            Nfile.write(entry)
+    Ncatsfile_freq = codecs.open ( "noun_cats_freq.txt" , mode='w' , encoding='utf-8' )
+    Ncats_counter = 0.0
+    N_total = sum(i for i,j,k,l in Ncatslist)
+    for i,j,k,l in sorted (Ncatslist,key=lambda x : x[0],reverse=True) :
+        if j.replace(" ","_") in N_LEXICA :
+            h = u''
+        else :
+            h = u'*****'
+        Ncats_counter += i
+        Ncatsfile_freq.write(h+str(i)+'\t\t'+'{:.2%}'.format(Ncats_counter/N_total)+'\t\t'+j.replace(' ','_')+'\t\t'+k+'\t\t'+l+"\n")
+    Ncatsfile_freq.close()    
+    Ncatsfile_alph = codecs.open ( "noun_cats_alph.txt" , mode='w' , encoding='utf-8' )
+    Ncats_counter = 0.0
+    N_total = sum(i for i,j,k,l in Ncatslist)
+    for i,j,k,l in sorted (Ncatslist,key=lambda x : ' '.join(x[1].split()[1:]).replace(' ','_'),reverse=False) :
+        if j.replace(" ","_") in N_LEXICA :
+            h = u''
+        else :
+            h = u'*****'
+        Ncats_counter += i
+        Ncatsfile_alph.write(h+str(i)+'\t\t'+'{:.2%}'.format(Ncats_counter/N_total)+'\t\t'+j.replace(' ','_')+'\t\t'+k+'\t\t'+l+"\n")
+    Ncatsfile_alph.close()
+    print "nouns.lexc done!"
+

@@ -1,9 +1,9 @@
 
 LEXICON числ.-п_[п_1a]
-+Num+A: П_А ;
++Num+A: п_a ;
 
 LEXICON числ.-п_[п_1b]
-+Num+A: П_В ;
++Num+A: п_b ;
 
 LEXICON 2
 +Num+Msc+Nom:а́ # ;

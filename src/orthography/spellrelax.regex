@@ -3,14 +3,15 @@
 # h (->) h # dummy not to break the thing
 
 а́ (->) а, # Russian stressed vowel, accept short
-е́ (->) е, # Russian stressed vowel, accept short
-и́ (->) и, # Russian stressed vowel, accept short
+э́ (->) э, # Russian stressed vowel, accept short
 о́ (->) о, # Russian stressed vowel, accept short
 у́ (->) у, # Russian stressed vowel, accept short
-я́ (->) я, # Russian stressed vowel, accept short
 ы́ (->) ы, # Russian stressed vowel, accept short
-ю́ (->) ю, # Russian stressed vowel, accept short
+я́ (->) я, # Russian stressed vowel, accept short
+е́ (->) е, # Russian stressed vowel, accept short
 ё (->) е, # Russian stressed vowel, accept je pro jo
+ю́ (->) ю, # Russian stressed vowel, accept short
+и́ (->) и, # Russian stressed vowel, accept short
 Ё (->) Е # Russian stressed vowel, accept je pro jo
 ;
 

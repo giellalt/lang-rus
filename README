@@ -97,7 +97,7 @@ luck (this is also tested and confirmed). At the moment, it is best to avoid
 VPATH builds together with the Xerox tools (VPATH  builds using the HFST tool
 set should be fine).
 
-A bug report has been sent to the Xerox tools' authors.
+A bug report has been sent to the authors of the Xerox tools
 
 
 For further installation instruction refer to file ``INSTALL``, which contains

@@ -53,18 +53,17 @@
  * +Pst +Prs +Fut     = Past, present, future
  * +Sg1 +Sg2 +Sg3     = person sg
  * +Pl1 +Pl2 +Pl3     = person pl
- * +PrsAct +PrsPss    = 
  * +PstAct +PstPss    = Participles (+PrsAct+Adv and +PstAct+Adv are used for the verbal adverbs)
  * +Pass              = Passive
 
 !!Nominal MSP
- * +Msc +Fem +Neu +MscFem       = gender,  +MscFem = common gender
- * +Sg +Pl                      = number
+ * +Msc +Fem +Neu +MscFem       = grammatical gender,  +MscFem = common gender
+ * +Sur +Pat +Alt       = Surname (фамилия), Patronymic, Other; used with proper nouns
+ * +Sg +Pl              = number
  * +Nom +Acc +Gen       
  * +Ins +Dat +Loc       
  * +Loc2 +Gen2 +Voc     
- * +Inan +Anim      = Only tagged in conjunction with +Acc
-
+ * +Inan +Anim          = animacy
 
  * +Ord     
  * +Cmpar    

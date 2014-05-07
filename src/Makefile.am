@@ -144,6 +144,46 @@ endif # CAN_HFST
 #################################################
 #### Add language-specific build rules here: ####
 
+analyser-gt-%.hfst: analyser-gt-%.tmp.hfst \
+				 orthography/destress.hfst
+	$(AM_V_RGX2FST)$(PRINTF) "\
+				@\"$<\" \
+			.o. @\"orthography/destress.hfst\" \
+			;" \
+		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --harmonize-flags \
+		| $(HFST_INVERT) \
+		| $(HFST_FST2FST) $(HFST_FLAGS) -f olw \
+		> $@
+
+generator-gt-%.hfst: generator-gt-%.tmp.hfst \
+				  orthography/destress.hfst
+	$(AM_V_RGX2FST)$(PRINTF) "\
+				@\"$<\" \
+			.o. @\"orthography/destress.hfst\" \
+			;" \
+		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --harmonize-flags \
+		| $(HFST_FST2FST) $(HFST_FLAGS) -f olw \
+		> $@
+
+analyser-gt-%.xfst: analyser-gt-%.tmp.xfst \
+				 orthography/destress.xfst
+	$(AM_V_RGX2FST)$(PRINTF) "\
+				@\"$<\" \
+			.o. @\"orthography/destress.xfst\" \
+			;\n\
+		 save stack $@\n\
+		 quit\n" | $(XFST) $(VERBOSITY)
+
+generator-gt-%.xfst: generator-gt-%.tmp.xfst \
+				  orthography/destress.xfst
+	$(AM_V_RGX2FST)$(PRINTF) "\
+				@\"$<\" \
+			.o. @\"orthography/destress.xfst\" \
+			;\n\
+		 invert net\n\
+		 save stack $@\n\
+		 quit\n" | $(XFST) $(VERBOSITY)
+
 ##################################################################
 #### END: Add local processing instructions ABOVE this line ######
 ##################################################################

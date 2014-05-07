@@ -1,0 +1,30 @@
+# Russian
+
+# h (->) h # dummy not to break the thing
+
+а́ (->) а, # Russian stressed vowel, accept unstressed
+э́ (->) э, # Russian stressed vowel, accept unstressed
+о́ (->) о, # Russian stressed vowel, accept unstressed
+у́ (->) у, # Russian stressed vowel, accept unstressed
+ы́ (->) ы, # Russian stressed vowel, accept unstressed
+я́ (->) я, # Russian stressed vowel, accept unstressed
+е́ (->) е, # Russian stressed vowel, accept unstressed
+ё (->) е, # Russian stressed vowel, accept unstressed
+ю́ (->) ю, # Russian stressed vowel, accept unstressed
+и́ (->) и, # Russian stressed vowel, accept unstressed
+А́ (->) А, # Russian stressed vowel, accept unstressed
+Э́ (->) Э, # Russian stressed vowel, accept unstressed
+О́ (->) О, # Russian stressed vowel, accept unstressed
+У́ (->) У, # Russian stressed vowel, accept unstressed
+Ы́ (->) Ы, # Russian stressed vowel, accept unstressed
+Я́ (->) Я, # Russian stressed vowel, accept unstressed
+Е́ (->) Е, # Russian stressed vowel, accept unstressed
+Ё (->) Е, # Russian stressed vowel, accept unstressed
+Ю́ (->) Ю, # Russian stressed vowel, accept unstressed
+И́ (->) И  # Russian stressed vowel, accept unstressed
+;
+
+# Explanation:
+# lexical side (->) input 
+# Or, in other words:
+# correct (->) in use out there

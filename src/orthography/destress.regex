@@ -1,8 +1,9 @@
 # Remove Russian stress marks - they are not used except for ё
 
+[
 ё (->) е, # Russian stressed vowel, accept unstressed
-Ё (->) Е, # Russian stressed vowel, accept unstressed
-
+Ё (->) Е  # Russian stressed vowel, accept unstressed
+] .o. [ 
 а́  ->  а, # Russian stressed vowel, accept unstressed
 э́  ->  э, # Russian stressed vowel, accept unstressed
 о́  ->  о, # Russian stressed vowel, accept unstressed
@@ -20,7 +21,8 @@
 Я́  ->  Я, # Russian stressed vowel, accept unstressed
 Е́  ->  Е, # Russian stressed vowel, accept unstressed
 Ю́  ->  Ю, # Russian stressed vowel, accept unstressed
-И́  ->  И; # Russian stressed vowel, accept unstressed
+И́  ->  И  # Russian stressed vowel, accept unstressed
+];
 
 # Explanation:
 # lexical side (->) input 

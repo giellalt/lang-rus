@@ -1,0 +1,144 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+Tests:
+# todo:
+# Proofread the gold standard (below)
+# Then: run analyser, then correct. 
+
+  Noun - старость M anim : # Noun - full paradigm
+      старость+N+Fem+Sg+Nom: ста́рость
+      старость+N+Fem+Sg+Acc: ста́рость
+      старость+N+Fem+Sg+Gen: ста́рости
+      старость+N+Fem+Sg+Loc: ста́рости
+      старость+N+Fem+Sg+Dat: ста́рости
+      старость+N+Fem+Sg+Ins: ста́ростью
+      старость+N+Fem+Pl+Nom: ста́рости
+      старость+N+Fem+Pl+Acc+Inan: ста́рости
+      старость+N+Fem+Pl+Gen: ста́ростей
+      старость+N+Fem+Pl+Loc: ста́ростях
+      старость+N+Fem+Pl+Dat: ста́ростям
+      старость+N+Fem+Pl+Ins: ста́ростями
+  Noun - вещь M anim : # Noun - full paradigm
+      вещь+N+Fem+Sg+Nom: ве́щь
+      вещь+N+Fem+Sg+Acc: ве́щь
+      вещь+N+Fem+Sg+Gen: ве́щи
+      вещь+N+Fem+Sg+Loc: ве́щи
+      вещь+N+Fem+Sg+Dat: ве́щи
+      вещь+N+Fem+Sg+Ins: ве́щью
+      вещь+N+Fem+Pl+Nom: ве́щи
+      вещь+N+Fem+Pl+Acc+Inan: ве́щи
+      вещь+N+Fem+Pl+Gen: веще́й
+      вещь+N+Fem+Pl+Loc: веща́х
+      вещь+N+Fem+Pl+Dat: веща́м
+      вещь+N+Fem+Pl+Ins: веща́ми
+  Noun - книга M anim : # Noun - full paradigm
+      книга+N+Fem+Sg+Nom: кни́га
+      книга+N+Fem+Sg+Acc: кни́гу
+      книга+N+Fem+Sg+Gen: кни́ги
+      книга+N+Fem+Sg+Loc: кни́ге
+      книга+N+Fem+Sg+Dat: кни́ге
+      книга+N+Fem+Sg+Ins: кни́гой
+      книга+N+Fem+Pl+Nom: кни́ги
+      книга+N+Fem+Pl+Acc+Inan: кни́ги
+      книга+N+Fem+Pl+Gen: кни́г
+      книга+N+Fem+Pl+Loc: кни́гах
+      книга+N+Fem+Pl+Dat: кни́гам
+      книга+N+Fem+Pl+Ins: кни́гами
+  Noun - революция M anim : # Noun - full paradigm
+      революция+N+Fem+Sg+Nom: револю́ция
+      революция+N+Fem+Sg+Acc: револю́цию
+      революция+N+Fem+Sg+Gen: револю́ции
+      революция+N+Fem+Sg+Loc: револю́ции
+      революция+N+Fem+Sg+Dat: револю́ции
+      революция+N+Fem+Sg+Ins: револю́цией
+      революция+N+Fem+Pl+Nom: револю́ции
+      революция+N+Fem+Pl+Acc+Inan: револю́ции
+      революция+N+Fem+Pl+Gen: револю́ций
+      революция+N+Fem+Pl+Loc: револю́циях
+      революция+N+Fem+Pl+Dat: револю́циям
+      революция+N+Fem+Pl+Ins: револю́циями
+  Noun - душа M anim : # Noun - full paradigm
+      душа+N+Fem+Sg+Nom: душа́
+      душа+N+Fem+Sg+Acc: ду́шу
+      душа+N+Fem+Sg+Gen: души́
+      душа+N+Fem+Sg+Loc: душе́
+      душа+N+Fem+Sg+Dat: душе́
+      душа+N+Fem+Sg+Ins: душо́й
+      душа+N+Fem+Pl+Nom: ду́ши
+      душа+N+Fem+Pl+Acc+Inan: ду́ши
+      душа+N+Fem+Pl+Gen: ду́ш
+      душа+N+Fem+Pl+Loc: ду́шах
+      душа+N+Fem+Pl+Dat: ду́шам
+      душа+N+Fem+Pl+Ins: ду́шами
+  Noun - красота M anim : # Noun - full paradigm
+      красота+N+Fem+Sg+Nom: красота́
+      красота+N+Fem+Sg+Acc: красоту́
+      красота+N+Fem+Sg+Gen: красоты́
+      красота+N+Fem+Sg+Loc: красоте́
+      красота+N+Fem+Sg+Dat: красоте́
+      красота+N+Fem+Sg+Ins: красото́й
+      красота+N+Fem+Pl+Nom: красо́ты
+      красота+N+Fem+Pl+Acc+Inan: красо́ты
+      красота+N+Fem+Pl+Gen: красо́т
+      красота+N+Fem+Pl+Loc: красо́тах
+      красота+N+Fem+Pl+Dat: красо́там
+      красота+N+Fem+Pl+Ins: красо́тами
+  Noun - волна M anim : # Noun - full paradigm
+      волна+N+Fem+Sg+Nom: волна́
+      волна+N+Fem+Sg+Acc: волну́
+      волна+N+Fem+Sg+Gen: волны́
+      волна+N+Fem+Sg+Loc: волне́
+      волна+N+Fem+Sg+Dat: волне́
+      волна+N+Fem+Sg+Ins: волно́й
+      волна+N+Fem+Pl+Nom: во́лны
+      волна+N+Fem+Pl+Acc+Inan: во́лны
+      волна+N+Fem+Pl+Gen: во́лн
+      волна+N+Fem+Pl+Loc: волна́х
+      волна+N+Fem+Pl+Dat: волна́м
+      волна+N+Fem+Pl+Ins: волна́ми
+  Noun - железа M anim : # Noun - full paradigm
+      железа+N+Fem+Sg+Nom: железа́
+      железа+N+Fem+Sg+Acc: железу́
+      железа+N+Fem+Sg+Gen: железы́
+      железа+N+Fem+Sg+Loc: железе́
+      железа+N+Fem+Sg+Dat: железе́
+      железа+N+Fem+Sg+Ins: железо́й
+      железа+N+Fem+Pl+Nom: же́лезы
+      железа+N+Fem+Pl+Acc+Inan: же́лезы
+      железа+N+Fem+Pl+Gen: желёз
+      железа+N+Fem+Pl+Loc: железа́х
+      железа+N+Fem+Pl+Dat: железа́м
+      железа+N+Fem+Pl+Ins: железа́ми
+  Noun - рука M anim : # Noun - full paradigm
+      рука+N+Fem+Sg+Nom: рука́
+      рука+N+Fem+Sg+Acc: ру́ку
+      рука+N+Fem+Sg+Gen: руки́
+      рука+N+Fem+Sg+Loc: руке́
+      рука+N+Fem+Sg+Dat: руке́
+      рука+N+Fem+Sg+Ins: руко́й
+      рука+N+Fem+Pl+Nom: ру́ки
+      рука+N+Fem+Pl+Acc+Inan: ру́ки
+      рука+N+Fem+Pl+Gen: ру́к
+      рука+N+Fem+Pl+Loc: рука́х
+      рука+N+Fem+Pl+Dat: рука́м
+      рука+N+Fem+Pl+Ins: рука́ми
+  Noun - сковорода M anim : # Noun - full paradigm
+      сковорода+N+Fem+Sg+Nom: сковорода́
+      сковорода+N+Fem+Sg+Acc: сковороду́
+      сковорода+N+Fem+Sg+Gen: сковороды́
+      сковорода+N+Fem+Sg+Loc: сковороде́
+      сковорода+N+Fem+Sg+Dat: сковороде́
+      сковорода+N+Fem+Sg+Ins: сковородо́й
+      сковорода+N+Fem+Pl+Nom: ско́вороды
+      сковорода+N+Fem+Pl+Acc+Inan: ско́вороды
+      сковорода+N+Fem+Pl+Gen: сковоро́д
+      сковорода+N+Fem+Pl+Loc: сковорода́х
+      сковорода+N+Fem+Pl+Dat: сковорода́м
+      сковорода+N+Fem+Pl+Ins: сковорода́ми
+

@@ -54,18 +54,17 @@ Multichar_Symbols
 +Pst +Prs +Fut    !!= * @CODE@ = Past, present, future
 +Sg1 +Sg2 +Sg3    !!= * @CODE@ = person sg
 +Pl1 +Pl2 +Pl3    !!= * @CODE@ = person pl
-+PrsAct +PrsPss   !!= * @CODE@ = 
 +PstAct +PstPss   !!= * @CODE@ = Participles (+PrsAct+Adv and +PstAct+Adv are used for the verbal adverbs)
 +Pass             !!= * @CODE@ = Passive
 
 !! !!Nominal MSP
-+Msc +Fem +Neu +MscFem      !!= * @CODE@ = gender,  +MscFem = common gender
-+Sg +Pl                     !!= * @CODE@ = number
++Msc +Fem +Neu +MscFem      !!= * @CODE@ = grammatical gender,  +MscFem = common gender
++Sur +Pat +Alt      !!= * @CODE@ = Surname (фамилия), Patronymic, Other; used with proper nouns
++Sg +Pl             !!= * @CODE@ = number
 +Nom +Acc +Gen      !!= * @CODE@ 
 +Ins +Dat +Loc      !!= * @CODE@ 
 +Loc2 +Gen2 +Voc    !!= * @CODE@ 
-+Inan +Anim     !!= * @CODE@ = Only tagged in conjunction with +Acc
-
++Inan +Anim         !!= * @CODE@ = animacy
 
 +Ord    !!= * @CODE@ 
 +Cmpar  !!= * @CODE@  

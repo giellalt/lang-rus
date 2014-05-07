@@ -1,0 +1,169 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+Tests:
+# todo:
+# Proofread the gold standard (below)
+# Then: run analyser, then correct. 
+
+  Noun - любовь M anim : # Noun - full paradigm
+      любовь+N+Fem+Sg+Nom: любо́вь
+      любовь+N+Fem+Sg+Acc: любо́вь
+      любовь+N+Fem+Sg+Gen: любви́
+      любовь+N+Fem+Sg+Loc: любви́
+      любовь+N+Fem+Sg+Dat: любви́
+      любовь+N+Fem+Sg+Ins: любо́вью
+      любовь+N+Fem+Pl+Nom: любви́
+      любовь+N+Fem+Pl+Acc+Inan: любви́
+      любовь+N+Fem+Pl+Gen: любве́й
+      любовь+N+Fem+Pl+Loc: любвя́х
+      любовь+N+Fem+Pl+Dat: любвя́м
+      любовь+N+Fem+Pl+Ins: любвя́ми
+  Noun - башня M anim : # Noun - full paradigm
+      башня+N+Fem+Sg+Nom: ба́шня
+      башня+N+Fem+Sg+Acc: ба́шню
+      башня+N+Fem+Sg+Gen: ба́шни
+      башня+N+Fem+Sg+Loc: ба́шне
+      башня+N+Fem+Sg+Dat: ба́шне
+      башня+N+Fem+Sg+Ins: ба́шней
+      башня+N+Fem+Pl+Nom: ба́шни
+      башня+N+Fem+Pl+Acc+Inan: ба́шни
+      башня+N+Fem+Pl+Gen: ба́шен
+      башня+N+Fem+Pl+Loc: ба́шнях
+      башня+N+Fem+Pl+Dat: ба́шням
+      башня+N+Fem+Pl+Ins: ба́шнями
+  Noun - копейка M anim : # Noun - full paradigm
+      копейка+N+Fem+Sg+Nom: копе́йка
+      копейка+N+Fem+Sg+Acc: копе́йку
+      копейка+N+Fem+Sg+Gen: копе́йки
+      копейка+N+Fem+Sg+Loc: копе́йке
+      копейка+N+Fem+Sg+Dat: копе́йке
+      копейка+N+Fem+Sg+Ins: копе́йкой
+      копейка+N+Fem+Pl+Nom: копе́йки
+      копейка+N+Fem+Pl+Acc+Inan: копе́йки
+      копейка+N+Fem+Pl+Gen: копе́ек
+      копейка+N+Fem+Pl+Loc: копе́йках
+      копейка+N+Fem+Pl+Dat: копе́йкам
+      копейка+N+Fem+Pl+Ins: копе́йками
+  Noun - свадьба M anim : # Noun - full paradigm
+      свадьба+N+Fem+Sg+Nom: сва́дьба
+      свадьба+N+Fem+Sg+Acc: сва́дьбу
+      свадьба+N+Fem+Sg+Gen: сва́дьбы
+      свадьба+N+Fem+Sg+Loc: сва́дьбе
+      свадьба+N+Fem+Sg+Dat: сва́дьбе
+      свадьба+N+Fem+Sg+Ins: сва́дьбой
+      свадьба+N+Fem+Pl+Nom: сва́дьбы
+      свадьба+N+Fem+Pl+Acc+Inan: сва́дьбы
+      свадьба+N+Fem+Pl+Gen: сва́деб
+      свадьба+N+Fem+Pl+Loc: сва́дьбах
+      свадьба+N+Fem+Pl+Dat: сва́дьбам
+      свадьба+N+Fem+Pl+Ins: сва́дьбами
+  Noun - земля M anim : # Noun - full paradigm
+      земля+N+Fem+Sg+Nom: земля́
+      земля+N+Fem+Sg+Acc: зе́млю
+      земля+N+Fem+Sg+Gen: земли́
+      земля+N+Fem+Sg+Loc: земле́
+      земля+N+Fem+Sg+Dat: земле́
+      земля+N+Fem+Sg+Ins: землёй
+      земля+N+Fem+Pl+Nom: зе́мли
+      земля+N+Fem+Pl+Acc+Inan: зе́мли
+      земля+N+Fem+Pl+Gen: земе́ль
+      земля+N+Fem+Pl+Loc: зе́млях
+      земля+N+Fem+Pl+Dat: зе́млям
+      земля+N+Fem+Pl+Ins: зе́млями
+  Noun - сестра M anim : # Noun - full paradigm
+      сестра+N+Fem+Sg+Nom: сестра́
+      сестра+N+Fem+Sg+Acc: сестру́
+      сестра+N+Fem+Sg+Gen: сестры́
+      сестра+N+Fem+Sg+Loc: сестре́
+      сестра+N+Fem+Sg+Dat: сестре́
+      сестра+N+Fem+Sg+Ins: сестро́й
+      сестра+N+Fem+Pl+Nom: сёстры
+      сестра+N+Fem+Pl+Acc+Anim: сестёр
+      сестра+N+Fem+Pl+Gen: сестёр
+      сестра+N+Fem+Pl+Loc: сёстрах
+      сестра+N+Fem+Pl+Dat: сёстрам
+      сестра+N+Fem+Pl+Ins: сёстрами
+  Noun - отец M anim : # Noun - full paradigm
+      отец+N+Msc+Sg+Nom: оте́ц
+      отец+N+Msc+Sg+Acc+Anim: отца́
+      отец+N+Msc+Sg+Gen: отца́
+      отец+N+Msc+Sg+Loc: отце́
+      отец+N+Msc+Sg+Dat: отцу́
+      отец+N+Msc+Sg+Ins: отцо́м
+      отец+N+Msc+Pl+Nom: отцы́
+      отец+N+Msc+Pl+Acc+Anim: отцо́в
+      отец+N+Msc+Pl+Gen: отцо́в
+      отец+N+Msc+Pl+Loc: отца́х
+      отец+N+Msc+Pl+Dat: отца́м
+      отец+N+Msc+Pl+Ins: отца́ми
+  Noun - распутье M anim : # Noun - full paradigm
+      распутье+N+Neu+Sg+Nom: распу́тье
+      распутье+N+Neu+Sg+Acc: распу́тье
+      распутье+N+Neu+Sg+Gen: распу́тья
+      распутье+N+Neu+Sg+Loc: распу́тье
+      распутье+N+Neu+Sg+Dat: распу́тью
+      распутье+N+Neu+Sg+Ins: распу́тьем
+      распутье+N+Neu+Pl+Nom: распу́тья
+      распутье+N+Neu+Pl+Acc+Inan: распу́тья
+      распутье+N+Neu+Pl+Gen: распу́тий
+      распутье+N+Neu+Pl+Loc: распу́тьях
+      распутье+N+Neu+Pl+Dat: распу́тьям
+      распутье+N+Neu+Pl+Ins: распу́тьями
+  Noun - окно M anim : # Noun - full paradigm
+      окно+N+Neu+Sg+Nom: окно́
+      окно+N+Neu+Sg+Acc: окно́
+      окно+N+Neu+Sg+Gen: окна́
+      окно+N+Neu+Sg+Loc: окне́
+      окно+N+Neu+Sg+Dat: окну́
+      окно+N+Neu+Sg+Ins: окно́м
+      окно+N+Neu+Pl+Nom: о́кна
+      окно+N+Neu+Pl+Acc+Inan: о́кна
+      окно+N+Neu+Pl+Gen: о́кон
+      окно+N+Neu+Pl+Loc: о́кнах
+      окно+N+Neu+Pl+Dat: о́кнам
+      окно+N+Neu+Pl+Ins: о́кнами
+  Noun - письмо M anim : # Noun - full paradigm
+      письмо+N+Neu+Sg+Nom: письмо́
+      письмо+N+Neu+Sg+Acc: письмо́
+      письмо+N+Neu+Sg+Gen: письма́
+      письмо+N+Neu+Sg+Loc: письме́
+      письмо+N+Neu+Sg+Dat: письму́
+      письмо+N+Neu+Sg+Ins: письмо́м
+      письмо+N+Neu+Pl+Nom: пи́сьма
+      письмо+N+Neu+Pl+Acc+Inan: пи́сьма
+      письмо+N+Neu+Pl+Gen: пи́сем
+      письмо+N+Neu+Pl+Loc: пи́сьмах
+      письмо+N+Neu+Pl+Dat: пи́сьмам
+      письмо+N+Neu+Pl+Ins: пи́сьмами
+  Noun - яйцо M anim : # Noun - full paradigm
+      яйцо+N+Neu+Sg+Nom: яйцо́
+      яйцо+N+Neu+Sg+Acc: яйцо́
+      яйцо+N+Neu+Sg+Gen: яйца́
+      яйцо+N+Neu+Sg+Loc: яйце́
+      яйцо+N+Neu+Sg+Dat: яйцу́
+      яйцо+N+Neu+Sg+Ins: яйцо́м
+      яйцо+N+Neu+Pl+Nom: я́йца
+      яйцо+N+Neu+Pl+Acc+Inan: я́йца
+      яйцо+N+Neu+Pl+Gen: яи́ц
+      яйцо+N+Neu+Pl+Loc: я́йцах
+      яйцо+N+Neu+Pl+Dat: я́йцам
+      яйцо+N+Neu+Pl+Ins: я́йцами
+  Noun - сердце M anim : # Noun - full paradigm
+      сердце+N+Neu+Sg+Nom: се́рдце
+      сердце+N+Neu+Sg+Acc: се́рдце
+      сердце+N+Neu+Sg+Gen: се́рдца
+      сердце+N+Neu+Sg+Loc: се́рдце
+      сердце+N+Neu+Sg+Dat: се́рдцу
+      сердце+N+Neu+Sg+Ins: се́рдцем
+      сердце+N+Neu+Pl+Nom: сердца́
+      сердце+N+Neu+Pl+Acc+Inan: сердца́
+      сердце+N+Neu+Pl+Gen: серде́ц
+      сердце+N+Neu+Pl+Loc: сердца́х
+      сердце+N+Neu+Pl+Dat: сердца́м
+      сердце+N+Neu+Pl+Ins: сердца́ми

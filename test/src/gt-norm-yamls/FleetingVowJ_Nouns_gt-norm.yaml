@@ -1,0 +1,63 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+
+Tests:
+
+# todo:
+# Proofread the gold standard (below)
+# Then: run analyser, then correct. 
+
+
+  Noun - статья M anim : # Noun - full paradigm
+      статья+N+Fem+Sg+Nom: статья́
+      статья+N+Fem+Sg+Acc: статью́
+      статья+N+Fem+Sg+Gen: статьи́
+      статья+N+Fem+Sg+Loc: статье́
+      статья+N+Fem+Sg+Dat: статье́
+      статья+N+Fem+Sg+Ins: статьёй
+      статья+N+Fem+Pl+Nom: статьи́
+      статья+N+Fem+Pl+Acc+Inan: статьи́
+      статья+N+Fem+Pl+Gen: стате́й
+      статья+N+Fem+Pl+Loc: статья́х
+      статья+N+Fem+Pl+Dat: статья́м
+      статья+N+Fem+Pl+Ins: статья́ми
+  Noun - семья M anim : # Noun - full paradigm
+      семья+N+Fem+Sg+Nom: семья́
+      семья+N+Fem+Sg+Acc: семью́
+      семья+N+Fem+Sg+Gen: семьи́
+      семья+N+Fem+Sg+Loc: семье́
+      семья+N+Fem+Sg+Dat: семье́
+      семья+N+Fem+Sg+Ins: семьёй
+      семья+N+Fem+Pl+Nom: се́мьи
+      семья+N+Fem+Pl+Acc+Inan: се́мьи
+      семья+N+Fem+Pl+Gen: семе́й
+      семья+N+Fem+Pl+Loc: се́мьях
+      семья+N+Fem+Pl+Dat: се́мьям
+      семья+N+Fem+Pl+Ins: се́мьями
+  Noun - муравей M anim : # Noun - full paradigm
+      муравей+N+Msc+Sg+Nom: мураве́й
+      муравей+N+Msc+Sg+Acc+Anim: муравья́
+      муравей+N+Msc+Sg+Gen: муравья́
+      муравей+N+Msc+Sg+Loc: муравье́
+      муравей+N+Msc+Sg+Dat: муравью́
+      муравей+N+Msc+Sg+Ins: муравьём
+      муравей+N+Msc+Pl+Nom: муравьи́
+      муравей+N+Msc+Pl+Acc+Anim: муравьёв
+      муравей+N+Msc+Pl+Gen: муравьёв
+      муравей+N+Msc+Pl+Loc: муравья́х
+      муравей+N+Msc+Pl+Dat: муравья́м
+      муравей+N+Msc+Pl+Ins: муравья́ми
+  Noun - бельё M anim : # Noun - full paradigm
+      белье+N+Neu+Sg+Nom: бельё
+      белье+N+Neu+Sg+Acc: бельё
+      белье+N+Neu+Sg+Gen: белья́
+      белье+N+Neu+Sg+Loc: белье́
+      белье+N+Neu+Sg+Dat: белью́
+      белье+N+Neu+Sg+Ins: бельём
+

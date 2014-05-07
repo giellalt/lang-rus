@@ -7,7 +7,7 @@ Alphabet
       %^Z:0  ! "Zero ending" resolves to 0/ь/й (used for short-form adj's)
       %^M:0  ! Verb stem mutation
       %^Iu:ь %^Iu:й %^Iu:и   ! Imperative ending (unstressed)
-      %^Is:й %^Is:и́          ! Imperative ending ("stressed")
+      %^Is:й %^Is:и́ %^Is:0   ! Imperative ending (stressed)
 
       а б в г д е ё ж з и й к л м н о п р с т у ф х ц ч ш щ ъ ы ь э ю я 
       а́         е́ ё́     и́           о́         у́               ы́   э́ ю́ я́   ! ё́ > ё in spellrelax?

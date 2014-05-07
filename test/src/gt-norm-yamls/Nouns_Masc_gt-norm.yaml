@@ -1,0 +1,105 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+Tests:
+# todo:
+# Proofread the gold standard (below)
+# Then: run analyser, then correct. 
+
+  Noun - критерий M anim : # Noun - full paradigm
+      критерий+N+Msc+Sg+Nom: крите́рий
+      критерий+N+Msc+Sg+Acc+Inan: крите́рий
+      критерий+N+Msc+Sg+Gen: крите́рия
+      критерий+N+Msc+Sg+Loc: крите́рии
+      критерий+N+Msc+Sg+Dat: крите́рию
+      критерий+N+Msc+Sg+Ins: крите́рием
+      критерий+N+Msc+Pl+Nom: крите́рии
+      критерий+N+Msc+Pl+Acc+Inan: крите́рии
+      критерий+N+Msc+Pl+Gen: крите́риев
+      критерий+N+Msc+Pl+Loc: крите́риях
+      критерий+N+Msc+Pl+Dat: крите́риям
+      критерий+N+Msc+Pl+Ins: крите́риями
+  Noun - музей M anim : # Noun - full paradigm
+      музей+N+Msc+Sg+Nom: музе́й
+      музей+N+Msc+Sg+Acc+Inan: музе́й
+      музей+N+Msc+Sg+Gen: музе́я
+      музей+N+Msc+Sg+Loc: музе́е
+      музей+N+Msc+Sg+Dat: музе́ю
+      музей+N+Msc+Sg+Ins: музе́ем
+      музей+N+Msc+Pl+Nom: музе́и
+      музей+N+Msc+Pl+Acc+Inan: музе́и
+      музей+N+Msc+Pl+Gen: музе́ев
+      музей+N+Msc+Pl+Loc: музе́ях
+      музей+N+Msc+Pl+Dat: музе́ям
+      музей+N+Msc+Pl+Ins: музе́ями
+  Noun - карандаш M anim : # Noun - full paradigm
+      карандаш+N+Msc+Sg+Nom: каранда́ш
+      карандаш+N+Msc+Sg+Acc+Inan: каранда́ш
+      карандаш+N+Msc+Sg+Gen: карандаша́
+      карандаш+N+Msc+Sg+Loc: карандаше́
+      карандаш+N+Msc+Sg+Dat: карандашу́
+      карандаш+N+Msc+Sg+Ins: карандашо́м
+      карандаш+N+Msc+Pl+Nom: карандаши́
+      карандаш+N+Msc+Pl+Acc+Inan: карандаши́
+      карандаш+N+Msc+Pl+Gen: карандаше́й
+      карандаш+N+Msc+Pl+Loc: карандаша́х
+      карандаш+N+Msc+Pl+Dat: карандаша́м
+      карандаш+N+Msc+Pl+Ins: карандаша́ми
+  Noun - словарь M anim : # Noun - full paradigm
+      словарь+N+Msc+Sg+Nom: слова́рь
+      словарь+N+Msc+Sg+Acc+Inan: слова́рь
+      словарь+N+Msc+Sg+Gen: словаря́
+      словарь+N+Msc+Sg+Loc: словаре́
+      словарь+N+Msc+Sg+Dat: словарю́
+      словарь+N+Msc+Sg+Ins: словарём
+      словарь+N+Msc+Pl+Nom: словари́
+      словарь+N+Msc+Pl+Acc+Inan: словари́
+      словарь+N+Msc+Pl+Gen: словаре́й
+      словарь+N+Msc+Pl+Loc: словаря́х
+      словарь+N+Msc+Pl+Dat: словаря́м
+      словарь+N+Msc+Pl+Ins: словаря́ми
+  Noun - язык M anim : # Noun - full paradigm
+      язык+N+Msc+Sg+Nom: язы́к
+      язык+N+Msc+Sg+Acc+Inan: язы́к
+      язык+N+Msc+Sg+Gen: языка́
+      язык+N+Msc+Sg+Loc: языке́
+      язык+N+Msc+Sg+Dat: языку́
+      язык+N+Msc+Sg+Ins: языко́м
+      язык+N+Msc+Pl+Nom: языки́
+      язык+N+Msc+Pl+Acc+Inan: языки́
+      язык+N+Msc+Pl+Gen: языко́в
+      язык+N+Msc+Pl+Loc: языка́х
+      язык+N+Msc+Pl+Dat: языка́м
+      язык+N+Msc+Pl+Ins: языка́ми
+  Noun - крюк M anim : # Noun - full paradigm
+      крюк+N+Msc+Sg+Nom: крю́к
+      крюк+N+Msc+Sg+Acc+Inan: крю́к
+      крюк+N+Msc+Sg+Gen: крюка́
+      крюк+N+Msc+Sg+Loc: крюке́
+      крюк+N+Msc+Sg+Loc2: крюку́
+      крюк+N+Msc+Sg+Dat: крюку́
+      крюк+N+Msc+Sg+Ins: крюко́м
+      крюк+N+Msc+Pl+Nom: крю́чья
+      крюк+N+Msc+Pl+Acc+Inan: крю́чья
+      крюк+N+Msc+Pl+Gen: крю́чьев
+      крюк+N+Msc+Pl+Loc: крю́чьях
+      крюк+N+Msc+Pl+Dat: крю́чьям
+      крюк+N+Msc+Pl+Ins: крю́чьями
+  Noun - пол M anim : # Noun - full paradigm
+      пол+N+Msc+Sg+Nom: по́л
+      пол+N+Msc+Sg+Acc+Inan: по́л
+      пол+N+Msc+Sg+Gen: по́ла
+      пол+N+Msc+Sg+Loc: по́ле
+      пол+N+Msc+Sg+Dat: по́лу
+      пол+N+Msc+Sg+Ins: по́лом
+      пол+N+Msc+Pl+Nom: полы́
+      пол+N+Msc+Pl+Acc+Inan: полы́
+      пол+N+Msc+Pl+Gen: поло́в
+      пол+N+Msc+Pl+Loc: пола́х
+      пол+N+Msc+Pl+Dat: пола́м
+      пол+N+Msc+Pl+Ins: пола́ми

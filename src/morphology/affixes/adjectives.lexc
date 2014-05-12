@@ -866,6 +866,34 @@ LEXICON LF_stem_R
 +Pl+Dat:%>ымся # ;
 +Pl+Ins:%>ымися # ;
 
+LEXICON LF_stem_R_Prb
++Msc+Sg+Nom+Prb:%>ыйся # ;
++Msc+Sg+Acc+Inan+Prb:%>ыйся # ;
++Msc+Sg+Acc+Anim+Prb:%>огося # ;
++Msc+Sg+Gen+Prb:%>огося # ;
++Msc+Sg+Loc+Prb:%>омся # ;
++Msc+Sg+Dat+Prb:%>омуся # ;
++Msc+Sg+Ins+Prb:%>ымся # ;
++Neu+Sg+Nom+Prb:%>оеся # ;
++Neu+Sg+Acc+Prb:%>оеся # ;
++Neu+Sg+Gen+Prb:%>огося # ;
++Neu+Sg+Loc+Prb:%>омся # ;
++Neu+Sg+Dat+Prb:%>омуся # ;
++Neu+Sg+Ins+Prb:%>ымся # ;
++Fem+Sg+Nom+Prb:%>аяся # ;
++Fem+Sg+Acc+Prb:%>уюся # ;
++Fem+Sg+Gen+Prb:%>ойся # ;
++Fem+Sg+Loc+Prb:%>ойся # ;
++Fem+Sg+Dat+Prb:%>ойся # ;
++Fem+Sg+Ins+Prb:%>ойся # ;
++Pl+Nom+Prb:%>ыеся # ;
++Pl+Acc+Inan+Prb:%>ыеся # ;
++Pl+Acc+Anim+Prb:%>ыхся # ;
++Pl+Gen+Prb:%>ыхся # ;
++Pl+Loc+Prb:%>ыхся # ;
++Pl+Dat+Prb:%>ымся # ;
++Pl+Ins+Prb:%>ымися # ;
+
 LEXICON LF_stem_R_Fac
 +Msc+Sg+Nom+Fac:%>ыйся # ;
 +Msc+Sg+Acc+Inan+Fac:%>ыйся # ;

@@ -4,12 +4,11 @@ Multichar_Symbols
 
 !! !!Stressed vowels
 
-а́ е́ и́ о́ у́ ы́ э́ ю́ я́ ё́    !!= * @CODE@ 
-а̀ ѐ ѝ о̀ у̀ ы̀ э̀ ю̀ я̀ ё̀    !!= * @CODE@  Secondary stress
+а́ е́ ё́ и́ о́ у́ ы́ э́ ю́ я́    !!= * @CODE@ 
+а̀ ѐ ё̀ ѝ о̀ у̀ ы̀ э̀ ю̀ я̀    !!= * @CODE@  Secondary stress
 
-А́ Е́ И́ О́ У́ Ы́ Э́ Ю́ Я́   !!= * @CODE@
-
-
+А́ Е́ Ё́ И́ О́ У́ Ы́ Э́ Ю́ Я́   !!= * @CODE@
+А̀ Ѐ Ё̀ Ѝ О̀ У̀ Ы̀ Э̀ Ю̀ Я̀
 
 !! !!Markers
 
@@ -58,13 +57,13 @@ Multichar_Symbols
 +Pass             !!= * @CODE@ = Passive
 
 !! !!Nominal MSP
-+Msc +Fem +Neu +MscFem      !!= * @CODE@ = grammatical gender,  +MscFem = common gender
-+Sur +Pat +Alt      !!= * @CODE@ = Surname (фамилия), Patronymic, Other; used with proper nouns
-+Sg +Pl             !!= * @CODE@ = number
-+Nom +Acc +Gen      !!= * @CODE@ 
-+Ins +Dat +Loc      !!= * @CODE@ 
-+Loc2 +Gen2 +Voc    !!= * @CODE@ 
-+Inan +Anim         !!= * @CODE@ = animacy
++Msc +Fem +Neu +MscFem  !!= * @CODE@ = grammatical gender,  +MscFem = common gender
++Sur +Pat +Ant +Alt     !!= * @CODE@ = Surname (фамилия), Patronymic, Anthroponym/Given name, Other
++Sg +Pl                 !!= * @CODE@ = number
++Nom +Acc +Gen          !!= * @CODE@ 
++Ins +Dat +Loc          !!= * @CODE@ 
++Loc2 +Gen2 +Voc        !!= * @CODE@ 
++Inan +Anim             !!= * @CODE@ = animacy
 
 +Ord    !!= * @CODE@ 
 +Cmpar  !!= * @CODE@  

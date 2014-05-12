@@ -14,12 +14,10 @@ This is free and open source South Sámi morphology.
 
 !!Stressed vowels
 
- * а́ е́ и́ о́ у́ ы́ э́ ю́ я́ ё́     
- * а̀ ѐ ѝ о̀ у̀ ы̀ э̀ ю̀ я̀ ё̀      Secondary stress
+ * а́ е́ ё́ и́ о́ у́ ы́ э́ ю́ я́     
+ * а̀ ѐ ё̀ ѝ о̀ у̀ ы̀ э̀ ю̀ я̀      Secondary stress
 
- * А́ Е́ И́ О́ У́ Ы́ Э́ Ю́ Я́   
-
-
+ * А́ Е́ Ё́ И́ О́ У́ Ы́ Э́ Ю́ Я́   
 
 !!Markers
 
@@ -68,13 +66,13 @@ This is free and open source South Sámi morphology.
  * +Pass              = Passive
 
 !!Nominal MSP
- * +Msc +Fem +Neu +MscFem       = grammatical gender,  +MscFem = common gender
- * +Sur +Pat +Alt       = Surname (фамилия), Patronymic, Other; used with proper nouns
- * +Sg +Pl              = number
- * +Nom +Acc +Gen       
- * +Ins +Dat +Loc       
- * +Loc2 +Gen2 +Voc     
- * +Inan +Anim          = animacy
+ * +Msc +Fem +Neu +MscFem   = grammatical gender,  +MscFem = common gender
+ * +Sur +Pat +Ant +Alt      = Surname (фамилия), Patronymic, Anthroponym/Given name, Other
+ * +Sg +Pl                  = number
+ * +Nom +Acc +Gen           
+ * +Ins +Dat +Loc           
+ * +Loc2 +Gen2 +Voc         
+ * +Inan +Anim              = animacy
 
  * +Ord     
  * +Cmpar    

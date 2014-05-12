@@ -12,16 +12,16 @@ Tests:
 # Then: run analyser, then correct. 
 
   Noun - имя M anim : # Noun - full paradigm
-      имя+N+Neu+Sg+Nom: и́мя
-      имя+N+Neu+Sg+Acc: и́мя
-      имя+N+Neu+Sg+Gen: и́мени
-      имя+N+Neu+Sg+Loc: и́мени
-      имя+N+Neu+Sg+Dat: и́мени
-      имя+N+Neu+Sg+Ins: и́менем
-      имя+N+Neu+Pl+Nom: имена́
-      имя+N+Neu+Pl+Acc+Inan: имена́
-      имя+N+Neu+Pl+Gen: имён
-      имя+N+Neu+Pl+Loc: имена́х
-      имя+N+Neu+Pl+Dat: имена́м
-      имя+N+Neu+Pl+Ins: имена́ми
+      имя+N+Neu+Nom+Sg: и́мя
+      имя+N+Neu+Acc+Sg: и́мя
+      имя+N+Neu+Gen+Sg: и́мени
+      имя+N+Neu+Loc+Sg: и́мени
+      имя+N+Neu+Dat+Sg: и́мени
+      имя+N+Neu+Ins+Sg: и́менем
+      имя+N+Neu+Nom+Pl: имена́
+      имя+N+Neu+Acc+Pl+Inan: имена́
+      имя+N+Neu+Gen+Pl: имён
+      имя+N+Neu+Loc+Pl: имена́х
+      имя+N+Neu+Dat+Pl: имена́м
+      имя+N+Neu+Ins+Pl: имена́ми
 

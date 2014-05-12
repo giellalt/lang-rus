@@ -9,24 +9,52 @@ Alphabet
       %^Iu:ь %^Iu:й %^Iu:и   ! Imperative ending (unstressed)
       %^Is:й %^Is:и́ %^Is:0   ! Imperative ending (stressed)
 
+      А Б В Г Д Е Ё Ж З И Й К Л М Н О П Р С Т У Ф Х Ц Ч Ш Щ Ъ Ы Ь Э Ю Я
+      А́         Е́ Ё́     И́           О́         У́               Ы́   Э́ Ю́ Я́
+      А̀         Ѐ Ё̀     Ѝ           О̀         У̀               Ы̀   Э̀ Ю̀ Я̀
       а б в г д е ё ж з и й к л м н о п р с т у ф х ц ч ш щ ъ ы ь э ю я 
       а́         е́ ё́     и́           о́         у́               ы́   э́ ю́ я́   ! ё́ > ё in spellrelax?
       а̀         ѐ ё̀     ѝ           о̀         у̀               ы̀   э̀ ю̀ я̀ ;
 
 Sets
 
-Letter = а б в г д е ё ж з и й к л м н о п р с т у ф х ц ч ш щ ъ ы ь э ю я
+Letter = А Б В Г Д Е Ё Ж З И Й К Л М Н О П Р С Т У Ф Х Ц Ч Ш Щ Ъ Ы Ь Э Ю Я
+         А́         Е́ Ё́     И́           О́         У́               Ы́   Э́ Ю́ Я́
+         А̀         Ѐ Ё̀     Ѝ           О̀         У̀               Ы̀   Э̀ Ю̀ Я̀
+         а б в г д е ё ж з и й к л м н о п р с т у ф х ц ч ш щ ъ ы ь э ю я
          а́         е́ ё́     и́           о́         у́               ы́   э́ ю́ я́
          а̀         ѐ ё̀     ѝ           о̀         у̀               ы̀   э̀ ю̀ я̀ ;
-C = б в г д ж з й к л м н п р с т ф х ц ч ш щ ;
-CNoDT = б в г ж з й к л м н п р с ф х ц ч ш щ ;
-UnvoicedC = к п с т ф х ц ч ш щ ;
-HUSH = ж ш щ ч ;
-VEL = г к х ;
-PC = б в д з л м н п р с т ф ;
-PCNoN = б в д з л м п р с т ф ;
-V = а э о у ы я е ё ю и а́ е́ и́ о́ у́ ы́ э́ ю́ я́ ;
-StressedV = а́ е́ ё и́ о́ у́ ы́ э́ ю́ я́ ;
+! Consonants
+C = Б В Г Д Ж З Й К Л М Н П Р С Т Ф Х Ц Ч Ш Щ 
+    б в г д ж з й к л м н п р с т ф х ц ч ш щ ;
+! Consonants, excluding { Д д Т т }
+CNoDT = Б В Г Ж З Й К Л М Н П Р С Ф Х Ц Ч Ш Щ
+        б в г ж з й к л м н п р с ф х ц ч ш щ ;
+! Unvoiced consonants
+UnvoicedC = К П С Т Ф Х Ц Ч Ш Щ
+            к п с т ф х ц ч ш щ ;
+! Hushers
+HUSH = Ж Ш Щ Ч
+       ж ш щ ч ;
+! Velars
+VEL = Г К Х
+      г к х ;
+! Paired consonants (consonants that have both a hard and soft variant not predicted by the following vowel)
+PC = Б В Д З Л М Н П Р С Т Ф
+     б в д з л м н п р с т ф ;
+! Paired consonants, excluding { Н н }
+PCNoN = Б В Д З Л М П Р С Т Ф
+        б в д з л м п р с т ф ;
+! Vowels
+V = А Е Ё И О У Ы Э Ю Я
+    А́ Е́ Ё́ И́ О́ У́ Ы́ Э́ Ю́ Я́
+    А̀ Ѐ Ё̀ Ѝ О̀ У̀ Ы̀ Э̀ Ю̀ Я̀
+    а е ё и о у ы э ю я
+    а́ е́ ё́ и́ о́ у́ ы́ э́ ю́ я́ 
+    а̀ ѐ ё̀ ѝ о̀ у̀ ы̀ э̀ ю̀ я̀ ;
+! Stressed vowels
+StressedV = А́ Е́ Ё́ И́ О́ У́ Ы́ Э́ Ю́ Я́
+            а́ е́ ё и́ о́ у́ ы́ э́ ю́ я́ ;
 
 Definitions
 
@@ -69,19 +97,14 @@ Rules
 Vx:Vy <=> .#. C* _ \[ %>:0 ] $[ :StressedV ] ; ! First syllable of stem
           .#. [ [ Letter: | %^M:]* - [ :StressedV ] ] _ C+ (End) %>:0 :StressedV ; ! Last syllable of stem without shifting stress
           .#. C+ StressedV: (C+ [V - StressedV]) C+ _ C+ (End) %>:0 ~[ о́: в:0 ] ; ! Last syllable of stem with shifting stress
-          .#. Letter* _ [Letter | %^F:0 | %^M:0 ]* %<:0 $[:StressedV] ; ! Verbs (end-stressed)
-          .#. Letter* _ [Letter | %^F:0 | %^M:0 ]* :StressedV $%<:0 ;   ! Verbs (later-on-stem-stressed)
-where Vx in ( а́ э́ о́ у́ ы́ я́ ё ю́ и́ )
-      Vy in ( а э о у ы я е ю и )
+          .#. Letter* _ [Letter | %^F:0 | %^M: ]* %<:0 $[:StressedV] ; ! Verbs (end-stressed)
+          .#. Letter* _ [Letter | %^F:0 | %^M: ]* :StressedV $%<:0 ;   ! Verbs (later-on-stem-stressed)
+where Vx in ( а́ э́ о́ у́ ы́ я́ е́ ё ю́ и́ )
+      Vy in ( а э о у ы я е е ю и )
     matched ;
 
-"е́>е (1) if there is a stressed ending, (2) last syllable if the ending is not a GenPl zero, (3) comparative adjective ending after velar mutation"
-е́:е <=> .#. C* _ \[ %>:0 ] $[ :StressedV ] ; ! First syllable of stem
-        .#. [ Letter:* - [ :StressedV ] ] _ C+ (End) %>:0 :StressedV ; ! Last syllable of stem without shifting stress
-        .#. C+ StressedV: (C+ [V - StressedV]) C+ _ C+ (End) %>:0 \[ о́: ] \[в:0] ; ! Last syllable of stem with shifting stress
-        [ г: | к: | х: ] %>:0 _ [ е: | й: ] .#. ; ! After velar mutation with comparative adjectives
-        .#. Letter* _ [Letter | %^F:0 | %^M:0 ]* %<:0 $[:StressedV] ; ! Verbs (end-stressed)
-        .#. Letter* _ [Letter | %^F:0 | %^M:0 ]* :StressedV $%<:0 ;   ! Verbs (later-on-stem-stressed)
+"е́>е in comparative adjective ending after velar mutation"
+е́:е <=> [ г: | к: | х: ] %>:0 _ [ е: | й: ] .#. ; ! After velar mutation with comparative adjectives
 
 "V>0: Delete lexical vowel endings (o/о́ and е are covered in other rules), and delete most fleeting vowels with syllabic endings"
 Vx:0 <=> .#. [ Letter: | %^F:0 ]+ _ %>:0 ; 
@@ -182,29 +205,29 @@ where Vx in ( у у́ )
 
 "г>ж (1) with comparative(-ее)/superlative(-ейший) adjectives (2) with ^M symbol (verbs) (3) in pres/fut before е/ё"
 г:ж <=> _ %>:0 [ е | е́: ] [ е: | й: ] ( ш: V: Letter: (V:) ) .#. ;
-          _ %^M:0 ;
+          _ %^M: ;
           _ %<:0 [ е: | ё: ] ;
 
 "х>ш (1) with comparative(-ее)/superlative(-ейший) adjectives (2) with ^M symbol (verbs)"
 х:ш <=> _ %>:0 [ е | е́: ] [ е: | й: ] ( ш: V: Letter: (V:) ) .#. ;
-          _ %^M:0 ;
+          _ %^M: ;
 
 "к>ч Velar mutation (1) with comparative(-ее)/superlative(-ейший) adjectives (2) with ^M symbol (verbs) (as opposed to ск>щ) (3) in pres/fut before е/ё"
 к:ч <=> _ %>:0 [ е | е́: ] [ е: | й: ] ( ш: V: Letter: (V:) ) .#. ;
-        \с:0 _ %^M:0 ;
+        \с:0 _ %^M: ;
         _ %<:0 [ е: | ё: ] ;
 
 "т>ч (1) Pres/Fut mutation of т (as opposed to ст>щ); (2) гть/кть > 0чь"
-т:ч <=> \с: _ %^M:0 ;
+т:ч <=> \с: _ %^M: ;
         [ г:0 | к:0 ] %<:0 _ ь ( с я ) .#. ;
 
 "г/к>0 before infinitive ending: гть/кть > чь"
 Cx:0 <=> _ %<:0 т:ч ь ( с я ) .#. ;
 where Cx in ( г к ) ;
 
-"ё>е́ in some infinitives"
+"ё>е́ in some infinitives (чь and )"
 ё:е́ <=> _ [ г:0 | к:0 ] %<:0 т:ч ь ( с я ) .#. ;
-        _ [ б: | д: | с: | т: | [ с т: ] ] %<:0 т ь ( с я ) .#. ;
+        _ [ б:с | д:с | с | т:с | [ с т:с ] ] %<:0 т ь ( с я ) .#. ;
 
 "д/т>0 before past tense"
 Cx:0 <=> _ %<:0 л ( [ V ( с :ь ) | с [ :я | :я́ ] ] ) .#.  ;
@@ -215,14 +238,14 @@ Cx:с <=> _ %<:0 т ( [ и́ ( с :ь ) | ь ( с я ) ] ) .#.  ;
 where Cx in ( б д т ) ;
 
 "с>0 before т>щ and к>щ stem mutations"
-с:0 <=> _ [ к: | т: ] %^M:0 ;
+с:0 <=> _ [ к: | т: ] %^M: ;
 
 "с[ к т ]>щ Mutation of ск and ст"
-Cx:щ <=> с:0 _ %^M:0 ;
+Cx:щ <=> с:0 _ %^M: ;
 where Cx in ( к т ) ;
 
 "[ з с д ] > [ ж ш ж ] Verb stem mutations with ^M symbol (г к х covered in another rule)"
-Cx:Cy <=> _ %^M:0 ;
+Cx:Cy <=> _ %^M: ;
 where Cx in ( д з с )
       Cy in ( ж ж ш )
       matched ;
@@ -237,21 +260,21 @@ where Cx in ( д з с )
 %^Is:0 <=> й %<:0 _ (т е) (с [ :я | :ь ]) .#. ;
 
 "Is>и́ in imperatives with consonant stems"
-%^Is:и́ <=> [ C - й ] %<:0 _ (т е) (с [ :я | :ь ]) .#. ;
+%^Is:и́ <=> [ :C - :й ] (%^M:) %<:0 _ (т е) (с [ :я | :ь ]) .#. ;
 
 "Is/Iu>й in Imperatives with vowel stems"
 Ex:й <=> :V %<:0 _ (т е) (с [ :я | :ь ]) .#. ;
 where Ex in ( %^Iu %^Is ) ;
 
-"Iu>и in Imperatives with double-consonant stems, щ stems, and consonant stems with вы́- prefix"
+"Iu>и in Imperatives with double-consonant stems, and щ stems"
 %^Iu:и <=> :C (:ь) :C (%^M:0) %<:0 _ (т е) (с [ :я | :ь ]) .#. ;
-           .#. [ :Letter | %^F:0 ]* :в :ы́ [ :Letter | %^F:0 ]*-:V :C (%^M:0) %<:0 _ (т е) (с [ :я | :ь ]) .#. ;
            :щ (%^M:0) %<:0 _ (т е) (с [ :я | :ь ]) .#. ; !Is this true? Examples?
+!           .#. ( :п :о ) :в :ы́ [ :Letter | %^F:0 ]*-:V :C (%^M:0) %<:0 _ (т е) (с [ :я | :ь ]) .#. ; ! BROKEN
                 ! по́мн<I   вы́став<I   обры́скM<I  мо́рщ<I
                 ! по́мн0и   вы́став0и   обры́0щ00и  мо́рщ0и
 
 "Iu>ь in Imperatives with consonant stem (exceptions in previous rule)"
-%^Iu:ь <=> .#. ~[ :в :ы́ ]* :V [ :C - :щ ] (%^M:0) %<:0 _ (т е) (с [ :я | :ь ]) .#. ;
+%^Iu:ь <=> :V [ :C - :щ ] (%^M:0) %<:0 _ (т е) (с [ :я | :ь ]) .#. ;
                 ! отве́т<I
                 ! отве́т0ь
 

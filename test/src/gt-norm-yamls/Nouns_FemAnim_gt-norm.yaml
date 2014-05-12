@@ -12,16 +12,16 @@ Tests:
 # Then: run analyser, then correct. 
 
   Noun - жена M anim : # Noun - full paradigm
-      жена+N+Fem+Sg+Nom: жена́
-      жена+N+Fem+Sg+Acc: жену́
-      жена+N+Fem+Sg+Gen: жены́
-      жена+N+Fem+Sg+Loc: жене́
-      жена+N+Fem+Sg+Dat: жене́
-      жена+N+Fem+Sg+Ins: жено́й
-      жена+N+Fem+Pl+Nom: жёны
-      жена+N+Fem+Pl+Acc+Anim: жён
-      жена+N+Fem+Pl+Gen: жён
-      жена+N+Fem+Pl+Loc: жёнах
-      жена+N+Fem+Pl+Dat: жёнам
-      жена+N+Fem+Pl+Ins: жёнами
+      жена+N+Fem+Nom+Sg: жена́
+      жена+N+Fem+Acc+Sg: жену́
+      жена+N+Fem+Gen+Sg: жены́
+      жена+N+Fem+Loc+Sg: жене́
+      жена+N+Fem+Dat+Sg: жене́
+      жена+N+Fem+Ins+Sg: жено́й
+      жена+N+Fem+Nom+Pl: жёны
+      жена+N+Fem+Acc+Pl+Anim: жён
+      жена+N+Fem+Gen+Pl: жён
+      жена+N+Fem+Loc+Pl: жёнах
+      жена+N+Fem+Dat+Pl: жёнам
+      жена+N+Fem+Ins+Pl: жёнами
 

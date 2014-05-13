@@ -67,51 +67,75 @@ for f in $fsttype; do
 
 ###### Test non-comopunds: #######
 		# generate Neuter Singular:
-		sed 's/$/+N+Neu+Sg+Nom/' $lemmas | $lookuptool $generatorfile.$f \
+		sed 's/$/+N+Neu+Nom+Sg/' $lemmas | $lookuptool $generatorfile.$f \
 			| cut -f2  > $generatedlemmas.$f.tmp.txt
-		fgrep -v "+N+Sg" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
+		fgrep -v "+N+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
 			| sort -u  > $generatedlemmas.$f.txt
-		fgrep    "+N+Sg" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
+		fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
 			| sort -u  > $failedlemmas.$f.txt
 		# generate Masc Singular:
-		sed 's/$/+N+Msc+Sg+Nom/' $failedlemmas.$f.txt \
+		sed 's/$/+N+Msc+Nom+Sg/' $failedlemmas.$f.txt \
 			| $lookuptool $generatorfile.$f \
 			| cut -f2  > $generatedlemmas.$f.tmp.txt
-		fgrep -v "+N+Sg" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
+		fgrep -v "+N+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
 			| sort -u >> $generatedlemmas.$f.txt
-		fgrep    "+N+Sg" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
+		fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
 			| sort -u  > $failedlemmas.$f.txt
 		# generate Fem Singular:
-		sed 's/$/+N+Fem+Sg+Nom/' $failedlemmas.$f.txt \
+		sed 's/$/+N+Fem+Nom+Sg/' $failedlemmas.$f.txt \
 			| $lookuptool $generatorfile.$f \
 			| cut -f2  > $generatedlemmas.$f.tmp.txt
-		fgrep -v "+N+Sg" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
+		fgrep -v "+N+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
 			| sort -u >> $generatedlemmas.$f.txt
-		fgrep    "+N+Sg" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
+		fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
 			| sort -u  > $failedlemmas.$f.txt
 		# generate Neuter Plural:
-		sed 's/$/+N+Neu+Pl+Nom/' $failedlemmas.$f.txt \
+		sed 's/$/+N+Neu+Nom+Pl/' $failedlemmas.$f.txt \
 			| $lookuptool $generatorfile.$f \
 			| cut -f2  > $generatedlemmas.$f.tmp.txt
-		fgrep -v "+N+Sg" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
+		fgrep -v "+N+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
 			| sort -u >> $generatedlemmas.$f.txt
-		fgrep    "+N+Sg" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
+		fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
 			| sort -u  > $failedlemmas.$f.txt
 		# generate Masc Plural:
-		sed 's/$/+N+Msc+Pl+Nom/' $failedlemmas.$f.txt \
+		sed 's/$/+N+Msc+Nom+Pl/' $failedlemmas.$f.txt \
 			| $lookuptool $generatorfile.$f \
 			| cut -f2  > $generatedlemmas.$f.tmp.txt
-		fgrep -v "+N+Sg" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
+		fgrep -v "+N+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
 			| sort -u >> $generatedlemmas.$f.txt
-		fgrep    "+N+Sg" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
+		fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
 			| sort -u  > $failedlemmas.$f.txt
 		# generate Fem Plural:
-		sed 's/$/+N+Fem+Pl+Nom/' $failedlemmas.$f.txt \
+		sed 's/$/+N+Fem+Nom+Pl/' $failedlemmas.$f.txt \
 			| $lookuptool $generatorfile.$f \
 			| cut -f2  > $generatedlemmas.$f.tmp.txt
-		fgrep -v "+N+Sg" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
+		fgrep -v "+N+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
 			| sort -u >> $generatedlemmas.$f.txt
-		fgrep    "+N+Sg" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
+		fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
+			| sort -u  > $failedlemmas.$f.txt
+		# generate Proper Neuter Singular:
+		sed 's/$/+N+Prop+Neu+Nom+Sg/' $failedlemmas.$f.txt \
+			| $lookuptool $generatorfile.$f \
+			| cut -f2  > $generatedlemmas.$f.tmp.txt
+		fgrep -v "+N+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
+			| sort -u >> $generatedlemmas.$f.txt
+		fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
+			| sort -u  > $failedlemmas.$f.txt
+		# generate Proper Masc Singular:
+		sed 's/$/+N+Prop+Alt+Msc+Nom+Sg/' $failedlemmas.$f.txt \
+			| $lookuptool $generatorfile.$f \
+			| cut -f2  > $generatedlemmas.$f.tmp.txt
+		fgrep -v "+N+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
+			| sort -u >> $generatedlemmas.$f.txt
+		fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
+			| sort -u  > $failedlemmas.$f.txt
+		# generate Proper Fem Singular:
+		sed 's/$/+N+Prop+Fem+Nom+Sg/' $failedlemmas.$f.txt \
+			| $lookuptool $generatorfile.$f \
+			| cut -f2  > $generatedlemmas.$f.tmp.txt
+		fgrep -v "+N+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
+			| sort -u >> $generatedlemmas.$f.txt
+		fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
 			| sort -u  > $failedlemmas.$f.txt
 
 ###### Collect results: #######

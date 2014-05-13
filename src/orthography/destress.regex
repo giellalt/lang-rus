@@ -1,9 +1,7 @@
 # Remove Russian stress marks - they are not used except for ё
 [
-ё́  ->  ё, # As of now, these 4 symbols aren't in the FST, 
-Ё́  ->  Ё, # but quite possibly will be in the future
-ё̀  ->  ё, 
-Ё̀  ->  Ё 
+ё̀  ->  ё, # As of now, these symbols aren't in the FST, 
+Ё̀  ->  Ё  # but they will be soon
 ] .o. [
 ё (->) е, # Where there is a ё, accept e or ё
 Ё (->) Е  # Where there is a Ё, accept Е or Ё
@@ -15,6 +13,7 @@
 ы́  ->  ы, 
 я́  ->  я, 
 е́  ->  е, 
+ё́  ->  ё, # Used to mark where Russians are more likely to write ё instead of е (e.g. узнаёт)
 ю́  ->  ю, 
 и́  ->  и, 
 А́  ->  А, 
@@ -24,6 +23,7 @@
 Ы́  ->  Ы, 
 Я́  ->  Я, 
 Е́  ->  Е, 
+Ё́  ->  Ё, # Used to mark where Russians are more likely to write ё instead of е (e.g. узнаёт)
 Ю́  ->  Ю, 
 И́  ->  И  
 а̀  ->  а, # 2ndary stress marks

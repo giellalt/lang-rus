@@ -1,27 +1,49 @@
 # Remove Russian stress marks - they are not used except for ё
-
 [
-ё (->) е, # Russian stressed vowel, accept unstressed
-Ё (->) Е  # Russian stressed vowel, accept unstressed
+ё́  ->  ё, # As of now, these 4 symbols aren't in the FST, 
+Ё́  ->  Ё, # but quite possibly will be in the future
+ё̀  ->  ё, 
+Ё̀  ->  Ё 
+] .o. [
+ё (->) е, # Where there is a ё, accept e or ё
+Ё (->) Е  # Where there is a Ё, accept Е or Ё
 ] .o. [ 
-а́  ->  а, # Russian stressed vowel, accept unstressed
-э́  ->  э, # Russian stressed vowel, accept unstressed
-о́  ->  о, # Russian stressed vowel, accept unstressed
-у́  ->  у, # Russian stressed vowel, accept unstressed
-ы́  ->  ы, # Russian stressed vowel, accept unstressed
-я́  ->  я, # Russian stressed vowel, accept unstressed
-е́  ->  е, # Russian stressed vowel, accept unstressed
-ю́  ->  ю, # Russian stressed vowel, accept unstressed
-и́  ->  и, # Russian stressed vowel, accept unstressed
-А́  ->  А, # Russian stressed vowel, accept unstressed
-Э́  ->  Э, # Russian stressed vowel, accept unstressed
-О́  ->  О, # Russian stressed vowel, accept unstressed
-У́  ->  У, # Russian stressed vowel, accept unstressed
-Ы́  ->  Ы, # Russian stressed vowel, accept unstressed
-Я́  ->  Я, # Russian stressed vowel, accept unstressed
-Е́  ->  Е, # Russian stressed vowel, accept unstressed
-Ю́  ->  Ю, # Russian stressed vowel, accept unstressed
-И́  ->  И  # Russian stressed vowel, accept unstressed
+а́  ->  а, # Primary stress marks
+э́  ->  э, 
+о́  ->  о, 
+у́  ->  у, 
+ы́  ->  ы, 
+я́  ->  я, 
+е́  ->  е, 
+ю́  ->  ю, 
+и́  ->  и, 
+А́  ->  А, 
+Э́  ->  Э, 
+О́  ->  О, 
+У́  ->  У, 
+Ы́  ->  Ы, 
+Я́  ->  Я, 
+Е́  ->  Е, 
+Ю́  ->  Ю, 
+И́  ->  И  
+а̀  ->  а, # 2ndary stress marks
+э̀  ->  э, 
+о̀  ->  о, 
+у̀  ->  у, 
+ы̀  ->  ы, 
+я̀  ->  я, 
+ѐ  ->  е, 
+ю̀  ->  ю, 
+ѝ  ->  и, 
+А̀  ->  А, 
+Э̀  ->  Э, 
+О̀  ->  О, 
+У̀  ->  У, 
+Ы̀  ->  Ы, 
+Я̀  ->  Я, 
+Ѐ  ->  Е, 
+Ю̀  ->  Ю, 
+Ѝ  ->  И  
 ];
 
 # Explanation:

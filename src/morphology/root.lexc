@@ -58,12 +58,14 @@ Multichar_Symbols
 
 !! !!Nominal MSP
 +Msc +Fem +Neu +MscFem  !!= * @CODE@ = grammatical gender,  +MscFem = common gender
-+Sur +Pat +Ant +Alt     !!= * @CODE@ = Surname (фамилия), Patronymic, Anthroponym/Given name, Other
++Sem/Sur +Sem/Pat       !!= * @CODE@ = Surname (фамилия), Patronymic
++Sem/Ant +Sem/Alt       !!= * @CODE@ = Anthroponym/Given name, Other
 +Sg +Pl                 !!= * @CODE@ = number
 +Nom +Acc +Gen          !!= * @CODE@ 
 +Ins +Dat +Loc          !!= * @CODE@ 
 +Loc2 +Gen2 +Voc        !!= * @CODE@ 
 +Inan +Anim             !!= * @CODE@ = animacy
++PObj                   !!= * @CODE@ = Object of preposition (3rd person pronouns have epenthetic н)
 
 +Ord    !!= * @CODE@ 
 +Cmpar  !!= * @CODE@  

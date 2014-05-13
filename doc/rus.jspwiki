@@ -67,12 +67,14 @@ This is free and open source South Sámi morphology.
 
 !!Nominal MSP
  * +Msc +Fem +Neu +MscFem   = grammatical gender,  +MscFem = common gender
- * +Sur +Pat +Ant +Alt      = Surname (фамилия), Patronymic, Anthroponym/Given name, Other
+ * +Sem/Sur +Sem/Pat        = Surname (фамилия), Patronymic
+ * +Sem/Ant +Sem/Alt        = Anthroponym/Given name, Other
  * +Sg +Pl                  = number
  * +Nom +Acc +Gen           
  * +Ins +Dat +Loc           
  * +Loc2 +Gen2 +Voc         
  * +Inan +Anim              = animacy
+ * +PObj                    = Object of preposition (3rd person pronouns have epenthetic н)
 
  * +Ord     
  * +Cmpar    

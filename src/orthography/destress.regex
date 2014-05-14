@@ -1,13 +1,23 @@
 # Remove Russian stress marks - they are not used except for ё
+
+# Step one: convert custom ё symbols to normal orthographic ё's
 [
+ё́  ->  ё, # Could be used to mark where Russians are more likely to write ё instead of е (e.g. узнаёт)
+Ё́  ->  Ё, # Could be used to mark where Russians are more likely to write ё instead of е (e.g. узнаёт)
+          # However, this could also be achieved through postprocessing, http://python.anabar.ru/yo.htm
+          # For now, we simply treat them as normal ё's
 
-ё (->) е, # Where there is a ё, accept e or ё
-Ё (->) Е  # Where there is a Ё, accept Е or Ё
+ё̀  ->  ё, # 2ndary stress over ё. As of now, these symbols aren't in the FST, 
+Ё̀  ->  Ё # but they will be soon (трё̀хсо́тый).
 
+# Step two: compose with FST that makes the dots over ё's optional (both secondary and primary stress)
+] .o. [
+
+ё (->) е, # Where there is a ё, accept/generate e and ё
+Ё (->) Е  # Where there is a Ё, accept/generate Е and Ё
+
+# Step three: compose with FST that removes all other primary and secondary stress marks
 ] .o. [ 
-
-ё̀  ->  ё, # As of now, these symbols aren't in the FST, 
-Ё̀  ->  Ё, # but they will be soon
 
 а́  ->  а, # Primary stress marks
 э́  ->  э, 
@@ -16,7 +26,6 @@
 ы́  ->  ы, 
 я́  ->  я, 
 е́  ->  е, 
-ё́  ->  ё, # Used to mark where Russians are more likely to write ё instead of е (e.g. узнаёт)
 ю́  ->  ю, 
 и́  ->  и, 
 А́  ->  А, 
@@ -26,7 +35,6 @@
 Ы́  ->  Ы, 
 Я́  ->  Я, 
 Е́  ->  Е, 
-Ё́  ->  Ё, # Used to mark where Russians are more likely to write ё instead of е (e.g. узнаёт)
 Ю́  ->  Ю, 
 И́  ->  И,  
 
@@ -54,3 +62,7 @@
 # lexical side (->) input 
 # Or, in other words:
 # correct (->) in use out there
+
+# A short note about when to write the dots over ё in Standard Russian.
+# In short, for young children, and foreigners. In texts when the context cannot distinguish between possible pronunciations, i.e. to avoid mispronunciation. Should always be written in personal names.
+# In all other instances, the dots over ё are facultative, i.e. not obligatory. # Азбучная истина № 7. Употребление буквы ё обязательно в текстах с последовательно поставленными знаками ударения, в книгах для детей младшего возраста (в том числе учебниках для школьников младших классов), в учебниках для иностранцев. В обычных печатных текстах ё пишется в тех случаях, когда возможно неправильное прочтение слова, когда надо указать правильное произношение редкого слова или предупредить речевую ошибку. Букву ё следует также писать в собственных именах. В остальных случаях употребление ё факультативно, т. е. необязательно.

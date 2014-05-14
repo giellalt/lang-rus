@@ -99,6 +99,11 @@ LEXICON п_a_кф_м_затрудн.
 LEXICON п_a_кф_м_нет
 п_a— ;
 
+LEXICON п_2a1
++A:нь LF_stem ;
++A: SF1_a_soft ;
++A:нь SF_comp_stem ;
+
 LEXICON п_a1
 +A:н LF_stem ;
 +A: SF1_a ;
@@ -114,7 +119,7 @@ LEXICON п_a1_кф_м_затрудн.
 
 LEXICON п_a[1]
 +A:н LF_stem ;
-+A:н SF_a ;
++A:%^Fен SF_a ;
 +A: SF1_a_Fac ;
 +A:н SF_comp_stem ;
 
@@ -1019,6 +1024,12 @@ LEXICON SF1_a_Fac
 +Neu+Sg+Pred+Fac:н%>о # ;
 +Fem+Sg+Pred+Fac:н%>а # ;
 +Pl+Pred+Fac:н%>ы # ;
+
+LEXICON SF1_a_soft
++Msc+Sg+Pred:%>%^Z # ;
++Neu+Sg+Pred:нь%>о # ;
++Fem+Sg+Pred:нь%>а # ;
++Pl+Pred:нь%>ы # ;
 
 LEXICON SF1—_a
 +Msc+Sg+Pred+Prb:%>%^Z # ;

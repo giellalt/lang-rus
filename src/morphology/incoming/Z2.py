@@ -165,27 +165,27 @@ def Ffleeter (myinput,stress,confidence=1) :
             TheVowel = u"и"
         elif stress == "stressed" :
             TheVowel = u"е́"
-    elif ( myinput['lexeme'][Findex-1] == u"ь" or myinput['lexeme'][Findex-1] == u"й" ) and myinput['lexeme'][Findex+1] == u"ц" :
+    elif ( myinput['lexeme'][Findex-3] == u"ь" or myinput['lexeme'][Findex-3] == u"й" ) and myinput['lexeme'][Findex+1] == u"ц" :
         if stress == "unstressed" :
             TheVowel = u"е"
         elif stress == "stressed" :
             TheVowel = u"е́"
-    elif ( myinput['lexeme'][Findex-1] == u"ь" or myinput['lexeme'][Findex-1] == u"й" ) and myinput['lexeme'][Findex+1] != u"ц" :
+    elif ( myinput['lexeme'][Findex-3] == u"ь" or myinput['lexeme'][Findex-3] == u"й" ) and myinput['lexeme'][Findex+1] != u"ц" :
         if stress == "unstressed" :
             TheVowel = u"е"
         elif stress == "stressed" :
             TheVowel = u"ё"
-    elif myinput['lexeme'][Findex-1] == u"к" or myinput['lexeme'][Findex-1] == u"г" or myinput['lexeme'][Findex-1] == u"х" :
+    elif myinput['lexeme'][Findex-3] in u"гкх" :
         if stress == "unstressed" :
             TheVowel = u"о"
         elif stress == "stressed" :
             TheVowel = u"о́"
-    elif myinput['lexeme'][Findex-1] == u"ж" or myinput['lexeme'][Findex-1] == u"ш" or myinput['lexeme'][Findex-1] == u"щ" or myinput['lexeme'][Findex-1] == u"ч" or myinput['lexeme'][Findex-1] == u"ц":
+    elif myinput['lexeme'][Findex-3] in u"жшщчц" :
         if stress == "unstressed" :
             TheVowel = u"е"
         elif stress == "stressed" :
             TheVowel = u"о́"
-    elif myinput['lexeme'][Findex+1] == u"к" or myinput['lexeme'][Findex+1] == u"г" or myinput['lexeme'][Findex+1] == u"х" :
+    elif myinput['lexeme'][Findex+1] in u"гкх" :
         if stress == "unstressed" :
             TheVowel = u"о"
         elif stress == "stressed" :
@@ -276,7 +276,7 @@ def A_stemmer ( myinput ) : # generates lexical stem for adjectives (including s
         if AFchecker > 0 :
             myinput = add_stress (myinput)
         instem = list(myinput['lexeme'])
-        if u'<мс ' in myinput['paradigm'] or myinput['lemma'][-1] != u'й' :
+        if u'<мс ' in myinput['paradigm'] or myinput['lemma'][-1] != u'й' or myinput['lexeme'][-2:] == u'нь':
             instem.insert(len(instem)-2,u"%^F")
         else :
             instem.insert(len(instem)-1,u"%^F")
@@ -343,6 +343,21 @@ def add_stress ( myinput ) : # adds stress index for the last syllable of the st
             myinput['stress1'].append(myinput['PotentialStressPositions'][-1])
             myinput['stress1'].sort()
             myinput['PotentialStressPositions'] = myinput['PotentialStressPositions'][:-1]
+    return myinput
+
+def add_stress_directly ( myinput ) : # adds stress index for the last syllable of the stem
+    if len([i for i in myinput['VowelPositions'] if i < len(myinput['lexeme'])]) > 0 :
+        stressPosition = max([i for i in myinput['VowelPositions'] if i < len(myinput['lexeme'])])
+        if myinput['lexeme'][stressPosition-1] not in u'бвгджзйклмнпрстфхцчшщ' :
+            myinput['lexeme'] = myinput['lexeme'][:stressPosition] + u'\u0301' + myinput['lexeme'][stressPosition:]
+        else :
+            stressPosition += 1
+            if myinput['lexeme'][stressPosition-1] not in u'бвгджзйклмнпрстфхцчшщ' :
+                myinput['lexeme'] = myinput['lexeme'][:stressPosition] + u'\u0301' + myinput['lexeme'][stressPosition:]
+            else :
+                print 'ASD error: stress over cons.',myinput['lemma'],myinput['lexeme']
+    else :
+        print 'ASD error:',myinput['lemma'],myinput['lexeme']
     return myinput
 
 def V_add_suffix_to_code ( myinput , mylength ) : # adds suffix to paradigm code (e.g. ать, а́ть, еть, е́ть, etc.)
@@ -591,9 +606,10 @@ def CodeCleaner ( myinput ) :
         myinput[codefields] = myinput[codefields].strip()
         for old , new in [(u':',u''),(u';',u''),(u'%tr%',u''),(u'%[x]%',u'?'),(u'%x%',u's'),
                         (u'%1%',u'1'),(u'%2%',u'2'),(u'%3%',u'3'),(u'%4%',u'4'),(u'%5%',u'5'),
-                        (u'%6%',u'6'),(u'%7%',u'7'),(u'%8%',u'8'),(u'%9%',u'9'),(u' § 7',u'x'),
-                        (u'§ 8',u''),(u'§ 9',u''),(u' § 10',u'x'),(u' § 11',u'x'),(u'§ 12',u''),
-                        (u'§ ',u''),(u'  ',u' '),(u'   ',u' '),(u'    ',u' '),(u'<',u'['),(u'>',u']')] :
+                        (u'%6%',u'6'),(u'%7%',u'7'),(u'%8%',u'8'),(u'%9%',u'9'),(u' § 7',u's'),
+                        (u'§ 8',u''),(u'§ 9',u''),(u' § 10',u's'),(u' § 11',u's'),(u'§ 12',u''),
+                        (u'§ ',u''),(u'  ',u' '),(u'   ',u' '),(u'    ',u' '),
+                        (u'<',u'['),(u'>',u']'),(u'(на)',u''),(u'(в)',u'')] :
             myinput[codefields] = myinput[codefields].replace(old,new)
         if myinput[codefields] == u' ' :
             myinput[codefields] = u''
@@ -655,6 +671,18 @@ def expand_variation_paradigm ( myinput ) :
 def DeNumber ( lemmaname ) : # remove leading numbers from lemma, e.g. 2есть > есть
     if lemmaname[0] in u'0123456789-' :
         return DeNumber(lemmaname[1:])
+    else :
+        return lemmaname
+
+def ReNumber ( lemmaname ) : # move leading numbers to end of lemma, e.g. 2есть > есть²
+    myindex = 0
+    while lemmaname[myindex] in u'0123456789-' :
+        myindex += 1
+    if myindex == 0 :
+        return lemmaname
+    elif myindex > 0 :
+        lemmaname = lemmaname[myindex:] + lemmaname[:myindex].replace(u'1',u'¹').replace(u'2',u'²').replace(u'3',u'³').replace(u'4',u'⁴').replace(u'5',u'⁵').replace(u'6',u'⁶').replace(u'7',u'⁷').replace(u'8',u'⁸').replace(u'9',u'⁹').replace(u'0',u'⁰').replace(u'-',u'⁻')
+        return lemmaname
     else :
         return lemmaname
 
@@ -762,6 +790,7 @@ for n in range(len(Zlist)) : # Parse each line and the put entries in one of the
     for n in range(len(myColumns)) :
         entryDict[myColumns[n]] = thisLine[n].strip()
 
+    entryDict['OrigZCode'] = entryDict['source'] + u': ' + entryDict['paradigm'] + u' ' + entryDict['paradigm_details']
     entryDict['VowelPositions'] = [m.start()+1 for m in Vowel.finditer(entryDict['lexeme'])]
     entryDict['stress2'] = [ i for i in entryDict['stress2'].split(u"/") ]
     if entryDict['stress2'] == [''] :
@@ -774,18 +803,18 @@ for n in range(len(Zlist)) : # Parse each line and the put entries in one of the
     entryDict['PotentialStressPositions'] = sorted(list(set(entryDict['VowelPositions']) - set(entryDict['stress1']) - set(entryDict['stress2'])))
     if entryDict['lemma'] == "" :
         entryDict['lemma'] = entryDict['lexeme'] # if lemma is empty, copy lexeme
-#    if entryDict['pos'] == "" :
-#        entryDict['pos'] = u"_"
-#    if entryDict['paradigm'] == "" :
-#        entryDict['paradigm'] = u""
+    if entryDict['source'] == u'ZProp' : #capitalize the lexeme
+        entryDict['lexeme'] = DeNumber (entryDict['lemma'])
     if u'ё' in entryDict['lemma'] and u'ё' not in entryDict['lexeme'] : # if the lemma has a ё and lexeme doesn't, switch them
-        if DeNumber(entryDict['lemma']).replace(u'ё',u'е') == entryDict['lexeme'] :
-            entryDict['lexeme'] = DeNumber(entryDict['lemma']).replace(u'ё',u'е')
+        if DeNumber(entryDict['lemma']).replace(u'ё',u'е').lower() == entryDict['lexeme'] :
+            entryDict['lexeme'] = DeNumber(entryDict['lemma']).replace(u'ё',u'е').lower()
         else :
             print entryDict['lemma'] , entryDict['lexeme']
     entryDict['lemma'] = entryDict['lemma'].replace(u'ё',u'е') # remove ё from all lemmas
     if u', ё' in entryDict['paradigm'] and u'св' not in entryDict['pos'] : # non-verbs with ', ё' in Z's code
         entryDict['lexeme'] , entryDict['paradigm'] = Yoer ( entryDict ) # put ё into lexeme of nominals
+    entryDict['lemma'] = entryDict['lemma'].replace(u' ',u'% ') # escape spaces in lemmas
+    entryDict['lexeme'] = entryDict['lexeme'].replace(u' ',u'% ') # escape spaces in lexeme
     if entryDict['FV'] != u'' :
         entryDict['paradigm_details'] = u''
 
@@ -821,76 +850,76 @@ A_LEXICA = set([ i.split()[1] for i in A_lexc_paradigms if u'LEXICON' in i ])
 N_lexc_paradigms = codecs.open ( "../affixes/nouns.lexc" , mode='r' , encoding='utf-8' )
 N_LEXICA = set([ i.split()[1] for i in N_lexc_paradigms if u'LEXICON' in i ])
 
-with codecs.open ( "../stems/verbs.lexc" , mode='w' , encoding='utf-8' ) as Vfile :
-    print "Preparing verbs.lexc ...",
-    newVdict = {}
-    for code in Vdict :
-        for entry in Vdict[code] :
-            entry = V_stemmer(entry)
-            if entry['lexc_stem'] != u'' : 
-                entry['lexeme'] = entry['lexc_stem']
-            elif u'*' in entry['paradigm'] :
-                entry = V_star(entry)
-            if entry['lemma'][-2] == u"с" :
-                entry['paradigm'] += u" R"
+# with codecs.open ( "verbs.lexc" , mode='w' , encoding='utf-8' ) as Vfile :
+#     print "Preparing verbs.lexc ...",
+#     newVdict = {}
+#     for code in Vdict :
+#         for entry in Vdict[code] :
+#             entry = V_stemmer(entry)
+#             if entry['lexc_stem'] != u'' : 
+#                 entry['lexeme'] = entry['lexc_stem']
+#             elif u'*' in entry['paradigm'] :
+#                 entry = V_star(entry)
+#             if entry['lemma'][-2] == u"с" :
+#                 entry['paradigm'] += u" R"
 
-            # Reduce combined length of produced LEXICON name to 56 characters (maximum for xfst compiler)
-            if len(entry['pos'] + u' ' + entry['paradigm'] + u' ' + entry['paradigm_details']) > 56 :
-                entry['paradigm_details'] = entry['paradigm_details'][:(56-len(entry['pos'] + u' ' + entry['paradigm'] + u' '))]
-            lexicon = entry['pos'] + u' ' + entry['paradigm'] + u' ' + entry['paradigm_details']
-            lexicon = lexicon.strip()
-            while u'  ' in lexicon :
-                lexicon = lexicon.replace(u'  ',u' ')
-            if lexicon in newVdict :
-                newVdict[lexicon].append(entry)
-            else :
-                newVdict[lexicon] = [entry]
-    print len(newVdict),'categories in verbs.lexc ...',
-    print "writing verbs.lexc ...",
-    Vcatslist = []
-    Vfile.write( lexc_header )
-    Vfile.write( u'LEXICON Verb\n' )
-    for each_code in sorted ( newVdict, reverse=False ) : # for each grammar code in the verb dictionary
-        Vcatslist.append([len(newVdict[each_code]),each_code,newVdict[each_code][0]['lemma'],newVdict[each_code][0]['lexeme'],])
-        code_header = u'! '+'='*60 + u'  Types in Zaliznjak: ' + str(len(newVdict[each_code])) + u'\n!' + u' '*35 + each_code.replace(u" ",u"_") + u'\n'
-        Vfile.write(code_header)
-        #Vfile.write(u'! THIS CATEGORY UNVERIFIED (delete this line when the computer-generated code has been verified by hand)\n')
-        for each_lemma in sorted ( newVdict[each_code] , key=lambda x: x['lemma'][::-1]) :
-            if each_lemma['skip'] == u'1' or each_code.replace(" ","_") not in V_LEXICA :
-                skipper = u"! "
-            elif len(newVdict[each_code]) < 30 and each_code.replace(" ","_") not in V_LEXICA :
-                skipper = u"! "
-            else : skipper = u""
-            if each_lemma['do_not_skip'] == u'1' :
-                skipper = u""
-            entry = skipper + each_lemma['lemma'] + u":" + each_lemma['lexeme'] + u" " + each_code.replace(" ","_") + u" ;"
-            #entry += u' '*(50-len(entry)) + u"\t! " + each_lemma['pos'] + u' ' + each_lemma['paradigm'] + u' ' + each_lemma['paradigm_details']
-            entry += u'\n'
-            Vfile.write(entry)
-    Vcatsfile_freq = codecs.open ( "verb_cats_freq.txt" , mode='w' , encoding='utf-8' )
-    Vcats_counter = 0.0
-    V_total = sum(i for i,j,k,l in Vcatslist)
-    for i,j,k,l in sorted (Vcatslist,key=lambda x : x[0],reverse=True) :
-        if j.replace(" ","_") in V_LEXICA :
-            h = u''
-        else :
-            h = u'*****'
-        Vcats_counter += i
-        Vcatsfile_freq.write(h+str(i)+'\t\t'+'{:.2%}'.format(Vcats_counter/V_total)+'\t\t'+j.replace(' ','_')+'\t\t'+k+'\t\t'+l+"\n")
-    Vcatsfile_freq.close()    
-    Vcatsfile_alph = codecs.open ( "verb_cats_alph.txt" , mode='w' , encoding='utf-8' )
-    Vcats_counter = 0.0
-    V_total = sum(i for i,j,k,l in Vcatslist)
-    for i,j,k,l in sorted (Vcatslist,key=lambda x : ' '.join(x[1].split()[1:]).replace(' ','_'),reverse=False) :
-        if j.replace(" ","_") in V_LEXICA :
-            h = u''
-        else :
-            h = u'*****'
-        if i > 2 :
-            Vcats_counter += i
-            Vcatsfile_alph.write(h+str(i)+'\t\t'+'{:.2%}'.format(Vcats_counter/V_total)+'\t\t'+j.replace(' ','_')+'\t\t'+k+'\t\t'+l+"\n")
-    Vcatsfile_alph.close()
-    print "verbs.lexc done!"
+#             # Reduce combined length of produced LEXICON name to 56 characters (maximum for xfst compiler)
+#             if len(entry['pos'] + u' ' + entry['paradigm'] + u' ' + entry['paradigm_details']) > 56 :
+#                 entry['paradigm_details'] = entry['paradigm_details'][:(56-len(entry['pos'] + u' ' + entry['paradigm'] + u' '))]
+#             lexicon = entry['pos'] + u' ' + entry['paradigm'] + u' ' + entry['paradigm_details']
+#             lexicon = lexicon.strip()
+#             while u'  ' in lexicon :
+#                 lexicon = lexicon.replace(u'  ',u' ')
+#             if lexicon in newVdict :
+#                 newVdict[lexicon].append(entry)
+#             else :
+#                 newVdict[lexicon] = [entry]
+#     print len(newVdict),'categories in verbs.lexc ...',
+#     print "writing verbs.lexc ...",
+#     Vcatslist = []
+#     Vfile.write( lexc_header )
+#     Vfile.write( u'LEXICON Verb\n' )
+#     for each_code in sorted ( newVdict, reverse=False ) : # for each grammar code in the verb dictionary
+#         Vcatslist.append([len(newVdict[each_code]),each_code,newVdict[each_code][0]['lemma'],newVdict[each_code][0]['lexeme'],])
+#         code_header = u'! '+'='*60 + u'  Types in Zaliznjak: ' + str(len(newVdict[each_code])) + u'\n!' + u' '*35 + each_code.replace(u" ",u"_") + u'\n'
+#         Vfile.write(code_header)
+#         #Vfile.write(u'! THIS CATEGORY UNVERIFIED (delete this line when the computer-generated code has been verified by hand)\n')
+#         for each_lemma in sorted ( newVdict[each_code] , key=lambda x: x['lemma'][::-1]) :
+#             if each_lemma['skip'] == u'1' or each_code.replace(" ","_") not in V_LEXICA :
+#                 skipper = u"! "
+#             elif len(newVdict[each_code]) < 30 and each_code.replace(" ","_") not in V_LEXICA :
+#                 skipper = u"! "
+#             else : skipper = u""
+#             if each_lemma['do_not_skip'] == u'1' :
+#                 skipper = u""
+#             entry = skipper + ReNumber(each_lemma['lemma']) + u":" + each_lemma['lexeme'] + u" " + each_code.replace(" ","_") + u" ;"
+#             #entry += u' '*(50-len(entry)) + u"\t! " + each_lemma['pos'] + u' ' + each_lemma['paradigm'] + u' ' + each_lemma['paradigm_details']
+#             entry += u'\n'
+#             Vfile.write(entry)
+#     Vcatsfile_freq = codecs.open ( "verb_cats_freq.txt" , mode='w' , encoding='utf-8' )
+#     Vcats_counter = 0.0
+#     V_total = sum(i for i,j,k,l in Vcatslist)
+#     for i,j,k,l in sorted (Vcatslist,key=lambda x : x[0],reverse=True) :
+#         if j.replace(" ","_") in V_LEXICA :
+#             h = u''
+#         else :
+#             h = u'**'
+#         Vcats_counter += i
+#         Vcatsfile_freq.write(h+str(i)+'\t\t'+'{:.2%}'.format(Vcats_counter/V_total)+'\t\t'+j.replace(' ','_')+'\t\t'+k+'\t\t'+l+"\n")
+#     Vcatsfile_freq.close()    
+#     Vcatsfile_alph = codecs.open ( "verb_cats_alph.txt" , mode='w' , encoding='utf-8' )
+#     Vcats_counter = 0.0
+#     V_total = sum(i for i,j,k,l in Vcatslist)
+#     for i,j,k,l in sorted (Vcatslist,key=lambda x : ' '.join(x[1].split()[1:]).replace(' ','_'),reverse=False) :
+#         if j.replace(" ","_") in V_LEXICA :
+#             h = u''
+#         else :
+#             h = u'**'
+#         if i > 2 :
+#             Vcats_counter += i
+#             Vcatsfile_alph.write(h+str(i)+'\t\t'+'{:.2%}'.format(Vcats_counter/V_total)+'\t\t'+j.replace(' ','_')+'\t\t'+k+'\t\t'+l+"\n")
+#     Vcatsfile_alph.close()
+#     print "verbs.lexc done!"
 
 # for d , f , l in [ (Advdict,"adverbs.lexc",u"Adverb") , (Cdict,"conjunctions.lexc",u"Conjunction") , (Idict,"interjections.lexc",u"Interjection") , 
 #                (Pdict,"prepositions.lexc",u"Preposition") , (Prodict,"pronouns.lexc",u"Pronoun") , (Sdict,"subjunctions.lexc",u"Subjunction") , 
@@ -917,80 +946,82 @@ with codecs.open ( "../stems/verbs.lexc" , mode='w' , encoding='utf-8' ) as Vfil
 #                 Myfile.write(entry)
 #     print "Done!"
 
-with codecs.open ( "adjectives.lexc" , mode='w' , encoding='utf-8' ) as Afile :
-    print "Preparing adjectives.lexc ...",
-    newAdict = {}
-    for code in Adict :
-        for entry in Adict[code] :
-            entry = A_stemmer(entry)
-            if u'<мс' not in entry['paradigm'] :
-                entry['paradigm'] = re.sub( "[1-7]" , "" , entry['paradigm'] , count = 1 )
-            else : # if it is a pronoun declension
-                if entry['lemma'][-2] == u'́' :
-                    entry['paradigm'] += entry['lemma'][-3:]
-                else :
-                    entry['paradigm'] += entry['lemma'][-2:]
-            entry = CodeCleaner(entry)
-            if entry['lexc_stem'] != u'' :
-                entry['lexeme'] = entry['lexc_stem']
+# with codecs.open ( "adjectives.lexc" , mode='w' , encoding='utf-8' ) as Afile :
+#     print "Preparing adjectives.lexc ...",
+#     newAdict = {}
+#     for code in Adict :
+#         for entry in Adict[code] :
+#             entry = A_stemmer(entry)
+#             if u'́' not in entry['lexeme'] and u'ё' not in entry['lexeme'] and entry['lexeme'] != u'' :
+#                 entry = add_stress_directly( entry )
+#             if u'<мс' not in entry['paradigm'] :
+#                 entry['paradigm'] = re.sub( "[1-7]" , "" , entry['paradigm'] , count = 1 )
+#             else : # if it is a pronoun declension
+#                 if entry['lemma'][-2] == u'́' :
+#                     entry['paradigm'] += entry['lemma'][-3:]
+#                 else :
+#                     entry['paradigm'] += entry['lemma'][-2:]
+#             entry = CodeCleaner(entry)
+#             if entry['lexc_stem'] != u'' :
+#                 entry['lexeme'] = entry['lexc_stem']
 
-            # Reduce combined length of produced LEXICON name to 56 characters (maximum for xfst compiler)
-            if len(entry['pos'] + u' ' + entry['paradigm'] + u' ' + entry['paradigm_details']) > 56 :
-                entry['paradigm_details'] = entry['paradigm_details'][:(56-len(entry['pos'] + u' ' + entry['paradigm'] + u' '))]
-            lexicon = entry['pos'] + u' ' + entry['paradigm'] + u' ' + entry['paradigm_details']
-            lexicon = lexicon.strip()
-            while u'  ' in lexicon :
-                lexicon = lexicon.replace(u'  ',u' ')
-            if lexicon in newAdict :
-                newAdict[lexicon].append(entry)
-            else :
-                newAdict[lexicon] = [entry]
-    print len(newAdict),'categories in adjectives.lexc ...',
-    print "writing adjectives.lexc ...",
-    Acatslist = []
-    Afile.write( lexc_header )
-    Afile.write( u"! DON'T FORGET THAT ....\n ! adjectives 2*a ~Fений have masc short-form in 0, not ь\n! DON'T FORGET!!\n\n")
-    Afile.write( u'LEXICON Adjective\n' )
-    for each_code in sorted ( newAdict, reverse=False ) : # for each grammar code in the verb dictionary
-        Acatslist.append([len(newAdict[each_code]),each_code,newAdict[each_code][0]['lemma'],newAdict[each_code][0]['lexeme'],])
-        code_header = u'! '+'='*60 + u'  Types in Zaliznjak: ' + str(len(newAdict[each_code])) + u'\n!' + u' '*35 + each_code.replace(u" ",u"_") + u'\n'
-        Afile.write(code_header)
-        #Afile.write(u'! THIS CATEGORY UNVERIFIED (delete this line when the computer-generated code has been verified by hand)\n')
-        for each_lemma in sorted ( newAdict[each_code] , key=lambda x: x['lemma'][::-1]) :
-            if each_lemma['skip'] == u'1' or each_code.replace(" ","_") not in A_LEXICA :
-                skipper = u"! "
-            elif len(newAdict[each_code]) < 30 and each_code.replace(" ","_") not in A_LEXICA :
-                skipper = u"! "
-            else : skipper = u""
-            if each_lemma['do_not_skip'] == u'1' :
-                skipper = u""
-            entry = skipper + each_lemma['lemma'] + u":" + each_lemma['lexeme'] + u" " + each_code.replace(" ","_") + u" ;"
-            #entry += u' '*(50-len(entry)) + u"\t! " + each_lemma['pos'] + u' ' + each_lemma['paradigm'] + u' ' + each_lemma['paradigm_details']
-            entry += u'\n'
-            Afile.write(entry)
-    Acatsfile_freq = codecs.open ( "adj_cats_freq.txt" , mode='w' , encoding='utf-8' )
-    Acats_counter = 0.0
-    A_total = sum(i for i,j,k,l in Acatslist)
-    for i,j,k,l in sorted (Acatslist,key=lambda x : x[0],reverse=True) :
-        if j.replace(" ","_") in A_LEXICA :
-            h = u''
-        else :
-            h = u'*****'
-        Acats_counter += i
-        Acatsfile_freq.write(h+str(i)+'\t\t'+'{:.2%}'.format(Acats_counter/A_total)+'\t\t'+j.replace(' ','_')+'\t\t'+k+'\t\t'+l+"\n")
-    Acatsfile_freq.close()    
-    Acatsfile_alph = codecs.open ( "adj_cats_alph.txt" , mode='w' , encoding='utf-8' )
-    Acats_counter = 0.0
-    A_total = sum(i for i,j,k,l in Acatslist)
-    for i,j,k,l in sorted (Acatslist,key=lambda x : ' '.join(x[1].split()[1:]).replace(' ','_'),reverse=False) :
-        if j.replace(" ","_") in A_LEXICA :
-            h = u''
-        else :
-            h = u'*****'
-        Acats_counter += i
-        Acatsfile_alph.write(h+str(i)+'\t\t'+'{:.2%}'.format(Acats_counter/A_total)+'\t\t'+j.replace(' ','_')+'\t\t'+k+'\t\t'+l+"\n")
-    Acatsfile_alph.close()
-    print "adjectives.lexc done!"
+#             # Reduce combined length of produced LEXICON name to 56 characters (maximum for xfst compiler)
+#             if len(entry['pos'] + u' ' + entry['paradigm'] + u' ' + entry['paradigm_details']) > 56 :
+#                 entry['paradigm_details'] = entry['paradigm_details'][:(56-len(entry['pos'] + u' ' + entry['paradigm'] + u' '))]
+#             lexicon = entry['pos'] + u' ' + entry['paradigm'] + u' ' + entry['paradigm_details']
+#             lexicon = lexicon.strip()
+#             while u'  ' in lexicon :
+#                 lexicon = lexicon.replace(u'  ',u' ')
+#             if lexicon in newAdict :
+#                 newAdict[lexicon].append(entry)
+#             else :
+#                 newAdict[lexicon] = [entry]
+#     print len(newAdict),'categories in adjectives.lexc ...',
+#     print "writing adjectives.lexc ...",
+#     Acatslist = []
+#     Afile.write( lexc_header )
+#     Afile.write( u"! DON'T FORGET THAT ....\n ! adjectives 2*a ~Fений have masc short-form in 0, not ь\n! DON'T FORGET!!\n\n")
+#     Afile.write( u'LEXICON Adjective\n' )
+#     for each_code in sorted ( newAdict, reverse=False ) : # for each grammar code in the verb dictionary
+#         Acatslist.append([len(newAdict[each_code]),each_code,newAdict[each_code][0]['lemma'],newAdict[each_code][0]['lexeme'],])
+#         code_header = u'! '+'='*60 + u'  Types in Zaliznjak: ' + str(len(newAdict[each_code])) + u'\n!' + u' '*35 + each_code.replace(u" ",u"_") + u'\n'
+#         Afile.write(code_header)
+#         #Afile.write(u'! THIS CATEGORY UNVERIFIED (delete this line when the computer-generated code has been verified by hand)\n')
+#         for each_lemma in sorted ( newAdict[each_code] , key=lambda x: x['lemma'][::-1]) :
+#             if each_lemma['skip'] == u'1' or each_code.replace(" ","_") not in A_LEXICA :
+#                 skipper = u"! "
+#             elif len(newAdict[each_code]) < 30 and each_code.replace(" ","_") not in A_LEXICA :
+#                 skipper = u"! "
+#             else : skipper = u""
+#             if each_lemma['do_not_skip'] == u'1' :
+#                 skipper = u""
+#             entry = skipper + ReNumber(each_lemma['lemma']) + u":" + each_lemma['lexeme'] + u" " + each_code.replace(" ","_") + u" ;"
+#             entry += u' '*(50-len(entry)) + u"\t! " + each_lemma['OrigZCode']
+#             entry += u'\n'
+#             Afile.write(entry)
+#     Acatsfile_freq = codecs.open ( "adj_cats_freq.txt" , mode='w' , encoding='utf-8' )
+#     Acats_counter = 0.0
+#     A_total = sum(i for i,j,k,l in Acatslist)
+#     for i,j,k,l in sorted (Acatslist,key=lambda x : x[0],reverse=True) :
+#         if j.replace(" ","_") in A_LEXICA :
+#             h = u''
+#         else :
+#             h = u'**'
+#         Acats_counter += i
+#         Acatsfile_freq.write(h+str(i)+'\t\t'+'{:.2%}'.format(Acats_counter/A_total)+'\t\t'+j.replace(' ','_')+'\t\t'+k+'\t\t'+l+"\n")
+#     Acatsfile_freq.close()    
+#     Acatsfile_alph = codecs.open ( "adj_cats_alph.txt" , mode='w' , encoding='utf-8' )
+#     Acats_counter = 0.0
+#     A_total = sum(i for i,j,k,l in Acatslist)
+#     for i,j,k,l in sorted (Acatslist,key=lambda x : ' '.join(x[1].split()[1:]).replace(' ','_'),reverse=False) :
+#         if j.replace(" ","_") in A_LEXICA :
+#             h = u''
+#         else :
+#             h = u'**'
+#         Acats_counter += i
+#         Acatsfile_alph.write(h+str(i)+'\t\t'+'{:.2%}'.format(Acats_counter/A_total)+'\t\t'+j.replace(' ','_')+'\t\t'+k+'\t\t'+l+"\n")
+#     Acatsfile_alph.close()
+#     print "adjectives.lexc done!"
 
 with codecs.open ( "nouns.lexc" , mode='w' , encoding='utf-8' ) as Nfile :
     print "Preparing nouns.lexc ...",
@@ -1032,7 +1063,7 @@ with codecs.open ( "nouns.lexc" , mode='w' , encoding='utf-8' ) as Nfile :
             else : skipper = u""
             if each_lemma['do_not_skip'] == u'1' :
                 skipper = u""
-            entry = skipper + each_lemma['lemma'] + u":" + each_lemma['lexeme'] + u" " + each_code.replace(" ","_") + u" ;"
+            entry = skipper + ReNumber(each_lemma['lemma']) + u":" + each_lemma['lexeme'] + u" " + each_code.replace(" ","_") + u" ;"
             #entry += u' '*(50-len(entry)) + u"\t! " + each_lemma['pos'] + u' ' + each_lemma['paradigm'] + u' ' + each_lemma['paradigm_details']
             entry += u'\n'
             Nfile.write(entry)
@@ -1043,7 +1074,7 @@ with codecs.open ( "nouns.lexc" , mode='w' , encoding='utf-8' ) as Nfile :
         if j.replace(" ","_") in N_LEXICA :
             h = u''
         else :
-            h = u'*****'
+            h = u'**'
         Ncats_counter += i
         Ncatsfile_freq.write(h+str(i)+'\t\t'+'{:.2%}'.format(Ncats_counter/N_total)+'\t\t'+j.replace(' ','_')+'\t\t'+k+'\t\t'+l+"\n")
     Ncatsfile_freq.close()    
@@ -1054,7 +1085,7 @@ with codecs.open ( "nouns.lexc" , mode='w' , encoding='utf-8' ) as Nfile :
         if j.replace(" ","_") in N_LEXICA :
             h = u''
         else :
-            h = u'*****'
+            h = u'**'
         Ncats_counter += i
         Ncatsfile_alph.write(h+str(i)+'\t\t'+'{:.2%}'.format(Ncats_counter/N_total)+'\t\t'+j.replace(' ','_')+'\t\t'+k+'\t\t'+l+"\n")
     Ncatsfile_alph.close()

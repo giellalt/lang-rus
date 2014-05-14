@@ -89,33 +89,36 @@ LEXICON МС-П_ВЕСЬ
 +Pron+Pl+Ins:се́ми  # ;
 
 LEXICON МС-П_ОДИН
-+Pron+Msc+Sg+Nom: # ;
-+Pron+Msc+Sg+Acc+Inan:  # ;
-+Pron+Msc+Sg+Acc+Anim:%>ого́  # ;
-+Pron+Msc+Sg+Gen:%>ого́  # ;
-+Pron+Msc+Sg+Loc:%>о́м  # ;
-+Pron+Msc+Sg+Dat:%>ому́  # ;
-+Pron+Msc+Sg+Ins:%>и́м  # ;
-+Pron+Neu+Sg+Nom:%>о́  # ;
-+Pron+Neu+Sg+Acc:%>о́  # ;
-+Pron+Neu+Sg+Gen:%>ого́  # ;
-+Pron+Neu+Sg+Loc:%>о́м  # ;
-+Pron+Neu+Sg+Dat:%>ому́  # ;
-+Pron+Neu+Sg+Ins:%>и́м  # ;
-+Pron+Fem+Sg+Nom:%>а́  # ;
-+Pron+Fem+Sg+Acc:%>у́  # ;
-+Pron+Fem+Sg+Gen:%>о́й  # ;
-+Pron+Fem+Sg+Loc:%>о́й  # ;
-+Pron+Fem+Sg+Dat:%>о́й  # ;
-+Pron+Fem+Sg+Ins:%>о́й  # ;
-+Pron+Fem+Sg+Ins:%>о́ю  # ;
-+Pron+Pl+Nom:%>и́  # ;
-+Pron+Pl+Acc+Inan:%>и́  # ;
-+Pron+Pl+Acc+Anim:%>и́х  # ;
-+Pron+Pl+Gen:%>и́х  # ;
-+Pron+Pl+Loc:%>и́х  # ;
-+Pron+Pl+Dat:%>и́м  # ;
-+Pron+Pl+Ins:%>и́ми  # ;
++Pron: один ;
+
+LEXICON один
++Msc+Sg+Nom: # ;
++Msc+Inan+Sg+Acc:  # ;
++Msc+Anim+Sg+Acc:%>ого́  # ;
++Msc+Sg+Gen:%>ого́  # ;
++Msc+Sg+Loc:%>о́м  # ;
++Msc+Sg+Dat:%>ому́  # ;
++Msc+Sg+Ins:%>и́м  # ;
++Neu+Sg+Nom:%>о́  # ;
++Neu+Sg+Acc:%>о́  # ;
++Neu+Sg+Gen:%>ого́  # ;
++Neu+Sg+Loc:%>о́м  # ;
++Neu+Sg+Dat:%>ому́  # ;
++Neu+Sg+Ins:%>и́м  # ;
++Fem+Sg+Nom:%>а́  # ;
++Fem+Sg+Acc:%>у́  # ;
++Fem+Sg+Gen:%>о́й  # ;
++Fem+Sg+Loc:%>о́й  # ;
++Fem+Sg+Dat:%>о́й  # ;
++Fem+Sg+Ins:%>о́й  # ;
++Fem+Sg+Ins:%>о́ю  # ;
++Pl+Nom:%>и́  # ;
++Inan+Pl+Acc:%>и́  # ;
++Anim+Pl+Acc:%>и́х  # ;
++Pl+Gen:%>и́х  # ;
++Pl+Loc:%>и́х  # ;
++Pl+Dat:%>и́м  # ;
++Pl+Ins:%>и́ми  # ;
 
 LEXICON МС-П_САМ
 +Pron+Msc+Sg+Nom: # ;

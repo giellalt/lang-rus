@@ -289,22 +289,22 @@ LEXICON п_a/c'_короткий
 +A+Cmpar+Pred:коро́че # ;
 
 LEXICON п_a/c'_еселый
-+A:есёл LF_end ;
++A:есёл LF_stem ;
 +A:е́сел SF_c' ;
 +A:есёл SF_comp_end ;
 
 LEXICON п_a/c'_еленый
-+A:елён LF_end ;
++A:елён LF_stem ;
 +A:е́лен SF_c' ;
 +A:елён SF_comp_end ;
 
 LEXICON п_a/c'_оленый
-+A:олён LF_end ;
++A:олён LF_stem ;
 +A:о́лон SF_c' ;
 +A:олон SF_comp_end ;
 
 LEXICON п_a/c'_олодный
-+A:оло́дн LF_end ;
++A:оло́дн LF_stem ;
 +A:о́лод%^Fен SF_c' ;
 +A:оло́дн SF_comp_end ;
 
@@ -613,6 +613,7 @@ LEXICON п_[мс_6a]ий
 +A+Fem+Sg+Loc:%>ой # ;
 +A+Fem+Sg+Dat:%>ой # ;
 +A+Fem+Sg+Ins:%>ой # ;
++A+Fem+Sg+Ins+Fac:%>ою # ;
 +A+Pl+Nom:%>ы # ;
 +A+Inan+Pl+Acc:%>ы # ;
 +A+Anim+Pl+Acc:%>ых # ;
@@ -656,6 +657,7 @@ LEXICON мс_1a_Fem
 +Fem+Sg+Loc:%>ой # ;
 +Fem+Sg+Dat:%>ой # ;
 +Fem+Sg+Ins:%>ой # ;
++Fem+Sg+Ins+Fac:%>ою # ;
 
 LEXICON мс_1a_Pl
 +Pl+Nom:%>ы # ;
@@ -692,6 +694,7 @@ LEXICON п_[мс_1a]ов
 +A+Fem+Sg+Loc:%>ой # ;
 +A+Fem+Sg+Dat:%>ой # ;
 +A+Fem+Sg+Ins:%>ой # ;
++A+Fem+Sg+Ins+Fac:%>ою # ;
 +A+Pl+Nom:%>ы # ;
 +A+Inan+Pl+Acc:%>ы # ;
 +A+Anim+Pl+Acc:%>ых # ;
@@ -723,6 +726,7 @@ LEXICON п_[мс_1b]ин
 +A+Fem+Sg+Loc:%>о́й # ;
 +A+Fem+Sg+Dat:%>о́й # ;
 +A+Fem+Sg+Ins:%>о́й # ;
++A+Fem+Sg+Ins+Fac:%>о́ю # ;
 +A+Pl+Nom:%>ы́ # ;
 +A+Inan+Pl+Acc:%>ы́ # ;
 +A+Anim+Pl+Acc:%>ы́х # ;
@@ -779,6 +783,7 @@ LEXICON LF_stem
 +Fem+Sg+Loc:%>ой # ;
 +Fem+Sg+Dat:%>ой # ;
 +Fem+Sg+Ins:%>ой # ;
++Fem+Sg+Ins+Fac:%>ою # ;
 +Pl+Nom:%>ые # ;
 +Inan+Pl+Acc:%>ые # ;
 +Anim+Pl+Acc:%>ых # ;
@@ -807,6 +812,7 @@ LEXICON LF_stem_Prb
 +Fem+Sg+Loc+Prb:%>ой # ;
 +Fem+Sg+Dat+Prb:%>ой # ;
 +Fem+Sg+Ins+Prb:%>ой # ;
++Fem+Sg+Ins+Fac+Prb:%>ою # ;
 +Pl+Nom+Prb:%>ые # ;
 +Inan+Pl+Acc+Prb:%>ые # ;
 +Anim+Pl+Acc+Prb:%>ых # ;
@@ -835,6 +841,7 @@ LEXICON LF_stem_Fac
 +Fem+Sg+Loc+Fac:%>ой # ;
 +Fem+Sg+Dat+Fac:%>ой # ;
 +Fem+Sg+Ins+Fac:%>ой # ;
++Fem+Sg+Ins+Fac:%>ою # ;
 +Pl+Nom+Fac:%>ые # ;
 +Inan+Pl+Acc+Fac:%>ые # ;
 +Anim+Pl+Acc+Fac:%>ых # ;
@@ -863,6 +870,7 @@ LEXICON LF_stem_R
 +Fem+Sg+Loc:%>ойся # ;
 +Fem+Sg+Dat:%>ойся # ;
 +Fem+Sg+Ins:%>ойся # ;
++Fem+Sg+Ins+Fac:%>оюся # ;
 +Pl+Nom:%>ыеся # ;
 +Inan+Pl+Acc:%>ыеся # ;
 +Anim+Pl+Acc:%>ыхся # ;
@@ -891,6 +899,7 @@ LEXICON LF_stem_R_Prb
 +Fem+Sg+Loc+Prb:%>ойся # ;
 +Fem+Sg+Dat+Prb:%>ойся # ;
 +Fem+Sg+Ins+Prb:%>ойся # ;
++Fem+Sg+Ins+Prb:%>оюся # ;
 +Pl+Nom+Prb:%>ыеся # ;
 +Inan+Pl+Acc+Prb:%>ыеся # ;
 +Anim+Pl+Acc+Prb:%>ыхся # ;
@@ -919,6 +928,7 @@ LEXICON LF_stem_R_Fac
 +Fem+Sg+Loc+Fac:%>ойся # ;
 +Fem+Sg+Dat+Fac:%>ойся # ;
 +Fem+Sg+Ins+Fac:%>ойся # ;
++Fem+Sg+Ins+Fac:%>оюся # ;
 +Pl+Nom+Fac:%>ыеся # ;
 +Inan+Pl+Acc+Fac:%>ыеся # ;
 +Anim+Pl+Acc+Fac:%>ыхся # ;
@@ -947,6 +957,7 @@ LEXICON LF_stem-либо
 +Fem+Sg+Loc:%>ой-либо # ;
 +Fem+Sg+Dat:%>ой-либо # ;
 +Fem+Sg+Ins:%>ой-либо # ;
++Fem+Sg+Ins+Fac:%>ою-либо # ;
 +Pl+Nom:%>ые-либо # ;
 +Inan+Pl+Acc:%>ые-либо # ;
 +Anim+Pl+Acc:%>ых-либо # ;
@@ -975,6 +986,7 @@ LEXICON LF_stem-нибудь
 +Fem+Sg+Loc:%>ой-нибудь # ;
 +Fem+Sg+Dat:%>ой-нибудь # ;
 +Fem+Sg+Ins:%>ой-нибудь # ;
++Fem+Sg+Ins+Fac:%>ою-нибудь # ;
 +Pl+Nom:%>ые-нибудь # ;
 +Inan+Pl+Acc:%>ые-нибудь # ;
 +Anim+Pl+Acc:%>ых-нибудь # ;
@@ -1003,6 +1015,7 @@ LEXICON LF_stem-то
 +Fem+Sg+Loc:%>ой-то # ;
 +Fem+Sg+Dat:%>ой-то # ;
 +Fem+Sg+Ins:%>ой-то # ;
++Fem+Sg+Ins+Fac:%>ою-то # ;
 +Pl+Nom:%>ые-то # ;
 +Inan+Pl+Acc:%>ые-то # ;
 +Anim+Pl+Acc:%>ых-то # ;
@@ -1031,6 +1044,7 @@ LEXICON LF_end
 +Fem+Sg+Loc:%>о́й # ;
 +Fem+Sg+Dat:%>о́й # ;
 +Fem+Sg+Ins:%>о́й # ;
++Fem+Sg+Ins+Fac:%>о́ю # ;
 +Pl+Nom:%>ы́е # ;
 +Inan+Pl+Acc:%>ы́е # ;
 +Anim+Pl+Acc:%>ы́х # ;
@@ -1059,6 +1073,7 @@ LEXICON LF_end_R
 +Fem+Sg+Loc:%>о́йся # ;
 +Fem+Sg+Dat:%>о́йся # ;
 +Fem+Sg+Ins:%>о́йся # ;
++Fem+Sg+Ins+Fac:%>о́юся # ;
 +Pl+Nom:%>ы́еся # ;
 +Inan+Pl+Acc:%>ы́еся # ;
 +Anim+Pl+Acc:%>ы́хся # ;
@@ -1087,6 +1102,7 @@ LEXICON LF_end-либо
 +Fem+Sg+Loc:%>о́й-либо # ;
 +Fem+Sg+Dat:%>о́й-либо # ;
 +Fem+Sg+Ins:%>о́й-либо # ;
++Fem+Sg+Ins+Fac:%>о́ю-либо # ;
 +Pl+Nom:%>ы́е-либо # ;
 +Inan+Pl+Acc:%>ы́е-либо # ;
 +Anim+Pl+Acc:%>ы́х-либо # ;
@@ -1115,6 +1131,7 @@ LEXICON LF_end-нибудь
 +Fem+Sg+Loc:%>о́й-нибудь # ;
 +Fem+Sg+Dat:%>о́й-нибудь # ;
 +Fem+Sg+Ins:%>о́й-нибудь # ;
++Fem+Sg+Ins+Fac:%>о́ю-нибудь # ;
 +Pl+Nom:%>ы́е-нибудь # ;
 +Inan+Pl+Acc:%>ы́е-нибудь # ;
 +Anim+Pl+Acc:%>ы́х-нибудь # ;
@@ -1143,6 +1160,7 @@ LEXICON LF_end-то
 +Fem+Sg+Loc:%>о́й-то # ;
 +Fem+Sg+Dat:%>о́й-то # ;
 +Fem+Sg+Ins:%>о́й-то # ;
++Fem+Sg+Ins+Fac:%>о́ю-то # ;
 +Pl+Nom:%>ы́е-то # ;
 +Inan+Pl+Acc:%>ы́е-то # ;
 +Anim+Pl+Acc:%>ы́х-то # ;

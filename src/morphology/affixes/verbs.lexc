@@ -3888,6 +3888,9 @@ LEXICON PresVrbAdv_mut_end_Prb
 LEXICON PresVrbAdv_mut_end_R
 +PrsAct+Adv:%^M%<я́сь # ;
 
+LEXICON PresVrbAdvOnly
++V+Impf+IV+PrsAct+Adv: # ;
+
 LEXICON Impf_PastVrbAdv_V
 +PstAct+Adv+Fac:%<в # ;
 +PstAct+Adv+Fac+Use/Obs:%<вши # ;

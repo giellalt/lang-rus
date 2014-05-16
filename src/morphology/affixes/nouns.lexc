@@ -563,6 +563,34 @@ LEXICON мо_[жо_c]_я_ья́/ёв
 +N+Msc:я FSgStem_anim ;
 +N+Msc:%^Fей аPlEnd_anim ;
 
+LEXICON мо_[мс_a]
++N+Msc+Sg+Nom: # ;
++N+Msc+Anim+Sg+Acc:%>ого # ;
++N+Msc+Sg+Gen:%>ого # ;
++N+Msc+Sg+Loc:%>ом # ;
++N+Msc+Sg+Dat:%>ому # ;
++N+Msc+Sg+Ins:%>ым # ;
++N+Pl+Nom:%>ы # ;
++N+Anim+Pl+Acc:%>ых # ;
++N+Pl+Gen:%>ых # ;
++N+Pl+Loc:%>ых # ;
++N+Pl+Dat:%>ым # ;
++N+Pl+Ins:%>ыми # ;
+
+LEXICON мо_[мс-п_b]
++N+Msc+Sg+Nom: # ;
++N+Msc+Anim+Sg+Acc:%>ого́ # ;
++N+Msc+Sg+Gen:%>ого́ # ;
++N+Msc+Sg+Loc:%>о́м # ;
++N+Msc+Sg+Dat:%>ому́ # ;
++N+Msc+Sg+Ins:%>ы́м # ;
++N+Pl+Nom:%>ы́ # ;
++N+Anim+Pl+Acc:%>ы́х # ;
++N+Pl+Gen:%>ы́х # ;
++N+Pl+Loc:%>ы́х # ;
++N+Pl+Dat:%>ы́м # ;
++N+Pl+Ins:%>ы́ми # ;
+
 LEXICON мо-жо_a
 мо_[жо_a] ;
 жо_a ;
@@ -769,6 +797,9 @@ LEXICON с_0
 +N+Neu: Indecl_Sg ;
 +N+Neu: Indecl_Pl_inan ;
 
+LEXICON Time_halfhour ! e.g. полпервого
++N+Neu: Indecl_Sg ;
+
 LEXICON с_a
 +N+Neu: NSgStem ;
 +N+Neu: аPlStem ;     !Cyrillic 'а' in 'аPl'
@@ -957,6 +988,14 @@ MSg_SubstAdj_End ;
 +N+Neu+Inan+Pl+Nom:%>ы́е # ;
 +N+Neu+Inan+Pl+Acc:%>ы́е # ;
 +N+Neu: Pl_SubstAdj_End ;
+
+LEXICON с_[мс_a]
++N: мс-п_a_Neu ;
++N: мс-п_a_Pl_inan ;
+
+LEXICON с_[мс_b]
++N: мс-п_b_Neu ;
++N: мс-п_b_Pl_inan ;
 
 LEXICON со_0
 +N+Neu: Indecl_Sg ;
@@ -1464,6 +1503,14 @@ FSg_SubstAdj_End ;
 +N+Fem+Inan+Pl+Acc:%>ы́е # ;
 +N+Fem: Pl_SubstAdj_End ;
 
+LEXICON ж_[мс_a]
++N: мс-п_a_Fem ;
++N: мс-п_a_Pl_inan ;
+
+LEXICON ж_[мс_b]
++N: мс-п_b_Fem ;
++N: мс-п_b_Pl_inan ;
+
 LEXICON FSg_SubstAdj_Stem
 +N+Fem+Sg+Gen:%>ой # ;
 +N+Fem+Sg+Loc:%>ой # ;
@@ -1564,6 +1611,7 @@ LEXICON FSgObliqStem
 +Sg+Loc:%>е # ;
 +Sg+Dat:%>е # ;
 +Sg+Ins:%>ой # ;
++Sg+Ins+Fac:%>ою # ;
 
 LEXICON FSgObliqStem_inan ! Only used for masculine nouns!
 +Inan: FSgObliqStem ;
@@ -1577,6 +1625,7 @@ LEXICON FSgObliqEnd
 +Sg+Loc:%>е́ # ;
 +Sg+Dat:%>е́ # ;
 +Sg+Ins:%>о́й # ;
++Sg+Ins+Fac:%>о́ю # ;
 
 LEXICON FSgObliqEnd_inan ! Only used for masculine nouns!
 +Inan: FSgObliqEnd ;
@@ -2077,3 +2126,9 @@ LEXICON Pl_ин_anim
 +Anim+Pl+Acc: # ;
 +Anim+Pl+Gen: # ;
 PlPeriphEnd_anim ;
+
+LEXICON пол-NomAccOnly
++N+Neu+Sg+Nom: # ;
++N+Neu+Sg+Acc: # ;
++N+Neu+Inan+Pl+Nom: # ;
++N+Neu+Inan+Pl+Acc: # ;

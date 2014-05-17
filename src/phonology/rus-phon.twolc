@@ -235,6 +235,7 @@ where Cx in ( д т ) ;
 
 "[бдт]>с in before infinitive endings"
 Cx:с <=> _ %<:0 т ( [ и́ ( с :ь ) | ь ( с я ) ] ) .#.  ;
+         $[ :в :ы́ ] _ %<:0 т ( и ( с :ь ) ) .#.  ;
 where Cx in ( б д т ) ;
 
 "с>0 before т>щ and к>щ stem mutations"
@@ -274,7 +275,12 @@ where Ex in ( %^Iu %^Is ) ;
                 ! по́мн0и   вы́став0и   обры́0щ00и  мо́рщ0и
 
 "Iu>ь in Imperatives with consonant stem (exceptions in previous rule)"
-%^Iu:ь <=> :V [ :C - :щ ] (%^M:0) %<:0 _ (т е) (с [ :я | :ь ]) .#. ;
+%^Iu:ь <=> :V [ :C - [ :щ | :г ] ] (%^M:0) %<:0 _ (т е) (с [ :я | :ь ]) .#. ;
+                ! отве́т<I
+                ! отве́т0ь
+
+"Iu>0 in Imperatives with velar stem, e.g. лечь"
+%^Iu:0 <=> :я́ :г (%^M:0) %<:0 _ (т е) (с [ :я | :ь ]) .#. ;
                 ! отве́т<I
                 ! отве́т0ь
 

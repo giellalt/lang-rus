@@ -453,6 +453,15 @@ LEXICON нсв_3c
 +V+Impf+TV:ну́ Impf_Inf_V_stem_w/Pass ;
 +V+Impf+TV:н Impf_Pres_1_shift_w/Pass ;
 
+LEXICON нсв_3c_имеется_деепр._(затрудн.)
+нсв_3c ;
++V+Impf+IV: PresVrbAdv_end_Prb ;
++V+Impf+TV: PresVrbAdv_end_Prb ;
+
+LEXICON нсв_3c_R_имеется_деепр._(затрудн.)
+нсв_3c_R ;
++V+Impf+IV: PresVrbAdv_end_R_Prb ;
+
 LEXICON нсв_3c_R
 +V+Impf+IV:ну́ Impf_Inf_stem_R ;
 +V+Impf+IV:н Impf_Pres_1_shift_R ;
@@ -868,6 +877,17 @@ LEXICON св_5b_а́ть_R
 LEXICON св_нп_5b_а́ть
 +V+Perf+IV:а́ Perf_Inf_V_stem ;
 +V+Perf+IV: Perf_Fut_2_end ;
+
+LEXICON св_нп_5b_а́ть_бежать
++V+Perf+IV:жа́ Perf_Inf_V_stem ;
++V+Perf+IV+Fut+Sg1:гу́ # ;
++V+Perf+IV+Fut+Sg2:жи́шь # ;
++V+Perf+IV+Fut+Sg3:жи́т # ;
++V+Perf+IV+Fut+Pl1:жи́м # ;
++V+Perf+IV+Fut+Pl2:жи́те # ;
++V+Perf+IV+Fut+Pl3:гу́т # ;
++V+Perf+IV:г Imper_stressed ;
++V+Perf+IV+Imp+Pl1:жи́м # ;
 
 LEXICON св_5b?_а́ть
 св_нп_5b_а́ть ;
@@ -1602,6 +1622,10 @@ LEXICON св_7b/b_(-т-)9_ё_(но_прич._прош._е/тший)
 !                                           чь
 ! No present verbal adverb
 
+LEXICON св_нп_8a/b_лечь
++V+Perf+IV:ёг Perf_Inf_C_end ;
++V+Perf+IV:я́г Perf_Fut_1_stem ;
+
 LEXICON св_8b/b
 св_нп_8b/b ;
 +V+Perf+TV: Perf_Inf_C_end ;
@@ -2030,11 +2054,16 @@ LEXICON св_14b_(-н-)_я́ть
 +V+Perf+IV:н Perf_Fut_1_end ;
 
 LEXICON св_14b/b_(-н-)_а́ть_R_прош._м_начался/
-+V+Perf+IV+Inf:а́ться # ;
-+V+Perf+IV:а́ Past_end''_R ;
-+V+Perf+IV:а́ Perf_PastVrbAdv_R ;
-+V+Perf+IV:а́ PastAct_R ;
++V+Perf+IV:а́ Perf_Inf_end''_R ;
 +V+Perf+IV:н Perf_Fut_1_end_R ;
+
+LEXICON св_14b/b_я́ть_R_(йм-)
++V+Perf+IV:ня́ Perf_Inf_end_R ;
++V+Perf+IV:йм Perf_Fut_1_end_R ;
+
+LEXICON св_14b/b_я́ть_R_(йм-)_прош._м_ся///_ня/лся
++V+Perf+IV:ня́ Perf_Inf_end''_R ;
++V+Perf+IV:йм Perf_Fut_1_end_R ;
 
 LEXICON св_14b/c_взять
 +V+Perf+TV:зя́ Perf_Inf_V_shift ;
@@ -2115,6 +2144,13 @@ LEXICON св_14c/c_(прим-)_1
 +V+Perf+IV:м Perf_Fut_1_shift ;
 +V+Perf+TV:ня PastPass_stem ;
 
+LEXICON св_14c/c_я́ть_(-иму/)_[1]_(но_прич._страд._только_V/нят
++V+Perf+TV: Perf_Inf_V_shift[1]_я́ть ;
++V+Perf+TV:и́м Perf_Fut_1_shift ;
++V+Perf+IV: Perf_Inf_V_shift[1]_я́ть ;
++V+Perf+IV:и́м Perf_Fut_1_shift ;
++V+Perf+TV:я PastPass_stem ;
+
 LEXICON св_14c/c_я́ть_(ним-//_ым-)_[1]
 +V+Perf+TV:н Perf_Inf_V_shift[1]_я́ть ;
 +V+Perf+TV:ни́м Perf_Fut_1_shift ;
@@ -2122,16 +2158,24 @@ LEXICON св_14c/c_я́ть_(ним-//_ым-)_[1]
 +V+Perf+IV:н Perf_Inf_V_shift[1]_я́ть ;
 +V+Perf+IV:ни́м Perf_Fut_1_shift ;
 +V+Perf+IV:ы́м Perf_Fut_1_shift ;
-+V+Perf+TV:ня PastPass_stem ;
++V+Perf+TV:ня́ PastPass_stem ;
++V+Perf+TV:ня PastPass_stem_Fac ;
+
+LEXICON св_14c/c''_я́ть_R_(-иму/)
++V+Perf+IV: Perf_Inf_shift''[1]_я́ть_R ;
++V+Perf+IV:и́м Perf_Fut_1_shift_R ;
 
 LEXICON св_14c/c''_я́ть_R_(ним_//_ым)
-+V+Perf+IV:н Perf_Inf_shift''[1]_я́ть_R ;
-+V+Perf+IV:ни́м Perf_Fut_1_shift_R ;
+:н св_14c/c''_я́ть_R_(-иму/) ;
 +V+Perf+IV:ы́м Perf_Fut_1_shift_R ;
 
 !====================================== Stem type 15 =====================================
 !                                       стать, etc.
 ! No present verbal adverb
+
+LEXICON св_15a
+св_15a? ;
++V+Perf+TV: PastPass_stem ;
 
 LEXICON св_15a?
 св_нп_15a ;
@@ -2283,6 +2327,47 @@ LEXICON св_b/b9_R_буд._прид|у/сь,_-ётся_прош._при|шёл�
 +V+Perf+IV:д PastVrbAdv_9_end_R ;
 +V+Perf+IV:ше́д PastAct_R ;
 +V+Perf+IV:д Perf_Fut_1_end_R ;
+
+LEXICON св_a_дать ! выдать
++V+Perf+IV+Inf:дать # ;
++V+Perf+IV:да Past_shift ;
++V+Perf+IV:да Perf_PastVrbAdv_V ;
++V+Perf+IV:да PastAct ;
++V+Perf+IV+Fut+Sg1:дам # ;
++V+Perf+IV+Fut+Sg2:дашь # ;
++V+Perf+IV+Fut+Sg3:даст # ;
++V+Perf+IV+Fut+Pl1:дадим # ;
++V+Perf+IV+Fut+Pl2:дадите # ;
++V+Perf+IV+Fut+Pl3:дадут # ;
++V+Perf+IV+Imp+Pl1:дадим # ;
++V+Perf+IV:да Imper_unstressed ;
++V+Perf+TV+Inf:дать # ;
++V+Perf+TV:да Past_shift ;
++V+Perf+TV:да Perf_PastVrbAdv_V ;
++V+Perf+TV:да PastAct ;
++V+Perf+TV+Fut+Sg1:дам # ;
++V+Perf+TV+Fut+Sg2:дашь # ;
++V+Perf+TV+Fut+Sg3:даст # ;
++V+Perf+TV+Fut+Pl1:дадим # ;
++V+Perf+TV+Fut+Pl2:дадите # ;
++V+Perf+TV+Fut+Pl3:дадут # ;
++V+Perf+TV+Imp+Pl1:дадим # ;
++V+Perf+TV:да Imper_unstressed ;
++V+Perf+TV:да PastPass_нн_stem ;
+
+LEXICON св_a_R_даться ! выдаться
++V+Perf+IV+Inf:даться # ;
++V+Perf+IV:да Past_shift_R ;
++V+Perf+IV:да Perf_PastVrbAdv_R ;
++V+Perf+IV:да PastAct_R ;
++V+Perf+IV+Fut+Sg1:дамся # ;
++V+Perf+IV+Fut+Sg2:дашься # ;
++V+Perf+IV+Fut+Sg3:дастся # ;
++V+Perf+IV+Fut+Pl1:дадимся # ;
++V+Perf+IV+Fut+Pl2:дадитесь # ;
++V+Perf+IV+Fut+Pl3:дадутся # ;
++V+Perf+IV+Imp+Pl1:дадимся # ;
++V+Perf+IV:да Imper_unstressed_R ;
 
 LEXICON св_b/c_дать
 +V+Perf+IV+Inf:да́ть # ;
@@ -2632,7 +2717,7 @@ LEXICON Perf_Inf_stem_R_безл.
 Past_stem_R_безл. ;
 
 LEXICON Perf_Infи_stem_R
-+Inf:%<ти́сь # ;
++Inf:%<тись # ;
 Past_stem_R ;
 Perf_PastVrbAdv_R ;
 PastAct_R ;
@@ -3983,6 +4068,10 @@ LEXICON PastPass_stem
 LEXICON PastPass_stem_Prb
 +PstPss:т LF_stem_Prb ;
 +PstPss:т SF_a_Prb ;
+
+LEXICON PastPass_stem_Fac
++PstPss:т LF_stem_Fac ;
++PstPss:т SF_a_Fac ;
 
 LEXICON PastPass_нн_stem
 +PstPss:нн LF_stem ;

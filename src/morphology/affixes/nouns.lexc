@@ -66,6 +66,15 @@ LEXICON м_a[2]
 м_a ;
 +N+Msc+Inan+Pl+Gen+Fac:%> # ;
 
+LEXICON м_a_полдень
++N+Msc+Inan+Sg+Nom:по́лдень # ;
++N+Msc+Inan+Sg+Acc:по́лдень # ;
++N+Msc+Inan+Sg+Gen:полу́дня # ;
++N+Msc+Inan+Sg+Loc:полу́дне # ;
++N+Msc+Inan+Sg+Dat:полу́дню # ;
++N+Msc+Inan+Sg+Ins:полу́днем # ;
++N+Msc+Inan:полу́д%^Fень ыPlStem ;
+
 LEXICON м_a-
 +N+Msc: MSgStem ;
 +N+Msc: ыPlStem_Prb ;
@@ -1009,6 +1018,20 @@ LEXICON со_a1
 +N+Neu: NSgStem ;
 +N+Neu: ыPlStem_anim ;
 
+LEXICON со_дитя
++N+Neu+Sg+Nom:дитя́ # ;
++N+Neu+Sg+Acc:дитя́ # ;
++N+Neu+Sg+Gen:дитя́ти # ;
++N+Neu+Sg+Loc:дитя́ти # ;
++N+Neu+Sg+Dat:дитя́ти # ;
++N+Neu+Sg+Ins:дитя́тей # ;
++N+Neu:де́ть ыPlNomStem_anim ;
++N+Neu+Anim+Pl+Acc:дете́й # ;
++N+Neu+Anim+Pl+Gen:дете́й # ;
++N+Neu+Anim+Pl+Loc:де́тях # ;
++N+Neu+Anim+Pl+Dat:де́тям # ;
++N+Neu+Anim+Pl+Ins:детьми́ # ;
+
 LEXICON мо_[со_a1]
 +N+Msc: NSgStem_Manim ;
 +N+Msc: ыPlStem_anim ;
@@ -1077,9 +1100,17 @@ MSg_SubstAdj_Stem ;
 +N+Neu+Anim+Pl+Acc:%>ых # ;
 +N+Neu: Pl_SubstAdj_Stem ;
 
+LEXICON с_8a_ё_-ёна,_-ён,_-ёнам
++N+Neu: мяSg ;
++N+Neu:ёно аPlStem ;
+
 LEXICON с_8c_ё
 +N+Neu: мяSg ;
 +N+Neu: мяPl_ё ;
+
+LEXICON с_8c-_ё
++N+Neu: мяSg ;
++N+Neu: мяPl_ё_Prb ;
 
 LEXICON с_8c_я́
 +N+Neu: мяSg ;
@@ -1098,6 +1129,12 @@ LEXICON мяPl_ё
 +Inan+Pl+Acc:%>ена́ # ;
 +Inan+Pl+Gen:%>ён # ;
 :%>ен PlPeriphEnd ;
+
+LEXICON мяPl_ё_Prb
+:%>ен аPlNomEnd_Prb ;
++Inan+Pl+Acc+Prb:%>ена́ # ;
++Inan+Pl+Gen+Prb:%>ён # ;
+:%>ен PlPeriphEnd_Prb ;
 
 LEXICON мяPl_я́
 :%>ен аPlNomEnd ;
@@ -1174,6 +1211,15 @@ LEXICON ж_a-
 LEXICON ж_8a
 +N+Fem: FьSgStem ;
 +N+Fem: ыPlStem ;
+
+LEXICON ж_8a_полночь
++N+Fem+Sg+Nom:по́лночь # ;
++N+Fem+Sg+Acc:по́лночь # ;
++N+Fem+Sg+Gen:полу́ночи # ;
++N+Fem+Sg+Loc:полу́ночи # ;
++N+Fem+Sg+Dat:полу́ночи # ;
++N+Fem+Sg+Ins:полу́ночью # ;
++N+Fem:полу́ночь ыPlStem ;
 
 LEXICON мн._[ж_8a]
 +N+Fem: ыPlStem ;
@@ -2127,8 +2173,116 @@ LEXICON Pl_ин_anim
 +Anim+Pl+Gen: # ;
 PlPeriphEnd_anim ;
 
-LEXICON пол-NomAccOnly
+LEXICON пол-NomAccOnly ! see Zaliznjak §1 (pg 73)
 +N+Neu+Sg+Nom: # ;
 +N+Neu+Sg+Acc: # ;
 +N+Neu+Inan+Pl+Nom: # ;
 +N+Neu+Inan+Pl+Acc: # ;
+
+LEXICON пол-м_a
++N+Msc: MSgObliqStem ;
++N+Msc: ыPlStem ;
+
+LEXICON пол-м_b
++N+Msc: MSgObliqEnd ;
++N+Msc: ыPlEnd ;
+
+LEXICON пол-м_c
++N+Msc: MSgObliqStem ;
++N+Msc: ыPlEnd ;
+
+LEXICON пол-м_c1
++N+Msc: MSgObliqStem ;
++N+Msc: аPlEnd ;
+
+LEXICON пол-м_e
++N+Msc: MSgObliqStem ;
++N+Msc: ыPlAnom ;
+
+LEXICON пол-с_b12
++N+Neu: MSgObliqEnd ;
++N+Neu: ыPlEnd_ов ;
+
+LEXICON пол-с_d
++N+Neu: MSgObliqEnd ;
++N+Neu: аPlStem ;
+
+LEXICON пол-ж_a
++N+Fem: FSgObliqStem ;
++N+Fem: ыPlStem ;
+
+LEXICON пол-ж_d
++N+Fem: FSgObliqEnd ;
++N+Fem: ыPlStem ;
+
+LEXICON полкилометра
+:по̀лкиломе́тра пол-NomAccOnly ;
+:полукиломе́тр пол-м_a ;
+
+LEXICON пол-литра
+:по̀л-ли́тра пол-NomAccOnly ;
+:полули́тр пол-м_a ;
+
+LEXICON полметра
+:по̀лме́тра пол-NomAccOnly ;
+:полуме́тр пол-м_a ;
+
+LEXICON полмиллиона
+:по̀лмиллио́на пол-NomAccOnly ;
+:полумиллио́н пол-м_a ;
+
+LEXICON полфунта
+:по̀лфу́нта пол-NomAccOnly ;
+:полуфу́нт пол-м_a ;
+
+LEXICON пол-листа
+:по̀л-листа́ пол-NomAccOnly ;
+:полули́ст пол-м_b ;
+
+LEXICON полчаса
+:по̀лчаса́ пол-NomAccOnly ;
+:получа́с пол-м_c ;
+
+LEXICON полшага
+:по̀лшага́ пол-NomAccOnly ;
+:полуша́г пол-м_c ;
+
+LEXICON полвека
+:по̀лве́ка пол-NomAccOnly ;
+:полуве́к пол-м_c1 ;
+
+LEXICON полгода
+:по̀лго́да пол-NomAccOnly ;
+:полуго́д пол-м_e ;
+
+LEXICON пол-очка
+:по̀л-очка́ пол-NomAccOnly ;
+:полуочко́ пол-с_b12 ;
+
+LEXICON полведра
+:по̀лведра́ пол-NomAccOnly ;
+:полувёдро́ пол-с_d ;
+
+LEXICON полминуты
+:по̀лмину́ты пол-NomAccOnly ;
+:полумину́та пол-ж_a ;
+
+LEXICON полтонны
+:по̀лто́нны пол-NomAccOnly ;
+:полуто́нна пол-ж_a ;
+
+LEXICON полдюжины
+:по̀лдю́жины пол-NomAccOnly ;
+:полудю́жина пол-ж_a ;
+
+LEXICON полсотни
+:по̀лсо́тни пол-NomAccOnly ;
+:полусо́т%^Fеня пол-ж_a ;
+
+LEXICON полтысячи
+:по̀лты́сячи пол-NomAccOnly ;
+:полуты́сяча пол-ж_a ;
+
+LEXICON полверсты
+:по̀лверсты́ пол-NomAccOnly ;
+:полувёрста́ пол-ж_d ;

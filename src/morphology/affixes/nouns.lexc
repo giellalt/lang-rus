@@ -356,7 +356,7 @@ LEXICON мо_a_Plья_ьев
 
 LEXICON мо_a_ин_ева ! хозяин
 +N+Msc:ин MSgStem_anim ;
-+N+Msc:ев аPlStem_anim ;
++N+Msc:ево аPlStem_anim ;
 
 LEXICON мо_a2
 +N+Msc: MSgStem_anim ;

@@ -544,6 +544,13 @@ LEXICON мс_кто-то
 LEXICON мс_некто
 +Pron+Indef+Msc+Sg+Nom: # ; ! TODO FIX what about Fem, Pl?
 
+LEXICON мс_некого
++Pron+Pred+Acc:ого # ;
++Pron+Pred+Gen:ого # ;
++Pron+Pred+Loc:ом # ;
++Pron+Pred+Dat:ому # ;
++Pron+Pred+Ins:ем # ;
+
 LEXICON мс_что
 +Pron+Interr+Neu+Sg+Nom:что́ # ;
 +Pron+Interr+Neu+Sg+Acc:что́ # ;
@@ -579,6 +586,20 @@ LEXICON мс_что-то
 LEXICON мс_нечто
 +Pron+Indef+Neu+Sg+Nom: # ;
 +Pron+Indef+Neu+Sg+Acc: # ;
+
+LEXICON мс_нечего
++Pron+Pred+Acc:то # ;
++Pron+Pred+Gen:его # ;
++Pron+Pred+Loc:ем # ;
++Pron+Pred+Dat:ему # ;
++Pron+Pred+Ins:ем # ;
+
+LEXICON мс_другдруга
++Pron+Acc:а # ;
++Pron+Gen:а # ;
++Pron+Loc:е # ;
++Pron+Dat:у # ;
++Pron+Ins:ом # ;
 
 LEXICON мс_я
 +Pron+Pers+Sg1+Nom:я́ # ;

@@ -55,6 +55,7 @@ Multichar_Symbols
 +Pl1 +Pl2 +Pl3    !!= * @CODE@ = person pl
 +PstAct +PstPss   !!= * @CODE@ = Participles (+PrsAct+Adv and +PstAct+Adv are used for the verbal adverbs)
 +Pass             !!= * @CODE@ = Passive
++Imprs            !!= * @CODE@ = Impersonal (cannot have explicit subject)
 
 !! !!Nominal MSP
 +Msc +Fem +Neu +MscFem  !!= * @CODE@ = grammatical gender,  +MscFem = common gender

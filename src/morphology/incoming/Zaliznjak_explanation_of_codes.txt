@@ -273,6 +273,7 @@ Past Passive Participle
             -default same as infinitive
             -multi-syllabic stems stressed on last: stress moves left 1
     4 and 5-еть: енный/ённый
+        stem: 1sg
         stress: 
             4: 3sg
             5: -default same as infinitive 

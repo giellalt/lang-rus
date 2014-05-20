@@ -1256,6 +1256,12 @@ LEXICON SF_b_Prb
 +Fem+Sg+Pred+Prb:%>а́ # ;
 +Pl+Pred+Prb:%>ы́ # ;
 
+LEXICON SF_b_Fac
++Msc+Sg+Pred+Fac:%>%^Z # ;
++Neu+Sg+Pred+Fac:%>о́ # ;
++Fem+Sg+Pred+Fac:%>а́ # ;
++Pl+Pred+Fac:%>ы́ # ;
+
 LEXICON SF_b_MscPrb
 +Msc+Sg+Pred+Prb:%>%^Z # ;
 +Neu+Sg+Pred:%>о́ # ;

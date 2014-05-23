@@ -1,16 +1,3 @@
-! ============ !
-! Proper nouns !
-! ============ !
-
-! Table of content
-! ================
-! - Splitting into name types
-! - The name lexica
-!   - mal
-!   - fem
-!   - plc
-!   - sur       
-
 LEXICON Propernoun
 
 Абарян 1propsurmal ;

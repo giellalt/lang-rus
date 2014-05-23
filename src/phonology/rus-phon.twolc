@@ -53,8 +53,8 @@ V = А Е Ё И О У Ы Э Ю Я
     а́ е́ ё́ и́ о́ у́ ы́ э́ ю́ я́ 
     а̀ ѐ ё̀ ѝ о̀ у̀ ы̀ э̀ ю̀ я̀ ;
 ! Stressed vowels
-StressedV = А́ Е́ Ё́ И́ О́ У́ Ы́ Э́ Ю́ Я́
-            а́ е́ ё и́ о́ у́ ы́ э́ ю́ я́ ;
+StressedV = А́ Е́ Ё́ Ё И́ О́ У́ Ы́ Э́ Ю́ Я́
+            а́ е́ ё́ ё и́ о́ у́ ы́ э́ ю́ я́ ;
 
 Definitions
 
@@ -121,7 +121,7 @@ where Vx in ( а е́ ё и я а́ и́ я́ ) ;
 "о/о́>0 in lexical endings, fleeting vowels (including verbal prefixes), and GenPl after hard consonants"
 [ о:0 | о́:0 ] <=> .#. [ Letter: | %^F:0 ]+ _  %>:0 ; ! lexical ending
                   %^F:0 _ [ Letter ]+ (End) %>:0 :V ; ! fleeting vowel
-                  [ в | н а д | о б | о т | п о д | п р е д | с | в з: | в о з: | и з: | н и з: | р а з: ] %^F:0 _ C (%^F:0) V ; ! Fleeting vowels in prefixes, like об(о)звал ~ об()зову
+                  [ в | н а д | о б | о т | п о д | п р е д | с | в з: | в о з: | и з: | н и з: | р а з: ] %^F:0 _ C (%^F:0) :V ; ! Fleeting vowels in prefixes, like об(о)звал ~ об()зову
                   [ VELEndV | HUSHEndV | цEndV | HCEndV | FVn0 | JEndV | jEnd ] _ в:0 .#. ; ! zero GenPl
 
 "з>с in some verbal prefixes with dropped fleeting vowels, when the following consonant is unvoiced"

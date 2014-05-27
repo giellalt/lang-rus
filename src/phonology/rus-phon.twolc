@@ -110,7 +110,7 @@ where Vx in ( а́ э́ о́ у́ ы́ я́ е́ ё ю́ и́ )
 Vx:0 <=> .#. [ Letter: | %^F:0 ]+ _ %>:0 ; 
          %^F:0 _ [ Letter ]+ (End) %>:0 :V ; ! This does not delete люб(о)вью, since the ь is 1st
          %^F:0 _ й: %<:0 :V ;
-         %^F:0 _ %<:0 :л :V ( :с :ь ) .#. ;
+         %^F:0 _ ( C: ) %<:0 :л :V ( :с :ь ) .#. ;
 where Vx in ( а е́ ё и я а́ и́ я́ ) ;
 
 "е>0: 1) Delete lexical vowel endings; 2) Delete fleeting vowels where ending begins with a vowel; 3) Delete е/е́ after comparative adjective stem mutation."
@@ -121,7 +121,7 @@ where Vx in ( а е́ ё и я а́ и́ я́ ) ;
 "о/о́>0 in lexical endings, fleeting vowels (including verbal prefixes), and GenPl after hard consonants"
 [ о:0 | о́:0 ] <=> .#. [ Letter: | %^F:0 ]+ _  %>:0 ; ! lexical ending
                   %^F:0 _ [ Letter ]+ (End) %>:0 :V ; ! fleeting vowel
-                  [ в | н а д | о б | о т | п о д | п р е д | с | в з: | в о з: | и з: | н и з: | р а з: ] %^F:0 _ C (%^F:0) :V ; ! Fleeting vowels in prefixes, like об(о)звал ~ об()зову
+                  [ в | н а д | о б | о т | п о д | п р е д | с | в з: | в о з: | и з: | н и з: | р а з: ] %^F:0 _ C (%^F:0) :V ; ! Fleeting vowels in prefixes, like сожгла сожег
                   [ VELEndV | HUSHEndV | цEndV | HCEndV | FVn0 | JEndV | jEnd ] _ в:0 .#. ; ! zero GenPl
 
 "з>с in some verbal prefixes with dropped fleeting vowels, when the following consonant is unvoiced"

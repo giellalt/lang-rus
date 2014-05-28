@@ -121,11 +121,11 @@ where Vx in ( а е́ ё и я а́ и́ я́ ) ;
 "о/о́>0 in lexical endings, fleeting vowels (including verbal prefixes), and GenPl after hard consonants"
 [ о:0 | о́:0 ] <=> .#. [ Letter: | %^F:0 ]+ _  %>:0 ; ! lexical ending
                   %^F:0 _ [ Letter ]+ (End) %>:0 :V ; ! fleeting vowel
-                  [ в | н а д | о б | о т | п о д | п р е д | с | в з: | в о з: | и з: | н и з: | р а з: ] %^F:0 _ C (%^F:0) :V ; ! Fleeting vowels in prefixes, like сожгла сожег
+                  [ в | н а д | н а́: д | о б | о́: б | о т | о́: т | п о д | п о́: д | п р е д | п р е́: д | с | в з: | в о з: | в о́: з: | и з: | и́: з: | н и з: | н и́: з: | р а з: | р а́: з: ] %^F:0 _ C (%^F:0) :V ; ! Fleeting vowels in prefixes, like сожгла сожег
                   [ VELEndV | HUSHEndV | цEndV | HCEndV | FVn0 | JEndV | jEnd ] _ в:0 .#. ; ! zero GenPl
 
 "з>с in some verbal prefixes with dropped fleeting vowels, when the following consonant is unvoiced"
-з:с <=> [ в | в о | и | н и | р а ] _ %^F:0 о:0 UnvoicedC ;
+з:с <=> [ в | в о | в о́: | и | и́: | н и | н и́: | р а | р а́: ] _ %^F:0 о:0 UnvoicedC ;
 
 "ь>0 in lexical endings, and before fleeting vowels"
 ь:0 <=> .#. [ Letter: | %^F:0 ]+ _  %>:0 ;

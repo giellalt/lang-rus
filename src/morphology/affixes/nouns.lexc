@@ -1250,6 +1250,10 @@ LEXICON ж_d
 +N+Fem: FSgEnd ;
 +N+Fem: ыPlStem ;
 
+LEXICON ж_d_заря
++N+Fem:аря́ FSgEnd ;
++N+Fem:о́ря ыPlStem ;
+
 LEXICON ж_d-
 +N+Fem: FSgEnd ;
 +N+Fem: ыPlStem_Prb ;

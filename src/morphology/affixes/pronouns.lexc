@@ -56,6 +56,45 @@ LEXICON мс-п_a_Pl_mostcases
 +Pl+Dat:%>ым # ;
 +Pl+Ins:%>ыми # ;
 
+LEXICON мс-п_a_Nom
++Msc+Sg+Nom: # ;
++Neu+Sg+Nom:%>о # ;
++Fem+Sg+Nom:%>а # ;
++Pl+Nom:%>ы # ;
+
+LEXICON мс-п_a_Acc
++Msc+Inan+Sg+Acc: # ;
++Msc+Anim+Sg+Acc:%>ого # ;
++Neu+Sg+Acc:%>о # ;
++Fem+Sg+Acc:%>у # ;
++Inan+Pl+Acc:%>ы # ;
++Anim+Pl+Acc:%>ых # ;
+
+LEXICON мс-п_a_Gen
++Msc+Sg+Gen:%>ого # ;
++Neu+Sg+Gen:%>ого # ;
++Fem+Sg+Gen:%>ой # ;
++Pl+Gen:%>ых # ;
+
+LEXICON мс-п_a_Loc
++Msc+Sg+Loc:%>ом # ;
++Neu+Sg+Loc:%>ом # ;
++Fem+Sg+Loc:%>ой # ;
++Pl+Loc:%>ых # ;
+
+LEXICON мс-п_a_Dat
++Msc+Sg+Dat:%>ому # ;
++Neu+Sg+Dat:%>ому # ;
++Fem+Sg+Dat:%>ой # ;
++Pl+Dat:%>ым # ;
+
+LEXICON мс-п_a_Ins
++Msc+Sg+Ins:%>ым # ;
++Neu+Sg+Ins:%>ым # ;
++Fem+Sg+Ins:%>ой # ;
++Fem+Sg+Ins+Fac:%>ою # ;
++Pl+Ins:%>ыми # ;
+
 LEXICON мс-п_b
 +Det: мс-п_b_Msc ;
 +Det: мс-п_b_Neu ;
@@ -106,6 +145,45 @@ LEXICON мс-п_b_Pl_mostcases
 +Pl+Gen:%>ы́х # ;
 +Pl+Loc:%>ы́х # ;
 +Pl+Dat:%>ы́м # ;
++Pl+Ins:%>ы́ми # ;
+
+LEXICON мс-п_b_Nom
++Msc+Sg+Nom: # ;
++Neu+Sg+Nom:%>о́ # ;
++Fem+Sg+Nom:%>а́ # ;
++Pl+Nom:%>ы́ # ;
+
+LEXICON мс-п_b_Acc
++Msc+Inan+Sg+Acc: # ;
++Msc+Anim+Sg+Acc:%>ого́ # ;
++Neu+Sg+Acc:%>о́ # ;
++Fem+Sg+Acc:%>у́ # ;
++Inan+Pl+Acc:%>ы́ # ;
++Anim+Pl+Acc:%>ы́х # ;
+
+LEXICON мс-п_b_Gen
++Msc+Sg+Gen:%>ого́ # ;
++Neu+Sg+Gen:%>ого́ # ;
++Fem+Sg+Gen:%>е́й # ;
++Pl+Gen:%>ы́х # ;
+
+LEXICON мс-п_b_Loc
++Msc+Sg+Loc:%>о́м # ;
++Neu+Sg+Loc:%>о́м # ;
++Fem+Sg+Loc:%>е́й # ;
++Pl+Loc:%>ы́х # ;
+
+LEXICON мс-п_b_Dat
++Msc+Sg+Dat:%>ому́ # ;
++Neu+Sg+Dat:%>ому́ # ;
++Fem+Sg+Dat:%>е́й # ;
++Pl+Dat:%>ы́м # ;
+
+LEXICON мс-п_b_Ins
++Msc+Sg+Ins:%>ы́м # ;
++Neu+Sg+Ins:%>ы́м # ;
++Fem+Sg+Ins:%>е́й # ;
++Fem+Sg+Ins+Fac:%>е́ю # ;
 +Pl+Ins:%>ы́ми # ;
 
 LEXICON мс-п_b-либо
@@ -502,14 +580,27 @@ LEXICON мс-п_[п_b]-то
 +Det: LF_end-то ;
 
 LEXICON мс_кто ! TODO FIX How to tag animacy for кто что and derivatives
-+Pron+Interr+Msc+Sg+Nom:кто́ # ;
-+Pron+Interr+Fem+Sg+Nom:кто́ # ;
-+Pron+Interr+Pl+Nom:кто́ # ;
-+Pron+Interr+Msc+Sg+Acc:кого́ # ;
-+Pron+Interr+Msc+Sg+Gen:кого́ # ;
-+Pron+Interr+Msc+Sg+Loc:ко́м # ;
-+Pron+Interr+Msc+Sg+Dat:кому́ # ;
-+Pron+Interr+Msc+Sg+Ins:ке́м # ;
++Pron+Interr: мс_кто_Nom ;
++Pron+Interr: мс_кто_Acc ;
++Pron+Interr: мс_кто_Gen ;
++Pron+Interr: мс_кто_Loc ;
++Pron+Interr: мс_кто_Dat ;
++Pron+Interr: мс_кто_Ins ;
+
+LEXICON мс_кто_Nom
++Msc+Sg+Nom:кто́ # ;
++Fem+Sg+Nom:кто́ # ;
++Pl+Nom:кто́ # ;
+LEXICON мс_кто_Acc
++Msc+Sg+Acc:кого́ # ;
+LEXICON мс_кто_Gen
++Msc+Sg+Gen:кого́ # ;
+LEXICON мс_кто_Loc
++Msc+Sg+Loc:ко́м # ;
+LEXICON мс_кто_Dat
++Msc+Sg+Dat:кому́ # ;
+LEXICON мс_кто_Ins
++Msc+Sg+Ins:ке́м # ;
 
 LEXICON мс_кто-либо
 +Pron+Indef+Msc+Sg+Nom:кто́-либо # ;
@@ -545,19 +636,47 @@ LEXICON мс_некто
 +Pron+Indef+Msc+Sg+Nom: # ; ! TODO FIX what about Fem, Pl?
 
 LEXICON мс_некого
-+Pron+Pred+Acc:ого # ;
-+Pron+Pred+Gen:ого # ;
-+Pron+Pred+Loc:ом # ;
-+Pron+Pred+Dat:ому # ;
-+Pron+Pred+Ins:ем # ;
++Pron+Pred: мс_некого_Acc ;
++Pron+Pred: мс_некого_Gen ;
++Pron+Pred: мс_некого_Loc ;
++Pron+Pred: мс_некого_Dat ;
++Pron+Pred: мс_некого_Ins ;
+
+LEXICON мс_некого_Acc
++Acc:ого # ;
+
+LEXICON мс_некого_Gen
++Gen:ого # ;
+
+LEXICON мс_некого_Loc
++Loc:ом # ;
+
+LEXICON мс_некого_Dat
++Dat:ому # ;
+
+LEXICON мс_некого_Ins
++Ins:ем # ;
 
 LEXICON мс_что
-+Pron+Interr+Neu+Sg+Nom:что́ # ;
-+Pron+Interr+Neu+Sg+Acc:что́ # ;
-+Pron+Interr+Neu+Sg+Gen:чего́ # ;
-+Pron+Interr+Neu+Sg+Loc:чём # ;
-+Pron+Interr+Neu+Sg+Dat:чему́ # ;
-+Pron+Interr+Neu+Sg+Ins:че́м # ;
++Pron+Interr: мс_что_Nom ;
++Pron+Interr: мс_что_Acc ;
++Pron+Interr: мс_что_Gen ;
++Pron+Interr: мс_что_Loc ;
++Pron+Interr: мс_что_Dat ;
++Pron+Interr: мс_что_Ins ;
+
+LEXICON мс_что_Nom
++Neu+Sg+Nom:что́ # ;
+LEXICON мс_что_Acc
++Neu+Sg+Acc:что́ # ;
+LEXICON мс_что_Gen
++Neu+Sg+Gen:чего́ # ;
+LEXICON мс_что_Loc
++Neu+Sg+Loc:чём # ;
+LEXICON мс_что_Dat
++Neu+Sg+Dat:чему́ # ;
+LEXICON мс_что_Ins
++Neu+Sg+Ins:че́м # ;
 
 LEXICON мс_что-либо
 +Pron+Indef+Neu+Sg+Nom:что́-либо # ;
@@ -588,18 +707,40 @@ LEXICON мс_нечто
 +Pron+Indef+Neu+Sg+Acc: # ;
 
 LEXICON мс_нечего
-+Pron+Pred+Acc:то # ;
-+Pron+Pred+Gen:его # ;
-+Pron+Pred+Loc:ем # ;
-+Pron+Pred+Dat:ему # ;
-+Pron+Pred+Ins:ем # ;
++Pron+Pred: мс_нечего_Acc ;
++Pron+Pred: мс_нечего_Gen ;
++Pron+Pred: мс_нечего_Loc ;
++Pron+Pred: мс_нечего_Dat ;
++Pron+Pred: мс_нечего_Ins ;
+
+LEXICON мс_нечего_Acc
++Acc:то # ;
+LEXICON мс_нечего_Gen
++Gen:его # ;
+LEXICON мс_нечего_Loc
++Loc:ем # ;
+LEXICON мс_нечего_Dat
++Dat:ему # ;
+LEXICON мс_нечего_Ins
++Ins:ем # ;
 
 LEXICON мс_другдруга
-+Pron+Acc:а # ;
-+Pron+Gen:а # ;
-+Pron+Loc:е # ;
-+Pron+Dat:у # ;
-+Pron+Ins:ом # ;
++Pron: мс_другдруга_Acc ;
++Pron: мс_другдруга_Gen ;
++Pron: мс_другдруга_Loc ;
++Pron: мс_другдруга_Dat ;
++Pron: мс_другдруга_Ins ;
+
+LEXICON мс_другдруга_Acc
++Acc:дру́га # ;
+LEXICON мс_другдруга_Gen
++Gen:дру́га # ;
+LEXICON мс_другдруга_Loc
++Loc:дру́ге # ;
+LEXICON мс_другдруга_Dat
++Dat:дру́гу # ;
+LEXICON мс_другдруга_Ins
++Ins:дру́гом # ;
 
 LEXICON мс_я
 +Pron+Pers+Sg1+Nom:я́ # ;

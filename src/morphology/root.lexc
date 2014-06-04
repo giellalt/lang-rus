@@ -82,14 +82,14 @@ Multichar_Symbols
 +Prb !!= * @CODE@ = затруднительно - +Prb(lematic); предположительно - +Hyp(othetical); нет - +Gap
 +Fac !!= * @CODE@ = Facultative
 +Use/Obs !!= * @CODE@ = Obsolete
-+Use/Sub !!= * @CODE@ = Substandard
++Err/Sub !!= * @CODE@ = Substandard
 ! More use tags: 
 ! ласкательное - +Use/Aff(ectionate)
 ! литературное - +Use/Lit(erary)
 ! народнопоэтическое - +Use/Flk (folk poetry)
 ! областное - +Use/Dia(lectal)
 ! поэтический - +Use/Poet(ic)
-! просторечное - +Use/Sub(standard)
+! просторечное - +Err/Sub(standard)
 ! профессиональо - +Use/Prof(essional) 
 ! старинное - +Use/Anc(ient)
 ! увеличительное - +Use/Aug(mentative)

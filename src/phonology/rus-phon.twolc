@@ -14,7 +14,8 @@ Alphabet
       А̀         Ѐ Ё̀     Ѝ           О̀         У̀               Ы̀   Э̀ Ю̀ Я̀
       а б в г д е ё ж з и й к л м н о п р с т у ф х ц ч ш щ ъ ы ь э ю я 
       а́         е́ ё́     и́           о́         у́               ы́   э́ ю́ я́   ! ё́ > ё in spellrelax?
-      а̀         ѐ ё̀     ѝ           о̀         у̀               ы̀   э̀ ю̀ я̀ ;
+      а̀         ѐ ё̀     ѝ           о̀         у̀               ы̀   э̀ ю̀ я̀
+      %- ;
 
 Sets
 
@@ -23,7 +24,8 @@ Letter = А Б В Г Д Е Ё Ж З И Й К Л М Н О П Р С Т У Ф Х Ц
          А̀         Ѐ Ё̀     Ѝ           О̀         У̀               Ы̀   Э̀ Ю̀ Я̀
          а б в г д е ё ж з и й к л м н о п р с т у ф х ц ч ш щ ъ ы ь э ю я
          а́         е́ ё́     и́           о́         у́               ы́   э́ ю́ я́
-         а̀         ѐ ё̀     ѝ           о̀         у̀               ы̀   э̀ ю̀ я̀ ;
+         а̀         ѐ ё̀     ѝ           о̀         у̀               ы̀   э̀ ю̀ я̀ 
+         %- ;
 ! Consonants
 C = Б В Г Д Ж З Й К Л М Н П Р С Т Ф Х Ц Ч Ш Щ 
     б в г д ж з й к л м н п р с т ф х ц ч ш щ ;
@@ -69,7 +71,9 @@ HUSHEnd = [ HUSHEndV | HUSHEndC ] ;
 цEndC = :ц %>:0 ;                                   ! молоде́ц
 цEnd = [ цEndV | цEndC ] ;
 SCEndV = :PC [ е́:0 | е:0 | ё:0 | я́:0 | я:0 ] %>:0 ; ! мо́ре, земля́, неде́ля
-SCEndVNoN = :PCNoN [ е́:0 | е:0 | ё:0 | я́:0 | я:0 ] %>:0 ; ! GenPl of e.g. башня and MscShortForm of e.g. столетний
+SCEndVNoN = :PCNoN [ е́:0 | е:0 | ё:0 | я́:0 | я:0 ] %>:0 ;
+! SCEndVNoNcleanup = \%^F:0 ? :н [ е́:0 | е:0 | ё:0 | я́:0 | я:0 ] %>:0 ;
+! SCEndVNoN = [ SCEndVNoNmostly | SCEndVNoNcleanup ] ;
 FVn0 = %^F:0 V: :н [ ь:0 | я:0 ] %>:0 ; ! GenPl of e.g. башня and MscShortForm of e.g. столетний
 SCEndC = :PC ь:0 %>:0 ;                         ! конь
 SCEnd = [ SCEndV | SCEndC ] ;
@@ -125,7 +129,7 @@ where Vx in ( а е́ ё и я а́ и́ я́ ) ;
                   [ VELEndV | HUSHEndV | цEndV | HCEndV | FVn0 | JEndV | jEnd ] _ в:0 .#. ; ! zero GenPl
 
 "з>с in some verbal prefixes with dropped fleeting vowels, when the following consonant is unvoiced"
-з:с <=> [ в | в о | в о́: | и | и́: | н и | н и́: | р а | р а́: ] _ %^F:0 о:0 UnvoicedC ;
+з:с <=> [ в | в о | в о́: | и | и́: | н и | н и́: | р а | р а́: ] _ %^F:0 о:0 UnvoicedC: $%<:0 ;
 
 "ь>0 in lexical endings, and before fleeting vowels"
 ь:0 <=> .#. [ Letter: | %^F:0 ]+ _  %>:0 ;
@@ -225,7 +229,7 @@ where Vx in ( у у́ )
 Cx:0 <=> _ %<:0 т:ч ь ( с я ) .#. ;
 where Cx in ( г к ) ;
 
-"ё>е́ in some infinitives (чь and )"
+"ё>е́ in some infinitives (чь and [бдт...]сть)"
 ё:е́ <=> _ [ г:0 | к:0 ] %<:0 т:ч ь ( с я ) .#. ;
         _ [ б:с | д:с | с | т:с | [ с т:с ] ] %<:0 т ь ( с я ) .#. ;
 

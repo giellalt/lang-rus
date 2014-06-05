@@ -643,19 +643,19 @@ LEXICON мс_некого
 +Pron+Pred: мс_некого_Ins ;
 
 LEXICON мс_некого_Acc
-+Acc:ого # ;
++Acc:кого # ;
 
 LEXICON мс_некого_Gen
-+Gen:ого # ;
++Gen:кого # ;
 
 LEXICON мс_некого_Loc
-+Loc:ом # ;
++Loc:ком # ;
 
 LEXICON мс_некого_Dat
-+Dat:ому # ;
++Dat:кому # ;
 
 LEXICON мс_некого_Ins
-+Ins:ем # ;
++Ins:кем # ;
 
 LEXICON мс_что
 +Pron+Interr: мс_что_Nom ;
@@ -707,22 +707,21 @@ LEXICON мс_нечто
 +Pron+Indef+Neu+Sg+Acc: # ;
 
 LEXICON мс_нечего
-+Pron+Pred: мс_нечего_Acc ;
 +Pron+Pred: мс_нечего_Gen ;
 +Pron+Pred: мс_нечего_Loc ;
 +Pron+Pred: мс_нечего_Dat ;
 +Pron+Pred: мс_нечего_Ins ;
 
 LEXICON мс_нечего_Acc
-+Acc:то # ;
++Acc:что # ;
 LEXICON мс_нечего_Gen
-+Gen:его # ;
++Gen:чего # ;
 LEXICON мс_нечего_Loc
-+Loc:ем # ;
++Loc:чем # ;
 LEXICON мс_нечего_Dat
-+Dat:ему # ;
++Dat:чему # ;
 LEXICON мс_нечего_Ins
-+Ins:ем # ;
++Ins:чем # ;
 
 LEXICON мс_другдруга
 +Pron: мс_другдруга_Acc ;

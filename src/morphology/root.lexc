@@ -42,7 +42,9 @@ Multichar_Symbols
 +Dem    !!= * @CODE@ = Demonstrative
 +Interr !!= * @CODE@ = Interrogative: кто, что, какой, ли, etc.
 +Refl   !!= * @CODE@ = Pronoun себя, possessive свой
-+Indef  !!= * @CODE@ = Indefinite
++Indef  !!= * @CODE@ = Indefinite: кто-то, кто-нибудь, кто-либо, кое-кто, etc.
++Neg    !!= * @CODE@ = Negative: никто, некого, etc.
++Recip  !!= * @CODE@ = Reciprocal: друг друга
 +Coll   !!= * @CODE@ = Collective numerals
 +MWE    !!= * @CODE@ = Multi-word expressions
 

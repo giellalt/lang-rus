@@ -23,21 +23,21 @@ kogo = [u' мс_некого_Acc',u' мс_некого_Gen',u' мс_некого
 cego = [u' мс_нечего_Acc',u' мс_нечего_Gen',u' мс_нечего_Loc',u' мс_нечего_Dat',u' мс_нечего_Ins']
 druga = [u' мс_другдруга_Acc',u' мс_другдруга_Gen',u' мс_другдруга_Loc',u' мс_другдруга_Dat',u' мс_другдруга_Ins']
 
-lemmas = [(u'кое-кто+Pron',u'ко̀е',kto),
-		  (u'кое-что+Pron',u'ко̀е',cto),
-		  (u'кое-какой+Det',u'ко̀е',kakoj),
-		  (u'кой-кто+Pron',u'ко̀й',kto),
-		  (u'кой-что+Pron',u'ко̀й',cto),
-		  (u'кой-какой+Det',u'ко̀й',kakoj),
-		  (u'никто+Pron',u'ни',kto),
-		  (u'ничто+Pron',u'ни',cto),
-		  (u'ничей+Det',u'ни',cej),
-		  (u'никой+Det',u'ни',koj),
-		  (u'никоторый+Det',u'ни',kotoryj),
-		  (u'никакой+Det',u'ни',kakoj),
-		  (u'некого+Pron+Pred',u'не́к',kogo),
-		  (u'нечего+Pron+Pred',u'не́ч',cego),
-		  (u'друг% друга+Pron',u'дру̀г',druga)]
+lemmas = [(u'кое-кто+Pron+Indef',u'ко̀е',kto),
+		  (u'кое-что+Pron+Indef',u'ко̀е',cto),
+		  (u'кое-какой+Det+Indef',u'ко̀е',kakoj),
+		  (u'кой-кто+Pron+Indef',u'ко̀й',kto),
+		  (u'кой-что+Pron+Indef',u'ко̀й',cto),
+		  (u'кой-какой+Det+Indef',u'ко̀й',kakoj),
+		  (u'никто+Pron+Neg',u'ни',kto),
+		  (u'ничто+Pron+Neg',u'ни',cto),
+		  (u'ничей+Det+Neg',u'ни',cej),
+		  (u'никой+Det+Neg',u'ни',koj),
+		  (u'никоторый+Det+Neg',u'ни',kotoryj),
+		  (u'никакой+Det+Neg',u'ни',kakoj),
+		  (u'некого+Pron+Neg',u'не́',kogo),
+		  (u'нечего+Pron+Neg',u'не́',cego),
+		  (u'друг% друга+Pron+Recip',u'дру̀г',druga)]
 
 for lemma , lexeme , continuation in lemmas :
 	for casePreps , caseIndex , caseName in AllPreps :
@@ -46,8 +46,7 @@ for lemma , lexeme , continuation in lemmas :
 			commenter = u''
 			if epenthetic == u'о' and u'что_Acc' in continuation[caseIndex] :
 				eper = u'о'
-				commenter = u'\t\t ! epenthetic vowel needs verification'
-			print P_lemma + u'+Pr#' + lemma + u':' + lexeme + u'% ' + P_lexeme + eper + u'% ' + continuation[caseIndex] + u' ;' + commenter
+			print P_lemma + u'+Pr#' + lemma + u':' + lexeme + u'% ' + P_lexeme + eper + u'% ' + continuation[caseIndex] + u' ;'
 
 
 

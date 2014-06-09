@@ -47,6 +47,7 @@ Multichar_Symbols
 +Recip  !!= * @CODE@ = Reciprocal: друг друга
 +Coll   !!= * @CODE@ = Collective numerals
 +MWE    !!= * @CODE@ = Multi-word expressions
++Rel    !!= * @CODE@ = Relativizer, e.g. который, где, как, куда, сколько, etc.
 
 !! !!Verbal MSP
 +Impf +Perf +Dvuv !!= * @CODE@ = Imperfective, perfective, biaspectual

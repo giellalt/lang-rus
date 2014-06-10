@@ -40,7 +40,9 @@
  * +Dem     = Demonstrative
  * +Interr  = Interrogative: кто, что, какой, ли, etc.
  * +Refl    = Pronoun себя, possessive свой
- * +Indef   = Indefinite
+ * +Indef   = Indefinite: кто-то, кто-нибудь, кто-либо, кое-кто, etc.
+ * +Neg     = Negative: никто, некого, etc.
+ * +Recip   = Reciprocal: друг друга
  * +Coll    = Collective numerals
  * +MWE     = Multi-word expressions
 

@@ -56,6 +56,7 @@ This is free and open source South Sámi morphology.
  * +Recip   = Reciprocal: друг друга
  * +Coll    = Collective numerals
  * +MWE     = Multi-word expressions
+ * +Rel     = Relativizer, e.g. который, где, как, куда, сколько, etc.
 
 !!Verbal MSP
  * +Impf +Perf +Dvuv  = Imperfective, perfective, biaspectual

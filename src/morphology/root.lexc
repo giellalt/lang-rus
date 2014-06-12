@@ -133,8 +133,7 @@ Predicative ;
 Preposition ;   !!= * @CODE@ 
 Pronoun ;	    !!= * @CODE@ 
 Verb ;		    !!= * @CODE@ 
-
-!Propernoun ;
+Propernoun ;
 !Subjunction ;
 !Punctuation ;
 

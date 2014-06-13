@@ -5081,7 +5081,7 @@ LEXICON Past_stem
 +Pst+Msc+Sg:%<л # ; 
 +Pst+Fem+Sg:%<ла # ;
 +Pst+Neu+Sg:%<ло # ;
-+Pst+Pl:%<ли # ;
++Pst+MFN+Pl:%<ли # ;
 
 LEXICON Past_stem_безл.
 +Pst+Neu+Sg:%<ло # ;
@@ -5090,39 +5090,39 @@ LEXICON Past_stem_zero
 +Pst+Msc+Sg: # ; 
 +Pst+Fem+Sg:%<ла # ;
 +Pst+Neu+Sg:%<ло # ;
-+Pst+Pl:%<ли # ;
++Pst+MFN+Pl:%<ли # ;
 
 LEXICON Past_stem_zero_R
 +Pst+Msc+Sg:ся # ; 
 +Pst+Fem+Sg:%<лась # ;
 +Pst+Neu+Sg:%<лось # ;
-+Pst+Pl:%<лись # ;
++Pst+MFN+Pl:%<лись # ;
 
 LEXICON Past_stem5
 +Pst+Msc+Sg:%<нул # ; 
 +Pst+Fem+Sg:%<ла # ;
 +Pst+Neu+Sg:%<ло # ;
-+Pst+Pl:%<ли # ;
++Pst+MFN+Pl:%<ли # ;
 
 LEXICON Past_stem[5]
 +Pst+Msc+Sg: # ; 
 +Pst+Msc+Sg+Fac:%<нул # ; 
 +Pst+Fem+Sg:%<ла # ;
 +Pst+Neu+Sg:%<ло # ;
-+Pst+Pl:%<ли # ;
++Pst+MFN+Pl:%<ли # ;
 
 LEXICON Past_stem[5]_R
 +Pst+Msc+Sg:ся # ; 
 +Pst+Msc+Sg+Fac:%<нулся # ; 
 +Pst+Fem+Sg:%<лась # ;
 +Pst+Neu+Sg:%<лось # ;
-+Pst+Pl:%<лись # ;
++Pst+MFN+Pl:%<лись # ;
 
 LEXICON Past_stem_R
 +Pst+Msc+Sg:%<лся # ; 
 +Pst+Fem+Sg:%<лась # ;
 +Pst+Neu+Sg:%<лось # ;
-+Pst+Pl:%<лись # ;
++Pst+MFN+Pl:%<лись # ;
 
 LEXICON Past_stem_R_безл.
 +Pst+Neu+Sg:%<лось # ;
@@ -5131,25 +5131,25 @@ LEXICON Past_stem_Pass
 +Pst+Msc+Sg+Pass:%<лся # ; 
 +Pst+Fem+Sg+Pass:%<лась # ;
 +Pst+Neu+Sg+Pass:%<лось # ;
-+Pst+Pl+Pass:%<лись # ;
++Pst+MFN+Pl+Pass:%<лись # ;
 
 LEXICON Past_stem_(-д-)
 +Pst+Msc+Sg:%<л # ; 
 +Pst+Fem+Sg:д%<ла # ;
 +Pst+Neu+Sg:д%<ло # ;
-+Pst+Pl:д%<ли # ;
++Pst+MFN+Pl:д%<ли # ;
 
 LEXICON Past_stem_(-т-)
 +Pst+Msc+Sg:%<л # ; 
 +Pst+Fem+Sg:т%<ла # ;
 +Pst+Neu+Sg:т%<ло # ;
-+Pst+Pl:т%<ли # ;
++Pst+MFN+Pl:т%<ли # ;
 
 LEXICON Past_end
 +Pst+Msc+Sg:%<л # ; 
 +Pst+Fem+Sg:%<ла́ # ;
 +Pst+Neu+Sg:%<ло́ # ;
-+Pst+Pl:%<ли́ # ;
++Pst+MFN+Pl:%<ли́ # ;
 
 LEXICON Past_end_безл.
 +Pst+Fem+Sg:%<ло́ # ;
@@ -5158,7 +5158,7 @@ LEXICON Past_end_R
 +Pst+Msc+Sg:%<лся # ; 
 +Pst+Fem+Sg:%<ла́сь # ;
 +Pst+Neu+Sg:%<ло́сь # ;
-+Pst+Pl:%<ли́сь # ;
++Pst+MFN+Pl:%<ли́сь # ;
 
 LEXICON Past_end_R_безл.
 +Pst+Neu+Sg:%<ло́сь # ;
@@ -5168,69 +5168,69 @@ LEXICON Past_end''_R
 +Pst+Msc+Sg:%<лся # ; 
 +Pst+Fem+Sg:%<ла́сь # ;
 +Pst+Neu+Sg:%<ло́сь # ;
-+Pst+Pl:%<ли́сь # ;
++Pst+MFN+Pl:%<ли́сь # ;
 
 LEXICON Past_end_Pass
 +Pst+Msc+Sg+Pass:%<лся # ; 
 +Pst+Fem+Sg+Pass:%<ла́сь # ;
 +Pst+Neu+Sg+Pass:%<ло́сь # ;
-+Pst+Pl+Pass:%<ли́сь # ;
++Pst+MFN+Pl+Pass:%<ли́сь # ;
 
 LEXICON Past_end_(-д-)
 +Pst+Msc+Sg:%<л # ; 
 +Pst+Fem+Sg:д%<ла́ # ;
 +Pst+Neu+Sg:д%<ло́ # ;
-+Pst+Pl:д%<ли́ # ;
++Pst+MFN+Pl:д%<ли́ # ;
 
 LEXICON Past_end_(-д-)_R
 +Pst+Msc+Sg:%<лся # ; 
 +Pst+Fem+Sg:д%<ла́сь # ;
 +Pst+Neu+Sg:д%<ло́сь # ;
-+Pst+Pl:д%<ли́сь # ;
++Pst+MFN+Pl:д%<ли́сь # ;
 
 LEXICON Past_end_(-т-)
 +Pst+Msc+Sg:%<л # ; 
 +Pst+Fem+Sg:т%<ла́ # ;
 +Pst+Neu+Sg:т%<ло́ # ;
-+Pst+Pl:т%<ли́ # ;
++Pst+MFN+Pl:т%<ли́ # ;
 
 LEXICON Past_end_(-т-)_R
 +Pst+Msc+Sg:%<лся # ; 
 +Pst+Fem+Sg:т%<ла́сь # ;
 +Pst+Neu+Sg:т%<ло́сь # ;
-+Pst+Pl:т%<ли́сь # ;
++Pst+MFN+Pl:т%<ли́сь # ;
 
 LEXICON Past_shift
 +Pst+Msc+Sg:%<л # ; 
 +Pst+Fem+Sg:%<ла́ # ;
 +Pst+Neu+Sg:%<ло # ;
-+Pst+Pl:%<ли # ;
++Pst+MFN+Pl:%<ли # ;
 
 LEXICON Past_shift_Fac
 +Pst+Msc+Sg+Fac:%<л # ; 
 +Pst+Fem+Sg+Fac:%<ла́ # ;
 +Pst+Neu+Sg+Fac:%<ло # ;
-+Pst+Pl+Fac:%<ли # ;
++Pst+MFN+Pl+Fac:%<ли # ;
 
 LEXICON Past_shift_R
 +Pst+Msc+Sg:%<лся # ; 
 +Pst+Fem+Sg:%<ла́сь # ;
 +Pst+Neu+Sg:%<лось # ;
-+Pst+Pl:%<лись # ;
++Pst+MFN+Pl:%<лись # ;
 
 LEXICON Past_shift' ! Only дать and взять
 +Pst+Msc+Sg:%<л # ; 
 +Pst+Fem+Sg:%<ла́ # ;
 +Pst+Neu+Sg:%<ло # ;
 +Pst+Neu+Sg:%<ло́ # ;
-+Pst+Pl:%<ли # ;
++Pst+MFN+Pl:%<ли # ;
 
 LEXICON Past_shift''_R
 +Pst+Msc+Sg:%<лся # ; 
 +Pst+Msc+Sg+Fac:%<лся́ # ; 
 +Pst+Fem+Sg:%<ла́сь # ;
 +Pst+Neu+Sg:%<лось # ;
-+Pst+Pl:%<лись # ;
++Pst+MFN+Pl:%<лись # ;
 
 LEXICON Past_shift''_R_безл.
 +Pst+Neu+Sg:%<лось # ;
@@ -5240,14 +5240,14 @@ LEXICON Past_shift''_R_Fac
 +Pst+Msc+Sg+Fac:%<лся́ # ; 
 +Pst+Fem+Sg+Fac:%<ла́сь # ;
 +Pst+Neu+Sg+Fac:%<лось # ;
-+Pst+Pl+Fac:%<лись # ;
++Pst+MFN+Pl+Fac:%<лись # ;
 
 LEXICON Past_shift''_Pass
 +Pst+Msc+Sg+Pass:%<лся # ; 
 +Pst+Msc+Sg+Pass+Fac:%<лся́ # ; 
 +Pst+Fem+Sg+Pass:%<ла́сь # ;
 +Pst+Neu+Sg+Pass:%<лось # ;
-+Pst+Pl+Pass:%<лись # ;
++Pst+MFN+Pl+Pass:%<лись # ;
 
 LEXICON ImpfFut
 +Fut:%<ть% бу́д PresFut_1_stem ;

@@ -61,7 +61,7 @@ Multichar_Symbols
 +Imprs            !!= * @CODE@ = Impersonal (cannot have explicit subject)
 
 !! !!Nominal MSP
-+Msc +Fem +Neu +MscFem  !!= * @CODE@ = grammatical gender,  +MscFem = common gender
++Msc +Fem +Neu +MFN  !!= * @CODE@ = grammatical gender,  +MFN = gender unspecifiable (pl tantum)
 +Sem/Sur +Sem/Pat       !!= * @CODE@ = Surname (фамилия), Patronymic
 +Sem/Ant +Sem/Alt       !!= * @CODE@ = Anthroponym/Given name, Other
 +Sg +Pl                 !!= * @CODE@ = number

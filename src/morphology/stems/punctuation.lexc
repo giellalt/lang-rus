@@ -16,3 +16,28 @@ LEXICON Punctuation
 +PAR:%( # ;
 +PAR:%) # ;
 
+
+
+! copied from apertium Kazakh for comparison
+! %.%<sent%>:%. # ;
+! %.%.%<sent%>:%.%. # ;
+! %.%.%.%<sent%>:%.%.%. # ;
+! %;%<sent%>:%; # ;
+! %:%<sent%>:%: # ;
+! %!%<sent%>:%! # ;
+! %-%<guio%>:%- # ;
+! %—%<guio%>:%— # ;
+! ,%<cm%>:, # ;
+! %?%<sent%>:%? # ;
+! %'%<apos%>:%' # ;
+! %"%<sent%>:%" # ;
+! %«%<lquot%>:%« # ;
+! %»%<rquot%>:%» # ;
+! %”%<rquot%>:%” # ;
+! %“%<lquot%>:%“ # ;
+! %(%<lpar%>:%( # ;
+! %]%<rpar%>:%] # ;
+! %[%<lpar%>:%[ # ;
+! %)%<rpar%>:%) # ;
+! %\%<sent%>:%\ # ;
+! %/%<sent%>:%/ # ;

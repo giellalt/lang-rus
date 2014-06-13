@@ -134,6 +134,5 @@ Preposition ;   !!= * @CODE@
 Pronoun ;	    !!= * @CODE@ 
 Verb ;		    !!= * @CODE@ 
 Propernoun ;
-!Subjunction ;
-!Punctuation ;
+Punctuation ;
 

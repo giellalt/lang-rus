@@ -40,7 +40,7 @@ Noun Stress Pattern
 
 "1" =1= ①      irregular NomPl: M-а́, N-ы
 "2" =2= ②      irregular GenPl: M-zero, N-ов, F-ей
-
+"3" =3= ③      и-stems only: LocSg and FemDatSg have possible -е (in addition to the usual -и)
 йо      «ё»     indicates alternation of e/ё in stem
 
 <>              e.g. мо < жо 1а > indicates that the noun is Masc Anim, but declines like Fem Anim 1a
@@ -54,7 +54,7 @@ Noun Stress Pattern
 {3      §3      No singular for morphological reasons (pg 74)
 {4      §4      Masculine ~ище, in colloquial speech, feminine endings occur (pg 74)
 {5      §5      Masculine ~ишко, in colloquial speech, feminine endings occur (pg 74)
-{6      §6      ~ина
+{6      §6      ~ина: MascAccSg has substandard -о
 
 @       ∆       Irregular morphology
 %       ♢       Set phrases in which morphology differs from the norm

@@ -59,7 +59,7 @@
  * +Imprs             = Impersonal (cannot have explicit subject)
 
 !!Nominal MSP
- * +Msc +Fem +Neu +MscFem   = grammatical gender,  +MscFem = common gender
+ * +Msc +Fem +Neu +MFN   = grammatical gender,  +MFN = gender unspecifiable (pl tantum)
  * +Sem/Sur +Sem/Pat        = Surname (фамилия), Patronymic
  * +Sem/Ant +Sem/Alt        = Anthroponym/Given name, Other
  * +Sg +Pl                  = number
@@ -98,5 +98,4 @@
  * Preposition ;    
  * Pronoun ;	     
  * Verb ;		     
-
 

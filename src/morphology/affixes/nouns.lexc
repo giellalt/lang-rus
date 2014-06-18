@@ -31,6 +31,14 @@ LEXICON соб-м_0
 +N+Prop+Sem/Alt+Msc: Indecl_Sg_inan ;
 +N+Prop+Sem/Alt+Msc: Indecl_Pl_inan ;
 
+LEXICON соб-с_0
++N+Prop+Sem/Alt+Neu: Indecl_Sg_inan ;
++N+Prop+Sem/Alt+Neu: Indecl_Pl_inan ;
+
+LEXICON соб-ж_0
++N+Prop+Sem/Alt+Fem: Indecl_Sg_inan ;
++N+Prop+Sem/Alt+Fem: Indecl_Pl_inan ;
+
 LEXICON м_a
 +N+Msc: MSgStem ;
 +N+Msc: ыPlStem ;
@@ -59,6 +67,21 @@ LEXICON соб-м_a
 +N+Prop+Sem/Alt+Msc: MSgStem ;
 +N+Prop+Sem/Alt+Msc: ыPlStem ;
 
+LEXICON соб-мн._[м_a]
++N+Prop+Sem/Alt+Msc: ыPlStem ;
+
+LEXICON соб-м_a?
++N+Prop+Sem/Alt+Msc: MSgStem ;
++N+Prop+Sem/Alt+Msc: ыPlStem_gPrb ;
+
+LEXICON соб-м_a-
++N+Prop+Sem/Alt+Msc: MSgStem ;
++N+Prop+Sem/Alt+Msc: ыPlStem_Prb ;
+
+LEXICON соб-м_a-_П2
+соб-м_a- ;
++N+Prop+Sem/Alt: MscLoc2_inan ;
+
 LEXICON мн._[м_a]
 +N+Msc: ыPlStem ;
 
@@ -70,15 +93,15 @@ LEXICON мн._от_м_a
 
 LEXICON м_a_П2
 м_a ;
-MscLoc2_inan ;
++N: MscLoc2_inan ;
 
 LEXICON м_a_[П2]
 м_a ;
-MscLoc2_inan_Fac ;
++N: MscLoc2_inan_Fac ;
 
 LEXICON м_a_[П2]_Р2
 м_a ;
-MscLoc2_inan_Fac ;
++N: MscLoc2_inan_Fac ;
 MscGen2_inan ;
 
 LEXICON м_a_Р2
@@ -120,16 +143,16 @@ LEXICON м_a-
 
 LEXICON м_a-_П2
 м_a- ;
-MscLoc2_inan ;
++N: MscLoc2_inan ;
 
 LEXICON м_a-_П2_Р2
 м_a- ;
-MscLoc2_inan ;
++N: MscLoc2_inan ;
 MscGen2_inan ;
 
 LEXICON м_a-_[П2]_Р2
 м_a- ;
-MscLoc2_inan_Fac ;
++N: MscLoc2_inan_Fac ;
 MscGen2_inan ;
 
 LEXICON м_a-_Р2
@@ -139,6 +162,13 @@ LEXICON м_a-_Р2
 LEXICON м_b
 +N+Msc: MSgEnd ;
 +N+Msc: ыPlEnd ;
+
+LEXICON соб-м_b
++N+Prop+Sem/Alt+Msc: MSgEnd ;
++N+Prop+Sem/Alt+Msc: ыPlEnd ;
+
+LEXICON соб-мн._[м_b]
++N+Prop+Sem/Alt+Msc: ыPlEnd ;
 
 LEXICON м_b_косв._формы_затрудн.
 +N+Msc: MSgEnd_ObliquePrb ;
@@ -156,15 +186,15 @@ LEXICON мн._[м_b]_3
 
 LEXICON м_b_П2
 м_b ;
-MscLoc2_inan ;
++N: MscLoc2_inan ;
 
 LEXICON м_b_[П2]
 м_b ;
-MscLoc2_inan_Fac ;
++N: MscLoc2_inan_Fac ;
 
 LEXICON м_b_П2_Р2
 м_b ;
-MscLoc2_inan ;
++N: MscLoc2_inan ;
 MscGen2_inan ;
 
 LEXICON м_b_П2_Р2_мох
@@ -205,20 +235,20 @@ LEXICON м_c
 
 LEXICON м_c_П2
 м_c ;
-MscLoc2_inan ;
++N: MscLoc2_inan ;
 
 LEXICON м_c_[П2]
 м_c ;
-MscLoc2_inan_Fac ;
++N: MscLoc2_inan_Fac ;
 
 LEXICON м_c_П2_Р2
 м_c ;
-MscLoc2_inan ;
++N: MscLoc2_inan ;
 MscGen2_inan ;
 
 LEXICON м_c_[П2]_Р2
 м_c ;
-MscLoc2_inan_Fac ;
++N: MscLoc2_inan_Fac ;
 MscGen2_inan ;
 
 LEXICON м_c_Р2
@@ -232,12 +262,12 @@ LEXICON м_c-
 LEXICON м_c-_П2
 +N+Msc: MSgStem ;
 +N+Msc: ыPlEnd_Prb ;
-MscLoc2_inan ;
++N: MscLoc2_inan ;
 
 LEXICON м_c-_[П2]_Р2
 +N+Msc: MSgStem ;
 +N+Msc: ыPlEnd_Prb ;
-MscLoc2_inan_Fac ;
++N: MscLoc2_inan_Fac ;
 MscGen2_inan ;
 
 LEXICON м_c-_Р2
@@ -251,14 +281,14 @@ LEXICON м_c1
 
 LEXICON м_c1_П2
 м_c1 ;
-MscLoc2_inan ;
++N: MscLoc2_inan ;
 
 LEXICON м_c1_П2_перёд
 +N+Msc:ёд MSgNomZ ;
 +N+Msc:ёд MSgAccZ ;
 +N+Msc:ед MSgObliqStem ;
 +N+Msc:ёд аPlEnd ;
-MscLoc2_inan ;
++N: MscLoc2_inan ;
 
 LEXICON м_c1_П2_год
 :го́д м_c1_П2 ;
@@ -266,16 +296,16 @@ LEXICON м_c1_П2_год
 
 LEXICON м_c1_[П2]
 м_c1 ;
-MscLoc2_inan_Fac ;
++N: MscLoc2_inan_Fac ;
 
 LEXICON м_c1_П2_Р2
 м_c1 ;
-MscLoc2_inan ;
++N: MscLoc2_inan ;
 MscGen2_inan ;
 
 LEXICON м_c1_[П2]_Р2
 м_c1 ;
-MscLoc2_inan_Fac ;
++N: MscLoc2_inan_Fac ;
 MscGen2_inan ;
 
 LEXICON м_c1_Р2
@@ -293,7 +323,7 @@ MscGen2_inan ;
 LEXICON м_c12_П2
 +N+Msc: MSgStem ;
 +N+Msc: аPlEnd_zero ;
-MscLoc2_inan ;
++N: MscLoc2_inan ;
 
 LEXICON м_c2
 +N+Msc: MSgStem ;
@@ -319,12 +349,12 @@ LEXICON м_d1_К_ЧЬ
 LEXICON м_d1_П2_JPl
 +N+Msc: MSgEnd ;
 +N+Msc:%^Fей аPlStem ;
-MscLoc2_inan ;
++N: MscLoc2_inan ;
 
 LEXICON м_d1_П2_К_ЧЬ
 +N+Msc:к MSgEnd ;
-:к MscLoc2_inan ;
 +N+Msc:ч%^Fей аPlStem ;
++N:к MscLoc2_inan ;
 
 LEXICON м_d2
 +N+Msc: MSgEnd ;
@@ -336,7 +366,7 @@ LEXICON м_e
 
 LEXICON м_e_П2
 м_e ;
-MscLoc2_inan ;
++N: MscLoc2_inan ;
 
 LEXICON м_e_П2_год
 :го́д м_e_П2 ;
@@ -378,6 +408,10 @@ LEXICON м_[п_a]
 +N+Msc: MSg_SubstAdj_Stem ;
 +N+Msc: Pl_SubstAdj_Stem ;
 
+LEXICON соб-м_[п_a]
++N+Prop+Sem/Alt+Msc: MSg_SubstAdj_Stem ;
++N+Prop+Sem/Alt+Msc: Pl_SubstAdj_Stem ;
+
 LEXICON м_[п_a/c']
 м_[п_a] ;
 
@@ -412,6 +446,16 @@ LEXICON м_[п_b]
 LEXICON мо_0
 +N+Msc: Indecl_Sg_anim ;
 +N+Msc: Indecl_Pl_anim ;
+
+LEXICON соб-мо_0_V ! TODO FIX CHECK need to be sorted. see pg 738, point 2
++N+Prop+Sem/Ant+Msc: Indecl_Sg_anim ;
++N+Prop+Sem/Ant+Msc: Indecl_Pl_anim ;
+:%> Patronymic_stem_Fac ;
+
+LEXICON соб-мо_0_C
++N+Prop+Sem/Ant+Msc: Indecl_Sg_anim ;
++N+Prop+Sem/Ant+Msc: Indecl_Pl_anim ;
+о:%>о Patronymic_stem_Fac ;
 
 LEXICON мо_a
 +N+Msc: MSgStem_anim ;
@@ -704,9 +748,22 @@ LEXICON мо-жо_a[2]
 мо_[жо_a[2]] ;
 жо_a[2] ;
 
-LEXICON соб-мо_[жо_a]
+LEXICON соб-мо_[жо_a] !TODO FIX CHECK Some of these can hypothetically have patronymics (not the hypochoristics)
 +N+Prop+Sem/Ant+Msc: FSgStem_anim ;
 +N+Prop+Sem/Ant+Msc: ыPlStem_anim ;
+
+LEXICON соб-мо_[жо_a]_28
+а+N+Prop+Sem/Ant+Msc:а FSgStem_anim ;
+а+N+Prop+Sem/Ant+Msc:а ыPlStem_anim ;
+ич+N+Prop+Sem/Pat+Msc:ич MSgStem_anim ;
+ич+N+Prop+Sem/Pat+Msc:ич ыPlStem_anim ;
+ична+N+Prop+Sem/Pat+Fem:ична FSgStem_anim ;
+ична+N+Prop+Sem/Pat+Fem:ична ыPlStem_anim ;
+о:%>о Patronymic_stem_Fac ;
+
+LEXICON соб-мо_[жо_a?]
++N+Prop+Sem/Ant+Msc: FSgStem_anim ;
++N+Prop+Sem/Ant+Msc: ыPlStem_anim_gPrb ;
 
 LEXICON соб-мо-жо_a
 +N+Prop+Sem/Ant+Msc: FSgStem_anim ;
@@ -860,6 +917,11 @@ MSgNomZ_anim ;
 +Anim+Sg+Acc:%>а # ;
 MSgObliqStem_anim ;
 
+LEXICON MSgStem_anim_Fac
+MSgNomZ_anim_Fac ;
++Anim+Sg+Acc+Fac:%>а # ;
+MSgObliqStem_anim_Fac ;
+
 LEXICON MSgEnd !Inanimate
 MSgNomZ ;
 MSgAccZ ;
@@ -889,6 +951,9 @@ LEXICON MSgNomZ_Fac
 LEXICON MSgNomZ_anim
 +Anim+Sg+Nom: # ;
 
+LEXICON MSgNomZ_anim_Fac
++Anim+Sg+Nom+Fac: # ;
+
 LEXICON MSgAccZ
 +Inan+Sg+Acc: # ;
 
@@ -902,7 +967,7 @@ LEXICON MscGen2_inan
 +N+Msc+Inan+Sg+Gen2:у # ;
 
 LEXICON MscLoc2_inan
-+N+Msc+Inan+Sg+Loc2:у́ # ;
++Msc+Inan+Sg+Loc2:у́ # ;
 
 LEXICON MscLoc2_inan_Fac
 +N+Msc+Inan+Sg+Loc2+Fac:у́ # ;
@@ -937,6 +1002,12 @@ LEXICON MSgObliqStem_anim
 +Anim+Sg+Loc:%>е # ;
 +Anim+Sg+Dat:%>у # ;
 +Anim+Sg+Ins:%>ом # ;
+
+LEXICON MSgObliqStem_anim_Fac
++Anim+Sg+Gen+Fac:%>а # ;
++Anim+Sg+Loc+Fac:%>е # ;
++Anim+Sg+Dat+Fac:%>у # ;
++Anim+Sg+Ins+Fac:%>ом # ;
 
 LEXICON MSgObliqEnd
 +Inan+Sg+Gen:%>а́ # ;
@@ -1079,6 +1150,14 @@ LEXICON с_полымя
 LEXICON с_a
 +N+Neu: NSgStem ;
 +N+Neu: аPlStem ;     !Cyrillic 'а' in 'аPl'
+
+LEXICON соб-с_a
++N+Prop+Sem/Alt+Neu: NSgStem ;
++N+Prop+Sem/Alt+Neu: аPlStem ;
+
+LEXICON соб-с_a-
++N+Prop+Sem/Alt+Neu: NSgStem ;
++N+Prop+Sem/Alt+Neu: аPlStem_Prb ;
 
 LEXICON с_a_w/GPl_ей
 с_a ;
@@ -1511,6 +1590,13 @@ LEXICON соб-ж_a
 +N+Prop+Sem/Alt+Fem: FSgStem ;
 +N+Prop+Sem/Alt+Fem: ыPlStem ;
 
+LEXICON соб-мн._[ж_a]
++N+Prop+Sem/Alt+Fem: ыPlStem ;
+
+LEXICON соб-ж_a?
++N+Prop+Sem/Alt+Fem: FSgStem ;
++N+Prop+Sem/Alt+Fem: ыPlStem_gPrb ;
+
 LEXICON мн._[ж_a]_3
 мн._[ж_a] ;
 
@@ -1548,6 +1634,10 @@ LEXICON ж_a-
 LEXICON ж_8a
 +N+Fem: FьSgStem ;
 +N+Fem: ыPlStem ;
+
+LEXICON соб-ж_8a
++N+Prop+Sem/Alt+Fem: FьSgStem ;
++N+Prop+Sem/Alt+Fem: ыPlStem ;
 
 LEXICON ж_8a_ь_ья/ьев
 +N+Fem:ь FьSgStem ;
@@ -1593,6 +1683,21 @@ LEXICON FemLoc2_inan_Fac
 LEXICON ж_b ! This also includes ж_b' because of the fleeting vowel rule in twolc
 +N+Fem: FSgEnd ;
 +N+Fem: ыPlEnd ;
+
+LEXICON соб-ж_b
++N+Prop+Sem/Alt+Fem: FSgEnd ;
++N+Prop+Sem/Alt+Fem: ыPlEnd ;
+
+LEXICON соб-мн._[ж_b]
++N+Prop+Sem/Alt+Fem: ыPlEnd ;
+
+LEXICON соб-ж_b_Р._мн._нет
++N+Prop+Sem/Alt+Fem: FSgEnd ;
++N+Prop+Sem/Alt+Fem: ыPlEnd_gPrb ;
+
+LEXICON соб-ж_b-
++N+Prop+Sem/Alt+Fem: FSgEnd ;
++N+Prop+Sem/Alt+Fem: ыPlEnd_Prb ;
 
 LEXICON ж_7b_Loc/Dat-и́_Inst-е́й ! лития, паремия
 +Inan+Sg+Nom:%>а́ # ;
@@ -1857,6 +1962,19 @@ LEXICON соб-жо_a
 +N+Prop+Fem: FSgStem_anim ;
 +N+Prop+Fem: ыPlStem_anim ;
 
+LEXICON соб-мн._[жо_a]
++N+Prop+Fem: ыPlStem_anim ;
+
+LEXICON соб-жо_a_MscFac
++N+Prop+Fem: FSgStem_anim ;
++N+Prop+Fem: ыPlStem_anim ;
++N+Prop+Msc: FSgStem_anim_Fac ;
++N+Prop+Msc: ыPlStem_anim_Fac ;
+
+LEXICON соб-жо_a?
++N+Prop+Fem: FSgStem_anim ;
++N+Prop+Fem: ыPlStem_anim_gPrb ;
+
 LEXICON жо_[жо_a2]
 жо_a2 ;
 
@@ -1873,9 +1991,21 @@ LEXICON жо_8a
 +N+Fem: FьSgStem_anim ;
 +N+Fem: ыPlStem_anim ;
 
+LEXICON соб-жо_8a
++N+Prop+Fem: FьSgStem_anim ;
++N+Prop+Fem: ыPlStem_anim ;
+
 LEXICON жо_b ! This also includes ж_b' because of the fleeting vowel rule in twolc
 +N+Fem: FSgEnd_anim ;
 +N+Fem: ыPlEnd_anim ;
+
+LEXICON соб-жо_b
++N+Prop+Fem: FSgEnd_anim ;
++N+Prop+Fem: ыPlEnd_anim ;
+
+LEXICON соб-жо_b?
++N+Prop+Fem: FSgEnd_anim ;
++N+Prop+Fem: ыPlEnd_anim_gPrb ;
 
 LEXICON жо_b_GPlzero ! This also includes ж_b' because of the fleeting vowel rule in twolc
 +N+Fem: FSgEnd_anim ;
@@ -1943,9 +2073,17 @@ LEXICON ж_[п_a]
 +N+Fem: FSg_SubstAdj_Stem ;
 +N+Fem: Pl_SubstAdj_Stem ;
 
+LEXICON соб-ж_[п_a]
++N+Prop+Sem/Alt+Fem: FSg_SubstAdj_Stem ;
++N+Prop+Sem/Alt+Fem: Pl_SubstAdj_Stem ;
+
 LEXICON ж_[п_b]
 +N+Fem: FSg_SubstAdj_End ;
 +N+Fem: Pl_SubstAdj_End ;
+
+LEXICON соб-ж_[п_b]
++N+Prop+Sem/Alt+Fem: FSg_SubstAdj_End ;
++N+Prop+Sem/Alt+Fem: Pl_SubstAdj_End ;
 
 LEXICON ж_[мс_a]
 +N+Fem: Noun_мс-п_a_Fem_inan ;
@@ -2143,6 +2281,12 @@ LEXICON Patronymic_stem
 вна+N+Prop+Sem/Pat+Fem:вна FSgStem_anim ;
 вна+N+Prop+Sem/Pat+Fem:вна ыPlStem_anim ;
 
+LEXICON Patronymic_stem_Fac
+вич+N+Prop+Sem/Pat+Msc:вич MSgStem_anim_Fac ;
+вич+N+Prop+Sem/Pat+Msc:вич ыPlStem_anim_Fac ;
+вна+N+Prop+Sem/Pat+Fem:вна FSgStem_anim_Fac ;
+вна+N+Prop+Sem/Pat+Fem:вна ыPlStem_anim_Fac ;
+
 LEXICON FSg_SubstAdj_Stem
 +Inan: FSg_SubstAdj_Stem_All ;
 
@@ -2198,6 +2342,10 @@ LEXICON FSgStem_anim
 +Anim+Sg+Acc:%>у # ;
 FSgObliqStem_anim ;
 
+LEXICON FSgStem_anim_Fac
++Anim+Sg+Acc+Fac:%>у # ;
+FSgObliqStem_anim_Fac ;
+
 LEXICON FSgObliqStem_ext
 +Sg+Nom:%>а # ;
 +Sg+Gen:%>ы # ;
@@ -2206,11 +2354,22 @@ LEXICON FSgObliqStem_ext
 +Sg+Ins:%>ой # ;
 +Sg+Ins+Fac:%>ою # ;
 
+LEXICON FSgObliqStem_ext_Fac
++Sg+Nom+Fac:%>а # ;
++Sg+Gen+Fac:%>ы # ;
++Sg+Loc+Fac:%>е # ;
++Sg+Dat+Fac:%>е # ;
++Sg+Ins+Fac:%>ой # ;
++Sg+Ins+Fac:%>ою # ;
+
 LEXICON FSgObliqStem
 +Inan: FSgObliqStem_ext ;
 
 LEXICON FSgObliqStem_anim
 +Anim: FSgObliqStem_ext ;
+
+LEXICON FSgObliqStem_anim_Fac
++Anim: FSgObliqStem_ext_Fac ;
 
 LEXICON FSgObliqEnd_ext
 +Sg+Nom:%>а́ # ;
@@ -2220,19 +2379,34 @@ LEXICON FSgObliqEnd_ext
 +Sg+Ins:%>о́й # ;
 +Sg+Ins+Fac:%>о́ю # ;
 
+LEXICON FSgObliqEnd_ext_Fac
++Sg+Nom+Fac:%>а́ # ;
++Sg+Gen+Fac:%>ы́ # ;
++Sg+Loc+Fac:%>е́ # ;
++Sg+Dat+Fac:%>е́ # ;
++Sg+Ins+Fac:%>о́й # ;
++Sg+Ins+Fac:%>о́ю # ;
+
 LEXICON FSgObliqEnd
 +Inan: FSgObliqEnd_ext ;
 
 LEXICON FSgObliqEnd_anim ! Only used for masculine nouns!
 +Anim: FSgObliqEnd_ext ;
 
+LEXICON FSgObliqEnd_anim_Fac ! Only used for masculine nouns!
++Anim: FSgObliqEnd_ext_Fac ;
+
 LEXICON FSgEnd
 +Inan+Sg+Acc:%>у́ # ;
 FSgObliqEnd ;
 
-LEXICON FSgEnd_anim ! Only used for masculine nouns!
+LEXICON FSgEnd_anim
 +Anim+Sg+Acc:%>у́ # ;
 FSgObliqEnd_anim ;
+
+LEXICON FSgEnd_anim_Fac
++Anim+Sg+Acc+Fac:%>у́ # ;
+FSgObliqEnd_anim_Fac ;
 
 LEXICON FSgRetr
 +Inan+Sg+Acc:%>у # ;
@@ -2243,14 +2417,12 @@ LEXICON FSgRetr_anim
 FSgObliqEnd_anim ;
 
 LEXICON FьSgStem
-+Sg+Nom:%>ь # ;
-+Sg+Acc:%>ь # ;
-+Sg+Gen:%>и # ;
-+Sg+Loc:%>и # ;
-+Sg+Dat:%>и # ;
-+Sg+Ins:%>ью # ;
++Inan: FьSgStem_all ;
 
 LEXICON FьSgStem_anim
++Anim: FьSgStem_all ;
+
+LEXICON FьSgStem_all
 +Sg+Nom:%>ь # ;
 +Sg+Acc:%>ь # ;
 +Sg+Gen:%>и # ;
@@ -2503,6 +2675,12 @@ LEXICON ыPlStem_anim_Prb
 ыPlNomStem_anim_Prb ;
 PlAccStem_anim_Prb ;
 PlObliqStem_anim_Prb ;
+
+LEXICON ыPlStem_anim_gPrb      !Inanimate
+ыPlNomStem_anim ;
++Anim+Pl+Acc+Prb:%>ей # ;
++Anim+Pl+Gen+Prb:%>ей # ;
+PlPeriphStem_anim ;
 
 LEXICON ыPlStem_anim_ей      !Inanimate
 ыPlNomStem_anim ;

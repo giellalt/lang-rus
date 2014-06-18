@@ -55,6 +55,19 @@ Noun Stress Pattern
 {4      §4      Masculine ~ище, in colloquial speech, feminine endings occur (pg 74)
 {5      §5      Masculine ~ишко, in colloquial speech, feminine endings occur (pg 74)
 {6      §6      ~ина: MascAccSg has substandard -о
+{19     §19     Facultative indeclineable
+{20     §20     NomSg -о, everything else feminine. Facultative NomSg -a
+{21     §21     
+{22     §22     
+{23     §23     
+{24     §24     
+{25     §25     
+{26     §26     
+{27     §27     
+{28     §28     Patronymic -ич/-ична. Facultative -ович/-овна
+{29     §29     
+{30     §30     
+
 
 @       ∆       Irregular morphology
 %       ♢       Set phrases in which morphology differs from the norm

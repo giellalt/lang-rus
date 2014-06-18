@@ -35,6 +35,7 @@ Multichar_Symbols
 +CS     !!= * @CODE@ = Subordinating conjunction
 +Interj !!= * @CODE@ = Interjection
 +Pcle   !!= * @CODE@ = Particle
++Paren   !!= * @CODE@ = Parenthetical вводное слово
 
 !! !!Sub-POS
 +Prop   !!= * @CODE@ = Proper

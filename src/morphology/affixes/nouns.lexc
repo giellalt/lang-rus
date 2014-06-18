@@ -387,7 +387,7 @@ LEXICON м_f
 +N+Msc: ыPlAnom ;
 
 LEXICON м_8b ! путь
-+N+Msc: FьSgEnd_MostCases ;
++N+Msc+Inan: FьSgEnd_MostCases ;
 +N+Msc+Inan+Sg+Ins:%>о́м # ;
 +N+Msc: ыPlEnd ;
 
@@ -398,7 +398,7 @@ LEXICON м_[ж_a]
 LEXICON м-ж_[ж_a]_6
 м_[ж_a] ;
 ж_a ;
-+N+Msc+Sg+Acc+Use/Sub:%>о # ;
++N+Msc+Inan+Sg+Acc+Use/Sub:%>о # ;
 
 LEXICON м_[мс_a]
 +N+Msc: Noun_мс-п_a_Msc_inan ;
@@ -1185,8 +1185,8 @@ LEXICON с_a_озеро
 
 LEXICON с_a_утро
 с_a ;
-+N+Neu+Sg+Gen:%>а́ # ;
-+N+Neu+Sg+Dat:%>у́ # ;
++N+Neu+Inan+Sg+Gen:%>а́ # ;
++N+Neu+Inan+Sg+Dat:%>у́ # ;
 +N+Neu+Inan+Pl+Dat:%>а́м # ;
 +N+Neu+Inan+Pl+Ins:%>а́ми # ;
 
@@ -1428,12 +1428,12 @@ LEXICON со_a1[2]
 +N+Neu+Anim+Pl+Gen+Fac:%>ов%^G # ;
 
 LEXICON со_дитя
-+N+Neu+Sg+Nom:дитя́ # ;
-+N+Neu+Sg+Acc:дитя́ # ;
-+N+Neu+Sg+Gen:дитя́ти # ;
-+N+Neu+Sg+Loc:дитя́ти # ;
-+N+Neu+Sg+Dat:дитя́ти # ;
-+N+Neu+Sg+Ins:дитя́тей # ;
++N+Neu+Anim+Sg+Nom:дитя́ # ;
++N+Neu+Anim+Sg+Acc:дитя́ # ;
++N+Neu+Anim+Sg+Gen:дитя́ти # ;
++N+Neu+Anim+Sg+Loc:дитя́ти # ;
++N+Neu+Anim+Sg+Dat:дитя́ти # ;
++N+Neu+Anim+Sg+Ins:дитя́тей # ;
 +N+Neu:де́ть ыPlNomStem_anim ;
 +N+Neu+Anim+Pl+Acc:дете́й # ;
 +N+Neu+Anim+Pl+Gen:дете́й # ;
@@ -1644,12 +1644,12 @@ LEXICON ж_8a_ь_ья/ьев
 +N+Fem:%^Fий аPlStem ;
 
 LEXICON ж_8a_полночь
-+N+Fem+Sg+Nom:по́лночь # ;
-+N+Fem+Sg+Acc:по́лночь # ;
-+N+Fem+Sg+Gen:полу́ночи # ;
-+N+Fem+Sg+Loc:полу́ночи # ;
-+N+Fem+Sg+Dat:полу́ночи # ;
-+N+Fem+Sg+Ins:полу́ночью # ;
++N+Fem+Inan+Sg+Nom:по́лночь # ;
++N+Fem+Inan+Sg+Acc:по́лночь # ;
++N+Fem+Inan+Sg+Gen:полу́ночи # ;
++N+Fem+Inan+Sg+Loc:полу́ночи # ;
++N+Fem+Inan+Sg+Dat:полу́ночи # ;
++N+Fem+Inan+Sg+Ins:полу́ночью # ;
 +N+Fem:полу́ночь ыPlStem ;
 
 LEXICON мн._[ж_8a]
@@ -1675,10 +1675,10 @@ LEXICON ж_8a-_П2
 FemLoc2_inan ;
 
 LEXICON FemLoc2_inan
-+N+Fem+Sg+Loc2:и́ # ;
++N+Fem+Inan+Sg+Loc2:и́ # ;
 
 LEXICON FemLoc2_inan_Fac
-+N+Fem+Sg+Loc2+Fac:и́ # ;
++N+Fem+Inan+Sg+Loc2+Fac:и́ # ;
 
 LEXICON ж_b ! This also includes ж_b' because of the fleeting vowel rule in twolc
 +N+Fem: FSgEnd ;
@@ -2986,8 +2986,8 @@ LEXICON Pl_ин_anim
 PlPeriphEnd_anim ;
 
 LEXICON пол-NomAccOnly ! see Zaliznjak §1 (pg 73)
-+N+Neu+Sg+Nom: # ;
-+N+Neu+Sg+Acc: # ;
++N+Neu+Inan+Sg+Nom: # ;
++N+Neu+Inan+Sg+Acc: # ;
 +N+Neu+Inan+Pl+Nom: # ;
 +N+Neu+Inan+Pl+Acc: # ;
 

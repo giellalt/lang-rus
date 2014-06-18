@@ -3599,6 +3599,10 @@ LEXICON св_нп_15a
 +V+Perf+IV: Perf_Inf_V_stem ;
 +V+Perf+IV:н Perf_Fut_1_stem ;
 
+LEXICON св_нп_15a_безл.
++V+Perf+IV: Perf_Inf_V_stem_безл. ;
++V+Perf+IV:н Perf_Fut_1_stem_безл. ;
+
 LEXICON св_15a_R
 +V+Perf+IV: Perf_Inf_stem_R ;
 +V+Perf+IV:н Perf_Fut_1_stem_R ;

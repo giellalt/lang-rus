@@ -7,10 +7,12 @@ LEXICON Punctuation
 +CLB:%;	  # ;
 +CLB:%!	  # ;
 +CLB:%?	  # ;
++CLB:%.%.%. # ;
++CLB:%… # ;
 +PUNCT:%-  # ;
-+HYPH:%" # ;
-+HYPH:%« # ;
-+HYPH:%» # ;
++QUOT:%" # ;
++QUOT:%« # ;
++QUOT:%» # ;
 +PAR:%[ # ;
 +PAR:%] # ;
 +PAR:%( # ;

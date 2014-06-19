@@ -1,12 +1,12 @@
 
-LEXICON числ.-п_[п_a]
-+Num+A: п_a  ; 
-
 LEXICON DIGITLEX
 +Num: #  ; 
 
+LEXICON числ.-п_[п_a]
++Num+A: LF_stem  ; 
+
 LEXICON числ.-п_[п_b]
-+Num+A: п_b  ; 
++Num+A: LF_end  ; 
 
 LEXICON числ.-п_[мс_a]
 +Num+A: мс-п_a_Msc  ; 

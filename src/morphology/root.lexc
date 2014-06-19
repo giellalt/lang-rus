@@ -10,8 +10,10 @@ Multichar_Symbols
 А́ Е́ Ё́ И́ О́ У́ Ы́ Э́ Ю́ Я́   !!= * @CODE@
 А̀ Ѐ Ё̀ Ѝ О̀ У̀ Ы̀ Э̀ Ю̀ Я̀
 
+
 !! !!Markers
 
+¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ⁰ ⁻ !!= * @CODE@ = Used to enumerate homonymous lemmas
 %>   !!= * @CODE@ = End-of-stem marker (nominals)
 %<   !!= * @CODE@ = End-of-stem marker (verbs)
 %^F  !!= * @CODE@ = Fleeting vowel marker

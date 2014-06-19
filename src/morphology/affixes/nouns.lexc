@@ -1120,11 +1120,11 @@ LEXICON Pl_SubstAdj_Stem_anim_R
 
 LEXICON Pl_SubstAdj_End
 +Inan+Pl+Acc:%>ы́е # ;
-+Inan Pl_SubstAdj_End_Oblique ;
++Inan: Pl_SubstAdj_End_Oblique ;
 
 LEXICON Pl_SubstAdj_End_anim
 +Anim+Pl+Acc:%>ы́х # ;
-+Anim Pl_SubstAdj_End_Oblique ;
++Anim: Pl_SubstAdj_End_Oblique ;
 
 LEXICON Pl_SubstAdj_End_Oblique
 +Pl+Nom:%>ы́е # ;

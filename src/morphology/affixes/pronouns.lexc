@@ -1,8 +1,24 @@
 LEXICON мс-п_0
 +Det: п_0_inflect ;
 
+LEXICON Interr_мс-п_SFonly_end
++Det+Interr: SF_b ;
++Det+Rel: SF_b ;
+
 LEXICON мс-п_SFonly_end
 +Det: SF_b ;
+
+LEXICON Interr_мс-п_a
++Det+Interr: мс-п_a_Msc ;
++Det+Interr: мс-п_a_Neu ;
++Det+Interr: мс-п_a_Fem ;
++Det+Interr: мс-п_a_Pl_inananim ;
+
+LEXICON Rel_мс-п_a
++Det+Rel: мс-п_a_Msc ;
++Det+Rel: мс-п_a_Neu ;
++Det+Rel: мс-п_a_Fem ;
++Det+Rel: мс-п_a_Pl_inananim ;
 
 LEXICON мс-п_a
 +Det: мс-п_a_Msc ;
@@ -94,6 +110,18 @@ LEXICON мс-п_a_Ins
 +Fem+Sg+Ins:%>ой # ;
 +Fem+Sg+Ins+Fac:%>ою # ;
 +MFN+Pl+Ins:%>ыми # ;
+
+LEXICON Interr_мс-п_b
++Det+Interr: мс-п_b_Msc ;
++Det+Interr: мс-п_b_Neu ;
++Det+Interr: мс-п_b_Fem ;
++Det+Interr: мс-п_b_Pl_inananim ;
+
+LEXICON Rel_мс-п_b
++Det+Rel: мс-п_b_Msc ;
++Det+Rel: мс-п_b_Neu ;
++Det+Rel: мс-п_b_Fem ;
++Det+Rel: мс-п_b_Pl_inananim ;
 
 LEXICON мс-п_b
 +Det: мс-п_b_Msc ;
@@ -545,6 +573,15 @@ LEXICON мс-п_этот
 +Det+MFN+Pl+Dat:им # ;
 +Det+MFN+Pl+Ins:ими # ;
 
+LEXICON RelPron_мс-п_[п_a]
++Pron+Rel: LF_stem ;
+
+LEXICON Interr_мс-п_[п_a]
++Det+Interr: LF_stem ;
+
+LEXICON Rel_мс-п_[п_a]
++Det+Rel: LF_stem ;
+
 LEXICON мс-п_[п_a]
 +Det: LF_stem ;
 
@@ -615,6 +652,12 @@ LEXICON мс-п_[п_a]_экий
 +Det+Neu+Sg+Dat:оему # ;
 +Det+Fem+Sg+Nom:а # ;
 
+LEXICON Interr_мс-п_[п_b]
++Det+Interr: LF_end ;
+
+LEXICON Rel_мс-п_[п_b]
++Det+Rel: LF_end ;
+
 LEXICON мс-п_[п_b]
 +Det: LF_end ;
 
@@ -634,6 +677,12 @@ LEXICON мс_кто ! TODO FIX How to tag animacy for кто что and derivati
 +Pron+Interr: мс_кто_Loc ;
 +Pron+Interr: мс_кто_Dat ;
 +Pron+Interr: мс_кто_Ins ;
++Pron+Rel: мс_кто_Nom ;
++Pron+Rel: мс_кто_Acc ;
++Pron+Rel: мс_кто_Gen ;
++Pron+Rel: мс_кто_Loc ;
++Pron+Rel: мс_кто_Dat ;
++Pron+Rel: мс_кто_Ins ;
 
 LEXICON мс_кто_Nom
 +Msc+Sg+Nom:кто́ # ;
@@ -712,6 +761,12 @@ LEXICON мс_что
 +Pron+Interr: мс_что_Loc ;
 +Pron+Interr: мс_что_Dat ;
 +Pron+Interr: мс_что_Ins ;
++Pron+Rel: мс_что_Nom ;
++Pron+Rel: мс_что_Acc ;
++Pron+Rel: мс_что_Gen ;
++Pron+Rel: мс_что_Loc ;
++Pron+Rel: мс_что_Dat ;
++Pron+Rel: мс_что_Ins ;
 
 LEXICON мс_что_Nom
 +Neu+Sg+Nom:что́ # ;

@@ -1,6 +1,6 @@
 
-LEXICON DIGITLEX
-+Num: #  ; 
+!LEXICON DIGITLEX
+!+Num: #  ; 
 
 LEXICON числ.-п_[п_a]
 +Num+A: LF_stem  ; 
@@ -273,10 +273,6 @@ LEXICON числ._сколько-нибудь
 +Num+Ins:ими-нибудь #  ; 
 
 LEXICON Numeral
-
-! Temporary numeral lexicon
-<[%0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9]+>  DIGITLEX ; ! Use/Circ
-
 один:од%^Fи́н 1  ; 
 полтора:пол полтора  ; ! числ._И.,_В.—м,_с_полтора/,_ж_полторы/;_Р.,_Д.,_Т.,_П._полу/тора;_см._также_стр._66 ;
 оба:о́б оба  ; ! числ._И.,_В._неод._—_м,_с_о/ба,_ж_о/бе;_Р.,_В._одуш.,_П._—_м,_с_обо/их,_ж_обе/их;_Д._м,_с_обо/им,_ж_обе/им;_Т._м,_с_обо/ими,_ж_обе/ими;_см._также_стр._67 ;
@@ -394,3 +390,63 @@ LEXICON Numeral
 седьмой:седьм числ.-п_[п_b]  ; 
 восьмой:восьм числ.-п_[п_b]  ; 
 сороковой:сороков числ.-п_[п_b]  ; 
+
+%0:%0 NUM ; 
+№:№ DIGITLEX ; 
+DIGITLEX ; 
+LASTDIGIT ;
+
+LEXICON SQRD 
+²+Num:2 # ;  ! Dir/LR
+³+Num:3 # ;  ! Dir/LR
+²+Num:² # ; 
+³+Num:³ # ; 
++Num: # ; 
+
+LEXICON NUM
++Num: # ;
++Num+A: ABBR_LF_stem_hard ;
++Num+Prcnt:%% # ;
+км:км SQRD ;
+мм:мм SQRD ;
+см:см SQRD ;
+м:м SQRD ;
+
+LEXICON LASTDIGIT
+1:1 NUM ;
+2:2 NUM ;
+3:3 NUM ;
+4:4 NUM ;
+5:5 NUM ;
+6:6 NUM ;
+7:7 NUM ;
+8:8 NUM ;
+9:9 NUM ;
+
+LEXICON POWERS 
+!%0:%0 NUM ; ! "он"
+%0%0:%0%0 NUM ; ! "жүз"
+%0%0%0:%0%0%0 NUM ; ! "мың"
+
+LEXICON LOOP
+%,:%, DIGITLEX ; 
+%.:%. DIGITLEX ; 
+%,:%, LASTDIGIT ; 
+%.:%. LASTDIGIT ; 
+%,:%, POWERS ; 
+%.:%. POWERS ; 
+      DIGITLEX ; 
+      LASTDIGIT ;
+      POWERS ; 
+
+LEXICON DIGITLEX
+%0:%0 LOOP ; 
+1:1 LOOP ;
+2:2 LOOP ;
+3:3 LOOP ;
+4:4 LOOP ;
+5:5 LOOP ;
+6:6 LOOP ;
+7:7 LOOP ;
+8:8 LOOP ;
+9:9 LOOP ;

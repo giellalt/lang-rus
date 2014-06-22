@@ -806,6 +806,64 @@ LEXICON LF_stem_Ins
 +Fem+Sg+Ins+Fac:%>ою # ;
 +MFN+Pl+Ins:%>ыми # ;
 
+LEXICON ABBR_LF_stem_hard ! with ordinal numbers ! TODO CHECK FIX figure out how these really work.
++Msc+Sg+Nom:%-й # ;
++Neu+Sg+Nom:%-е # ;
++Fem+Sg+Nom:%-я # ;
++MFN+Pl+Nom:%-е # ;
++Msc+Inan+Sg+Acc:%-й # ;
++Msc+Anim+Sg+Acc:%-го # ;
++Neu+Sg+Acc:%-е # ;
++Fem+Sg+Acc:%-ю # ;
++MFN+Inan+Pl+Acc:%-е # ;
++MFN+Anim+Pl+Acc:%-х # ;
++Msc+Sg+Gen:%-го # ;
++Neu+Sg+Gen:%-го # ;
++Fem+Sg+Gen:%-й # ;
++MFN+Pl+Gen:%-х # ;
++Msc+Sg+Loc:%-м # ;
++Neu+Sg+Loc:%-м # ;
++Fem+Sg+Loc:%-й # ;
++MFN+Pl+Loc:%-х # ;
++Msc+Sg+Dat:%-му # ;
++Neu+Sg+Dat:%-му # ;
++Fem+Sg+Dat:%-й # ;
++MFN+Pl+Dat:%-м # ;
++Msc+Sg+Ins:%-м # ;
++Neu+Sg+Ins:%-м # ;
++Fem+Sg+Ins:%-й # ;
++Fem+Sg+Ins+Fac:%-ю # ;
++MFN+Pl+Ins:%-ми # ;
+! Facultative without the hyphen
++Msc+Sg+Nom+Fac:й # ;
++Neu+Sg+Nom+Fac:е # ;
++Fem+Sg+Nom+Fac:я # ;
++MFN+Pl+Nom+Fac:е # ;
++Msc+Inan+Sg+Acc+Fac:й # ;
++Msc+Anim+Sg+Acc+Fac:го # ;
++Neu+Sg+Acc+Fac:е # ;
++Fem+Sg+Acc+Fac:ю # ;
++MFN+Inan+Pl+Acc+Fac:е # ;
++MFN+Anim+Pl+Acc+Fac:х # ;
++Msc+Sg+Gen+Fac:го # ;
++Neu+Sg+Gen+Fac:го # ;
++Fem+Sg+Gen+Fac:й # ;
++MFN+Pl+Gen+Fac:х # ;
++Msc+Sg+Loc+Fac:м # ;
++Neu+Sg+Loc+Fac:м # ;
++Fem+Sg+Loc+Fac:й # ;
++MFN+Pl+Loc+Fac:х # ;
++Msc+Sg+Dat+Fac:му # ;
++Neu+Sg+Dat+Fac:му # ;
++Fem+Sg+Dat+Fac:й # ;
++MFN+Pl+Dat+Fac:м # ;
++Msc+Sg+Ins+Fac:м # ;
++Neu+Sg+Ins+Fac:м # ;
++Fem+Sg+Ins+Fac:й # ;
++Fem+Sg+Ins+Fac:ю # ;
++MFN+Pl+Ins+Fac:ми # ;
+
+
 LEXICON LF_stem_Prb
 +Msc+Sg+Nom+Prb:%>ый # ;
 +Msc+Inan+Sg+Acc+Prb:%>ый # ;

@@ -2109,8 +2109,31 @@ LEXICON жо_[п_b]
 +N+Fem: FSg_SubstAdj_End_anim ;
 +N+Fem: Pl_SubstAdj_End_anim ;
 
+LEXICON ф._a_?_0
++N+Prop+Sem/Sur+Msc: MSgStem_anim ;
++N+Prop+Sem/Sur+Fem: Indecl_Sg_anim ;
++N+Prop+Sem/Sur+MFN: ыPlStem_anim ;
+
+LEXICON ф._b_?_0
++N+Prop+Sem/Sur+Msc: MSgEnd_anim ;
++N+Prop+Sem/Sur+Fem: Indecl_Sg_anim ;
++N+Prop+Sem/Sur+MFN: ыPlEnd_anim ;
+
 LEXICON ф._[мс_a]
 +N+Prop+Sem/Sur: Surname_stem ;
+
+LEXICON ф._[мс_b]
++N+Prop+Sem/Sur: Surname_end ;
+
+LEXICON ф._[п_a]
++N+Prop+Sem/Sur+Msc: MSg_SubstAdj_Stem_anim ;
++N+Prop+Sem/Sur+Fem: FSg_SubstAdj_Stem_anim ;
++N+Prop+Sem/Sur+MFN: Pl_SubstAdj_Stem_anim ;
+
+LEXICON ф._[п_b]
++N+Prop+Sem/Sur+Msc: MSg_SubstAdj_End_anim ;
++N+Prop+Sem/Sur+Fem: FSg_SubstAdj_End_anim ;
++N+Prop+Sem/Sur+MFN: Pl_SubstAdj_End_anim ;
 
 LEXICON ф._0
 +N+Prop+Sem/Sur: Surname_0 ;
@@ -2234,12 +2257,19 @@ LEXICON Noun_мс-п_b_Pl
 +Pl+Ins:%>ы́ми # ;
 
 LEXICON Surname_stem
+Surname_stem_Msc ;
+Surname_stem_Fem ;
+Surname_stem_Pl ;
+
+LEXICON Surname_stem_Msc
 +Msc+Anim+Sg+Nom: # ;
 +Msc+Anim+Sg+Acc:%>а # ;
 +Msc+Anim+Sg+Gen:%>а # ;
 +Msc+Anim+Sg+Loc:%>е # ;
 +Msc+Anim+Sg+Dat:%>у # ;
 +Msc+Anim+Sg+Ins:%>ым # ;
+
+LEXICON Surname_stem_Fem
 +Fem+Anim+Sg+Nom:%>а # ;
 +Fem+Anim+Sg+Acc:%>у # ;
 +Fem+Anim+Sg+Gen:%>ой # ;
@@ -2247,12 +2277,44 @@ LEXICON Surname_stem
 +Fem+Anim+Sg+Dat:%>ой # ;
 +Fem+Anim+Sg+Ins:%>ой # ;
 +Fem+Anim+Sg+Ins+Fac:%>ою # ;
-+Anim+Pl+Nom:%>ы # ;
-+Anim+Pl+Acc:%>ых # ;
-+Anim+Pl+Gen:%>ых # ;
-+Anim+Pl+Loc:%>ых # ;
-+Anim+Pl+Dat:%>ым # ;
-+Anim+Pl+Ins:%>ыми # ;
+
+LEXICON Surname_stem_Pl
++MFN+Anim+Pl+Nom:%>ы # ;
++MFN+Anim+Pl+Acc:%>ых # ;
++MFN+Anim+Pl+Gen:%>ых # ;
++MFN+Anim+Pl+Loc:%>ых # ;
++MFN+Anim+Pl+Dat:%>ым # ;
++MFN+Anim+Pl+Ins:%>ыми # ;
+
+LEXICON Surname_end
+Surname_end_Msc ;
+Surname_end_Fem ;
+Surname_end_Pl ;
+
+LEXICON Surname_end_Msc
++Msc+Anim+Sg+Nom: # ;
++Msc+Anim+Sg+Acc:%>а́ # ;
++Msc+Anim+Sg+Gen:%>а́ # ;
++Msc+Anim+Sg+Loc:%>е́ # ;
++Msc+Anim+Sg+Dat:%>у́ # ;
++Msc+Anim+Sg+Ins:%>ы́м # ;
+
+LEXICON Surname_end_Fem
++Fem+Anim+Sg+Nom:%>а́ # ;
++Fem+Anim+Sg+Acc:%>у́ # ;
++Fem+Anim+Sg+Gen:%>о́й # ;
++Fem+Anim+Sg+Loc:%>о́й # ;
++Fem+Anim+Sg+Dat:%>о́й # ;
++Fem+Anim+Sg+Ins:%>о́й # ;
++Fem+Anim+Sg+Ins+Fac:%>о́ю # ;
+
+LEXICON Surname_end_Pl
++MFN+Anim+Pl+Nom:%>ы́ # ;
++MFN+Anim+Pl+Acc:%>ы́х # ;
++MFN+Anim+Pl+Gen:%>ы́х # ;
++MFN+Anim+Pl+Loc:%>ы́х # ;
++MFN+Anim+Pl+Dat:%>ы́м # ;
++MFN+Anim+Pl+Ins:%>ы́ми # ;
 
 LEXICON Surname_0
 +Msc+Anim+Sg+Nom: # ;
@@ -2268,12 +2330,12 @@ LEXICON Surname_0
 +Fem+Anim+Sg+Dat: # ;
 +Fem+Anim+Sg+Ins: # ;
 +Fem+Anim+Sg+Ins+Fac: # ;
-+Anim+Pl+Nom: # ;
-+Anim+Pl+Acc: # ;
-+Anim+Pl+Gen: # ;
-+Anim+Pl+Loc: # ;
-+Anim+Pl+Dat: # ;
-+Anim+Pl+Ins: # ;
++MFN+Anim+Pl+Nom: # ;
++MFN+Anim+Pl+Acc: # ;
++MFN+Anim+Pl+Gen: # ;
++MFN+Anim+Pl+Loc: # ;
++MFN+Anim+Pl+Dat: # ;
++MFN+Anim+Pl+Ins: # ;
 
 LEXICON Patronymic_stem
 вич+N+Prop+Sem/Pat+Msc:вич MSgStem_anim ;

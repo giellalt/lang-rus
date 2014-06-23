@@ -863,7 +863,6 @@ LEXICON ABBR_LF_stem_hard ! with ordinal numbers ! TODO CHECK FIX figure out how
 +Fem+Sg+Ins+Fac:ю # ;
 +MFN+Pl+Ins+Fac:ми # ;
 
-
 LEXICON LF_stem_Prb
 +Msc+Sg+Nom+Prb:%>ый # ;
 +Msc+Inan+Sg+Acc+Prb:%>ый # ;

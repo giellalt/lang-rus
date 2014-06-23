@@ -786,6 +786,10 @@ LEXICON св_3c_R
 LEXICON нсв_4a
 нсв_4a? ;
 
+LEXICON нсв_4a_мучить
+нсв_4a? ;
+:а Impf_Pres_1_stem_Fac ;
+
 LEXICON нсв_4as
 нсв_4a? ;
 +V+Impf+TV:е PastPass_нн_stem_Prb ;
@@ -3586,6 +3590,10 @@ LEXICON св_14c/c''_я́ть_R_(ним_//_ым)
 !                                       стать, etc.
 ! No present verbal adverb
 
+LEXICON нсв_нп_15a
++V+Impf+IT: Impf_Inf_V_stem ;
++V+Impf+IT:н Impf_Pres_1_stem ;
+
 LEXICON св_15a
 св_15a? ;
 +V+Perf+TV: PastPass_stem ;
@@ -4406,6 +4414,12 @@ LEXICON Impf_Pres_1_stem_noVA
 Imper_unstressed ;
 :%<у PresAct ;
 
+LEXICON Impf_Pres_1_stem_Fac
++Prs: PresFut_1_stem_Fac ;
+Imper_unstressed_Fac ;
+:%<у PresAct_Fac ;
+PresVrbAdv_stem_Fac ;
+
 LEXICON Impf_Pres_1_stem_Prb
 +Prs: PresFut_1_stem_Prb ;
 Imper_unstressed_Prb ;
@@ -4831,7 +4845,7 @@ Imper_unstressed ;
 +Imp+Pl1+Fac:%<ем # ;
 
 LEXICON Perf_Fut_1_stem_R
-Perf_Fut_1_stem_R_noImp
+Perf_Fut_1_stem_R_noImp ;
 Imper_unstressed_R ;
 
 LEXICON Perf_Fut_1_stem_R_noImp
@@ -5796,6 +5810,9 @@ LEXICON Imper_[3]_R
 
 LEXICON PresVrbAdv_stem
 +PrsAct+Adv:%<я # ;
+
+LEXICON PresVrbAdv_stem_Fac
++PrsAct+Adv+Fac:%<я # ;
 
 LEXICON PresVrbAdv_stem_Prb
 +PrsAct+Adv+Prb:%<я # ;

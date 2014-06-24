@@ -469,17 +469,17 @@ LEXICON соб-мо_a
 LEXICON соб-мо_a_й
 й+N+Prop+Sem/Ant+Msc:й MSgStem_anim ;
 й+N+Prop+Sem/Ant+Msc:й ыPlStem_anim ;
-е:%>е Patronymic_stem ;
+е:е Patronymic_stem ;
 
 LEXICON соб-мо_a_ь
 ь+N+Prop+Sem/Ant+Msc:ь MSgStem_anim ;
 ь+N+Prop+Sem/Ant+Msc:ь ыPlStem_anim ;
-е:%>е Patronymic_stem ;
+е:е Patronymic_stem ;
 
 LEXICON соб-мо_a_26
 ий+N+Prop+Sem/Ant+Msc:ий MSgStem_anim ;
 ий+N+Prop+Sem/Ant+Msc:ий ыPlStem_anim ;
-ье:%>ье Patronymic_stem ;
+ье:ье Patronymic_stem ;
 
 LEXICON мо_a_Plья_ьев
 +N+Msc: MSgStem_anim ;

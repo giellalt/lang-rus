@@ -19,8 +19,10 @@ This is free and open source South Sámi morphology.
 
  * А́ Е́ Ё́ И́ О́ У́ Ы́ Э́ Ю́ Я́   
 
+
 !!Markers
 
+ * ¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ⁰ ⁻  = Used to enumerate homonymous lemmas
  * %>    = End-of-stem marker (nominals)
  * %<    = End-of-stem marker (verbs)
  * %^F   = Fleeting vowel marker
@@ -44,6 +46,7 @@ This is free and open source South Sámi morphology.
  * +CS      = Subordinating conjunction
  * +Interj  = Interjection
  * +Pcle    = Particle
+ * +Paren    = Parenthetical вводное слово
 
 !!Sub-POS
  * +Prop    = Proper

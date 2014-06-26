@@ -6,19 +6,42 @@ LEXICON Ccs
 Cc ;
 Cs ;
 
+LEXICON Ccs_е
+Cc_е ;
+Cs_е ;
+
+LEXICON Ccs_ы
+Cc_ы ;
+Cs_ы ;
+
 LEXICON Cc
 +CC: # ;
 
+LEXICON Cc_е
++CC+Fac: # ;
++CC:%>е # ;
+
+LEXICON Cc_ы
++CC+Fac: # ;
++CC:%>ы # ;
+
 LEXICON Cs
 +CS: # ;
+
+LEXICON Cs_е
++CS+Fac: # ;
++CS:%>е # ;
+
+LEXICON Cs_ы
++CS+Fac: # ;
++CS:%>ы # ;
 
 LEXICON Conjunction
 а:а Cc ; ! (без_удар.)
 а% именно:а% и́менно Ccs ;
 абы:абы́ C_pleasesortme ;
 аж:аж C_pleasesortme ;
-али:а́ли C_pleasesortme ;
-аль:аль C_pleasesortme ; ! (часто_без_удар.)
+али:а́ль C_pleasesortme ;
 ан:ан C_pleasesortme ;
 благо²:бла́го C_pleasesortme ;
 буде:бу́де C_pleasesortme ;
@@ -37,15 +60,13 @@ LEXICON Conjunction
 едва% лишь:едва́% лишь Cs ;
 ежели:е́жели Cs ;
 если:е́сли Cs ;
-ж:ж Cc ;
-же:же Cc ; ! (без_удар.)
+же:ж Cc_е ; ! (без_удар.)
 зане:зане́ C_pleasesortme ;
 зато:зато́ Cc ;
 и:и Cc ; ! (без_удар.)
 ибо:и́бо Cs ;
 из-за% того% что:из-за% того́% что́ Cs ;
-или:и́ли Ccs ;
-иль:иль Ccs ; ! (часто_без_удар.)
+или:и́ль Ccs_ы ; ! (часто_без_удар.)
 иначе:и́на́че Cs ;
 инда:и́нда C_pleasesortme ;
 итак:ита́к C_pleasesortme ;
@@ -54,17 +75,15 @@ LEXICON Conjunction
 как% будто:как% бу́дто Cs ;
 как% бы:как% бы Cs ;
 как% только:как% то́лько Cs ;
-коли:ко́ли Cs ; ! (часто_без_удар.)
-коль:ко́ль Cs ; ! (часто_без_удар.)
-ли:ли Cs ; ! (без_удар.)
+коли:ко́ль Cs_ы ; ! (часто_без_удар.)
+ли:ль Cs_ы ; ! (без_удар.)
 либо:ли́бо Cc ;
 лишь:ли́шь Cs ; ! (часто_без_удар.)
 лишь% только:лишь% то́лько Cs ;
-ли:ль Cs ; ! (без_удар.)
 между% тем% как:ме́жду% те́м% как Cs ;
 нежели:не́жели C_pleasesortme ;
 не% то:не% то́ Cc ;
-не% то% чтобы:не% то́% что́бы Cc ;
+не% то% чтобы:не% то́% что́б Cc_ы ;
 не% только:не% то́лько Cc ;
 не% столько:не% сто́лько Cc ;
 нешто:не́што C_pleasesortme ;
@@ -80,8 +99,7 @@ LEXICON Conjunction
 поелику:поели́ку C_pleasesortme ;
 пока:пока́ Cs ;
 покамест:пока́мест C_pleasesortme ;
-поколе:поко́ле C_pleasesortme ;
-поколь:поко́ль C_pleasesortme ;
+поколе:поко́ль Ccs_е ;
 покуда:поку́да C_pleasesortme ;
 понеже:поне́же C_pleasesortme ;
 поскольку:поско́льку Cs ;
@@ -111,8 +129,7 @@ LEXICON Conjunction
 также:та́кже Cc ;
 тем:тем C_pleasesortme ;
 то:то Ccs ;
-то% ли:то́% ли Cc ;
-то% ли:то́% ль Cc ;
+то% ли:то́% ль Cc_ы ;
 то% есть:то́% е́сть Ccs ;
 тогда:тогда́ Cs ;
 тоже:то́же Cc ;
@@ -123,8 +140,7 @@ LEXICON Conjunction
 хотя:хотя́ Cs ;
 чем:чем Cs ;
 что²:что Cs ; ! (часто_без_удар.)
-чтоб:чтоб Cs ;
-чтобы:что́бы Cs ;
+чтобы:что́б Cs_ы ;
 чуть:чуть C_pleasesortme ;
 яко:я́ко C_pleasesortme ;
 якобы:я́кобы C_pleasesortme ;

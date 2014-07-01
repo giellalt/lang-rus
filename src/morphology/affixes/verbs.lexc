@@ -346,6 +346,12 @@ LEXICON св_1as_а́ть
 +V+Perf+TV:а́ Perf_Fut_1_stem ;
 +V+Perf+TV:а PastPass_нн_stem_Prb ;
 
+LEXICON св_1as_я́ть
+:я́ св_нп_1a ;
++V+Perf+TV:я́ Perf_Inf_V_stem ;
++V+Perf+TV:я́ Perf_Fut_1_stem ;
++V+Perf+TV:я PastPass_нн_stem_Prb ;
+
 LEXICON св_1a_е́ть
 :е́ св_нп_1a ;
 +V+Perf+TV:е́ Perf_Inf_V_stem ;
@@ -2143,8 +2149,12 @@ LEXICON св_нп_6°b/c_а́ть_(е)рать
 +V+Perf+IV:ер Perf_Fut_1_end ;
 
 LEXICON св_6°b/c''_а́ть_R_(е)раться
-+V+Perf+IV:ра́ Perf_Inf_shift_R ;
++V+Perf+IV:ра́ Perf_Inf_shift''_R ;
 +V+Perf+IV:ер Perf_Fut_1_end_R ;
+
+LEXICON св_6°b/c'_а́ть_R
++V+Perf+IV:а́ Perf_Inf_shift'_R ;
++V+Perf+IV: Perf_Fut_1_end_R ;
 
 LEXICON св_6°b/c''_а́ть_R
 +V+Perf+IV:а́ Perf_Inf_shift''_R ;
@@ -2476,6 +2486,9 @@ LEXICON нсв_7b_(-д-)8
 LEXICON св_7b !-зти verbs, with twolc, should be treated same as д
 св_7b_(-д-) ;
 
+LEXICON св_7b_R
+св_7b_(-д-)_R ;
+
 LEXICON св_7b_(-д-)
 св_нп_7b_(-д-) ;
 +V+Perf+TV: Perf_Inf_C_stem ;
@@ -2686,6 +2699,19 @@ LEXICON св_7b/b_(-с-)_R
 +V+Perf+IV: Perf_Infи_end_R ;
 +V+Perf+IV: Perf_Fut_1_end_R ;
 
+LEXICON св_7b/b_R
++V+Perf+IV: Perf_Infи_end_R ;
++V+Perf+IV: Perf_Fut_1_end_R ;
+
+LEXICON св_7b/b_(-д-)_R
+св_7b/b_R ;
+
+LEXICON св_7b/bs
+св_нп_7b/b ;
++V+Perf+TV: Perf_Infи_C_end ;
++V+Perf+TV: Perf_Fut_1_end ;
++V+Perf+TV:ё PastPass_нн_end_Prb ;
+
 LEXICON св_7b/b_(-с-)_ё
 св_нп_7b/b_(-с-)_ё ;
 +V+Perf+TV:ёс Perf_Infи_C_end ;
@@ -2754,9 +2780,21 @@ LEXICON св_7b/b_(-т-)9_ё_(но_прич._прош._е/тший)
 +V+Perf+IV:е́т PastAct ;
 +V+Perf+TV:етё PastPass_нн_end ;
 
+LEXICON св_7b/c_(-д-)
++V+Perf+IV: Perf_Inf_C_shift ;
++V+Perf+IV: Perf_Fut_1_end ;
++V+Perf+TV: Perf_Inf_C_shift ;
++V+Perf+TV: Perf_Fut_1_end ;
++V+Perf+TV:ё PastPass_нн_end ;
+
 !====================================== Stem type 8 ======================================
 !                                           чь
 ! No present verbal adverb
+
+LEXICON св_8a/b?_лечь
+св_нп_8a/b_лечь ;
++V+Perf+TV:ёг Perf_Inf_C_end ;
++V+Perf+TV:я́г Perf_Fut_1_stem ;
 
 LEXICON св_нп_8a/b_лечь
 +V+Perf+IV:ёг Perf_Inf_C_end ;
@@ -2816,10 +2854,13 @@ LEXICON нсв_8b/b_R_толочься
 +V+Impf+IV:к Impf_Pres_1_end_R ;
 
 LEXICON св_8b/b
+св_8b/b? ;
++V+Perf+TV:%^Mё PastPass_нн_end ;
+
+LEXICON св_8b/b?
 св_нп_8b/b ;
 +V+Perf+TV: Perf_Inf_C_end ;
 +V+Perf+TV: Perf_Fut_1_end ;
-+V+Perf+TV:%^Mё PastPass_нн_end ;
 
 LEXICON св_8b/b_жечь
 св_нп_8b/b_жечь ;
@@ -3433,6 +3474,16 @@ LEXICON нсв_14b_(-н-)_я́ть
 LEXICON нсв_14b_(-н-)_я́ть_R
 +V+Impf+IV:я́ Impf_Inf_stem_R ;
 +V+Impf+IV:н Impf_Pres_1_end_R ;
+
+LEXICON св_14b_(-н-)_а́ть
++V+Perf+IV:а́ Perf_Inf_V_stem ;
++V+Perf+IV:н Perf_Fut_1_end ;
++V+Perf+TV:а́ Perf_Inf_V_stem ;
++V+Perf+TV:н Perf_Fut_1_end ;
+
+LEXICON св_14b_(-н-)_а́ть_R
++V+Perf+IV:а́ Perf_Inf_stem_R ;
++V+Perf+IV:н Perf_Fut_1_end_R ;
 
 LEXICON св_14b_(-н-)_я́ть
 +V+Perf+IV:я́ Perf_Inf_V_stem ;
@@ -4399,6 +4450,12 @@ Past_shift_R ;
 Perf_PastVrbAdv_R ;
 PastAct_R ;
 
+LEXICON Perf_Inf_shift'_R
++Inf:%<ться # ;
+Past_shift'_R ;
+Perf_PastVrbAdv_R ;
+PastAct_R ;
+
 LEXICON Perf_Inf_shift''_R
 +Inf:%<ться # ;
 Past_shift''_R ;
@@ -5242,6 +5299,13 @@ LEXICON Past_shift' ! Only дать and взять
 +Pst+Neu+Sg:%<ло # ;
 +Pst+Neu+Sg:%<ло́ # ;
 +Pst+MFN+Pl:%<ли # ;
+
+LEXICON Past_shift'_R
++Pst+Msc+Sg:%<лся # ; 
++Pst+Fem+Sg:%<ла́сь # ;
++Pst+Neu+Sg:%<лось # ;
++Pst+Neu+Sg:%<ло́сь # ;
++Pst+MFN+Pl:%<лись # ;
 
 LEXICON Past_shift''_R
 +Pst+Msc+Sg:%<лся # ; 

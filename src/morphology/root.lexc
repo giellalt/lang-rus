@@ -4,7 +4,7 @@ Multichar_Symbols
 
 !! !!Stressed vowels
 
-а́ е́ ё́ и́ о́ у́ ы́ э́ ю́ я́    !!= * @CODE@ 
+а́ е́ ё́ и́ о́ у́ ы́ э́ ю́ я́    !!= * @CODE@
 а̀ ѐ ё̀ ѝ о̀ у̀ ы̀ э̀ ю̀ я̀    !!= * @CODE@  Secondary stress
 
 А́ Е́ Ё́ И́ О́ У́ Ы́ Э́ Ю́ Я́   !!= * @CODE@
@@ -69,14 +69,14 @@ Multichar_Symbols
 +Sem/Sur +Sem/Pat       !!= * @CODE@ = Surname (фамилия), Patronymic
 +Sem/Ant +Sem/Alt       !!= * @CODE@ = Anthroponym/Given name, Other
 +Sg +Pl                 !!= * @CODE@ = number
-+Nom +Acc +Gen          !!= * @CODE@ 
-+Ins +Dat +Loc          !!= * @CODE@ 
-+Loc2 +Gen2 +Voc        !!= * @CODE@ 
++Nom +Acc +Gen          !!= * @CODE@
++Ins +Dat +Loc          !!= * @CODE@
++Loc2 +Gen2 +Voc        !!= * @CODE@
 +Inan +Anim             !!= * @CODE@ = animacy
 +PObj                   !!= * @CODE@ = Object of preposition (3rd person pronouns have epenthetic н)
 
-+Ord    !!= * @CODE@ 
-+Cmpar  !!= * @CODE@  
++Ord    !!= * @CODE@
++Cmpar  !!= * @CODE@
 +Sint   !!= * @CODE@  = Synthetic comparative is possible, e.g. старее
 +An     !!= * @CODE@  = Animate placeholder for non-accusative cases
 +Pred   !!= * @CODE@  = "Predicate", used for short-form adjectives
@@ -90,14 +90,14 @@ Multichar_Symbols
 +Fac !!= * @CODE@ = Facultative
 +Use/Obs !!= * @CODE@ = Obsolete
 +Err/Sub !!= * @CODE@ = Substandard
-! More use tags: 
+! More use tags:
 ! ласкательное - +Use/Aff(ectionate)
 ! литературное - +Use/Lit(erary)
 ! народнопоэтическое - +Use/Flk (folk poetry)
 ! областное - +Use/Dia(lectal)
 ! поэтический - +Use/Poet(ic)
 ! просторечное - +Err/Sub(standard)
-! профессиональо - +Use/Prof(essional) 
+! профессиональо - +Use/Prof(essional)
 ! старинное - +Use/Anc(ient)
 ! увеличительное - +Use/Aug(mentative)
 ! уменьшительное - +Use/Dim(inutive)
@@ -122,21 +122,21 @@ Multichar_Symbols
 
 !! !!!Key lexicon
 
-LEXICON Root    !!= * @CODE@ 
+LEXICON Root    !!= * @CODE@
 
-Adjective ;	    !!= * @CODE@ 
-Adverb ;	    !!= * @CODE@ 
-Comparative ; 
-Conjunction ;   !!= * @CODE@ 
-Interjection ;  !!= * @CODE@ 
-Noun ;		    !!= * @CODE@ 
+Adjective ;	    !!= * @CODE@
+Adverb ;	    !!= * @CODE@
+Comparative ;
+Conjunction ;   !!= * @CODE@
+Interjection ;  !!= * @CODE@
+Noun ;		    !!= * @CODE@
 Numeral ;       !!= * @CODE@
 Parenthetical ;
 Particle ;
 Predicative ;
-Preposition ;   !!= * @CODE@ 
-Pronoun ;	    !!= * @CODE@ 
-Verb ;		    !!= * @CODE@ 
+Preposition ;   !!= * @CODE@
+Pronoun ;	    !!= * @CODE@
+Verb ;		    !!= * @CODE@
 Propernoun ;
 Punctuation ;
 

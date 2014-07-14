@@ -398,7 +398,7 @@ LEXICON м_[ж_a]
 LEXICON м-ж_[ж_a]_6
 м_[ж_a] ;
 ж_a ;
-+N+Msc+Inan+Sg+Acc+Use/Sub:%>о # ;
++N+Msc+Inan+Sg+Acc+Err/Sub:%>о # ;
 
 LEXICON м_[мс_a]
 +N+Msc: Noun_мс-п_a_Msc_inan ;

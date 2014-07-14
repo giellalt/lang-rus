@@ -611,7 +611,7 @@ LEXICON мо_c_барин
 
 LEXICON мо_c1
 +N+Msc: MSgStem_anim ;
-+N+Msc: ыPlEnd_anim ;
++N+Msc: аPlEnd_anim ;
 
 LEXICON мо_c1_ин_а
 +N+Msc:и́н MSgStem_anim ;

@@ -34,6 +34,9 @@ LEXICON п_a
 +A: SF_a ;
 +A: SF_comp_stem ;
 
+LEXICON п_a_R
++A: LF_stem_R ;
+
 LEXICON п_a_compEnd
 +A: LF_stem ;
 +A: SF_a ;

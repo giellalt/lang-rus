@@ -1325,15 +1325,15 @@ LEXICON св_4c_15_R ! -стелиться
 LEXICON нсв_5a_еть_повел._затрудн._прич._страд._ви/денный
 +V+Impf+IV:е Impf_Inf_V_stem ;
 +V+Impf+IV: Impf_Pres_2_stem_ImpPrb ;
-+V+Impf+ТV:е Impf_Inf_V_stem ;
-+V+Impf+ТV: Impf_Pres_2_stem_ImpPrb ;
++V+Impf+TV:е Impf_Inf_V_stem ;
++V+Impf+TV: Impf_Pres_2_stem_ImpPrb ;
 +V+Impf+TV:е PastPass_нн_stem ;
 
 LEXICON нсв_5a_ать_повел._затрудн.
 +V+Impf+IV:а Impf_Inf_V_stem ;
 +V+Impf+IV: Impf_Pres_2_stem_ImpPrb ;
-+V+Impf+ТV:а Impf_Inf_V_stem ;
-+V+Impf+ТV: Impf_Pres_2_stem_ImpPrb ;
++V+Impf+TV:а Impf_Inf_V_stem ;
++V+Impf+TV: Impf_Pres_2_stem_ImpPrb ;
 +V+Impf+TV:а PastPass_нн_stem ;
 
 LEXICON нсв_5a_ать_R_повел._затрудн.
@@ -2638,7 +2638,7 @@ LEXICON св_7b/b_(-ст-)_R_прош._ро/сся,_росла/сь,_ро/сши
 LEXICON св_7b/b_(-б-)_ё
 св_нп_7b/b_(-б-)_ё ;
 +V+Perf+TV:ёб Perf_Infи_C_end ;
-+V+Perf+ТV:еб Perf_Fut_1_end ;
++V+Perf+TV:еб Perf_Fut_1_end ;
 +V+Perf+TV:ебё PastPass_нн_end ;
 
 LEXICON св_нп_7b/b_(-б-)_ё
@@ -2648,7 +2648,7 @@ LEXICON св_нп_7b/b_(-б-)_ё
 LEXICON св_7b/b_(-д-)9
 св_нп_7b/b_(-д-)9 ;
 +V+Perf+TV: Perf_Infи_C_end9 ;
-+V+Perf+ТV: Perf_Fut_1_end ;
++V+Perf+TV: Perf_Fut_1_end ;
 +V+Perf+TV:ё PastPass_нн_end ;
 
 LEXICON св_нп_7b/b_(-д-)9
@@ -2822,8 +2822,8 @@ LEXICON св_8b_R
 
 LEXICON нсв_8b/b
 нсв_нп_8b/b ;
-+V+Impf+ТV: Impf_Inf_C_end ;
-+V+Impf+ТV: Impf_Pres_1_end ;
++V+Impf+TV: Impf_Inf_C_end ;
++V+Impf+TV: Impf_Pres_1_end ;
 
 LEXICON нсв_нп_8b/b
 +V+Impf+IV: Impf_Inf_C_end ;
@@ -3642,8 +3642,8 @@ LEXICON св_14c/c''_я́ть_R_(ним_//_ым)
 ! No present verbal adverb
 
 LEXICON нсв_нп_15a
-+V+Impf+IT: Impf_Inf_V_stem ;
-+V+Impf+IT:н Impf_Pres_1_stem ;
++V+Impf+IV: Impf_Inf_V_stem ;
++V+Impf+IV:н Impf_Pres_1_stem ;
 
 LEXICON св_15a
 св_15a? ;

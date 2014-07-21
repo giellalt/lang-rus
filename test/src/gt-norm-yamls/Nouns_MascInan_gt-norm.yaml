@@ -1,0 +1,105 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+Tests:
+# todo:
+# Proofread the gold standard (below)
+# Then: run analyser, then correct. 
+
+  Noun - критерий M anim : # Noun - full paradigm
+      критерий+N+Msc+Inan+Sg+Nom: критерий
+      критерий+N+Msc+Inan+Sg+Acc: критерий
+      критерий+N+Msc+Inan+Sg+Gen: критерия
+      критерий+N+Msc+Inan+Sg+Loc: критерии
+      критерий+N+Msc+Inan+Sg+Dat: критерию
+      критерий+N+Msc+Inan+Sg+Ins: критерием
+      критерий+N+Msc+Inan+Pl+Nom: критерии
+      критерий+N+Msc+Inan+Pl+Acc: критерии
+      критерий+N+Msc+Inan+Pl+Gen: критериев
+      критерий+N+Msc+Inan+Pl+Loc: критериях
+      критерий+N+Msc+Inan+Pl+Dat: критериям
+      критерий+N+Msc+Inan+Pl+Ins: критериями
+  Noun - музей M anim : # Noun - full paradigm
+      музей+N+Msc+Inan+Sg+Nom: музей
+      музей+N+Msc+Inan+Sg+Acc: музей
+      музей+N+Msc+Inan+Sg+Gen: музея
+      музей+N+Msc+Inan+Sg+Loc: музее
+      музей+N+Msc+Inan+Sg+Dat: музею
+      музей+N+Msc+Inan+Sg+Ins: музеем
+      музей+N+Msc+Inan+Pl+Nom: музеи
+      музей+N+Msc+Inan+Pl+Acc: музеи
+      музей+N+Msc+Inan+Pl+Gen: музеев
+      музей+N+Msc+Inan+Pl+Loc: музеях
+      музей+N+Msc+Inan+Pl+Dat: музеям
+      музей+N+Msc+Inan+Pl+Ins: музеями
+  Noun - карандаш M anim : # Noun - full paradigm
+      карандаш+N+Msc+Inan+Sg+Nom: карандаш
+      карандаш+N+Msc+Inan+Sg+Acc: карандаш
+      карандаш+N+Msc+Inan+Sg+Gen: карандаша
+      карандаш+N+Msc+Inan+Sg+Loc: карандаше
+      карандаш+N+Msc+Inan+Sg+Dat: карандашу
+      карандаш+N+Msc+Inan+Sg+Ins: карандашом
+      карандаш+N+Msc+Inan+Pl+Nom: карандаши
+      карандаш+N+Msc+Inan+Pl+Acc: карандаши
+      карандаш+N+Msc+Inan+Pl+Gen: карандашей
+      карандаш+N+Msc+Inan+Pl+Loc: карандашах
+      карандаш+N+Msc+Inan+Pl+Dat: карандашам
+      карандаш+N+Msc+Inan+Pl+Ins: карандашами
+  Noun - словарь M anim : # Noun - full paradigm
+      словарь+N+Msc+Inan+Sg+Nom: словарь
+      словарь+N+Msc+Inan+Sg+Acc: словарь
+      словарь+N+Msc+Inan+Sg+Gen: словаря
+      словарь+N+Msc+Inan+Sg+Loc: словаре
+      словарь+N+Msc+Inan+Sg+Dat: словарю
+      словарь+N+Msc+Inan+Sg+Ins: [словарём, словарем]
+      словарь+N+Msc+Inan+Pl+Nom: словари
+      словарь+N+Msc+Inan+Pl+Acc: словари
+      словарь+N+Msc+Inan+Pl+Gen: словарей
+      словарь+N+Msc+Inan+Pl+Loc: словарях
+      словарь+N+Msc+Inan+Pl+Dat: словарям
+      словарь+N+Msc+Inan+Pl+Ins: словарями
+  Noun - язык M anim : # Noun - full paradigm
+      язык+N+Msc+Inan+Sg+Nom: язык
+      язык+N+Msc+Inan+Sg+Acc: язык
+      язык+N+Msc+Inan+Sg+Gen: языка
+      язык+N+Msc+Inan+Sg+Loc: языке
+      язык+N+Msc+Inan+Sg+Dat: языку
+      язык+N+Msc+Inan+Sg+Ins: языком
+      язык+N+Msc+Inan+Pl+Nom: языки
+      язык+N+Msc+Inan+Pl+Acc: языки
+      язык+N+Msc+Inan+Pl+Gen: языков
+      язык+N+Msc+Inan+Pl+Loc: языках
+      язык+N+Msc+Inan+Pl+Dat: языкам
+      язык+N+Msc+Inan+Pl+Ins: языками
+  Noun - крюк M anim : # Noun - full paradigm
+      крюк+N+Msc+Inan+Sg+Nom: крюк
+      крюк+N+Msc+Inan+Sg+Acc: крюк
+      крюк+N+Msc+Inan+Sg+Gen: крюка
+      крюк+N+Msc+Inan+Sg+Loc: крюке
+      крюк+N+Msc+Inan+Sg+Loc2: крюку
+      крюк+N+Msc+Inan+Sg+Dat: крюку
+      крюк+N+Msc+Inan+Sg+Ins: крюком
+      крюк+N+Msc+Inan+Pl+Nom: крючья
+      крюк+N+Msc+Inan+Pl+Acc: крючья
+      крюк+N+Msc+Inan+Pl+Gen: крючьев
+      крюк+N+Msc+Inan+Pl+Loc: крючьях
+      крюк+N+Msc+Inan+Pl+Dat: крючьям
+      крюк+N+Msc+Inan+Pl+Ins: крючьями
+  Noun - пол M anim : # Noun - full paradigm
+      пол¹+N+Msc+Inan+Sg+Nom: пол
+      пол¹+N+Msc+Inan+Sg+Acc: пол
+      пол¹+N+Msc+Inan+Sg+Gen: пола
+      пол¹+N+Msc+Inan+Sg+Loc: поле
+      пол¹+N+Msc+Inan+Sg+Dat: полу
+      пол¹+N+Msc+Inan+Sg+Ins: полом
+      пол¹+N+Msc+Inan+Pl+Nom: полы
+      пол¹+N+Msc+Inan+Pl+Acc: полы
+      пол¹+N+Msc+Inan+Pl+Gen: полов
+      пол¹+N+Msc+Inan+Pl+Loc: полах
+      пол¹+N+Msc+Inan+Pl+Dat: полам
+      пол¹+N+Msc+Inan+Pl+Ins: полами

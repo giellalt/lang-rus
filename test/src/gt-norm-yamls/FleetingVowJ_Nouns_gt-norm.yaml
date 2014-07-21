@@ -15,49 +15,49 @@ Tests:
 
 
   Noun - статья M anim : # Noun - full paradigm
-      статья+N+Fem+Nom+Sg: статья́
-      статья+N+Fem+Acc+Sg: статью́
-      статья+N+Fem+Gen+Sg: статьи́
-      статья+N+Fem+Loc+Sg: статье́
-      статья+N+Fem+Dat+Sg: статье́
-      статья+N+Fem+Ins+Sg: статьёй
-      статья+N+Fem+Nom+Pl: статьи́
-      статья+N+Fem+Acc+Pl+Inan: статьи́
-      статья+N+Fem+Gen+Pl: стате́й
-      статья+N+Fem+Loc+Pl: статья́х
-      статья+N+Fem+Dat+Pl: статья́м
-      статья+N+Fem+Ins+Pl: статья́ми
+      статья+N+Fem+Inan+Sg+Nom: статья
+      статья+N+Fem+Inan+Sg+Acc: статью
+      статья+N+Fem+Inan+Sg+Gen: статьи
+      статья+N+Fem+Inan+Sg+Loc: статье
+      статья+N+Fem+Inan+Sg+Dat: статье
+      статья+N+Fem+Inan+Sg+Ins: [статьёй, статьей]
+      статья+N+Fem+Inan+Pl+Nom: статьи
+      статья+N+Fem+Inan+Pl+Acc: статьи
+      статья+N+Fem+Inan+Pl+Gen: статей
+      статья+N+Fem+Inan+Pl+Loc: статьях
+      статья+N+Fem+Inan+Pl+Dat: статьям
+      статья+N+Fem+Inan+Pl+Ins: статьями
   Noun - семья M anim : # Noun - full paradigm
-      семья+N+Fem+Nom+Sg: семья́
-      семья+N+Fem+Acc+Sg: семью́
-      семья+N+Fem+Gen+Sg: семьи́
-      семья+N+Fem+Loc+Sg: семье́
-      семья+N+Fem+Dat+Sg: семье́
-      семья+N+Fem+Ins+Sg: семьёй
-      семья+N+Fem+Nom+Pl: се́мьи
-      семья+N+Fem+Acc+Pl+Inan: се́мьи
-      семья+N+Fem+Gen+Pl: семе́й
-      семья+N+Fem+Loc+Pl: се́мьях
-      семья+N+Fem+Dat+Pl: се́мьям
-      семья+N+Fem+Ins+Pl: се́мьями
+      семья+N+Fem+Inan+Sg+Nom: семья
+      семья+N+Fem+Inan+Sg+Acc: семью
+      семья+N+Fem+Inan+Sg+Gen: семьи
+      семья+N+Fem+Inan+Sg+Loc: семье
+      семья+N+Fem+Inan+Sg+Dat: семье
+      семья+N+Fem+Inan+Sg+Ins: [семьёй, семьей]
+      семья+N+Fem+Inan+Pl+Nom: семьи
+      семья+N+Fem+Inan+Pl+Acc: семьи
+      семья+N+Fem+Inan+Pl+Gen: семей
+      семья+N+Fem+Inan+Pl+Loc: семьях
+      семья+N+Fem+Inan+Pl+Dat: семьям
+      семья+N+Fem+Inan+Pl+Ins: семьями
   Noun - муравей M anim : # Noun - full paradigm
-      муравей+N+Msc+Nom+Sg: мураве́й
-      муравей+N+Msc+Acc+Sg+Anim: муравья́
-      муравей+N+Msc+Gen+Sg: муравья́
-      муравей+N+Msc+Loc+Sg: муравье́
-      муравей+N+Msc+Dat+Sg: муравью́
-      муравей+N+Msc+Ins+Sg: муравьём
-      муравей+N+Msc+Nom+Pl: муравьи́
-      муравей+N+Msc+Acc+Pl+Anim: муравьёв
-      муравей+N+Msc+Gen+Pl: муравьёв
-      муравей+N+Msc+Loc+Pl: муравья́х
-      муравей+N+Msc+Dat+Pl: муравья́м
-      муравей+N+Msc+Ins+Pl: муравья́ми
+      муравей+N+Msc+Anim+Sg+Nom: муравей
+      муравей+N+Msc+Anim+Sg+Acc: муравья
+      муравей+N+Msc+Anim+Sg+Gen: муравья
+      муравей+N+Msc+Anim+Sg+Loc: муравье
+      муравей+N+Msc+Anim+Sg+Dat: муравью
+      муравей+N+Msc+Anim+Sg+Ins: [муравьём, муравьем]
+      муравей+N+Msc+Anim+Pl+Nom: муравьи
+      муравей+N+Msc+Anim+Pl+Acc: [муравьёв, муравьев]
+      муравей+N+Msc+Anim+Pl+Gen: [муравьёв, муравьев]
+      муравей+N+Msc+Anim+Pl+Loc: муравьях
+      муравей+N+Msc+Anim+Pl+Dat: муравьям
+      муравей+N+Msc+Anim+Pl+Ins: муравьями
   Noun - бельё M anim : # Noun - full paradigm
-      белье+N+Neu+Nom+Sg: бельё
-      белье+N+Neu+Acc+Sg: бельё
-      белье+N+Neu+Gen+Sg: белья́
-      белье+N+Neu+Loc+Sg: белье́
-      белье+N+Neu+Dat+Sg: белью́
-      белье+N+Neu+Ins+Sg: бельём
+      белье+N+Neu+Inan+Sg+Nom: [бельё, белье]
+      белье+N+Neu+Inan+Sg+Acc: [бельё, белье]
+      белье+N+Neu+Inan+Sg+Gen: белья
+      белье+N+Neu+Inan+Sg+Loc: белье
+      белье+N+Neu+Inan+Sg+Dat: белью
+      белье+N+Neu+Inan+Sg+Ins: [бельём, бельем]
 

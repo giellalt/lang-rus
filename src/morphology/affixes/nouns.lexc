@@ -353,7 +353,7 @@ LEXICON м_d1_П2_JPl
 
 LEXICON м_d1_П2_К_ЧЬ
 +N+Msc:к MSgEnd ;
-+N+Msc:ч%^Fей аPlStem ;
++N+Msc:ч%^Fий аPlStem ;
 +N:к MscLoc2_inan ;
 
 LEXICON м_d2
@@ -1555,7 +1555,7 @@ MSgObliqStem ;
 
 LEXICON NSgStem_anim
 +Anim+Sg+Nom:%>о # ;
-+Anim+Sg+Acc:%>а # ;
++Anim+Sg+Acc:%>о # ;
 MSgObliqStem_anim ;
 
 LEXICON NSgEnd
@@ -1565,7 +1565,7 @@ MSgObliqEnd ;
 
 LEXICON NSgEnd_anim
 +Anim+Sg+Nom:%>о́ # ;
-+Anim+Sg+Acc:%>а́ # ;
++Anim+Sg+Acc:%>о́ # ;
 MSgObliqEnd_anim ;
 
 !!!!!!!!!!!!!!!!!!!!!!!!!FEMININE PARADIGMS!!!!!!!!!!!!!!!!!!!!!!!!!!

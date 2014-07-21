@@ -12,16 +12,16 @@ Tests:
 # Then: run analyser, then correct. 
 
   Noun - чудовище M anim : # Noun - full paradigm
-      чудовище+N+Neu+Nom+Sg: чудо́вище
-      чудовище+N+Neu+Acc+Sg: чудо́вище
-      чудовище+N+Neu+Gen+Sg: чудо́вища
-      чудовище+N+Neu+Loc+Sg: чудо́вище
-      чудовище+N+Neu+Dat+Sg: чудо́вищу
-      чудовище+N+Neu+Ins+Sg: чудо́вищем
-      чудовище+N+Neu+Nom+Pl: чудо́вища
-      чудовище+N+Neu+Acc+Pl+Anim: чудо́вищ
-      чудовище+N+Neu+Gen+Pl: чудо́вищ
-      чудовище+N+Neu+Loc+Pl: чудо́вищах
-      чудовище+N+Neu+Dat+Pl: чудо́вищам
-      чудовище+N+Neu+Ins+Pl: чудо́вищами
+      чудовище+N+Neu+Anim+Sg+Nom: чудовище
+      чудовище+N+Neu+Anim+Sg+Acc: чудовище
+      чудовище+N+Neu+Anim+Sg+Gen: чудовища
+      чудовище+N+Neu+Anim+Sg+Loc: чудовище
+      чудовище+N+Neu+Anim+Sg+Dat: чудовищу
+      чудовище+N+Neu+Anim+Sg+Ins: чудовищем
+      чудовище+N+Neu+Anim+Pl+Nom: чудовища
+      чудовище+N+Neu+Anim+Pl+Acc: чудовищ
+      чудовище+N+Neu+Anim+Pl+Gen: чудовищ
+      чудовище+N+Neu+Anim+Pl+Loc: чудовищах
+      чудовище+N+Neu+Anim+Pl+Dat: чудовищам
+      чудовище+N+Neu+Anim+Pl+Ins: чудовищами
 

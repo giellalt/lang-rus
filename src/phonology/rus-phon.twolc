@@ -112,6 +112,8 @@ where Vx in ( а́ э́ о́ у́ ы́ я́ е́ ё ю́ и́ )
 "е́>е in comparative adjective ending after velar mutation"
 е́:е <=> [ г: | к: | х: ] %>:0 _ [ е: | й: ] .#. ; ! After velar mutation with comparative adjectives
 
+! муравFе́й>а́
+! мурав00ь0я́
 "V>0: Delete lexical vowel endings (o/о́ and е are covered in other rules), and delete most fleeting vowels with syllabic endings"
 Vx:0 <=> .#. [ Letter: | %^F:0 ]+ _ %>:0 ; 
          %^F:0 _ [ Letter ]+ (End) %>:0 :V ; ! This does not delete люб(о)вью, since the ь is 1st
@@ -142,10 +144,9 @@ where Vx in ( а е́ ё и я а́ и́ я́ ) ;
         .#. Letter+ _ %^F:0 V ; ! before fleeting vowel
         [ г: | к: | х: ] %>:0 [ е | е́: ] _ .#. ; ! comparative adjectives with velar mutation
 
-"й>ь (1) when after a fleeting vowel and before a vowel ( муравей > муравья; семей > семья ) (2) in verbs with й-stems, such as бить (3) after consonants not followed by a fleeting vowel (e.g. imperative endings)"
-й:ь <=> %^F:0 V:0 _ ([ я́:0 | ё:0 | е́:0 | я:0 | е:0 ]) %>:0 :V ;
-        %^F:0 V:0 _ %<:0 :V ;
-        C: _ \[%^F:0] ;
+"й>ь (1) when after a fleeting vowel and before a vowel ( муравей > муравья; семей > семья ) (2) in verbs with й-stems, such as бить"
+й:ь <=> %^F:0 V: _ ([ я́: | ё: | е́: | я: | е: ]) %>:0 :V ;
+        %^F:0 V: _ %<:0 :V ;
 
 "Z>0"
 %^Z:0 <=> [ VELEnd | HUSHEnd | цEnd | HCEnd | JEnd | FVn0 ] _ .#. ;
@@ -225,15 +226,15 @@ where Vx in ( у у́ )
 
 "т>ч (1) Pres/Fut mutation of т (as opposed to ст>щ); (2) гть/кть > 0чь"
 т:ч <=> \с: _ %^M: ;
-        [ г:0 | к:0 ] %<:0 _ ь ( с я ) .#. ;
+        [ г: | к: ] %<:0 _ ь ( с я ) .#. ;
 
 "г/к>0 before infinitive ending: гть/кть > чь"
-Cx:0 <=> _ %<:0 т:ч ь ( с я ) .#. ;
+Cx:0 <=> _ %<:0 т: ь ( с я ) .#. ;
 where Cx in ( г к ) ;
 
 "ё>е́ in some infinitives (чь and [бдт...]сть)"
-ё:е́ <=> _ [ г:0 | к:0 ] %<:0 т:ч ь ( с я ) .#. ;
-        _ [ б:с | д:с | с | т:с | [ с т:с ] ] %<:0 т ь ( с я ) .#. ;
+ё:е́ <=> _ [ г: | к: ] %<:0 т: ь ( с я ) .#. ;
+        _ [ б: | д: | с | (с) т:с ] %<:0 т ь ( с я ) .#. ;
 
 "д/т>0 before past tense"
 Cx:0 <=> _ %<:0 л ( [ V ( с :ь ) | с [ :я | :я́ ] ] ) .#.  ;

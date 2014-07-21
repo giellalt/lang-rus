@@ -84,12 +84,12 @@ Tests:
       крюк+N+Msc+Inan+Sg+Loc2: крюку
       крюк+N+Msc+Inan+Sg+Dat: крюку
       крюк+N+Msc+Inan+Sg+Ins: крюком
-      крюк+N+Msc+Inan+Pl+Nom: крючья
-      крюк+N+Msc+Inan+Pl+Acc: крючья
-      крюк+N+Msc+Inan+Pl+Gen: крючьев
-      крюк+N+Msc+Inan+Pl+Loc: крючьях
-      крюк+N+Msc+Inan+Pl+Dat: крючьям
-      крюк+N+Msc+Inan+Pl+Ins: крючьями
+      крюк+N+Msc+Inan+Pl+Nom: [крючья, крюки]
+      крюк+N+Msc+Inan+Pl+Acc: [крючья, крюки]
+      крюк+N+Msc+Inan+Pl+Gen: [крючьев, крюков]
+      крюк+N+Msc+Inan+Pl+Loc: [крючьях, крюках]
+      крюк+N+Msc+Inan+Pl+Dat: [крючьям, крюкам]
+      крюк+N+Msc+Inan+Pl+Ins: [крючьями, крюками]
   Noun - пол M anim : # Noun - full paradigm
       пол¹+N+Msc+Inan+Sg+Nom: пол
       пол¹+N+Msc+Inan+Sg+Acc: пол

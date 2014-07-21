@@ -12,10 +12,10 @@ Tests:
 # Then: run analyser, then correct. 
 
   Noun - ножницы M anim : # Noun - full paradigm
-      ножницы+N+Fem+Nom+Pl: но́жницы
-      ножницы+N+Fem+Acc+Pl+Inan: но́жницы
-      ножницы+N+Fem+Gen+Pl: но́жниц
-      ножницы+N+Fem+Loc+Pl: но́жницах
-      ножницы+N+Fem+Dat+Pl: но́жницам
-      ножницы+N+Fem+Ins+Pl: но́жницами
+      ножницы+N+Fem+Inan+Pl+Nom: ножницы
+      ножницы+N+Fem+Inan+Pl+Acc: ножницы
+      ножницы+N+Fem+Inan+Pl+Gen: ножниц
+      ножницы+N+Fem+Inan+Pl+Loc: ножницах
+      ножницы+N+Fem+Inan+Pl+Dat: ножницам
+      ножницы+N+Fem+Inan+Pl+Ins: ножницами
 

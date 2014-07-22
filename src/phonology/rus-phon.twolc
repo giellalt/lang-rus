@@ -129,7 +129,7 @@ where Vx in ( а е́ ё и я а́ и́ я́ ) ;
 "о/о́>0 in lexical endings, fleeting vowels (including verbal prefixes), and GenPl after hard consonants"
 [ о:0 | о́:0 ] <=> .#. [ Letter: | %^F:0 ]+ _  %>:0 ; ! lexical ending
                   %^F:0 _ [ Letter ]+ (End) %>:0 :V ; ! fleeting vowel
-                  [ в | н а д | н а́: д | о б | о́: б | о т | о́: т | п о д | п о́: д | п р е д | п р е́: д | с | в з: | в о з: | в о́: з: | и з: | и́: з: | н и з: | н и́: з: | р а з: | р а́: з: ] %^F:0 _ C (%^F:0) :V ; ! Fleeting vowels in prefixes, like сожгла сожег
+                  [ в | н а д | н а́: д | о б | о́: б | о т | о́: т | п о д | п о́: д | п р е д | п р е́: д | с | в з: | в о з: | в о́: з: | и з: | и́: з: | н и з: | н и́: з: | р а з: | р а́: з: ] %^F:0 _ C (%^F:0) :V ; ! Fleeting vowels in prefixes, like сожгла сжег
                   [ VELEndV | HUSHEndV | цEndV | HCEndV | FVn0 | JEndV | jEnd ] _ в:0 .#. ; ! zero GenPl
 
 "з>с in some verbal prefixes with dropped fleeting vowels, when the following consonant is unvoiced"
@@ -140,7 +140,7 @@ where Vx in ( а е́ ё и я а́ и́ я́ ) ;
         .#. Letter+ _ %^F:0 V ;
 
 "й>0 in lexical endings, and before fleeting vowels, and in comparative adjectives with velar mutation"
-й:0 <=> .#. [ ?* - [ %^F:0 ] ] V _  %>:0 ; ! in lexical ending
+й:0 <=> .#. Letter+ V _  %>:0 ; ! in lexical ending
         .#. Letter+ _ %^F:0 V ; ! before fleeting vowel
         [ г: | к: | х: ] %>:0 [ е | е́: ] _ .#. ; ! comparative adjectives with velar mutation
 

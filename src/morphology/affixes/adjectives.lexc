@@ -1428,19 +1428,19 @@ LEXICON SF_c''
 
 LEXICON SF_comp_stem
 +Cmpar+Pred:%>ее # ;
-+Cmpar+Pred:%>ей # ;
++Cmpar+Pred+Fac:%>ей # ;
 
 LEXICON SF_comp_stem_Prb
 +Cmpar+Pred+Prb:%>ее # ;
-+Cmpar+Pred+Prb:%>ей # ;
++Cmpar+Pred+Fac+Prb:%>ей # ;
 
 LEXICON SF_comp_end
 +Cmpar+Pred:%>е́е # ;
-+Cmpar+Pred:%>е́й # ;
++Cmpar+Pred+Fac:%>е́й # ;
 
 LEXICON SF_comp_end_Prb
 +Cmpar+Pred+Prb:%>е́е # ;
-+Cmpar+Pred+Prb:%>е́й # ;
++Cmpar+Pred+Fac+Prb:%>е́й # ;
 
 LEXICON SF_comp_ЖЕ
 +Cmpar+Pred:же # ;

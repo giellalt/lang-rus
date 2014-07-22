@@ -54,10 +54,10 @@ Tests:
       муравей+N+Msc+Anim+Pl+Dat: муравьям
       муравей+N+Msc+Anim+Pl+Ins: муравьями
   Noun - бельё M anim : # Noun - full paradigm
-      белье+N+Neu+Inan+Sg+Nom: [бельё, белье]
-      белье+N+Neu+Inan+Sg+Acc: [бельё, белье]
-      белье+N+Neu+Inan+Sg+Gen: белья
-      белье+N+Neu+Inan+Sg+Loc: белье
-      белье+N+Neu+Inan+Sg+Dat: белью
-      белье+N+Neu+Inan+Sg+Ins: [бельём, бельем]
+      бельё+N+Neu+Inan+Sg+Nom: [бельё, белье]
+      бельё+N+Neu+Inan+Sg+Acc: [бельё, белье]
+      бельё+N+Neu+Inan+Sg+Gen: белья
+      бельё+N+Neu+Inan+Sg+Loc: белье
+      бельё+N+Neu+Inan+Sg+Dat: белью
+      бельё+N+Neu+Inan+Sg+Ins: [бельём, бельем]
 

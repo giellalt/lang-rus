@@ -215,6 +215,12 @@ LEXICON св_1a_13
 +V+Perf+TV: Imper_unstressed ;
 +V+Perf+TV+Imp+Pl1+Prb:%<ем # ;
 
+LEXICON св_1a_13_R
++V+Perf+IV: Perf_Fut_1_stem_13_R ;
+
+LEXICON св_1a_13_а́ть
++V+Perf+TV:а́ Perf_Fut_1_stem_13 ;
+
 LEXICON св_1a_ё_13_еска́ть
 :еска́ св_нп_1a_13 ;
 +V+Perf+TV:еска́ Perf_Inf_V_stem ;
@@ -376,12 +382,6 @@ LEXICON св_1a_ё_ета́ть
 +V+Perf+TV:ета́ Perf_Inf_V_stem ;
 +V+Perf+TV:ета́ Perf_Fut_1_stem ;
 +V+Perf+TV:ёта PastPass_нн_stem ;
-
-LEXICON св_1a_13_R
-+V+Perf+TV: Perf_Fut_1_stem_13_R ;
-
-LEXICON св_1a_13_а́ть
-+V+Perf+TV:а́ Perf_Fut_1_stem_13 ;
 
 !====================================== Stem type 2 ======================================
 !                                     чувствовать, etc.
@@ -3053,7 +3053,7 @@ LEXICON св_9b_ё_R
 
 LEXICON св_9b/c1
 св_нп_9b/c1 ;
-+V+Perf+TV:ере́ть # ;
++V+Perf+TV+Inf:ере́ть # ;
 +V+Perf+TV:ер Past_shift ;
 +V+Perf+TV:ер Perf_PastVrbAdv_C ;
 +V+Perf+TV:ере́ Perf_PastVrbAdv_V ;
@@ -3062,7 +3062,7 @@ LEXICON св_9b/c1
 +V+Perf+TV:ёр PastPass_stem ;
 
 LEXICON св_нп_9b/c1
-+V+Perf+IV:ере́ть # ;
++V+Perf+IV+Inf:ере́ть # ;
 +V+Perf+IV:ер Past_shift ;
 +V+Perf+IV:ер Perf_PastVrbAdv_C ;
 +V+Perf+IV:ере́ Perf_PastVrbAdv_V ;
@@ -3070,7 +3070,7 @@ LEXICON св_нп_9b/c1
 +V+Perf+IV:р Perf_Fut_1_end ;
 
 LEXICON св_нп_9b/c1_прич._прош._ме/рший
-+V+Perf+IV:ере́ть # ;
++V+Perf+IV+Inf:ере́ть # ;
 +V+Perf+IV:ер Past_shift ;
 +V+Perf+IV:ер Perf_PastVrbAdv_C ;
 +V+Perf+IV:ере́ Perf_PastVrbAdv_V ;
@@ -3188,7 +3188,7 @@ LEXICON св_10c_ро́ть
 +V+Perf+IV:р Imper_stressed ;
 
 LEXICON св_10c_ро́ть_R
-+V+Perf+IV: Perf_Inf_stem_R ;
++V+Perf+IV:ро́ Perf_Inf_stem_R ;
 +V+Perf+IV+Fut:р PresFut_1_shift_роть_R ;
 +V+Perf+IV+Imp+Pl1:ремся # ;
 +V+Perf+IV:р Imper_stressed_R ;
@@ -4338,7 +4338,7 @@ PastVrbAdv_9_end ;
 PastAct ;
 
 LEXICON Perf_Infёт-е́сть_C_end9
-+Inf:е́сть # ;
++Inf:е́с%<ть # ;
 :%^Fё Past_end ;
 :т PastVrbAdv_9_end ;
 :ёт PastAct ;

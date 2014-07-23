@@ -129,7 +129,7 @@ where Vx in ( а е́ ё и я а́ и́ я́ ) ;
                   [ VELEndV | HUSHEndV | цEndV | HCEndV | FVn0 | JEndV | jEnd ] _ в:0 .#. ; ! zero GenPl
 
 "з>с in some verbal prefixes with dropped fleeting vowels, when the following consonant is unvoiced"
-з:с <=> [ в | в о | в о́: | и | и́: | н и | н и́: | р а | р а́: ] _ %^F:0 о:0 UnvoicedC: $%<:0 ;
+з:с <=> [ в | в о | в о́: | и | и́: | н и | н и́: | р а | р а́: ] _ %^F:0 :0 :UnvoicedC $%<:0 ;
 
 "ь>0 in lexical endings, and before fleeting vowels"
 ь:0 <=> .#. [ Letter: | %^F:0 ]+ _  %>:0 ;

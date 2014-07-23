@@ -8,16 +8,16 @@
 # - any other exit status will denote a failure.
 
 
-# Test that all adjective lemmas do generate as themselves:
+# Test that all verb lemmas do generate as themselves:
 
 
 ###### Variables: #######
-sourcefile=${srcdir}/../../../src/morphology/stems/adjectives.lexc
-lemmas=./adjectives.txt
-generatedlemmas=./gen-adjectives
-failedlemmas=./fail-adj-lemmas
+sourcefile=${srcdir}/../../../src/morphology/stems/verbs.lexc
+lemmas=./verbs.txt
+generatedlemmas=./gen-verbs
+failedlemmas=./fail-verb-lemmas
 generatorfile=./../../../src/generator-gt-norm
-resultfile=lemma-gen-adj-diff
+resultfile=lemma-gen-verb-diff
 
 # FAIL if source file does not exist:
 if [ ! -f $sourcefile ]; then
@@ -66,27 +66,43 @@ for f in $fsttype; do
 		let "transducer_found += 1"
 
 ###### Test non-compounds: #######
-		# generate Msc Sg Nom:
-		sed 's/$/+A+Msc+Sg+Nom/' $lemmas | $lookuptool $generatorfile.$f \
+		# generate Imperfective Intransitive Infinitive:
+		sed 's/$/+V+Impf+IV+Inf/' $lemmas | $lookuptool $generatorfile.$f \
 			| cut -f2  > $generatedlemmas.$f.tmp.txt
-		fgrep -v "+A+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
+		fgrep -v "+V+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
 			| sort -u >> $generatedlemmas.$f.txt
-		fgrep    "+A+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
+		fgrep    "+V+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
 			| sort -u  > $failedlemmas.$f.txt
-		# generate Msc short-form:
-		sed 's/$/+A+Msc+Sg+Pred/' $failedlemmas.$f.txt \
+		# generate Imperfective Transitive Infinitive:
+		sed 's/$/+V+Impf+TV+Inf/' $failedlemmas.$f.txt \
 			| $lookuptool $generatorfile.$f \
 			| cut -f2  > $generatedlemmas.$f.tmp.txt
-		fgrep -v "+A+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
+		fgrep -v "+V+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
 			| sort -u >> $generatedlemmas.$f.txt
-		fgrep    "+A+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
+		fgrep    "+V+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
+			| sort -u  > $failedlemmas.$f.txt
+		# generate Perfective Intransitive Infinitive:
+		sed 's/$/+V+Perf+IV+Inf/' $failedlemmas.$f.txt \
+			| $lookuptool $generatorfile.$f \
+			| cut -f2  > $generatedlemmas.$f.tmp.txt
+		fgrep -v "+V+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
+			| sort -u >> $generatedlemmas.$f.txt
+		fgrep    "+V+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
+			| sort -u  > $failedlemmas.$f.txt
+		# generate Perfective Transitive Infinitive:
+		sed 's/$/+V+Perf+TV+Inf/' $failedlemmas.$f.txt \
+			| $lookuptool $generatorfile.$f \
+			| cut -f2  > $generatedlemmas.$f.tmp.txt
+		fgrep -v "+V+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
+			| sort -u >> $generatedlemmas.$f.txt
+		fgrep    "+V+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
 			| sort -u  > $failedlemmas.$f.txt
 
 ###### Collect results: #######
 		# Sort and compare original input with resulting output - the diff is
 		# stored and opened in SEE:
 		sort -u -o $generatedlemmas.$f.txt $generatedlemmas.$f.txt 
-		comm -23 $lemmas $generatedlemmas.$f.txt | sort \
+		comm -23 $lemmas $generatedlemmas.$f.txt | rev | sort | rev \
 		> $resultfile.$f.txt
 
 		# if at least one word is found, the test failed, and the list of failed

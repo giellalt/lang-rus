@@ -97,14 +97,10 @@ jEnd = [ jEndV | jEndC ] ;
 
 Rules
 
-"Remove extra stress marks on stem (е́>е is covered in another rule): (1) if there is a stressed ending, (2) last syllable if the ending is not a GenPl zero"
+"Remove extra stress marks on stem: the stress mark closest to the end remains"
 ! сло́ва́
 ! слова́
-Vx:Vy <=> .#. C* _ \[ %>:0 ] $[ :StressedV ] ; ! First syllable of stem
-          .#. [ [ Letter: | %^M:]* - [ :StressedV ] ] _ C+ (End) %>:0 :StressedV ; ! Last syllable of stem without shifting stress
-          .#. C+ StressedV: (C+ [V - StressedV]) C+ _ C+ (End) %>:0 ~[ о́: в:0 ] ; ! Last syllable of stem with shifting stress
-          .#. Letter* _ [Letter | %^F:0 | %^M: ]* %<:0 $[:StressedV] ; ! Verbs (end-stressed)
-          .#. Letter* _ [Letter | %^F:0 | %^M: ]* :StressedV [Letter | %^F:0 | %^M: ]* %<:0 ;   ! Verbs (later-on-stem-stressed)
+Vx:Vy <=> \[ %^F:0 | %>:0 | %<:0 ] _ \[ %>:0 ] $[ :StressedV ] ;
 where Vx in ( а́ э́ о́ у́ ы́ я́ е́ ё ю́ и́ )
       Vy in ( а э о у ы я е е ю и )
     matched ;
@@ -145,8 +141,8 @@ where Vx in ( а е́ ё и я а́ и́ я́ ) ;
         [ г: | к: | х: ] %>:0 [ е | е́: ] _ .#. ; ! comparative adjectives with velar mutation
 
 "й>ь (1) when after a fleeting vowel and before a vowel ( муравей > муравья; семей > семья ) (2) in verbs with й-stems, such as бить"
-й:ь <=> %^F:0 V: _ ([ я́: | ё: | е́: | я: | е: ]) %>:0 :V ;
-        %^F:0 V: _ %<:0 :V ;
+й:ь <=> C: %^F:0 V: _ ([ я́: | ё: | е́: | я: | е: ]) %>:0 :V ;
+        C: %^F:0 V: _ %<:0 :V ;
 
 "Z>0"
 %^Z:0 <=> [ VELEnd | HUSHEnd | цEnd | HCEnd | JEnd | FVn0 ] _ .#. ;

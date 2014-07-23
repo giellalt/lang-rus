@@ -825,6 +825,10 @@ LEXICON мо_[п_a]
 +N+Msc: MSg_SubstAdj_Stem_anim ;
 +N+Msc: Pl_SubstAdj_Stem_anim ;
 
+LEXICON мо_[п_a_R]
++N+Msc: MSg_SubstAdj_Stem_anim_R ;
++N+Msc: Pl_SubstAdj_Stem_anim_R ;
+
 LEXICON мо_[п_a']
 мо_[п_a] ;
 
@@ -1044,6 +1048,11 @@ LEXICON MSg_SubstAdj_Stem_anim
 +Anim+Sg+Acc:%>ого # ;
 +Anim: MSg_SubstAdj_Stem_Oblique ;
 
+LEXICON MSg_SubstAdj_Stem_anim_R
++Anim+Sg+Nom:%>ыйся # ;
++Anim+Sg+Acc:%>огося # ;
++Anim: MSg_SubstAdj_Stem_Oblique_R ;
+
 LEXICON NSg_SubstAdj_Stem
 +Inan+Sg+Nom:%>ое # ;
 +Inan+Sg+Acc:%>ое # ;
@@ -1054,11 +1063,22 @@ LEXICON NSg_SubstAdj_Stem_anim
 +Anim+Sg+Acc:%>ое # ;
 +Anim: MSg_SubstAdj_Stem_Oblique ;
 
+LEXICON NSg_SubstAdj_Stem_anim_R
++Anim+Sg+Nom:%>оеся # ;
++Anim+Sg+Acc:%>оеся # ;
++Anim: MSg_SubstAdj_Stem_Oblique_R ;
+
 LEXICON MSg_SubstAdj_Stem_Oblique
 +Sg+Gen:%>ого # ;
 +Sg+Loc:%>ом # ;
 +Sg+Dat:%>ому # ;
 +Sg+Ins:%>ым # ;
+
+LEXICON MSg_SubstAdj_Stem_Oblique_R
++Sg+Gen:%>огося # ;
++Sg+Loc:%>омся # ;
++Sg+Dat:%>омуся # ;
++Sg+Ins:%>ымся # ;
 
 LEXICON MSg_SubstAdj_End
 +Inan+Sg+Nom:%>о́й # ;
@@ -1094,6 +1114,10 @@ LEXICON Pl_SubstAdj_Stem_anim
 +Anim+Pl+Acc:%>ых # ;
 +Anim: Pl_SubstAdj_Stem_Oblique ;
 
+LEXICON Pl_SubstAdj_Stem_anim_R
++Anim+Pl+Acc:%>ыхся # ;
++Anim: Pl_SubstAdj_Stem_Oblique_R ;
+
 LEXICON Pl_SubstAdj_Stem_anim_Prb
 +Anim+Pl+Acc+Prb:%>ых # ;
 +Anim: Pl_SubstAdj_Stem_Oblique_Prb ;
@@ -1105,18 +1129,19 @@ LEXICON Pl_SubstAdj_Stem_Oblique
 +Pl+Dat:%>ым # ;
 +Pl+Ins:%>ыми # ;
 
+LEXICON Pl_SubstAdj_Stem_Oblique_R
++Pl+Nom:%>ыеся # ;
++Pl+Gen:%>ыхся # ;
++Pl+Loc:%>ыхся # ;
++Pl+Dat:%>ымся # ;
++Pl+Ins:%>ымися # ;
+
 LEXICON Pl_SubstAdj_Stem_Oblique_Prb
 +Pl+Nom+Prb:%>ые # ;
 +Pl+Gen+Prb:%>ых # ;
 +Pl+Loc+Prb:%>ых # ;
 +Pl+Dat+Prb:%>ым # ;
 +Pl+Ins+Prb:%>ыми # ;
-
-LEXICON Pl_SubstAdj_Stem_anim_R
-+Anim+Pl+Gen:%>ыхся # ;
-+Anim+Pl+Loc:%>ыхся # ;
-+Anim+Pl+Dat:%>ымся # ;
-+Anim+Pl+Ins:%>ымися # ;
 
 LEXICON Pl_SubstAdj_End
 +Inan+Pl+Acc:%>ы́е # ;
@@ -1132,6 +1157,13 @@ LEXICON Pl_SubstAdj_End_Oblique
 +Pl+Loc:%>ы́х # ;
 +Pl+Dat:%>ы́м # ;
 +Pl+Ins:%>ы́ми # ;
+
+LEXICON Pl_SubstAdj_End_Oblique_R
++Pl+Nom:%>ы́еся # ;
++Pl+Gen:%>ы́хся # ;
++Pl+Loc:%>ы́хся # ;
++Pl+Dat:%>ы́мся # ;
++Pl+Ins:%>ы́мися # ;
 
 !!!!!!!!!!!!!!!!!!!!!!!!!NEUTER PARADIGMS!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -1505,6 +1537,10 @@ LEXICON с_[п_a]
 LEXICON со_[п_a]
 +N+Neu: NSg_SubstAdj_Stem_anim ;
 +N+Neu: Pl_SubstAdj_Stem_anim ;
+
+LEXICON со_[п_a_R]
++N+Neu: NSg_SubstAdj_Stem_anim_R ;
++N+Neu: Pl_SubstAdj_Stem_anim_R ;
 
 LEXICON с_8a_ё_-ёна,_-ён,_-ёнам
 +N+Neu: мяSg ;

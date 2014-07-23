@@ -162,6 +162,8 @@ AC_CONFIG_FILES([test/src/phonology/pair-test-negative.sh], \
       [chmod a+x test/src/phonology/pair-test-negative.sh])
 AC_CONFIG_FILES([test/src/morphology/generate-noun-lemmas.sh], \
       [chmod a+x test/src/morphology/generate-noun-lemmas.sh])
+AC_CONFIG_FILES([test/src/morphology/generate-adj-lemmas.sh], \
+      [chmod a+x test/src/morphology/generate-adj-lemmas.sh])
 AC_CONFIG_FILES([tools/shellscripts/urus-gt.sh], \
       [chmod a+x tools/shellscripts/urus-gt.sh])
 

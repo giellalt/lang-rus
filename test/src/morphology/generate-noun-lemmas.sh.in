@@ -15,9 +15,9 @@
 sourcefile=${srcdir}/../../../src/morphology/stems/nouns.lexc
 lemmas=./nouns.txt
 generatedlemmas=./gen-nouns
-failedlemmas=./fail-lemmas
+failedlemmas=./fail-noun-lemmas
 generatorfile=./../../../src/generator-gt-norm
-resultfile=lemma-gen-diff
+resultfile=lemma-gen-noun-diff
 
 # FAIL if source file does not exist:
 if [ ! -f $sourcefile ]; then

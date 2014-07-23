@@ -11,12 +11,14 @@ TESTS=
 if WANT_GENERATION
 # Add your shell scripts for running tests requiring only a generator:
 TESTS+=generate-noun-lemmas.sh
+TESTS+=generate-adj-lemmas.sh
 
 endif # WANT_GENERATION
 
 # List tests that are presently (expected) failures here, ie things that should
 # be fixed *later*, but is not critical at the moment:
 XFAIL_TESTS=generate-noun-lemmas.sh
+XFAIL_TESTS+=generate-adj-lemmas.sh
 
 ####### Other targets: ###########
 clean-local:

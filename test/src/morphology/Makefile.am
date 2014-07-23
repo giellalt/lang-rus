@@ -12,6 +12,7 @@ if WANT_GENERATION
 # Add your shell scripts for running tests requiring only a generator:
 TESTS+=generate-noun-lemmas.sh
 TESTS+=generate-adj-lemmas.sh
+TESTS+=generate-verb-lemmas.sh
 
 endif # WANT_GENERATION
 
@@ -19,6 +20,7 @@ endif # WANT_GENERATION
 # be fixed *later*, but is not critical at the moment:
 XFAIL_TESTS=generate-noun-lemmas.sh
 XFAIL_TESTS+=generate-adj-lemmas.sh
+XFAIL_TESTS+=generate-verb-lemmas.sh
 
 ####### Other targets: ###########
 clean-local:

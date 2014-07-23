@@ -164,6 +164,8 @@ AC_CONFIG_FILES([test/src/morphology/generate-noun-lemmas.sh], \
       [chmod a+x test/src/morphology/generate-noun-lemmas.sh])
 AC_CONFIG_FILES([test/src/morphology/generate-adj-lemmas.sh], \
       [chmod a+x test/src/morphology/generate-adj-lemmas.sh])
+AC_CONFIG_FILES([test/src/morphology/generate-verb-lemmas.sh], \
+      [chmod a+x test/src/morphology/generate-verb-lemmas.sh])
 AC_CONFIG_FILES([tools/shellscripts/urus-gt.sh], \
       [chmod a+x tools/shellscripts/urus-gt.sh])
 

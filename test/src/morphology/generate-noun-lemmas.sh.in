@@ -170,6 +170,14 @@ for f in $fsttype; do
 			| sort -u >> $generatedlemmas.$f.txt
 		fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
 			| sort -u  > $failedlemmas.$f.txt
+		# generate Unknowable-gender Plural Inanimate GENITIVE:
+		sed 's/$/+N+MFN+Inan+Pl+Gen/' $failedlemmas.$f.txt \
+			| $lookuptool $generatorfile.$f \
+			| cut -f2  > $generatedlemmas.$f.tmp.txt
+		fgrep -v "+N+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
+			| sort -u >> $generatedlemmas.$f.txt
+		fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
+			| sort -u  > $failedlemmas.$f.txt
 		# generate Unknowable-gender Plural Animate:
 		sed 's/$/+N+MFN+Anim+Pl+Nom/' $failedlemmas.$f.txt \
 			| $lookuptool $generatorfile.$f \

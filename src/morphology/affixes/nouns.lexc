@@ -1,6 +1,6 @@
 
 LEXICON GenPl_only
-+N+Inan+Pl+Gen: # ; ! TODO CHECK FIX gender?
++N+MFN+Inan+Pl+Gen: # ;
 
 LEXICON мн._неод._0
 +N+MFN: Indecl_Pl_inan ; ! TODO CHECK FIX Are pluralia tanta genderless?

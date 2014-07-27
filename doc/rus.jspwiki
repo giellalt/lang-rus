@@ -14,7 +14,7 @@ This is free and open source South Sámi morphology.
 
 !!Stressed vowels
 
- * а́ е́ ё́ и́ о́ у́ ы́ э́ ю́ я́     
+ * а́ е́ ё́ и́ о́ у́ ы́ э́ ю́ я́    
  * а̀ ѐ ё̀ ѝ о̀ у̀ ы̀ э̀ ю̀ я̀      Secondary stress
 
  * А́ Е́ Ё́ И́ О́ У́ Ы́ Э́ Ю́ Я́   
@@ -60,6 +60,7 @@ This is free and open source South Sámi morphology.
  * +Coll    = Collective numerals
  * +MWE     = Multi-word expressions
  * +Rel     = Relativizer, e.g. который, где, как, куда, сколько, etc.
+ * +Prcnt   = Percent
 
 !!Verbal MSP
  * +Impf +Perf +Dvuv  = Imperfective, perfective, biaspectual
@@ -77,14 +78,14 @@ This is free and open source South Sámi morphology.
  * +Sem/Sur +Sem/Pat        = Surname (фамилия), Patronymic
  * +Sem/Ant +Sem/Alt        = Anthroponym/Given name, Other
  * +Sg +Pl                  = number
- * +Nom +Acc +Gen           
- * +Ins +Dat +Loc           
- * +Loc2 +Gen2 +Voc         
+ * +Nom +Acc +Gen          
+ * +Ins +Dat +Loc          
+ * +Loc2 +Gen2 +Voc        
  * +Inan +Anim              = animacy
  * +PObj                    = Object of preposition (3rd person pronouns have epenthetic н)
 
- * +Ord     
- * +Cmpar    
+ * +Ord    
+ * +Cmpar  
  * +Sint     = Synthetic comparative is possible, e.g. старее
  * +An       = Animate placeholder for non-accusative cases
  * +Pred     = "Predicate", used for short-form adjectives
@@ -101,15 +102,15 @@ This is free and open source South Sámi morphology.
 
 !!!Key lexicon
 
- * LEXICON Root     
+ * LEXICON Root    
 
- * Adjective ;	     
- * Adverb ;	     
- * Conjunction ;    
- * Interjection ;   
- * Noun ;		     
+ * Adjective ;	    
+ * Adverb ;	    
+ * Conjunction ;   
+ * Interjection ;  
+ * Noun ;		    
  * Numeral ;       
- * Preposition ;    
- * Pronoun ;	     
- * Verb ;		     
+ * Preposition ;   
+ * Pronoun ;	    
+ * Verb ;		    
 

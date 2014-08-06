@@ -67,169 +67,32 @@ for f in $fsttype; do
 
 ###### Test non-compounds: #######
 		# generate Neuter Singular Inanimate:
+		# $lemmas (subsequently $failedlemmas.$f.txt) = lemmas that haven't passed yet
+		# $generatedlemmas.$f.tmp.txt = output of generator (replaced for each tagset)
+		# $generatedlemmas.$f.txt = cumulative list of lemmas that generate output
 		
-		sed 's/$/+N+Neu+Inan+Sg+Nom/' $lemmas | $lookuptool $generatorfile.$f \
-			| cut -f2  > $generatedlemmas.$f.tmp.txt
-		fgrep -v "+N+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
-			| sort -u >> $generatedlemmas.$f.txt
-		fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
-			| sort -u  > $failedlemmas.$f.txt
-		# generate Neuter Singular Animate:
-		sed 's/$/+N+Neu+Anim+Sg+Nom/' $failedlemmas.$f.txt \
-			| $lookuptool $generatorfile.$f \
-			| cut -f2  > $generatedlemmas.$f.tmp.txt
-		fgrep -v "+N+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
-			| sort -u >> $generatedlemmas.$f.txt
-		fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
-			| sort -u  > $failedlemmas.$f.txt
-		# generate Masc Singular Inanimate:
-		sed 's/$/+N+Msc+Inan+Sg+Nom/' $failedlemmas.$f.txt \
-			| $lookuptool $generatorfile.$f \
-			| cut -f2  > $generatedlemmas.$f.tmp.txt
-		fgrep -v "+N+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
-			| sort -u >> $generatedlemmas.$f.txt
-		fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
-			| sort -u  > $failedlemmas.$f.txt
-		# generate Masc Singular Animate:
-		sed 's/$/+N+Msc+Anim+Sg+Nom/' $failedlemmas.$f.txt \
-			| $lookuptool $generatorfile.$f \
-			| cut -f2  > $generatedlemmas.$f.tmp.txt
-		fgrep -v "+N+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
-			| sort -u >> $generatedlemmas.$f.txt
-		fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
-			| sort -u  > $failedlemmas.$f.txt
-		# generate Fem Singular Inanimate:
-		sed 's/$/+N+Fem+Inan+Sg+Nom/' $failedlemmas.$f.txt \
-			| $lookuptool $generatorfile.$f \
-			| cut -f2  > $generatedlemmas.$f.tmp.txt
-		fgrep -v "+N+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
-			| sort -u >> $generatedlemmas.$f.txt
-		fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
-			| sort -u  > $failedlemmas.$f.txt
-		# generate Fem Singular Animate:
-		sed 's/$/+N+Fem+Anim+Sg+Nom/' $failedlemmas.$f.txt \
-			| $lookuptool $generatorfile.$f \
-			| cut -f2  > $generatedlemmas.$f.tmp.txt
-		fgrep -v "+N+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
-			| sort -u >> $generatedlemmas.$f.txt
-		fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
-			| sort -u  > $failedlemmas.$f.txt
-		# generate Neuter Plural Inanimate:
-		sed 's/$/+N+Neu+Inan+Pl+Nom/' $failedlemmas.$f.txt \
-			| $lookuptool $generatorfile.$f \
-			| cut -f2  > $generatedlemmas.$f.tmp.txt
-		fgrep -v "+N+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
-			| sort -u >> $generatedlemmas.$f.txt
-		fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
-			| sort -u  > $failedlemmas.$f.txt
-		# generate Neuter Plural Animate:
-		sed 's/$/+N+Neu+Anim+Pl+Nom/' $failedlemmas.$f.txt \
-			| $lookuptool $generatorfile.$f \
-			| cut -f2  > $generatedlemmas.$f.tmp.txt
-		fgrep -v "+N+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
-			| sort -u >> $generatedlemmas.$f.txt
-		fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
-			| sort -u  > $failedlemmas.$f.txt
-		# generate Masc Plural Inanimate:
-		sed 's/$/+N+Msc+Inan+Pl+Nom/' $failedlemmas.$f.txt \
-			| $lookuptool $generatorfile.$f \
-			| cut -f2  > $generatedlemmas.$f.tmp.txt
-		fgrep -v "+N+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
-			| sort -u >> $generatedlemmas.$f.txt
-		fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
-			| sort -u  > $failedlemmas.$f.txt
-		# generate Masc Plural Animate:
-		sed 's/$/+N+Msc+Anim+Pl+Nom/' $failedlemmas.$f.txt \
-			| $lookuptool $generatorfile.$f \
-			| cut -f2  > $generatedlemmas.$f.tmp.txt
-		fgrep -v "+N+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
-			| sort -u >> $generatedlemmas.$f.txt
-		fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
-			| sort -u  > $failedlemmas.$f.txt
-		# generate Fem Plural Inanimate:
-		sed 's/$/+N+Fem+Inan+Pl+Nom/' $failedlemmas.$f.txt \
-			| $lookuptool $generatorfile.$f \
-			| cut -f2  > $generatedlemmas.$f.tmp.txt
-		fgrep -v "+N+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
-			| sort -u >> $generatedlemmas.$f.txt
-		fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
-			| sort -u  > $failedlemmas.$f.txt
-		# generate Fem Plural Animate:
-		sed 's/$/+N+Fem+Anim+Pl+Nom/' $failedlemmas.$f.txt \
-			| $lookuptool $generatorfile.$f \
-			| cut -f2  > $generatedlemmas.$f.tmp.txt
-		fgrep -v "+N+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
-			| sort -u >> $generatedlemmas.$f.txt
-		fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
-			| sort -u  > $failedlemmas.$f.txt
-		# generate Unknowable-gender Plural Inanimate:
-		sed 's/$/+N+MFN+Inan+Pl+Nom/' $failedlemmas.$f.txt \
-			| $lookuptool $generatorfile.$f \
-			| cut -f2  > $generatedlemmas.$f.tmp.txt
-		fgrep -v "+N+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
-			| sort -u >> $generatedlemmas.$f.txt
-		fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
-			| sort -u  > $failedlemmas.$f.txt
-		# generate Unknowable-gender Plural Inanimate GENITIVE:
+		# to begin with, all lemmas have failed (i.e. none have passed yet)
+		cat $lemmas > $failedlemmas.$f.txt
+		
+		# loop over tagsets and generate lemmas
+		for gender in +Msc +Neu +Fem +MFN ; do
+			for animacy in +Inan +Anim ; do
+				for number in +Sg +Pl ; do
+					for grammcase in +Nom ; do
+						sed 's/$/+N'$gender$animacy$number$grammcase'/' $failedlemmas.$f.txt \
+							| $lookuptool $generatorfile.$f \
+							| cut -f2 > $generatedlemmas.$f.tmp.txt
+						fgrep -v "+N+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
+							| sort -u >> $generatedlemmas.$f.txt
+						fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
+							| sort -u  > $failedlemmas.$f.txt
+					done
+				done
+			done
+		done
 		sed 's/$/+N+MFN+Inan+Pl+Gen/' $failedlemmas.$f.txt \
 			| $lookuptool $generatorfile.$f \
-			| cut -f2  > $generatedlemmas.$f.tmp.txt
-		fgrep -v "+N+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
-			| sort -u >> $generatedlemmas.$f.txt
-		fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
-			| sort -u  > $failedlemmas.$f.txt
-		# generate Unknowable-gender Plural Animate:
-		sed 's/$/+N+MFN+Anim+Pl+Nom/' $failedlemmas.$f.txt \
-			| $lookuptool $generatorfile.$f \
-			| cut -f2  > $generatedlemmas.$f.tmp.txt
-		fgrep -v "+N+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
-			| sort -u >> $generatedlemmas.$f.txt
-		fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
-			| sort -u  > $failedlemmas.$f.txt
-		# generate Proper Neuter Singular Inanimate:
-		sed 's/$/+N+Prop+Neu+Inan+Sg+Nom/' $failedlemmas.$f.txt \
-			| $lookuptool $generatorfile.$f \
-			| cut -f2  > $generatedlemmas.$f.tmp.txt
-		fgrep -v "+N+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
-			| sort -u >> $generatedlemmas.$f.txt
-		fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
-			| sort -u  > $failedlemmas.$f.txt
-		# generate Proper Neuter Singular Animate:
-		sed 's/$/+N+Prop+Neu+Anim+Sg+Nom/' $failedlemmas.$f.txt \
-			| $lookuptool $generatorfile.$f \
-			| cut -f2  > $generatedlemmas.$f.tmp.txt
-		fgrep -v "+N+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
-			| sort -u >> $generatedlemmas.$f.txt
-		fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
-			| sort -u  > $failedlemmas.$f.txt
-		# generate Proper Masc Singular Inanimate:
-		sed 's/$/+N+Prop+Msc+Inan+Sg+Nom/' $failedlemmas.$f.txt \
-			| $lookuptool $generatorfile.$f \
-			| cut -f2  > $generatedlemmas.$f.tmp.txt
-		fgrep -v "+N+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
-			| sort -u >> $generatedlemmas.$f.txt
-		fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
-			| sort -u  > $failedlemmas.$f.txt
-		# generate Proper Masc Singular Animate:
-		sed 's/$/+N+Prop+Msc+Anim+Sg+Nom/' $failedlemmas.$f.txt \
-			| $lookuptool $generatorfile.$f \
-			| cut -f2  > $generatedlemmas.$f.tmp.txt
-		fgrep -v "+N+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
-			| sort -u >> $generatedlemmas.$f.txt
-		fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
-			| sort -u  > $failedlemmas.$f.txt
-		# generate Proper Fem Singular Inanimate:
-		sed 's/$/+N+Prop+Fem+Inan+Sg+Nom/' $failedlemmas.$f.txt \
-			| $lookuptool $generatorfile.$f \
-			| cut -f2  > $generatedlemmas.$f.tmp.txt
-		fgrep -v "+N+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
-			| sort -u >> $generatedlemmas.$f.txt
-		fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
-			| sort -u  > $failedlemmas.$f.txt
-		# generate Proper Fem Singular Animate:
-		sed 's/$/+N+Prop+Fem+Anim+Sg+Nom/' $failedlemmas.$f.txt \
-			| $lookuptool $generatorfile.$f \
-			| cut -f2  > $generatedlemmas.$f.tmp.txt
+			| cut -f2 > $generatedlemmas.$f.tmp.txt
 		fgrep -v "+N+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
 			| sort -u >> $generatedlemmas.$f.txt
 		fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
@@ -239,7 +102,8 @@ for f in $fsttype; do
 		# Sort and compare original input with resulting output - the diff is
 		# stored and opened in SEE:
 		sort -u -o $generatedlemmas.$f.txt $generatedlemmas.$f.txt 
-		comm -23 $lemmas $generatedlemmas.$f.txt | sort \
+		sed 's/[¹²³⁴⁵⁶⁷⁸⁹⁰⁻]*$//' $lemmas | uniq | sort -u > ./strippednouns.txt
+		comm -23 ./strippednouns.txt $generatedlemmas.$f.txt | sort \
 		> $resultfile.$f.txt
 
 		# if at least one word is found, the test failed, and the list of failed
@@ -259,6 +123,7 @@ done
 
 # When done, remove the generated data file:
 rm -f $lemmas
+rm -r ./strippednouns.txt
 
 # At least one of the Xerox or HFST tests failed:
 if [ "$Fail" = "1" ]; then

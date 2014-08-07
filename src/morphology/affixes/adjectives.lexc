@@ -924,6 +924,35 @@ LEXICON LF_stem_Fac
 +MFN+Pl+Dat+Fac:%>ым # ;
 +MFN+Pl+Ins+Fac:%>ыми # ;
 
+LEXICON LF_stem_Sub
++Msc+Sg+Nom+Use/Sub:%>ый # ;
++Msc+Inan+Sg+Acc+Use/Sub:%>ый # ;
++Msc+Anim+Sg+Acc+Use/Sub:%>ого # ;
++Msc+Sg+Gen+Use/Sub:%>ого # ;
++Msc+Sg+Loc+Use/Sub:%>ом # ;
++Msc+Sg+Dat+Use/Sub:%>ому # ;
++Msc+Sg+Ins+Use/Sub:%>ым # ;
++Neu+Sg+Nom+Use/Sub:%>ое # ;
++Neu+Sg+Acc+Use/Sub:%>ое # ;
++Neu+Sg+Gen+Use/Sub:%>ого # ;
++Neu+Sg+Loc+Use/Sub:%>ом # ;
++Neu+Sg+Dat+Use/Sub:%>ому # ;
++Neu+Sg+Ins+Use/Sub:%>ым # ;
++Fem+Sg+Nom+Use/Sub:%>ая # ;
++Fem+Sg+Acc+Use/Sub:%>ую # ;
++Fem+Sg+Gen+Use/Sub:%>ой # ;
++Fem+Sg+Loc+Use/Sub:%>ой # ;
++Fem+Sg+Dat+Use/Sub:%>ой # ;
++Fem+Sg+Ins+Use/Sub:%>ой # ;
++Fem+Sg+Ins+Use/Sub:%>ою # ;
++MFN+Pl+Nom+Use/Sub:%>ые # ;
++MFN+Inan+Pl+Acc+Use/Sub:%>ые # ;
++MFN+Anim+Pl+Acc+Use/Sub:%>ых # ;
++MFN+Pl+Gen+Use/Sub:%>ых # ;
++MFN+Pl+Loc+Use/Sub:%>ых # ;
++MFN+Pl+Dat+Use/Sub:%>ым # ;
++MFN+Pl+Ins+Use/Sub:%>ыми # ;
+
 LEXICON LF_stem_R
 +Msc+Sg+Nom:%>ыйся # ;
 +Msc+Inan+Sg+Acc:%>ыйся # ;
@@ -1010,6 +1039,35 @@ LEXICON LF_stem_R_Fac
 +MFN+Pl+Loc+Fac:%>ыхся # ;
 +MFN+Pl+Dat+Fac:%>ымся # ;
 +MFN+Pl+Ins+Fac:%>ымися # ;
+
+LEXICON LF_stem_R_Sub
++Msc+Sg+Nom+Use/Sub:%>ыйся # ;
++Msc+Inan+Sg+Acc+Use/Sub:%>ыйся # ;
++Msc+Anim+Sg+Acc+Use/Sub:%>огося # ;
++Msc+Sg+Gen+Use/Sub:%>огося # ;
++Msc+Sg+Loc+Use/Sub:%>омся # ;
++Msc+Sg+Dat+Use/Sub:%>омуся # ;
++Msc+Sg+Ins+Use/Sub:%>ымся # ;
++Neu+Sg+Nom+Use/Sub:%>оеся # ;
++Neu+Sg+Acc+Use/Sub:%>оеся # ;
++Neu+Sg+Gen+Use/Sub:%>огося # ;
++Neu+Sg+Loc+Use/Sub:%>омся # ;
++Neu+Sg+Dat+Use/Sub:%>омуся # ;
++Neu+Sg+Ins+Use/Sub:%>ымся # ;
++Fem+Sg+Nom+Use/Sub:%>аяся # ;
++Fem+Sg+Acc+Use/Sub:%>уюся # ;
++Fem+Sg+Gen+Use/Sub:%>ойся # ;
++Fem+Sg+Loc+Use/Sub:%>ойся # ;
++Fem+Sg+Dat+Use/Sub:%>ойся # ;
++Fem+Sg+Ins+Use/Sub:%>ойся # ;
++Fem+Sg+Ins+Use/Sub:%>оюся # ;
++MFN+Pl+Nom+Use/Sub:%>ыеся # ;
++MFN+Inan+Pl+Acc+Use/Sub:%>ыеся # ;
++MFN+Anim+Pl+Acc+Use/Sub:%>ыхся # ;
++MFN+Pl+Gen+Use/Sub:%>ыхся # ;
++MFN+Pl+Loc+Use/Sub:%>ыхся # ;
++MFN+Pl+Dat+Use/Sub:%>ымся # ;
++MFN+Pl+Ins+Use/Sub:%>ымися # ;
 
 LEXICON LF_stem-либо
 +Msc+Sg+Nom:%>ый-либо # ;

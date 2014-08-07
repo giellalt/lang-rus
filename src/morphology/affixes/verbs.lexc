@@ -42,35 +42,6 @@ LEXICON нсв_1a
 +V+Impf+TV: Impf_Pres_1_stem_w/Pass ;
 +V+Impf+TV:е PresPass ;
 
-LEXICON нсв_1a_13
-нсв_нп_1a_13 ;
-+V+Impf+TV: Impf_Inf_V_stem_w/Pass ;
-+V+Impf+TV+Prs: PresFut_1_stem_Prb ;
-+V+Impf+TV:%<у PresAct_Prb ;
-+V+Impf+TV: Imper_unstressed ;
-+V+Impf+TV: PresVrbAdv_stem ;
-+V+Impf+TV:е PresPass ;
-+V+Impf+TV+Prs: PresFut_1_stem_Pass_Prb ;
-+V+Impf+TV:%<у PresAct_Pass_Prb ;
-
-LEXICON нсв_1a_ё_13_еска́ть
-:еска́ нсв_1a_13 ;
-+V+Impf+TV:ёска PastPass_нн_stem ;
-
-LEXICON нсв_нп_1a_13
-+V+Impf+IV: Impf_Inf_V_stem ;
-+V+Impf+IV+Prs: PresFut_1_stem_Prb ;
-+V+Impf+IV:%<у PresAct_Prb ;
-+V+Impf+IV: Imper_unstressed ;
-+V+Impf+IV: PresVrbAdv_stem ;
-
-LEXICON нсв_1a_13_R
-+V+Impf+IV: Impf_Inf_stem_R ;
-+V+Impf+IV+Prs: PresFut_1_stem_R_Prb ;
-+V+Impf+IV:%<у PresAct_R_Prb ;
-+V+Impf+IV: Imper_unstressed_R ;
-+V+Impf+IV: PresVrbAdv_stem_R ;
-
 LEXICON нсв_нп_1a/6a_14_ать
 :а нсв_нп_1a ;
 +V+Impf+IV+Prs: PresFut_1_mut_stem_Fac ;
@@ -206,34 +177,6 @@ LEXICON св_1a
 +V+Perf+TV: Perf_Inf_V_stem ;
 +V+Perf+TV: Perf_Fut_1_stem ;
 +V+Perf+TV: PastPass_нн_stem ;
-
-LEXICON св_1a_13
-св_нп_1a_13 ;
-+V+Perf+TV: Perf_Inf_V_stem ;
-+V+Perf+TV: PastPass_нн_stem ;
-+V+Perf+TV+Fut: PresFut_1_stem_Prb ;
-+V+Perf+TV: Imper_unstressed ;
-+V+Perf+TV+Imp+Pl1+Prb:%<ем # ;
-
-LEXICON св_1a_13_R
-+V+Perf+IV: Perf_Fut_1_stem_13_R ;
-
-LEXICON св_1a_13_а́ть
-+V+Perf+TV:а́ Perf_Fut_1_stem_13 ;
-
-LEXICON св_1a_ё_13_еска́ть
-:еска́ св_нп_1a_13 ;
-+V+Perf+TV:еска́ Perf_Inf_V_stem ;
-+V+Perf+TV+Fut:еска́ PresFut_1_stem_Prb ;
-+V+Perf+TV:еска́ Imper_unstressed ;
-+V+Perf+TV+Imp+Pl1+Prb:еска́%<ем # ;
-+V+Perf+TV:ёска PastPass_нн_stem ;
-
-LEXICON св_нп_1a_13
-+V+Perf+IV: Perf_Inf_V_stem ;
-+V+Perf+IV+Fut: PresFut_1_stem_Prb ;
-+V+Perf+IV: Imper_unstressed ;
-+V+Perf+IV+Imp+Pl1+Prb:%<ем # ;
 
 LEXICON св_1a/6a_14_ать_R
 :а св_1a_R ;
@@ -1834,15 +1777,17 @@ LEXICON нсв_6a_ать_R_сыпаться
 +V+Impf+IV: PresVrbAdv_mut_stem_R ;
 +V+Impf+IV+Prs: PresFut_сыпаться_Fac ;
 
-LEXICON нсв_6a_13
-нсв_нп_6a_13 ;
-+V+Impf+TV: Impf_Pres_1_mut_stem_w/Pass ;
+LEXICON нсв_6a/1a_13
+нсв_6a_ать ;
+:а нсв_1a_13 ;
 
-LEXICON нсв_нп_6a_13
-+V+Impf+IV: Impf_Pres_1_mut_stem ;
+LEXICON нсв_нп_6a/1a_13
+нсв_нп_6a_ать ;
+:а нсв_нп_1a_13 ;
 
-LEXICON нсв_6a_13_R
-+V+Impf+IV: Impf_Pres_1_mut_stem_R ;
+LEXICON нсв_6a/1a_13_R
+нсв_6a_ать_R ;
+:а нсв_1a_13_R ;
 
 LEXICON нсв_6a_ать_R
 +V+Impf+IV:а Impf_Inf_stem_R ;
@@ -1891,6 +1836,10 @@ LEXICON св_6a_ать
 св_6a?_ать ;
 +V+Perf+TV:а PastPass_нн_stem ;
 
+LEXICON св_6a_ать_Impи
+св_6a?_ать_Impи ;
++V+Perf+TV:а PastPass_нн_stem ;
+
 LEXICON св_6a_ать_выслать
 +V+Perf+IV:сла Perf_Inf_V_stem ;
 +V+Perf+IV:шл Perf_Fut_1_stem ;
@@ -1902,35 +1851,64 @@ LEXICON св_6a_ать_R_-ехаться
 +V+Perf+IV:ха Perf_Inf_stem_R ;
 +V+Perf+IV:д Perf_Fut_1_stem_R_noImp ;
 
-LEXICON св_6a_13
-св_нп_6a_13 ;
-+V+Perf+TV: Perf_Fut_1_mut_stem ;
+LEXICON св_1a_13_ать_R
++V+Perf+IV:а Perf_Fut_1_stem_13_R ;
 
-LEXICON св_6a_13_R
-+V+Perf+IV: Perf_Fut_1_mut_stem_R ;
+LEXICON св_1a_13_ать
+св_нп_1a_13_ать ;
++V+Perf+TV:а Perf_Fut_1_stem_13 ;
 
-LEXICON св_нп_6a_13
-+V+Perf+IV: Perf_Fut_1_mut_stem ;
+LEXICON св_нп_1a_13_ать
++V+Perf+IV:а Perf_Fut_1_stem_13 ;
 
-LEXICON св_6a_13_Impи
-+V+Perf+IV: Perf_Fut_1_mut_stem_Impи ;
-+V+Perf+TV: Perf_Fut_1_mut_stem_Impи ;
+LEXICON св_6a/1a_13
+св_6a_ать ;
+св_1a_13_ать ;
 
-LEXICON св_6a_13_R_Impи
+LEXICON св_6a/1a_13_R
+св_6a_ать_R ;
+св_1a_13_ать_R ;
+
+LEXICON св_нп_6a/1a_13
+св_нп_6a_ать ;
+св_нп_1a_13_ать ;
+
+LEXICON св_6a/1a_13_Impи
+св_6a_ать_Impи ;
+св_1a_13_ать ;
+
+LEXICON св_6a/1a_13_R_Impи
+св_6a_ать_R_Impи ;
+св_1a_13_ать_R ;
+
+LEXICON св_1a_13_R_Impи
 +V+Perf+IV: Perf_Fut_1_mut_stem_R_Impи ;
 
 LEXICON св_6a_ать_R
 +V+Perf+IV:а Perf_Inf_stem_R ;
 +V+Perf+IV: Perf_Fut_1_mut_stem_R ;
 
+LEXICON св_6a_ать_R_Impи
++V+Perf+IV:а Perf_Inf_stem_R ;
++V+Perf+IV: Perf_Fut_1_mut_stem_R_Impи ;
+
 LEXICON св_нп_6a_ать
 +V+Perf+IV:а Perf_Inf_V_stem ;
 +V+Perf+IV: Perf_Fut_1_mut_stem ;
+
+LEXICON св_нп_6a_ать_Impи
++V+Perf+IV:а Perf_Inf_V_stem ;
++V+Perf+IV: Perf_Fut_1_mut_stem_Impи ;
 
 LEXICON св_6a?_ать
 св_нп_6a_ать ;
 +V+Perf+TV:а Perf_Inf_V_stem ;
 +V+Perf+TV: Perf_Fut_1_mut_stem ;
+
+LEXICON св_6a?_ать_Impи
+св_нп_6a_ать_Impи ;
++V+Perf+TV:а Perf_Inf_V_stem ;
++V+Perf+TV: Perf_Fut_1_mut_stem_Impи ;
 
 LEXICON св_6a_ать_сыпать
 +V+Perf+IV:а Perf_Inf_V_stem ;
@@ -2183,24 +2161,45 @@ LEXICON нсв_6c_а́ть
 +V+Impf+TV:а́ Impf_Inf_V_stem_w/Pass ;
 +V+Impf+TV: Impf_Pres_1_mut_shift_w/Pass ;
 
+LEXICON нсв_6c_а́ть_VAPrb
+нсв_нп_6c_а́ть_VAPrb ;
++V+Impf+TV:а́ Impf_Inf_V_stem_w/Pass ;
++V+Impf+TV: Impf_Pres_1_mut_shift_w/Pass_VAPrb ;
+
+LEXICON нсв_нп_6c_а́ть_VAPrb
++V+Impf+IV:а́ Impf_Inf_V_stem ;
++V+Impf+IV: Impf_Pres_1_mut_shift_VAPrb ;
+
 LEXICON нсв_6c?_а́ть
 нсв_нп_6c_а́ть ;
 +V+Impf+TV:а́ Impf_Inf_V_stem_w/Pass ;
 +V+Impf+TV: Impf_Pres_1_mut_shift_w/Pass ;
 
-LEXICON нсв_6c_13
-нсв_нп_6c_13 ;
-+V+Impf+TV: Impf_Pres_1_mut_shift_w/Pass ;
+LEXICON нсв_6c/1a_13_а́ть
+нсв_6c_а́ть ;
+:а́ нсв_1a_13 ;
 
-LEXICON нсв_6c_13_VAPrb
-+V+Impf+IV: Impf_Pres_1_mut_shift_VAPrb ;
-+V+Impf+TV: Impf_Pres_1_mut_shift_w/Pass_VAPrb ;
+LEXICON нсв_1a_13
+нсв_нп_1a_13 ;
++V+Impf+TV: Impf_Pres_1_stem_13 ;
 
-LEXICON нсв_нп_6c_13
+LEXICON нсв_6cVAPrb/1a_13_а́ть ! глодать
+нсв_6c_а́ть_VAPrb ;
+:а́ нсв_1a_13 ;
+
+LEXICON нсв_нп_6c/1a_13
 +V+Impf+IV: Impf_Pres_1_mut_shift ;
+нсв_нп_1a_13 ;
 
-LEXICON нсв_6c_13_R
-+V+Impf+IV: Impf_Pres_1_mut_shift_R ;
+LEXICON нсв_нп_1a_13
++V+Impf+IV: Impf_Pres_1_stem_13 ;
+
+LEXICON нсв_6c/1a_13_а́ть_R
+нсв_6c_а́ть_R ;
+:а́ нсв_1a_13_R ;
+
+LEXICON нсв_1a_13_R
++V+Impf+IV: Impf_Pres_1_stem_13_R ;
 
 LEXICON нсв_6cs_а́ть
 нсв_нп_6c_а́ть ;
@@ -2325,21 +2324,27 @@ LEXICON св_6cs_а́ть
 св_6c?_а́ть ;
 +V+Perf+TV:а PastPass_нн_stem_Prb ;
 
-LEXICON св_6c_13
-св_нп_6c_13 ;
-+V+Perf+TV: Perf_Fut_1_mut_shift ;
-+V+Perf+TV:а PastPass_нн_stem ;
+LEXICON св_1a_13_а́ть_R
++V+Perf+IV:а́ Perf_Fut_1_stem_13_R ;
 
-LEXICON св_нп_6c_13
-+V+Perf+IV: Perf_Fut_1_mut_shift ;
+LEXICON св_1a_13_а́ть
+св_нп_1a_13_а́ть ;
++V+Perf+TV:а́ Perf_Fut_1_stem_13 ;
 
-LEXICON св_6c_ё_13_еска́ть
-+V+Perf+IV:еска́ Perf_Fut_1_mut_shift ;
-+V+Perf+TV:еска́ Perf_Fut_1_mut_shift ;
-+V+Perf+TV:ёска PastPass_нн_stem ;
+LEXICON св_нп_1a_13_а́ть
++V+Perf+IV:а́ Perf_Fut_1_stem_13 ;
 
-LEXICON св_6c_13_R
-+V+Perf+IV: Perf_Fut_1_mut_shift_R ;
+LEXICON св_нп_6c/1a_13_а́ть
+св_нп_6c_а́ть ;
+св_нп_1a_13_а́ть ;
+
+LEXICON св_6c/1a_13_а́ть
+св_6c_а́ть ;
+св_1a_13_а́ть ;
+
+LEXICON св_6c/1a_13_а́ть_R
+св_6c_а́ть_R ;
+св_1a_13_а́ть_R ;
 
 LEXICON св_6c_ё_ема́ть
 +V+Perf+IV:ема́ Perf_Inf_V_stem ;
@@ -2547,19 +2552,19 @@ LEXICON нсв_7b/b_(-д-)_ё_вести
 +V+Impf+IV+Prs:ед PresFut_1_end ;
 +V+Impf+IV:ед Imper_stressed ; 
 +V+Impf+IV:ед PresVrbAdv_end ; 
-+V+Impf+IV:еду́ PresAct ;
++V+Impf+IV:ед%<у́ PresAct ;
 +V+Impf+IV:е́д PastAct ;
 +V+Impf+TV+Inf:ести́ # ;
 +V+Impf+TV:ёд Past_end ;
 +V+Impf+TV+Prs:ед PresFut_1_end ;
 +V+Impf+TV:ед Imper_stressed ; 
 +V+Impf+TV:ед PresVrbAdv_end ; 
-+V+Impf+TV:еду́ PresAct ;
++V+Impf+TV:ед%<у́ PresAct ;
 +V+Impf+TV:е́д PastAct ;
 +V+Impf+TV+Inf+Pass:ести́сь # ;
 +V+Impf+TV:ёд Past_end_Pass ;
 +V+Impf+TV+Prs:ед PresFut_1_end_Pass ;
-+V+Impf+TV:еду́ PresAct_Pass ;
++V+Impf+TV:ед%<у́ PresAct_Pass ;
 +V+Impf+TV:е́д PastAct_Pass ;
 
 LEXICON нсв_7b/b_(-д-)_R_безл.
@@ -3103,21 +3108,21 @@ LEXICON нсв_10c_ро́ть
 +V+Impf+TV:ро́ Impf_Inf_V_stem_w/Pass ;
 +V+Impf+TV+Prs:р PresFut_1_shift_роть ;
 +V+Impf+TV:р Imper_stressed ;
-+V+Impf+TV:рю PresAct ;
++V+Impf+TV:р%<ю PresAct ;
 +V+Impf+TV+Prs:р PresFut_1_shift_роть_Pass ;
-+V+Impf+TV:рю PresAct_Pass ;
++V+Impf+TV:р%<ю PresAct_Pass ;
 
 LEXICON нсв_10c_ро́ть_R
 +V+Impf+IV:ро́ Impf_Inf_stem_R ;
 +V+Impf+IV+Prs:р PresFut_1_shift_роть_R ;
 +V+Impf+IV:р Imper_stressed_R ;
-+V+Impf+IV:рю PresAct_R ;
++V+Impf+IV:р%<ю PresAct_R ;
 
 LEXICON нсв_нп_ро́ть_10c
 +V+Impf+IV:ро́ Impf_Inf_V_stem ;
 +V+Impf+IV+Prs:р PresFut_1_shift_роть ;
 +V+Impf+IV:р Imper_stressed ;
-+V+Impf+IV:рю PresAct ;
++V+Impf+IV:р%<ю PresAct ;
 
 !LEXICON нсв_10c_МОЛОТЬ
 !! Active Voice
@@ -3128,7 +3133,7 @@ LEXICON нсв_нп_ро́ть_10c
 !+V+Impf+Fut:оло́%<ть% бу́д PresFut_1_stem ;
 !+V+Impf:ел Imper_stressed ;
 !+V+Impf+PstAct:оло́ PastAct ;
-!+V+Impf+PrsAct:е́лю PresAct ;
+!+V+Impf+PrsAct:е́л%<ю PresAct ;
 !+V+Impf+PstPss:оло́ PastPass_stem ;
 !! Passive Voice
 !+V+Impf+Inf+Pass:оло́%<ться # ;
@@ -3136,7 +3141,7 @@ LEXICON нсв_нп_ро́ть_10c
 !+V+Impf+Prs+Pass:е́л PresFut_1_shift_R ;
 !+V+Impf+Fut+Pass:оло́%<ться% бу́д PresFut_1_stem ;
 !+V+Impf+PstAct+Pass:оло́ PastAct_R ;  ! Tags are problematic here...
-!+V+Impf+PrsAct+Pass:е́лю PresAct_R ; ! Tags are problematic here...
+!+V+Impf+PrsAct+Pass:е́л%<ю PresAct_R ; ! Tags are problematic here...
 
 LEXICON св_10a
 св_10a? ;
@@ -3723,7 +3728,7 @@ LEXICON нсв_нп_b_бежать
 +V+Impf+IV+Prs+Pl2:жи́те # ;
 +V+Impf+IV+Prs+Pl3:гу́т # ;
 +V+Impf+IV:г Imper_stressed ;
-+V+Impf+IV:гу́ PresAct ;
++V+Impf+IV:г%<у́ PresAct ;
 
 LEXICON св_нп_a_выбежать
 +V+Perf+IV:жа Perf_Inf_V_stem ;
@@ -3782,7 +3787,7 @@ LEXICON нсв_есть
 +V+Impf+TV+Prs+Pl2:еди́те # ;
 +V+Impf+TV+Prs+Pl3:едя́т # ;
 +V+Impf+TV:е́ш Imper_unstressed ;
-+V+Impf+TV:едя́ PresAct ;
++V+Impf+TV:ед%<я́ PresAct ;
 +V+Impf+IV:е́д Impf_Inf_C_stem ;
 +V+Impf+IV+Prs+Sg1:е́м # ;
 +V+Impf+IV+Prs+Sg2:е́шь # ;
@@ -3791,12 +3796,12 @@ LEXICON нсв_есть
 +V+Impf+IV+Prs+Pl2:еди́те # ;
 +V+Impf+IV+Prs+Pl3:едя́т # ;
 +V+Impf+IV:е́ш Imper_unstressed ;
-+V+Impf+IV:едя́ PresAct ;
++V+Impf+IV:ед%<я́ PresAct ;
 
 LEXICON нсв_нп_a_ехать
 +V+Impf+IV:ха Impf_Inf_V_stem ;
 +V+Impf+IV+Prs:д PresFut_1_stem ; 
-+V+Impf+IV:ду PresAct ;
++V+Impf+IV:д%<у PresAct ;
 
 LEXICON св_нп_a_поехать
 св_нп_a_буд._-ду,_-дет_повел._нет ;
@@ -3830,7 +3835,7 @@ LEXICON нсв_нп_b/b_идти
 +V+Impf+IV:ше́д PastAct ;
 +V+Impf+IV+Prs:ид PresFut_1_end ;
 +V+Impf+IV:ид Imper_stressed ;
-+V+Impf+IV:иду́ PresAct ;
++V+Impf+IV:ид%<у́ PresAct ;
 +V+Impf+IV:ид PresVrbAdv_end ;
 
 LEXICON нсв_b/b_R_идтись
@@ -4516,6 +4521,18 @@ Impf_Pres_1_stem_noVA ;
 +Prs: PresFut_1_stem_Pass ;
 :%<у PresAct_Pass ;
 
+LEXICON Impf_Pres_1_stem_13
++Prs: PresFut_1_stem_Sub ;
+:%<у PresAct_Sub ;
+Imper_unstressed_Fac ;
+PresVrbAdv_stem_Fac ;
+
+LEXICON Impf_Pres_1_stem_13_R
++Prs: PresFut_1_stem_R_Sub ;
+:%<у PresAct_R_Sub ;
+Imper_unstressed_R_Fac ;
+PresVrbAdv_stem_R_Fac ;
+
 LEXICON Impf_Pres_1_stem_безл.
 +Prs: PresFut_1_stem_безл. ;
 
@@ -4553,6 +4570,10 @@ Impf_Pres_1_mut_stem_noVA ;
 LEXICON Impf_Pres_1_shift
 Impf_Pres_1_shift_noVA ;
 PresVrbAdv_end ;
+
+LEXICON Impf_Pres_1_shift_VAPrb
+Impf_Pres_1_shift_noVA ;
+PresVrbAdv_end_Prb ;
 
 LEXICON Impf_Pres_1_shift_безл.
 +Prs: PresFut_1_shift_безл. ;
@@ -4897,9 +4918,14 @@ Imper_[3] ;
 +Imp+Pl1:%<ем # ;
 
 LEXICON Perf_Fut_1_stem_13
-+Fut: PresFut_1_stem_Fac ;
-Imper_unstressed ;
-+Imp+Pl1+Fac:%<ем # ;
++Fut: PresFut_1_stem_Sub ;
+Imper_unstressed_Fac ;
++Imp+Pl1+Use/Sub:%<ем # ;
+
+LEXICON Perf_Fut_1_stem_13_R
++Fut: PresFut_1_stem_R_Sub ;
+Imper_unstressed_R_Fac ;
++Imp+Pl1+Use/Sub:%<емся # ;
 
 LEXICON Perf_Fut_1_stem_R
 Perf_Fut_1_stem_R_noImp ;
@@ -4931,11 +4957,6 @@ LEXICON Perf_Fut_1_stem[3]_R
 +Fut: PresFut_1_stem_R ;
 Imper_[3]_R ;
 +Imp+Pl1:%<емся # ;
-
-LEXICON Perf_Fut_1_stem_13_R
-+Fut: PresFut_1_stem_R_Fac ;
-Imper_unstressed_R ;
-+Imp+Pl1+Fac:%<емся # ;
 
 LEXICON Perf_Fut_1_mut_stem
 +Fut: PresFut_1_mut_stem ;
@@ -5372,6 +5393,14 @@ LEXICON PresFut_1_stem_Fac
 +Pl2+Fac:%<ете # ;
 +Pl3+Fac:%<ут # ;
 
+LEXICON PresFut_1_stem_Sub
++Sg1+Use/Sub:%<у # ;
++Sg2+Use/Sub:%<ешь # ;
++Sg3+Use/Sub:%<ет # ;
++Pl1+Use/Sub:%<ем # ;
++Pl2+Use/Sub:%<ете # ;
++Pl3+Use/Sub:%<ут # ;
+
 LEXICON PresFut_1_stem_R
 +Sg1:%<усь # ;
 +Sg2:%<ешься # ;
@@ -5395,6 +5424,14 @@ LEXICON PresFut_1_stem_R_Fac
 +Pl1+Fac:%<емся # ;
 +Pl2+Fac:%<етесь # ;
 +Pl3+Fac:%<утся # ;
+
+LEXICON PresFut_1_stem_R_Sub
++Sg1+Use/Sub:%<усь # ;
++Sg2+Use/Sub:%<ешься # ;
++Sg3+Use/Sub:%<ется # ;
++Pl1+Use/Sub:%<емся # ;
++Pl2+Use/Sub:%<етесь # ;
++Pl3+Use/Sub:%<утся # ;
 
 LEXICON PresFut_1_stem_Pass
 +Sg1+Pass+Fac:%<усь # ;
@@ -5974,6 +6011,9 @@ LEXICON PresAct_Prb
 LEXICON PresAct_Fac
 +PrsAct:%<щ LF_stem_Fac ;
 
+LEXICON PresAct_Sub
++PrsAct:%<щ LF_stem_Sub ;
+
 LEXICON PresAct_R
 +PrsAct:%<щ LF_stem_R ;
 
@@ -5982,6 +6022,9 @@ LEXICON PresAct_R_Prb
 
 LEXICON PresAct_R_Fac
 +PrsAct:%<щ LF_stem_R_Fac ;
+
+LEXICON PresAct_R_Sub
++PrsAct:%<щ LF_stem_R_Sub ;
 
 LEXICON PresAct_Pass
 +PrsAct+Pass:%<щ LF_stem_R ;

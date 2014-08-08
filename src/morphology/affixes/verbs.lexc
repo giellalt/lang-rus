@@ -164,13 +164,15 @@ LEXICON нсв_нп_1a_имеется_страд.
 
 LEXICON нсв_[но_в_прош._и_инф._также_св]_1a
 нсв_1a ;
-+V+Perf+IV+Inf:%>ть # ;
-+V+Perf+IV: Past_stem ;
++V+Perf+IV: Perf_Inf_V_stem ;
++V+Perf+TV: Perf_Inf_V_stem ;
++V+Perf+IV: Perf_Fut_1_stem_Fac ;
++V+Perf+TV: Perf_Fut_1_stem_Fac ;
 
 LEXICON нсв_[но_в_прош._и_инф._также_св]_1a_R
 нсв_1a_R ;
-+V+Perf+IV+Inf:%>ться # ;
-+V+Perf+IV: Past_stem_R ;
++V+Perf+IV: Perf_Inf_stem_R ;
++V+Perf+IV: Perf_Fut_1_stem_R_Fac ;
 
 LEXICON св_1a
 св_нп_1a ;
@@ -340,6 +342,8 @@ LEXICON нсв_[но_в_прош._также_св]_2a
 нсв_2a ;
 +V+Perf+IV:%>ова Impf_Inf_V_stem ;
 +V+Perf+TV:%>ова Impf_Inf_V_stem ;
++V+Perf+IV:%>у Impf_Pres_1_stem_Fac ;
++V+Perf+TV:%>у Impf_Pres_1_stem_Fac ;
 
 LEXICON нсв_нп_2a
 +V+Impf+IV:%>ова Impf_Inf_V_stem ;
@@ -373,9 +377,10 @@ LEXICON нсв_2a_ова́_R_безл.
 
 LEXICON нсв_[но_в_прош._также_св]_2a_ова́_R
 нсв_2a_ова́_R ;
-+V+Perf+IV:%>ова́ Past_stem_R ;
-+V+Perf+IV:%>ова́ Perf_PastVrbAdv_R ;
-+V+Perf+IV:%>ова́ PastAct_R ;
++V+Perf+IV:%>ова́ Perf_Inf_stem_R ;
++V+Perf+TV:%>ова́ Perf_Inf_stem_R ;
++V+Perf+IV:%>у́ Perf_Fut_1_stem_Fac ;
++V+Perf+TV:%>у́ Perf_Fut_1_stem_Fac ;
 
 LEXICON нсв_2a_ё_ова́
 +V+Impf+TV:%>ова́ Impf_Inf_V_stem_w/Pass ;
@@ -422,8 +427,16 @@ LEXICON св_[но_в_наст.-буд._также_нсв]_2a_ова́
 
 LEXICON св_[но_в_личных_формах_наст.-буд._также_нсв]_2a_ова́
 св_2a_ова́ ;
++V+Impf+IV:%>ова́ Impf_Inf_V_stem_Fac ;
++V+Impf+TV:%>ова́ Impf_Inf_V_stem_Fac ;
 +V+Impf+IV+Prs:%>у́ PresFut_1_stem ;
++V+Impf+IV+Prs:%>у́ Imper_unstressed_Fac ;
++V+Impf+IV+Prs:%>у́%<у PresAct_Fac ;
++V+Impf+IV+Prs:%>у́ PresVrbAdv_stem_Fac ;
 +V+Impf+TV+Prs:%>у́ PresFut_1_stem ;
++V+Impf+TV+Prs:%>у́ Imper_unstressed_Fac ;
++V+Impf+TV+Prs:%>у́%<у PresAct_Fac ;
++V+Impf+TV+Prs:%>у́ PresVrbAdv_stem_Fac ;
 
 LEXICON св_[но_в_наст.-буд._также_нсв]_2a_ова́_R
 св_2a_ова́_R ;
@@ -2192,8 +2205,8 @@ LEXICON нсв_6cVAPrb/1a_13_а́ть ! глодать
 :а́ нсв_1a_13 ;
 
 LEXICON нсв_нп_6c/1a_13
-+V+Impf+IV: Impf_Pres_1_mut_shift ;
-нсв_нп_1a_13 ;
+нсв_нп_6c_а́ть ;
+:а́ нсв_нп_1a_13 ;
 
 LEXICON нсв_нп_1a_13
 +V+Impf+IV: Impf_Pres_1_stem_13 ;
@@ -4908,6 +4921,11 @@ Imper_unstressed ;
 LEXICON Perf_Fut_1_stem_безл.
 +Fut: PresFut_1_stem_безл. ;
 
+LEXICON Perf_Fut_1_stem_Fac
++Fut: PresFut_1_stem_Fac ;
+Imper_unstressed_Fac ;
++Imp+Pl1+Fac:%<ем # ;
+
 LEXICON Perf_Fut_1_stem_Prb
 +Fut: PresFut_1_stem_Prb ;
 Imper_unstressed_Prb ;
@@ -4953,6 +4971,11 @@ LEXICON Perf_Fut_1_stem_R_noImp
 
 LEXICON Perf_Fut_1_stem_R_безл.
 +Fut: PresFut_1_stem_R_безл. ;
+
+LEXICON Perf_Fut_1_stem_R_Fac
++Fut: PresFut_1_stem_R_Fac ;
+Imper_unstressed_R_Fac ;
++Imp+Pl1+Fac:%<емся # ;
 
 LEXICON Perf_Fut_1_stem_R_Prb
 +Fut: PresFut_1_stem_R_Prb ;

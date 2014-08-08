@@ -373,9 +373,9 @@ LEXICON нсв_2a_ова́_R_безл.
 
 LEXICON нсв_[но_в_прош._также_св]_2a_ова́_R
 нсв_2a_ова́_R ;
-+V+Perf+IV:%>ова́ Past_stem ;
-+V+Perf+IV:%>ова́ Perf_PastVrbAdv_V ;
-+V+Perf+IV:%>ова́ PastAct ;
++V+Perf+IV:%>ова́ Past_stem_R ;
++V+Perf+IV:%>ова́ Perf_PastVrbAdv_R ;
++V+Perf+IV:%>ова́ PastAct_R ;
 
 LEXICON нсв_2a_ё_ова́
 +V+Impf+TV:%>ова́ Impf_Inf_V_stem_w/Pass ;
@@ -415,6 +415,8 @@ LEXICON св_2a_ова́_R
 
 LEXICON св_[но_в_наст.-буд._также_нсв]_2a_ова́
 св_2a_ова́ ;
++V+Impf+IV:%>ова́ Impf_Inf_V_stem_Fac ;
++V+Impf+TV:%>ова́ Impf_Inf_V_stem_Fac ;
 +V+Impf+IV:%>у́ Impf_Pres_1_stem ;
 +V+Impf+TV:%>у́ Impf_Pres_1_stem ;
 
@@ -425,6 +427,7 @@ LEXICON св_[но_в_личных_формах_наст.-буд._также_н�
 
 LEXICON св_[но_в_наст.-буд._также_нсв]_2a_ова́_R
 св_2a_ова́_R ;
++V+Impf+IV:%>ова́ Impf_Inf_stem_R_Fac ;
 +V+Impf+IV:%>у́ Impf_Pres_1_stem_R ;
 
 LEXICON св_2a_ё_ова́
@@ -983,7 +986,7 @@ LEXICON нсв_4b
 
 LEXICON нсв_4bs
 нсв_4b? ;
-+V+Perf+TV:%^Mё PastPass_нн_end_Prb ;
++V+Impf+TV:%^Mё PastPass_нн_end_Prb ;
 
 LEXICON нсв_4b?
 нсв_нп_4b ;
@@ -1562,6 +1565,7 @@ LEXICON св_5b?_я́ть_повел._затрудн.
 LEXICON св-нсв_[но_в_прош._и_инф._преимущ._св]_нп_5b_е́ть
 +V+Perf+IV:е́ Perf_Inf_V_stem ;
 +V+Perf+IV: Perf_Fut_2_end ;
++V+Impf+IV:е́ Impf_Inf_V_stem_Fac ;
 +V+Impf+IV: Impf_Pres_2_end ;
 
 LEXICON нсв_5b/c''_а́ть_R_безл.
@@ -4098,6 +4102,12 @@ Past_stem ;
 Impf_PastVrbAdv_V ;
 PastAct ;
 
+LEXICON Impf_Inf_V_stem_Fac
++Inf+Fac:%<ть # ;
+Past_stem_Fac ;
+Impf_PastVrbAdv_V_Fac ;
+PastAct_Fac ;
+
 LEXICON Impf_Inf_V_stem_безл.
 +Inf:%<ть # ;
 Past_stem_безл. ;
@@ -4113,6 +4123,12 @@ LEXICON Impf_Inf_stem_R
 Past_stem_R ;
 Impf_PastVrbAdv_R ;
 PastAct_R ;
+
+LEXICON Impf_Inf_stem_R_Fac
++Inf+Fac:%<ться # ;
+Past_stem_R_Fac ;
+Impf_PastVrbAdv_R ; ! already Fac
+PastAct_R_Fac ;
 
 LEXICON Impf_Inf_stem_R_безл.
 +Inf:%<ться # ;
@@ -5179,6 +5195,12 @@ LEXICON Past_stem
 +Pst+Neu+Sg:%<ло # ;
 +Pst+MFN+Pl:%<ли # ;
 
+LEXICON Past_stem_Fac
++Pst+Msc+Sg+Fac:%<л # ; 
++Pst+Fem+Sg+Fac:%<ла # ;
++Pst+Neu+Sg+Fac:%<ло # ;
++Pst+MFN+Pl+Fac:%<ли # ;
+
 LEXICON Past_stem_безл.
 +Pst+Neu+Sg:%<ло # ;
 
@@ -5219,6 +5241,12 @@ LEXICON Past_stem_R
 +Pst+Fem+Sg:%<лась # ;
 +Pst+Neu+Sg:%<лось # ;
 +Pst+MFN+Pl:%<лись # ;
+
+LEXICON Past_stem_R_Fac
++Pst+Msc+Sg+Fac:%<лся # ; 
++Pst+Fem+Sg+Fac:%<лась # ;
++Pst+Neu+Sg+Fac:%<лось # ;
++Pst+MFN+Pl+Fac:%<лись # ;
 
 LEXICON Past_stem_R_безл.
 +Pst+Neu+Sg:%<лось # ;

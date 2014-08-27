@@ -9,7 +9,26 @@ SUBDIRS = filters tagsets .
 #### BEGIN: Add local processing instructions BELOW this line ####
 ##################################################################
 
+analyser-mt-gt-desc.hfst: analyser-mt-gt-desc.tmp.hfst \
+				 $(top_builddir)/src/orthography/destress.hfst
+	$(AM_V_RGX2FST)$(PRINTF) "\
+				@\"$<\" \
+			.o. @\"$(top_builddir)/src/orthography/destress.hfst\" \
+			;" \
+		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --harmonize-flags \
+		| $(HFST_INVERT) \
+		| $(HFST_FST2FST) $(HFST_FLAGS) -f olw \
+		> $@
 
+generator-mt-gt-norm.hfst: generator-mt-gt-norm.tmp.hfst \
+				  $(top_builddir)/src/orthography/destress.hfst
+	$(AM_V_RGX2FST)$(PRINTF) "\
+				@\"$<\" \
+			.o. @\"$(top_builddir)/src/orthography/destress.hfst\" \
+			;" \
+		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --harmonize-flags \
+		| $(HFST_FST2FST) $(HFST_FLAGS) -f olw \
+		> $@
 
 ##################################################################
 #### END: Add local processing instructions ABOVE this line ######

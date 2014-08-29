@@ -85,6 +85,12 @@ Multichar_Symbols
 +PObj !!= * @CODE@ = object of preposition, e.g. его~него
 +Poss !!= * @CODE@ = possessive
 
+!! Punctuation
++CLB    !!= * @CODE@ = Clause boundary
++PUNCT  !!= * @CODE@ = Punctuation
++QUOT   !!= * @CODE@ = Quotation
++PAR    !!= * @CODE@ = Parenthesis/bracket
+
 !! !!Other tags
 +Prb !!= * @CODE@ = затруднительно - +Prb(lematic); предположительно - +Hyp(othetical); нет - +Gap
 +Fac !!= * @CODE@ = Facultative

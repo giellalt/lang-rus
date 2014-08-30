@@ -85,7 +85,7 @@ Multichar_Symbols
 +PObj !!= * @CODE@ = object of preposition, e.g. его~него
 +Poss !!= * @CODE@ = possessive
 
-!! Punctuation
+!! !!Punctuation
 +CLB    !!= * @CODE@ = Clause boundary
 +PUNCT  !!= * @CODE@ = Punctuation
 +QUOT   !!= * @CODE@ = Quotation

@@ -1,22 +1,26 @@
 
 LEXICON Punctuation 
 
-+CLB:%,   # ;
-+CLB:%.   # ;
-+CLB:%:   # ;
-+CLB:%;	  # ;
-+CLB:%!	  # ;
-+CLB:%?	  # ;
++CLB:%, # ;
++CLB:%. # ;
++CLB:%: # ;
++CLB:%; # ;
++CLB:%! # ;
++CLB:%? # ;
 +CLB:%.%.%. # ;
 +CLB:%… # ;
-+PUNCT:%-  # ;
++PUNCT:%- # ;
 +QUOT:%" # ;
-+QUOT:%« # ;
-+QUOT:%» # ;
++QUOT:%“ # ;
++QUOT:%” # ;
++QUOT:«7 # ; ! «
++QUOT:»7 # ; ! »
 +PAR:%[ # ;
 +PAR:%] # ;
 +PAR:%( # ;
 +PAR:%) # ;
++PAR:%[%<%] # ; ! <
++PAR:%[%>%] # ; ! >
 
 
 

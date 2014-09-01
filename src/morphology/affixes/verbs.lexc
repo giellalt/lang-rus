@@ -4954,12 +4954,12 @@ Imper_[3] ;
 LEXICON Perf_Fut_1_stem_13
 +Fut: PresFut_1_stem_Sub ;
 Imper_unstressed_Fac ;
-+Imp+Pl1+Use/Sub:%<ем # ;
++Imp+Pl1+Err/Sub:%<ем # ;
 
 LEXICON Perf_Fut_1_stem_13_R
 +Fut: PresFut_1_stem_R_Sub ;
 Imper_unstressed_R_Fac ;
-+Imp+Pl1+Use/Sub:%<емся # ;
++Imp+Pl1+Err/Sub:%<емся # ;
 
 LEXICON Perf_Fut_1_stem_R
 Perf_Fut_1_stem_R_noImp ;
@@ -5445,12 +5445,12 @@ LEXICON PresFut_1_stem_Fac
 +Pl3+Fac:%<ут # ;
 
 LEXICON PresFut_1_stem_Sub
-+Sg1+Use/Sub:%<у # ;
-+Sg2+Use/Sub:%<ешь # ;
-+Sg3+Use/Sub:%<ет # ;
-+Pl1+Use/Sub:%<ем # ;
-+Pl2+Use/Sub:%<ете # ;
-+Pl3+Use/Sub:%<ут # ;
++Sg1+Err/Sub:%<у # ;
++Sg2+Err/Sub:%<ешь # ;
++Sg3+Err/Sub:%<ет # ;
++Pl1+Err/Sub:%<ем # ;
++Pl2+Err/Sub:%<ете # ;
++Pl3+Err/Sub:%<ут # ;
 
 LEXICON PresFut_1_stem_R
 +Sg1:%<усь # ;
@@ -5477,12 +5477,12 @@ LEXICON PresFut_1_stem_R_Fac
 +Pl3+Fac:%<утся # ;
 
 LEXICON PresFut_1_stem_R_Sub
-+Sg1+Use/Sub:%<усь # ;
-+Sg2+Use/Sub:%<ешься # ;
-+Sg3+Use/Sub:%<ется # ;
-+Pl1+Use/Sub:%<емся # ;
-+Pl2+Use/Sub:%<етесь # ;
-+Pl3+Use/Sub:%<утся # ;
++Sg1+Err/Sub:%<усь # ;
++Sg2+Err/Sub:%<ешься # ;
++Sg3+Err/Sub:%<ется # ;
++Pl1+Err/Sub:%<емся # ;
++Pl2+Err/Sub:%<етесь # ;
++Pl3+Err/Sub:%<утся # ;
 
 LEXICON PresFut_1_stem_Pass
 +Sg1+Pass+Fac:%<усь # ;

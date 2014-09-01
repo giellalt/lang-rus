@@ -4,12 +4,17 @@ Multichar_Symbols
 
 !! !!Stressed vowels
 
-а́ е́ ё́ и́ о́ у́ ы́ э́ ю́ я́    !!= * @CODE@
-а̀ ѐ ё̀ ѝ о̀ у̀ ы̀ э̀ ю̀ я̀    !!= * @CODE@  Secondary stress
+а́ е́ ё́ и́ о́ у́ ы́ э́ ю́ я́    !!= * @CODE@  Primary stress (lower)
+а̀ ѐ ё̀ ѝ о̀ у̀ ы̀ э̀ ю̀ я̀    !!= * @CODE@  Secondary stress (lower)
 
-А́ Е́ Ё́ И́ О́ У́ Ы́ Э́ Ю́ Я́   !!= * @CODE@
-А̀ Ѐ Ё̀ Ѝ О̀ У̀ Ы̀ Э̀ Ю̀ Я̀
+А́ Е́ Ё́ И́ О́ У́ Ы́ Э́ Ю́ Я́   !!= * @CODE@  Primary stress (upper)
+А̀ Ѐ Ё̀ Ѝ О̀ У̀ Ы̀ Э̀ Ю̀ Я̀   !!= * @CODE@  Secondary stress (upper)
 
+!! !!Symbols that need to be escaped on the lower side (towards twolc): (copied from sme)
+»7     ! »
+«7     ! «
+%[%>%]  ! >
+%[%<%]  ! <
 
 !! !!Markers
 
@@ -37,7 +42,7 @@ Multichar_Symbols
 +CS     !!= * @CODE@ = Subordinating conjunction
 +Interj !!= * @CODE@ = Interjection
 +Pcle   !!= * @CODE@ = Particle
-+Paren   !!= * @CODE@ = Parenthetical вводное слово
++Paren  !!= * @CODE@ = Parenthetical вводное слово
 
 !! !!Sub-POS
 +Prop   !!= * @CODE@ = Proper
@@ -132,17 +137,17 @@ LEXICON Root    !!= * @CODE@
 
 Adjective ;	    !!= * @CODE@
 Adverb ;	    !!= * @CODE@
-Comparative ;
+Comparative ;   !!= * @CODE@
 Conjunction ;   !!= * @CODE@
 Interjection ;  !!= * @CODE@
 Noun ;		    !!= * @CODE@
 Numeral ;       !!= * @CODE@
-Parenthetical ;
-Particle ;
-Predicative ;
+Parenthetical ; !!= * @CODE@
+Particle ;      !!= * @CODE@
+Predicative ;   !!= * @CODE@
 Preposition ;   !!= * @CODE@
 Pronoun ;	    !!= * @CODE@
 Verb ;		    !!= * @CODE@
-Propernoun ;
-Punctuation ;
+Propernoun ;    !!= * @CODE@
+Punctuation ;   !!= * @CODE@
 

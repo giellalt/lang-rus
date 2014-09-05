@@ -14,11 +14,13 @@ This is free and open source South Sámi morphology.
 
 !!Stressed vowels
 
- * а́ е́ ё́ и́ о́ у́ ы́ э́ ю́ я́    
- * а̀ ѐ ё̀ ѝ о̀ у̀ ы̀ э̀ ю̀ я̀      Secondary stress
+ * а́ е́ ё́ и́ о́ у́ ы́ э́ ю́ я́      Primary stress (lower)
+ * а̀ ѐ ё̀ ѝ о̀ у̀ ы̀ э̀ ю̀ я̀      Secondary stress (lower)
 
- * А́ Е́ Ё́ И́ О́ У́ Ы́ Э́ Ю́ Я́   
+ * А́ Е́ Ё́ И́ О́ У́ Ы́ Э́ Ю́ Я́     Primary stress (upper)
+ * А̀ Ѐ Ё̀ Ѝ О̀ У̀ Ы̀ Э̀ Ю̀ Я̀     Secondary stress (upper)
 
+!!Symbols that need to be escaped on the lower side (towards twolc): (copied from sme)
 
 !!Markers
 
@@ -46,7 +48,7 @@ This is free and open source South Sámi morphology.
  * +CS      = Subordinating conjunction
  * +Interj  = Interjection
  * +Pcle    = Particle
- * +Paren    = Parenthetical вводное слово
+ * +Paren   = Parenthetical вводное слово
 
 !!Sub-POS
  * +Prop    = Proper
@@ -94,6 +96,12 @@ This is free and open source South Sámi morphology.
  * +PObj  = object of preposition, e.g. его~него
  * +Poss  = possessive
 
+!!Punctuation
+ * +CLB     = Clause boundary
+ * +PUNCT   = Punctuation
+ * +QUOT    = Quotation
+ * +PAR     = Parenthesis/bracket
+
 !!Other tags
  * +Prb  = затруднительно - +Prb(lematic); предположительно - +Hyp(othetical); нет - +Gap
  * +Fac  = Facultative
@@ -106,11 +114,17 @@ This is free and open source South Sámi morphology.
 
  * Adjective ;	    
  * Adverb ;	    
+ * Comparative ;   
  * Conjunction ;   
  * Interjection ;  
  * Noun ;		    
  * Numeral ;       
+ * Parenthetical ; 
+ * Particle ;      
+ * Predicative ;   
  * Preposition ;   
  * Pronoun ;	    
  * Verb ;		    
+ * Propernoun ;    
+ * Punctuation ;   
 

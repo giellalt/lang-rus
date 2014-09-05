@@ -16,6 +16,24 @@ SUBDIRS = . fstbased listbased
 # generator-speller-gt-norm.xfst: generator-speller-gt-norm.tmp.xfst
 #	build rules
 
+# We need to remove accents from the speller fst's:
+generator-speller-gt-norm.hfst: generator-speller-gt-norm.tmp.hfst \
+				  $(top_builddir)/src/orthography/destress.hfst
+	$(AM_V_RGX2FST)$(PRINTF) "\
+				@\"$<\" \
+			.o. @\"$(top_builddir)/src/orthography/destress.hfst\" \
+			;" \
+		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --harmonize-flags \
+		> $@
+
+analyser-speller-gt-norm.xfst: analyser-speller-gt-norm.tmp.xfst \
+				  $(top_builddir)/src/orthography/destress.xfst
+	$(AM_V_XFST)$(PRINTF) "read regex \
+				@\"$<\" \
+			.o. @\"$(top_builddir)/src/orthography/destress.xfst\" \
+			;\n\
+		 save stack $@\n\
+		 quit\n" | $(XFST) $(VERBOSITY)
 
 # END: Local processing
 #########################################

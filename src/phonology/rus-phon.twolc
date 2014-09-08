@@ -86,13 +86,13 @@ HCEndV = :PC [ а́:0 | о́:0 | а:0 | о:0 ] %>:0 ;       ! красота́, 
 HCEndC = :PC %>:0 ;                                 ! пол
 HCEnd = [ HCEndV | HCEndC ] ;
 VEndV = :V [ я́:0 | ё:0 | е́:0 | я:0 | е:0 ] %>:0 ;   ! судия́, остриё, житие́, Мари́я, поня́тие
-VEndC = :V й:0 %>:0 ;                           ! музе́й
+VEndC = :V й:0 %>:0 ;                               ! музе́й
 VEnd = [ VEndV | VEndC ] ;
 JEndV = %^F:0 V: й: [ я́:0 | ё:0 | я:0 | е:0 ] %>:0 ; ! семья́, бельё, колдунья, счастье
 JEndC = %^F:0 V: й: %>:0 ;                           ! мураве́й
 JEnd = [ JEndV | JEndC ] ;
 jEndV = \%^F:0 V: й:й [ я́:0 | ё:0 | я:0 | е:0 ] %>:0 ; ! вайя
-jEndC = \%^F:0 V: й:й %>:0 ;                           ! Are there any like this?
+jEndC = \%^F:0 V: й:й й:0 %>:0 ;                       ! Гавайи (lexical form = Гавайй)
 jEnd = [ jEndV | jEndC ] ;
 1ConjV = V %<:0 ;                            ! читать, умолять, белеть, воевать, etc.?
 1ConjJ = (%^F:0 V:) :ь %<:0 ;                  ! бить, бей, бью
@@ -140,6 +140,7 @@ where Vx in ( а е́ ё и я а́ и́ я́ ) ;
 
 "й>0 in lexical endings, and before fleeting vowels, and in comparative adjectives with velar mutation"
 й:0 <=> .#. Letter+ V _  %>:0 ; ! in lexical ending
+        .#. Letter+ V й:й _  %>:0 ; ! in lexical ending (e.g. Гава́йи, with lexical form Гава́йй)
         .#. Letter+ _ %^F:0 V ; ! before fleeting vowel
         [ г: | к: | х: ] %>:0 [ е | е́: ] _ .#. ; ! comparative adjectives with velar mutation
 

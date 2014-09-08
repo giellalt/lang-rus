@@ -971,12 +971,12 @@ LEXICON мс_жо_[п_a]_SgOnly
 +Pron+Fem+Sg+Ins+Fac:%>ою # ;
 
 LEXICON мс_мн._одуш._[п_a]
-+MFN+Pl+Nom:%>ые # ;
-+MFN+Anim+Pl+Acc:%>ых # ;
-+MFN+Pl+Gen:%>ых # ;
-+MFN+Pl+Loc:%>ых # ;
-+MFN+Pl+Dat:%>ым # ;
-+MFN+Pl+Ins:%>ыми # ;
++Pron+MFN+Pl+Nom:%>ые # ;
++Pron+MFN+Anim+Pl+Acc:%>ых # ;
++Pron+MFN+Pl+Gen:%>ых # ;
++Pron+MFN+Pl+Loc:%>ых # ;
++Pron+MFN+Pl+Dat:%>ым # ;
++Pron+MFN+Pl+Ins:%>ыми # ;
 
 LEXICON мс_мо_[п_b]_SgOnly
 +Pron+Msc+Sg+Nom:%>о́й # ;

@@ -127,8 +127,8 @@ LEXICON п_a[1]
 +A:н SF_comp_stem ;
 
 LEXICON п_a2
-+A:н LF_stem ;
-+A: SF_a ;
++A:н LF_stem_Fac ;
++A: SF_a_Fac ;
 +A:н SF_comp_stem ;
 
 LEXICON п_a_искренний
@@ -915,7 +915,7 @@ LEXICON LF_stem_Fac
 +Fem+Sg+Loc+Fac:%>ой # ;
 +Fem+Sg+Dat+Fac:%>ой # ;
 +Fem+Sg+Ins+Fac:%>ой # ;
-+Fem+Sg+Ins+Fac:%>ою # ;
++Fem+Sg+Ins+Fac:%>ою # ; ! TODO +Fac+Fac ? :)
 +MFN+Pl+Nom+Fac:%>ые # ;
 +MFN+Inan+Pl+Acc+Fac:%>ые # ;
 +MFN+Anim+Pl+Acc+Fac:%>ых # ;
@@ -944,7 +944,7 @@ LEXICON LF_stem_Sub
 +Fem+Sg+Loc+Err/Sub:%>ой # ;
 +Fem+Sg+Dat+Err/Sub:%>ой # ;
 +Fem+Sg+Ins+Err/Sub:%>ой # ;
-+Fem+Sg+Ins+Err/Sub:%>ою # ;
++Fem+Sg+Ins+Fac+Err/Sub:%>ою # ;
 +MFN+Pl+Nom+Err/Sub:%>ые # ;
 +MFN+Inan+Pl+Acc+Err/Sub:%>ые # ;
 +MFN+Anim+Pl+Acc+Err/Sub:%>ых # ;
@@ -1002,7 +1002,7 @@ LEXICON LF_stem_R_Prb
 +Fem+Sg+Loc+Prb:%>ойся # ;
 +Fem+Sg+Dat+Prb:%>ойся # ;
 +Fem+Sg+Ins+Prb:%>ойся # ;
-+Fem+Sg+Ins+Prb:%>оюся # ;
++Fem+Sg+Ins+Fac+Prb:%>оюся # ;
 +MFN+Pl+Nom+Prb:%>ыеся # ;
 +MFN+Inan+Pl+Acc+Prb:%>ыеся # ;
 +MFN+Anim+Pl+Acc+Prb:%>ыхся # ;
@@ -1031,7 +1031,7 @@ LEXICON LF_stem_R_Fac
 +Fem+Sg+Loc+Fac:%>ойся # ;
 +Fem+Sg+Dat+Fac:%>ойся # ;
 +Fem+Sg+Ins+Fac:%>ойся # ;
-+Fem+Sg+Ins+Fac:%>оюся # ;
++Fem+Sg+Ins+Fac:%>оюся # ; ! TODO +Fac+Fac ?
 +MFN+Pl+Nom+Fac:%>ыеся # ;
 +MFN+Inan+Pl+Acc+Fac:%>ыеся # ;
 +MFN+Anim+Pl+Acc+Fac:%>ыхся # ;
@@ -1060,7 +1060,7 @@ LEXICON LF_stem_R_Sub
 +Fem+Sg+Loc+Err/Sub:%>ойся # ;
 +Fem+Sg+Dat+Err/Sub:%>ойся # ;
 +Fem+Sg+Ins+Err/Sub:%>ойся # ;
-+Fem+Sg+Ins+Err/Sub:%>оюся # ;
++Fem+Sg+Ins+Fac+Err/Sub:%>оюся # ;
 +MFN+Pl+Nom+Err/Sub:%>ыеся # ;
 +MFN+Inan+Pl+Acc+Err/Sub:%>ыеся # ;
 +MFN+Anim+Pl+Acc+Err/Sub:%>ыхся # ;
@@ -1376,21 +1376,21 @@ LEXICON SF1—_a
 LEXICON SF_a'
 +Msc+Sg+Pred:%>%^Z # ;
 +Neu+Sg+Pred:%>о # ;
-+Fem+Sg+Pred:%>а # ;
++Fem+Sg+Pred:%>а # ; ! TODO one of the feminines should be Fac
 +Fem+Sg+Pred:%>а́ # ;
 +MFN+Pl+Pred:%>ы # ;
 
 LEXICON SF_a'_FemPrb
 +Msc+Sg+Pred:%>%^Z # ;
 +Neu+Sg+Pred:%>о # ;
-+Fem+Sg+Pred+Prb:%>а # ;
++Fem+Sg+Pred+Prb:%>а # ; ! TODO one of the feminines should be Fac
 +Fem+Sg+Pred+Prb:%>а́ # ;
 +MFN+Pl+Pred:%>ы # ;
 
 LEXICON SF_a'_MscFemPrb
 +Msc+Sg+Pred+Prb:%>%^Z # ;
 +Neu+Sg+Pred:%>о # ;
-+Fem+Sg+Pred+Prb:%>а # ;
++Fem+Sg+Pred+Prb:%>а # ;  ! TODO one of the feminines should be Fac
 +Fem+Sg+Pred+Prb:%>а́ # ;
 +MFN+Pl+Pred:%>ы # ;
 
@@ -1434,7 +1434,7 @@ LEXICON SF_b'
 +Msc+Sg+Pred:%>%^Z # ;
 +Neu+Sg+Pred:%>о́ # ;
 +Fem+Sg+Pred:%>а́ # ;
-+MFN+Pl+Pred:%>ы # ;
++MFN+Pl+Pred:%>ы # ; ! TODO one of the plurals should be Fac
 +MFN+Pl+Pred:%>ы́ # ;
 
 LEXICON SF_c
@@ -1459,14 +1459,14 @@ LEXICON SF_c'
 +Msc+Sg+Pred:%>%^Z # ;
 +Neu+Sg+Pred:%>о # ;
 +Fem+Sg+Pred:%>а́ # ;
-+MFN+Pl+Pred:%>ы # ;
++MFN+Pl+Pred:%>ы # ; ! TODO one of the plurals should be Fac
 +MFN+Pl+Pred:%>ы́ # ;
 
 LEXICON SF_c'_Prb
 +Msc+Sg+Pred+Prb:%>%^Z # ;
 +Neu+Sg+Pred+Prb:%>о # ;
 +Fem+Sg+Pred+Prb:%>а́ # ;
-+MFN+Pl+Pred+Prb:%>ы # ;
++MFN+Pl+Pred+Prb:%>ы # ; ! TODO one of the plurals should be Fac
 +MFN+Pl+Pred+Prb:%>ы́ # ;
 
 LEXICON SF_c'(PlStressed)
@@ -1478,10 +1478,10 @@ LEXICON SF_c'(PlStressed)
 
 LEXICON SF_c''
 +Msc+Sg+Pred:%>%^Z # ;
-+Neu+Sg+Pred:%>о # ;
++Neu+Sg+Pred:%>о # ; ! TODO one of the neuters should be Fac
 +Neu+Sg+Pred:%>о́ # ;
 +Fem+Sg+Pred:%>а́ # ;
-+MFN+Pl+Pred:%>ы # ;
++MFN+Pl+Pred:%>ы # ; ! TODO one of the plurals should be Fac
 +MFN+Pl+Pred:%>ы́ # ;
 
 LEXICON SF_comp_stem

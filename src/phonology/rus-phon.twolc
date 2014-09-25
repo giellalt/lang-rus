@@ -103,7 +103,7 @@ Rules
 "Remove extra stress marks on stem: the stress mark closest to the end remains"
 ! сло́ва́
 ! слова́
-Vx:Vy <=> \[ %^F:0 | %>:0 | %<:0 ] _ \[ %>:0 ] $[ :StressedV ] ;
+Vx:Vy <=> \[ %^F:0 | %>:0 | %<:0 ] _ [ :StressedV | [ \[ %>:0 ] $[ :StressedV ] ] ] ;
 where Vx in ( а́ э́ о́ у́ ы́ я́ е́ ё ю́ и́ )
       Vy in ( а э о у ы я е е ю и )
     matched ;

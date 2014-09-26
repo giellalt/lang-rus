@@ -3,6 +3,7 @@ Alphabet
       %>:0   ! End of nominal stem
       %<:0   ! End of verbal stem
       %^F:0  ! placed immediately before fleeting vowels Fа Fе Fо Fи Fя Fа́ Fе́ Fё Fо́ Fи́ Fя́
+      %^pF:0 ! placed immediately before verbal prefix fleeting vowels Fо Fо́
       %^G:0  ! Facilitates GenPl ов/ев when it "should" be zero or ей (its presence blocks the transformation rule)
       %^Z:0  ! "Zero ending" resolves to 0/ь/й (used for short-form adj's)
       %^M:0  ! Verb stem mutation
@@ -103,7 +104,7 @@ Rules
 "Remove extra stress marks on stem: the stress mark closest to the end remains"
 ! сло́ва́
 ! слова́
-Vx:Vy <=> \[ %^F:0 | %>:0 | %<:0 ] _ [ :StressedV | [ \[ %>:0 ] $[ :StressedV ] ] ] ;
+Vx:Vy <=> \[ %^pF:0 | %^F:0 | %>:0 | %<:0 ] _ [ :StressedV | [ \[ %>:0 ] $[ :StressedV ] ] ] ;
 where Vx in ( а́ э́ о́ у́ ы́ я́ е́ ё ю́ и́ )
       Vy in ( а э о у ы я е е ю и )
     matched ;
@@ -125,10 +126,10 @@ where Vx in ( а е́ ё и я а́ и́ я́ ) ;
          %^F:0 _ [ Letter ]+ (End) %>:0 :V ; ! This correctly does not delete люб(о)вью, since the ь is 1st
          [ г: | к: | х: ] %>:0 [ е | е́: ] _ .#. ; ! After comparative adjective mutation
 
-"о/о́>0 in lexical endings, fleeting vowels (including verbal prefixes), and GenPl after hard consonants"
+"о/о́>0 in lexical endings, fleeting vowels (including verbal prefixes), and zero GenPl"
 [ о:0 | о́:0 ] <=> .#. [ Letter: | %^F:0 ]+ _  %>:0 ; ! lexical ending
                   %^F:0 _ [ Letter ]+ (End) %>:0 :V ; ! fleeting vowel
-                  [ в | н а д | н а́: д | о б | о́: б | о т | о́: т | п о д | п о́: д | п р е д | п р е́: д | с | в з: | в о з: | в о́: з: | и з: | и́: з: | н и з: | н и́: з: | р а з: | р а́: з: ] %^F:0 _ C (%^F:0) :V ; ! Fleeting vowels in prefixes, like сожгла сжег
+                  [ в | н а д | н а́: д | о б | о́: б | о т | о́: т | п о д | п о́: д | п р е д | п р е́: д | с | в з: | в о з: | в о́: з: | и з: | и́: з: | н и з: | н и́: з: | р а з: | р а́: з: ] %^pF:0 _ C (%^F:0) :V ; ! Fleeting vowels in prefixes, like сожгла сжег
                   [ VELEndV | HUSHEndV | цEndV | HCEndV | FVn0 | JEndV | jEnd ] _ в:0 .#. ; ! zero GenPl
 
 "з>с in some verbal prefixes with dropped fleeting vowels, when the following consonant is unvoiced"

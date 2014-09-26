@@ -198,8 +198,9 @@ LEXICON м_b_П2_Р2
 MscGen2_inan ;
 
 LEXICON м_b_П2_Р2_мох
-м_b_П2_Р2 ;
-+N+Msc: MSgStem_Fac ;
+:%^Fо́х м_b_П2_Р2 ;
++N+Msc:о́х MSgStem_Fac ;
+:о́х MscGen2_inan ;
 
 LEXICON м_b_Р2
 м_b ;
@@ -1760,6 +1761,10 @@ LEXICON ж_b_Р._мн._затрудн.
 +N+Fem: FSgEnd ;
 +N+Fem: ыPlEnd_gPrb ;
 
+LEXICON ж_b_Р._мн._нет
++N+Fem: FSgEnd ;
++N+Fem: ыPlEnd_noG ;
+
 LEXICON ж_b- ! This also includes ж_b'- because of the fleeting vowel rule in twolc
 +N+Fem: FSgEnd ;
 +N+Fem: ыPlEnd_Prb ;
@@ -2636,9 +2641,12 @@ LEXICON ыPlEnd_ObliquePrb       !Inanimate
 PlObliqEnd_Prb ;
 
 LEXICON ыPlEnd_gPrb
+ыPlEnd_noG ;
++Inan+Pl+Gen+Prb:%>о́в # ;
+
+LEXICON ыPlEnd_noG
 ыPlNomEnd ;
 ыPlAccEnd ;
-+Inan+Pl+Gen+Prb:%>о́в # ;
 PlPeriphEnd ;
 
 LEXICON ыPlEnd_ей      !Inanimate

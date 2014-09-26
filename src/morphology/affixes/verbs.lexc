@@ -2365,51 +2365,51 @@ LEXICON св_6c/1a_13_а́ть_R
 
 LEXICON св_6c_ё_ема́ть
 +V+Perf+IV:ема́ Perf_Inf_V_stem ;
-+V+Perf+IV:ем Perf_Fut_1_mut_shift ;
++V+Perf+IV:е́м Perf_Fut_1_mut_shift ;
 +V+Perf+TV:ема́ Perf_Inf_V_stem ;
-+V+Perf+TV:ем Perf_Fut_1_mut_shift ;
++V+Perf+TV:е́м Perf_Fut_1_mut_shift ;
 +V+Perf+TV:ёма PastPass_нн_stem ; 
 
 LEXICON св_6c_ё_епа́ть
 +V+Perf+IV:епа́ Perf_Inf_V_stem ;
-+V+Perf+IV:еп Perf_Fut_1_mut_shift ;
++V+Perf+IV:е́п Perf_Fut_1_mut_shift ;
 +V+Perf+TV:епа́ Perf_Inf_V_stem ;
-+V+Perf+TV:еп Perf_Fut_1_mut_shift ;
++V+Perf+TV:е́п Perf_Fut_1_mut_shift ;
 +V+Perf+TV:ёпа PastPass_нн_stem ; 
 
 LEXICON св_6c_ё_еса́ть
 +V+Perf+IV:еса́ Perf_Inf_V_stem ;
-+V+Perf+IV:ес Perf_Fut_1_mut_shift ;
++V+Perf+IV:е́с Perf_Fut_1_mut_shift ;
 +V+Perf+TV:еса́ Perf_Inf_V_stem ;
-+V+Perf+TV:ес Perf_Fut_1_mut_shift ;
++V+Perf+TV:е́с Perf_Fut_1_mut_shift ;
 +V+Perf+TV:ёса PastPass_нн_stem ; 
 
 LEXICON св_6c_ё_ета́ть
 +V+Perf+IV:ета́ Perf_Inf_V_stem ;
-+V+Perf+IV:ет Perf_Fut_1_mut_shift ;
++V+Perf+IV:е́т Perf_Fut_1_mut_shift ;
 +V+Perf+TV:ета́ Perf_Inf_V_stem ;
-+V+Perf+TV:ет Perf_Fut_1_mut_shift ;
++V+Perf+TV:е́т Perf_Fut_1_mut_shift ;
 +V+Perf+TV:ёта PastPass_нн_stem ; 
 
 LEXICON св_6c_ё_епта́ть
 +V+Perf+IV:епта́ Perf_Inf_V_stem ;
-+V+Perf+IV:епт Perf_Fut_1_mut_shift ;
++V+Perf+IV:е́пт Perf_Fut_1_mut_shift ;
 +V+Perf+TV:епта́ Perf_Inf_V_stem ;
-+V+Perf+TV:епт Perf_Fut_1_mut_shift ;
++V+Perf+TV:е́пт Perf_Fut_1_mut_shift ;
 +V+Perf+TV:ёпта PastPass_нн_stem ; 
 
 LEXICON св_6c_ё_еста́ть
 +V+Perf+IV:еста́ Perf_Inf_V_stem ;
-+V+Perf+IV:ест Perf_Fut_1_mut_shift ;
++V+Perf+IV:е́ст Perf_Fut_1_mut_shift ;
 +V+Perf+TV:еста́ Perf_Inf_V_stem ;
-+V+Perf+TV:ест Perf_Fut_1_mut_shift ;
++V+Perf+TV:е́ст Perf_Fut_1_mut_shift ;
 +V+Perf+TV:ёста PastPass_нн_stem ; 
 
 LEXICON св_6c_ё_еха́ть
 +V+Perf+IV:еха́ Perf_Inf_V_stem ;
-+V+Perf+IV:ех Perf_Fut_1_mut_shift ;
++V+Perf+IV:е́х Perf_Fut_1_mut_shift ;
 +V+Perf+TV:еха́ Perf_Inf_V_stem ;
-+V+Perf+TV:ех Perf_Fut_1_mut_shift ;
++V+Perf+TV:е́х Perf_Fut_1_mut_shift ;
 +V+Perf+TV:ёха PastPass_нн_stem ; 
 
 !====================================== Stem type 7 ======================================
@@ -3338,9 +3338,9 @@ LEXICON нсв_12a_ы́ть_R
 
 LEXICON нсв_12b_наст._пою/,_поёт_прич._страд._наст._нет
 +V+Impf+TV:е́ Impf_Inf_V_stem_w/Pass ;
-+V+Impf+TV:о Impf_Pres_1_end_w/Pass ;
++V+Impf+TV:о́ Impf_Pres_1_end_w/Pass ;
 +V+Impf+IV:е́ Impf_Inf_V_stem ;
-+V+Impf+IV:о Impf_Pres_1_end ;
++V+Impf+IV:о́ Impf_Pres_1_end ;
 
 LEXICON нсв_12b_R_безл._наст._поётся
 +V+Impf+IV:е́ Impf_Inf_stem_R_безл. ;
@@ -3411,8 +3411,8 @@ LEXICON св_12a_ы́ть_R
 LEXICON св_12b_буд._пою/,_ёт
 +V+Perf+TV:е́ Perf_Inf_V_stem ;
 +V+Perf+IV:е́ Perf_Inf_V_stem ;
-+V+Perf+TV:о Perf_Fut_1_end ;
-+V+Perf+IV:о Perf_Fut_1_end ;
++V+Perf+TV:о́ Perf_Fut_1_end ;
++V+Perf+IV:о́ Perf_Fut_1_end ;
 +V+Perf+TV:е́ PastPass_stem ;
 
 LEXICON св_нп_12b/c
@@ -3502,6 +3502,7 @@ LEXICON св_14b_(-н-)_а́ть
 +V+Perf+IV:н Perf_Fut_1_end ;
 +V+Perf+TV:а́ Perf_Inf_V_stem ;
 +V+Perf+TV:н Perf_Fut_1_end ;
+! TODO Past passive?
 
 LEXICON св_14b_(-н-)_а́ть_R
 +V+Perf+IV:а́ Perf_Inf_stem_R ;
@@ -3512,6 +3513,7 @@ LEXICON св_14b_(-н-)_я́ть
 +V+Perf+IV:н Perf_Fut_1_end ;
 +V+Perf+TV:я́ Perf_Inf_V_stem ;
 +V+Perf+TV:н Perf_Fut_1_end ;
+! TODO Past passive?
 
 LEXICON св_14b_(-н-)_я́ть_R
 +V+Perf+IV:я́ Perf_Inf_stem_R ;
@@ -3568,14 +3570,15 @@ LEXICON св_14b/c_(-н-)[1]_а́ть
 +V+Perf+TV:н Perf_Fut_1_end ;
 +V+Perf+IV: Perf_Inf_V_shift[1]_а́ть ;
 +V+Perf+IV:н Perf_Fut_1_end ;
-+V+Perf+TV:а PastPass_stem ;
++V+Perf+TV:а́ PastPass_stem ;
++V+Perf+TV:а PastPass_stem_Fac ;
 
 LEXICON св_14b/c_я́ть_(йм)
 +V+Perf+TV:ня́ Perf_Inf_V_shift ;
 +V+Perf+TV:йм Perf_Fut_1_end ;
 +V+Perf+IV:ня́ Perf_Inf_V_shift ;
 +V+Perf+IV:йм Perf_Fut_1_end ;
-+V+Perf+TV:ня PastPass_stem ;
++V+Perf+TV:ня́ PastPass_stem ;
 
 LEXICON св_14b/c_я́ть_R_(йм)
 +V+Perf+IV:ня́ Perf_Inf_shift_R ;
@@ -3586,7 +3589,8 @@ LEXICON св_14b/c_я́ть_(йм-)_[1]_(но_прич._страд._только
 +V+Perf+TV:йм Perf_Fut_1_end ;
 +V+Perf+IV:н Perf_Inf_V_shift[1]_я́ть ;
 +V+Perf+IV:йм Perf_Fut_1_end ;
-+V+Perf+TV:ня PastPass_stem ;
++V+Perf+TV:ня́ PastPass_stem ;
++V+Perf+TV:ня PastPass_stem_Fac ;
 
 LEXICON св_14b/c_я́ть_(йм)_1
 +V+Perf+TV:н Perf_Inf_V_shift1_я́ть ;
@@ -3600,7 +3604,8 @@ LEXICON св_14b/c_я́ть_(йм)_[1]
 +V+Perf+TV:йм Perf_Fut_1_end ;
 +V+Perf+IV:н Perf_Inf_V_shift[1]_я́ть ;
 +V+Perf+IV:йм Perf_Fut_1_end ;
-+V+Perf+TV:ня PastPass_stem ;
++V+Perf+TV:я́ PastPass_stem ;
++V+Perf+TV:я PastPass_stem_Fac ;
 
 LEXICON св_14b/c_я́ть
 +V+Perf+TV:зя́ Perf_Inf_V_shift ;
@@ -3618,14 +3623,14 @@ LEXICON св_14c_я́ть_(-ыму/) ! изъять
 +V+Perf+TV:ы́м Perf_Fut_1_shift ;
 +V+Perf+IV:ъя́ Perf_Inf_V_shift ;
 +V+Perf+IV:ы́м Perf_Fut_1_shift ;
-+V+Perf+TV:ъя PastPass_stem ;
++V+Perf+TV:ъя́ PastPass_stem ;
 
 LEXICON св_14c/c_я́ть_(-иму/)
 +V+Perf+TV:я́ Perf_Inf_V_shift ;
 +V+Perf+TV:и́м Perf_Fut_1_shift ;
 +V+Perf+IV:я́ Perf_Inf_V_shift ;
 +V+Perf+IV:и́м Perf_Fut_1_shift ;
-+V+Perf+TV:я PastPass_stem ;
++V+Perf+TV:я́ PastPass_stem ;
 
 LEXICON св_14c/c_(прим-)_1
 +V+Perf+TV:н Perf_Inf_V_shift1_я́ть ;
@@ -3639,7 +3644,8 @@ LEXICON св_14c/c_я́ть_(-иму/)_[1]_(но_прич._страд._толь�
 +V+Perf+TV:и́м Perf_Fut_1_shift ;
 +V+Perf+IV: Perf_Inf_V_shift[1]_я́ть ;
 +V+Perf+IV:и́м Perf_Fut_1_shift ;
-+V+Perf+TV:я PastPass_stem ;
++V+Perf+TV:я́ PastPass_stem ;
++V+Perf+TV:я PastPass_stem_Fac ;
 
 LEXICON св_14c/c_я́ть_(ним-//_ым-)_[1]
 +V+Perf+TV:н Perf_Inf_V_shift[1]_я́ть ;
@@ -3882,6 +3888,15 @@ LEXICON св_нп_b/b9_буд._йду/,_-ёт_прош._шёл,_шла/,_ше/д
 +V+Perf+IV:йд Perf_Fut_1_end ;
 
 LEXICON св_b/b9_буд._йду/,_-ёт_прош._шёл,_-шла/,_-ше/дший
+св_нп_b/b9_буд._йду/,_-ёт_прош._шёл,_шла/,_ше/дший ;
++V+Perf+TV+Inf:йти́ # ;
++V+Perf+TV:ш%^G%^Fё Past_end ;
++V+Perf+TV:йд PastVrbAdv_9_end ;
++V+Perf+TV:ше́д PastAct ;
++V+Perf+TV:йд Perf_Fut_1_end ;
++V+Perf+TV:йдё PastPass_нн_stem ;
+
+LEXICON св_b/b9_буд._йду/,_-ёт_прош._шёл,_-шла/,_-ше/дший_/Vйденный
 св_нп_b/b9_буд._йду/,_-ёт_прош._шёл,_шла/,_ше/дший ;
 +V+Perf+TV+Inf:йти́ # ;
 +V+Perf+TV:ш%^G%^Fё Past_end ;

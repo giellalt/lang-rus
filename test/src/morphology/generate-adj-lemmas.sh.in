@@ -54,20 +54,22 @@ Fail=0
 for f in $fsttype; do
 	if [ $f == "xfst" ]; then
 		lookuptool="@LOOKUP@ -q -flags mbTT"
+		suffix="xfst"
 	elif [ $f == "hfst" ]; then
 		lookuptool="@HFST_LOOKUP@ -q"
+		suffix="hfstol"
 	else
 	    Fail=1
 		printf "ERROR: Unknown fst type! "
 	    echo "$f - FAIL"
 	    continue
 	fi
-	if [ -f "$generatorfile.$f" ]; then
+	if [ -f "$generatorfile.$suffix" ]; then
 		let "transducer_found += 1"
 
 ###### Test non-compounds: #######
 		# generate Msc Sg Nom:
-		sed 's/$/+A+Msc+Sg+Nom/' $lemmas | $lookuptool $generatorfile.$f \
+		sed 's/$/+A+Msc+Sg+Nom/' $lemmas | $lookuptool $generatorfile.$suffix \
 			| cut -f2  > $generatedlemmas.$f.tmp.txt
 		fgrep -v "+A+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
 			| sort -u >> $generatedlemmas.$f.txt
@@ -75,7 +77,7 @@ for f in $fsttype; do
 			| sort -u  > $failedlemmas.$f.txt
 		# generate Msc short-form:
 		sed 's/$/+A+Msc+Sg+Pred/' $failedlemmas.$f.txt \
-			| $lookuptool $generatorfile.$f \
+			| $lookuptool $generatorfile.$suffix \
 			| cut -f2  > $generatedlemmas.$f.tmp.txt
 		fgrep -v "+A+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
 			| sort -u >> $generatedlemmas.$f.txt

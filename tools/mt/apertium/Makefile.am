@@ -24,7 +24,7 @@ analyser-mt-gt-desc.hfst: analyser-mt-gt-desc.tmp.hfst \
 				@\"$<\" \
 			.o. @\"$(top_builddir)/src/orthography/destress.hfst\" \
 			;" \
-		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --harmonize-flags \
+		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --xerox-composition=ON \
 		| $(HFST_INVERT) \
 		| $(HFST_FST2FST) $(HFST_FLAGS) -t \
 		> $@
@@ -35,7 +35,7 @@ generator-mt-gt-norm.hfst: generator-mt-gt-norm.tmp.hfst \
 				@\"$<\" \
 			.o. @\"$(top_builddir)/src/orthography/destress.hfst\" \
 			;" \
-		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --harmonize-flags \
+		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --xerox-composition=ON \
 		| $(HFST_FST2FST) $(HFST_FLAGS) -t \
 		> $@
 

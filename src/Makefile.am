@@ -65,7 +65,7 @@ analyser-gt-%.hfst: analyser-gt-%.tmp.hfst \
 				@\"$<\" \
 			.o. @\"orthography/destress.hfst\" \
 			;" \
-		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --harmonize-flags \
+		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --xerox-composition=ON \
 		| $(HFST_INVERT) \
 		| $(HFST_FST2FST) $(HFST_FLAGS) -f olw \
 		> $@
@@ -76,7 +76,7 @@ generator-gt-%.hfst: generator-gt-%.tmp.hfst \
 				@\"$<\" \
 			.o. @\"orthography/destress.hfst\" \
 			;" \
-		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --harmonize-flags \
+		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --xerox-composition=ON \
 		| $(HFST_FST2FST) $(HFST_FLAGS) -f olw \
 		> $@
 

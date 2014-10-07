@@ -28,6 +28,7 @@ This is free and open source South Sámi morphology.
  * %>    = End-of-stem marker (nominals)
  * %<    = End-of-stem marker (verbs)
  * %^F   = Fleeting vowel marker
+ * %^pF  = Verbal prefix fleeting vowel marker
  * %^G   = Irregular GenPl marker (to keep ов/ев on n stems, e.g. ов%^G
  * %^Z   = Zero ending (resolves to 0/й/ь)
  * %^M   = Verb stem mutation

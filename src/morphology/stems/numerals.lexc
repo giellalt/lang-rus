@@ -3,16 +3,16 @@
 !+Num: #  ; 
 
 LEXICON числ.-п_[п_a]
-+Num+A: LF_stem  ; 
++Num+Ord: LF_stem  ; 
 
 LEXICON числ.-п_[п_b]
-+Num+A: LF_end  ; 
++Num+Ord: LF_end  ; 
 
 LEXICON числ.-п_[мс_a]
-+Num+A: мс-п_a_Msc  ; 
-+Num+A: мс-п_a_Neu  ; 
-+Num+A: мс-п_a_Fem  ; 
-+Num+A: мс-п_a_Pl_inananim  ; 
++Num+Ord: мс-п_a_Msc  ; 
++Num+Ord: мс-п_a_Neu  ; 
++Num+Ord: мс-п_a_Fem  ; 
++Num+Ord: мс-п_a_Pl_inananim  ; 
 
 LEXICON 1
 +Num: один  ; 
@@ -399,7 +399,7 @@ LASTDIGIT ;
 
 LEXICON ROMNUM
 +Num: # ;
-+Num+A: п_0_inflect ;
++Num+Ord: п_0_inflect ;
 ! Roman numerals are used for:
 ! centures or millenia: XIX век, II тысячелетие до н. э.
 ! Ordinal number of a monarch: Карл V, Екатерина II.
@@ -423,7 +423,7 @@ LEXICON SQRD
 
 LEXICON NUM
 +Num: # ;
-+Num+A: ABBR_LF_stem_hard ;
++Num+Ord: ABBR_LF_stem_hard ;
 +Num+Prcnt:%% # ;
 км:км SQRD ;
 мм:мм SQRD ;

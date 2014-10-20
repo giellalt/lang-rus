@@ -19,7 +19,7 @@ APERTIUM_TARGET_LANG_NAME=apertium-und
 ##################################################################
 
 analyser-mt-gt-desc.hfst: analyser-mt-gt-desc.tmp.hfst \
-				 $(top_builddir)/src/orthography/destress.hfst
+				 $(top_builddir)/src/orthography/destress.compose.hfst
 	$(AM_V_RGX2FST)$(PRINTF) "\
 				@\"$<\" \
 			.o. @\"$(top_builddir)/src/orthography/destress.compose.hfst\" \
@@ -30,7 +30,7 @@ analyser-mt-gt-desc.hfst: analyser-mt-gt-desc.tmp.hfst \
 		> $@
 
 generator-mt-gt-norm.hfst: generator-mt-gt-norm.tmp.hfst \
-				  $(top_builddir)/src/orthography/destress.hfst
+				  $(top_builddir)/src/orthography/destress.compose.hfst
 	$(AM_V_RGX2FST)$(PRINTF) "\
 				@\"$<\" \
 			.o. @\"$(top_builddir)/src/orthography/destress.compose.hfst\" \

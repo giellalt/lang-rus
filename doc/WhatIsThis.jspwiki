@@ -1,7 +1,10 @@
 
 This is a grammatical analyser for Russian. It differs from most other analysers in also handling stress.
 
-This is work in progress, we have done nouns so far, and are slowly proceeding to the verbs.
+This is work in progress. The lexicon is a full-size lexicon of Russian
+(appr 125000 lemmata), and the morphological analysis is more or less in place. 
+
+The syntactic disambiguation is still work in progress, reducing homonymy from 2,7 readings / word to 2,5 only.
 
 -----
 

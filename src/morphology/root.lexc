@@ -82,11 +82,11 @@ Multichar_Symbols
 +Inan +Anim             !!= * @CODE@ = animacy
 +PObj                   !!= * @CODE@ = Object of preposition (3rd person pronouns have epenthetic н)
 
-+Ord    !!= * @CODE@
-+Cmpar  !!= * @CODE@
++Ord    !!= * @CODE@  = Ordinal
++Cmpar  !!= * @CODE@  = Comparative
 +Sint   !!= * @CODE@  = Synthetic comparative is possible, e.g. старее
 +An     !!= * @CODE@  = Animate placeholder for non-accusative cases
-+Pred   !!= * @CODE@  = "Predicate", used for short-form adjectives
++Pred   !!= * @CODE@  = "Predicate", also used for short-form adjectives
 +Cmpnd  !!= * @CODE@  = "Compound", used for compounding adjectives, such as русско-английский
 
 +PObj !!= * @CODE@ = object of preposition, e.g. его~него

@@ -66,7 +66,8 @@ Multichar_Symbols
 +Pst +Prs +Fut    !!= * @CODE@ = Past, present, future
 +Sg1 +Sg2 +Sg3    !!= * @CODE@ = person sg
 +Pl1 +Pl2 +Pl3    !!= * @CODE@ = person pl
-+PstAct +PstPss   !!= * @CODE@ = Participles (+PrsAct+Adv and +PstAct+Adv are used for the verbal adverbs)
++PrsAct +PrsPss   !!= * @CODE@ = Participles (+PrsAct+Adv and +PstAct+Adv are used for the verbal adverbs)
++PstAct +PstPss   !!= * @CODE@ = Participles
 +Pass             !!= * @CODE@ = Passive
 +Imprs            !!= * @CODE@ = Impersonal (cannot have explicit subject)
 

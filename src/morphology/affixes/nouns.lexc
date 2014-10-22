@@ -969,13 +969,13 @@ LEXICON MSgAccZ_anim
 +Anim+Sg+Acc: # ;
 
 LEXICON MscGen2_inan
-+N+Msc+Inan+Sg+Gen2:у # ;
++N+Msc+Inan+Sg+Gen2:%>у # ;
 
 LEXICON MscLoc2_inan
-+Msc+Inan+Sg+Loc2:у́ # ;
++Msc+Inan+Sg+Loc2:%>у́ # ;
 
 LEXICON MscLoc2_inan_Fac
-+N+Msc+Inan+Sg+Loc2+Fac:у́ # ;
++N+Msc+Inan+Sg+Loc2+Fac:%>у́ # ;
 
 LEXICON MSgObliqStem
 +Inan+Sg+Gen:%>а # ;

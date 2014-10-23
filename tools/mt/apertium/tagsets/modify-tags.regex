@@ -8,5 +8,11 @@
  [ %<pl1%> -> %<p1%> %<pl%> ] .o.
  [ %<pl2%> -> %<p2%> %<pl%> ] .o.
  [ %<pl3%> -> %<p3%> %<pl%> ] .o.
- [ %<n%> %<prop%> -> %<np%> ] 
+ [ %<n%> %<prop%> -> %<np%> ] .o.
+ [ %<prsact%> %<adv%> -> %<pprs%> %<adv%> ] .o.
+ [ %<prsact%> -> %<pprs%> %<actv%> ] .o.
+ [ %<pstact%> %<adv%> -> %<pp%> %<adv%> ] .o.
+ [ %<pstact%> -> %<pp%> %<actv%> ] .o.
+ [ %<prspss%> -> %<pprs%> %<pasv%> ] .o.
+ [ %<pstpss%> -> %<pp%> %<pasv%> ] 
 ];

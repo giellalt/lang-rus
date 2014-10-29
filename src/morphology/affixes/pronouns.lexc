@@ -851,7 +851,7 @@ LEXICON мс_я
 +Pron+Pers+Sg1+Loc:мне́ # ;
 +Pron+Pers+Sg1+Dat:мне́ # ;
 +Pron+Pers+Sg1+Ins:мно́й # ;
-+Pron+Pers+Sg1+Ins:мно́ю # ;
++Pron+Pers+Sg1+Ins+Use/NG:мно́ю # ;
 
 LEXICON мс_ты
 +Pron+Pers+Sg2+Nom:ты́ # ;
@@ -860,7 +860,7 @@ LEXICON мс_ты
 +Pron+Pers+Sg2+Loc:тебе́ # ;
 +Pron+Pers+Sg2+Dat:тебе́ # ;
 +Pron+Pers+Sg2+Ins:тобо́й # ;
-+Pron+Pers+Sg2+Ins:тобо́ю # ;
++Pron+Pers+Sg2+Ins+Use/NG:тобо́ю # ;
 
 LEXICON мс_он
 +Pron+Pers+Sg3+Msc+Nom:о́н # ;
@@ -935,7 +935,7 @@ LEXICON мс_себя
 +Pron+Refl+Loc:себе́ # ;
 +Pron+Refl+Dat:себе́ # ;
 +Pron+Refl+Ins:собо́й # ;
-+Pron+Refl+Ins:собо́ю # ;
++Pron+Refl+Ins+Use/NG:собо́ю # ;
 
 LEXICON мс_столько
 +Pron+Nom:о # ;

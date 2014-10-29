@@ -102,6 +102,7 @@ Multichar_Symbols
 +Prb !!= * @CODE@ = затруднительно - +Prb(lematic); предположительно - +Hyp(othetical); нет - +Gap
 +Fac !!= * @CODE@ = Facultative
 +Use/Obs !!= * @CODE@ = Obsolete
++Use/NG  !!= * @CODE@ = Accept, do not generate
 +Err/Sub !!= * @CODE@ = Substandard
 ! More use tags:
 ! ласкательное - +Use/Aff(ectionate)

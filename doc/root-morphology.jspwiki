@@ -97,6 +97,7 @@
  * +Prb  = затруднительно - +Prb(lematic); предположительно - +Hyp(othetical); нет - +Gap
  * +Fac  = Facultative
  * +Use/Obs  = Obsolete
+ * +Use/NG   = Accept, do not generate
  * +Err/Sub  = Substandard
 
 !!!Key lexicon

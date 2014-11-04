@@ -118,6 +118,7 @@ Multichar_Symbols
 ! уменьшительное - +Use/Dim(inutive)
 ! устаревающее - +Use/Old (going out of date)
 ! устаревшее - +Use/Ant(iquated)
++Use/Ant
 ! anatomical - +Use/Anat
 ! biological - +Use/Bio
 ! botanical - +Use/Bot

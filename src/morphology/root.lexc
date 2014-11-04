@@ -33,6 +33,7 @@ Multichar_Symbols
 +N      !!= * @CODE@ = Noun
 +V      !!= * @CODE@ = Verb
 +A      !!= * @CODE@ = Adjective
++Abbr   !!= * @CODE@ = Abbreviation
 +Pron   !!= * @CODE@ = Pronoun
 +Det    !!= * @CODE@ = Determiner
 +Num    !!= * @CODE@ = Numeral
@@ -138,6 +139,7 @@ Multichar_Symbols
 
 LEXICON Root    !!= * @CODE@
 
+Abbreviation ;	!!= * @CODE@
 Adjective ;	    !!= * @CODE@
 Adverb ;	    !!= * @CODE@
 Comparative ;   !!= * @CODE@

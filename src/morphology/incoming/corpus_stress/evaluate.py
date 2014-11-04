@@ -48,9 +48,9 @@ for feilline in feiler: #{
 	print('- %s\n+ %s\n' % (feilline[0].strip(), feilline[1].strip()));
 #}
 
-print(errors);
-print(wins);
-print(tokens);
+print('err:',errors);
+print('cor:',wins);
+print('tok:',tokens);
 
 print('acc: %.2f' % (wins/tokens*100.0));
 

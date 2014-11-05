@@ -9,3 +9,6 @@ Tests:
 # Tag tests:
   Proper nouns:
     Россия<np><al><f><nn><sg><nom> : Россия
+
+  Verbs:
+    видеть<vblex><impf><iv><pres><p1><sg> : вижу

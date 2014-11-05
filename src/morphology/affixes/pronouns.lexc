@@ -20,6 +20,13 @@ LEXICON Rel_мс-п_a
 +Det+Rel: мс-п_a_Fem ;
 +Det+Rel: мс-п_a_Pl_inananim ;
 
+LEXICON Pos_мс-п_a
++Det+Pos: мс-п_a_Msc ;
++Det+Pos: мс-п_a_Neu ;
++Det+Pos: мс-п_a_Fem ;
++Det+Pos: мс-п_a_Pl_inananim ;
+
+
 LEXICON мс-п_a
 +Det: мс-п_a_Msc ;
 +Det: мс-п_a_Neu ;
@@ -122,6 +129,12 @@ LEXICON Rel_мс-п_b
 +Det+Rel: мс-п_b_Neu ;
 +Det+Rel: мс-п_b_Fem ;
 +Det+Rel: мс-п_b_Pl_inananim ;
+
+LEXICON Pos_мс-п_b
++Det+Pos: мс-п_b_Msc ;
++Det+Pos: мс-п_b_Neu ;
++Det+Pos: мс-п_b_Fem ;
++Det+Pos: мс-п_b_Pl_inananim ;
 
 LEXICON мс-п_b
 +Det: мс-п_b_Msc ;

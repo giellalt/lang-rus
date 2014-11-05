@@ -11,7 +11,8 @@ if CAN_YAML_TEST
 # Add your shell scripts for running python-based tests here:
 
 if WANT_APERTIUM
-TESTS+=run-mt-gt-desc-anayaml-testcases.sh
+TESTS+=run-mt-gt-desc-anayaml-testcases.sh \
+       run-mt-apertium-desc.und-anayaml-testcases.sh
 
 endif # WANT_APERTIUM
 endif # CAN_YAML_TEST

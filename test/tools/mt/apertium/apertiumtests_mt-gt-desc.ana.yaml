@@ -8,22 +8,22 @@ Tests:
 
 # Tag tests:
   Proper nouns:
-    Россия<np><al><f><nn><sg><nom> : Россия
+    Россия+N+Prop+Sem/Alt+Fem+Inan+Sg+Nom : Россия
 
   Verbs:
-    видеть<vblex><impf><iv><pres><p1><sg> : вижу
+    видеть+V+Impf+IV+Prs+Sg1 : вижу
 
   Participles:
-    натянуть<vblex><perf><tv><pp><pasv><mfn><an><pl><ins> : натянутыми
-    быть<vblex><impf><iv><pprs><actv><mfn><an><pl><ins> : бывшими
+    натянуть+V+Perf+TV+PstPss+MFN+Pl+Ins : натянутыми
+    быть+V+Impf+IV+PstAct+MFN+Pl+Ins : бывшими
 
   Adjectives:
-    современный<adj><mfn><an><pl><gen> : современных
+    современный+A+MFN+Pl+Gen : современных
 
   Pronouns:
-    оно<prn><pers><p3><nt><sg><gen> : оно 
-    он<prn><pers><p3><m><sg><gen> : он
-    она<prn><pers><p3><f><sg><gen> : она
+    оно+Pron+Pers+Sg3+Neu+Nom : оно 
+    он¹+Pron+Pers+Sg3+Msc+Nom : он
+    она+Pron+Pers+Sg3+Fem+Nom : она
 
   Determiners:
-    его<det><pos><m><an><sg><nom> : его 
+    его+Det+Msc+Sg+Nom : его 

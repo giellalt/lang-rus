@@ -39,6 +39,7 @@ This is free and open source South Sámi morphology.
  * +N       = Noun
  * +V       = Verb
  * +A       = Adjective
+ * +Abbr    = Abbreviation
  * +Pron    = Pronoun
  * +Det     = Determiner
  * +Num     = Numeral
@@ -115,6 +116,7 @@ This is free and open source South Sámi morphology.
 
  * LEXICON Root    
 
+ * Abbreviation ;	
  * Adjective ;	    
  * Adverb ;	    
  * Comparative ;   

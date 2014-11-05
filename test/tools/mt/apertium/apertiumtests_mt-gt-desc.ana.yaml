@@ -12,3 +12,17 @@ Tests:
 
   Verbs:
     видеть<vblex><impf><iv><pres><p1><sg> : вижу
+
+  Participles:
+    натянуть<vblex><perf><tv><pp><pasv><mfn><an><pl><ins> : натянутыми
+
+  Adjectives:
+    современный<adj><mfn><an><pl><gen> : современных
+
+  Pronouns:
+    оно<prn><pers><p3><nt><sg><gen> : оно 
+    он<prn><pers><p3><m><sg><gen> : он
+    она<prn><pers><p3><f><sg><gen> : она
+
+  Determiners:
+    его<det><pos><m><an><sg><nom> : его 

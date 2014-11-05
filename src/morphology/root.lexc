@@ -58,6 +58,7 @@ Multichar_Symbols
 +Coll   !!= * @CODE@ = Collective numerals
 +MWE    !!= * @CODE@ = Multi-word expressions
 +Rel    !!= * @CODE@ = Relativizer, e.g. который, где, как, куда, сколько, etc.
++Pos    !!= * @CODE@ = Possessive, e.g. его, наш
 +Prcnt  !!= * @CODE@ = Percent
 
 !! !!Verbal MSP

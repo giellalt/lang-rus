@@ -3,6 +3,7 @@
  [ %<punct%> -> %<guio%> || %- _ ] .o.
  [ %<punct%> -> %<guio%> || %— _ ] .o.
  [ %<clb%> -> %<sent%> || %. _ ] .o.
+ [ %<sur%> -> %<cog%> ] .o.
  [ %<sg1%> -> %<p1%> %<sg%> ] .o.
  [ %<sg2%> -> %<p2%> %<sg%> ] .o.
  [ %<sg3%> -> %<p3%> %<sg%> ] .o.
@@ -10,6 +11,14 @@
  [ %<pl2%> -> %<p2%> %<pl%> ] .o.
  [ %<pl3%> -> %<p3%> %<pl%> ] .o.
  [ %<n%> %<prop%> -> %<np%> ] .o.
+ [ %<adj%> %<mfn%> %<pl%> -> %<adj%> %<mfn%> %<an%> %<pl%> ] .o.
+ [ %<adj%> %<m%> %<sg%> -> %<adj%> %<m%> %<an%> %<sg%> ] .o.
+ [ %<adj%> %<f%> %<sg%> -> %<adj%> %<f%> %<an%> %<sg%> ] .o.
+ [ %<adj%> %<nt%> %<sg%> -> %<adj%> %<nt%> %<an%> %<sg%> ] .o.
+ [ %<mfn%> %<an%> %<pl%> %<pred%> -> %<short%> %<mfn%> %<pl%> ] .o.
+ [ %<m%> %<an%> %<sg%> %<pred%> -> %<short%> %<m%> %<sg%> ] .o.
+ [ %<f%> %<an%> %<sg%> %<pred%> -> %<short%> %<f%> %<sg%> ] .o.
+ [ %<nt%> %<an%> %<sg%> %<pred%> -> %<short%> %<nt%> %<sg%> ] .o.
  [ %<prsact%> %<adv%> -> %<pprs%> %<adv%> ] .o.
  [ %<prsact%> -> %<pprs%> %<actv%> ] .o.
  [ %<pstact%> %<adv%> -> %<pp%> %<adv%> ] .o.

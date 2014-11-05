@@ -1,5 +1,5 @@
 LEXICON мс-п_0
-+Det: п_0_inflect ;
++Det+Pos: п_0_inflect ;
 
 LEXICON Interr_мс-п_SFonly_end
 +Det+Interr: SF_b ;

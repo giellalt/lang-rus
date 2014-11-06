@@ -53,6 +53,7 @@
  * +Coll    = Collective numerals
  * +MWE     = Multi-word expressions
  * +Rel     = Relativizer, e.g. который, где, как, куда, сколько, etc.
+ * +Pos     = Possessive, e.g. его, наш
  * +Prcnt   = Percent
 
 !!Verbal MSP

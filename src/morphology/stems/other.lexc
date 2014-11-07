@@ -475,41 +475,20 @@ LEXICON Predicative
 полгоря:полго́ря предик. ;
 
 LEXICON сравн.
-+A+Cmpar: # ;
 +A+Cmpar+Pred: # ;
 
-LEXICON Comparative
-правее:праве́е сравн. ;
-левее:леве́е сравн. ;
+LEXICON Comparative !TODO get rid of as many of these as possible
 далее:да́лее сравн. ;
 более:бо́лее сравн. ;
 долее:до́лее сравн. ;
 ранее:ра́нее сравн. ;
-западнее:за́паднее сравн. ;
-юго-западнее:ю̀го-за́паднее сравн. ;
-северо-западнее:сѐверо-за́паднее сравн. ;
-позднее:поздне́е сравн. ;
 менее:ме́нее сравн. ;
-южнее:южне́е сравн. ;
-вернее:верне́е сравн. ;
-севернее:се́вернее сравн. ;
-восточнее:восто́чнее сравн. ;
-юго-восточнее:ю̀го-восто́чнее сравн. ;
-северо-восточнее:сѐверо-восто́чнее сравн. ;
-скорее:скоре́е сравн. ;
-позже:по́зже сравн. ;
-ниже:ни́же сравн. ;
-краше:кра́ше сравн. ;
-младше:мла́дше сравн. ;
-старше:ста́рше сравн. ;
-лучше:лу́чше сравн. ;
+позже:по́зже сравн. ; !TODO remove after making the actual comparative adjective not problematic
+краше:кра́ше сравн. ; !TODO remove after making the actual comparative adjective not problematic
+младше:мла́дше сравн. ; !TODO remove after making the actual comparative adjective not problematic
+старше:ста́рше сравн. ; !TODO remove after making the actual comparative adjective not problematic
 получше:полу́чше сравн. ;
-выше:вы́ше сравн. ;
-дальше:да́льше сравн. ;
-больше:бо́льше сравн. ;
-дольше:до́льше сравн. ;
-раньше:ра́ньше сравн. ;
-меньше:ме́ньше сравн. ;
+раньше:ра́ньше сравн. ; !TODO remove after making the actual comparative adjective not problematic
 хлеще:хле́ще сравн. ;
 пуще:пу́ще сравн. ;
 

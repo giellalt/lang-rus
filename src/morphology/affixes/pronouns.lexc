@@ -595,6 +595,9 @@ LEXICON Interr_мс-п_[п_a]
 LEXICON Rel_мс-п_[п_a]
 +Det+Rel: LF_stem ;
 
+LEXICON Indef_мс-п_[п_a]
++Det+Indef: LF_stem ;
+
 LEXICON мс-п_[п_a]
 +Det: LF_stem ;
 
@@ -680,8 +683,11 @@ LEXICON мс-п_[п_b]-либо
 LEXICON мс-п_[п_b]-нибудь
 +Det: LF_end-нибудь ;
 
+LEXICON Indef_мс-п_[п_b]-то
++Det+Indef: LF_end-то ;
+
 LEXICON мс-п_[п_b]-то
-+Det: LF_end-то ;
++Det+Dem: LF_end-то ;
 
 LEXICON мс_кто ! TODO FIX How to tag animacy for кто что and derivatives
 +Pron+Interr: мс_кто_Nom ;

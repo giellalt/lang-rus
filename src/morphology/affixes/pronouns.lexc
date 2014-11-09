@@ -285,6 +285,37 @@ LEXICON мс-п_b-нибудь
 +Det+MFN+Pl+Dat:%>ы́м-нибудь # ;
 +Det+MFN+Pl+Ins:%>ы́ми-нибудь # ;
 
+
+LEXICON Def_мс-п_b-то
++Det+Def+Msc+Sg+Nom:-то # ;
++Det+Def+Msc+Inan+Sg+Acc:-то # ;
++Det+Def+Msc+Anim+Sg+Acc:%>ого́-то # ;
++Det+Def+Msc+Sg+Gen:%>ого́-то # ;
++Det+Def+Msc+Sg+Loc:%>о́м-то # ;
++Det+Def+Msc+Sg+Dat:%>ому́-то # ;
++Det+Def+Msc+Sg+Ins:%>ы́м-то # ;
++Det+Def+Neu+Sg+Nom:%>о́-то # ;
++Det+Def+Neu+Sg+Acc:%>о́-то # ;
++Det+Def+Neu+Sg+Gen:%>ого́-то # ;
++Det+Def+Neu+Sg+Loc:%>о́м-то # ;
++Det+Def+Neu+Sg+Dat:%>ому́-то # ;
++Det+Def+Neu+Sg+Ins:%>ы́м-то # ;
++Det+Def+Fem+Sg+Nom:%>а́-то # ;
++Det+Def+Fem+Sg+Acc:%>у́-то # ;
++Det+Def+Fem+Sg+Gen:%>е́й-то # ;
++Det+Def+Fem+Sg+Loc:%>е́й-то # ;
++Det+Def+Fem+Sg+Dat:%>е́й-то # ;
++Det+Def+Fem+Sg+Ins:%>е́й-то # ;
++Det+Def+Fem+Sg+Ins+Fac:%>е́ю-то # ;
++Det+Def+MFN+Pl+Nom:%>ы́-то # ;
++Det+Def+MFN+Inan+Pl+Acc:%>ы́-то # ;
++Det+Def+MFN+Anim+Pl+Acc:%>ы́х-то # ;
++Det+Def+MFN+Pl+Gen:%>ы́х-то # ;
++Det+Def+MFN+Pl+Loc:%>ы́х-то # ;
++Det+Def+MFN+Pl+Dat:%>ы́м-то # ;
++Det+Def+MFN+Pl+Ins:%>ы́ми-то # ;
+
+
 LEXICON мс-п_b-то
 +Det+Msc+Sg+Nom:-то # ;
 +Det+Msc+Inan+Sg+Acc:-то # ;

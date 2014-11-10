@@ -228,65 +228,65 @@ LEXICON мс-п_b_Ins
 +MFN+Pl+Ins:%>ы́ми # ;
 
 LEXICON мс-п_b-либо
-+Det+Msc+Sg+Nom:-либо # ;
-+Det+Msc+Inan+Sg+Acc:-либо # ;
-+Det+Msc+Anim+Sg+Acc:%>ого́-либо # ;
-+Det+Msc+Sg+Gen:%>ого́-либо # ;
-+Det+Msc+Sg+Loc:%>о́м-либо # ;
-+Det+Msc+Sg+Dat:%>ому́-либо # ;
-+Det+Msc+Sg+Ins:%>ы́м-либо # ;
-+Det+Neu+Sg+Nom:%>о́-либо # ;
-+Det+Neu+Sg+Acc:%>о́-либо # ;
-+Det+Neu+Sg+Gen:%>ого́-либо # ;
-+Det+Neu+Sg+Loc:%>о́м-либо # ;
-+Det+Neu+Sg+Dat:%>ому́-либо # ;
-+Det+Neu+Sg+Ins:%>ы́м-либо # ;
-+Det+Fem+Sg+Nom:%>а́-либо # ;
-+Det+Fem+Sg+Acc:%>у́-либо # ;
-+Det+Fem+Sg+Gen:%>е́й-либо # ;
-+Det+Fem+Sg+Loc:%>е́й-либо # ;
-+Det+Fem+Sg+Dat:%>е́й-либо # ;
-+Det+Fem+Sg+Ins:%>е́й-либо # ;
-+Det+Fem+Sg+Ins+Fac:%>е́ю-либо # ;
-+Det+MFN+Pl+Nom:%>ы́-либо # ;
-+Det+MFN+Inan+Pl+Acc:%>ы́-либо # ;
-+Det+MFN+Anim+Pl+Acc:%>ы́х-либо # ;
-+Det+MFN+Pl+Gen:%>ы́х-либо # ;
-+Det+MFN+Pl+Loc:%>ы́х-либо # ;
-+Det+MFN+Pl+Dat:%>ы́м-либо # ;
-+Det+MFN+Pl+Ins:%>ы́ми-либо # ;
++Det+Indef+Msc+Sg+Nom:-либо # ;
++Det+Indef+Msc+Inan+Sg+Acc:-либо # ;
++Det+Indef+Msc+Anim+Sg+Acc:%>ого́-либо # ;
++Det+Indef+Msc+Sg+Gen:%>ого́-либо # ;
++Det+Indef+Msc+Sg+Loc:%>о́м-либо # ;
++Det+Indef+Msc+Sg+Dat:%>ому́-либо # ;
++Det+Indef+Msc+Sg+Ins:%>ы́м-либо # ;
++Det+Indef+Neu+Sg+Nom:%>о́-либо # ;
++Det+Indef+Neu+Sg+Acc:%>о́-либо # ;
++Det+Indef+Neu+Sg+Gen:%>ого́-либо # ;
++Det+Indef+Neu+Sg+Loc:%>о́м-либо # ;
++Det+Indef+Neu+Sg+Dat:%>ому́-либо # ;
++Det+Indef+Neu+Sg+Ins:%>ы́м-либо # ;
++Det+Indef+Fem+Sg+Nom:%>а́-либо # ;
++Det+Indef+Fem+Sg+Acc:%>у́-либо # ;
++Det+Indef+Fem+Sg+Gen:%>е́й-либо # ;
++Det+Indef+Fem+Sg+Loc:%>е́й-либо # ;
++Det+Indef+Fem+Sg+Dat:%>е́й-либо # ;
++Det+Indef+Fem+Sg+Ins:%>е́й-либо # ;
++Det+Indef+Fem+Sg+Ins+Fac:%>е́ю-либо # ;
++Det+Indef+MFN+Pl+Nom:%>ы́-либо # ;
++Det+Indef+MFN+Inan+Pl+Acc:%>ы́-либо # ;
++Det+Indef+MFN+Anim+Pl+Acc:%>ы́х-либо # ;
++Det+Indef+MFN+Pl+Gen:%>ы́х-либо # ;
++Det+Indef+MFN+Pl+Loc:%>ы́х-либо # ;
++Det+Indef+MFN+Pl+Dat:%>ы́м-либо # ;
++Det+Indef+MFN+Pl+Ins:%>ы́ми-либо # ;
 
 LEXICON мс-п_b-нибудь
-+Det+Msc+Sg+Nom:-нибудь # ;
-+Det+Msc+Inan+Sg+Acc:-нибудь # ;
-+Det+Msc+Anim+Sg+Acc:%>ого́-нибудь # ;
-+Det+Msc+Sg+Gen:%>ого́-нибудь # ;
-+Det+Msc+Sg+Loc:%>о́м-нибудь # ;
-+Det+Msc+Sg+Dat:%>ому́-нибудь # ;
-+Det+Msc+Sg+Ins:%>ы́м-нибудь # ;
-+Det+Neu+Sg+Nom:%>о́-нибудь # ;
-+Det+Neu+Sg+Acc:%>о́-нибудь # ;
-+Det+Neu+Sg+Gen:%>ого́-нибудь # ;
-+Det+Neu+Sg+Loc:%>о́м-нибудь # ;
-+Det+Neu+Sg+Dat:%>ому́-нибудь # ;
-+Det+Neu+Sg+Ins:%>ы́м-нибудь # ;
-+Det+Fem+Sg+Nom:%>а́-нибудь # ;
-+Det+Fem+Sg+Acc:%>у́-нибудь # ;
-+Det+Fem+Sg+Gen:%>е́й-нибудь # ;
-+Det+Fem+Sg+Loc:%>е́й-нибудь # ;
-+Det+Fem+Sg+Dat:%>е́й-нибудь # ;
-+Det+Fem+Sg+Ins:%>е́й-нибудь # ;
-+Det+Fem+Sg+Ins+Fac:%>е́ю-нибудь # ;
-+Det+MFN+Pl+Nom:%>ы́-нибудь # ;
-+Det+MFN+Inan+Pl+Acc:%>ы́-нибудь # ;
-+Det+MFN+Anim+Pl+Acc:%>ы́х-нибудь # ;
-+Det+MFN+Pl+Gen:%>ы́х-нибудь # ;
-+Det+MFN+Pl+Loc:%>ы́х-нибудь # ;
-+Det+MFN+Pl+Dat:%>ы́м-нибудь # ;
-+Det+MFN+Pl+Ins:%>ы́ми-нибудь # ;
++Det+Indef+Msc+Sg+Nom:-нибудь # ;
++Det+Indef+Msc+Inan+Sg+Acc:-нибудь # ;
++Det+Indef+Msc+Anim+Sg+Acc:%>ого́-нибудь # ;
++Det+Indef+Msc+Sg+Gen:%>ого́-нибудь # ;
++Det+Indef+Msc+Sg+Loc:%>о́м-нибудь # ;
++Det+Indef+Msc+Sg+Dat:%>ому́-нибудь # ;
++Det+Indef+Msc+Sg+Ins:%>ы́м-нибудь # ;
++Det+Indef+Neu+Sg+Nom:%>о́-нибудь # ;
++Det+Indef+Neu+Sg+Acc:%>о́-нибудь # ;
++Det+Indef+Neu+Sg+Gen:%>ого́-нибудь # ;
++Det+Indef+Neu+Sg+Loc:%>о́м-нибудь # ;
++Det+Indef+Neu+Sg+Dat:%>ому́-нибудь # ;
++Det+Indef+Neu+Sg+Ins:%>ы́м-нибудь # ;
++Det+Indef+Fem+Sg+Nom:%>а́-нибудь # ;
++Det+Indef+Fem+Sg+Acc:%>у́-нибудь # ;
++Det+Indef+Fem+Sg+Gen:%>е́й-нибудь # ;
++Det+Indef+Fem+Sg+Loc:%>е́й-нибудь # ;
++Det+Indef+Fem+Sg+Dat:%>е́й-нибудь # ;
++Det+Indef+Fem+Sg+Ins:%>е́й-нибудь # ;
++Det+Indef+Fem+Sg+Ins+Fac:%>е́ю-нибудь # ;
++Det+Indef+MFN+Pl+Nom:%>ы́-нибудь # ;
++Det+Indef+MFN+Inan+Pl+Acc:%>ы́-нибудь # ;
++Det+Indef+MFN+Anim+Pl+Acc:%>ы́х-нибудь # ;
++Det+Indef+MFN+Pl+Gen:%>ы́х-нибудь # ;
++Det+Indef+MFN+Pl+Loc:%>ы́х-нибудь # ;
++Det+Indef+MFN+Pl+Dat:%>ы́м-нибудь # ;
++Det+Indef+MFN+Pl+Ins:%>ы́ми-нибудь # ;
 
 
-LEXICON Def_мс-п_b-то
+LEXICON мс-п_b-то
 +Det+Def+Msc+Sg+Nom:-то # ;
 +Det+Def+Msc+Inan+Sg+Acc:-то # ;
 +Det+Def+Msc+Anim+Sg+Acc:%>ого́-то # ;
@@ -314,36 +314,6 @@ LEXICON Def_мс-п_b-то
 +Det+Def+MFN+Pl+Loc:%>ы́х-то # ;
 +Det+Def+MFN+Pl+Dat:%>ы́м-то # ;
 +Det+Def+MFN+Pl+Ins:%>ы́ми-то # ;
-
-
-LEXICON мс-п_b-то
-+Det+Msc+Sg+Nom:-то # ;
-+Det+Msc+Inan+Sg+Acc:-то # ;
-+Det+Msc+Anim+Sg+Acc:%>ого́-то # ;
-+Det+Msc+Sg+Gen:%>ого́-то # ;
-+Det+Msc+Sg+Loc:%>о́м-то # ;
-+Det+Msc+Sg+Dat:%>ому́-то # ;
-+Det+Msc+Sg+Ins:%>ы́м-то # ;
-+Det+Neu+Sg+Nom:%>о́-то # ;
-+Det+Neu+Sg+Acc:%>о́-то # ;
-+Det+Neu+Sg+Gen:%>ого́-то # ;
-+Det+Neu+Sg+Loc:%>о́м-то # ;
-+Det+Neu+Sg+Dat:%>ому́-то # ;
-+Det+Neu+Sg+Ins:%>ы́м-то # ;
-+Det+Fem+Sg+Nom:%>а́-то # ;
-+Det+Fem+Sg+Acc:%>у́-то # ;
-+Det+Fem+Sg+Gen:%>е́й-то # ;
-+Det+Fem+Sg+Loc:%>е́й-то # ;
-+Det+Fem+Sg+Dat:%>е́й-то # ;
-+Det+Fem+Sg+Ins:%>е́й-то # ;
-+Det+Fem+Sg+Ins+Fac:%>е́ю-то # ;
-+Det+MFN+Pl+Nom:%>ы́-то # ;
-+Det+MFN+Inan+Pl+Acc:%>ы́-то # ;
-+Det+MFN+Anim+Pl+Acc:%>ы́х-то # ;
-+Det+MFN+Pl+Gen:%>ы́х-то # ;
-+Det+MFN+Pl+Loc:%>ы́х-то # ;
-+Det+MFN+Pl+Dat:%>ы́м-то # ;
-+Det+MFN+Pl+Ins:%>ы́ми-то # ;
 
 LEXICON мс-п_весь
 +Det: весь ;
@@ -633,13 +603,13 @@ LEXICON мс-п_[п_a]
 +Det: LF_stem ;
 
 LEXICON мс-п_[п_a]-либо
-+Det: LF_stem-либо ;
++Det+Indef: LF_stem-либо ;
 
 LEXICON мс-п_[п_a]-нибудь
-+Det: LF_stem-нибудь ;
++Det+Indef: LF_stem-нибудь ;
 
 LEXICON мс-п_[п_a]-то
-+Det: LF_stem-то ;
++Det+Def: LF_stem-то ;
 
 LEXICON мс-п_[п_a]_Pl
 +Det+MFN+Pl+Nom:%>ые # ;
@@ -709,15 +679,15 @@ LEXICON мс-п_[п_b]
 +Det: LF_end ;
 
 LEXICON мс-п_[п_b]-либо
-+Det: LF_end-либо ;
++Det+Indef: LF_end-либо ;
 
 LEXICON мс-п_[п_b]-нибудь
-+Det: LF_end-нибудь ;
-
-LEXICON Indef_мс-п_[п_b]-то
-+Det+Indef: LF_end-то ;
++Det+Indef: LF_end-нибудь ;
 
 LEXICON мс-п_[п_b]-то
++Det+Def: LF_end-то ;
+
+LEXICON Dem_мс-п_[п_b]-то
 +Det+Dem: LF_end-то ;
 
 LEXICON мс_кто ! TODO FIX How to tag animacy for кто что and derivatives
@@ -770,17 +740,17 @@ LEXICON мс_кто-нибудь
 +Pron+Indef+Msc+Sg+Ins:ке́м-нибудь # ;
 
 LEXICON мс_кто-то
-+Pron+Indef+Msc+Sg+Nom:кто́-то # ;
-+Pron+Indef+Fem+Sg+Nom:кто́-то # ;
-+Pron+Indef+Pl+Nom:кто́-то # ;
-+Pron+Indef+Msc+Sg+Acc:кого́-то # ;
-+Pron+Indef+Msc+Sg+Gen:кого́-то # ;
-+Pron+Indef+Msc+Sg+Loc:ко́м-то # ;
-+Pron+Indef+Msc+Sg+Dat:кому́-то # ;
-+Pron+Indef+Msc+Sg+Ins:ке́м-то # ;
++Pron+Def+Msc+Sg+Nom:кто́-то # ;
++Pron+Def+Fem+Sg+Nom:кто́-то # ;
++Pron+Def+Pl+Nom:кто́-то # ;
++Pron+Def+Msc+Sg+Acc:кого́-то # ;
++Pron+Def+Msc+Sg+Gen:кого́-то # ;
++Pron+Def+Msc+Sg+Loc:ко́м-то # ;
++Pron+Def+Msc+Sg+Dat:кому́-то # ;
++Pron+Def+Msc+Sg+Ins:ке́м-то # ;
 
 LEXICON мс_некто
-+Pron+Indef+Msc+Sg+Nom: # ; ! TODO FIX what about Fem, Pl?
++Pron+Def+Msc+Sg+Nom: # ; ! TODO FIX what about Fem, Pl?
 
 LEXICON мс_некого
 +Pron+Pred: мс_некого_Acc ;
@@ -848,16 +818,16 @@ LEXICON мс_что-нибудь
 +Pron+Indef+Neu+Sg+Ins:че́м-нибудь # ;
 
 LEXICON мс_что-то
-+Pron+Indef+Neu+Sg+Nom:что́-то # ;
-+Pron+Indef+Neu+Sg+Acc:что́-то # ;
-+Pron+Indef+Neu+Sg+Gen:чего́-то # ;
-+Pron+Indef+Neu+Sg+Loc:чём-то # ;
-+Pron+Indef+Neu+Sg+Dat:чему́-то # ;
-+Pron+Indef+Neu+Sg+Ins:че́м-то # ;
++Pron+Def+Neu+Sg+Nom:что́-то # ;
++Pron+Def+Neu+Sg+Acc:что́-то # ;
++Pron+Def+Neu+Sg+Gen:чего́-то # ;
++Pron+Def+Neu+Sg+Loc:чём-то # ;
++Pron+Def+Neu+Sg+Dat:чему́-то # ;
++Pron+Def+Neu+Sg+Ins:че́м-то # ;
 
 LEXICON мс_нечто
-+Pron+Indef+Neu+Sg+Nom: # ;
-+Pron+Indef+Neu+Sg+Acc: # ;
++Pron+Def+Neu+Sg+Nom: # ;
++Pron+Def+Neu+Sg+Acc: # ;
 
 LEXICON мс_нечего
 +Pron+Pred: мс_нечего_Gen ;

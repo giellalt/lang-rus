@@ -477,7 +477,7 @@ LEXICON Predicative
 LEXICON сравн.
 +A+Cmpar+Pred: # ;
 
-LEXICON Comparative !TODO get rid of as many of these as possible
+LEXICON Comparative !TODO get rid of as many of these as possible. Verify the use of the +Pred tag.
 далее:да́лее сравн. ;
 более:бо́лее сравн. ;
 долее:до́лее сравн. ;

@@ -22,7 +22,7 @@ LEXICON Cc_е
 +CC:%>е # ;
 
 LEXICON Cc_ы
-+CC+Fac: # ;
++CC+Use/NG: # ;
 +CC:%>ы # ;
 
 LEXICON Cs
@@ -33,7 +33,7 @@ LEXICON Cs_е
 +CS:%>е # ;
 
 LEXICON Cs_ы
-+CS+Fac: # ;
++CS+Use/NG: # ;
 +CS:%>ы # ;
 
 LEXICON Conjunction

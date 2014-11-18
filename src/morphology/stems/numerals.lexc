@@ -425,6 +425,7 @@ LEXICON NUM
 +Num: # ;
 +Num+Ord: ABBR_LF_stem_hard ;
 +Num+Prcnt:%% # ;
++Num+Prcnt+Use/NG:% %% # ;
 км:км SQRD ;
 мм:мм SQRD ;
 см:см SQRD ;

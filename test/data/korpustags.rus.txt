@@ -34,6 +34,7 @@
 % The name of these boxes are now legible, rather than the tags (tags in parentheses?)
 % Noun: N
 % Gender: Msc|Fem|Neu
+% Animacity: Anim|Inim
 % Number: Sg|Pl
 % Case: Nom|Acc|Gen|Dat|Ins|Dat|Loc
 
@@ -70,6 +71,10 @@ Msc Masculine
 Fem Feminine
 Neu Neuter
 #Gender
+
+Anim Animate
+Inan Inanimate
+#Animacity
 
 Sg	Singular
 Pl	Plural

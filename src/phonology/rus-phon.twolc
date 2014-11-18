@@ -11,7 +11,9 @@ Alphabet
       %^Is:й %^Is:и́ %^Is:0   ! Imperative ending (stressed)
       «7:« »7:» ! quotations (this is to avoid the internal use of « and »)
       %[%>%]:%> %[%<%]:%< ! angle brackets (this is to avoid the internal use of < and >)
-
+      
+      %%
+      %  
 
       ¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ⁰ ⁻ ! Used to enumerate homonymous lemmas
 

@@ -7,7 +7,7 @@ LEXICON abbr.
 
 LEXICON abbr.sent
 +Abbr: # ;
-+Abbr#.+Sent: # ;
++Abbr#.+CLB: # ;
 
 LEXICON Abbreviation
 PS:PS abbr ;

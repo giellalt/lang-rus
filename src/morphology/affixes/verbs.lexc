@@ -4709,7 +4709,7 @@ LEXICON Impf_Pres_1_end_авать
 +Prs: PresFut_1_end ;
 :ва́ Imper_stressed ;
 :%<у́ PresAct ;
-:ва́ PresVrbAdv_end ;
+:ва́ PresVrbAdv_stem ;
 
 LEXICON Impf_Pres_1_end_VAPrb
 Impf_Pres_1_end_noVA ;
@@ -4728,7 +4728,7 @@ LEXICON Impf_Pres_1_end_R_авать
 +Prs: PresFut_1_end_R ;
 :ва́ Imper_stressed_R ;
 :%<у́ PresAct_R ;
-:ва́ PresVrbAdv_end_R ;
+:ва́ PresVrbAdv_stem_R ;
 
 LEXICON Impf_Pres_1_end_R_безл.
 +Prs: PresFut_1_end_R_безл. ;

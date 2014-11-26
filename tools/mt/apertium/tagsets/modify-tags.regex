@@ -23,6 +23,7 @@
  [ %<clb%>   -> %<sent%> || %. _ ] .o.
  [ %<parx%>  -> %<lpar%> || %( _ ] .o.
  [ %<parx%>  -> %<rpar%> || %) _ ] .o.
+ [ %<sem%_sur%>   -> %<cog%> ] .o.
  [ %<sur%>   -> %<cog%> ] .o.
  [ %<prcnt%> -> %<percent%> ] .o.
  [ %<sg1%>   -> %<p1%> %<sg%> ] .o.

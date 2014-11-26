@@ -1,19 +1,17 @@
-[ [%<a%> ->	%<adj%> ] .o.
- [ %<clb%> -> %<cm%>     || %, _ ] .o.
+[[ %<a%>     ->	%<adj%> ] .o.
+ [ %<clb%>   -> %<cm%>   || %, _ ] .o.
  [ %<punct%> -> %<guio%> || %- _ ] .o.
- [ %<punct%> -> %<guio%> || %— _ ] .o.
- [ %<clb%> -> %<sent%> || %. _ ] .o.
- [ %<clb%> -> %<sent%> || %: _ ] .o.
- [ %<parx%> -> %<lpar%> || %( _ ] .o.
- [ %<parx%> -> %<rpar%> || %) _ ] .o.
- [ %<sur%> -> %<cog%> ] .o.
+ [ %<clb%>   -> %<sent%> || %. _ ] .o.
+ [ %<parx%>  -> %<lpar%> || %( _ ] .o.
+ [ %<parx%>  -> %<rpar%> || %) _ ] .o.
+ [ %<sur%>   -> %<cog%> ] .o.
  [ %<prcnt%> -> %<percent%> ] .o.
- [ %<sg1%> -> %<p1%> %<sg%> ] .o.
- [ %<sg2%> -> %<p2%> %<sg%> ] .o.
- [ %<sg3%> -> %<p3%> %<sg%> ] .o.
- [ %<pl1%> -> %<p1%> %<pl%> ] .o.
- [ %<pl2%> -> %<p2%> %<pl%> ] .o.
- [ %<pl3%> -> %<p3%> %<pl%> ] .o.
+ [ %<sg1%>   -> %<p1%> %<sg%> ] .o.
+ [ %<sg2%>   -> %<p2%> %<sg%> ] .o.
+ [ %<sg3%>   -> %<p3%> %<sg%> ] .o.
+ [ %<pl1%>   -> %<p1%> %<pl%> ] .o.
+ [ %<pl2%>   -> %<p2%> %<pl%> ] .o.
+ [ %<pl3%>   -> %<p3%> %<pl%> ] .o.
  [ %<n%> %<prop%> -> %<np%> ] .o.
  
  [ %<adj%> %<mfn%> %<pl%> -> %<adj%> %<mfn%> %<an%> %<pl%> ] .o.
@@ -22,13 +20,14 @@
  [ %<adj%> %<nt%>  %<sg%> -> %<adj%> %<nt%>  %<an%> %<sg%> ] .o.
  
  [ %<mfn%> %<an%> %<pl%> %<pred%> -> %<short%> %<mfn%> %<pl%> ] .o.
- [ %<m%> %<an%> %<sg%> %<pred%> -> %<short%> %<m%> %<sg%> ] .o.
- [ %<f%> %<an%> %<sg%> %<pred%> -> %<short%> %<f%> %<sg%> ] .o.
- [ %<nt%> %<an%> %<sg%> %<pred%> -> %<short%> %<nt%> %<sg%> ] .o.
+ [ %<m%>   %<an%> %<sg%> %<pred%> -> %<short%> %<m%> %<sg%> ] .o.
+ [ %<f%>   %<an%> %<sg%> %<pred%> -> %<short%> %<f%> %<sg%> ] .o.
+ [ %<nt%>  %<an%> %<sg%> %<pred%> -> %<short%> %<nt%> %<sg%> ] .o.
+ 
  [ %<prsact%> %<adv%> -> %<pprs%> %<adv%> ] .o.
- [ %<prsact%> -> %<pprs%> %<actv%> ] .o.
+ [ %<prsact%>         -> %<pprs%> %<actv%> ] .o.
  [ %<pstact%> %<adv%> -> %<pp%> %<adv%> ] .o.
- [ %<pstact%> -> %<pp%> %<actv%> ] .o.
- [ %<prspss%> -> %<pprs%> %<pasv%> ] .o.
- [ %<pstpss%> -> %<pp%> %<pasv%> ] 
+ [ %<pstact%>         -> %<pp%> %<actv%> ] .o.
+ [ %<prspss%>         -> %<pprs%> %<pasv%> ] .o.
+ [ %<pstpss%>         -> %<pp%> %<pasv%> ] 
 ];

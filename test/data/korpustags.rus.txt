@@ -34,7 +34,7 @@
 % The name of these boxes are now legible, rather than the tags (tags in parentheses?)
 % Noun: N
 % Gender: Msc|Fem|Neu
-% Animacity: Anim|Inim
+% Animacy: Anim|Inim
 % Number: Sg|Pl
 % Case: Nom|Acc|Gen|Dat|Ins|Dat|Loc
 
@@ -48,7 +48,7 @@
 % Function:
 
 % Pronoun: Pron
-% Case: Nom|Acc|Gen|Dat
+% Case: Nom|Acc|Gen|Loc|Dat|Ins
 % Number: Sg|Pl
 % Function:
 
@@ -66,19 +66,18 @@ Part Particle
 Prop	Propernoun
 #Subclass
 
-
 Msc Masculine
 Fem Feminine
 Neu Neuter
+MFN Unknown or irrelevant
 #Gender
 
 Anim Animate
 Inan Inanimate
-#Animacity
+#Animacy
 
 Sg	Singular
 Pl	Plural
-Du	Dual
 #Number
 
 Nom Nominative
@@ -93,26 +92,35 @@ Indef Indefinite
 Def Definite
 #Definiteness
 
-Ind Indicative
 Imp Imperative
 #Mood
 
-1Sg First Person singular
-2Sg Second Person singular
-3Sg Third Person singular
-Pl Plural
+Sg1 First person singular
+Sg2 Second person singular
+Sg3 Third person singular
+Pl1 First person plural
+Pl2 Second person plural
+Pl3 Third person plural
 #PersonNumber
 
 Inf
-Sup
-PrsPtc
-PstPtc
 #Infinite
 
+Pst
 Prs
-Prt
+Fut
 #Tense
 
 Impf
 Perf
-#Perfectivity
+#Aspect
+
+IV Intransitive
+TV Transitive
+#Transitivity
+
+PstAct
+PstPss
+PrsAct
+PrsPss
+#Participle

@@ -415,8 +415,8 @@ LEXICON ROMNUM
 ! In modern Lithuania, can mean days of the week
 
 LEXICON SQRD 
-²+Num:2 # ;  ! Dir/LR
-³+Num:3 # ;  ! Dir/LR
+²+Num+NG:2 # ;  ! Dir/LR
+³+Num+NG:3 # ;  ! Dir/LR
 ²+Num:² # ; 
 ³+Num:³ # ; 
 +Num: # ; 
@@ -425,7 +425,7 @@ LEXICON NUM
 +Num: # ;
 +Num+Ord: ABBR_LF_stem_hard ;
 +Num+Prcnt:%% # ;
-+Num+Prcnt+Use/NG:% %% # ;
++Num+Prcnt+NG:% %% # ;
 км:км SQRD ;
 мм:мм SQRD ;
 см:см SQRD ;

@@ -1647,7 +1647,6 @@ LEXICON нсв_5c'?_е́ть_наст._2_ед._хо/чешь,_3_ед._хо/че�
 +V+Impf+TV+Prs+Pl2:%<и́те # ;
 +V+Impf+TV+Prs+Pl3:%<я́т # ;
 +V+Impf+TV:%<я́ PresAct ;
-+V+Impf+TV+Prs: PresFut_2_shift_Pass ;
 +V+Impf+TV+Prs+Sg1+Pass+Fac:%^M%<у́сь # ;
 +V+Impf+TV+Prs+Sg2+Pass+Fac:%^M%<ешься # ;
 +V+Impf+TV+Prs+Sg3+Pass:%^M%<ется # ;

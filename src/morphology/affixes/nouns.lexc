@@ -371,7 +371,7 @@ LEXICON м_e_П2
 
 LEXICON м_e_П2_год
 :го́д м_e_П2 ;
-+N+Msc+Inan+Pl+Gen:ле́т # ;
++N+Msc+Inan+Pl+Gen+Count:ле́т # ;
 
 LEXICON м_e2_волос
 +N+Msc:ос MSgStem ;

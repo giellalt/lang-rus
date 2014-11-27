@@ -57,7 +57,7 @@ LEXICON мс-п_a_Fem
 +Fem+Sg+Loc:%>ой # ;
 +Fem+Sg+Dat:%>ой # ;
 +Fem+Sg+Ins:%>ой # ;
-+Fem+Sg+Ins+Fac:%>ою # ;
++Fem+Sg+Ins+Use/NG:%>ою # ;
 
 LEXICON мс-п_a_Pl_inan
 +MFN+Inan+Pl+Acc:%>ы # ;
@@ -115,7 +115,7 @@ LEXICON мс-п_a_Ins
 +Msc+Sg+Ins:%>ым # ;
 +Neu+Sg+Ins:%>ым # ;
 +Fem+Sg+Ins:%>ой # ;
-+Fem+Sg+Ins+Fac:%>ою # ;
++Fem+Sg+Ins+Use/NG:%>ою # ;
 +MFN+Pl+Ins:%>ыми # ;
 
 LEXICON Interr_мс-п_b
@@ -578,7 +578,7 @@ LEXICON мс-п_этот
 +Det+Dem+Fem+Sg+Loc:ой # ;
 +Det+Dem+Fem+Sg+Dat:ой # ;
 +Det+Dem+Fem+Sg+Ins:ой # ;
-+Det+Dem+Fem+Sg+Ins+Fac:ою # ;
++Det+Dem+Fem+Sg+Ins+Use/NG:ою # ;
 +Det+Dem+MFN+Pl+Nom:и # ;
 +Det+Dem+MFN+Inan+Pl+Acc:и # ;
 +Det+Dem+MFN+Anim+Pl+Acc:их # ;
@@ -639,15 +639,15 @@ LEXICON мс-п_[п_a]_некий
 +Det+Fem+Sg+Nom:ая # ;
 +Det+Fem+Sg+Acc:ую # ;
 +Det+Fem+Sg+Gen:ой # ;
-+Det+Fem+Sg+Gen:оей # ;
++Det+Fem+Sg+Gen+Use/NG:оей # ;
 +Det+Fem+Sg+Loc:ой # ;
-+Det+Fem+Sg+Loc:оей # ;
++Det+Fem+Sg+Loc+Use/NG:оей # ;
 +Det+Fem+Sg+Dat:ой # ;
-+Det+Fem+Sg+Dat:оей # ;
++Det+Fem+Sg+Dat+Use/NG:оей # ;
 +Det+Fem+Sg+Ins:ой # ;
-+Det+Fem+Sg+Ins+Fac:ою # ;
-+Det+Fem+Sg+Ins:оей # ;
-+Det+Fem+Sg+Ins+Fac:оею # ;
++Det+Fem+Sg+Ins+Use/NG:ою # ;
++Det+Fem+Sg+Ins+Use/NG:оей # ;
++Det+Fem+Sg+Ins+Use/NG:оею # ;
 +Det+MFN+Pl+Nom:ие # ;
 +Det+MFN+Inan+Pl+Acc:ие # ;
 +Det+MFN+Anim+Pl+Acc:их # ;
@@ -913,12 +913,12 @@ LEXICON мс_она
 +Pron+Pers+Sg3+Fem+Loc:не́й # ;
 +Pron+Pers+Sg3+Fem+Dat:е́й # ;
 +Pron+Pers+Sg3+Fem+Ins:е́й # ;
-+Pron+Pers+Sg3+Fem+Ins:е́ю # ;
++Pron+Pers+Sg3+Fem+Ins+Use/NG:е́ю # ;
 +Pron+Pers+Sg3+Fem+Acc+PObj:неё # ;
 +Pron+Pers+Sg3+Fem+Gen+PObj:неё # ;
 +Pron+Pers+Sg3+Fem+Dat+PObj:не́й # ;
 +Pron+Pers+Sg3+Fem+Ins+PObj:не́й # ;
-+Pron+Pers+Sg3+Fem+Ins+PObj:не́ю # ;
++Pron+Pers+Sg3+Fem+Ins+PObj+Use/NG:не́ю # ;
 
 LEXICON мс_мы
 +Pron+Pers+Pl1+Nom:мы́ # ;
@@ -988,7 +988,7 @@ LEXICON мс_жо_[п_a]_SgOnly
 +Pron+Fem+Sg+Loc:%>ой # ;
 +Pron+Fem+Sg+Dat:%>ой # ;
 +Pron+Fem+Sg+Ins:%>ой # ;
-+Pron+Fem+Sg+Ins+Fac:%>ою # ;
++Pron+Fem+Sg+Ins+Use/NG:%>ою # ;
 
 LEXICON мс_мн._одуш._[п_a]
 +Pron+MFN+Pl+Nom:%>ые # ;

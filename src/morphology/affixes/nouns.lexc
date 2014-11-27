@@ -293,7 +293,7 @@ LEXICON м_c1_П2_перёд
 
 LEXICON м_c1_П2_год
 :го́д м_c1_П2 ;
-+N+Msc+Inan+Pl+Gen:ле́т # ;
++N+Msc+Inan+Pl+Gen+Count:ле́т # ;
 
 LEXICON м_c1_[П2]
 м_c1 ;
@@ -677,7 +677,7 @@ LEXICON мо_ребенок
 
 LEXICON мо_человек
 +N+Msc:челове́к ыPlStem_anim_Use/Obs ;
-+N+Msc+Anim+Pl+Gen:челове́к # ;
++N+Msc+Anim+Pl+Gen+Count:челове́к # ;
 мо_человек2 ;
 
 LEXICON мо_человек2
@@ -2317,7 +2317,7 @@ LEXICON Surname_stem_Fem
 +Fem+Anim+Sg+Loc:%>ой # ;
 +Fem+Anim+Sg+Dat:%>ой # ;
 +Fem+Anim+Sg+Ins:%>ой # ;
-+Fem+Anim+Sg+Ins+Fac:%>ою # ;
++Fem+Anim+Sg+Ins+NG:%>ою # ;
 
 LEXICON Surname_stem_Pl
 +MFN+Anim+Pl+Nom:%>ы # ;
@@ -2347,7 +2347,7 @@ LEXICON Surname_end_Fem
 +Fem+Anim+Sg+Loc:%>о́й # ;
 +Fem+Anim+Sg+Dat:%>о́й # ;
 +Fem+Anim+Sg+Ins:%>о́й # ;
-+Fem+Anim+Sg+Ins+Fac:%>о́ю # ;
++Fem+Anim+Sg+Ins+NG:%>о́ю # ;
 
 LEXICON Surname_end_Pl
 +MFN+Anim+Pl+Nom:%>ы́ # ;

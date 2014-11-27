@@ -79,10 +79,11 @@ Multichar_Symbols
 +Sem/Ant +Sem/Alt       !!= * @CODE@ = Anthroponym/Given name, Other
 +Sg +Pl                 !!= * @CODE@ = number
 +Nom +Acc +Gen          !!= * @CODE@
-+Ins +Dat +Loc          !!= * @CODE@
++Loc +Dat +Ins          !!= * @CODE@
 +Loc2 +Gen2 +Voc        !!= * @CODE@
 +Inan +Anim             !!= * @CODE@ = animacy
 +PObj                   !!= * @CODE@ = Object of preposition (3rd person pronouns have epenthetic н)
++Count                  !!= * @CODE@ = Count (for человек/людей or лет/годов, etc.)
 
 +Ord    !!= * @CODE@  = Ordinal
 +Cmpar  !!= * @CODE@  = Comparative
@@ -101,10 +102,11 @@ Multichar_Symbols
 +PAR    !!= * @CODE@ = Parenthesis/bracket
 
 !! !!Other tags
-+Prb !!= * @CODE@ = затруднительно - +Prb(lematic); предположительно - +Hyp(othetical); нет - +Gap
++Prb !!= * @CODE@ = +Prb(lematic): затруднительно - предположительно - нет
 +Fac !!= * @CODE@ = Facultative
-+Use/Obs !!= * @CODE@ = Obsolete
 +Use/NG  !!= * @CODE@ = Accept, do not generate
++NG ! TEMPORARY! FOR ENSURING 1-TO-1 (WHILE Use/NG isn't fully implemented. TODO Replace all +NG's with +Use/NG, then delete me)
++Use/Obs !!= * @CODE@ = Obsolete
 +Err/Sub !!= * @CODE@ = Substandard
 ! More use tags:
 ! ласкательное - +Use/Aff(ectionate)

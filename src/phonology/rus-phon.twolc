@@ -282,9 +282,9 @@ where Ex in ( %^Iu %^Is ) ;
 "Iu>и in Imperatives with double-consonant stems, and щ stems"
 %^Iu:и <=> :C (:ь) :C (%^M:0) %<:0 _ (т е) (с [ :я | :ь ]) .#. ;
            :щ (%^M:0) %<:0 _ (т е) (с [ :я | :ь ]) .#. ; !Is this true? Examples?
-!           .#. ( :п :о ) :в :ы́ [ :Letter | %^F:0 ]*-:V :C (%^M:0) %<:0 _ (т е) (с [ :я | :ь ]) .#. ; ! BROKEN
-                ! по́мн<I   вы́став<I   обры́скM<I  мо́рщ<I
-                ! по́мн0и   вы́став0и   обры́0щ00и  мо́рщ0и
+!           .#. ( :п :о ) :в :ы́ [ :Letter | %^F:0 ]*-:V :C (%^M:0) %<:0 _ (т е) (с [ :я | :ь ]) .#. ; ! BROKEN handled in lexc
+                ! по́мн<I   обры́скM<I  мо́рщ<I
+                ! по́мн0и   обры́0щ00и  мо́рщ0и
 
 "Iu>ь in Imperatives with consonant stem (exceptions in previous rule)"
 %^Iu:ь <=> :V [ :C - [ :щ | :г ] ] (%^M:0) %<:0 _ (т е) (с [ :я | :ь ]) .#. ;

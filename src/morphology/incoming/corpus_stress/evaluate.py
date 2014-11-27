@@ -1,4 +1,5 @@
 import sys;
+import re
 
 r = open(sys.argv[1]);
 t = open(sys.argv[2]);
@@ -8,6 +9,8 @@ tokens = 0.0;
 wins = 0.0;
 
 feiler = [];
+
+Vowel = re.compile(u"[аэоуыяеёюи]")
 
 while True: #{
 
@@ -32,8 +35,11 @@ while True: #{
 		#}
 
 		if tstrow[i] != refrow[i]: #{
-			feil = feil + 1.0;
-			errors = errors + 1.0;
+			if len(Vowel.findall(refrow[i])) < 2 : # don't count words that are only one syllable
+				feil = feil + 1.0;
+				errors = errors + 1.0;
+			else :
+				continue;
 		else: #{
 			wins = wins + 1.0;
 		#}

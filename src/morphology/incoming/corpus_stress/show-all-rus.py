@@ -45,6 +45,7 @@ while c != '': #{
 		# generate forms here.
 		results = set();
 		for analyysi in analyysit: #{
+			analyysi = analyysi.replace('"', '\\"');
 			result = subprocess.check_output('echo ' + '"^'+analyysi+'$"' + ' | hfst-proc -n ' + generator , shell=True)
 			result = result.decode('utf-8').strip();
 			if result.count('/') > 0: #{
@@ -65,6 +66,7 @@ while c != '': #{
 		else: #{
 			sys.stdout.write(surface);
 		#}
+		sys.stdout.flush();
 		state = 0;
 		analyysi = '';
 		analyses = [];

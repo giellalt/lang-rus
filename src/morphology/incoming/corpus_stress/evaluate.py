@@ -10,7 +10,7 @@ wins = 0.0;
 
 feiler = [];
 
-Vowel = re.compile(u"[аэоуыяеёюи]")
+Vowel = re.compile("[аэоуыяеёюи]")
 
 while True: #{
 
@@ -30,16 +30,13 @@ while True: #{
 	#}
 	feil = 0.0;
 	for i in range(0, len(tstrow)): #{
-		if refrow[i].count('\u0301') < 1: #{
+		if refrow[i].count('\u0301') < 1 or len(Vowel.findall(refrow[i])) < 2 : #{
 			continue;
 		#}
 
 		if tstrow[i] != refrow[i]: #{
-			if len(Vowel.findall(refrow[i])) < 2 : # don't count words that are only one syllable
-				feil = feil + 1.0;
-				errors = errors + 1.0;
-			else :
-				continue;
+			feil = feil + 1.0;
+			errors = errors + 1.0;
 		else: #{
 			wins = wins + 1.0;
 		#}

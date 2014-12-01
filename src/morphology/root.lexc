@@ -50,6 +50,7 @@ Multichar_Symbols
 +Prop   !!= * @CODE@ = Proper
 +Pers   !!= * @CODE@ = Personal
 +Dem    !!= * @CODE@ = Demonstrative
++Def    !!= * @CODE@ = Definite
 +Interr !!= * @CODE@ = Interrogative: кто, что, какой, ли, etc.
 +Refl   !!= * @CODE@ = Pronoun себя, possessive свой
 +Indef  !!= * @CODE@ = Indefinite: кто-то, кто-нибудь, кто-либо, кое-кто, etc.

@@ -678,6 +678,9 @@ LEXICON Rel_мс-п_[п_b]
 LEXICON мс-п_[п_b]
 +Det: LF_end ;
 
+LEXICON мс-п_[п_b]_ни
++Det+Neg: LF_end ;
+
 LEXICON мс-п_[п_b]-либо
 +Det+Indef: LF_end-либо ;
 
@@ -703,6 +706,14 @@ LEXICON мс_кто ! TODO FIX How to tag animacy for кто что and derivati
 +Pron+Rel: мс_кто_Loc ;
 +Pron+Rel: мс_кто_Dat ;
 +Pron+Rel: мс_кто_Ins ;
+
+LEXICON мс_кто_ни ! TODO FIX How to tag animacy for кто что and derivatives
++Pron+Neg: мс_кто_Nom ;
++Pron+Neg: мс_кто_Acc ;
++Pron+Neg: мс_кто_Gen ;
++Pron+Neg: мс_кто_Loc ;
++Pron+Neg: мс_кто_Dat ;
++Pron+Neg: мс_кто_Ins ;
 
 LEXICON мс_кто_Nom
 +Msc+Sg+Nom:кто́ # ;
@@ -787,6 +798,14 @@ LEXICON мс_что
 +Pron+Rel: мс_что_Loc ;
 +Pron+Rel: мс_что_Dat ;
 +Pron+Rel: мс_что_Ins ;
+
+LEXICON мс_что_ни
++Pron+Neg: мс_что_Nom ;
++Pron+Neg: мс_что_Acc ;
++Pron+Neg: мс_что_Gen ;
++Pron+Neg: мс_что_Loc ;
++Pron+Neg: мс_что_Dat ;
++Pron+Neg: мс_что_Ins ;
 
 LEXICON мс_что_Nom
 +Neu+Sg+Nom:что́ # ;

@@ -953,6 +953,35 @@ LEXICON LF_stem_Sub
 +MFN+Pl+Dat+Err/Sub:%>ым # ;
 +MFN+Pl+Ins+Err/Sub:%>ыми # ;
 
+LEXICON LF_stem_Ant
++Msc+Sg+Nom+Use/Ant:%>ый # ;
++Msc+Inan+Sg+Acc+Use/Ant:%>ый # ;
++Msc+Anim+Sg+Acc+Use/Ant:%>ого # ;
++Msc+Sg+Gen+Use/Ant:%>ого # ;
++Msc+Sg+Loc+Use/Ant:%>ом # ;
++Msc+Sg+Dat+Use/Ant:%>ому # ;
++Msc+Sg+Ins+Use/Ant:%>ым # ;
++Neu+Sg+Nom+Use/Ant:%>ое # ;
++Neu+Sg+Acc+Use/Ant:%>ое # ;
++Neu+Sg+Gen+Use/Ant:%>ого # ;
++Neu+Sg+Loc+Use/Ant:%>ом # ;
++Neu+Sg+Dat+Use/Ant:%>ому # ;
++Neu+Sg+Ins+Use/Ant:%>ым # ;
++Fem+Sg+Nom+Use/Ant:%>ая # ;
++Fem+Sg+Acc+Use/Ant:%>ую # ;
++Fem+Sg+Gen+Use/Ant:%>ой # ;
++Fem+Sg+Loc+Use/Ant:%>ой # ;
++Fem+Sg+Dat+Use/Ant:%>ой # ;
++Fem+Sg+Ins+Use/Ant:%>ой # ;
++Fem+Sg+Ins+Use/Ant+NG:%>ою # ;
++MFN+Pl+Nom+Use/Ant:%>ые # ;
++MFN+Inan+Pl+Acc+Use/Ant:%>ые # ;
++MFN+Anim+Pl+Acc+Use/Ant:%>ых # ;
++MFN+Pl+Gen+Use/Ant:%>ых # ;
++MFN+Pl+Loc+Use/Ant:%>ых # ;
++MFN+Pl+Dat+Use/Ant:%>ым # ;
++MFN+Pl+Ins+Use/Ant:%>ыми # ;
+
 LEXICON LF_stem_R
 +Msc+Sg+Nom:%>ыйся # ;
 +Msc+Inan+Sg+Acc:%>ыйся # ;
@@ -1336,6 +1365,12 @@ LEXICON SF_a_Prb
 +Neu+Sg+Pred+Prb:%>о # ;
 +Fem+Sg+Pred+Prb:%>а # ;
 +MFN+Pl+Pred+Prb:%>ы # ;
+
+LEXICON SF_a_Ant
++Msc+Sg+Pred+Use/Ant:%>%^Z # ;
++Neu+Sg+Pred+Use/Ant:%>о # ;
++Fem+Sg+Pred+Use/Ant:%>а # ;
++MFN+Pl+Pred+Use/Ant:%>ы # ;
 
 LEXICON SF_a_FemPrb
 +Msc+Sg+Pred:%>%^Z # ;

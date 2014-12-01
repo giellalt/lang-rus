@@ -21,7 +21,7 @@ LEXICON Cc_е
 +CC+Fac: # ;
 +CC:%>е # ;
 
-LEXICON Cc_ы
+LEXICON Cc_ы ! TODO broken
 +CC+Use/NG: # ;
 +CC:%>ы # ;
 

@@ -5,8 +5,8 @@ LEXICON Interr_мс-п_SFonly_end
 +Det+Interr: SF_b ;
 +Det+Rel: SF_b ;
 
-LEXICON мс-п_SFonly_end
-+Det: SF_b ;
+LEXICON Dem_мс-п_SFonly_end
++Det+Dem: SF_b ;
 
 LEXICON Interr_мс-п_a
 +Det+Interr: мс-п_a_Msc ;
@@ -316,11 +316,11 @@ LEXICON мс-п_b-то
 +Det+Def+MFN+Pl+Ins:%>ы́ми-то # ;
 
 LEXICON мс-п_весь
-+Det: весь ;
-+Det: всё ;
-+Det: вся ;
-+Det: все_anim ;
-+Det+MFN+Inan+Pl+Acc:се́ # ;
++Det+All: весь ;
++Det+All: всё ;
++Det+All: вся ;
++Det+All: все_anim ;
++Det+All+MFN+Inan+Pl+Acc:се́ # ;
 
 LEXICON мс_все
 +Pron: все_anim ;

@@ -9,12 +9,14 @@ LEXICON Punctuation
 %.%.%.+CLB:%.%.%. # ;
 %…+CLB:%… # ;
 %-+PUNCT:%- # ;
-%—+PUNCT:%— # ;
+%-%-+PUNCT:%-%- # ;   ! double-hyphen
+%–+PUNCT:%– # ;       ! en dash
+%—+PUNCT:%— # ;       ! em dash
 %"+QUOT:%" # ;
 %“+QUOT:%“ # ;
 %”+QUOT:%” # ;
-«+QUOT:«7 # ; ! «
-»+QUOT:»7 # ; ! »
+«+QUOT:«7 # ;         ! «
+»+QUOT:»7 # ;         ! »
 %[+PAR:%[ # ;
 %]+PAR:%] # ;
 %(+PAR:%( # ;

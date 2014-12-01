@@ -55,6 +55,7 @@ Multichar_Symbols
 +Refl   !!= * @CODE@ = Pronoun себя, possessive свой
 +Indef  !!= * @CODE@ = Indefinite: кто-то, кто-нибудь, кто-либо, кое-кто, etc.
 +Neg    !!= * @CODE@ = Negative: никто, некого, etc.
++All    !!= * @CODE@ = All: весь
 +Recip  !!= * @CODE@ = Reciprocal: друг друга
 +Coll   !!= * @CODE@ = Collective numerals
 +MWE    !!= * @CODE@ = Multi-word expressions

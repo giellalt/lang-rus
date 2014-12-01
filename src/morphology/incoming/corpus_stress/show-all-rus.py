@@ -17,6 +17,7 @@ import sys, subprocess;
 
 c = sys.stdin.read(1);
 
+cache = {};
 generator = sys.argv[1];
 state = 0;
 surface = '';
@@ -46,8 +47,14 @@ while c != '': #{
 		results = set();
 		for analyysi in analyysit: #{
 			analyysi = analyysi.replace('"', '\\"');
-			result = subprocess.check_output('echo ' + '"^'+analyysi+'$"' + ' | hfst-proc -n ' + generator , shell=True)
-			result = result.decode('utf-8').strip();
+			result = '';
+			if analyysi not in cache: #{
+				result = subprocess.check_output('echo ' + '"^'+analyysi+'$"' + ' | hfst-proc -n ' + generator , shell=True)
+				result = result.decode('utf-8').strip();
+				cache[analyysi] = result;
+			else: #{
+				result = cache[analyysi];
+			#}
 			if result.count('/') > 0: #{
 				for res in result.split('/'): #{
 					res = res.strip('\/');

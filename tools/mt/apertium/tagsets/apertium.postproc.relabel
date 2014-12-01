@@ -81,6 +81,6 @@
 <sg2>	<sg2>
 <sg3>	<sg3>
 <tv>	<tv>
-<use_ant>	<use_ant>
+<use_ant>	@0@
 <use_obs>	<use_obs>
 <v>	<vblex>

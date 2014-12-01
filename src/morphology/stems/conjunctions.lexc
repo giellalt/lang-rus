@@ -17,6 +17,9 @@ Cs_ы ;
 LEXICON Cc
 +CC: # ;
 
+LEXICON Cc_Ant
++CC+Use/Ant: # ;
+
 LEXICON Cc_е
 +CC+Fac: # ;
 +CC:%>е # ;
@@ -88,7 +91,7 @@ LEXICON Conjunction
 не% столько:не% сто́лько Cc ;
 нешто:не́што C_pleasesortme ;
 ни:ни Cc ; ! (нормально_без_удар.)
-ниже:ниже́ C_pleasesortme ;
+ниже:ниже́ Cc_Ant ;
 но¹:но́ Cc ;
 но% и:но́% и Cc ;
 однако:одна́ко Cc ;

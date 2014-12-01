@@ -1974,8 +1974,8 @@ LEXICON жо_0
 +N+Fem: Indecl_Pl_anim ;
 
 LEXICON соб-жо_0
-+N+Prop+Fem: Indecl_Sg_anim ;
-+N+Prop+Fem: Indecl_Pl_anim ;
++N+Prop+Sem/Ant+Fem: Indecl_Sg_anim ;
++N+Prop+Sem/Ant+Fem: Indecl_Pl_anim ;
 
 LEXICON жо_[жо_a]
 жо_a ;
@@ -2000,21 +2000,21 @@ LEXICON жо_a_ица_ицы/ы
 +N+Fem:а ыPlStem_anim ;
 
 LEXICON соб-жо_a
-+N+Prop+Fem: FSgStem_anim ;
-+N+Prop+Fem: ыPlStem_anim ;
++N+Prop+Sem/Ant+Fem: FSgStem_anim ;
++N+Prop+Sem/Ant+Fem: ыPlStem_anim ;
 
 LEXICON соб-мн._[жо_a]
 +N+Prop+Fem: ыPlStem_anim ;
 
 LEXICON соб-жо_a_MscFac
-+N+Prop+Fem: FSgStem_anim ;
-+N+Prop+Fem: ыPlStem_anim ;
-+N+Prop+Msc: FSgStem_anim_Fac ;
-+N+Prop+Msc: ыPlStem_anim_Fac ;
++N+Prop+Sem/Ant+Fem: FSgStem_anim ;
++N+Prop+Sem/Ant+Fem: ыPlStem_anim ;
++N+Prop+Sem/Ant+Msc: FSgStem_anim_Fac ;
++N+Prop+Sem/Ant+Msc: ыPlStem_anim_Fac ;
 
 LEXICON соб-жо_a?
-+N+Prop+Fem: FSgStem_anim ;
-+N+Prop+Fem: ыPlStem_anim_gPrb ;
++N+Prop+Sem/Ant+Fem: FSgStem_anim ;
++N+Prop+Sem/Ant+Fem: ыPlStem_anim_gPrb ;
 
 LEXICON жо_[жо_a2]
 жо_a2 ;
@@ -2033,20 +2033,20 @@ LEXICON жо_8a
 +N+Fem: ыPlStem_anim ;
 
 LEXICON соб-жо_8a
-+N+Prop+Fem: FьSgStem_anim ;
-+N+Prop+Fem: ыPlStem_anim ;
++N+Prop+Sem/Ant+Fem: FьSgStem_anim ;
++N+Prop+Sem/Ant+Fem: ыPlStem_anim ;
 
 LEXICON жо_b ! This also includes ж_b' because of the fleeting vowel rule in twolc
 +N+Fem: FSgEnd_anim ;
 +N+Fem: ыPlEnd_anim ;
 
 LEXICON соб-жо_b
-+N+Prop+Fem: FSgEnd_anim ;
-+N+Prop+Fem: ыPlEnd_anim ;
++N+Prop+Sem/Ant+Fem: FSgEnd_anim ;
++N+Prop+Sem/Ant+Fem: ыPlEnd_anim ;
 
 LEXICON соб-жо_b?
-+N+Prop+Fem: FSgEnd_anim ;
-+N+Prop+Fem: ыPlEnd_anim_gPrb ;
++N+Prop+Sem/Ant+Fem: FSgEnd_anim ;
++N+Prop+Sem/Ant+Fem: ыPlEnd_anim_gPrb ;
 
 LEXICON жо_b_GPlzero ! This also includes ж_b' because of the fleeting vowel rule in twolc
 +N+Fem: FSgEnd_anim ;

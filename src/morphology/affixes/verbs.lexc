@@ -763,7 +763,7 @@ LEXICON нсв_4a?
 нсв_нп_4a ;
 +V+Impf+TV:и Impf_Inf_V_stem_w/Pass ;
 +V+Impf+TV: Impf_Pres_2_stem_w/Pass ;
-+V+Impf+TV+PrsPss+Use/Ant:и PresPass ;
++V+Impf+TV:и PresPass_Ant ;
 
 LEXICON нсв_4a_безл. ! TODO CHECK FIX can transitive impf impersonal verbs be passivized?
 нсв_нп_4a_безл. ;
@@ -1005,13 +1005,13 @@ LEXICON нсв_4b?
 нсв_нп_4b ;
 +V+Impf+TV:и́ Impf_Inf_V_stem_w/Pass ;
 +V+Impf+TV: Impf_Pres_2_end_w/Pass ;
-+V+Impf+TV+PrsPss+Use/Ant:и́ PresPass ;
++V+Impf+TV:и́ PresPass_Ant ;
 
 LEXICON нсв_4b8
 нсв_нп_4b ;
 +V+Impf+TV:и́ Impf_Inf_V_stem_w/Pass ;
 +V+Impf+TV: Impf_Pres_2_end_w/Pass ;
-+V+Impf+TV+PrsPss+Use/Ant:и́ PresPass ;
++V+Impf+TV:и́ PresPass_Ant ;
 +V+Impf+TV:%^Mе PastPass_нн_stem ;
 
 LEXICON нсв_4b_R
@@ -1130,7 +1130,7 @@ LEXICON нсв_4c
 нсв_нп_4c ;
 +V+Impf+TV:и́ Impf_Inf_V_stem_w/Pass ;
 +V+Impf+TV: Impf_Pres_2_shift_w/Pass ;
-+V+Impf+TV+PrsPss+Use/Ant:и́ PresPass ;
++V+Impf+TV:и́ PresPass_Ant ;
 
 LEXICON нсв_4c_R
 +V+Impf+IV:и́ Impf_Inf_stem_R ;
@@ -1144,7 +1144,7 @@ LEXICON нсв_4c4
 нсв_нп_4c4 ;
 +V+Impf+TV:и́ Impf_Inf_V_stem_w/Pass ;
 +V+Impf+TV: Impf_Pres_2_shift4_w/Pass ;
-+V+Impf+TV+PrsPss+Use/Ant:и PresPass ;
++V+Impf+TV:и PresPass_Ant ;
 
 LEXICON нсв_нп_4c4
 +V+Impf+IV:и́ Impf_Inf_V_stem ;
@@ -1162,7 +1162,7 @@ LEXICON нсв_4c[4]
 нсв_нп_4c[4] ;
 +V+Impf+TV:и́ Impf_Inf_V_stem_w/Pass ;
 +V+Impf+TV: Impf_Pres_2_shift[4]_w/Pass ;
-+V+Impf+TV+PrsPss+Use/Ant:и PresPass ;
++V+Impf+TV:и PresPass_Ant ;
 
 LEXICON нсв_4c[4]s
 нсв_4c[4] ;
@@ -1387,7 +1387,7 @@ LEXICON нсв_5b?_а́ть
 нсв_нп_5b_а́ть ;
 +V+Impf+TV:а́ Impf_Inf_V_stem_w/Pass ;
 +V+Impf+TV: Impf_Pres_2_end_w/Pass ;
-+V+Impf+TV+PrsPss+Use/Ant:и́ PresPass ;
++V+Impf+TV:и́ PresPass_Ant ;
 
 LEXICON нсв_5bs_а́ть
 нсв_5b?_а́ть ;
@@ -1420,7 +1420,7 @@ LEXICON нсв_5b?_е́ть
 нсв_нп_5b_е́ть ;
 +V+Impf+TV:е́ Impf_Inf_V_stem_w/Pass ;
 +V+Impf+TV: Impf_Pres_2_end_w/Pass ;
-+V+Impf+TV+PrsPss+Use/Ant:и́ PresPass ;
++V+Impf+TV:и́ PresPass_Ant ;
 
 LEXICON нсв_5b_е́ть_R
 +V+Impf+IV:е́ Impf_Inf_stem_R ;
@@ -1602,13 +1602,13 @@ LEXICON нсв_5c_а́ть
 нсв_нп_5c_а́ть ;
 +V+Impf+TV:а́ Impf_Inf_V_stem_w/Pass ;
 +V+Impf+TV: Impf_Pres_2_shift_w/Pass ;
-+V+Impf+TV+PrsPss+Use/Ant:и́ PresPass ;
++V+Impf+TV:и́ PresPass_Ant ;
 
 LEXICON нсв_5c?_а́ть
 нсв_нп_5c_а́ть ;
 +V+Impf+TV:а́ Impf_Inf_V_stem_w/Pass ;
 +V+Impf+TV: Impf_Pres_2_shift_w/Pass ;
-+V+Impf+TV+PrsPss+Use/Ant:и́ PresPass ;
++V+Impf+TV:и́ PresPass_Ant ;
 
 LEXICON нсв_5c_а́ть_R
 +V+Impf+IV:а́ Impf_Inf_stem_R ;
@@ -1630,13 +1630,13 @@ LEXICON нсв_5c_е́ть
 нсв_нп_5c_е́ть ;
 +V+Impf+TV:е́ Impf_Inf_V_stem_w/Pass ;
 +V+Impf+TV: Impf_Pres_2_shift_w/Pass ;
-+V+Impf+TV+PrsPss+Use/Ant:и́ PresPass ;
++V+Impf+TV:и́ PresPass_Ant ;
 
 LEXICON нсв_5c4?_е́ть
 нсв_нп_5c_е́ть ;
 +V+Impf+TV:е́ Impf_Inf_V_stem_w/Pass ;
 +V+Impf+TV: Impf_Pres_2_shift4_w/Pass ;
-+V+Impf+TV+PrsPss+Use/Ant:и́ PresPass ;
++V+Impf+TV:и́ PresPass_Ant ;
 
 LEXICON нсв_5c'?_е́ть_наст._2_ед._хо/чешь,_3_ед._хо/чет
 +V+Impf+TV:е́ Impf_Inf_V_stem_w/Pass ;
@@ -6107,6 +6107,10 @@ LEXICON PresPass
 LEXICON PresPass_Prb
 +PrsPss:м LF_stem_Prb ;
 +PrsPss:м SF_a_Prb ;
+
+LEXICON PresPass_Ant
++PrsPss:м LF_stem_Ant ;
++PrsPss:м SF_a_Ant ;
 
 LEXICON PastAct
 +PstAct:%<вш LF_stem ;

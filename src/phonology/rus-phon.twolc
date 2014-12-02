@@ -14,6 +14,7 @@ Alphabet
       
       %%
       %  
+      %-
 
       ¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ⁰ ⁻ ! Used to enumerate homonymous lemmas
 
@@ -24,8 +25,7 @@ Alphabet
       А̀         Ѐ Ё̀     Ѝ           О̀         У̀               Ы̀   Э̀ Ю̀ Я̀
       а б в г д е ё ж з и й к л м н о п р с т у ф х ц ч ш щ ъ ы ь э ю я 
       а́         е́ ё́     и́           о́         у́               ы́   э́ ю́ я́   ! ё́ is not currently used, since = ё
-      а̀         ѐ ё̀     ѝ           о̀         у̀               ы̀   э̀ ю̀ я̀
-      %- ;
+      а̀         ѐ ё̀     ѝ           о̀         у̀               ы̀   э̀ ю̀ я̀ ;
 
 Sets
 
@@ -51,7 +51,7 @@ HUSH = Ж Ш Щ Ч
 ! Velars
 VEL = Г К Х
       г к х ;
-! Paired consonants (consonants that have both a hard and soft variant not predicted by the following vowel)
+! Paired consonants (consonants that have both a hard and soft variant, excluding Velars)
 PC = Б В Д З Л М Н П Р С Т Ф
      б в д з л м н п р с т ф ;
 ! Paired consonants, excluding { Н н }
@@ -106,55 +106,93 @@ jEnd = [ jEndV | jEndC ] ;
 Rules
 
 "Remove extra stress marks on stem: the stress mark closest to the end remains"
-! сло́ва́
-! слова́
+! сло́во>а́   у́мн>а́   сёстFёра́>ы   се́мFе́йя́>у́    прочи́та́<ем
+! слово>а́   умн>а́   сёст00р00ы   сем00ь0>ю́    прочита́0ем
 Vx:Vy <=> \[ %^pF:0 | %^F:0 | %>:0 | %<:0 ] _ [ :StressedV | [ \[ %>:0 ] $[ :StressedV ] ] ] ;
 where Vx in ( а́ э́ о́ у́ ы́ я́ е́ ё ю́ и́ )
       Vy in ( а э о у ы я е е ю и )
     matched ;
 
 "е́>е in comparative adjective ending after velar mutation"
+! ли́х>е́е   
+! ли́ш0е0   
 е́:е <=> [ г: | к: | х: ] %>:0 _ [ е: | й: ] .#. ; ! After velar mutation with comparative adjectives
 
-! муравFе́й>а́
-! мурав00ь0я́
 "V>0: Delete lexical vowel endings (o/о́ and е are covered in other rules), and delete most fleeting vowels with syllabic endings"
-Vx:0 <=> .#. [ Letter: | %^F:0 ]+ _ %>:0 ; 
+Vx:0 <=> .#. [ Letter: | %^F:0 ]+ _ %>:0 ;
+            ! Тама́ра>а   мо́ре>о
+            ! Тама́р00а   мо́р00е
          %^F:0 _ [ Letter ]+ (End) %>:0 :V ; ! This does not delete люб(о)вью, since the ь is 1st
+            ! о́кFоно>о́   зе́мFе́ля́>е́
+            ! ок00н00о́   зем00л00е́
          %^F:0 _ й: %<:0 :V ;
+            ! бFе́й<у́   бFе́й<Iте
+            ! б00ь0ю́   б0е́й00те
          %^F:0 _ ( C: ) %<:0 :л :V ( :с :ь ) .#. ;
+            ! TODO examples that are subject to this rule?
 where Vx in ( а е́ ё и я а́ и́ я́ ) ;
 
 "е>0: 1) Delete lexical vowel endings; 2) Delete fleeting vowels where ending begins with a vowel; 3) Delete е/е́ after comparative adjective stem mutation."
-е:0 <=> .#. [ Letter: | %^F:0 ]+ _ %>:0 ; 
-         %^F:0 _ [ Letter ]+ (End) %>:0 :V ; ! This correctly does not delete люб(о)вью, since the ь is 1st
+е:0 <=> .#. [ Letter: | %^F:0 ]+ _ %>:0 ;
+            ! see examples in parallel rule of "V>0" above
+         %^F:0 _ [ Letter ]+ (End) %>:0 :V ;
+            ! see examples in parallel rule of "V>0" above
          [ г: | к: | х: ] %>:0 [ е | е́: ] _ .#. ; ! After comparative adjective mutation
+            ! ли́х>е́е   
+            ! ли́ш0е0   
 
 "о/о́>0 in lexical endings, fleeting vowels (including verbal prefixes), and zero GenPl"
 [ о:0 | о́:0 ] <=> .#. [ Letter: | %^F:0 ]+ _  %>:0 ; ! lexical ending
+                    ! see examples in parallel rule of "V>0" above
                   %^F:0 _ [ Letter ]+ (End) %>:0 :V ; ! fleeting vowel
+                    ! see examples in parallel rule of "V>0" above
+                    ! любFо́вь>ы́   любFо́вь>ью   This does not delete люб(о)вью, since the ь is 1st
+                    ! люб00в00и́   люб0о́в00ью   
                   [ в | н а д | н а́: д | о б | о́: б | о т | о́: т | п о д | п о́: д | п р е д | п р е́: д | с | в з: | в о з: | в о́: з: | и з: | и́: з: | н и з: | н и́: з: | р а з: | р а́: з: ] %^pF:0 _ C (%^F:0) :V ; ! Fleeting vowels in prefixes, like сожгла сжег
+                    ! сFогна́<ть   сFого́н<ю́
+                    ! с0огна́0ть   с00гон0ю́
                   [ VELEndV | HUSHEndV | цEndV | HCEndV | FVn0 | JEndV | jEnd ] _ в:0 .#. ; ! zero GenPl
+                    ! кни́га>ов   чудо́вище>ов   пти́ца>ов   пи́ла́>о́в   ба́шFеня>ов   се́мFе́йя́>ов   ва́йя>ов
+                    ! кни́г0000   чудо́вищ0000   пти́ц0000   пи́л0000   ба́ш0ен0000   сем0е́й0000   ва́й0000
 
 "з>с in some verbal prefixes with dropped fleeting vowels, when the following consonant is unvoiced"
-з:с <=> [ в | в о | в о́: | и | и́: | н и | н и́: | р а | р а́: ] _ %^F:0 :0 :UnvoicedC $%<:0 ;
+з:с <=> [ в | в о | в о́: | и | и́: | н и | н и́: | р а | р а́: ] _ %^pF:0 :0 :UnvoicedC $%<:0 ;
+            ! разFошFе́й<у́   разFоши́л
+            ! раз0ош00ь0ю́   рас00ши́л
 
 "ь>0 in lexical endings, and before fleeting vowels"
 ь:0 <=> .#. [ Letter: | %^F:0 ]+ _  %>:0 ;
+            ! ко́сть>ь   ми́лость>ы
+            ! ко́ст00ь   ми́лост00и
         .#. Letter+ _ %^F:0 V ;
+            ! во́сьFемь>ь
+            ! во́с00ем00ь
 
 "й>0 in lexical endings, and before fleeting vowels, and in comparative adjectives with velar mutation"
 й:0 <=> .#. Letter+ V _  %>:0 ; ! in lexical ending
-        .#. Letter+ V й:й _  %>:0 ; ! in lexical ending (e.g. Гава́йи, with lexical form Гава́йй)
+            ! музе́й>а   
+            ! музе́00я   
+        .#. Letter+ V й:й _  %>:0 ; ! in lexical ending
+            ! Гава́йй>ы
+            ! Гава́й00и
         .#. Letter+ _ %^F:0 V ; ! before fleeting vowel
+            ! копе́йFека>ов
+            ! копе́00ек0000
         [ г: | к: | х: ] %>:0 [ е | е́: ] _ .#. ; ! comparative adjectives with velar mutation
+            ! ли́х>е́й
+            ! ли́ш0е0
 
 "й>ь (1) when after a fleeting vowel and before a vowel ( муравей > муравья; семей > семья ) (2) in verbs with й-stems, such as бить"
 й:ь <=> C: %^F:0 V: _ ([ я́: | ё: | е́: | я: | е: ]) %>:0 :V ;
+            ! муравFе́й>а́   белFе́йё>о́
+            ! мурав00ь0я́   бел00ь00ё
         C: %^F:0 V: _ %<:0 :V ;
+            ! бFе́й<у́
+            ! б00ь0ю́
 
 "Z>0"
 %^Z:0 <=> [ VELEnd | HUSHEnd | цEnd | HCEnd | JEnd | FVn0 ] _ .#. ;
+            ! 
 
 "Z>ь"
 %^Z:ь <=>         :PCNoN ь:0 %>:0 _ .#. ;

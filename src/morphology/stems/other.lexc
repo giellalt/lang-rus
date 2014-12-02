@@ -476,7 +476,7 @@ LEXICON Predicative
 полгоря:полго́ря предик. ;
 
 LEXICON сравн.
-+A+Cmpar+Pred: # ;
++Adv+Cmpar: # ;
 
 LEXICON Comparative !TODO get rid of as many of these as possible. Verify the use of the +Pred tag.
 далее:да́лее сравн. ;

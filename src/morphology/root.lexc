@@ -110,6 +110,8 @@ Multichar_Symbols
 +NG ! TEMPORARY! FOR ENSURING 1-TO-1 (WHILE Use/NG isn't fully implemented. TODO Replace all +NG's with +Use/NG, then delete me)
 +Use/Obs !!= * @CODE@ = Obsolete
 +Err/Sub !!= * @CODE@ = Substandard
++Use/Ant !!= * @CODE@ = Antiquated "устаревшее"
+
 ! More use tags:
 ! ласкательное - +Use/Aff(ectionate)
 ! литературное - +Use/Lit(erary)
@@ -123,7 +125,6 @@ Multichar_Symbols
 ! уменьшительное - +Use/Dim(inutive)
 ! устаревающее - +Use/Old (going out of date)
 ! устаревшее - +Use/Ant(iquated)
-+Use/Ant
 ! anatomical - +Use/Anat
 ! biological - +Use/Bio
 ! botanical - +Use/Bot

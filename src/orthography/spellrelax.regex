@@ -21,7 +21,26 @@
 Е́ (->) Е, # Russian stressed vowel, accept unstressed
 Ё (->) Е, # Russian stressed vowel, accept unstressed
 Ю́ (->) Ю, # Russian stressed vowel, accept unstressed
-И́ (->) И  # Russian stressed vowel, accept unstressed
+И́ (->) И, # Russian stressed vowel, accept unstressed
+
+а̀ (->)  а, # Russian secondary stress, accept forms without it
+э̀ (->)  э, # Russian secondary stress, accept forms without it
+о̀ (->)  о, # Russian secondary stress, accept forms without it
+у̀ (->)  у, # Russian secondary stress, accept forms without it
+ы̀ (->)  ы, # Russian secondary stress, accept forms without it
+я̀ (->)  я, # Russian secondary stress, accept forms without it
+ѐ (->)  е, # Russian secondary stress, accept forms without it
+ю̀ (->)  ю, # Russian secondary stress, accept forms without it
+ѝ (->)  и, # Russian secondary stress, accept forms without it
+А̀ (->)  А, # Russian secondary stress, accept forms without it
+Э̀ (->)  Э, # Russian secondary stress, accept forms without it
+О̀ (->)  О, # Russian secondary stress, accept forms without it
+У̀ (->)  У, # Russian secondary stress, accept forms without it
+Ы̀ (->)  Ы, # Russian secondary stress, accept forms without it
+Я̀ (->)  Я, # Russian secondary stress, accept forms without it
+Ѐ (->)  Е, # Russian secondary stress, accept forms without it
+Ю̀ (->)  Ю, # Russian secondary stress, accept forms without it
+Ѝ (->)  И  # Russian secondary stress, accept forms without it
 ;
 
 # Explanation:

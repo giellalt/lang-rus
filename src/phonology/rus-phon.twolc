@@ -91,7 +91,7 @@ HCEndV = :PC [ а́:0 | о́:0 | а:0 | о:0 ] %>:0 ;       ! красота́, 
 HCEndC = :PC %>:0 ;                                 ! пол
 HCEnd = [ HCEndV | HCEndC ] ;
 VEndV = :V [ я́:0 | ё:0 | е́:0 | я:0 | е:0 ] %>:0 ;   ! судия́, остриё, житие́, Мари́я, поня́тие
-VEndC = :V й:0 %>:0 ;                               ! музе́й
+VEndC = \%^F:0 :V й:0 %>:0 ;                               ! музе́й
 VEnd = [ VEndV | VEndC ] ;
 JEndV = %^F:0 V: й: [ я́:0 | ё:0 | я:0 | е:0 ] %>:0 ; ! семья́, бельё, колдунья, счастье
 JEndC = %^F:0 V: й: %>:0 ;                           ! мураве́й
@@ -191,16 +191,22 @@ where Vx in ( а е́ ё и я а́ и́ я́ ) ;
             ! б00ь0ю́
 
 "Z>0"
-%^Z:0 <=> [ VELEnd | HUSHEnd | цEnd | HCEnd | JEnd | FVn0 ] _ .#. ;
-            ! 
+%^Z:0 <=> [ VELEnd | HUSHEnd | цEnd | HCEnd | JEnd | FVn0 ] _ .#. ; ! Fem 2*a in н, e.g. столетний~столетен
+            ! но́в>Z   столе́тFень>Z
+            ! но́в00   столе́т0ен000
 
 "Z>ь"
 %^Z:ь <=>         :PCNoN ь:0 %>:0 _ .#. ;
-          \[%^F:0] V: н: ь:0 %>:0 _ .#. ; ! Fem 2*a in н, e.g. столетний~столетен
+            ! 
+          \[%^F:0] V: н: ь:0 %>:0 _ .#. ;
+            ! си́нь>Z
+            ! си́нь00
                    C: н: ь:0 %>:0 _ .#. ;
 
 "Z>й"
-%^Z:й <=> VЕnd _ .#. ; ! This rule is technically true, but probably has no actual use.
+%^Z:й <=> VЕnd _ .#. ; ! TODO perhaps this should include SCEnd (or some subset). Not all endings are represented for Z.
+            ! длинноше́й>Z
+            ! длинноше́00й
 
 "о>е"
 о:е <=> [ HUSHEnd | цEnd | VEnd | SCEnd | JEnd | jEnd ] _ [ ?* - [ в:0 ?* ] ] .#. ;

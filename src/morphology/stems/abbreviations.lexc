@@ -12,6 +12,7 @@ LEXICON abbr.sent
 LEXICON Abbreviation
 PS:PS abbr ;
 тыс:тыс abbr. ;
+лат:лат abbr. ;
 мм:мм abbr. ;
 км:км abbr. ;
 км²:км² abbr ;

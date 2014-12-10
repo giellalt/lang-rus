@@ -2926,12 +2926,12 @@ LEXICON нсв_8b/b_ё_R_(е/кшийся)
 
 LEXICON св_8b/b_ё_(е/кший)
 +V+Perf+IV+Inf:е́чь # ;
-+V+Perf+IV:ёк Past_end  ;
-+V+Perf+IV:ёк Perf_PastVrbAdv_C  ;
++V+Perf+IV:ёк Past_end ;
++V+Perf+IV:ёк Perf_PastVrbAdv_C ;
 +V+Perf+IV:е́к PastAct ;
 +V+Perf+TV+Inf:е́чь # ;
-+V+Perf+TV:ёк Past_end  ;
-+V+Perf+TV:ёк Perf_PastVrbAdv_C  ;
++V+Perf+TV:ёк Past_end ;
++V+Perf+TV:ёк Perf_PastVrbAdv_C ;
 +V+Perf+TV:е́к PastAct ;
 +V+Perf+IV:ек Perf_Fut_1_end ;
 +V+Perf+TV:ек Perf_Fut_1_end ;

@@ -481,9 +481,11 @@ LEXICON сравн.
 LEXICON Comparative !TODO get rid of as many of these as possible. Verify the use of the +Pred tag.
 далее:да́лее сравн. ;
 более:бо́лее сравн. ;
+наиболее:наибо́лее сравн. ;
 долее:до́лее сравн. ;
 ранее:ра́нее сравн. ;
 менее:ме́нее сравн. ;
+наименее:наиме́нее сравн. ;
 позже:по́зже сравн. ; !TODO remove after making the actual comparative adjective not problematic
 краше:кра́ше сравн. ; !TODO remove after making the actual comparative adjective not problematic
 младше:мла́дше сравн. ; !TODO remove after making the actual comparative adjective not problematic

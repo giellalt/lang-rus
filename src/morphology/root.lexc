@@ -11,8 +11,9 @@ Multichar_Symbols
 А̀ Ѐ Ё̀ Ѝ О̀ У̀ Ы̀ Э̀ Ю̀ Я̀   !!= * @CODE@  Secondary stress (upper)
 
 !! !!Symbols that need to be escaped on the lower side (towards twolc): (copied from sme)
-»7     ! »
-«7     ! «
+!»7     ! »
+!«7     ! «
+
 %[%>%]  ! >
 %[%<%]  ! <
 

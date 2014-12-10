@@ -15,8 +15,10 @@ LEXICON Punctuation
 %"+QUOT:%" # ;
 %“+QUOT:%“ # ;
 %”+QUOT:%” # ;
-«+QUOT:«7 # ;         ! «
-»+QUOT:»7 # ;         ! »
+!«+QUOT:«7 # ;         ! «
+!»+QUOT:»7 # ;         ! »
+%«+QUOT:%« # ;         ! «
+%»+QUOT:%» # ;         ! »
 %[+PAR:%[ # ;
 %]+PAR:%] # ;
 %(+PAR:%( # ;

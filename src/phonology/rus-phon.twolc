@@ -9,7 +9,6 @@ Alphabet
       %^M:0  ! Verb stem mutation
       %^Iu:ь %^Iu:й %^Iu:и   ! Imperative ending (unstressed)
       %^Is:й %^Is:и́ %^Is:0   ! Imperative ending (stressed)
-      «7:« »7:» ! quotations (this is to avoid the internal use of « and »)
       %[%>%]:%> %[%<%]:%< ! angle brackets (this is to avoid the internal use of < and >)
       
       %%

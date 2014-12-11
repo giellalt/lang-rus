@@ -6,6 +6,7 @@
  [ %<gen2%> -> %<par%> ] .o.
  [ %<inan%> -> %<nn%> ] .o.
  [ %<interj%> -> %<ij%> ] .o.
+ [ %<cmpnd%> -> %<cmp%> ] .o.
  [ %<interr%> -> %<itg%> ] .o.
  [ %<msc%> -> %<m%> ] .o.
  [ %<neu%> -> %<nt%> ] .o.
@@ -19,6 +20,8 @@
  [ %<v%> -> %<vblex%> ] .o.
  [ %<a%>     ->	%<adj%> ] .o.
  [ %<clb%>   -> %<cm%>   || %, _ ] .o.
+ [ %<quot%> -> %<lquot%> || %« _ ] .o.
+ [ %<quot%> -> %<rquot%> || %» _ ] .o.
  [ %<punct%> -> %<guio%> || %- _ ] .o.
  [ %<punct%> -> %<guio%> || %— _ ] .o.
  [ %<clb%>   -> %<sent%> || %. _ ] .o.

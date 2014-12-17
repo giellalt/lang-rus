@@ -89,8 +89,8 @@ SCEnd = [ SCEndV | SCEndC ] ;
 HCEndV = :PC [ а́:0 | о́:0 | а:0 | о:0 ] %>:0 ;       ! красота́, окно́, ве́ра, сло́во
 HCEndC = :PC %>:0 ;                                 ! пол
 HCEnd = [ HCEndV | HCEndC ] ;
-VEndV = :V [ я́:0 | ё:0 | е́:0 | я:0 | е:0 ] %>:0 ;   ! судия́, остриё, житие́, Мари́я, поня́тие
-VEndC = \%^F:0 :V й:0 %>:0 ;                               ! музе́й
+VEndV = V: [ я́:0 | ё:0 | е́:0 | я:0 | е:0 ] %>:0 ;   ! судия́, остриё, житие́, Мари́я, поня́тие
+VEndC = \%^F:0 V: й:0 %>:0 ;                               ! музе́й
 VEnd = [ VEndV | VEndC ] ;
 JEndV = %^F:0 V: й: [ я́:0 | ё:0 | я:0 | е:0 ] %>:0 ; ! семья́, бельё, колдунья, счастье
 JEndC = %^F:0 V: й: %>:0 ;                           ! мураве́й
@@ -100,7 +100,7 @@ jEndC = \%^F:0 V: й:й й:0 %>:0 ;                       ! Гавайи (lexica
 jEnd = [ jEndV | jEndC ] ;
 1ConjV = V %<:0 ;                            ! читать, умолять, белеть, воевать, etc.?
 1ConjJ = (%^F:0 V:) :ь %<:0 ;                  ! бить, бей, бью
-2ConjHUSH = :HUSH (%^M:0) %<:0 ;             ! слышу (ю)
+VerbHUSH = :HUSH (%^M:0) %<:0 ;             ! слышу (ю)
 
 Rules
 
@@ -203,34 +203,43 @@ where Vx in ( а е́ ё и я а́ и́ я́ ) ;
                    C: н: ь:0 %>:0 _ .#. ;
 
 "Z>й"
-%^Z:й <=> VЕnd _ .#. ; ! TODO perhaps this should include SCEnd (or some subset). Not all endings are represented for Z.
+%^Z:й <=> VЕnd _ .#. ; ! BROKEN? TODO perhaps this should include SCEnd (or some subset). Not all endings are represented for Z.
             ! длинноше́й>Z
             ! длинноше́00й
 
 "о>е"
-о:е <=> [ HUSHEnd | цEnd | VEnd | SCEnd | JEnd | jEnd ] _ [ ?* - [ в:0 ?* ] ] .#. ;
-
+о:е <=> [ HUSHEnd | цEnd | VEnd | SCEnd | JEnd | jEnd ] _ [ ?* - [ в:0 ?* ] ] .#. ; ! в:0 occurs in zero GenPl and PastAct participles(see rule below)
+            ! хоро́ш>ому   па́льFец>ом   музе́й>ом   си́нь>ой   сча́стьFий>ом   ва́йя>ой   Гава́йй>ов
+            ! хоро́ш0ему   па́ль00ц0ем   музе́00ем   си́н00ей   сча́ст000ь>ем   ва́й00ей   Гава́й00ев
+            
 "ы>и (stressed or unstressed)"
 Vx:Vy <=> [ VELEnd | HUSHEnd | VEnd | SCEnd | JEnd | jEnd ] _ ;
+            ! кни́га>ы   хоро́ш>ый   музе́й>ы
+            ! кни́г00и   хоро́ш0ий   музе́00и
 where Vx in ( ы ы́ )
       Vy in ( и и́ )
     matched;
 
 "ю>у and я>а (stressed or unstressed) after a velar, husher, or ц"
-Vx:Vy <=> [ VELEnd | HUSHEnd | цEnd | 2ConjHUSH ] _ ;
+Vx:Vy <=> [ VELEnd | HUSHEnd | цEnd | VerbHUSH ] _ ;
+            ! слы́ш<ю   и́скM<я́   This rule does not seem to ever apply for nominals
+            ! слы́ш0у   и0щ00а́
 where Vx in ( ю ю́ я я́ )
       Vy in ( у у́ а а́ )
     matched;
 
 "[а а́ о́] > [я я́ ё] after soft-consonant stems (including й: муравей, семья, бельё, etc) and vowel stems (музей, критерий, понятие, Мария, etc) including 1st conj verbs like читать, болеть, воевать, etc."
-Vx:Vy <=> [ SCEnd | VEnd | JEnd | jEnd | 1ConjV ] _ [ ?* - [ [ в:й | в:0 ] ?* ] ] .#. ;
+Vx:Vy <=> [ SCEnd | VEnd | JEnd | jEnd ] _ [ ?* - [ [ в:й | в:0 ] ?* ] ] .#. ;
+          1ConjV _ ; 
+            
 where Vx in ( а а́ о́ )
       Vy in ( я я́ ё )
     matched;
 
 "у>ю (1) after soft-consonant stems (including й: муравей, семья, бельё, etc) and vowel stems (музей, критерий, понятие, Мария, etc) including 1st conj verbs like читать, болеть, воевать, etc. (2) in 1st conjugation after л or ь"
-Vx:Vy <=> [ SCEnd | VEnd | JEnd | jEnd | 1ConjV | 1ConjJ ] _ [ ?* - [ [ в:й | в:0 ] ?* ] ] .#. ;
-          :л %<:0 _ ;
+Vx:Vy <=> [ SCEnd | VEnd | JEnd | jEnd ] _ [ ?* - [ [ в:й | в:0 ] ?* ] ] .#. ;
+          [ 1ConjV | 1ConjJ ] _ ;
+          :л %<:0 _ ; ! Verbs in ~роть have ю in the lexc output
 where Vx in ( у у́ )
       Vy in ( ю ю́ )
     matched;
@@ -245,12 +254,12 @@ where Vx in ( у у́ )
 о́:е́ <=> [ HUSHEndC | HUSHEndV | SCEndC | SCEndV ] _ в:й .#. ;
 
 "в>0: (1) GenPl zero and (2) Masc past tense endings or past deverbals, after consonant stems"
-в:0 <=> [ VELEndV | цEndV | HCEndV | VEndV | JEndV | jEnd ] [ о: | о́: ] _ .#. ;
+в:0 <=> [ VELEndV | цEndV | HCEndV | VEndV | JEndV | jEndV ] [ о: | о́: ] _ .#. ;
         HUSHEndV о: _ .#. ;
         SCEndV о: _ .#. ;
-        C: %<:0 _ ( с я ) .#. ; ! Past verbal adverb
-        C: %<:0 _ (ш и ( с :ь ) ) .#. ; ! Past verbal adverb reflexive
-        C: %<:0 _ ш %>:0 :V [ C (V) | V ] ( с я ) .#. ; ! Past active ppl BROKEN? BROKEN? BROKEN?
+        !C: %<:0 _ ( с я ) .#. ; ! Past verbal adverb (handled by lexc)
+        !C: %<:0 _ (ш и ( с :ь ) ) .#. ; ! Past verbal adverb reflexive (handled by lexc)
+        C: %<:0 _ ш %>:0 V: [ C (V) | V ] ( с я ) .#. ; ! Past active ppl TODO BROKEN?
 "о>ь: GenPl zero after soft C"
 о:ь <=> SCEndVNoN _ в:0 .#. ; ! However, Fem 2*a in ~ня go to 0, not ь (characterized by F V н я)
         \[%^F:0] V: н: я:0 %>:0 _ в:0 .#. ; ! However, Fem 2*a in н, e.g. башня~башен

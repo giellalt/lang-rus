@@ -2,17 +2,19 @@
 
 GTROOT=$1
 ALANGS=$2
-SED=sed
+SED=gsed
 
 # Filetypes
 #   .ref - stressed gold standard
 #   .src - unstressed
-#   .tst - stressed
+#   .tst - stressed by us
 #       .GTnoCGguess - Giellatekno FST > blindly select the first reading
+#       .GTnoCGguessFreq - Giellatekno FST > select most frequent reading
 #       .GTnoCGsure - Giellatekno FST > resolve stress-irrelevant ambiguity, abstain from remaining ambiguity
 #       .GTCGguess - Giellatekno FST > CG > blindly select the first reading
+#       .GTCGguessFreq - Giellatekno FST > CG > blindly select the first reading
 #       .GTCGsure - Giellatekno FST > CG > resolve stress-irrelevant ambiguity, abstain from remaining ambiguity
-#       .RG - RusGram plugin       
+#       .RG - RusGram Chrome plugin       
 
 echo "Generating .src files from .ref files..."
 for f in *.ref
@@ -28,22 +30,31 @@ do
   echo "Processing $name.src ..."
 #       .GTnoCGguess - Giellatekno FST > blindly select the first reading
 # TODO pipeline
+#       .GTnoCGguessFreq - Giellatekno FST > select most frequent reading
+# TODO pipeline
 #       .GTnoCGsure - Giellatekno FST > resolve stress-irrelevant ambiguity, abstain from remaining ambiguity
-  echo -e "\tgenerating $name.GTnoCGsure.tst ..."
-  cat $name.src  | apertium-destxt | hfst-proc -w $GTROOT/langs/rus/tools/mt/apertium/analyser-mt-apertium-desc.und.hfstol 2>/dev/null | python3.4 show-all-rus.py $GTROOT/langs/rus/tools/mt/apertium/generator-mt-apertium-norm.hfstol | apertium-retxt > test_files/$name.GTnoCGsure.tst
+#  echo -e "\tgenerating $name.GTnoCGsure.tst ..."
+#  cat $name.src  | apertium-destxt | hfst-proc -w $GTROOT/langs/rus/tools/mt/apertium/analyser-mt-apertium-desc.und.hfstol 2>/dev/null | python3.4 show-all-rus.py $GTROOT/langs/rus/tools/mt/apertium/generator-mt-apertium-norm.hfstol | apertium-retxt > test_files/$name.GTnoCGsure.tst
+
+
 #       .GTCGguess - Giellatekno FST > CG > blindly select the first reading
   echo -e "\tgenerating $name.GTCGguess.tst ..."
-  cat $name.src  | apertium-destxt | hfst-proc -w $GTROOT/langs/rus/tools/mt/apertium/analyser-mt-apertium-desc.und.hfstol 2>/dev/null | cg-proc -n -1 -w $ALANGS/apertium-rus/rus.rlx.bin  | $SED 's/<@[A-Za-z→←]\+>//g' | hfst-proc -n $GTROOT/langs/rus/tools/mt/apertium/generator-mt-apertium-norm.hfstol | apertium-retxt > test_files/$name.GTCGguess.tst
+  cat $name.src  | apertium-destxt | hfst-proc -w $GTROOT/langs/rus/tools/mt/apertium/analyser-mt-apertium-desc.und.hfstol 2>/dev/null | cg-proc -n -1 -w ~/apertium-rus/rus.rlx.bin  | $SED 's/<@[A-Za-z→←]\+>//g' | hfst-proc -n $GTROOT/langs/rus/tools/mt/apertium/generator-mt-apertium-norm.hfstol | apertium-retxt > test_files/$name.GTCGguess.tst
+#       .GTCGguessFreq - Giellatekno FST > CG > blindly select the first reading
+# TODO pipeline
 #       .GTCGsure - Giellatekno FST > CG > resolve stress-irrelevant ambiguity, abstain from remaining ambiguity
 # TODO pipeline
 done
 
 # concatenate results for each condition
+echo "concatenating all.SUFFIX files..."
 cat *.ref > all.ref
 cat *.src > all.src
 cat test_files/*.GTnoCGguess.tst > test_files/all.GTnoCGguess.tst
+cat test_files/*.GTnoCGguessFreq.tst > test_files/all.GTnoCGguessFreq.tst
 cat test_files/*.GTnoCGsure.tst > test_files/all.GTnoCGsure.tst
 cat test_files/*.GTCGguess.tst > test_files/all.GTCGguess.tst
+cat test_files/*.GTCGguessFreq.tst > test_files/all.GTCGguessfreq.tst
 cat test_files/*.GTCGsure.tst > test_files/all.GTCGsure.tst
 cat test_files/*.RG.tst > test_files/all.RG.tst
 

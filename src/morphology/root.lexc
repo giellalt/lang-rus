@@ -1,5 +1,11 @@
 Multichar_Symbols
 
+! NOTE ABOUT LEXC FILES: The lexc files were originally generated from
+! Zaliznjak's dictionary with a python script. Entries that have not
+! been implemented yet (with suitable LEXICON continuation classes) are
+! commented out with an underscore "!_". Other future work is marked
+! with "TODO" in a comment
+
 !! !!!Russian tags
 
 !! !!Stressed vowels

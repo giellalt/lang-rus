@@ -1,6 +1,0 @@
-gsed 's/\o314\o201//g' | gsed 's/ё/е/g' | gsed 's/Ё/Е/g'
-
-cat anna_karenina.src  | apertium-destxt | hfst-proc -w ~/main/langs/rus/tools/mt/apertium/analyser-mt-apertium-desc.und.hfstol 2>/dev/null | cg-proc -n -1 -w ~/apertium-rus/rus.rlx.bin  | gsed 's/<@[A-Za-z→←]\+>//g' | hfst-proc -n ~/main/langs/rus/tools/mt/apertium/generator-mt-apertium-norm.hfstol  | apertium-retxt > anna_karenina.tst
-
-Fran's:
-cat anna_karenina.src  | apertium-destxt | hfst-proc -w /home/fran/source/giellatekno/langs/rus/tools/mt/apertium/analyser-mt-apertium-desc.und.hfstol 2>/dev/null | cg-proc -n -1 -w ~/source/apertium/languages/apertium-rus/rus.rlx.bin  | gsed 's/<@[A-Za-z→←]\+>//g' | hfst-proc -n ~/source/giellatekno/langs/rus/tools/mt/apertium/generator-mt-apertium-norm.hfstol  | apertium-retxt > anna_karenina.giella.tst

@@ -84,7 +84,7 @@ Multichar_Symbols
 +Nom +Acc +Gen          !!= * @CODE@
 +Loc +Dat +Ins          !!= * @CODE@
 +Loc2 +Gen2 +Voc        !!= * @CODE@
-+Inan +Anim             !!= * @CODE@ = animacy
++Inan +Anim +AnIn       !!= * @CODE@ = animacy (+AnIn = ambivalent animacy for non-accusative modifiers)
 +PObj                   !!= * @CODE@ = Object of preposition (3rd person pronouns have epenthetic н)
 +Count                  !!= * @CODE@ = Count (for человек/людей or лет/годов, etc.)
 

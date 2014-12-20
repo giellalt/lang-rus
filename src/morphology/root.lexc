@@ -3,7 +3,8 @@ Multichar_Symbols
 ! NOTE ABOUT LEXC FILES: The lexc files were originally generated from
 ! Zaliznjak's dictionary with a python script. Entries that have not
 ! been implemented yet (with suitable LEXICON continuation classes) are
-! commented out with an underscore "!_". Other future work is marked
+! commented out with an underscore "!_". Entries that are 'variants'
+! are commented out with a hyphen "!-". Other future work is marked
 ! with "TODO" in a comment
 
 !! !!!Russian tags
@@ -25,7 +26,7 @@ Multichar_Symbols
 
 !! !!Markers
 
-¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ⁰ ⁻ !!= * @CODE@ = Used to enumerate homonymous lemmas
+¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ⁰ !!= * @CODE@ = Used to enumerate homonymous lemmas
 %>   !!= * @CODE@ = End-of-stem marker (nominals)
 %<   !!= * @CODE@ = End-of-stem marker (verbs)
 %^F  !!= * @CODE@ = Fleeting vowel marker

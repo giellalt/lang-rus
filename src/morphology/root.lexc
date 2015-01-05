@@ -98,12 +98,10 @@ Multichar_Symbols
 +Ord    !!= * @CODE@  = Ordinal
 +Cmpar  !!= * @CODE@  = Comparative
 +Sint   !!= * @CODE@  = Synthetic comparative is possible, e.g. старее
-+An     !!= * @CODE@  = Animate placeholder for non-accusative cases
 +Pred   !!= * @CODE@  = "Predicate", also used for short-form adjectives
 +Cmpnd  !!= * @CODE@  = "Compound", used for compounding adjectives, such as русско-английский
 
 +PObj !!= * @CODE@ = object of preposition, e.g. его~него
-+Poss !!= * @CODE@ = possessive
 
 !! !!Punctuation
 +CLB    !!= * @CODE@ = Clause boundary

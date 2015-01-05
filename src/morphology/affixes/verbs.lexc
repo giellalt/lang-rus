@@ -388,7 +388,7 @@ LEXICON нсв_2a_ё_ова́
 +V+Impf+TV:%>у́ Impf_Pres_1_stem_w/Pass ;
 +V+Impf+IV:%>у́ Impf_Pres_1_stem ;
 +V+Impf+TV:%>у́е PresPass ;
-+V+Impf+TV:ёва PastPass_нн_stem ;
++V+Impf+TV:%>ёва PastPass_нн_stem ;
 
 LEXICON св_2a
 св_нп_2a ;
@@ -448,8 +448,7 @@ LEXICON св_2a_ё_ова́
 +V+Perf+IV:%>ова́ Perf_Inf_V_stem ;
 +V+Perf+TV:%>у́ Perf_Fut_1_stem ;
 +V+Perf+IV:%>у́ Perf_Fut_1_stem ;
-+V+Perf+TV:%>ова́ PastPass_нн_stem ;
-+V+Perf+TV:ёва PastPass_нн_stem ;
++V+Perf+TV:%>ёва PastPass_нн_stem ;
 
 LEXICON св-нсв_2a_ё_ова́
 нсв_2a_ё_ова́ ;
@@ -500,7 +499,7 @@ LEXICON нсв_2b_ё
 нсв_нп_2b ;
 +V+Impf+TV:%>ова́ Impf_Inf_V_stem_w/Pass ;
 +V+Impf+TV:%>у́ Impf_Pres_1_end_w/Pass ;
-+V+Impf+TV:ёва PastPass_нн_stem ;
++V+Impf+TV:%>ёва PastPass_нн_stem ;
 
 LEXICON св_2b
 св_нп_2b ;
@@ -530,7 +529,7 @@ LEXICON св_2b_ё
 св_нп_2b ;
 +V+Perf+TV:%>ова́ Perf_Inf_V_stem ;
 +V+Perf+TV:%>у́ Perf_Fut_1_end ;
-+V+Perf+TV:ёва PastPass_stem ;
++V+Perf+TV:%>ёва PastPass_нн_stem ;
 
 !====================================== Stem type 3 ======================================
 !                                       сунуть, etc.

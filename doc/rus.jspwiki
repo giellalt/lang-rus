@@ -22,6 +22,7 @@ This is free and open source South Sámi morphology.
 
 !!Symbols that need to be escaped on the lower side (towards twolc): (copied from sme)
 
+
 !!Markers
 
  * ¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ⁰ ⁻  = Used to enumerate homonymous lemmas
@@ -56,10 +57,12 @@ This is free and open source South Sámi morphology.
  * +Prop    = Proper
  * +Pers    = Personal
  * +Dem     = Demonstrative
+ * +Def     = Definite
  * +Interr  = Interrogative: кто, что, какой, ли, etc.
  * +Refl    = Pronoun себя, possessive свой
  * +Indef   = Indefinite: кто-то, кто-нибудь, кто-либо, кое-кто, etc.
  * +Neg     = Negative: никто, некого, etc.
+ * +All     = All: весь
  * +Recip   = Reciprocal: друг друга
  * +Coll    = Collective numerals
  * +MWE     = Multi-word expressions
@@ -85,10 +88,11 @@ This is free and open source South Sámi morphology.
  * +Sem/Ant +Sem/Alt        = Anthroponym/Given name, Other
  * +Sg +Pl                  = number
  * +Nom +Acc +Gen          
- * +Ins +Dat +Loc          
+ * +Loc +Dat +Ins          
  * +Loc2 +Gen2 +Voc        
  * +Inan +Anim              = animacy
  * +PObj                    = Object of preposition (3rd person pronouns have epenthetic н)
+ * +Count                   = Count (for человек/людей or лет/годов, etc.)
 
  * +Ord      = Ordinal
  * +Cmpar    = Comparative
@@ -107,11 +111,13 @@ This is free and open source South Sámi morphology.
  * +PAR     = Parenthesis/bracket
 
 !!Other tags
- * +Prb  = затруднительно - +Prb(lematic); предположительно - +Hyp(othetical); нет - +Gap
+ * +Prb  = +Prb(lematic): затруднительно - предположительно - нет
  * +Fac  = Facultative
- * +Use/Obs  = Obsolete
  * +Use/NG   = Accept, do not generate
+ * +Use/Obs  = Obsolete
  * +Err/Sub  = Substandard
+ * +Use/Ant  = Antiquated "устаревшее"
+
 
 !!!Key lexicon
 

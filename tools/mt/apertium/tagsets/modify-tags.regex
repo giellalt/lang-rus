@@ -1,4 +1,5 @@
 [[ %<anim%> -> %<aa%> ] .o.
+ [ %<anin%> -> %<an%> ] .o.
  [ %<cc%> -> %<cnjcoo%> ] .o.
  [ %<cs%> -> %<cnjsub%> ] .o.
  [ %<cmpar%> -> %<comp%> ] .o.
@@ -40,35 +41,6 @@
  [ %<pl2%>   -> %<p2%> %<pl%> ] .o.
  [ %<pl3%>   -> %<p3%> %<pl%> ] .o.
  [ %<n%> %<prop%> -> %<np%> ] .o.
- [ %<adj%> %<mfn%> %<pl%> -> %<adj%> %<mfn%> %<an%> %<pl%> ] .o.
- [ %<adj%> %<m%>   %<sg%> -> %<adj%> %<m%>   %<an%> %<sg%> ] .o.
- [ %<adj%> %<f%>   %<sg%> -> %<adj%> %<f%>   %<an%> %<sg%> ] .o.
- [ %<adj%> %<nt%>  %<sg%> -> %<adj%> %<nt%>  %<an%> %<sg%> ] .o.
-
- [ %<prsact%> %<mfn%> %<pl%> -> %<prsact%> %<mfn%> %<an%> %<pl%> ] .o.
- [ %<prsact%> %<m%>   %<sg%> -> %<prsact%> %<m%>   %<an%> %<sg%> ] .o.
- [ %<prsact%> %<f%>   %<sg%> -> %<prsact%> %<f%>   %<an%> %<sg%> ] .o.
- [ %<prsact%> %<nt%>  %<sg%> -> %<prsact%> %<nt%>  %<an%> %<sg%> ] .o.
-
- [ %<prsact%> %<pass%> %<mfn%> %<pl%> -> %<prsact%> %<pass%> %<mfn%> %<an%> %<pl%> ] .o.
- [ %<prsact%> %<pass%> %<m%>   %<sg%> -> %<prsact%> %<pass%> %<m%>   %<an%> %<sg%> ] .o.
- [ %<prsact%> %<pass%> %<f%>   %<sg%> -> %<prsact%> %<pass%> %<f%>   %<an%> %<sg%> ] .o.
- [ %<prsact%> %<pass%> %<nt%>  %<sg%> -> %<prsact%> %<pass%> %<nt%>  %<an%> %<sg%> ] .o.
-
- [ %<prspss%> %<mfn%> %<pl%> -> %<prspss%> %<mfn%> %<an%> %<pl%> ] .o.
- [ %<prspss%> %<m%>   %<sg%> -> %<prspss%> %<m%>   %<an%> %<sg%> ] .o.
- [ %<prspss%> %<f%>   %<sg%> -> %<prspss%> %<f%>   %<an%> %<sg%> ] .o.
- [ %<prspss%> %<nt%>  %<sg%> -> %<prspss%> %<nt%>  %<an%> %<sg%> ] .o.
-
- [ %<pstact%> %<mfn%> %<pl%> -> %<pstact%> %<mfn%> %<an%> %<pl%> ] .o.
- [ %<pstact%> %<m%>   %<sg%> -> %<pstact%> %<m%>   %<an%> %<sg%> ] .o.
- [ %<pstact%> %<f%>   %<sg%> -> %<pstact%> %<f%>   %<an%> %<sg%> ] .o.
- [ %<pstact%> %<nt%>  %<sg%> -> %<pstact%> %<nt%>  %<an%> %<sg%> ] .o.
-
- [ %<pstpss%> %<mfn%> %<pl%> -> %<pstpss%> %<mfn%> %<an%> %<pl%> ] .o.
- [ %<pstpss%> %<m%>   %<sg%> -> %<pstpss%> %<m%>   %<an%> %<sg%> ] .o.
- [ %<pstpss%> %<f%>   %<sg%> -> %<pstpss%> %<f%>   %<an%> %<sg%> ] .o.
- [ %<pstpss%> %<nt%>  %<sg%> -> %<pstpss%> %<nt%>  %<an%> %<sg%> ] .o.
   
  [ %<mfn%> %<an%> %<pl%> %<pred%> -> %<short%> %<mfn%> %<pl%> ] .o.
  [ %<m%>   %<an%> %<sg%> %<pred%> -> %<short%> %<m%> %<sg%> ] .o.

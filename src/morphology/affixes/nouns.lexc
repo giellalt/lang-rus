@@ -2005,6 +2005,7 @@ LEXICON жо_a_ица_ицы/ы
 LEXICON соб-жо_a
 +N+Prop+Sem/Ant+Fem: FSgStem_anim ;
 +N+Prop+Sem/Ant+Fem: ыPlStem_anim ;
++N+Prop+Sem/Ant+Fem: Vocative ;
 
 LEXICON соб-мн._[жо_a]
 +N+Prop+Fem: ыPlStem_anim ;
@@ -2012,12 +2013,15 @@ LEXICON соб-мн._[жо_a]
 LEXICON соб-жо_a_MscFac
 +N+Prop+Sem/Ant+Fem: FSgStem_anim ;
 +N+Prop+Sem/Ant+Fem: ыPlStem_anim ;
++N+Prop+Sem/Ant+Fem: Vocative ;
 +N+Prop+Sem/Ant+Msc: FSgStem_anim_Fac ;
 +N+Prop+Sem/Ant+Msc: ыPlStem_anim_Fac ;
++N+Prop+Sem/Ant+Msc: Vocative ;
 
 LEXICON соб-жо_a?
 +N+Prop+Sem/Ant+Fem: FSgStem_anim ;
 +N+Prop+Sem/Ant+Fem: ыPlStem_anim_gPrb ;
++N+Prop+Sem/Ant+Fem: Vocative ;
 
 LEXICON жо_[жо_a2]
 жо_a2 ;
@@ -2521,6 +2525,9 @@ FSgObliqEnd ;
 LEXICON FSgRetr_anim
 +Anim+Sg+Acc:%>у # ;
 FSgObliqEnd_anim ;
+
+LEXICON Vocative
++Anim+Sg+Voc:%>ов # ; ! TODO FIX This copies GenPl, which has a fleeting vowel (vocative should not). Introduce a new multichar symbol, and reference it in the fleeting vowel rules in twolc.
 
 LEXICON FьSgStem
 +Inan: FьSgStem_all ;

@@ -20,6 +20,9 @@
  [ %<refl%> -> %<ref%> ] .o.
  [ %<v%> -> %<vblex%> ] .o.
  [ %<a%>     ->	%<adj%> ] .o.
+ [ %<epenth%> ->	%<epenth%> ] .o.
+ [ %<dist%>   ->	%<dist%> ] .o.
+ [ %<ng%>     ->	%<ng%> ] .o.
  [ %<clb%>   -> %<cm%>   || %, _ ] .o.
  [ %<quot%> -> %<lquot%> || %« _ ] .o.
  [ %<quot%> -> %<rquot%> || %» _ ] .o.

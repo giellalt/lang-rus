@@ -9,10 +9,11 @@ Alphabet
       %^M:0  ! Verb stem mutation
       %^Iu:ь %^Iu:й %^Iu:и   ! Imperative ending (unstressed)
       %^Is:й %^Is:и́ %^Is:0   ! Imperative ending (stressed)
+      
       %[%>%]:%> %[%<%]:%< ! angle brackets (this is to avoid the internal use of < and >)
       
       %%
-      %  
+      %  ! space
       %-
 
       ¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ⁰ ! Used to enumerate homonymous lemmas

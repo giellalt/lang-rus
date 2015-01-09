@@ -3768,7 +3768,7 @@ LEXICON нсв_нп_a/c_быть
 +V+Impf+IV:бу́д Imper_unstressed ;
 +V+Impf+IV+PrsAct+Adv:бу́дучи # ;
 +V+Impf+IV+Prs:е́сть PresFut_0 ; 
-+V+Impf+IV+Prs+Pl3:су́ть # ;
++V+Impf+IV+Prs+Pl3+Use/Ant:су́ть # ;
 
 LEXICON св_a_-быть
 +V+Perf+TV:бы́ Perf_Inf_V_stem ;

@@ -101,7 +101,9 @@ Multichar_Symbols
 +Pred   !!= * @CODE@  = "Predicate", also used for short-form adjectives
 +Cmpnd  !!= * @CODE@  = "Compound", used for compounding adjectives, such as русско-английский
 
-+PObj !!= * @CODE@ = object of preposition, e.g. его~него
++PObj   !!= * @CODE@ = object of preposition, e.g. его~него
++Epenth !!= * @CODE@ = epenthesis on prepositions
++Dist   !!= * @CODE@ = distorted (чтоб, иль, коль)
 
 !! !!Punctuation
 +CLB    !!= * @CODE@ = Clause boundary
@@ -110,8 +112,8 @@ Multichar_Symbols
 +PAR    !!= * @CODE@ = Parenthesis/bracket
 
 !! !!Other tags
-+Prb !!= * @CODE@ = +Prb(lematic): затруднительно - предположительно - нет
-+Fac !!= * @CODE@ = Facultative
++Prb     !!= * @CODE@ = +Prb(lematic): затруднительно - предположительно - нет
++Fac     !!= * @CODE@ = Facultative
 +Use/NG  !!= * @CODE@ = Accept, do not generate
 +NG ! TEMPORARY! FOR ENSURING 1-TO-1 (WHILE Use/NG isn't fully implemented. TODO Replace all +NG's with +Use/NG, then delete me)
 +Use/Obs !!= * @CODE@ = Obsolete

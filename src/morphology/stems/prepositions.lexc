@@ -7,11 +7,12 @@ LEXICON предл.
 
 LEXICON предл.о
 +Pr: # ;
-+Pr+Use/NG:о # ;
++Pr+Epenth:о # ;
 
 LEXICON обо
 +Pr: # ;
-+Use/NG:б предл.о ;
++Pr+Epenth:б # ;
++Pr+Epenth+Epenth:бо # ;
 
 LEXICON предл._(без_удар.)
 предл. ;

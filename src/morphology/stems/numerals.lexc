@@ -246,7 +246,7 @@ LEXICON числ._сколько
 +Num+Nom:о # ; 
 +Num+Inan+Acc:о # ; 
 +Num+Anim+Acc:о # ; 
-+Num+Anim+Acc:их # ; 
++Num+Anim+Acc+NG:их # ; ! TODO FIX How to differentiate Acc Anim ?
 +Num+Gen:их # ; 
 +Num+Loc:их # ; 
 +Num+Dat:им # ; 

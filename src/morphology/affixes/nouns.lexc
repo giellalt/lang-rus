@@ -291,7 +291,7 @@ LEXICON м_c1_П2_перёд
 +N+Msc:ёд аPlEnd ;
 +N: MscLoc2_inan ;
 
-LEXICON м_c1_П2_год
+LEXICON м_c1_П2_год ! TODO FIX года́/го́ды have same tag!
 :го́д м_c1_П2 ;
 +N+Msc+Inan+Pl+Gen+Count:ле́т # ;
 
@@ -369,7 +369,7 @@ LEXICON м_e_П2
 м_e ;
 +N: MscLoc2_inan ;
 
-LEXICON м_e_П2_год
+LEXICON м_e_П2_год ! TODO FIX года́/го́ды have same tag!
 :го́д м_e_П2 ;
 +N+Msc+Inan+Pl+Gen+Count:ле́т # ;
 
@@ -1218,10 +1218,10 @@ LEXICON с_a_озеро
 
 LEXICON с_a_утро
 с_a ;
-+N+Neu+Inan+Sg+Gen:%>а́ # ;
-+N+Neu+Inan+Sg+Dat:%>у́ # ;
-+N+Neu+Inan+Pl+Dat:%>а́м # ;
-+N+Neu+Inan+Pl+Ins:%>а́ми # ;
++N+Neu+Inan+Sg+Gen+PObj:%>а́ # ;
++N+Neu+Inan+Sg+Dat+PObj:%>у́ # ;
++N+Neu+Inan+Pl+Dat+PObj:%>а́м # ;
++N+Neu+Inan+Pl+Ins+PObj:%>а́ми # ; ! TODO FIX This tag is wrong. утра́ми is (only?) used without a preposition.
 
 LEXICON мн._[с_a]
 +N+Neu: аPlStem ;     !Cyrillic 'а' in 'аPl'

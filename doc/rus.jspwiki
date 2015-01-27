@@ -101,7 +101,9 @@ This is free and open source South Sámi morphology.
  * +Pred     = "Predicate", also used for short-form adjectives
  * +Cmpnd    = "Compound", used for compounding adjectives, such as русско-английский
 
- * +PObj  = object of preposition, e.g. его~него
+ * +PObj    = object of preposition, e.g. его~него
+ * +Epenth  = epenthesis on prepositions
+ * +Dist    = distorted (чтоб, иль, коль)
 
 !!Punctuation
  * +CLB     = Clause boundary
@@ -110,8 +112,8 @@ This is free and open source South Sámi morphology.
  * +PAR     = Parenthesis/bracket
 
 !!Other tags
- * +Prb  = +Prb(lematic): затруднительно - предположительно - нет
- * +Fac  = Facultative
+ * +Prb      = +Prb(lematic): затруднительно - предположительно - нет
+ * +Fac      = Facultative
  * +Use/NG   = Accept, do not generate
  * +Use/Obs  = Obsolete
  * +Err/Sub  = Substandard

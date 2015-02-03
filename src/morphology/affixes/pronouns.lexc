@@ -1,37 +1,56 @@
 LEXICON мс-п_0
 +Det+Pos: п_0_inflect ;
++Pron+Pos: п_0_inflect ;
 
 LEXICON Interr_мс-п_SFonly_end
 +Det+Interr: SF_b ;
 +Det+Rel: SF_b ;
++Pron+Interr: SF_b ;
++Pron+Rel: SF_b ;
 
 LEXICON Dem_мс-п_SFonly_end
 +Det+Dem: SF_b ;
++Pron+Dem: SF_b ;
 
 LEXICON Interr_мс-п_a
 +Det+Interr: мс-п_a_Msc ;
 +Det+Interr: мс-п_a_Neu ;
 +Det+Interr: мс-п_a_Fem ;
 +Det+Interr: мс-п_a_Pl_inananim ;
++Pron+Interr: мс-п_a_Msc ;
++Pron+Interr: мс-п_a_Neu ;
++Pron+Interr: мс-п_a_Fem ;
++Pron+Interr: мс-п_a_Pl_inananim ;
 
 LEXICON Rel_мс-п_a
 +Det+Rel: мс-п_a_Msc ;
 +Det+Rel: мс-п_a_Neu ;
 +Det+Rel: мс-п_a_Fem ;
 +Det+Rel: мс-п_a_Pl_inananim ;
++Pron+Rel: мс-п_a_Msc ;
++Pron+Rel: мс-п_a_Neu ;
++Pron+Rel: мс-п_a_Fem ;
++Pron+Rel: мс-п_a_Pl_inananim ;
 
 LEXICON Pos_мс-п_a
 +Det+Pos: мс-п_a_Msc ;
 +Det+Pos: мс-п_a_Neu ;
 +Det+Pos: мс-п_a_Fem ;
 +Det+Pos: мс-п_a_Pl_inananim ;
-
++Pron+Pos: мс-п_a_Msc ;
++Pron+Pos: мс-п_a_Neu ;
++Pron+Pos: мс-п_a_Fem ;
++Pron+Pos: мс-п_a_Pl_inananim ;
 
 LEXICON мс-п_a
 +Det: мс-п_a_Msc ;
 +Det: мс-п_a_Neu ;
 +Det: мс-п_a_Fem ;
 +Det: мс-п_a_Pl_inananim ;
++Pron: мс-п_a_Msc ;
++Pron: мс-п_a_Neu ;
++Pron: мс-п_a_Fem ;
++Pron: мс-п_a_Pl_inananim ;
 
 LEXICON мс-п_a_Msc
 +Msc+AnIn+Sg+Nom: # ;
@@ -123,24 +142,40 @@ LEXICON Interr_мс-п_b
 +Det+Interr: мс-п_b_Neu ;
 +Det+Interr: мс-п_b_Fem ;
 +Det+Interr: мс-п_b_Pl_inananim ;
++Pron+Interr: мс-п_b_Msc ;
++Pron+Interr: мс-п_b_Neu ;
++Pron+Interr: мс-п_b_Fem ;
++Pron+Interr: мс-п_b_Pl_inananim ;
 
 LEXICON Rel_мс-п_b
 +Det+Rel: мс-п_b_Msc ;
 +Det+Rel: мс-п_b_Neu ;
 +Det+Rel: мс-п_b_Fem ;
 +Det+Rel: мс-п_b_Pl_inananim ;
++Pron+Rel: мс-п_b_Msc ;
++Pron+Rel: мс-п_b_Neu ;
++Pron+Rel: мс-п_b_Fem ;
++Pron+Rel: мс-п_b_Pl_inananim ;
 
 LEXICON Pos_мс-п_b
 +Det+Pos: мс-п_b_Msc ;
 +Det+Pos: мс-п_b_Neu ;
 +Det+Pos: мс-п_b_Fem ;
 +Det+Pos: мс-п_b_Pl_inananim ;
++Pron+Pos: мс-п_b_Msc ;
++Pron+Pos: мс-п_b_Neu ;
++Pron+Pos: мс-п_b_Fem ;
++Pron+Pos: мс-п_b_Pl_inananim ;
 
 LEXICON мс-п_b
 +Det: мс-п_b_Msc ;
 +Det: мс-п_b_Neu ;
 +Det: мс-п_b_Fem ;
 +Det: мс-п_b_Pl_inananim ;
++Pron: мс-п_b_Msc ;
++Pron: мс-п_b_Neu ;
++Pron: мс-п_b_Fem ;
++Pron: мс-п_b_Pl_inananim ;
 
 LEXICON мс-п_b_Msc
 +Msc+AnIn+Sg+Nom: # ;
@@ -255,6 +290,33 @@ LEXICON мс-п_b-либо
 +Det+Indef+MFN+AnIn+Pl+Loc:%>ы́х-либо # ;
 +Det+Indef+MFN+AnIn+Pl+Dat:%>ы́м-либо # ;
 +Det+Indef+MFN+AnIn+Pl+Ins:%>ы́ми-либо # ;
++Pron+Indef+Msc+AnIn+Sg+Nom:-либо # ;
++Pron+Indef+Msc+Inan+Sg+Acc:-либо # ;
++Pron+Indef+Msc+Anim+Sg+Acc:%>ого́-либо # ;
++Pron+Indef+Msc+AnIn+Sg+Gen:%>ого́-либо # ;
++Pron+Indef+Msc+AnIn+Sg+Loc:%>о́м-либо # ;
++Pron+Indef+Msc+AnIn+Sg+Dat:%>ому́-либо # ;
++Pron+Indef+Msc+AnIn+Sg+Ins:%>ы́м-либо # ;
++Pron+Indef+Neu+AnIn+Sg+Nom:%>о́-либо # ;
++Pron+Indef+Neu+AnIn+Sg+Acc:%>о́-либо # ;
++Pron+Indef+Neu+AnIn+Sg+Gen:%>ого́-либо # ;
++Pron+Indef+Neu+AnIn+Sg+Loc:%>о́м-либо # ;
++Pron+Indef+Neu+AnIn+Sg+Dat:%>ому́-либо # ;
++Pron+Indef+Neu+AnIn+Sg+Ins:%>ы́м-либо # ;
++Pron+Indef+Fem+AnIn+Sg+Nom:%>а́-либо # ;
++Pron+Indef+Fem+AnIn+Sg+Acc:%>у́-либо # ;
++Pron+Indef+Fem+AnIn+Sg+Gen:%>е́й-либо # ;
++Pron+Indef+Fem+AnIn+Sg+Loc:%>е́й-либо # ;
++Pron+Indef+Fem+AnIn+Sg+Dat:%>е́й-либо # ;
++Pron+Indef+Fem+AnIn+Sg+Ins:%>е́й-либо # ;
++Pron+Indef+Fem+AnIn+Sg+Ins+Fac:%>е́ю-либо # ;
++Pron+Indef+MFN+AnIn+Pl+Nom:%>ы́-либо # ;
++Pron+Indef+MFN+Inan+Pl+Acc:%>ы́-либо # ;
++Pron+Indef+MFN+Anim+Pl+Acc:%>ы́х-либо # ;
++Pron+Indef+MFN+AnIn+Pl+Gen:%>ы́х-либо # ;
++Pron+Indef+MFN+AnIn+Pl+Loc:%>ы́х-либо # ;
++Pron+Indef+MFN+AnIn+Pl+Dat:%>ы́м-либо # ;
++Pron+Indef+MFN+AnIn+Pl+Ins:%>ы́ми-либо # ;
 
 LEXICON мс-п_b-нибудь
 +Det+Indef+Msc+AnIn+Sg+Nom:-нибудь # ;
@@ -284,7 +346,33 @@ LEXICON мс-п_b-нибудь
 +Det+Indef+MFN+AnIn+Pl+Loc:%>ы́х-нибудь # ;
 +Det+Indef+MFN+AnIn+Pl+Dat:%>ы́м-нибудь # ;
 +Det+Indef+MFN+AnIn+Pl+Ins:%>ы́ми-нибудь # ;
-
++Pron+Indef+Msc+AnIn+Sg+Nom:-нибудь # ;
++Pron+Indef+Msc+Inan+Sg+Acc:-нибудь # ;
++Pron+Indef+Msc+Anim+Sg+Acc:%>ого́-нибудь # ;
++Pron+Indef+Msc+AnIn+Sg+Gen:%>ого́-нибудь # ;
++Pron+Indef+Msc+AnIn+Sg+Loc:%>о́м-нибудь # ;
++Pron+Indef+Msc+AnIn+Sg+Dat:%>ому́-нибудь # ;
++Pron+Indef+Msc+AnIn+Sg+Ins:%>ы́м-нибудь # ;
++Pron+Indef+Neu+AnIn+Sg+Nom:%>о́-нибудь # ;
++Pron+Indef+Neu+AnIn+Sg+Acc:%>о́-нибудь # ;
++Pron+Indef+Neu+AnIn+Sg+Gen:%>ого́-нибудь # ;
++Pron+Indef+Neu+AnIn+Sg+Loc:%>о́м-нибудь # ;
++Pron+Indef+Neu+AnIn+Sg+Dat:%>ому́-нибудь # ;
++Pron+Indef+Neu+AnIn+Sg+Ins:%>ы́м-нибудь # ;
++Pron+Indef+Fem+AnIn+Sg+Nom:%>а́-нибудь # ;
++Pron+Indef+Fem+AnIn+Sg+Acc:%>у́-нибудь # ;
++Pron+Indef+Fem+AnIn+Sg+Gen:%>е́й-нибудь # ;
++Pron+Indef+Fem+AnIn+Sg+Loc:%>е́й-нибудь # ;
++Pron+Indef+Fem+AnIn+Sg+Dat:%>е́й-нибудь # ;
++Pron+Indef+Fem+AnIn+Sg+Ins:%>е́й-нибудь # ;
++Pron+Indef+Fem+AnIn+Sg+Ins+Fac:%>е́ю-нибудь # ;
++Pron+Indef+MFN+AnIn+Pl+Nom:%>ы́-нибудь # ;
++Pron+Indef+MFN+Inan+Pl+Acc:%>ы́-нибудь # ;
++Pron+Indef+MFN+Anim+Pl+Acc:%>ы́х-нибудь # ;
++Pron+Indef+MFN+AnIn+Pl+Gen:%>ы́х-нибудь # ;
++Pron+Indef+MFN+AnIn+Pl+Loc:%>ы́х-нибудь # ;
++Pron+Indef+MFN+AnIn+Pl+Dat:%>ы́м-нибудь # ;
++Pron+Indef+MFN+AnIn+Pl+Ins:%>ы́ми-нибудь # ;
 
 LEXICON мс-п_b-то
 +Det+Def+Msc+AnIn+Sg+Nom:-то # ;
@@ -314,6 +402,33 @@ LEXICON мс-п_b-то
 +Det+Def+MFN+AnIn+Pl+Loc:%>ы́х-то # ;
 +Det+Def+MFN+AnIn+Pl+Dat:%>ы́м-то # ;
 +Det+Def+MFN+AnIn+Pl+Ins:%>ы́ми-то # ;
++Pron+Def+Msc+AnIn+Sg+Nom:-то # ;
++Pron+Def+Msc+Inan+Sg+Acc:-то # ;
++Pron+Def+Msc+Anim+Sg+Acc:%>ого́-то # ;
++Pron+Def+Msc+AnIn+Sg+Gen:%>ого́-то # ;
++Pron+Def+Msc+AnIn+Sg+Loc:%>о́м-то # ;
++Pron+Def+Msc+AnIn+Sg+Dat:%>ому́-то # ;
++Pron+Def+Msc+AnIn+Sg+Ins:%>ы́м-то # ;
++Pron+Def+Neu+AnIn+Sg+Nom:%>о́-то # ;
++Pron+Def+Neu+AnIn+Sg+Acc:%>о́-то # ;
++Pron+Def+Neu+AnIn+Sg+Gen:%>ого́-то # ;
++Pron+Def+Neu+AnIn+Sg+Loc:%>о́м-то # ;
++Pron+Def+Neu+AnIn+Sg+Dat:%>ому́-то # ;
++Pron+Def+Neu+AnIn+Sg+Ins:%>ы́м-то # ;
++Pron+Def+Fem+AnIn+Sg+Nom:%>а́-то # ;
++Pron+Def+Fem+AnIn+Sg+Acc:%>у́-то # ;
++Pron+Def+Fem+AnIn+Sg+Gen:%>е́й-то # ;
++Pron+Def+Fem+AnIn+Sg+Loc:%>е́й-то # ;
++Pron+Def+Fem+AnIn+Sg+Dat:%>е́й-то # ;
++Pron+Def+Fem+AnIn+Sg+Ins:%>е́й-то # ;
++Pron+Def+Fem+AnIn+Sg+Ins+Fac:%>е́ю-то # ;
++Pron+Def+MFN+AnIn+Pl+Nom:%>ы́-то # ;
++Pron+Def+MFN+Inan+Pl+Acc:%>ы́-то # ;
++Pron+Def+MFN+Anim+Pl+Acc:%>ы́х-то # ;
++Pron+Def+MFN+AnIn+Pl+Gen:%>ы́х-то # ;
++Pron+Def+MFN+AnIn+Pl+Loc:%>ы́х-то # ;
++Pron+Def+MFN+AnIn+Pl+Dat:%>ы́м-то # ;
++Pron+Def+MFN+AnIn+Pl+Ins:%>ы́ми-то # ;
 
 LEXICON мс-п_весь
 +Det+All: весь ;
@@ -321,6 +436,11 @@ LEXICON мс-п_весь
 +Det+All: вся ;
 +Det+All: все_anim ;
 +Det+All+MFN+Inan+Pl+Acc:се́ # ;
++Pron+All: весь ;
++Pron+All: всё ;
++Pron+All: вся ;
++Pron+All: все_anim ;
++Pron+All+MFN+Inan+Pl+Acc:се́ # ;
 
 LEXICON мс_все
 +Pron: все_anim ;
@@ -412,6 +532,7 @@ LEXICON мс_те
 
 LEXICON мс-п_один
 +Det: один ;
++Pron: один ;
 
 LEXICON один
 +Msc+AnIn+Sg+Nom: # ;
@@ -442,7 +563,7 @@ LEXICON один
 +MFN+AnIn+Pl+Dat:%>и́м # ;
 +MFN+AnIn+Pl+Ins:%>и́ми # ;
 
-LEXICON мс-п_сам
+LEXICON мс-п_сам ! TODO Can сам be a pronoun?
 +Det+Msc+AnIn+Sg+Nom: # ;
 +Det+Msc+Inan+Sg+Acc: # ;
 +Det+Msc+Anim+Sg+Acc:ого́ # ;
@@ -499,6 +620,33 @@ LEXICON мс-п_сей
 +Det+MFN+AnIn+Pl+Loc:и́х # ;
 +Det+MFN+AnIn+Pl+Dat:и́м # ;
 +Det+MFN+AnIn+Pl+Ins:и́ми # ;
++Pron+Msc+AnIn+Sg+Nom:е́й # ;
++Pron+Msc+Inan+Sg+Acc:е́й # ;
++Pron+Msc+Anim+Sg+Acc:его́ # ;
++Pron+Msc+AnIn+Sg+Gen:его́ # ;
++Pron+Msc+AnIn+Sg+Loc:ём # ;
++Pron+Msc+AnIn+Sg+Dat:ему́ # ;
++Pron+Msc+AnIn+Sg+Ins:и́м # ;
++Pron+Neu+AnIn+Sg+Nom:ие́ # ;
++Pron+Neu+AnIn+Sg+Acc:ие́ # ;
++Pron+Neu+AnIn+Sg+Gen:его́ # ;
++Pron+Neu+AnIn+Sg+Loc:ём # ;
++Pron+Neu+AnIn+Sg+Dat:ему́ # ;
++Pron+Neu+AnIn+Sg+Ins:и́м # ;
++Pron+Fem+AnIn+Sg+Nom:ия́ # ;
++Pron+Fem+AnIn+Sg+Acc:ию́ # ;
++Pron+Fem+AnIn+Sg+Gen:е́й # ;
++Pron+Fem+AnIn+Sg+Loc:е́й # ;
++Pron+Fem+AnIn+Sg+Dat:е́й # ;
++Pron+Fem+AnIn+Sg+Ins:е́й # ;
++Pron+Fem+AnIn+Sg+Ins+Fac:е́ю # ;
++Pron+MFN+AnIn+Pl+Nom:ии́ # ;
++Pron+MFN+Inan+Pl+Acc:ии́ # ;
++Pron+MFN+Anim+Pl+Acc:и́х # ;
++Pron+MFN+AnIn+Pl+Gen:и́х # ;
++Pron+MFN+AnIn+Pl+Loc:и́х # ;
++Pron+MFN+AnIn+Pl+Dat:и́м # ;
++Pron+MFN+AnIn+Pl+Ins:и́ми # ;
 
 LEXICON мс-п_тот
 +Det+Dem+Msc+AnIn+Sg+Nom:о́т # ;
@@ -528,6 +676,33 @@ LEXICON мс-п_тот
 +Det+Dem+MFN+AnIn+Pl+Loc:е́х # ;
 +Det+Dem+MFN+AnIn+Pl+Dat:е́м # ;
 +Det+Dem+MFN+AnIn+Pl+Ins:е́ми # ;
++Pron+Dem+Msc+AnIn+Sg+Nom:о́т # ;
++Pron+Dem+Msc+Inan+Sg+Acc:о́т # ;
++Pron+Dem+Msc+Anim+Sg+Acc:ого́ # ;
++Pron+Dem+Msc+AnIn+Sg+Gen:ого́ # ;
++Pron+Dem+Msc+AnIn+Sg+Loc:о́м # ;
++Pron+Dem+Msc+AnIn+Sg+Dat:ому́ # ;
++Pron+Dem+Msc+AnIn+Sg+Ins:е́м # ;
++Pron+Dem+Neu+AnIn+Sg+Nom:о́ # ;
++Pron+Dem+Neu+AnIn+Sg+Acc:о́ # ;
++Pron+Dem+Neu+AnIn+Sg+Gen:ого́ # ;
++Pron+Dem+Neu+AnIn+Sg+Loc:о́м # ;
++Pron+Dem+Neu+AnIn+Sg+Dat:ому́ # ;
++Pron+Dem+Neu+AnIn+Sg+Ins:е́м # ;
++Pron+Dem+Fem+AnIn+Sg+Nom:а́ # ;
++Pron+Dem+Fem+AnIn+Sg+Acc:у́ # ;
++Pron+Dem+Fem+AnIn+Sg+Gen:о́й # ;
++Pron+Dem+Fem+AnIn+Sg+Loc:о́й # ;
++Pron+Dem+Fem+AnIn+Sg+Dat:о́й # ;
++Pron+Dem+Fem+AnIn+Sg+Ins:о́й # ;
++Pron+Dem+Fem+AnIn+Sg+Ins+Fac:о́ю # ;
++Pron+Dem+MFN+AnIn+Pl+Nom:е́ # ;
++Pron+Dem+MFN+Inan+Pl+Acc:е́ # ;
++Pron+Dem+MFN+Anim+Pl+Acc:е́х # ;
++Pron+Dem+MFN+AnIn+Pl+Gen:е́х # ;
++Pron+Dem+MFN+AnIn+Pl+Loc:е́х # ;
++Pron+Dem+MFN+AnIn+Pl+Dat:е́м # ;
++Pron+Dem+MFN+AnIn+Pl+Ins:е́ми # ;
 
 LEXICON мс-п_тот-то
 +Det+Dem+Msc+AnIn+Sg+Nom:о́т-то # ;
@@ -557,6 +732,33 @@ LEXICON мс-п_тот-то
 +Det+Dem+MFN+AnIn+Pl+Loc:е́х-то # ;
 +Det+Dem+MFN+AnIn+Pl+Dat:е́м-то # ;
 +Det+Dem+MFN+AnIn+Pl+Ins:е́ми-то # ;
++Pron+Dem+Msc+AnIn+Sg+Nom:о́т-то # ;
++Pron+Dem+Msc+Inan+Sg+Acc:о́т-то # ;
++Pron+Dem+Msc+Anim+Sg+Acc:ого́-то # ;
++Pron+Dem+Msc+AnIn+Sg+Gen:ого́-то # ;
++Pron+Dem+Msc+AnIn+Sg+Loc:о́м-то # ;
++Pron+Dem+Msc+AnIn+Sg+Dat:ому́-то # ;
++Pron+Dem+Msc+AnIn+Sg+Ins:е́м-то # ;
++Pron+Dem+Neu+AnIn+Sg+Nom:о́-то # ;
++Pron+Dem+Neu+AnIn+Sg+Acc:о́-то # ;
++Pron+Dem+Neu+AnIn+Sg+Gen:ого́-то # ;
++Pron+Dem+Neu+AnIn+Sg+Loc:о́м-то # ;
++Pron+Dem+Neu+AnIn+Sg+Dat:ому́-то # ;
++Pron+Dem+Neu+AnIn+Sg+Ins:е́м-то # ;
++Pron+Dem+Fem+AnIn+Sg+Nom:а́-то # ;
++Pron+Dem+Fem+AnIn+Sg+Acc:у́-то # ;
++Pron+Dem+Fem+AnIn+Sg+Gen:о́й-то # ;
++Pron+Dem+Fem+AnIn+Sg+Loc:о́й-то # ;
++Pron+Dem+Fem+AnIn+Sg+Dat:о́й-то # ;
++Pron+Dem+Fem+AnIn+Sg+Ins:о́й-то # ;
++Pron+Dem+Fem+AnIn+Sg+Ins+Fac:о́ю-то # ;
++Pron+Dem+MFN+AnIn+Pl+Nom:е́-то # ;
++Pron+Dem+MFN+Inan+Pl+Acc:е́-то # ;
++Pron+Dem+MFN+Anim+Pl+Acc:е́х-то # ;
++Pron+Dem+MFN+AnIn+Pl+Gen:е́х-то # ;
++Pron+Dem+MFN+AnIn+Pl+Loc:е́х-то # ;
++Pron+Dem+MFN+AnIn+Pl+Dat:е́м-то # ;
++Pron+Dem+MFN+AnIn+Pl+Ins:е́ми-то # ;
 
 LEXICON мс-п_этот
 +Det+Dem+Msc+AnIn+Sg+Nom:от # ;
@@ -586,32 +788,68 @@ LEXICON мс-п_этот
 +Det+Dem+MFN+AnIn+Pl+Loc:их # ;
 +Det+Dem+MFN+AnIn+Pl+Dat:им # ;
 +Det+Dem+MFN+AnIn+Pl+Ins:ими # ;
++Pron+Dem+Msc+AnIn+Sg+Nom:от # ;
++Pron+Dem+Msc+Inan+Sg+Acc:от # ;
++Pron+Dem+Msc+Anim+Sg+Acc:ого # ;
++Pron+Dem+Msc+AnIn+Sg+Gen:ого # ;
++Pron+Dem+Msc+AnIn+Sg+Loc:ом # ;
++Pron+Dem+Msc+AnIn+Sg+Dat:ому # ;
++Pron+Dem+Msc+AnIn+Sg+Ins:им # ;
++Pron+Dem+Neu+AnIn+Sg+Nom:о # ;
++Pron+Dem+Neu+AnIn+Sg+Acc:о # ;
++Pron+Dem+Neu+AnIn+Sg+Gen:ого # ;
++Pron+Dem+Neu+AnIn+Sg+Loc:ом # ;
++Pron+Dem+Neu+AnIn+Sg+Dat:ому # ;
++Pron+Dem+Neu+AnIn+Sg+Ins:им # ;
++Pron+Dem+Fem+AnIn+Sg+Nom:а # ;
++Pron+Dem+Fem+AnIn+Sg+Acc:у # ;
++Pron+Dem+Fem+AnIn+Sg+Gen:ой # ;
++Pron+Dem+Fem+AnIn+Sg+Loc:ой # ;
++Pron+Dem+Fem+AnIn+Sg+Dat:ой # ;
++Pron+Dem+Fem+AnIn+Sg+Ins:ой # ;
++Pron+Dem+Fem+AnIn+Sg+Ins+Use/NG:ою # ;
++Pron+Dem+MFN+AnIn+Pl+Nom:и # ;
++Pron+Dem+MFN+Inan+Pl+Acc:и # ;
++Pron+Dem+MFN+Anim+Pl+Acc:их # ;
++Pron+Dem+MFN+AnIn+Pl+Gen:их # ;
++Pron+Dem+MFN+AnIn+Pl+Loc:их # ;
++Pron+Dem+MFN+AnIn+Pl+Dat:им # ;
++Pron+Dem+MFN+AnIn+Pl+Ins:ими # ;
 
 LEXICON RelPron_мс-п_[п_a]
 +Pron+Rel: LF_stem ;
 
 LEXICON Interr_мс-п_[п_a]
 +Det+Interr: LF_stem ;
+!+Pron+Interr: LF_stem ; ! TODO Can который or каковский be interrogative pronouns?
 
 LEXICON Rel_мс-п_[п_a]
 +Det+Rel: LF_stem ;
++Det+Rel: LF_stem ;
+!+Pron+Rel: LF_stem ; ! TODO Can каковский be a relative pronoun?
+!+Pron+Rel: LF_stem ;
 
 LEXICON Indef_мс-п_[п_a]
 +Det+Indef: LF_stem ;
++Pron+Indef: LF_stem ;
 
 LEXICON мс-п_[п_a]
 +Det: LF_stem ;
++Pron: LF_stem ; ! TODO Can all of these be pronouns? 
 
 LEXICON мс-п_[п_a]-либо
 +Det+Indef: LF_stem-либо ;
++Pron+Indef: LF_stem-либо ; ! TODO Can these be pronouns? 
 
 LEXICON мс-п_[п_a]-нибудь
 +Det+Indef: LF_stem-нибудь ;
++Pron+Indef: LF_stem-нибудь ; ! TODO Can these be pronouns? 
 
 LEXICON мс-п_[п_a]-то
 +Det+Def: LF_stem-то ;
++Pron+Def: LF_stem-то ; ! TODO Can these be pronouns? 
 
-LEXICON мс-п_[п_a]_Pl
+LEXICON мс-п_[п_a]_Pl ! TODO Can these be pronouns?
 +Det+MFN+AnIn+Pl+Nom:%>ые # ;
 +Det+MFN+Inan+Pl+Acc:%>ые # ;
 +Det+MFN+Anim+Pl+Acc:%>ых # ;
@@ -619,8 +857,15 @@ LEXICON мс-п_[п_a]_Pl
 +Det+MFN+AnIn+Pl+Loc:%>ых # ;
 +Det+MFN+AnIn+Pl+Dat:%>ым # ;
 +Det+MFN+AnIn+Pl+Ins:%>ыми # ;
++Pron+MFN+AnIn+Pl+Nom:%>ые # ;
++Pron+MFN+Inan+Pl+Acc:%>ые # ;
++Pron+MFN+Anim+Pl+Acc:%>ых # ;
++Pron+MFN+AnIn+Pl+Gen:%>ых # ;
++Pron+MFN+AnIn+Pl+Loc:%>ых # ;
++Pron+MFN+AnIn+Pl+Dat:%>ым # ;
++Pron+MFN+AnIn+Pl+Ins:%>ыми # ;
 
-LEXICON мс-п_[п_a]_некий
+LEXICON мс-п_[п_a]_некий ! TODO Can this be a pronoun?
 +Det+Msc+AnIn+Sg+Nom:ий # ;
 +Det+Msc+Inan+Sg+Acc:ий # ;
 +Det+Msc+Anim+Sg+Acc:оего # ;
@@ -628,7 +873,7 @@ LEXICON мс-п_[п_a]_некий
 +Det+Msc+AnIn+Sg+Loc:оем # ;
 +Det+Msc+AnIn+Sg+Dat:оему # ;
 +Det+Msc+AnIn+Sg+Ins:им # ;
-! +Det+Msc+AnIn+Sg+Ins:оим # ; ! устар.
+! +Det+Msc+AnIn+Sg+Ins:оим # ; ! устар. TODO
 +Det+Neu+AnIn+Sg+Nom:ое # ;
 +Det+Neu+AnIn+Sg+Acc:ое # ;
 +Det+Neu+AnIn+Sg+Gen:оего # ;
@@ -660,38 +905,91 @@ LEXICON мс-п_[п_a]_некий
 ! +Det+Pl+Dat:оим # ; ! устар.
 +Det+MFN+AnIn+Pl+Ins:ими # ;
 ! +Det+Pl+Ins:оими # ; ! устар.
++Pron+Msc+AnIn+Sg+Nom:ий # ;
++Pron+Msc+Inan+Sg+Acc:ий # ;
++Pron+Msc+Anim+Sg+Acc:оего # ;
++Pron+Msc+AnIn+Sg+Gen:оего # ;
++Pron+Msc+AnIn+Sg+Loc:оем # ;
++Pron+Msc+AnIn+Sg+Dat:оему # ;
++Pron+Msc+AnIn+Sg+Ins:им # ;
+! +Pron+Msc+AnIn+Sg+Ins:оим # ; ! устар. TODO
++Pron+Neu+AnIn+Sg+Nom:ое # ;
++Pron+Neu+AnIn+Sg+Acc:ое # ;
++Pron+Neu+AnIn+Sg+Gen:оего # ;
++Pron+Neu+AnIn+Sg+Loc:оем # ;
++Pron+Neu+AnIn+Sg+Dat:оему # ;
++Pron+Neu+AnIn+Sg+Ins:им # ;
+! +Pron+Neu+AnIn+Sg+Ins:оим # ; ! устар.
++Pron+Fem+AnIn+Sg+Nom:ая # ;
++Pron+Fem+AnIn+Sg+Acc:ую # ;
++Pron+Fem+AnIn+Sg+Gen:ой # ;
++Pron+Fem+AnIn+Sg+Gen+Use/NG:оей # ;
++Pron+Fem+AnIn+Sg+Loc:ой # ;
++Pron+Fem+AnIn+Sg+Loc+Use/NG:оей # ;
++Pron+Fem+AnIn+Sg+Dat:ой # ;
++Pron+Fem+AnIn+Sg+Dat+Use/NG:оей # ;
++Pron+Fem+AnIn+Sg+Ins:ой # ;
++Pron+Fem+AnIn+Sg+Ins+Use/NG:ою # ;
++Pron+Fem+AnIn+Sg+Ins+Use/NG:оей # ;
++Pron+Fem+AnIn+Sg+Ins+Use/NG:оею # ;
++Pron+MFN+AnIn+Pl+Nom:ие # ;
++Pron+MFN+Inan+Pl+Acc:ие # ;
++Pron+MFN+Anim+Pl+Acc:их # ;
+! +Pron+Anim+Pl+Acc:оих # ; ! устар.
++Pron+MFN+AnIn+Pl+Gen:их # ;
+! +Pron+Pl+Gen:оих # ; ! устар.
++Pron+MFN+AnIn+Pl+Loc:их # ;
+! +Pron+Pl+Loc:оих # ; ! устар.
++Pron+MFN+AnIn+Pl+Dat:им # ;
+! +Pron+Pl+Dat:оим # ; ! устар.
++Pron+MFN+AnIn+Pl+Ins:ими # ;
+! +Pron+Pl+Ins:оими # ; ! устар.
 
-LEXICON мс-п_[п_a]_экий
+LEXICON мс-п_[п_a]_экий ! TODO Can these be pronouns?
 +Det: LF_stem ;
 +Det+Msc+AnIn+Sg+Gen:оего # ;
 +Det+Neu+AnIn+Sg+Gen:оего # ;
 +Det+Msc+AnIn+Sg+Dat:оему # ;
 +Det+Neu+AnIn+Sg+Dat:оему # ;
 +Det+Fem+AnIn+Sg+Nom:а # ;
++Pron: LF_stem ;
++Pron+Msc+AnIn+Sg+Gen:оего # ;
++Pron+Neu+AnIn+Sg+Gen:оего # ;
++Pron+Msc+AnIn+Sg+Dat:оему # ;
++Pron+Neu+AnIn+Sg+Dat:оему # ;
++Pron+Fem+AnIn+Sg+Nom:а # ;
 
 LEXICON Interr_мс-п_[п_b]
 +Det+Interr: LF_end ;
++Pron+Interr: LF_end ;
 
 LEXICON Rel_мс-п_[п_b]
 +Det+Rel: LF_end ;
+!+Pron+Rel: LF_end ; # Can каковой be a relative pronoun?
 
 LEXICON мс-п_[п_b]
 +Det: LF_end ;
++Pron: LF_end ;
 
 LEXICON мс-п_[п_b]_ни
 +Det+Neg: LF_end ;
++Pron+Neg: LF_end ;
 
 LEXICON мс-п_[п_b]-либо
 +Det+Indef: LF_end-либо ;
++Pron+Indef: LF_end-либо ;
 
 LEXICON мс-п_[п_b]-нибудь
 +Det+Indef: LF_end-нибудь ;
++Pron+Indef: LF_end-нибудь ;
 
 LEXICON мс-п_[п_b]-то
 +Det+Def: LF_end-то ;
++Pron+Def: LF_end-то ;
 
 LEXICON Dem_мс-п_[п_b]-то
 +Det+Dem: LF_end-то ;
++Pron+Dem: LF_end-то ;
 
 LEXICON мс_кто ! TODO FIX How to tag animacy for кто что and derivatives
 +Pron+Interr: мс_кто_Nom ;

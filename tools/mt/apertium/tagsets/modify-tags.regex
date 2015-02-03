@@ -44,7 +44,12 @@
  [ %<pl2%>   -> %<p2%> %<pl%> ] .o.
  [ %<pl3%>   -> %<p3%> %<pl%> ] .o.
  [ %<n%> %<prop%> -> %<np%> ] .o.
-  
+
+ [ %<mfn%> %<pl%> %<pred%> -> %<short%> %<mfn%> %<pl%> ] .o.
+ [ %<m%>   %<sg%> %<pred%> -> %<short%> %<m%> %<sg%> ] .o.
+ [ %<f%>   %<sg%> %<pred%> -> %<short%> %<f%> %<sg%> ] .o.
+ [ %<nt%>  %<sg%> %<pred%> -> %<short%> %<nt%> %<sg%> ] .o.
+
  [ %<mfn%> %<an%> %<pl%> %<pred%> -> %<short%> %<mfn%> %<pl%> ] .o.
  [ %<m%>   %<an%> %<sg%> %<pred%> -> %<short%> %<m%> %<sg%> ] .o.
  [ %<f%>   %<an%> %<sg%> %<pred%> -> %<short%> %<f%> %<sg%> ] .o.
@@ -58,6 +63,9 @@
  [ %<pstpss%>         -> %<pp%> %<pasv%> ] .o.
 
  [ %<indef%>          -> %<ind%> ] .o.
+
+ [ %<np%> %<ant%> %<m%> %<aa%> -> %<np%> %<ant%> %<m%> ] .o.
+ [ %<np%> %<ant%> %<f%> %<aa%> -> %<np%> %<ant%> %<f%> ] .o.
 
  [ %<np%> %<m%> %<aa%> -> %<np%> %<ant%> %<m%> ] .o.
  [ %<np%> %<f%> %<aa%> -> %<np%> %<ant%> %<f%> ] .o.

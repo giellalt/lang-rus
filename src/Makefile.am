@@ -92,7 +92,7 @@ analyser-gt-%.xfst: analyser-gt-%.tmp.xfst \
 generator-gt-%.xfst: generator-gt-%.tmp.xfst \
 				  orthography/destress.xfst
 	$(AM_V_XFST)$(PRINTF) "read regex \
-				@\"$<\".i \
+				@\"$<\" \
 			.o. @\"orthography/destress.xfst\" \
 			;\n\
 		 invert net\n\

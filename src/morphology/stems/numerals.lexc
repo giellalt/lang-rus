@@ -394,8 +394,8 @@ LEXICON Numeral
 №:№ DIGITLEX ; ! TODO FIX CHECK In this context, only a cardinal/nominal ending is likely
 DIGITLEX ; 
 LASTDIGIT ;
-< M^{0,4} ( CM | CD | (D) C^{0,3} ) ( XC | XL | (L) X^{0,3} ) ( IX | IV | (V) I^{0,3} ) > ROMNUM ;
-< m^{0,4} ( cm | cd | (d) c^{0,3} ) ( xc | xl | (l) x^{0,3} ) ( ix | iv | (v) i^{0,3} ) > ROMNUM ;
+< M^{0,4} ( C M | C D | (D) C^{0,3} ) ( X C | X L | (L) X^{0,3} ) ( I X | I V | (V) I^{0,3} ) > ROMNUM ;
+< m^{0,4} ( c m | c d | (d) c^{0,3} ) ( x c | x l | (l) x^{0,3} ) ( i x | i v | (v) i^{0,3} ) > ROMNUM ;
 
 LEXICON ROMNUM
 +Num: # ;

@@ -2324,7 +2324,7 @@ LEXICON Surname_stem_Fem
 +Fem+Anim+Sg+Loc:%>ой # ;
 +Fem+Anim+Sg+Dat:%>ой # ;
 +Fem+Anim+Sg+Ins:%>ой # ;
-+Fem+Anim+Sg+Ins+NG:%>ою # ;
++Fem+Anim+Sg+Ins+Use/NG:%>ою # ;
 
 LEXICON Surname_stem_Pl
 +MFN+Anim+Pl+Nom:%>ы # ;
@@ -2354,7 +2354,7 @@ LEXICON Surname_end_Fem
 +Fem+Anim+Sg+Loc:%>о́й # ;
 +Fem+Anim+Sg+Dat:%>о́й # ;
 +Fem+Anim+Sg+Ins:%>о́й # ;
-+Fem+Anim+Sg+Ins+NG:%>о́ю # ;
++Fem+Anim+Sg+Ins+Use/NG:%>о́ю # ;
 
 LEXICON Surname_end_Pl
 +MFN+Anim+Pl+Nom:%>ы́ # ;

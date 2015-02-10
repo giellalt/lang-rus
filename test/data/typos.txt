@@ -32,4 +32,4 @@
 # they may indicate sentence boundaries.
 #
 #
-åvtohke	åvtehke
+слво слово

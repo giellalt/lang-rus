@@ -114,10 +114,11 @@ Multichar_Symbols
 !! !!Other tags
 +Prb     !!= * @CODE@ = +Prb(lematic): затруднительно - предположительно - нет
 +Fac     !!= * @CODE@ = Facultative
-+Use/NG  !!= * @CODE@ = Accept, do not generate
++Use/NG  !!= * @CODE@ = Do not generate (used for apertium, etc.)
 +Use/Obs !!= * @CODE@ = Obsolete
-+Err/Sub !!= * @CODE@ = Substandard
 +Use/Ant !!= * @CODE@ = Antiquated "устаревшее"
++Use/Met !!= * @CODE@ = Metrical новее~новей, доброй~доброю (marks less-canonical wordform that has more/fewer syllables)
++Err/Sub !!= * @CODE@ = Substandard
 
 ! More use tags:
 ! ласкательное - +Use/Aff(ectionate)

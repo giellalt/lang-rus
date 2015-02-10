@@ -115,7 +115,6 @@ Multichar_Symbols
 +Prb     !!= * @CODE@ = +Prb(lematic): затруднительно - предположительно - нет
 +Fac     !!= * @CODE@ = Facultative
 +Use/NG  !!= * @CODE@ = Accept, do not generate
-+NG ! TEMPORARY! FOR ENSURING 1-TO-1 (WHILE Use/NG isn't fully implemented. TODO Replace all +NG's with +Use/NG, then delete me)
 +Use/Obs !!= * @CODE@ = Obsolete
 +Err/Sub !!= * @CODE@ = Substandard
 +Use/Ant !!= * @CODE@ = Antiquated "устаревшее"

@@ -49,6 +49,7 @@ fi
 
 # Get external Mac editor for viewing failed results from configure:
 EXTEDITOR=@SEE@
+pythonbin=@PYTHON@
 
 ##### Extract lemmas - extend the egrep exclude pattern in the #####
 ##### parenthesis as needed to exclude unwanted lexc lines:    #####
@@ -65,7 +66,7 @@ for f in $fsttype; do
 		lookuptool="@LOOKUP@ -q -flags mbTT"
 		suffix="xfst"
 	elif [ $f == "hfst" ]; then
-		lookuptool="@HFST_LOOKUP@ -q"
+		lookuptool="@HFST_OPTIMIZED_LOOKUP@ -q"
 		suffix="hfstol"
 	else
 	    Fail=1
@@ -77,45 +78,9 @@ for f in $fsttype; do
 		let "transducer_found += 1"
 
 ###### Test non-compounds: #######
-		# generate Neuter Singular Inanimate:
-		# $lemmas (subsequently $failedlemmas.$f.txt) = lemmas that haven't passed yet
-		# $generatedlemmas.$f.tmp.txt = output of generator (replaced for each tagset)
-		# $generatedlemmas.$f.txt = cumulative list of lemmas that generate output
-		
-		# to begin with, all lemmas have failed (i.e. none have passed yet)
-		cat $lemmas > $failedlemmas.$f.txt
-		
-		# loop over tagsets and generate lemmas
-		for gender in +Msc +Neu +Fem +MFN ; do
-			for animacy in +Inan +Anim ; do
-				for number in +Sg +Pl ; do
-					for grammcase in +Nom ; do
-						sed 's/$/+N'$gender$animacy$number$grammcase'/' $failedlemmas.$f.txt \
-							| $lookuptool $generatorfile.$suffix \
-							| cut -f2 > $generatedlemmas.$f.tmp.txt
-						fgrep -v "+N+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
-							| sort -u >> $generatedlemmas.$f.txt
-						fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
-							| sort -u  > $failedlemmas.$f.txt
-					done
-				done
-			done
-		done
-		sed 's/$/+N+MFN+Inan+Pl+Gen/' $failedlemmas.$f.txt \
-			| $lookuptool $generatorfile.$suffix \
-			| cut -f2 > $generatedlemmas.$f.tmp.txt
-		fgrep -v "+N+" $generatedlemmas.$f.tmp.txt | grep -v "^$" \
-			| sort -u >> $generatedlemmas.$f.txt
-		fgrep    "+N+" $generatedlemmas.$f.tmp.txt | cut -d'+' -f1 \
-			| sort -u  > $failedlemmas.$f.txt
-
-###### Collect results: #######
-		# Sort and compare original input with resulting output - the diff is
-		# stored and opened in SEE:
-		sort -u -o $generatedlemmas.$f.txt $generatedlemmas.$f.txt 
-		sed 's/[¹²³⁴⁵⁶⁷⁸⁹⁰⁻]*$//' $lemmas | uniq | sort -u > ./strippednouns.txt
-		comm -23 ./strippednouns.txt $generatedlemmas.$f.txt | sort \
-		> $resultfile.$f.txt
+		cat $lemmas | python3.2 lemmaStager.py noun | $lookuptool \
+			$generatorfile.$suffix | python3.2 lemmaChecker.py \
+			> $resultfile.$f.txt
 
 		# Open the diff file in SubEthaEdit (if there is a diff):
 		if [ -s $resultfile.$f.txt ]; then
@@ -133,7 +98,6 @@ done
 
 # When done, remove the generated data file:
 rm -f $lemmas
-rm -r ./strippednouns.txt
 
 # At least one of the Xerox or HFST tests failed:
 if [ "$Fail" = "1" ]; then

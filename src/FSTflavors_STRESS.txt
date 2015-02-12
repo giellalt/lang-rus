@@ -1,11 +1,33 @@
                          V́       V̀       ё       ё̀       ё́
 -------------------------------------------------------------
-A1: desc/norm Analyzer   V́/V     V̀/V     ё/е     ё̀/ё/е   ё́/ё/е
-A2: desc/norm Generator  V       V       ё       ё       ё
-B1: raw Analyzer         V́       V̀       ё       ё̀/ё     ё́/ё
-B2: raw Generator        V́       V̀       ё       ё̀       ё́
+A1: desc/norm Analyzer   V́/V     V̀/V     ё/е     ё̀/ё/е   ё́/ё/е  = virtually everything
+A2: desc/norm Generator  V       V       ё       ё       ё      = VIEW
+B1: raw Analyzer         V́       V̀       ё       ё̀/ё     ё́/ё    = oahpa (testing learners' stress placement)
+B2: raw Generator        V́       V̀       ё       ё̀       ё́      = VIEW (automatic stress placement)
+
+Apertium FSTs should have the same variants as the GT FSTs listed above,
+except the raw analyzer is unnecessary.
 
 
 V=all vowels except ё
-acute (/) = primary stress
-grave (\) = secondary stress
+acute stress (/) = primary stress
+grave stress (\) = secondary stress
+
+
+Diacritics are not standard in Russian, except for ё
+	- ё 'jo' is stressed. Unstressed ё is identical to е (orth. and phon.)
+	- in standard orthography even stressed 'ё' is usually written 'е' so it is 
+		ambiguous with the 'real' е.
+	- ё is marked for young children, and foreigners. In texts when the context 
+		cannot distinguish between possible pronunciations, i.e. to avoid 
+		mispronunciation. Should technically always be written in personal names.
+
+Acute/grave diacritics over ё are not standard
+- ё̀ is in the first component of compound words; not primary stress, but still pronounced ё
+- ё́ doesn't mean anything yet. Not sure if this will ever be implemented.
+
+
+
+
+
+Азбучная истина № 7. Употребление буквы ё обязательно в текстах с последовательно поставленными знаками ударения, в книгах для детей младшего возраста (в том числе учебниках для школьников младших классов), в учебниках для иностранцев. В обычных печатных текстах ё пишется в тех случаях, когда возможно неправильное прочтение слова, когда надо указать правильное произношение редкого слова или предупредить речевую ошибку. Букву ё следует также писать в собственных именах. В остальных случаях употребление ё факультативно, т. е. необязательно. (http://www.gramota.ru/class/istiny/istiny_7_jo/)

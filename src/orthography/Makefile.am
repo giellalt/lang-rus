@@ -10,7 +10,7 @@ GT_ORTHOGRAPHIC_REGEX_SRCS=\
 		inituppercase.regex \
 		spellrelax.regex    \
 		spellrelax-mobile-keyboard.regex \
-		destress.regex
+		destress.regex \
 		destressOptional.regex
 
 GT_ORTHOGRAPHIC_XFSCRIPT_SRCS=\

@@ -20,7 +20,7 @@ Tests:
       статья+N+Fem+Inan+Sg+Gen: статьи
       статья+N+Fem+Inan+Sg+Loc: статье
       статья+N+Fem+Inan+Sg+Dat: статье
-      статья+N+Fem+Inan+Sg+Ins: [статьёй, статьей]
+      статья+N+Fem+Inan+Sg+Ins: статьёй
       статья+N+Fem+Inan+Pl+Nom: статьи
       статья+N+Fem+Inan+Pl+Acc: статьи
       статья+N+Fem+Inan+Pl+Gen: статей
@@ -33,7 +33,7 @@ Tests:
       семья+N+Fem+Inan+Sg+Gen: семьи
       семья+N+Fem+Inan+Sg+Loc: семье
       семья+N+Fem+Inan+Sg+Dat: семье
-      семья+N+Fem+Inan+Sg+Ins: [семьёй, семьей]
+      семья+N+Fem+Inan+Sg+Ins: семьёй
       семья+N+Fem+Inan+Pl+Nom: семьи
       семья+N+Fem+Inan+Pl+Acc: семьи
       семья+N+Fem+Inan+Pl+Gen: семей
@@ -46,18 +46,18 @@ Tests:
       муравей+N+Msc+Anim+Sg+Gen: муравья
       муравей+N+Msc+Anim+Sg+Loc: муравье
       муравей+N+Msc+Anim+Sg+Dat: муравью
-      муравей+N+Msc+Anim+Sg+Ins: [муравьём, муравьем]
+      муравей+N+Msc+Anim+Sg+Ins: муравьём
       муравей+N+Msc+Anim+Pl+Nom: муравьи
-      муравей+N+Msc+Anim+Pl+Acc: [муравьёв, муравьев]
-      муравей+N+Msc+Anim+Pl+Gen: [муравьёв, муравьев]
+      муравей+N+Msc+Anim+Pl+Acc: муравьёв
+      муравей+N+Msc+Anim+Pl+Gen: муравьёв
       муравей+N+Msc+Anim+Pl+Loc: муравьях
       муравей+N+Msc+Anim+Pl+Dat: муравьям
       муравей+N+Msc+Anim+Pl+Ins: муравьями
   Noun - бельё M anim : # Noun - full paradigm
-      бельё+N+Neu+Inan+Sg+Nom: [бельё, белье]
-      бельё+N+Neu+Inan+Sg+Acc: [бельё, белье]
+      бельё+N+Neu+Inan+Sg+Nom: бельё
+      бельё+N+Neu+Inan+Sg+Acc: бельё
       бельё+N+Neu+Inan+Sg+Gen: белья
       бельё+N+Neu+Inan+Sg+Loc: белье
       бельё+N+Neu+Inan+Sg+Dat: белью
-      бельё+N+Neu+Inan+Sg+Ins: [бельём, бельем]
+      бельё+N+Neu+Inan+Sg+Ins: бельём
 

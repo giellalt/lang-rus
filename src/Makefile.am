@@ -60,10 +60,10 @@ endif # CAN_HFST
 #### Add language-specific build rules here: ####
 
 analyser-gt-%.hfst: analyser-gt-%.tmp.hfst \
-				 orthography/destress.hfst
+				 orthography/destressOptional.compose.hfst
 	$(AM_V_RGX2FST)$(PRINTF) "\
 				@\"$<\" \
-			.o. @\"orthography/destress.hfst\" \
+			.o. @\"orthography/destressOptional.compose.hfst\" \
 			;" \
 		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --xerox-composition=ON \
 		| $(HFST_INVERT) \
@@ -71,29 +71,29 @@ analyser-gt-%.hfst: analyser-gt-%.tmp.hfst \
 		> $@
 
 generator-gt-%.hfst: generator-gt-%.tmp.hfst \
-				  orthography/destress.hfst
+				  orthography/destress.compose.hfst
 	$(AM_V_RGX2FST)$(PRINTF) "\
 				@\"$<\" \
-			.o. @\"orthography/destress.hfst\" \
+			.o. @\"orthography/destress.compose.hfst\" \
 			;" \
 		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --xerox-composition=ON \
 		| $(HFST_FST2FST) $(HFST_FLAGS) -f olw \
 		> $@
 
 analyser-gt-%.xfst: analyser-gt-%.tmp.xfst \
-				 orthography/destress.xfst
+				 orthography/destressOptional.compose.xfst
 	$(AM_V_XFST)$(PRINTF) "read regex \
 				@\"$<\" \
-			.o. @\"orthography/destress.xfst\" \
+			.o. @\"orthography/destressOptional.compose.xfst\" \
 			;\n\
 		 save stack $@\n\
 		 quit\n" | $(XFST) $(VERBOSITY)
 
 generator-gt-%.xfst: generator-gt-%.tmp.xfst \
-				  orthography/destress.xfst
+				  orthography/destress.compose.xfst
 	$(AM_V_XFST)$(PRINTF) "read regex \
 				@\"$<\" \
-			.o. @\"orthography/destress.xfst\" \
+			.o. @\"orthography/destress.compose.xfst\" \
 			;\n\
 		 invert net\n\
 		 save stack $@\n\

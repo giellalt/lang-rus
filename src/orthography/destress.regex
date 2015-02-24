@@ -48,11 +48,6 @@
           # could also be achieved through postprocessing, e.g. http://python.anabar.ru/yo.htm
           # Even though they are not currently in the FST, I leave them here as
           # a reminder.
-
-# Step two: compose with FST that makes the dots over ё's optional (both secondary and primary stress)
-] .o. [
-ё (->) е, # Where there is a ё, accept/generate e and ё
-Ё (->) Е  # Where there is a Ё, accept/generate Е and Ё
 ];
 
 # (A short note about when to write the dots over ё in Standard Russian.)

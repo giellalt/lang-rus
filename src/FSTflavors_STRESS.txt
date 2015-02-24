@@ -1,9 +1,7 @@
-                         V́       V̀       ё       ё̀       ё́
+raw FST                  V́       V̀       ё       ё̀       ё́
 -------------------------------------------------------------
 A1: desc/norm Analyzer   V́/V     V̀/V     ё/е     ё̀/ё/е   ё́/ё/е  = virtually everything
 A2: desc/norm Generator  V       V       ё       ё       ё      = VIEW
-B1: raw Analyzer         V́       V̀       ё       ё̀/ё     ё́/ё    = oahpa (testing learners' stress placement)
-B2: raw Generator        V́       V̀       ё       ё̀       ё́      = VIEW (automatic stress placement)
 
 Apertium FSTs should have the same variants as the GT FSTs listed above,
 except the raw analyzer is unnecessary.

@@ -11,6 +11,7 @@ GT_ORTHOGRAPHIC_REGEX_SRCS=\
 		spellrelax.regex    \
 		spellrelax-mobile-keyboard.regex \
 		destress.regex
+		destressOptional.regex
 
 GT_ORTHOGRAPHIC_XFSCRIPT_SRCS=\
 		allcaps.xfscript      \

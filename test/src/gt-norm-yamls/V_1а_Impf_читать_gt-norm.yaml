@@ -63,86 +63,86 @@ Tests:
     читать+V+Impf+IV+PstAct+Adv+Fac: читав
     читать+V+Impf+IV+PstAct+Adv+Fac+Use/Obs: читавши
     
-    читать+V+Impf+TV+PrsAct+Msc+Sg+Nom: читающий
+    читать+V+Impf+TV+PrsAct+Msc+AnIn+Sg+Nom: читающий
     читать+V+Impf+TV+PrsAct+Msc+Inan+Sg+Acc: читающий
     читать+V+Impf+TV+PrsAct+Msc+Anim+Sg+Acc: читающего
-    читать+V+Impf+TV+PrsAct+Msc+Sg+Gen: читающего
-    читать+V+Impf+TV+PrsAct+Msc+Sg+Loc: читающем
-    читать+V+Impf+TV+PrsAct+Msc+Sg+Dat: читающему
-    читать+V+Impf+TV+PrsAct+Msc+Sg+Ins: читающим
-    читать+V+Impf+TV+PrsAct+Neu+Sg+Nom: читающее
-    читать+V+Impf+TV+PrsAct+Neu+Sg+Acc: читающее
-    читать+V+Impf+TV+PrsAct+Neu+Sg+Gen: читающего
-    читать+V+Impf+TV+PrsAct+Neu+Sg+Loc: читающем
-    читать+V+Impf+TV+PrsAct+Neu+Sg+Dat: читающему
-    читать+V+Impf+TV+PrsAct+Neu+Sg+Ins: читающим
-    читать+V+Impf+TV+PrsAct+Fem+Sg+Nom: читающая
-    читать+V+Impf+TV+PrsAct+Fem+Sg+Acc: читающую
-    читать+V+Impf+TV+PrsAct+Fem+Sg+Gen: читающей
-    читать+V+Impf+TV+PrsAct+Fem+Sg+Loc: читающей
-    читать+V+Impf+TV+PrsAct+Fem+Sg+Dat: читающей
-    читать+V+Impf+TV+PrsAct+Fem+Sg+Ins: читающей
-    читать+V+Impf+TV+PrsAct+MFN+Pl+Nom: читающие
+    читать+V+Impf+TV+PrsAct+Msc+AnIn+Sg+Gen: читающего
+    читать+V+Impf+TV+PrsAct+Msc+AnIn+Sg+Loc: читающем
+    читать+V+Impf+TV+PrsAct+Msc+AnIn+Sg+Dat: читающему
+    читать+V+Impf+TV+PrsAct+Msc+AnIn+Sg+Ins: читающим
+    читать+V+Impf+TV+PrsAct+Neu+AnIn+Sg+Nom: читающее
+    читать+V+Impf+TV+PrsAct+Neu+AnIn+Sg+Acc: читающее
+    читать+V+Impf+TV+PrsAct+Neu+AnIn+Sg+Gen: читающего
+    читать+V+Impf+TV+PrsAct+Neu+AnIn+Sg+Loc: читающем
+    читать+V+Impf+TV+PrsAct+Neu+AnIn+Sg+Dat: читающему
+    читать+V+Impf+TV+PrsAct+Neu+AnIn+Sg+Ins: читающим
+    читать+V+Impf+TV+PrsAct+Fem+AnIn+Sg+Nom: читающая
+    читать+V+Impf+TV+PrsAct+Fem+AnIn+Sg+Acc: читающую
+    читать+V+Impf+TV+PrsAct+Fem+AnIn+Sg+Gen: читающей
+    читать+V+Impf+TV+PrsAct+Fem+AnIn+Sg+Loc: читающей
+    читать+V+Impf+TV+PrsAct+Fem+AnIn+Sg+Dat: читающей
+    читать+V+Impf+TV+PrsAct+Fem+AnIn+Sg+Ins: читающей
+    читать+V+Impf+TV+PrsAct+MFN+AnIn+Pl+Nom: читающие
     читать+V+Impf+TV+PrsAct+MFN+Inan+Pl+Acc: читающие
     читать+V+Impf+TV+PrsAct+MFN+Anim+Pl+Acc: читающих
-    читать+V+Impf+TV+PrsAct+MFN+Pl+Gen: читающих
-    читать+V+Impf+TV+PrsAct+MFN+Pl+Loc: читающих
-    читать+V+Impf+TV+PrsAct+MFN+Pl+Dat: читающим
-    читать+V+Impf+TV+PrsAct+MFN+Pl+Ins: читающими
+    читать+V+Impf+TV+PrsAct+MFN+AnIn+Pl+Gen: читающих
+    читать+V+Impf+TV+PrsAct+MFN+AnIn+Pl+Loc: читающих
+    читать+V+Impf+TV+PrsAct+MFN+AnIn+Pl+Dat: читающим
+    читать+V+Impf+TV+PrsAct+MFN+AnIn+Pl+Ins: читающими
 
-    читать+V+Impf+IV+PrsAct+Msc+Sg+Nom: читающий
+    читать+V+Impf+IV+PrsAct+Msc+AnIn+Sg+Nom: читающий
     читать+V+Impf+IV+PrsAct+Msc+Inan+Sg+Acc: читающий
     читать+V+Impf+IV+PrsAct+Msc+Anim+Sg+Acc: читающего
-    читать+V+Impf+IV+PrsAct+Msc+Sg+Gen: читающего
-    читать+V+Impf+IV+PrsAct+Msc+Sg+Loc: читающем
-    читать+V+Impf+IV+PrsAct+Msc+Sg+Dat: читающему
-    читать+V+Impf+IV+PrsAct+Msc+Sg+Ins: читающим
-    читать+V+Impf+IV+PrsAct+Neu+Sg+Nom: читающее
-    читать+V+Impf+IV+PrsAct+Neu+Sg+Acc: читающее
-    читать+V+Impf+IV+PrsAct+Neu+Sg+Gen: читающего
-    читать+V+Impf+IV+PrsAct+Neu+Sg+Loc: читающем
-    читать+V+Impf+IV+PrsAct+Neu+Sg+Dat: читающему
-    читать+V+Impf+IV+PrsAct+Neu+Sg+Ins: читающим
-    читать+V+Impf+IV+PrsAct+Fem+Sg+Nom: читающая
-    читать+V+Impf+IV+PrsAct+Fem+Sg+Acc: читающую
-    читать+V+Impf+IV+PrsAct+Fem+Sg+Gen: читающей
-    читать+V+Impf+IV+PrsAct+Fem+Sg+Loc: читающей
-    читать+V+Impf+IV+PrsAct+Fem+Sg+Dat: читающей
-    читать+V+Impf+IV+PrsAct+Fem+Sg+Ins: читающей
-    читать+V+Impf+IV+PrsAct+MFN+Pl+Nom: читающие
+    читать+V+Impf+IV+PrsAct+Msc+AnIn+Sg+Gen: читающего
+    читать+V+Impf+IV+PrsAct+Msc+AnIn+Sg+Loc: читающем
+    читать+V+Impf+IV+PrsAct+Msc+AnIn+Sg+Dat: читающему
+    читать+V+Impf+IV+PrsAct+Msc+AnIn+Sg+Ins: читающим
+    читать+V+Impf+IV+PrsAct+Neu+AnIn+Sg+Nom: читающее
+    читать+V+Impf+IV+PrsAct+Neu+AnIn+Sg+Acc: читающее
+    читать+V+Impf+IV+PrsAct+Neu+AnIn+Sg+Gen: читающего
+    читать+V+Impf+IV+PrsAct+Neu+AnIn+Sg+Loc: читающем
+    читать+V+Impf+IV+PrsAct+Neu+AnIn+Sg+Dat: читающему
+    читать+V+Impf+IV+PrsAct+Neu+AnIn+Sg+Ins: читающим
+    читать+V+Impf+IV+PrsAct+Fem+AnIn+Sg+Nom: читающая
+    читать+V+Impf+IV+PrsAct+Fem+AnIn+Sg+Acc: читающую
+    читать+V+Impf+IV+PrsAct+Fem+AnIn+Sg+Gen: читающей
+    читать+V+Impf+IV+PrsAct+Fem+AnIn+Sg+Loc: читающей
+    читать+V+Impf+IV+PrsAct+Fem+AnIn+Sg+Dat: читающей
+    читать+V+Impf+IV+PrsAct+Fem+AnIn+Sg+Ins: читающей
+    читать+V+Impf+IV+PrsAct+MFN+AnIn+Pl+Nom: читающие
     читать+V+Impf+IV+PrsAct+MFN+Inan+Pl+Acc: читающие
     читать+V+Impf+IV+PrsAct+MFN+Anim+Pl+Acc: читающих
-    читать+V+Impf+IV+PrsAct+MFN+Pl+Gen: читающих
-    читать+V+Impf+IV+PrsAct+MFN+Pl+Loc: читающих
-    читать+V+Impf+IV+PrsAct+MFN+Pl+Dat: читающим
-    читать+V+Impf+IV+PrsAct+MFN+Pl+Ins: читающими
+    читать+V+Impf+IV+PrsAct+MFN+AnIn+Pl+Gen: читающих
+    читать+V+Impf+IV+PrsAct+MFN+AnIn+Pl+Loc: читающих
+    читать+V+Impf+IV+PrsAct+MFN+AnIn+Pl+Dat: читающим
+    читать+V+Impf+IV+PrsAct+MFN+AnIn+Pl+Ins: читающими
 
-    читать+V+Impf+TV+PrsPss+Msc+Sg+Nom: читаемый
+    читать+V+Impf+TV+PrsPss+Msc+AnIn+Sg+Nom: читаемый
     читать+V+Impf+TV+PrsPss+Msc+Inan+Sg+Acc: читаемый
     читать+V+Impf+TV+PrsPss+Msc+Anim+Sg+Acc: читаемого
-    читать+V+Impf+TV+PrsPss+Msc+Sg+Gen: читаемого
-    читать+V+Impf+TV+PrsPss+Msc+Sg+Loc: читаемом
-    читать+V+Impf+TV+PrsPss+Msc+Sg+Dat: читаемому
-    читать+V+Impf+TV+PrsPss+Msc+Sg+Ins: читаемым
-    читать+V+Impf+TV+PrsPss+Neu+Sg+Nom: читаемое
-    читать+V+Impf+TV+PrsPss+Neu+Sg+Acc: читаемое
-    читать+V+Impf+TV+PrsPss+Neu+Sg+Gen: читаемого
-    читать+V+Impf+TV+PrsPss+Neu+Sg+Loc: читаемом
-    читать+V+Impf+TV+PrsPss+Neu+Sg+Dat: читаемому
-    читать+V+Impf+TV+PrsPss+Neu+Sg+Ins: читаемым
-    читать+V+Impf+TV+PrsPss+Fem+Sg+Nom: читаемая
-    читать+V+Impf+TV+PrsPss+Fem+Sg+Acc: читаемую
-    читать+V+Impf+TV+PrsPss+Fem+Sg+Gen: читаемой
-    читать+V+Impf+TV+PrsPss+Fem+Sg+Loc: читаемой
-    читать+V+Impf+TV+PrsPss+Fem+Sg+Dat: читаемой
-    читать+V+Impf+TV+PrsPss+Fem+Sg+Ins: читаемой
-    читать+V+Impf+TV+PrsPss+MFN+Pl+Nom: читаемые
+    читать+V+Impf+TV+PrsPss+Msc+AnIn+Sg+Gen: читаемого
+    читать+V+Impf+TV+PrsPss+Msc+AnIn+Sg+Loc: читаемом
+    читать+V+Impf+TV+PrsPss+Msc+AnIn+Sg+Dat: читаемому
+    читать+V+Impf+TV+PrsPss+Msc+AnIn+Sg+Ins: читаемым
+    читать+V+Impf+TV+PrsPss+Neu+AnIn+Sg+Nom: читаемое
+    читать+V+Impf+TV+PrsPss+Neu+AnIn+Sg+Acc: читаемое
+    читать+V+Impf+TV+PrsPss+Neu+AnIn+Sg+Gen: читаемого
+    читать+V+Impf+TV+PrsPss+Neu+AnIn+Sg+Loc: читаемом
+    читать+V+Impf+TV+PrsPss+Neu+AnIn+Sg+Dat: читаемому
+    читать+V+Impf+TV+PrsPss+Neu+AnIn+Sg+Ins: читаемым
+    читать+V+Impf+TV+PrsPss+Fem+AnIn+Sg+Nom: читаемая
+    читать+V+Impf+TV+PrsPss+Fem+AnIn+Sg+Acc: читаемую
+    читать+V+Impf+TV+PrsPss+Fem+AnIn+Sg+Gen: читаемой
+    читать+V+Impf+TV+PrsPss+Fem+AnIn+Sg+Loc: читаемой
+    читать+V+Impf+TV+PrsPss+Fem+AnIn+Sg+Dat: читаемой
+    читать+V+Impf+TV+PrsPss+Fem+AnIn+Sg+Ins: читаемой
+    читать+V+Impf+TV+PrsPss+MFN+AnIn+Pl+Nom: читаемые
     читать+V+Impf+TV+PrsPss+MFN+Inan+Pl+Acc: читаемые
     читать+V+Impf+TV+PrsPss+MFN+Anim+Pl+Acc: читаемых
-    читать+V+Impf+TV+PrsPss+MFN+Pl+Gen: читаемых
-    читать+V+Impf+TV+PrsPss+MFN+Pl+Loc: читаемых
-    читать+V+Impf+TV+PrsPss+MFN+Pl+Dat: читаемым
-    читать+V+Impf+TV+PrsPss+MFN+Pl+Ins: читаемыми
+    читать+V+Impf+TV+PrsPss+MFN+AnIn+Pl+Gen: читаемых
+    читать+V+Impf+TV+PrsPss+MFN+AnIn+Pl+Loc: читаемых
+    читать+V+Impf+TV+PrsPss+MFN+AnIn+Pl+Dat: читаемым
+    читать+V+Impf+TV+PrsPss+MFN+AnIn+Pl+Ins: читаемыми
     читать+V+Impf+TV+PrsPss+Msc+Sg+Pred: читаем
     читать+V+Impf+TV+PrsPss+Neu+Sg+Pred: читаемо
     читать+V+Impf+TV+PrsPss+Fem+Sg+Pred: читаема

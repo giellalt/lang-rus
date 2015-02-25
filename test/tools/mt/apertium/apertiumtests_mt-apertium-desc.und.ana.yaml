@@ -1,7 +1,7 @@
 Config:
   hfst:
-    Gen:   ../../../../tools/mt/apertium/generator-mt-gt-norm.hfst
-    Morph: ../../../../tools/mt/apertium/analyser-mt-gt-desc.hfst
+    Gen:   ../../../../tools/mt/apertium/generator-mt-gt-norm.hfstol
+    Morph: ../../../../tools/mt/apertium/analyser-mt-gt-desc.hfstol
     App: lookup
 
 Tests:
@@ -21,9 +21,9 @@ Tests:
     современный<adj><mfn><an><pl><gen> : современных
 
   Pronouns:
-    оно<prn><pers><p3><nt><sg><gen> : оно 
-    он<prn><pers><p3><m><sg><gen> : он
-    она<prn><pers><p3><f><sg><gen> : она
+    оно<prn><pers><p3><nt><sg><nom> : оно 
+    он<prn><pers><p3><m><sg><nom> : он
+    она<prn><pers><p3><f><sg><nom> : она
 
   Determiners:
     его<det><pos><m><an><sg><nom> : его 

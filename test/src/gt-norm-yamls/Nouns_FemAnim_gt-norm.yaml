@@ -18,10 +18,10 @@ Tests:
       жена+N+Fem+Anim+Sg+Loc: жене
       жена+N+Fem+Anim+Sg+Dat: жене
       жена+N+Fem+Anim+Sg+Ins: женой
-      жена+N+Fem+Anim+Pl+Nom: [жёны, жены]
-      жена+N+Fem+Anim+Pl+Acc: [жён, жен]
-      жена+N+Fem+Anim+Pl+Gen: [жён, жен]
-      жена+N+Fem+Anim+Pl+Loc: [жёнах, женах]
-      жена+N+Fem+Anim+Pl+Dat: [жёнам, женам]
-      жена+N+Fem+Anim+Pl+Ins: [жёнами, женами]
+      жена+N+Fem+Anim+Pl+Nom: жёны
+      жена+N+Fem+Anim+Pl+Acc: жён
+      жена+N+Fem+Anim+Pl+Gen: жён
+      жена+N+Fem+Anim+Pl+Loc: жёнах
+      жена+N+Fem+Anim+Pl+Dat: жёнам
+      жена+N+Fem+Anim+Pl+Ins: жёнами
 

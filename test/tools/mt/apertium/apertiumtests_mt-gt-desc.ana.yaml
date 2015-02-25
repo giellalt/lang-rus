@@ -1,7 +1,7 @@
 Config:
   hfst:
-    Gen:   ../../../../tools/mt/apertium/generator-mt-gt-norm.hfst
-    Morph: ../../../../tools/mt/apertium/analyser-mt-gt-desc.hfst
+    Gen:   ../../../../tools/mt/apertium/generator-mt-gt-norm.hfstol
+    Morph: ../../../../tools/mt/apertium/analyser-mt-gt-desc.hfstol
     App: lookup
 
 Tests:

@@ -69,7 +69,7 @@ Tests:
       конь+N+Msc+Anim+Sg+Gen: коня
       конь+N+Msc+Anim+Sg+Loc: коне
       конь+N+Msc+Anim+Sg+Dat: коню
-      конь+N+Msc+Anim+Sg+Ins: [конём, конем]
+      конь+N+Msc+Anim+Sg+Ins: конём
       конь+N+Msc+Anim+Pl+Nom: кони
       конь+N+Msc+Anim+Pl+Acc: коней
       конь+N+Msc+Anim+Pl+Gen: коней

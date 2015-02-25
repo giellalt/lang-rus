@@ -69,7 +69,7 @@ Tests:
       земля+N+Fem+Inan+Sg+Gen: земли
       земля+N+Fem+Inan+Sg+Loc: земле
       земля+N+Fem+Inan+Sg+Dat: земле
-      земля+N+Fem+Inan+Sg+Ins: [землёй, землей]
+      земля+N+Fem+Inan+Sg+Ins: землёй
       земля+N+Fem+Inan+Pl+Nom: земли
       земля+N+Fem+Inan+Pl+Acc: земли
       земля+N+Fem+Inan+Pl+Gen: земель
@@ -83,12 +83,12 @@ Tests:
       сестра+N+Fem+Anim+Sg+Loc: сестре
       сестра+N+Fem+Anim+Sg+Dat: сестре
       сестра+N+Fem+Anim+Sg+Ins: сестрой
-      сестра+N+Fem+Anim+Pl+Nom: [сёстры, сестры]
-      сестра+N+Fem+Anim+Pl+Acc: [сестёр, сестер]
-      сестра+N+Fem+Anim+Pl+Gen: [сестёр, сестер]
-      сестра+N+Fem+Anim+Pl+Loc: [сёстрах, сестрах]
-      сестра+N+Fem+Anim+Pl+Dat: [сёстрам, сестрам]
-      сестра+N+Fem+Anim+Pl+Ins: [сёстрами, сестрами]
+      сестра+N+Fem+Anim+Pl+Nom: сёстры
+      сестра+N+Fem+Anim+Pl+Acc: сестёр
+      сестра+N+Fem+Anim+Pl+Gen: сестёр
+      сестра+N+Fem+Anim+Pl+Loc: сёстрах
+      сестра+N+Fem+Anim+Pl+Dat: сёстрам
+      сестра+N+Fem+Anim+Pl+Ins: сёстрами
   Noun - отец M anim : # Noun - full paradigm
       отец+N+Msc+Anim+Sg+Nom: отец
       отец+N+Msc+Anim+Sg+Acc: отца

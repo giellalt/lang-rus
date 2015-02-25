@@ -19,10 +19,10 @@ APERTIUM_TARGET_LANG_NAME=apertium-und
 ##################################################################
 
 analyser-mt-gt-desc.hfst: analyser-mt-gt-desc.tmp.hfst \
-				 $(top_builddir)/src/orthography/destress.compose.hfst
+				 $(top_builddir)/src/orthography/destressOptional.compose.hfst
 	$(AM_V_RGX2FST)$(PRINTF) "\
 				@\"$<\" \
-			.o. @\"$(top_builddir)/src/orthography/destress.compose.hfst\" \
+			.o. @\"$(top_builddir)/src/orthography/destressOptional.compose.hfst\" \
 			;" \
 		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --xerox-composition=ON \
 		| $(HFST_INVERT) \

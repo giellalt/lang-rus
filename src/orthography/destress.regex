@@ -1,4 +1,6 @@
-# Remove Russian stress marks - they are not used except for ё
+# This regex is used for generation
+
+# Remove Russian stress marks - except for ё
 
 # Step one: remove all primary and secondary stress marks, but convert secondary-stressed ё's to normal orthographic ё's
 [
@@ -9,6 +11,7 @@
 ы́  ->  ы, 
 я́  ->  я, 
 е́  ->  е, 
+ё́  ->  ё, # Redundant primary stress mark. Could be used to mark where Russians are more likely to write ё instead of е (e.g. узнаёт).
 ю́  ->  ю, 
 и́  ->  и, 
 А́  ->  А, 
@@ -18,6 +21,7 @@
 Ы́  ->  Ы, 
 Я́  ->  Я, 
 Е́  ->  Е, 
+Ё́  ->  Ё,
 Ю́  ->  Ю, 
 И́  ->  И,  
 
@@ -28,6 +32,7 @@
 ы̀  ->  ы, 
 я̀  ->  я, 
 ѐ  ->  е, 
+ё̀  ->  ё,
 ю̀  ->  ю, 
 ѝ  ->  и, 
 А̀  ->  А, 
@@ -37,17 +42,10 @@
 Ы̀  ->  Ы, 
 Я̀  ->  Я, 
 Ѐ  ->  Е, 
+Ё̀  ->  Ё,
 Ю̀  ->  Ю, 
-Ѝ  ->  И, 
+Ѝ  ->  И 
 
-ё̀  ->  ё, # 2ndary stress over ё. As of now, these symbols aren't in the FST, 
-Ё̀  ->  Ё, # but they will be soon (трё̀хсо́тый).
-
-ё́  ->  ё, # Redundant primary stress mark. Could be used to mark where Russians 
-Ё́  ->  Ё  # are more likely to write ё instead of е (e.g. узнаёт). However, this
-          # could also be achieved through postprocessing, e.g. http://python.anabar.ru/yo.htm
-          # Even though they are not currently in the FST, I leave them here as
-          # a reminder.
 ];
 
 # (A short note about when to write the dots over ё in Standard Russian.)

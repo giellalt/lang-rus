@@ -448,10 +448,15 @@ LEXICON мо_0
 +N+Msc: Indecl_Sg_anim ;
 +N+Msc: Indecl_Pl_anim ;
 
-LEXICON соб-мо_0_V ! TODO FIX CHECK need to be sorted. see pg 738, point 2
+LEXICON соб-мо_0_о/е
 +N+Prop+Sem/Ant+Msc: Indecl_Sg_anim ;
 +N+Prop+Sem/Ant+Msc: Indecl_Pl_anim ;
 :%> Patronymic_stem_Fac ;
+
+LEXICON соб-мо_0_V
++N+Prop+Sem/Ant+Msc: Indecl_Sg_anim ;
++N+Prop+Sem/Ant+Msc: Indecl_Pl_anim ;
+е:е Patronymic_stem_Fac ;
 
 LEXICON соб-мо_0_C
 +N+Prop+Sem/Ant+Msc: Indecl_Sg_anim ;
@@ -465,17 +470,32 @@ LEXICON мо_a
 LEXICON соб-мо_a
 +N+Prop+Sem/Ant+Msc: MSgStem_anim ;
 +N+Prop+Sem/Ant+Msc: ыPlStem_anim ;
-о:%>о Patronymic_stem ;
+о:о Patronymic_stem ;
+Patronymic_ыч ;
+
+LEXICON соб-мо_a_VEL
++N+Prop+Sem/Ant+Msc: MSgStem_anim ;
++N+Prop+Sem/Ant+Msc: ыPlStem_anim ;
+о:о Patronymic_stem ;
+Patronymic_ич ;
+
+LEXICON соб-мо_a_HUSH
++N+Prop+Sem/Ant+Msc: MSgStem_anim ;
++N+Prop+Sem/Ant+Msc: ыPlStem_anim ;
+е:е Patronymic_stem ;
+Patronymic_ич ;
 
 LEXICON соб-мо_a_й
 й+N+Prop+Sem/Ant+Msc:й MSgStem_anim ;
 й+N+Prop+Sem/Ant+Msc:й ыPlStem_anim ;
 е:е Patronymic_stem ;
+Patronymic_ич ;
 
 LEXICON соб-мо_a_ь
 ь+N+Prop+Sem/Ant+Msc:ь MSgStem_anim ;
 ь+N+Prop+Sem/Ant+Msc:ь ыPlStem_anim ;
 е:е Patronymic_stem ;
+Patronymic_ич ;
 
 LEXICON соб-мо_a_26
 ий+N+Prop+Sem/Ant+Msc:ий MSgStem_anim ;
@@ -2396,6 +2416,14 @@ LEXICON Patronymic_stem_Fac
 вич+N+Prop+Sem/Pat+Msc:вич ыPlStem_anim_Fac ;
 вна+N+Prop+Sem/Pat+Fem:вна FSgStem_anim_Fac ;
 вна+N+Prop+Sem/Pat+Fem:вна ыPlStem_anim_Fac ;
+
+LEXICON Patronymic_ыч
+ыч+N+Prop+Sem/Pat+Msc:ыч MSgStem_anim ;
+ыч+N+Prop+Sem/Pat+Msc:ыч ыPlStem_anim ;
+
+LEXICON Patronymic_ич
+ич+N+Prop+Sem/Pat+Msc:ич MSgStem_anim ;
+ич+N+Prop+Sem/Pat+Msc:ич ыPlStem_anim ;
 
 LEXICON FSg_SubstAdj_Stem
 +Inan: FSg_SubstAdj_Stem_All ;

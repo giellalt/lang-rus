@@ -1,51 +1,11 @@
 # Russian
 
-h (->) h # dummy not to break the thing
-
-# this "relaxing" is taken care of my destressOptional.regex
-# а́ (->) а, # Russian stressed vowel, accept unstressed
-# э́ (->) э, # Russian stressed vowel, accept unstressed
-# о́ (->) о, # Russian stressed vowel, accept unstressed
-# у́ (->) у, # Russian stressed vowel, accept unstressed
-# ы́ (->) ы, # Russian stressed vowel, accept unstressed
-# я́ (->) я, # Russian stressed vowel, accept unstressed
-# е́ (->) е, # Russian stressed vowel, accept unstressed
-# ё (->) е, # Russian stressed vowel, accept unstressed
-# ё́ (->) е, # --"--
-# ю́ (->) ю, # Russian stressed vowel, accept unstressed
-# и́ (->) и, # Russian stressed vowel, accept unstressed
-# А́ (->) А, # Russian stressed vowel, accept unstressed
-# Э́ (->) Э, # Russian stressed vowel, accept unstressed
-# О́ (->) О, # Russian stressed vowel, accept unstressed
-# У́ (->) У, # Russian stressed vowel, accept unstressed
-# Ы́ (->) Ы, # Russian stressed vowel, accept unstressed
-# Я́ (->) Я, # Russian stressed vowel, accept unstressed
-# Е́ (->) Е, # Russian stressed vowel, accept unstressed
-# Ё (->) Е, # Russian stressed vowel, accept unstressed
-# Ё́ (->) Е, # --"--
-# Ю́ (->) Ю, # Russian stressed vowel, accept unstressed
-# И́ (->) И, # Russian stressed vowel, accept unstressed
-# 
-# а̀ (->) а, # Russian secondary stress, accept forms without it
-# э̀ (->) э, # Russian secondary stress, accept forms without it
-# о̀ (->) о, # Russian secondary stress, accept forms without it
-# у̀ (->) у, # Russian secondary stress, accept forms without it
-# ы̀ (->) ы, # Russian secondary stress, accept forms without it
-# я̀ (->) я, # Russian secondary stress, accept forms without it
-# ѐ (->) е, # Russian secondary stress, accept forms without it
-# ё̀ (->) е, # --"--
-# ю̀ (->) ю, # Russian secondary stress, accept forms without it
-# ѝ (->) и, # Russian secondary stress, accept forms without it
-# А̀ (->) А, # Russian secondary stress, accept forms without it
-# Э̀ (->) Э, # Russian secondary stress, accept forms without it
-# О̀ (->) О, # Russian secondary stress, accept forms without it
-# У̀ (->) У, # Russian secondary stress, accept forms without it
-# Ы̀ (->) Ы, # Russian secondary stress, accept forms without it
-# Я̀ (->) Я, # Russian secondary stress, accept forms without it
-# Ѐ (->) Е, # Russian secondary stress, accept forms without it
-# Ё̀ (->) Е, # --"--
-# Ю̀ (->) Ю, # Russian secondary stress, accept forms without it
-# Ѝ (->) И  # Russian secondary stress, accept forms without it
+X (->) Х, # roman numerals written in cyrillic
+C (->) С, # --"--
+M (->) М, # --"--
+x (->) х, # --"--
+c (->) с, # --"--
+m (->) м  # --"--
 ;
 
 # Explanation:

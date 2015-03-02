@@ -106,10 +106,14 @@ Multichar_Symbols
 +Dist   !!= * @CODE@ = distorted (чтоб, иль, коль)
 
 !! !!Punctuation
-+CLB    !!= * @CODE@ = Clause boundary
-+PUNCT  !!= * @CODE@ = Punctuation
-+QUOT   !!= * @CODE@ = Quotation
-+PAR    !!= * @CODE@ = Parenthesis/bracket
++SENT   !!= * @CODE@ = Clause boundary
++COMMA  !!= * @CODE@ = Comma
++DASH   !!= * @CODE@ = Dash
++LQUOT   !!= * @CODE@ = Left quotation
++RQUOT   !!= * @CODE@ = Right quotation
++QUOT   !!= * @CODE@ = 'Ambidextrous' quotation
++LPAR    !!= * @CODE@ = Left parenthesis/bracket
++RPAR    !!= * @CODE@ = Right parenthesis/bracket
 
 !! !!Other tags
 +Prb     !!= * @CODE@ = +Prb(lematic): затруднительно - предположительно - нет

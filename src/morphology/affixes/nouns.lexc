@@ -456,12 +456,12 @@ LEXICON соб-мо_0_о/е
 LEXICON соб-мо_0_V
 +N+Prop+Sem/Ant+Msc: Indecl_Sg_anim ;
 +N+Prop+Sem/Ant+Msc: Indecl_Pl_anim ;
-:е Patronymic_stem_Fac ;
+е:е Patronymic_stem_Fac ;
 
 LEXICON соб-мо_0_C
 +N+Prop+Sem/Ant+Msc: Indecl_Sg_anim ;
 +N+Prop+Sem/Ant+Msc: Indecl_Pl_anim ;
-:%>о Patronymic_stem_Fac ;
+о:%>о Patronymic_stem_Fac ;
 
 LEXICON мо_a
 +N+Msc: MSgStem_anim ;
@@ -470,45 +470,45 @@ LEXICON мо_a
 LEXICON соб-мо_a
 +N+Prop+Sem/Ant+Msc: MSgStem_anim ;
 +N+Prop+Sem/Ant+Msc: ыPlStem_anim ;
-:о Patronymic_stem ;
-Patronymic_ыч ;
+о:о Patronymic_stem ;
+о: Patronymic_ыч ;
 
 LEXICON соб-мо_a_VEL
 +N+Prop+Sem/Ant+Msc: MSgStem_anim ;
 +N+Prop+Sem/Ant+Msc: ыPlStem_anim ;
-:о Patronymic_stem ;
-Patronymic_ич ;
+о:о Patronymic_stem ;
+о: Patronymic_ич ;
 
 LEXICON соб-мо_a_HUSH
 +N+Prop+Sem/Ant+Msc: MSgStem_anim ;
 +N+Prop+Sem/Ant+Msc: ыPlStem_anim ;
-:е Patronymic_stem ;
-Patronymic_ич ;
+е:е Patronymic_stem ;
+е: Patronymic_ич ;
 
 LEXICON соб-мо_a_й
 й+N+Prop+Sem/Ant+Msc:й MSgStem_anim ;
 й+N+Prop+Sem/Ant+Msc:й ыPlStem_anim ;
-й:е Patronymic_stem ;
-й: Patronymic_ич ;
+е:е Patronymic_stem ;
+е: Patronymic_ич ;
 
 LEXICON соб-мо_a_й_shortFPat
 й+N+Prop+Sem/Ant+Msc:й MSgStem_anim ;
 й+N+Prop+Sem/Ant+Msc:й ыPlStem_anim ;
-й:е Patronymic_stem ;
-й: Patronymic_ич ;
-й: Patronymic_вна ;
+е:е Patronymic_stem ;
+е: Patronymic_ич ;
+е: Patronymic_вна ;
 
 LEXICON соб-мо_a_ь
 ь+N+Prop+Sem/Ant+Msc:ь MSgStem_anim ;
 ь+N+Prop+Sem/Ant+Msc:ь ыPlStem_anim ;
-ь:е Patronymic_stem ;
-ь: Patronymic_ич ;
+е:е Patronymic_stem ;
+е: Patronymic_ич ;
 
 LEXICON соб-мо_a_26
 ий+N+Prop+Sem/Ant+Msc:ий MSgStem_anim ;
 ий+N+Prop+Sem/Ant+Msc:ий ыPlStem_anim ;
-ий:ье Patronymic_stem ;
-ий:ь Patronymic_ич ;
+ье:ье Patronymic_stem ;
+ье:ь Patronymic_ич ;
 
 LEXICON мо_a_Plья_ьев
 +N+Msc: MSgStem_anim ;
@@ -628,7 +628,7 @@ LEXICON соб-мо_b_христос
 LEXICON соб-мо_b
 +N+Prop+Sem/Ant+Msc: MSgEnd_anim ;
 +N+Prop+Sem/Ant+Msc: ыPlEnd_anim ;
-:%>о́ Patronymic_stem ;
+о:%>о́ Patronymic_stem ; !TODO FIX Get rid of stem boundary. This will require more than one LEXICON
 
 LEXICON мо_c
 +N+Msc: MSgStem_anim ;
@@ -784,11 +784,11 @@ LEXICON соб-мо_[жо_a] !TODO FIX CHECK Some of these can hypothetically ha
 LEXICON соб-мо_[жо_a]_28
 а+N+Prop+Sem/Ant+Msc:а FSgStem_anim ;
 а+N+Prop+Sem/Ant+Msc:а ыPlStem_anim ;
-а+N+Prop+Sem/Pat+Msc:ич MSgStem_anim ;
-а+N+Prop+Sem/Pat+Msc:ич ыPlStem_anim ;
-а+N+Prop+Sem/Pat+Fem:ична FSgStem_anim ;
-а+N+Prop+Sem/Pat+Fem:ична ыPlStem_anim ;
-а:%>о Patronymic_stem_Fac ;
+ич+N+Prop+Sem/Pat+Msc:ич MSgStem_anim ;
+ич+N+Prop+Sem/Pat+Msc:ич ыPlStem_anim ;
+ична+N+Prop+Sem/Pat+Fem:ична FSgStem_anim ;
+ична+N+Prop+Sem/Pat+Fem:ична ыPlStem_anim ;
+о:%>о Patronymic_stem_Fac ;  !TODO FIX Get rid of stem boundary. This will require more than one LEXICON
 
 LEXICON соб-мо_[жо_a?]
 +N+Prop+Sem/Ant+Msc: FSgStem_anim ;
@@ -2050,7 +2050,7 @@ LEXICON соб-жо_a
 +N+Prop+Sem/Ant+Fem: Vocative ;
 
 LEXICON соб-мн._[жо_a]
-+N+Prop+Fem: ыPlStem_anim ;
++N+Prop+Sem/Alt+Fem: ыPlStem_anim ;
 
 LEXICON соб-жо_a_MscFac
 +N+Prop+Sem/Ant+Fem: FSgStem_anim ;
@@ -2428,28 +2428,28 @@ LEXICON Surname_0
 +MFN+Anim+Pl+Ins: # ;
 
 LEXICON Patronymic_stem
-+N+Prop+Sem/Pat+Msc:вич MSgStem_anim ;
-+N+Prop+Sem/Pat+Msc:вич ыPlStem_anim ;
-+N+Prop+Sem/Pat+Fem:вна FSgStem_anim ;
-+N+Prop+Sem/Pat+Fem:вна ыPlStem_anim ;
+вич+N+Prop+Sem/Pat+Msc:вич MSgStem_anim ;
+вич+N+Prop+Sem/Pat+Msc:вич ыPlStem_anim ;
+вна+N+Prop+Sem/Pat+Fem:вна FSgStem_anim ;
+вна+N+Prop+Sem/Pat+Fem:вна ыPlStem_anim ;
 
 LEXICON Patronymic_stem_Fac
-+N+Prop+Sem/Pat+Msc:вич MSgStem_anim_Fac ;
-+N+Prop+Sem/Pat+Msc:вич ыPlStem_anim_Fac ;
-+N+Prop+Sem/Pat+Fem:вна FSgStem_anim_Fac ;
-+N+Prop+Sem/Pat+Fem:вна ыPlStem_anim_Fac ;
+вич+N+Prop+Sem/Pat+Msc:вич MSgStem_anim_Fac ;
+вич+N+Prop+Sem/Pat+Msc:вич ыPlStem_anim_Fac ;
+вна+N+Prop+Sem/Pat+Fem:вна FSgStem_anim_Fac ;
+вна+N+Prop+Sem/Pat+Fem:вна ыPlStem_anim_Fac ;
 
 LEXICON Patronymic_ыч
-+N+Prop+Sem/Pat+Msc:ыч MSgStem_anim_Met ;
-+N+Prop+Sem/Pat+Msc:ыч ыPlStem_anim_Met ;
+вич+N+Prop+Sem/Pat+Msc:ыч MSgStem_anim_Met ;
+вич+N+Prop+Sem/Pat+Msc:ыч ыPlStem_anim_Met ;
 
 LEXICON Patronymic_ич
-+N+Prop+Sem/Pat+Msc:ич MSgStem_anim_Met ;
-+N+Prop+Sem/Pat+Msc:ич ыPlStem_anim_Met ;
+вич+N+Prop+Sem/Pat+Msc:ич MSgStem_anim_Met ;
+вич+N+Prop+Sem/Pat+Msc:ич ыPlStem_anim_Met ;
 
 LEXICON Patronymic_вна
-+N+Prop+Sem/Pat+Fem:вна FSgStem_anim_Met ;
-+N+Prop+Sem/Pat+Fem:вна ыPlStem_anim_Met ;
+вна+N+Prop+Sem/Pat+Fem:вна FSgStem_anim_Met ;
+вна+N+Prop+Sem/Pat+Fem:вна ыPlStem_anim_Met ;
 
 LEXICON FSg_SubstAdj_Stem
 +Inan: FSg_SubstAdj_Stem_All ;

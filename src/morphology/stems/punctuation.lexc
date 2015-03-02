@@ -1,53 +1,27 @@
 LEXICON Punctuation 
 
-%,+CLB:%, # ;
-%.+CLB:%. # ;
-%:+CLB:%: # ;
-%;+CLB:%; # ;
-%!+CLB:%! # ;
-%?+CLB:%? # ;
-%.%.%.+CLB:%.%.%. # ;
-%…+CLB:%… # ;
-%-+PUNCT:%- # ;
-%-%-+PUNCT:%-%- # ;   ! double-hyphen
-%–+PUNCT:%– # ;       ! en dash
-%—+PUNCT:%— # ;       ! em dash
+%,+COMMA:%, # ;
+%.+SENT:%. # ;
+%:+SENT:%: # ;
+%;+SENT:%; # ;
+%!+SENT:%! # ;
+%?+SENT:%? # ;
+%.%.%.+SENT:%.%.%. # ;
+%…+SENT:%… # ;
+%-+DASH:%- # ;
+%-%-+DASH:%-%- # ;   ! double-hyphen
+%–+DASH:%– # ;       ! en dash
+%—+DASH:%— # ;       ! em dash
 %"+QUOT:%" # ;
-%“+QUOT:%“ # ;
-%”+QUOT:%” # ;
-!«+QUOT:«7 # ;         ! «
-!»+QUOT:»7 # ;         ! »
-%«+QUOT:%« # ;         ! «
-%»+QUOT:%» # ;         ! »
-%[+PAR:%[ # ;
-%]+PAR:%] # ;
-%(+PAR:%( # ;
-%)+PAR:%) # ;
-%[%<%]+PAR:%[%<%] # ; ! <
-%[%>%]+PAR:%[%>%] # ; ! >
-
-
-
-! copied from apertium Kazakh for comparison
-! %.%<sent%>:%. # ;
-! %.%.%<sent%>:%.%. # ;
-! %.%.%.%<sent%>:%.%.%. # ;
-! %;%<sent%>:%; # ;
-! %:%<sent%>:%: # ;
-! %!%<sent%>:%! # ;
-! %-%<guio%>:%- # ;
-! %—%<guio%>:%— # ;
-! ,%<cm%>:, # ;
-! %?%<sent%>:%? # ;
-! %'%<apos%>:%' # ;
-! %"%<sent%>:%" # ;
-! %«%<lquot%>:%« # ;
-! %»%<rquot%>:%» # ;
-! %”%<rquot%>:%” # ;
-! %“%<lquot%>:%“ # ;
-! %(%<lpar%>:%( # ;
-! %]%<rpar%>:%] # ;
-! %[%<lpar%>:%[ # ;
-! %)%<rpar%>:%) # ;
-! %\%<sent%>:%\ # ;
-! %/%<sent%>:%/ # ;
+%“+LQUOT:%“ # ;
+%”+RQUOT:%” # ;
+!«+LQUOT:«7 # ;         ! «
+!»+RQUOT:»7 # ;         ! »
+%«+LQUOT:%« # ;         ! «
+%»+RQUOT:%» # ;         ! »
+%[+LPAR:%[ # ;
+%]+RPAR:%] # ;
+%(+LPAR:%( # ;
+%)+RPAR:%) # ;
+%[%<%]+LPAR:%[%<%] # ; ! <
+%[%>%]+RPAR:%[%>%] # ; ! >

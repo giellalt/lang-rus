@@ -490,6 +490,12 @@ LEXICON соб-мо_a_й
 й+N+Prop+Sem/Ant+Msc:й ыPlStem_anim ;
 й:е Patronymic_stem ;
 й: Patronymic_ич ;
+
+LEXICON соб-мо_a_й_shortFPat
+й+N+Prop+Sem/Ant+Msc:й MSgStem_anim ;
+й+N+Prop+Sem/Ant+Msc:й ыPlStem_anim ;
+й:е Patronymic_stem ;
+й: Patronymic_ич ;
 й: Patronymic_вна ;
 
 LEXICON соб-мо_a_ь
@@ -502,6 +508,7 @@ LEXICON соб-мо_a_26
 ий+N+Prop+Sem/Ant+Msc:ий MSgStem_anim ;
 ий+N+Prop+Sem/Ant+Msc:ий ыPlStem_anim ;
 ий:ье Patronymic_stem ;
+ий:ь Patronymic_ич ;
 
 LEXICON мо_a_Plья_ьев
 +N+Msc: MSgStem_anim ;

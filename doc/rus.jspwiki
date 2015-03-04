@@ -106,10 +106,14 @@ This is free and open source South Sámi morphology.
  * +Dist    = distorted (чтоб, иль, коль)
 
 !!Punctuation
- * +CLB     = Clause boundary
- * +PUNCT   = Punctuation
- * +QUOT    = Quotation
- * +PAR     = Parenthesis/bracket
+ * +SENT    = Clause boundary
+ * +COMMA   = Comma
+ * +DASH    = Dash
+ * +LQUOT    = Left quotation
+ * +RQUOT    = Right quotation
+ * +QUOT    = 'Ambidextrous' quotation
+ * +LPAR     = Left parenthesis/bracket
+ * +RPAR     = Right parenthesis/bracket
 
 !!Other tags
  * +Prb      = +Prb(lematic): затруднительно - предположительно - нет
@@ -117,7 +121,7 @@ This is free and open source South Sámi morphology.
  * +Use/NG   = Do not generate (used for apertium, etc.)
  * +Use/Obs  = Obsolete
  * +Use/Ant  = Antiquated "устаревшее"
- * +Use/Met  = Metrical новее~новей, доброй~доброю (marks less-canonical wordform that has more/fewer syllables)
+ * +Use/Met  = Metrical новее~новей, доброй~доброю, Иванович~Иваныч (marks less-canonical wordform that has more/fewer syllables)
  * +Err/Sub  = Substandard
 
 

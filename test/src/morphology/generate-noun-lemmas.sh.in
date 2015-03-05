@@ -78,8 +78,8 @@ for f in $fsttype; do
 		let "transducer_found += 1"
 
 ###### Test non-compounds: #######
-		cat $lemmas | python3.2 lemmaStager.py noun | $lookuptool \
-			$generatorfile.$suffix | python3.2 lemmaChecker.py \
+		cat $lemmas | $pythonbin lemmaStager.py noun | $lookuptool \
+			$generatorfile.$suffix | $pythonbin lemmaChecker.py \
 			> $resultfile.$f.txt
 
 		# Open the diff file in SubEthaEdit (if there is a diff):

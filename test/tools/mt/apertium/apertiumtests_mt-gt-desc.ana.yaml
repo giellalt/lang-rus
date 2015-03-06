@@ -13,11 +13,11 @@ Tests:
     видеть+V+Impf+IV+Prs+Sg1 : вижу
 
   Participles:
-    натянуть+V+Perf+TV+PstPss+MFN+Pl+Ins : натянутыми
-    быть+V+Impf+IV+PstAct+MFN+Pl+Ins : бывшими
+    натянуть+V+Perf+TV+PstPss+MFN+AnIn+Pl+Ins : натянутыми
+    быть+V+Impf+IV+PstAct+MFN+AnIn+Pl+Ins : бывшими
 
   Adjectives:
-    современный+A+MFN+Pl+Gen : современных
+    современный+A+MFN+AnIn+Pl+Gen : современных
 
   Pronouns:
     оно+Pron+Pers+Sg3+Neu+Nom : оно 
@@ -25,4 +25,4 @@ Tests:
     она+Pron+Pers+Sg3+Fem+Nom : она
 
   Determiners:
-    его+Det+Msc+Sg+Nom : его 
+    его+Det+Pos+Msc+AnIn+Sg+Nom : его 

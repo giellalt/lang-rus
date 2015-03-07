@@ -351,19 +351,20 @@ Ex:й <=> :V %<:0 _ (т е) (с [ :я | :ь ]) .#. ;
 where Ex in ( %^Iu %^Is ) ;
 
 "Iu>и in Imperatives with double-consonant stems, and щ stems"
-%^Iu:и <=> :C (:ь) :C (%^M:0) %<:0 _ (т е) (с [ :я | :ь ]) .#. ;
+%^Iu:и <=> :C (:ь) [ :C - :й ] (%^M:0) %<:0 _ (т е) (с [ :я | :ь ]) .#. ;
            :щ (%^M:0) %<:0 _ (т е) (с [ :я | :ь ]) .#. ; !Is this true? Examples?
 !           .#. ( :п :о ) :в :ы́ [ :Letter | %^F:0 ]*-:V :C (%^M:0) %<:0 _ (т е) (с [ :я | :ь ]) .#. ; ! BROKEN handled in lexc
                 ! по́мн<I   обры́скM<I  мо́рщ<I
                 ! по́мн0и   обры́0щ00и  мо́рщ0и
 
 "Iu>ь in Imperatives with consonant stem (exceptions in previous rule)"
-%^Iu:ь <=> :V [ :C - [ :щ | :г ] ] (%^M:0) %<:0 _ (т е) (с [ :я | :ь ]) .#. ;
+%^Iu:ь <=> :V [ :C - [ :щ | :г | :й ] ] (%^M:0) %<:0 _ (т е) (с [ :я | :ь ]) .#. ;
                 ! отве́т<I
                 ! отве́т0ь
 
 "Iu>0 in Imperatives with velar stem, e.g. лечь"
 %^Iu:0 <=> :я́ :г (%^M:0) %<:0 _ (т е) (с [ я | ь ]) .#. ;
+           й %<:0 _ (т е) (с [ :я | :ь ]) .#. ;
 
 "я>ь (i.e. ся>сь) in reflexive imperatives"
 я:ь <=> %<:0 [ :и | :и́ ] с: _ .#. ;

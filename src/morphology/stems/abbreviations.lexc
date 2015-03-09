@@ -2,12 +2,12 @@ LEXICON abbr
 +Abbr: # ;
 
 LEXICON abbr.
-.+Abbr+Use/NG: # ;
+!.+Abbr+Use/NG: # ;
 abbr.sent ;
 
 LEXICON abbr.sent
 .+Abbr:. # ;
-.+Abbr#.+CLB:. # ;
+.+Abbr#.+SENT:. # ;
 
 LEXICON Abbreviation
 PS:PS abbr ;

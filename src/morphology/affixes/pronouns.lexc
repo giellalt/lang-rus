@@ -508,7 +508,7 @@ LEXICON мс_эти ! TODO CHECK FIX can this be inanimate too?
 
 LEXICON мс_тот
 +Pron+Dem+Msc+Anim+Sg+Nom:о́т # ;
-+Pron+Dem+Msc+Anim+Sg+Acc:о́т # ;
++Pron+Dem+Msc+Anim+Sg+Acc:ого́ # ;
 +Pron+Dem+Msc+Anim+Sg+Gen:ого́ # ;
 +Pron+Dem+Msc+Anim+Sg+Loc:о́м # ;
 +Pron+Dem+Msc+Anim+Sg+Dat:ому́ # ;
@@ -1061,7 +1061,7 @@ LEXICON мс_кто-то
 LEXICON мс_некто
 +Pron+Def+Msc+Anim+Sg+Nom: # ; ! TODO FIX what about Fem, Pl?
 
-LEXICON мс_некого
+LEXICON мс_некого ! TODO FIX tag order (especially Pred)
 +Pron+Pred+Msc+Anim+Sg: мс_некого_Acc ;
 +Pron+Pred+Msc+Anim+Sg: мс_некого_Gen ;
 +Pron+Pred+Msc+Anim+Sg: мс_некого_Loc ;
@@ -1146,7 +1146,7 @@ LEXICON мс_нечто
 +Pron+Def+Neu+Inan+Sg+Nom: # ;
 +Pron+Def+Neu+Inan+Sg+Acc: # ;
 
-LEXICON мс_нечего
+LEXICON мс_нечего ! TODO FIX tag order (especially Pred)
 +Pron+Pred+Neu+Inan+Sg: мс_нечего_Gen ;
 +Pron+Pred+Neu+Inan+Sg: мс_нечего_Loc ;
 +Pron+Pred+Neu+Inan+Sg: мс_нечего_Dat ;

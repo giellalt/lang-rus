@@ -1757,10 +1757,10 @@ LEXICON ж_8a-_П2
 FemLoc2_inan ;
 
 LEXICON FemLoc2_inan
-+N+Fem+Inan+Sg+Loc2:и́ # ;
++N+Fem+Inan+Sg+Loc2:%>и́ # ;
 
 LEXICON FemLoc2_inan_Fac
-+N+Fem+Inan+Sg+Loc2+Fac:и́ # ;
++N+Fem+Inan+Sg+Loc2+Fac:%>и́ # ;
 
 LEXICON ж_b ! This also includes ж_b' because of the fleeting vowel rule in twolc
 +N+Fem: FSgEnd ;

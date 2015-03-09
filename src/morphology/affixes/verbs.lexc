@@ -3220,12 +3220,12 @@ LEXICON св_10c_ро́ть_R
 LEXICON св_11a
 св_нп_11a ;
 +V+Perf+TV:и Perf_Inf_V_stem ;
-+V+Perf+TV:%^Fе́й Perf_Fut_1_stem ;
++V+Perf+TV:%^Fей Perf_Fut_1_stem ;
 +V+Perf+TV:и PastPass_stem ;
 
 LEXICON св_нп_11a
 +V+Perf+IV:и Perf_Inf_V_stem ;
-+V+Perf+IV:%^Fе́й Perf_Fut_1_stem ;
++V+Perf+IV:%^Fей Perf_Fut_1_stem ;
 
 LEXICON нсв_11b
 +V+Impf+TV:и́ Impf_Inf_V_stem_w/Pass ;

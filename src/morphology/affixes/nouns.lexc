@@ -291,10 +291,6 @@ LEXICON м_c1_П2_перёд
 +N+Msc:ёд аPlEnd ;
 +N: MscLoc2_inan ;
 
-LEXICON м_c1_П2_год ! TODO FIX года́/го́ды have same tag!
-:го́д м_c1_П2 ;
-+N+Msc+Inan+Pl+Gen+Count:ле́т # ;
-
 LEXICON м_c1_[П2]
 м_c1 ;
 +N: MscLoc2_inan_Fac ;
@@ -369,8 +365,9 @@ LEXICON м_e_П2
 м_e ;
 +N: MscLoc2_inan ;
 
-LEXICON м_e_П2_год ! TODO FIX года́/го́ды have same tag!
+LEXICON м_e_П2_год
 :го́д м_e_П2 ;
++N+Msc+Inan+Pl+Nom+Fac:года́ # ;
 +N+Msc+Inan+Pl+Gen+Count:ле́т # ;
 
 LEXICON м_e2_волос

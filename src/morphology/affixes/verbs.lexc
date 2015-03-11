@@ -2699,6 +2699,15 @@ LEXICON св_нп_7b/b_(-д-)9_ё_(но_прич._прош._е/дший)
 +V+Perf+IV:ед Imper_stressed ; 
 +V+Perf+IV:е́д PastAct ;
 
+LEXICON св_7b/b_(-д-)9_ё_R_(но_прич._прош._е/дшийся)_прош._м_вёл ! завестись, etc.
++V+Perf+IV+Inf:ести́сь # ;
++V+Perf+IV:ёд Past_end_R ;
++V+Perf+IV:ёд PastVrbAdv_9_end_R ;
++V+Perf+IV+Fut:ед PresFut_1_end_R ;
++V+Perf+IV+Imp+Pl1:едёмся # ;
++V+Perf+IV:ед Imper_stressed_R ; 
++V+Perf+IV:е́д PastAct_R ;
+
 LEXICON св_7b/b_(-д-)_R_безл.
 +V+Perf+IV+Inf:ести́сь # ;
 +V+Perf+IV:ёд Past_end_R_безл. ;
@@ -3770,9 +3779,13 @@ LEXICON нсв_нп_a/c_быть
 +V+Impf+IV+Prs:е́сть PresFut_0 ; 
 +V+Impf+IV+Prs+Pl3+Use/Ant:су́ть # ;
 
-LEXICON св_a_-быть
+LEXICON св_a_-быть ! TODO CHECK FIX transitive???
 +V+Perf+TV:бы́ Perf_Inf_V_stem ;
 +V+Perf+TV:бу́д Perf_Fut_1_stem ;
+
+LEXICON св_a_R_-быться
++V+Perf+IV:бы́ Perf_Inf_stem_R ;
++V+Perf+IV:бу́д Perf_Fut_1_stem_R ;
 
 LEXICON св_a/c_-быть
 +V+Perf+TV:бы́ Perf_Inf_V_shift ;
@@ -3873,10 +3886,23 @@ LEXICON св_нп_a9_выйти
 
 LEXICON св_b_R_-шибиться
 +V+Perf+IV+Inf:и́ться # ;
-+V+Perf+IV: Past_end_R ;
++V+Perf+IV: Past_stem_R ;
 +V+Perf+IV: Perf_PastVrbAdv_R ;
 +V+Perf+IV: PastAct_R ;
 +V+Perf+IV: Perf_Fut_1_end_R ;
+
+LEXICON св_b_-шибить
++V+Perf+IV+Inf:и́ть # ;
++V+Perf+IV: Past_stem ;
++V+Perf+IV: Perf_PastVrbAdv_C ;
++V+Perf+IV: PastAct ;
++V+Perf+IV: Perf_Fut_1_end ;
++V+Perf+TV+Inf:и́ть # ;
++V+Perf+TV: Past_stem ;
++V+Perf+TV: Perf_PastVrbAdv_C ;
++V+Perf+TV: PastAct ;
++V+Perf+TV: Perf_Fut_1_end ;
++V+Perf+TV:%^Mё PastPass_нн_end ;
 
 LEXICON св_нп_b/b9_буд._йду/,_-ёт_прош._шёл,_шла/,_ше/дший
 +V+Perf+IV+Inf:йти́ # ;

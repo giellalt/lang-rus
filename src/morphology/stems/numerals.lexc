@@ -1,7 +1,3 @@
-
-!LEXICON DIGITLEX
-!+Num: # ; 
-
 LEXICON числ.-п_[п_a]
 +Num+Ord: LF_stem ; 
 
@@ -430,7 +426,7 @@ LEXICON NUM
 мм:мм SQRD ;
 см:см SQRD ;
 м:м SQRD ;
--летие:-ле́тие с_a ;
+-летие:-ле́тие с_a ; !TODO FIX 3,4-летие???
 
 LEXICON LASTDIGIT
 %0:%0 NUM ;

@@ -38,42 +38,41 @@ Multichar_Symbols
 %^Is !!= * @CODE@ = Imperative ending (stressed)
 
 !! !!POS
-+N      !!= * @CODE@ = Noun
-+V      !!= * @CODE@ = Verb
 +A      !!= * @CODE@ = Adjective
 +Abbr   !!= * @CODE@ = Abbreviation
-+Pron   !!= * @CODE@ = Pronoun
-+Det    !!= * @CODE@ = Determiner
-+Num    !!= * @CODE@ = Numeral
 +Adv    !!= * @CODE@ = Adverb
-+Pr     !!= * @CODE@ = Preposition
-+Po     !!= * @CODE@ = Postposition (ради is the only postposition)
 +CC     !!= * @CODE@ = Coordinating conjunction
 +CS     !!= * @CODE@ = Subordinating conjunction
++Det    !!= * @CODE@ = Determiner
 +Interj !!= * @CODE@ = Interjection
-+Pcle   !!= * @CODE@ = Particle
++N      !!= * @CODE@ = Noun
++Num    !!= * @CODE@ = Numeral
 +Paren  !!= * @CODE@ = Parenthetical вводное слово
++Pcle   !!= * @CODE@ = Particle
++Po     !!= * @CODE@ = Postposition (ради is the only postposition)
++Pr     !!= * @CODE@ = Preposition
++Pron   !!= * @CODE@ = Pronoun
++V      !!= * @CODE@ = Verb
 
 !! !!Sub-POS
-+Prop   !!= * @CODE@ = Proper
-+Pers   !!= * @CODE@ = Personal
-+Dem    !!= * @CODE@ = Demonstrative
-+Def    !!= * @CODE@ = Definite
-+Interr !!= * @CODE@ = Interrogative: кто, что, какой, ли, etc.
-+Refl   !!= * @CODE@ = Pronoun себя, possessive свой
-+Indef  !!= * @CODE@ = Indefinite: кто-то, кто-нибудь, кто-либо, кое-кто, etc.
-+Neg    !!= * @CODE@ = Negative: никто, некого, etc.
 +All    !!= * @CODE@ = All: весь
-+Recip  !!= * @CODE@ = Reciprocal: друг друга
 +Coll   !!= * @CODE@ = Collective numerals
-+MWE    !!= * @CODE@ = Multi-word expressions
-+Rel    !!= * @CODE@ = Relativizer, e.g. который, где, как, куда, сколько, etc.
++Def    !!= * @CODE@ = Definite
++Dem    !!= * @CODE@ = Demonstrative
++Indef  !!= * @CODE@ = Indefinite: кто-то, кто-нибудь, кто-либо, кое-кто, etc.
++Interr !!= * @CODE@ = Interrogative: кто, что, какой, ли, etc.
++Neg    !!= * @CODE@ = Negative: никто, некого, etc.
++Pers   !!= * @CODE@ = Personal
 +Pos    !!= * @CODE@ = Possessive, e.g. его, наш
 +Prcnt  !!= * @CODE@ = Percent
++Prop   !!= * @CODE@ = Proper
++Recip  !!= * @CODE@ = Reciprocal: друг друга
++Refl   !!= * @CODE@ = Pronoun себя, possessive свой
++Rel    !!= * @CODE@ = Relativizer, e.g. который, где, как, куда, сколько, etc.
 
 !! !!Verbal MSP
-+Impf +Perf +Dvuv !!= * @CODE@ = Imperfective, perfective, biaspectual
-+IV +TV           !!= * @CODE@ = Intransitive, transitive   (generate both if either is possible)
++Impf +Perf       !!= * @CODE@ = Imperfective, perfective
++IV +TV           !!= * @CODE@ = Intransitive, transitive (Zaliznjak does not mark trans-only, so transitive verbs all have both TV and IV)
 +Inf +Imp         !!= * @CODE@ = Imperatives: 2nd person = читай, 1st person = прочитаем
 +Pst +Prs +Fut    !!= * @CODE@ = Past, present, future
 +Sg1 +Sg2 +Sg3    !!= * @CODE@ = person sg
@@ -85,25 +84,19 @@ Multichar_Symbols
 
 !! !!Nominal MSP
 +Msc +Fem +Neu +MFN  !!= * @CODE@ = grammatical gender,  +MFN = gender unspecifiable (pl tantum)
-+Sem/Sur +Sem/Pat       !!= * @CODE@ = Surname (фамилия), Patronymic
-+Sem/Ant +Sem/Alt       !!= * @CODE@ = Anthroponym/Given name, Other
-+Sg +Pl                 !!= * @CODE@ = number
-+Nom +Acc +Gen          !!= * @CODE@
-+Loc +Dat +Ins          !!= * @CODE@
-+Loc2 +Gen2 +Voc        !!= * @CODE@
-+Inan +Anim +AnIn       !!= * @CODE@ = animacy (+AnIn = ambivalent animacy for non-accusative modifiers)
-+PObj                   !!= * @CODE@ = Object of preposition (3rd person pronouns have epenthetic н)
-+Count                  !!= * @CODE@ = Count (for человек/людей or лет/годов, etc.)
-
++Inan +Anim +AnIn    !!= * @CODE@ = animacy (+AnIn = ambivalent animacy for non-accusative modifiers)
++Sem/Sur +Sem/Pat    !!= * @CODE@ = Surname (фамилия), Patronymic
++Sem/Ant +Sem/Alt    !!= * @CODE@ = Anthroponym/Given name, Other
++Sg +Pl              !!= * @CODE@ = number
++Nom +Acc +Gen       !!= * @CODE@
++Loc +Dat +Ins       !!= * @CODE@
++Loc2 +Gen2 +Voc     !!= * @CODE@
++Count               !!= * @CODE@ = Count (for человек/людей or лет/годов, etc.)
 +Ord    !!= * @CODE@  = Ordinal
 +Cmpar  !!= * @CODE@  = Comparative
 +Sint   !!= * @CODE@  = Synthetic comparative is possible, e.g. старее
 +Pred   !!= * @CODE@  = "Predicate", also used for short-form adjectives
 +Cmpnd  !!= * @CODE@  = "Compound", used for compounding adjectives, such as русско-английский
-
-+PObj   !!= * @CODE@ = object of preposition, e.g. его~него
-+Epenth !!= * @CODE@ = epenthesis on prepositions
-+Dist   !!= * @CODE@ = distorted (чтоб, иль, коль)
 
 !! !!Punctuation
 +SENT   !!= * @CODE@ = Clause boundary
@@ -118,10 +111,13 @@ Multichar_Symbols
 !! !!Other tags
 +Prb     !!= * @CODE@ = +Prb(lematic): затруднительно - предположительно - нет
 +Fac     !!= * @CODE@ = Facultative
++PObj    !!= * @CODE@ = Object of preposition (epenthetic н: него нее них) TODO FIX WITHFRAN merge PObj and Epenth > Epenth? Sandhi?
++Epenth  !!= * @CODE@ = epenthesis on prepositions (о~об~обо or в~во)      TODO FIX WITHFRAN merge PObj and Epenth > Epenth? Sandhi?
++Leng    !!= * @CODE@ = Lengthened доброй~доброю (marks less-canonical wordform that has more syllables)
++Elid    !!= * @CODE@ = Elided (Иванович~Иваныч, новее~новей, чтобы~чтоб, или~иль, коли~коль)
 +Use/NG  !!= * @CODE@ = Do not generate (used for apertium, etc.)
 +Use/Obs !!= * @CODE@ = Obsolete
 +Use/Ant !!= * @CODE@ = Antiquated "устаревшее"
-+Use/Met !!= * @CODE@ = Metrical новее~новей, доброй~доброю, Иванович~Иваныч (marks less-canonical wordform that has more/fewer syllables)
 +Err/Sub !!= * @CODE@ = Substandard
 
 ! More use tags:

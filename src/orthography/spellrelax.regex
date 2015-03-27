@@ -1,10 +1,10 @@
 # Russian
 
 X (->) Х, # roman numerals written in cyrillic
-C (->) С, # --"--
+#C (->) С, # --"-- Relaxing the C results in massive over analysis with the preposition с
 M (->) М, # --"--
 x (->) х, # --"--
-c (->) с, # --"--
+#c (->) с, # --"--
 m (->) м  # --"--
 ;
 

@@ -952,10 +952,10 @@ MSgNomZ_anim_Fac ;
 +Anim+Sg+Acc+Fac:%>а # ;
 MSgObliqStem_anim_Fac ;
 
-LEXICON MSgStem_anim_Met
-MSgNomZ_anim_Met ;
-+Anim+Sg+Acc+Use/Met:%>а # ;
-MSgObliqStem_anim_Met ;
+LEXICON MSgStem_anim_Elid
+MSgNomZ_anim_Elid ;
++Anim+Sg+Acc+Elid:%>а # ;
+MSgObliqStem_anim_Elid ;
 
 LEXICON MSgEnd !Inanimate
 MSgNomZ ;
@@ -989,8 +989,8 @@ LEXICON MSgNomZ_anim
 LEXICON MSgNomZ_anim_Fac
 +Anim+Sg+Nom+Fac: # ;
 
-LEXICON MSgNomZ_anim_Met
-+Anim+Sg+Nom+Use/Met: # ;
+LEXICON MSgNomZ_anim_Elid
++Anim+Sg+Nom+Elid: # ;
 
 LEXICON MSgAccZ
 +Inan+Sg+Acc: # ;
@@ -1047,11 +1047,11 @@ LEXICON MSgObliqStem_anim_Fac
 +Anim+Sg+Dat+Fac:%>у # ;
 +Anim+Sg+Ins+Fac:%>ом # ;
 
-LEXICON MSgObliqStem_anim_Met
-+Anim+Sg+Gen+Use/Met:%>а # ;
-+Anim+Sg+Loc+Use/Met:%>е # ;
-+Anim+Sg+Dat+Use/Met:%>у # ;
-+Anim+Sg+Ins+Use/Met:%>ом # ;
+LEXICON MSgObliqStem_anim_Elid
++Anim+Sg+Gen+Elid:%>а # ;
++Anim+Sg+Loc+Elid:%>е # ;
++Anim+Sg+Dat+Elid:%>у # ;
++Anim+Sg+Ins+Elid:%>ом # ;
 
 LEXICON MSgObliqEnd
 +Inan+Sg+Gen:%>а́ # ;
@@ -2437,16 +2437,16 @@ LEXICON Patronymic_stem_Fac
 вна+N+Prop+Sem/Pat+Fem:вна ыPlStem_anim_Fac ;
 
 LEXICON Patronymic_ыч
-вич+N+Prop+Sem/Pat+Msc:ыч MSgStem_anim_Met ;
-вич+N+Prop+Sem/Pat+Msc:ыч ыPlStem_anim_Met ;
+вич+N+Prop+Sem/Pat+Msc:ыч MSgStem_anim_Elid ;
+вич+N+Prop+Sem/Pat+Msc:ыч ыPlStem_anim_Elid ;
 
 LEXICON Patronymic_ич
-вич+N+Prop+Sem/Pat+Msc:ич MSgStem_anim_Met ;
-вич+N+Prop+Sem/Pat+Msc:ич ыPlStem_anim_Met ;
+вич+N+Prop+Sem/Pat+Msc:ич MSgStem_anim_Elid ;
+вич+N+Prop+Sem/Pat+Msc:ич ыPlStem_anim_Elid ;
 
 LEXICON Patronymic_вна
-вна+N+Prop+Sem/Pat+Fem:вна FSgStem_anim_Met ;
-вна+N+Prop+Sem/Pat+Fem:вна ыPlStem_anim_Met ;
+вна+N+Prop+Sem/Pat+Fem:вна FSgStem_anim_Elid ;
+вна+N+Prop+Sem/Pat+Fem:вна ыPlStem_anim_Elid ;
 
 LEXICON FSg_SubstAdj_Stem
 +Inan: FSg_SubstAdj_Stem_All ;
@@ -2507,9 +2507,9 @@ LEXICON FSgStem_anim_Fac
 +Anim+Sg+Acc+Fac:%>у # ;
 FSgObliqStem_anim_Fac ;
 
-LEXICON FSgStem_anim_Met
-+Anim+Sg+Acc+Use/Met:%>у # ;
-FSgObliqStem_anim_Met ;
+LEXICON FSgStem_anim_Elid
++Anim+Sg+Acc+Elid:%>у # ;
+FSgObliqStem_anim_Elid ;
 
 LEXICON FSgObliqStem_ext
 +Sg+Nom:%>а # ;
@@ -2527,13 +2527,13 @@ LEXICON FSgObliqStem_ext_Fac
 +Sg+Ins+Fac:%>ой # ;
 +Sg+Ins+Fac:%>ою # ;
 
-LEXICON FSgObliqStem_ext_Met
-+Sg+Nom+Use/Met:%>а # ;
-+Sg+Gen+Use/Met:%>ы # ;
-+Sg+Loc+Use/Met:%>е # ;
-+Sg+Dat+Use/Met:%>е # ;
-+Sg+Ins+Use/Met:%>ой # ;
-+Sg+Ins+Use/Met:%>ою # ;
+LEXICON FSgObliqStem_ext_Elid
++Sg+Nom+Elid:%>а # ;
++Sg+Gen+Elid:%>ы # ;
++Sg+Loc+Elid:%>е # ;
++Sg+Dat+Elid:%>е # ;
++Sg+Ins+Elid:%>ой # ;
++Sg+Ins+Elid:%>ою # ;
 
 LEXICON FSgObliqStem
 +Inan: FSgObliqStem_ext ;
@@ -2544,8 +2544,8 @@ LEXICON FSgObliqStem_anim
 LEXICON FSgObliqStem_anim_Fac
 +Anim: FSgObliqStem_ext_Fac ;
 
-LEXICON FSgObliqStem_anim_Met
-+Anim: FSgObliqStem_ext_Met ;
+LEXICON FSgObliqStem_anim_Elid
++Anim: FSgObliqStem_ext_Elid ;
 
 LEXICON FSgObliqEnd_ext
 +Sg+Nom:%>а́ # ;
@@ -2858,10 +2858,10 @@ LEXICON ыPlStem_anim_Use/Obs
 PlAccStem_anim_Use/Obs ;
 PlObliqStem_anim_Use/Obs ;
 
-LEXICON ыPlStem_anim_Met
-ыPlNomStem_anim_Met ;
-PlAccStem_anim_Met ;
-PlObliqStem_anim_Met ;
+LEXICON ыPlStem_anim_Elid
+ыPlNomStem_anim_Elid ;
+PlAccStem_anim_Elid ;
+PlObliqStem_anim_Elid ;
 
 LEXICON ыPlStem_anim_gPrb      !Inanimate
 ыPlNomStem_anim ;
@@ -2986,8 +2986,8 @@ LEXICON ыPlNomStem_anim_Prb
 LEXICON ыPlNomStem_anim_Use/Obs
 +Anim+Pl+Nom+Use/Obs:%>ы # ;
 
-LEXICON ыPlNomStem_anim_Met
-+Anim+Pl+Nom+Use/Met:%>ы # ;
+LEXICON ыPlNomStem_anim_Elid
++Anim+Pl+Nom+Elid:%>ы # ;
 
 LEXICON ыPlNomEnd
 +Inan+Pl+Nom:%>ы́ # ;
@@ -3028,8 +3028,8 @@ LEXICON PlAccStem_anim_Prb
 LEXICON PlAccStem_anim_Use/Obs
 +Anim+Pl+Acc+Use/Obs:%>ов # ;
 
-LEXICON PlAccStem_anim_Met
-+Anim+Pl+Acc+Use/Met:%>ов # ;
+LEXICON PlAccStem_anim_Elid
++Anim+Pl+Acc+Elid:%>ов # ;
 
 LEXICON PlAccEnd_anim
 +Anim+Pl+Acc:%>о́в # ;
@@ -3101,9 +3101,9 @@ LEXICON PlObliqStem_anim_Use/Obs
 +Anim+Pl+Gen+Use/Obs:%>ов # ;
 PlPeriphStem_anim_Use/Obs ;
 
-LEXICON PlObliqStem_anim_Met
-+Anim+Pl+Gen+Use/Met:%>ов # ;
-PlPeriphStem_anim_Met ;
+LEXICON PlObliqStem_anim_Elid
++Anim+Pl+Gen+Elid:%>ов # ;
+PlPeriphStem_anim_Elid ;
 
 LEXICON PlPeriphStem
 +Inan+Pl+Loc:%>ах # ;
@@ -3140,10 +3140,10 @@ LEXICON PlPeriphStem_anim_Use/Obs
 +Anim+Pl+Dat+Use/Obs:%>ам # ;
 +Anim+Pl+Ins+Use/Obs:%>ами # ;
 
-LEXICON PlPeriphStem_anim_Met
-+Anim+Pl+Loc+Use/Met:%>ах # ;
-+Anim+Pl+Dat+Use/Met:%>ам # ;
-+Anim+Pl+Ins+Use/Met:%>ами # ;
+LEXICON PlPeriphStem_anim_Elid
++Anim+Pl+Loc+Elid:%>ах # ;
++Anim+Pl+Dat+Elid:%>ам # ;
++Anim+Pl+Ins+Elid:%>ами # ;
 
 LEXICON PlObliqEnd
 +Inan+Pl+Gen:%>о́в # ;

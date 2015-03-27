@@ -21,22 +21,22 @@ LEXICON Cc_Ant
 +CC+Use/Ant: # ;
 
 LEXICON Cc_е
-+CC+Dist: # ;
++CC+Elid: # ;
 +CC:%>е # ;
 
 LEXICON Cc_ы ! TODO broken
-+CC+Dist: # ;
++CC+Elid: # ;
 +CC:%>ы # ;
 
 LEXICON Cs
 +CS: # ;
 
 LEXICON Cs_е
-+CS+Dist: # ;
++CS+Elid: # ;
 +CS:%>е # ;
 
 LEXICON Cs_ы
-+CS+Dist: # ;
++CS+Elid: # ;
 +CS:%>ы # ;
 
 LEXICON Conjunction

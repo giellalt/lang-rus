@@ -6,7 +6,6 @@
  [ %<loc2%> -> %<loc%> ] .o.
  [ %<msc%> -> %<m%> ] .o.
  [ %<neu%> -> %<nt%> ] .o.
- [ %<pred%> -> %<short%> ] .o.
  [ %<sem%_alt%>   -> %<al%> ] .o.
  [ %<sem%_ant%>   -> %<ant%> ] .o.
  [ %<sem%_pat%>   -> %<pat%> ] .o.
@@ -19,15 +18,15 @@
  [ %<pl3%>   -> %<p3%> %<pl%> ] .o.
  [ %<n%> %<prop%> -> %<np%> ] .o.
 
- [ %<mfn%> %<pl%> %<pred%> -> %<pred%> %<mfn%> %<pl%> ] .o.
- [ %<m%>   %<sg%> %<pred%> -> %<pred%> %<m%> %<sg%> ] .o.
- [ %<f%>   %<sg%> %<pred%> -> %<pred%> %<f%> %<sg%> ] .o.
- [ %<nt%>  %<sg%> %<pred%> -> %<pred%> %<nt%> %<sg%> ] .o.
+ [ %<mfn%> %<pl%> %<pred%> -> %<short%> %<mfn%> %<pl%> ] .o.
+ [ %<m%>   %<sg%> %<pred%> -> %<short%> %<m%> %<sg%> ] .o.
+ [ %<f%>   %<sg%> %<pred%> -> %<short%> %<f%> %<sg%> ] .o.
+ [ %<nt%>  %<sg%> %<pred%> -> %<short%> %<nt%> %<sg%> ] .o.
 
- [ %<mfn%> %<an%> %<pl%> %<pred%> -> %<pred%> %<mfn%> %<pl%> ] .o.
- [ %<m%>   %<an%> %<sg%> %<pred%> -> %<pred%> %<m%> %<sg%> ] .o.
- [ %<f%>   %<an%> %<sg%> %<pred%> -> %<pred%> %<f%> %<sg%> ] .o.
- [ %<nt%>  %<an%> %<sg%> %<pred%> -> %<pred%> %<nt%> %<sg%> ] .o.
+ [ %<mfn%> %<an%> %<pl%> %<pred%> -> %<short%> %<mfn%> %<pl%> ] .o.
+ [ %<m%>   %<an%> %<sg%> %<pred%> -> %<short%> %<m%> %<sg%> ] .o.
+ [ %<f%>   %<an%> %<sg%> %<pred%> -> %<short%> %<f%> %<sg%> ] .o.
+ [ %<nt%>  %<an%> %<sg%> %<pred%> -> %<short%> %<nt%> %<sg%> ] .o.
  
  [ %<prsact%> %<adv%> -> %<pprs%> %<adv%> ] .o.
  [ %<prsact%>         -> %<pprs%> %<actv%> ] .o.
@@ -36,21 +35,21 @@
  [ %<prspss%>         -> %<pprs%> %<pasv%> ] .o.
  [ %<pstpss%>         -> %<pp%> %<pasv%> ] .o.
 
- [ %<np%> %<sem%_ant%> %<m%> %<aa%> -> %<np%> %<sem%_ant%> %<m%> ] .o.
- [ %<np%> %<sem%_ant%> %<f%> %<aa%> -> %<np%> %<sem%_ant%> %<f%> ] .o.
+ [ %<np%> %<ant%> %<m%> %<aa%> -> %<np%> %<ant%> %<m%> ] .o.
+ [ %<np%> %<ant%> %<f%> %<aa%> -> %<np%> %<ant%> %<f%> ] .o.
 
- [ %<np%> %<sem%_ant%> %<m%> %<aa%> -> %<np%> %<sem%_ant%> %<m%> ] .o.
- [ %<np%> %<sem%_ant%> %<f%> %<aa%> -> %<np%> %<sem%_ant%> %<f%> ] .o.
+ [ %<np%> %<ant%> %<m%> %<aa%> -> %<np%> %<ant%> %<m%> ] .o.
+ [ %<np%> %<ant%> %<f%> %<aa%> -> %<np%> %<ant%> %<f%> ] .o.
 
- [ %<np%> %<m%> %<aa%> -> %<np%> %<sem%_ant%> %<m%> ] .o.
- [ %<np%> %<f%> %<aa%> -> %<np%> %<sem%_ant%> %<f%> ] .o.
+ [ %<np%> %<m%> %<aa%> -> %<np%> %<ant%> %<m%> ] .o.
+ [ %<np%> %<f%> %<aa%> -> %<np%> %<ant%> %<f%> ] .o.
 
- [ %<sem%_pat%> %<m%> %<aa%> -> %<sem%_pat%> %<m%> ] .o.
- [ %<sem%_pat%> %<f%> %<aa%> -> %<sem%_pat%> %<f%> ] .o.
+ [ %<pat%> %<m%> %<aa%> -> %<pat%> %<m%> ] .o.
+ [ %<pat%> %<f%> %<aa%> -> %<pat%> %<f%> ] .o.
 
- [ %<sem%_sur%> %<m%> %<aa%> -> %<sem%_sur%> %<m%> ] .o.
- [ %<sem%_sur%> %<f%> %<aa%> -> %<sem%_sur%> %<f%> ] .o.
- [ %<sem%_sur%> %<mfn%> %<aa%> -> %<sem%_sur%> %<mfn%> ] .o.
+ [ %<cog%> %<m%> %<aa%> -> %<cog%> %<m%> ] .o.
+ [ %<cog%> %<f%> %<aa%> -> %<cog%> %<f%> ] .o.
+ [ %<cog%> %<mfn%> %<aa%> -> %<cog%> %<mfn%> ] .o.
 
  [ %<p3%> %<sg%> %<m%> -> %<p3%> %<m%> %<sg%> ] .o.
  [ %<p3%> %<sg%> %<nt%> -> %<p3%> %<nt%> %<sg%> ] .o.

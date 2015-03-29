@@ -194,7 +194,7 @@ Past
                     - Imperative and VAdv are both normatively acceptable (arbitrary preference to 6 in FST)
                 Let 6 be normal 6.
                 Let 1 only contain:
-                    - Pres/Fut and PresAct Pppl with +Err/Sub
+                    - Pres/Fut and PresAct Pppl with +Err/Orth
                     - Imperative and VA with +Fac
 {14     §14     Vascillate between class 1 and class 6
                     - Imper and VAdv from class 1 (class 6 is archaic)

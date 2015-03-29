@@ -118,7 +118,7 @@ Multichar_Symbols
 +Use/NG  !!= * @CODE@ = Do not generate (used for apertium, etc.)
 +Use/Obs !!= * @CODE@ = Obsolete
 +Use/Ant !!= * @CODE@ = Antiquated "устаревшее"
-+Err/Sub !!= * @CODE@ = Substandard
++Err/Orth !!= * @CODE@ = Substandard
 
 ! More use tags:
 ! ласкательное - +Use/Aff(ectionate)
@@ -126,7 +126,7 @@ Multichar_Symbols
 ! народнопоэтическое - +Use/Flk (folk poetry)
 ! областное - +Use/Dia(lectal)
 ! поэтический - +Use/Poet(ic)
-! просторечное - +Err/Sub(standard)
+! просторечное - +Err/Orth(standard)
 ! профессиональо - +Use/Prof(essional)
 ! старинное - +Use/Anc(ient)
 ! увеличительное - +Use/Aug(mentative)

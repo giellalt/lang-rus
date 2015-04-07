@@ -55,6 +55,7 @@ fi
 
 # Get external Mac editor for viewing failed results from configure:
 EXTEDITOR=@SEE@
+pythonbin=@PYTHON@
 
 ##### Extract lemmas - add additional egrep pattern as parameters: #####
 ##### --include "(pattern1|pattern2|...)"                          #####
@@ -86,32 +87,37 @@ for f in $fsttype; do
 ###### Test non-comopunds: #######
         # generate propers in singular, extract the resulting generated lemma,
         # store it:
-        sed 's/$/+N+Prop+Sg+Nom/' $lemmas \
-            | $lookup_tool $generator_file.$suffix \
-            | fgrep -v "+?" | grep -v "^$" | cut -f2 | sort -u \
-            > $generated_lemmas.$f.txt 
+		cat $lemmas | $pythonbin ${srcdir}/lemmaStager.py propernoun \
+			| $lookup_tool $generator_file.$suffix \
+			| $pythonbin ${srcdir}/lemmaChecker.py \
+			> $result_file.$f.txt
+
+        #sed 's/$/+N+Prop+Sg+Nom/' $lemmas \
+        #    | $lookup_tool $generator_file.$suffix \
+        #    | fgrep -v "+?" | grep -v "^$" | cut -f2 | sort -u \
+        #    > $generated_lemmas.$f.txt 
 
         # Generate nouns, extract those that do not generate in singular,
         # and try to generate them in plural:
-        sed 's/$/+N+Prop+Sg+Nom/' $lemmas \
-            | $lookup_tool $generator_file.$suffix \
-            | fgrep "+?" | cut -d "+" -f1 \
-            | sed 's/$/+N+Prop+Pl+Nom/' \
-            | $lookup_tool $generator_file.$suffix | cut -f2 \
-            | grep -v "^$" >> $generated_lemmas.$f.txt 
+        #sed 's/$/+N+Prop+Sg+Nom/' $lemmas \
+        #    | $lookup_tool $generator_file.$suffix \
+        #    | fgrep "+?" | cut -d "+" -f1 \
+        #    | sed 's/$/+N+Prop+Pl+Nom/' \
+        #    | $lookup_tool $generator_file.$suffix | cut -f2 \
+        #    | grep -v "^$" >> $generated_lemmas.$f.txt 
 
 ###### Collect results, and generate debug info if FAIL: #######
         # Sort and compare original input with resulting output - the diff is
         # used to generate lemmas which are opened in SEE:
-        sort -u -o $generated_lemmas.$f.txt $generated_lemmas.$f.txt 
-        comm -23 $lemmas $generated_lemmas.$f.txt > $result_file.$f.txt
+        #sort -u -o $generated_lemmas.$f.txt $generated_lemmas.$f.txt 
+        #comm -23 $lemmas $generated_lemmas.$f.txt > $result_file.$f.txt
 
         # Open the diff file in SubEthaEdit (if there is a diff):
         if [ -s $result_file.$f.txt ]; then
-            grep -v '^$' $result_file.$f.txt \
-              | sed 's/$/+N+Prop+Sg+Nom/' \
-              | $lookup_tool $generator_file.$suffix \
-              > $gen_result_file.$f.txt
+            #grep -v '^$' $result_file.$f.txt \
+            #  | sed 's/$/+N+Prop+Sg+Nom/' \
+            #  | $lookup_tool $generator_file.$suffix \
+            #  > $gen_result_file.$f.txt
             # If we have an analyser, analyse the missing lemmas as well:
             if test -e $analyser_file.$suffix ; then
                 grep -v '^$' $result_file.$f.txt \

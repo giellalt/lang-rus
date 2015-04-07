@@ -213,8 +213,9 @@ AC_CONFIG_FILES([tools/shellscripts/urus-gt.sh], \
       [chmod a+x tools/shellscripts/urus-gt.sh])
 
 #### BEGIN: Add language-specific scripts below here: ####
-AC_CONFIG_FILES([test/src/morphology/generate-adj-lemmas.sh], \
-      [chmod a+x test/src/morphology/generate-adj-lemmas.sh])
+#AC_CONFIG_FILES([test/src/morphology/generate-adj-lemmas.sh], \
+#      [chmod a+x test/src/morphology/generate-adj-lemmas.sh])
+#this is duplicate of generate-adjective-lemmas.sh, above
 
 ############ END: Language-specific scripts. #############
 

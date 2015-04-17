@@ -91,7 +91,7 @@ Multichar_Symbols
 +Nom +Acc +Gen       !!= * @CODE@
 +Loc +Dat +Ins       !!= * @CODE@
 +Loc2 +Gen2 +Voc     !!= * @CODE@
-+Count               !!= * @CODE@ = Count (for человек/людей or лет/годов, etc.)
++Count               !!= * @CODE@ = Count (for человек/людей or лет/годов, etc. also шага́/шара́/часа́/etc.)
 +Ord    !!= * @CODE@  = Ordinal
 +Cmpar  !!= * @CODE@  = Comparative
 +Sint   !!= * @CODE@  = Synthetic comparative is possible, e.g. старее

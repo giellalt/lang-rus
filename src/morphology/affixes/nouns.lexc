@@ -234,9 +234,20 @@ LEXICON м_c
 +N+Msc: MSgStem ;
 +N+Msc: ыPlEnd ;
 
+LEXICON м_c_Pauc
+м_c ;
+MscPauc ;
+
+LEXICON MscPauc
++N+Msc+Inan+Sg+Gen+Count:%>а́ # ;
+
 LEXICON м_c_П2
 м_c ;
 +N: MscLoc2_inan ;
+
+LEXICON м_c_П2_Pauc
+м_c_П2 ;
+MscPauc ;
 
 LEXICON м_c_[П2]
 м_c ;

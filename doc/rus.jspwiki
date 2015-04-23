@@ -38,42 +38,41 @@ This is free and open source South Sámi morphology.
  * %^Is  = Imperative ending (stressed)
 
 !!POS
- * +N       = Noun
- * +V       = Verb
  * +A       = Adjective
  * +Abbr    = Abbreviation
- * +Pron    = Pronoun
- * +Det     = Determiner
- * +Num     = Numeral
  * +Adv     = Adverb
- * +Pr      = Preposition
- * +Po      = Postposition (ради is the only postposition)
  * +CC      = Coordinating conjunction
  * +CS      = Subordinating conjunction
+ * +Det     = Determiner
  * +Interj  = Interjection
- * +Pcle    = Particle
+ * +N       = Noun
+ * +Num     = Numeral
  * +Paren   = Parenthetical вводное слово
+ * +Pcle    = Particle
+ * +Po      = Postposition (ради is the only postposition)
+ * +Pr      = Preposition
+ * +Pron    = Pronoun
+ * +V       = Verb
 
 !!Sub-POS
- * +Prop    = Proper
- * +Pers    = Personal
- * +Dem     = Demonstrative
- * +Def     = Definite
- * +Interr  = Interrogative: кто, что, какой, ли, etc.
- * +Refl    = Pronoun себя, possessive свой
- * +Indef   = Indefinite: кто-то, кто-нибудь, кто-либо, кое-кто, etc.
- * +Neg     = Negative: никто, некого, etc.
  * +All     = All: весь
- * +Recip   = Reciprocal: друг друга
  * +Coll    = Collective numerals
- * +MWE     = Multi-word expressions
- * +Rel     = Relativizer, e.g. который, где, как, куда, сколько, etc.
+ * +Def     = Definite
+ * +Dem     = Demonstrative
+ * +Indef   = Indefinite: кто-то, кто-нибудь, кто-либо, кое-кто, etc.
+ * +Interr  = Interrogative: кто, что, какой, ли, etc.
+ * +Neg     = Negative: никто, некого, etc.
+ * +Pers    = Personal
  * +Pos     = Possessive, e.g. его, наш
  * +Prcnt   = Percent
+ * +Prop    = Proper
+ * +Recip   = Reciprocal: друг друга
+ * +Refl    = Pronoun себя, possessive свой
+ * +Rel     = Relativizer, e.g. который, где, как, куда, сколько, etc.
 
 !!Verbal MSP
- * +Impf +Perf +Dvuv  = Imperfective, perfective, biaspectual
- * +IV +TV            = Intransitive, transitive   (generate both if either is possible)
+ * +Impf +Perf        = Imperfective, perfective
+ * +IV +TV            = Intransitive, transitive (Zaliznjak does not mark trans-only, so transitive verbs all have both TV and IV)
  * +Inf +Imp          = Imperatives: 2nd person = читай, 1st person = прочитаем
  * +Pst +Prs +Fut     = Past, present, future
  * +Sg1 +Sg2 +Sg3     = person sg
@@ -85,25 +84,19 @@ This is free and open source South Sámi morphology.
 
 !!Nominal MSP
  * +Msc +Fem +Neu +MFN   = grammatical gender,  +MFN = gender unspecifiable (pl tantum)
- * +Sem/Sur +Sem/Pat        = Surname (фамилия), Patronymic
- * +Sem/Ant +Sem/Alt        = Anthroponym/Given name, Other
- * +Sg +Pl                  = number
- * +Nom +Acc +Gen          
- * +Loc +Dat +Ins          
- * +Loc2 +Gen2 +Voc        
- * +Inan +Anim +AnIn        = animacy (+AnIn = ambivalent animacy for non-accusative modifiers)
- * +PObj                    = Object of preposition (3rd person pronouns have epenthetic н)
- * +Count                   = Count (for человек/людей or лет/годов, etc.)
-
+ * +Inan +Anim +AnIn     = animacy (+AnIn = ambivalent animacy for non-accusative modifiers)
+ * +Sem/Sur +Sem/Pat     = Surname (фамилия), Patronymic
+ * +Sem/Ant +Sem/Alt     = Anthroponym/Given name, Other
+ * +Sg +Pl               = number
+ * +Nom +Acc +Gen       
+ * +Loc +Dat +Ins       
+ * +Loc2 +Gen2 +Voc     
+ * +Count                = Count (for человек/людей or лет/годов, etc. also шага́/шара́/часа́/etc.)
  * +Ord      = Ordinal
  * +Cmpar    = Comparative
  * +Sint     = Synthetic comparative is possible, e.g. старее
  * +Pred     = "Predicate", also used for short-form adjectives
  * +Cmpnd    = "Compound", used for compounding adjectives, such as русско-английский
-
- * +PObj    = object of preposition, e.g. его~него
- * +Epenth  = epenthesis on prepositions
- * +Dist    = distorted (чтоб, иль, коль)
 
 !!Punctuation
  * +SENT    = Clause boundary
@@ -118,10 +111,13 @@ This is free and open source South Sámi morphology.
 !!Other tags
  * +Prb      = +Prb(lematic): затруднительно - предположительно - нет
  * +Fac      = Facultative
+ * +PObj     = Object of preposition (epenthetic н: него нее них) TODO FIX WITHFRAN merge PObj and Epenth > Epenth? Sandhi?
+ * +Epenth   = epenthesis on prepositions (о~об~обо or в~во)      TODO FIX WITHFRAN merge PObj and Epenth > Epenth? Sandhi?
+ * +Leng     = Lengthened доброй~доброю (marks less-canonical wordform that has more syllables)
+ * +Elid     = Elided (Иванович~Иваныч, новее~новей, чтобы~чтоб, или~иль, коли~коль)
  * +Use/NG   = Do not generate (used for apertium, etc.)
  * +Use/Obs  = Obsolete
  * +Use/Ant  = Antiquated "устаревшее"
- * +Use/Met  = Metrical новее~новей, доброй~доброю, Иванович~Иваныч (marks less-canonical wordform that has more/fewer syllables)
  * +Err/Orth  = Substandard
 
 

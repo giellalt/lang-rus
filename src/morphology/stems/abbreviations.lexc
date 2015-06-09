@@ -73,6 +73,18 @@ PS:PS abbr ;
 Я:Я abbr. ;
 Дж:Дж abbr. ; 
 °C:°C abbr ; 
-°С:°С abbr ; 
+°F:°F abbr ; 
 
+№:№ abbr ;
+№№:№№ abbr ;
+\$:\$ abbr ;
+\¢:\¢ abbr ;
+\€:\€ abbr ;
+\£:\£ abbr ;
+\￡:\￡ abbr ;
+\¥:\¥ abbr ;
+\￥:\￥ abbr ;
+
+!http\://:http\:// abbr ;
+!https\://:https\:// abbr ;
 

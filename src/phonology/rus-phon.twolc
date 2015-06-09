@@ -122,9 +122,9 @@ where Vx in ( а́ э́ о́ у́ ы́ я́ е́ ё ю́ и́ )
 е́:е <=> [ г: | к: | х: ] %>:0 _ [ е: | й: ] .#. ; ! After velar mutation with comparative adjectives
 
 "V>0: Delete lexical vowel endings (o/о́ and е are covered in other rules), and delete most fleeting vowels with syllabic endings"
-Vx:0 <=> .#. [ Letter: | %^F:0 ]+ _ %>:0 ;
-            ! Тама́ра>а   мо́ре>о
-            ! Тама́р00а   мо́р00е
+Vx:0 <=> .#. [ Letter: | %^F:0 | %>:0 ]+ _ %>:0 ;
+            ! Тама́ра>а   мо́ре>о		Петр>овна>а
+            ! Тама́р00а   мо́р00е		Петр0овн00а
          %^F:0 _ [ Letter ]+ (End) %>:0 :V ; ! This does not delete люб(о)вью, since the ь is 1st
             ! о́кFоно>о́   зе́мFе́ля́>е́
             ! ок00н00о́   зем00л00е́

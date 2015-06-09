@@ -18,19 +18,19 @@ SUBDIRS = . fstbased listbased
 
 # We need to remove accents from the speller fst's:
 generator-speller-gt-norm.hfst: generator-speller-gt-norm.tmp.hfst \
-				  $(top_builddir)/src/orthography/destress.hfst
+				  $(top_builddir)/src/orthography/destress.lookup.hfst
 	$(AM_V_RGX2FST)$(PRINTF) "\
 				@\"$<\" \
-			.o. @\"$(top_builddir)/src/orthography/destress.hfst\" \
+			.o. @\"$(top_builddir)/src/orthography/destress.lookup.hfst\" \
 			;" \
 		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --xerox-composition=ON \
 		> $@
 
 analyser-speller-gt-norm.xfst: analyser-speller-gt-norm.tmp.xfst \
-				  $(top_builddir)/src/orthography/destress.xfst
+				  $(top_builddir)/src/orthography/destress.lookup.xfst
 	$(AM_V_XFST)$(PRINTF) "read regex \
 				@\"$<\" \
-			.o. @\"$(top_builddir)/src/orthography/destress.xfst\" \
+			.o. @\"$(top_builddir)/src/orthography/destress.lookup.xfst\" \
 			;\n\
 		 save stack $@\n\
 		 quit\n" | $(XFST) $(VERBOSITY)

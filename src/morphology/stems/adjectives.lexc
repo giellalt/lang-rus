@@ -996,6 +996,10 @@ LEXICON Adjective
 неумирающий:неумира́ющ п_a ; ! RNC 4a
 ужасающий:ужаса́ющ п_a ; ! Z 4a
 потрясающий:потряса́ющ п_a ; ! Z 4a
+удивительно-потрясающий:удивѝтельно-потряса́ющ п_a ;
+густо-дымящий:густо-дымящ п_a ; 		! TODO stress (from снятник)
+неизъяснимо-пьянящий:неизъяснѝмо-пьянящ п_a ; 		! TODO stress (from снятник)
+
 тающий:та́ющ п_a ; ! Znew 4a
 печатающий:печа́тающ п_a ; ! Znew 4a
 буквопечатающий:бу̀квопеча́тающ п_a ; ! Z 4a
@@ -15774,6 +15778,276 @@ LEXICON Adjective
 светящийся:светя́щ п_a_R ; ! Z 4a
 самосветящийся:самосветя́щ п_a_R ; ! Z 4a
 скоропортящийся:скоропо́ртящ п_a_R ; ! Z 4a
+
+
+
+чёрно-кровавый:чёрно-кровав п_a ; 		! TODO stress/continuation class (from снятник)
+коричнево-оранжевый:коричнево-оранжев п_a ; 		! TODO stress/continuation class (from снятник)
+жёлто-оранжевый:жёлто-оранжев п_a ; 		! TODO stress/continuation class (from снятник)
+нежно-коричневый:нежно-коричнев п_a ; 		! TODO stress/continuation class (from снятник)
+пыльно-коричневый:пыльно-коричнев п_a ; 		! TODO stress/continuation class (from снятник)
+глянцевито-коричневый:глянцевито-коричнев п_a ; 		! TODO stress/continuation class (from снятник)
+жёлто-коричневый:жёлто-коричнев п_a ; 		! TODO stress/continuation class (from снятник)
+беспощадно-насмешливый:беспощадно-насмешлив п_a ; 		! TODO stress/continuation class (from снятник)
+свободно-насмешливый:свободно-насмешлив п_a ; 		! TODO stress/continuation class (from снятник)
+нарочито-неряшливый:нарочито-неряшлив п_a ; 		! TODO stress/continuation class (from снятник)
+сладостно-ленивый:сладостно-ленив п_a ; 		! TODO stress/continuation class (from снятник)
+капризно-плаксивый:капризно-плаксив п_a ; 		! TODO stress/continuation class (from снятник)
+административно-налоговый:административно-налогов п_a ; 		! TODO stress/continuation class (from снятник)
+финансово-фондовый:финансово-фондов п_a ; 		! TODO stress/continuation class (from снятник)
+нежно-розовый:нежно-розов п_a ; 		! TODO stress/continuation class (from снятник)
+телесно-розовый:телесно-розов п_a ; 		! TODO stress/continuation class (from снятник)
+мутно-розовый:мутно-розов п_a ; 		! TODO stress/continuation class (from снятник)
+прозрачно-розовый:прозрачно-розов п_a ; 		! TODO stress/continuation class (from снятник)
+красновато-розовый:красновато-розов п_a ; 		! TODO stress/continuation class (from снятник)
+кроваво-коралловый:кроваво-кораллов п_a ; 		! TODO stress/continuation class (from снятник)
+экстравагантно-новый:экстравагантно-нов п_a ; 		! TODO stress/continuation class (from снятник)
+темно-рубиновый:темно-рубинов п_a ; 		! TODO stress/continuation class (from снятник)
+повышенно-суровый:повышенно-суров п_a ; 		! TODO stress/continuation class (from снятник)
+приторно-анисовый:приторно-анисов п_a ; 		! TODO stress/continuation class (from снятник)
+кредитно-финансовый:кредитно-финансов п_a ; 		! TODO stress/continuation class (from снятник)
+валютно-финансовый:валютно-финансов п_a ; 		! TODO stress/continuation class (from снятник)
+индустриально-финансовый:индустриально-финансов п_a ; 		! TODO stress/continuation class (from снятник)
+контрольно-кассовый:контрольно-кассов п_a ; 		! TODO stress/continuation class (from снятник)
+голубовато-фиолетовый:голубовато-фиолетов п_a ; 		! TODO stress/continuation class (from снятник)
+красновато-фиолетовый:красновато-фиолетов п_a ; 		! TODO stress/continuation class (from снятник)
+тисо-самшитовый:тисо-самшитов п_a ; 		! TODO stress/continuation class (from снятник)
+нагло-голубоглазый:нагло-голубоглаз п_a ; 		! TODO stress/continuation class (from снятник)
+бархатисто-сизый:бархатисто-сиз п_a ; 		! TODO stress/continuation class (from снятник)
+чёрновато-смуглый:чёрновато-смугл п_a ; 		! TODO stress/continuation class (from снятник)
+ярко-белый:ярко-бел п_a ; 		! TODO stress/continuation class (from снятник)
+непроглядно-белый:непроглядно-бел п_a ; 		! TODO stress/continuation class (from снятник)
+красно-зелёно-белый:красно-зелёно-бел п_a ; 		! TODO stress/continuation class (from снятник)
+снежно-белый:снежно-бел п_a ; 		! TODO stress/continuation class (from снятник)
+грязно-белый:грязно-бел п_a ; 		! TODO stress/continuation class (from снятник)
+кипенно-белый:кипенно-бел п_a ; 		! TODO stress/continuation class (from снятник)
+красно-белый:красно-бел п_a ; 		! TODO stress/continuation class (from снятник)
+зелёновато-белый:зелёновато-бел п_a ; 		! TODO stress/continuation class (from снятник)
+взвинченно-весёлый:взвинченно-весёл п_a ; 		! TODO stress/continuation class (from снятник)
+простоквашно-кислый:простоквашно-кисл п_a ; 		! TODO stress/continuation class (from снятник)
+уголовно-наказуемый:уголовно-наказуем п_a ; 		! TODO stress/continuation class (from снятник)
+трепетно-ранимый:трепетно-раним п_a ; 		! TODO stress/continuation class (from снятник)
+печально-значимый:печально-значим п_a ; 		! TODO stress/continuation class (from снятник)
+уголовно-судебный:уголовно-судебн п_a ; 		! TODO stress/continuation class (from снятник)
+научно-учебный:научно-учебн п_a ; 		! TODO stress/continuation class (from снятник)
+логико-дискурсивный:логико-дискурсивн п_a ; 		! TODO stress/continuation class (from снятник)
+покойно-пассивный:покойно-пассивн п_a ; 		! TODO stress/continuation class (from снятник)
+социально-коммуникативный:социально-коммуникативн п_a ; 		! TODO stress/continuation class (from снятник)
+командно-административный:командно-административн п_a ; 		! TODO stress/continuation class (from снятник)
+информационно-консультативный:информационно-консультативн п_a ; 		! TODO stress/continuation class (from снятник)
+эмоционально-когнитивный:эмоционально-когнитивн п_a ; 		! TODO stress/continuation class (from снятник)
+слухо-проприоцептивный:слухо-проприоцептивн п_a ; 		! TODO stress/continuation class (from снятник)
+критико-контравертивный:критико-контравертивн п_a ; 		! TODO stress/continuation class (from снятник)
+празднично-парадный:празднично-парадн п_a ; 		! TODO stress/continuation class (from снятник)
+мертвенно-бледный:мертвенно-бледн п_a ; 		! TODO stress/continuation class (from снятник)
+монотонно-бледный:монотонно-бледн п_a ; 		! TODO stress/continuation class (from снятник)
+синевато-бледный:синевато-бледн п_a ; 		! TODO stress/continuation class (from снятник)
+свободно-беседный:свободно-беседн п_a ; 		! TODO stress/continuation class (from снятник)
+чудесно-холодный:чудесно-холодн п_a ; 		! TODO stress/continuation class (from снятник)
+садово-огородный:садово-огородн п_a ; 		! TODO stress/continuation class (from снятник)
+углеродно-кислородный:углеродно-кислородн п_a ; 		! TODO stress/continuation class (from снятник)
+зонально-неоднородный:зонально-неоднородн п_a ; 		! TODO stress/continuation class (from снятник)
+слоисто-неоднородный:слоисто-неоднородн п_a ; 		! TODO stress/continuation class (from снятник)
+накопительно-разрядный:накопительно-разрядн п_a ; 		! TODO stress/continuation class (from снятник)
+блекло-зелёный:блекло-зелён п_a ; 		! TODO stress/continuation class (from снятник)
+красно-зелёный:красно-зелён п_a ; 		! TODO stress/continuation class (from снятник)
+бело-красно-зелёный:бело-красно-зелён п_a ; 		! TODO stress/continuation class (from снятник)
+серо-зелёный:серо-зелён п_a ; 		! TODO stress/continuation class (from снятник)
+голубовато-зелёный:голубовато-зелён п_a ; 		! TODO stress/continuation class (from снятник)
+беловато-зелёный:беловато-зелён п_a ; 		! TODO stress/continuation class (from снятник)
+радостно-тревожный:радостно-тревожн п_a ; 		! TODO stress/continuation class (from снятник)
+транспортно-дорожный:транспортно-дорожн п_a ; 		! TODO stress/continuation class (from снятник)
+философско-религиозный:философско-религиозн п_a ; 		! TODO stress/continuation class (from снятник)
+социально-религиозный:социально-религиозн п_a ; 		! TODO stress/continuation class (from снятник)
+традиционно-лошадиный:традиционно-лошадин п_a ; 		! TODO stress/continuation class (from снятник)
+комсомольско-партийный:комсомольско-партийн п_a ; 		! TODO stress/continuation class (from снятник)
+усиленно-спокойный:усиленно-спокойн п_a ; 		! TODO stress/continuation class (from снятник)
+центрально-чёрноземный:центрально-чёрноземн п_a ; 		! TODO stress/continuation class (from снятник)
+горько-дымный:горько-дымн п_a ; 		! TODO stress/continuation class (from снятник)
+
+
+сюжетно-обоснованный:сюжетно-обоснованн п_a ; 		! TODO stress/continuation class (from снятник)
+практико-ориентированный:практико-ориентированн п_a ; 		! TODO stress/continuation class (from снятник)
+проблемно-ориентированный:проблемно-ориентированн п_a ; 		! TODO stress/continuation class (from снятник)
+предметно-ориентированный:предметно-ориентированн п_a ; 		! TODO stress/continuation class (from снятник)
+объектно-ориентированный:объектно-ориентированн п_a ; 		! TODO stress/continuation class (from снятник)
+лично-ориентированный:лично-ориентированн п_a ; 		! TODO stress/continuation class (from снятник)
+персистентно-инфицированный:персистентно-инфицированн п_a ; 		! TODO stress/continuation class (from снятник)
+холодно-продуманный:холодно-продуманн п_a ; 		! TODO stress/continuation class (from снятник)
+плакально-бранный:плакально-бранн п_a ; 		! TODO stress/continuation class (from снятник)
+примитивно-спонтанный:примитивно-спонтанн п_a ; 		! TODO stress/continuation class (from снятник)
+духовно-нравственный:духовно-нравственн п_a ; 		! TODO stress/continuation class (from снятник)
+религиозно-нравственный:религиозно-нравственн п_a ; 		! TODO stress/continuation class (from снятник)
+оперативно-следственный:оперативно-следственн п_a ; 		! TODO stress/continuation class (from снятник)
+художественно-производственный:художественно-производственн п_a ; 		! TODO stress/continuation class (from снятник)
+научно-производственный:научно-производственн п_a ; 		! TODO stress/continuation class (from снятник)
+историко-художественный:историко-художественн п_a ; 		! TODO stress/continuation class (from снятник)
+литературно-художественный:литературно-художественн п_a ; 		! TODO stress/continuation class (from снятник)
+формально-художественный:формально-художественн п_a ; 		! TODO stress/continuation class (from снятник)
+театрально-художественный:театрально-художественн п_a ; 		! TODO stress/continuation class (from снятник)
+документально-художественный:документально-художественн п_a ; 		! TODO stress/continuation class (from снятник)
+теоретико-множественный:теоретико-множественн п_a ; 		! TODO stress/continuation class (from снятник)
+материально-вещественный:материально-вещественн п_a ; 		! TODO stress/continuation class (from снятник)
+декоративно-лиственный:декоративно-лиственн п_a ; 		! TODO stress/continuation class (from снятник)
+финансово-хозяйственный:финансово-хозяйственн п_a ; 		! TODO stress/continuation class (from снятник)
+административно-государственный:административно-государственн п_a ; 		! TODO stress/continuation class (from снятник)
+партийно-государственный:партийно-государственн п_a ; 		! TODO stress/continuation class (from снятник)
+общественно-государственный:общественно-государственн п_a ; 		! TODO stress/continuation class (from снятник)
+аграрно-продовольственный:аграрно-продовольственн п_a ; 		! TODO stress/continuation class (from снятник)
+пронзительно-обнаженный:пронзительно-обнаженн п_a ; 		! TODO stress/continuation class (from снятник)
+молчаливо-напряженный:молчаливо-напряженн п_a ; 		! TODO stress/continuation class (from снятник)
+радостно-воодушевленный:радостно-воодушевленн п_a ; 		! TODO stress/continuation class (from снятник)
+причинно-обновленный:причинно-обновленн п_a ; 		! TODO stress/continuation class (from снятник)
+скользко-неопределенный:скользко-неопределенн п_a ; 		! TODO stress/continuation class (from снятник)
+торгово-ремесленный:торгово-ремесленн п_a ; 		! TODO stress/continuation class (from снятник)
+нравственно-непросветленный:нравственно-непросветленн п_a ; 		! TODO stress/continuation class (from снятник)
+финансово-промышленный:финансово-промышленн п_a ; 		! TODO stress/continuation class (from снятник)
+опытно-промышленный:опытно-промышленн п_a ; 		! TODO stress/continuation class (from снятник)
+лазерно-плазменный:лазерно-плазменн п_a ; 		! TODO stress/continuation class (from снятник)
+причинно-разрозненный:причинно-разрозненн п_a ; 		! TODO stress/continuation class (from снятник)
+колено-преклоненный:колено-преклоненн п_a ; 		! TODO stress/continuation class (from снятник)
+народно-песенный:народно-песенн п_a ; 		! TODO stress/continuation class (from снятник)
+лопастно-рассеченный:лопастно-рассеченн п_a ; 		! TODO stress/continuation class (from снятник)
+перисто-рассеченный:перисто-рассеченн п_a ; 		! TODO stress/continuation class (from снятник)
+серебристо-опушенный:серебристо-опушенн п_a ; 		! TODO stress/continuation class (from снятник)
+котло-турбинный:котло-турбинн п_a ; 		! TODO stress/continuation class (from снятник)
+горно-долинный:горно-долинн п_a ; 		! TODO stress/continuation class (from снятник)
+атомно-эмиссионный:атомно-эмиссионн п_a ; 		! TODO stress/continuation class (from снятник)
+научно-инновационный:научно-инновационн п_a ; 		! TODO stress/continuation class (from снятник)
+транспортно-рекреационный:транспортно-рекреационн п_a ; 		! TODO stress/continuation class (from снятник)
+водопроводно-канализационный:водопроводно-канализационн п_a ; 		! TODO stress/continuation class (from снятник)
+организационно-мобилизационный:организационно-мобилизационн п_a ; 		! TODO stress/continuation class (from снятник)
+культурно-цивилизационный:культурно-цивилизационн п_a ; 		! TODO stress/continuation class (from снятник)
+системно-классификационный:системно-классификационн п_a ; 		! TODO stress/continuation class (from снятник)
+разведывательно-информационный:разведывательно-информационн п_a ; 		! TODO stress/continuation class (from снятник)
+декоративно-демонстрационный:декоративно-демонстрационн п_a ; 		! TODO stress/continuation class (from снятник)
+транспортно-экспедиционный:транспортно-экспедиционн п_a ; 		! TODO stress/continuation class (from снятник)
+пропагандитско-лекционный:пропагандитско-лекционн п_a ; 		! TODO stress/continuation class (from снятник)
+разбойно-пожарно-революционный:разбойно-пожарно-революционн п_a ; 		! TODO stress/continuation class (from снятник)
+словарно-шаблонный:словарно-шаблонн п_a ; 		! TODO stress/continuation class (from снятник)
+оптико-электронный:оптико-электронн п_a ; 		! TODO stress/continuation class (from снятник)
+серо-деревянный:серо-деревянн п_a ; 		! TODO stress/continuation class (from снятник)
+ярко-стеклянный:ярко-стеклянн п_a ; 		! TODO stress/continuation class (from снятник)
+кусочно-постоянный:кусочно-постоянн п_a ; 		! TODO stress/continuation class (from снятник)
+
+ракетно-ядерный:ракетно-ядерн п_a ; 		! TODO stress/continuation class (from снятник)
+общественно-лицемерный:общественно-лицемерн п_a ; 		! TODO stress/continuation class (from снятник)
+светло-фанерный:светло-фанерн п_a ; 		! TODO stress/continuation class (from снятник)
+лодочно-глиссерный:лодочно-глиссерн п_a ; 		! TODO stress/continuation class (from снятник)
+графитно-чёрный:графитно-чёрн п_a ; 		! TODO stress/continuation class (from снятник)
+угольно-чёрный:угольно-чёрн п_a ; 		! TODO stress/continuation class (from снятник)
+угольно-счёрный:угольно-счёрн п_a ; 		! TODO stress/continuation class (from снятник)
+беседно-разговорный:беседно-разговорн п_a ; 		! TODO stress/continuation class (from снятник)
+контрольно-надзорный:контрольно-надзорн п_a ; 		! TODO stress/continuation class (from снятник)
+логико-комбинаторный:логико-комбинаторн п_a ; 		! TODO stress/continuation class (from снятник)
+таблично-перфораторный:таблично-перфораторн п_a ; 		! TODO stress/continuation class (from снятник)
+сложно-рефлекторный:сложно-рефлекторн п_a ; 		! TODO stress/continuation class (from снятник)
+кальциево-фосфорный:кальциево-фосфорн п_a ; 		! TODO stress/continuation class (from снятник)
+историко-литературный:историко-литературн п_a ; 		! TODO stress/continuation class (from снятник)
+социально-структурный:социально-структурн п_a ; 		! TODO stress/continuation class (from снятник)
+функционально-структурный:функционально-структурн п_a ; 		! TODO stress/continuation class (from снятник)
+историко-культурный:историко-культурн п_a ; 		! TODO stress/continuation class (from снятник)
+историко-философско-культурный:историко-философско-культурн п_a ; 		! TODO stress/continuation class (from снятник)
+стихийно-культурный:стихийно-культурн п_a ; 		! TODO stress/continuation class (from снятник)
+социально-культурный:социально-культурн п_a ; 		! TODO stress/continuation class (from снятник)
+розово-красный:розово-красн п_a ; 		! TODO stress/continuation class (from снятник)
+сизо-красный:сизо-красн п_a ; 		! TODO stress/continuation class (from снятник)
+бело-красный:бело-красн п_a ; 		! TODO stress/continuation class (from снятник)
+нестерпимо-красный:нестерпимо-красн п_a ; 		! TODO stress/continuation class (from снятник)
+синевато-красный:синевато-красн п_a ; 		! TODO stress/continuation class (from снятник)
+ужасно-прекрасный:ужасно-прекрасн п_a ; 		! TODO stress/continuation class (from снятник)
+материально-телесный:материально-телесн п_a ; 		! TODO stress/continuation class (from снятник)
+уютно-тесный:уютно-тесн п_a ; 		! TODO stress/continuation class (from снятник)
+водно-ресурсный:водно-ресурсн п_a ; 		! TODO stress/continuation class (from снятник)
+перегнойно-карбонатный:перегнойно-карбонатн п_a ; 		! TODO stress/continuation class (from снятник)
+организационно-штатный:организационно-штатн п_a ; 		! TODO stress/continuation class (from снятник)
+финансово-бюджетный:финансово-бюджетн п_a ; 		! TODO stress/continuation class (from снятник)
+контрольно-счетный:контрольно-счетн п_a ; 		! TODO stress/continuation class (from снятник)
+военно-учетный:военно-учетн п_a ; 		! TODO stress/continuation class (from снятник)
+финансово-кредитный:финансово-кредитн п_a ; 		! TODO stress/continuation class (from снятник)
+денежно-кредитный:денежно-кредитн п_a ; 		! TODO stress/continuation class (from снятник)
+ядерно-магнитный:ядерно-магнитн п_a ; 		! TODO stress/continuation class (from снятник)
+тошнотворно-интеллигентный:тошнотворно-интеллигентн п_a ; 		! TODO stress/continuation class (from снятник)
+медико-транспортный:медико-транспортн п_a ; 		! TODO stress/continuation class (from снятник)
+дорожно-транспортный:дорожно-транспортн п_a ; 		! TODO stress/continuation class (from снятник)
+военно-транспортный:военно-транспортн п_a ; 		! TODO stress/continuation class (from снятник)
+организационно-транспортный:организационно-транспортн п_a ; 		! TODO stress/continuation class (from снятник)
+санаторно-курортный:санаторно-курортн п_a ; 		! TODO stress/continuation class (from снятник)
+структурно-контрастный:структурно-контрастн п_a ; 		! TODO stress/continuation class (from снятник)
+эмоционально-личностный:эмоционально-личностн п_a ; 		! TODO stress/continuation class (from снятник)
+природно-ландшафтный:природно-ландшафтн п_a ; 		! TODO stress/continuation class (from снятник)
+песчано-галечный:песчано-галечн п_a ; 		! TODO stress/continuation class (from снятник)
+злободневно-архаичный:злободневно-архаичн п_a ; 		! TODO stress/continuation class (from снятник)
+народно-праздничный:народно-праздничн п_a ; 		! TODO stress/continuation class (from снятник)
+центрально-симметричный:центрально-симметричн п_a ; 		! TODO stress/continuation class (from снятник)
+стихийно-диалектичный:стихийно-диалектичн п_a ; 		! TODO stress/continuation class (from снятник)
+информационно-справочный:информационно-справочн п_a ; 		! TODO stress/continuation class (from снятник)
+мясо-молочный:мясо-молочн п_a ; 		! TODO stress/continuation class (from снятник)
+торгово-закупочный:торгово-закупочн п_a ; 		! TODO stress/continuation class (from снятник)
+папиросно-махорочный:папиросно-махорочн п_a ; 		! TODO stress/continuation class (from снятник)
+кукольно-масочный:кукольно-масочн п_a ; 		! TODO stress/continuation class (from снятник)
+естественно-научный:естественно-научн п_a ; 		! TODO stress/continuation class (from снятник)
+последовательно-научный:последовательно-научн п_a ; 		! TODO stress/continuation class (from снятник)
+метано-воздушный:метано-воздушн п_a ; 		! TODO stress/continuation class (from снятник)
+озоно-воздушный:озоно-воздушн п_a ; 		! TODO stress/continuation class (from снятник)
+официально-публично-легальный:официально-публично-легаль%^Fен п_a ; 		! TODO stress/continuation class (from снятник)
+учебно-материальный:учебно-материаль%^Fен п_a ; 		! TODO stress/continuation class (from снятник)
+товарно-материальный:товарно-материаль%^Fен п_a ; 		! TODO stress/continuation class (from снятник)
+административно-территориальный:административно-территориаль%^Fен п_a ; 		! TODO stress/continuation class (from снятник)
+медико-социальный:медико-социаль%^Fен п_a ; 		! TODO stress/continuation class (from снятник)
+профессионально-социальный:профессионально-социаль%^Fен п_a ; 		! TODO stress/continuation class (from снятник)
+личностно-профессиональный:личностно-профессиональ%^Fен п_a ; 		! TODO stress/continuation class (from снятник)
+структурно-функциональный:структурно-функциональ%^Fен п_a ; 		! TODO stress/continuation class (from снятник)
+ассоциативно-эмоциональный:ассоциативно-эмоциональ%^Fен п_a ; 		! TODO stress/continuation class (from снятник)
+положительно-эмоциональный:положительно-эмоциональ%^Fен п_a ; 		! TODO stress/continuation class (from снятник)
+французисто-инфернальный:французисто-инферналь%^Fен п_a ; 		! TODO stress/continuation class (from снятник)
+газетно-журнальный:газетно-журналь%^Fен п_a ; 		! TODO stress/continuation class (from снятник)
+жилищно-коммунальный:жилищно-коммуналь%^Fен п_a ; 		! TODO stress/continuation class (from снятник)
+витаминно-минеральный:витаминно-минераль%^Fен п_a ; 		! TODO stress/continuation class (from снятник)
+солярно-планетарно-астральный:солярно-планетарно-астраль%^Fен п_a ; 		! TODO stress/continuation class (from снятник)
+своевольно-парадоксальный:своевольно-парадоксаль%^Fен п_a ; 		! TODO stress/continuation class (from снятник)
+уголовно-процессуальный:уголовно-процессуаль%^Fен п_a ; 		! TODO stress/continuation class (from снятник)
+умильно-патриархальный:умильно-патриархаль%^Fен п_a ; 		! TODO stress/continuation class (from снятник)
+ориентировочно-пробовательный:ориентировочно-пробователь%^Fен п_a ; 		! TODO stress/continuation class (from снятник)
+культурно-образовательный:культурно-образователь%^Fен п_a ; 		! TODO stress/continuation class (from снятник)
+помпезно-бессодержательный:помпезно-бессодержатель%^Fен п_a ; 		! TODO stress/continuation class (from снятник)
+культурно-развлекательный:культурно-развлекатель%^Fен п_a ; 		! TODO stress/continuation class (from снятник)
+занудно-описательный:занудно-описатель%^Fен п_a ; 		! TODO stress/continuation class (from снятник)
+ласково-воспитательный:ласково-воспитатель%^Fен п_a ; 		! TODO stress/continuation class (from снятник)
+учебно-воспитательный:учебно-воспитатель%^Fен п_a ; 		! TODO stress/continuation class (from снятник)
+окислительно-восстановительный:окислительно-восстановитель%^Fен п_a ; 		! TODO stress/continuation class (from снятник)
+национально-освободительный:национально-освободитель%^Fен п_a ; 		! TODO stress/continuation class (from снятник)
+холодно-пренебрежительный:холодно-пренебрежитель%^Fен п_a ; 		! TODO stress/continuation class (from снятник)
+предварительно-приблизительный:предварительно-приблизитель%^Fен п_a ; 		! TODO stress/continuation class (from снятник)
+информационно-вычислительный:информационно-вычислитель%^Fен п_a ; 		! TODO stress/continuation class (from снятник)
+координатно-измерительный:координатно-измеритель%^Fен п_a ; 		! TODO stress/continuation class (from снятник)
+словесно-зрительный:словесно-зритель%^Fен п_a ; 		! TODO stress/continuation class (from снятник)
+санитарно-просветительный:санитарно-просветитель%^Fен п_a ; 		! TODO stress/continuation class (from снятник)
+морально-нравоучительный:морально-нравоучитель%^Fен п_a ; 		! TODO stress/continuation class (from снятник)
+уныло-серый:уныло-сер п_a ; 		! TODO stress/continuation class (from снятник)
+грязно-серый:грязно-сер п_a ; 		! TODO stress/continuation class (from снятник)
+песочно-серый:песочно-сер п_a ; 		! TODO stress/continuation class (from снятник)
+голубовато-серый:голубовато-сер п_a ; 		! TODO stress/continuation class (from снятник)
+землисто-серый:землисто-сер п_a ; 		! TODO stress/continuation class (from снятник)
+светло-белокурый:светло-белокур п_a ; 		! TODO stress/continuation class (from снятник)
+серо-белокурый:серо-белокур п_a ; 		! TODO stress/continuation class (from снятник)
+розово-русый:розово-рус п_a ; 		! TODO stress/continuation class (from снятник)
+матросско-полосатый:матросско-полосат п_a ; 		! TODO stress/continuation class (from снятник)
+поперечно-полосатый:поперечно-полосат п_a ; 		! TODO stress/continuation class (from снятник)
+перламутрово-ядовитый:перламутрово-ядовит п_a ; 		! TODO stress/continuation class (from снятник)
+оранжево-жёлтый:оранжево-жёлт п_a ; 		! TODO stress/continuation class (from снятник)
+лимонно-жёлтый:лимонно-жёлт п_a ; 		! TODO stress/continuation class (from снятник)
+серно-жёлтый:серно-жёлт п_a ; 		! TODO stress/continuation class (from снятник)
+красно-жёлтый:красно-жёлт п_a ; 		! TODO stress/continuation class (from снятник)
+солнечно-жёлтый:солнечно-жёлт п_a ; 		! TODO stress/continuation class (from снятник)
+песочно-жёлтый:песочно-жёлт п_a ; 		! TODO stress/continuation class (from снятник)
+беспорядочно-частый:беспорядочно-част п_a ; 		! TODO stress/continuation class (from снятник)
+песчано-глинистый:песчано-глинист п_a ; 		! TODO stress/continuation class (from снятник)
+четко-ребристый:четко-ребрист п_a ; 		! TODO stress/continuation class (from снятник)
+чёрно-золотистый:чёрно-золотист п_a ; 		! TODO stress/continuation class (from снятник)
+цельно-обомкнутый:цельно-обомкнут п_a ; 		! TODO stress/continuation class (from снятник)
+округло-сплюснутый:округло-сплюснут п_a ; 		! TODO stress/continuation class (from снятник)
+
    !                                   п_a_+_1a
 !_незваный-непрошеный:незва́ный-непро́шен п_a_+_1a ; ! Znew 1a + 1a TODO CHECK REVIEW FIX
 !_нежданный-негаданный:нежда́нный-нега́дан%^Fен п_a_+_1a ; ! Z 1*a + 1*a TODO CHECK REVIEW FIX
@@ -15985,6 +16259,7 @@ LEXICON Adjective
 непонятый:непо́нят п_a'~_кф_ж_затрудн. ; ! Znew 1a'~ кф ж затрудн.
    !                                   п_a/b
 лёгкий:л п_a/b_ёгок_егч ; ! Z 3*a/b, ё %tr% кф м лёгок, сравн. ле/гче
+воздушно-лёгкий:возду́шно-л п_a/b_ёгок_егч ;
 горячий:горя́ч п_a/b ; ! Z 4a/b
 здоровый²:здоро́в п_a/b ; ! Z 1a/b
 тяжёлый:тяжёл п_a/b ; ! Z 1a/b, ё
@@ -16074,7 +16349,9 @@ LEXICON Adjective
 гибкий:ги́б%^Fок п_a/c ; ! Z 3*a/c
 шибкий:ши́б%^Fок п_a/c ; ! Z 3*a/c
 громкий:гро́м%^Fок п_a/c ; ! Z 3*a/c
+плаксиво-громкий:плаксиво-гро́м%^Fок п_a/c ; ! TODO stress (from снятник)
 звонкий:зво́н%^Fок п_a/c ; ! Z 3*a/c
+прозрачно-звонкий:прозра̀чно-зво́н%^Fок п_a/c ; ! Z 3*a/c
 жаркий:жа́р%^Fок п_a/c ; ! Z 3*a/c
 меткий:ме́т%^Fок п_a/c ; ! Z 3*a/c
 жёсткий:жёст%^Fок п_a/c ; ! Z 3*a/c, ё
@@ -16148,6 +16425,7 @@ LEXICON Adjective
 липкий:ли́п%^Fок п_a/c_сравн._затрудн. ; ! Z 3*a/c сравн. затрудн.
 торопкий:то́ро́п%^Fок п_a/c_сравн._затрудн. ; ! Znew 3*a/c сравн. затрудн.
 хрупкий:хру́п%^Fок п_a/c_сравн._затрудн. ; ! Z 3*a/c сравн. затрудн.
+хрустально-хрупкий:хруста̀льно-хру́п%^Fок п_a/c_сравн._затрудн. ;
 юркий:ю́р%^Fок п_a/c_сравн._затрудн. ; ! Z 3*a/c сравн. затрудн.
 краткий:кра́т%^Fок п_a/c_сравн._затрудн. ; ! Z 3*a/c сравн. затрудн.
 кроткий:кро́т%^Fок п_a/c_сравн._затрудн. ; ! Z 3*a/c сравн. затрудн.
@@ -16166,6 +16444,8 @@ LEXICON Adjective
 резкий:ре́з%^Fок п_a/c' ; ! Z 3*a/c'
 крепкий:кре́п%^Fок п_a/c' ; ! Z 3*a/c'
 яркий:я́р%^Fок п_a/c' ; ! Z 3*a/c'
+мертвенно-яркий:мертвенно-я́р%^Fок п_a/c' ; ! TODO stress
+аляповато-яркий:аляповато-я́р%^Fок п_a/c' ; ! TODO stress
 тихий:ти́х п_a/c' ; ! Z 3a/c'
 слабый:сла́б п_a/c' ; ! Z 1a/c'
 грубый:гру́б п_a/c' ; ! Z 1a/c'
@@ -19287,6 +19567,7 @@ LEXICON Adjective
 старообрядческий:старообря́дческ п_as~ ; ! Z 3a%x%~
 подрядческий:подря́дческ п_as~ ; ! Z 3a%x%~
 человеческий:челове́ческ п_as~ ; ! Z 3a%x%~
+естественно-человеческий:естѐственно-челове́ческ п_as~ ;
 нечеловеческий:нечелове́ческ п_as~ ; ! Z 3a%x%~
 всечеловеческий:всечелове́ческ п_as~ ; ! Z 3a%x%~
 общечеловеческий:о̀бщечелове́ческ п_as~ ; ! Z 3a%x%~
@@ -23956,6 +24237,7 @@ LEXICON Adjective
 самоплавкий:самопла́в%^Fок п_a~ ; ! Z 3*a~
 прегадкий:прега́д%^Fок п_a~ ; ! Znew 3*a~
 кисло-сладкий:кѝсло-сла́д%^Fок п_a~ ; ! Z 3*a~
+горько-сладкий:го̀рько-сла́д%^Fок п_a~ ;
 недалёкий:недалёк п_a~ ; ! Z 3a~
 розовощёкий:розовощёк п_a~ ; ! Z 3a~
 круглощёкий:круглощёк п_a~ ; ! Z 3a~
@@ -24133,6 +24415,8 @@ LEXICON Adjective
 капельножидкий:ка̀пельножи́д%^Fок п_a~_кф_ж_затрудн. ; ! Z 3*a~ кф ж затрудн.
 светло-синий:свѐтло-си́нь п_a~_кф_ж_затрудн. ; ! Znew 2a~ кф ж затрудн.
 тёмно-синий:тё̀мно-си́нь п_a~_кф_ж_затрудн. ; ! Znew 2a~ кф ж затрудн.
+жёлто-синий:жё̀лто-си́нь п_a~_кф_ж_затрудн. ;
+густо-синий:гу̀сто-си́нь п_a~_кф_ж_затрудн. ;
 ультраправый:у̀льтрапра́в п_a~_кф_ж_затрудн. ; ! Z 1a~ кф ж затрудн.
 ультралевый:у̀льтрале́в п_a~_кф_ж_затрудн. ; ! Z 1a~ кф ж затрудн.
 сверхновый:свѐрхно́в п_a~_кф_ж_затрудн. ; ! Znew 1a~ кф ж затрудн.
@@ -24451,6 +24735,49 @@ LEXICON Adjective
    !                                   п_b/c~_кф_см._развито/й
 неразвитой:не п_b/c~_развитой ; ! Z 1b/c~ %tr% кф см. развито/й
    !                                   п_b?
+
+свинцово-голубой:свинцово-голуб п_b? ; 		! TODO stress (from снятник)
+сизо-голубой:сизо-голуб п_b? ; 		! TODO stress (from снятник)
+блекло-голубой:блекло-голуб п_b? ; 		! TODO stress (from снятник)
+эмоционально-волевой:эмоционально-волев п_b? ; 		! TODO stress (from снятник)
+учебно-боевой:учебно-боев п_b? ; 		! TODO stress (from снятник)
+паротитно-коревой:паротитно-корев п_b? ; 		! TODO stress (from снятник)
+транспортно-путевой:транспортно-путев п_b? ; 		! TODO stress (from снятник)
+социально-речевой:социально-речев п_b? ; 		! TODO stress (from снятник)
+минерально-сырьевой:минерально-сырьев п_b? ; 		! TODO stress (from снятник)
+судебно-правовой:судебно-правов п_b? ; 		! TODO stress (from снятник)
+нормативно-правовой:нормативно-правов п_b? ; 		! TODO stress (from снятник)
+хозяйственно-правовой:хозяйственно-правов п_b? ; 		! TODO stress (from снятник)
+договорно-правовой:договорно-правов п_b? ; 		! TODO stress (from снятник)
+спинно-мозговой:спинно-мозгов п_b? ; 		! TODO stress (from снятник)
+лечебно-трудовой:лечебно-трудов п_b? ; 		! TODO stress (from снятник)
+материально-тепловой:материально-теплов п_b? ; 		! TODO stress (from снятник)
+культурно-смысловой:культурно-смыслов п_b? ; 		! TODO stress (from снятник)
+ценностно-смысловой:ценностно-смыслов п_b? ; 		! TODO stress (from снятник)
+содержательно-смысловой:содержательно-смыслов п_b? ; 		! TODO stress (from снятник)
+гравитационно-волновой:гравитационно-волнов п_b? ; 		! TODO stress (from снятник)
+теоретико-игровой:теоретико-игров п_b? ; 		! TODO stress (from снятник)
+спортивно-игровой:спортивно-игров п_b? ; 		! TODO stress (from снятник)
+патрульно-постовой:патрульно-постов п_b? ; 		! TODO stress (from снятник)
+культурно-бытовой:культурно-бытов п_b? ; 		! TODO stress (from снятник)
+социально-бытовой:социально-бытов п_b? ; 		! TODO stress (from снятник)
+народно-смеховой:народно-смехов п_b? ; 		! TODO stress (from снятник)
+жёлто-седой:жё̀лто-сед п_b? ; 		! TODO stress (from снятник)
+кладово-духовочно-погребной:кладово-духовочно-погребн п_b? ; 		! TODO stress (from снятник)
+местно-прикладной:местно-прикладн п_b? ; 		! TODO stress (from снятник)
+ажурно-вырезной:ажурно-вырезн п_b? ; 		! TODO stress (from снятник)
+контрольно-пропускной:контрольно-пропускн п_b? ; 		! TODO stress (from снятник)
+оперативно-розыскной:оперативно-розыскн п_b? ; 		! TODO stress (from снятник)
+оперативно-сыскной:оперативно-сыскн п_b? ; 		! TODO stress (from снятник)
+диалектно-племенной:диалектно-племенн п_b? ; 		! TODO stress (from снятник)
+пространственно-временной:пространственно-временн п_b? ; 		! TODO stress (from снятник)
+причинно-временной:причинно-временн п_b? ; 		! TODO stress (from снятник)
+горно-лесной:горно-лесн п_b? ; 		! TODO stress (from снятник)
+санаторно-лесной:санаторно-лесн п_b? ; 		! TODO stress (from снятник)
+республиканско-областной:республиканско-областн п_b? ; 		! TODO stress (from снятник)
+зелено-черно-золотой:зелено-черно-золот п_b? ; 		! TODO stress (from снятник)
+непроходимо-густой:непроходимо-густ п_b? ; 		! TODO stress (from снятник)
+
 голубой:голу́б п_b? ; ! Znew 1b%[x]%
 ярко-голубой:я̀рко-голу́б п_b? ; ! Z 1b%[x]%
 светло-голубой:свѐтло-голу́б п_b? ; ! Z 1b%[x]%
@@ -25674,6 +26001,9 @@ LEXICON Adjective
 электрозаводской:элѐктрозаво́дск п_b?~ ; ! Z 3b%[x]%~
 автозаводской:а̀втозаво́дск п_b?~ ; ! Z 3b%[x]%~
 городской:горо́дск п_b?~ ; ! Z 3b%[x]%~
+оперативно-складской:оператѝвно-скла́дск п_b?~ ;
+промышленно-городской:промы̀шленно-горо́дск п_b?~ ;
+николо-ямской:николо-я́мск п_b?~ ; 		! TODO stress (from снятник)
 внегородской:внѐгоро́дск п_b?~ ; ! Z 3b%[x]%~
 общегородской:о̀бщегоро́дск п_b?~ ; ! Z 3b%[x]%~
 внутригородской:внутрѝгоро́дск п_b?~ ; ! Z 3b%[x]%~

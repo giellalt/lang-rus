@@ -30,9 +30,11 @@ analyser-mt-gt-desc.hfst: analyser-mt-gt-desc.tmp.hfst \
 		> $@
 
 #generator-mt-gt-norm.hfst: generator-mt-gt-norm.tmp.hfst \
+#				  $(top_builddir)/src/filters/remove-dialect-tags.hfst   \
 #				  $(top_builddir)/src/orthography/destress.compose.hfst
 #	$(AM_V_RGX2FST)$(PRINTF) "\
 #				@\"$<\" \
+#			.o. @\"$(top_builddir)/src/filters/remove-dialect-tags.hfst\"  \
 #			.o. @\"$(top_builddir)/src/orthography/destress.compose.hfst\" \
 #			;" \
 #		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --xerox-composition=ON \

@@ -135,7 +135,7 @@ Vx:0 <=> .#. [ Letter: | %^F:0 | %>:0 ]+ _ %>:0 ;
             ! TODO examples that are subject to this rule?
 where Vx in ( а е́ ё и я а́ и́ я́ ) ;
 
-"е>0: 1) Delete lexical vowel endings; 2) Delete fleeting vowels where ending begins with a vowel; 3) Delete е/е́ after comparative adjective stem mutation."
+"е>0: 1) Delete lexical vowel endings; 2) Delete fleeting vowels where ending begins with a vowel; 3) Delete е after comparative adjective stem mutation."
 е:0 <=> .#. [ Letter: | %^F:0 ]+ _ %>:0 ;
             ! see examples in parallel rule of "V>0" above
          %^F:0 _ [ Letter ]+ (End) %>:0 :V ;
@@ -218,11 +218,11 @@ where Vx in ( а е́ ё и я а́ и́ я́ ) ;
             ! 
           \[%^F:0] V: н: ь:0 %>:0 _ .#. ;
             ! си́нь>Z
-            ! си́нь00
+            ! си́н00ь
                    C: н: ь:0 %>:0 _ .#. ;
 
 "Z>й"
-%^Z:й <=> VЕnd _ .#. ; ! BROKEN? TODO perhaps this should include SCEnd (or some subset). Not all endings are represented for Z.
+%^Z:й <=> \%^F:0 V: й: %>:0 _ .#. ; ! BROKEN? TODO perhaps this should include SCEnd (or some subset). Not all endings are represented for Z.
             ! длинноше́й>Z
             ! длинноше́00й
 

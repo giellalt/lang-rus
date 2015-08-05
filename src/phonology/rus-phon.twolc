@@ -96,11 +96,11 @@ HCEnd = [ HCEndV | HCEndC ] ;
 VEndV = V: [ я́:0 | ё:0 | е́:0 | я:0 | е:0 ] %>:0 ;   ! судия́, остриё, житие́, Мари́я, поня́тие
 VEndC = \%^F:0 V: й:0 %>:0 ;                               ! музе́й
 VEnd = [ VEndV | VEndC ] ;
-JEndV = %^F:0 V: й: [ я́:0 | ё:0 | я:0 | е:0 ] %>:0 ; ! семья́, бельё, колдунья, счастье
-JEndC = %^F:0 V: й: %>:0 ;                           ! мураве́й
+JEndV = C: %^F:0 V: й: [ я́:0 | ё:0 | я:0 | е:0 ] %>:0 ; ! семья́, бельё, колдунья, счастье
+JEndC = C: %^F:0 V: й: %>:0 ;                           ! мураве́й
 JEnd = [ JEndV | JEndC ] ;
-jEndV = \%^F:0 V: й:й [ я́:0 | ё:0 | я:0 | е:0 ] %>:0 ; ! вайя
-jEndC = \%^F:0 V: й:й й:0 %>:0 ;                       ! Гавайи (lexical form = Гавайй)
+jEndV = \%^F:0 V: (%^F:0 V:) й:й [ я́:0 | ё:0 | я:0 | е:0 ] %>:0 ; ! вайя
+jEndC = \%^F:0 V: (%^F:0 V:) й:й й:0 %>:0 ;                       ! Гавайи (lexical form = Гавайй)
 jEnd = [ jEndV | jEndC ] ;
 1ConjV = V %<:0 ;                            ! читать, умолять, белеть, воевать, etc.?
 1ConjJ = (%^F:0 V:) :ь %<:0 ;                  ! бить, бей, бью
@@ -151,7 +151,7 @@ where Vx in ( а е́ ё и я а́ и́ я́ ) ;
                     ! see examples in parallel rule of "V>0" above
                     ! любFо́вь>ы́   любFо́вь>ью   This does not delete люб(о)вью, since the ь is 1st
                     ! люб00в00и́   люб0о́в00ью   
-                  [ VELEndV | HUSHEndV | цEndV | HCEndV | FVn0 | JEndV | jEnd ] _ в:0 .#. ; ! zero GenPl
+                  [ VELEndV | HUSHEndV | цEndV | HCEndV | FVn0 | JEndV | jEndV ] _ в:0 .#. ; ! zero GenPl
                     ! кни́га>ов   чудо́вище>ов   пти́ца>ов   пи́ла́>о́в   ба́шFеня>ов   се́мFе́йя́>ов   ва́йя>ов
                     ! кни́г0000   чудо́вищ0000   пти́ц0000   пи́л0000   ба́ш0ен0000   сем0е́й0000   ва́й0000
 
@@ -240,7 +240,7 @@ where Vx in ( ы ы́ )
     matched;
 
 "ю>у and я>а (stressed or unstressed) after a velar, husher, or ц"
-Vx:Vy <=> [ VELEnd | HUSHEnd | цEnd | VerbHUSH ] _ ;
+Vx:Vy <=> [ VELEnd | HUSHEnd | цEnd | VerbHUSH ] _ [ ?* - [ %>:0 ?* ] ] .#. ;
             ! слы́ш<ю   и́скM<я́   This rule does not seem to ever apply for nominals
             ! слы́ш0у   и0щ00а́
 where Vx in ( ю ю́ я я́ )
@@ -248,7 +248,7 @@ where Vx in ( ю ю́ я я́ )
     matched;
 
 "[а а́ о́] > [я я́ ё] after soft-consonant stems (including й: муравей, семья, бельё, etc) and vowel stems (музей, критерий, понятие, Мария, etc) including 1st conj verbs like читать, болеть, воевать, etc."
-Vx:Vy <=> [ SCEnd | VEnd | JEnd | jEnd ] _ [ ?* - [ [ в:й | в:0 ] ?* ] ] .#. ;
+Vx:Vy <=> [ SCEnd | VEnd | JEnd | jEnd ] _ [ ?* - [ [ %>:0 | в:й | в:0 ] ?* ] ] .#. ;
           1ConjV _ ; 
             
 where Vx in ( а а́ о́ )

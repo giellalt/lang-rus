@@ -350,6 +350,10 @@ LEXICON м_d1_JPl
 +N+Msc: MSgEnd ;
 +N+Msc:%^Fей аPlStem ;
 
+LEXICON м_d1_ь_JPl
++N+Msc:ь MSgEnd ;
++N+Msc:%^Fей аPlStem ;
+
 LEXICON м_d1_К_ЧЬ
 +N+Msc:к MSgEnd ;
 +N+Msc:ч%^Fей аPlStem ;
@@ -758,7 +762,7 @@ LEXICON мо_[жо_b]_судия
 
 LEXICON мо_[жо_c]_я_ья́/ёв
 +N+Msc:я FSgStem_anim ;
-+N+Msc:%^Fей аPlEnd_anim ;
++N+Msc:%^Fе́й аPlEnd_anim ;
 
 LEXICON мо_[мс_a]
 +N+Msc: Noun_мс-п_a_Msc_anim ;
@@ -1251,7 +1255,7 @@ LEXICON с_a_Р._мн._затрудн.
 +N+Neu: аPlStem_gPrb ;     !Cyrillic 'а' in 'аPl'
 
 LEXICON с_a_JPl
-+N+Neu: NSgStem ;
++N+Neu:о NSgStem ;
 +N+Neu:%^Fей аPlStem ;     !Cyrillic 'а' in 'аPl'
 
 LEXICON с_a_о_и

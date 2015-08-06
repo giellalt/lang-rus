@@ -7,6 +7,8 @@ Alphabet
       %^G:0  ! Facilitates GenPl ов/ев when it "should" be zero or ей (its presence blocks the transformation rule)
       %^Z:0  ! "Zero ending" resolves to 0/ь/й (used for short-form adj's)
       %^M:0  ! Verb stem mutation
+      %^T:т  ! Archiphoneme for realizing the т~щ verbal alternation (as opposed to т~ч)
+      %^D:д  ! Archiphoneme for realizing the д~жд verbal alternation (as opposed to д~ж)
       %^Iu:ь %^Iu:й %^Iu:и   ! Imperative ending (unstressed)
       %^Is:й %^Is:и́ %^Is:0   ! Imperative ending (stressed)
       
@@ -222,7 +224,7 @@ where Vx in ( а е́ ё и я а́ и́ я́ ) ;
                    C: н: ь:0 %>:0 _ .#. ;
 
 "Z>й"
-%^Z:й <=> \%^F:0 V: й: %>:0 _ .#. ; ! BROKEN? TODO perhaps this should include SCEnd (or some subset). Not all endings are represented for Z.
+%^Z:й <=> \%^F:0 V: й: %>:0 _ .#. ;
             ! длинноше́й>Z
             ! длинноше́00й
 
@@ -328,14 +330,17 @@ where Cx in ( б д т ) ;
 Cx:щ <=> с:0 _ %^M: ;
 where Cx in ( к т ) ;
 
-"[ з с д ] > [ ж ш ж ] Verb stem mutations with ^M symbol (г к х covered in another rule)"
+"[ з с д T D ] > [ ж ш ж щ ж ] Verb stem mutations with ^M symbol (г к х covered in another rule)"
 Cx:Cy <=> _ %^M: ;
-where Cx in ( д з с )
-      Cy in ( ж ж ш )
+where Cx in ( д з с %^T %^D )
+      Cy in ( ж ж ш щ   ж )
       matched ;
 
-"^M>л Addition of л after labials in 'mutation' with ^M symbol (verbs)"
+"M>л Addition of л after labials in 'mutation' with ^M symbol (verbs)"
 %^M:л <=> [ б: | п: | в: | ф: | м: ] _ ;
+
+"M>д in DM>жд mutation"
+%^M:д <=> %^D: _ [ е: | ё: ] н ( н ) %>:0 ;
 
 "л>0 in Masc past tense after consonant stems"
 л:0 <=> CNoDT: %<:0 _ ( с я ) .#. ;

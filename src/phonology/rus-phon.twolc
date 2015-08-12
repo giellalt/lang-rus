@@ -9,6 +9,7 @@ Alphabet
       %^M:0  ! Verb stem mutation
       %^T:т  ! Archiphoneme for realizing the т~щ verbal alternation (as opposed to т~ч)
       %^D:д  ! Archiphoneme for realizing the д~жд verbal alternation (as opposed to д~ж)
+      %^R:р  ! Archiphoneme for бороть and пороть
       %^Iu:ь %^Iu:й %^Iu:и   ! Imperative ending (unstressed)
       %^Is:й %^Is:и́ %^Is:0   ! Imperative ending (stressed)
       
@@ -251,7 +252,7 @@ where Vx in ( ю ю́ я я́ )
 
 "[а а́ о́] > [я я́ ё] after soft-consonant stems (including й: муравей, семья, бельё, etc) and vowel stems (музей, критерий, понятие, Мария, etc) including 1st conj verbs like читать, болеть, воевать, etc."
 Vx:Vy <=> [ SCEnd | VEnd | JEnd | jEnd ] _ [ ?* - [ [ %>:0 | в:й | в:0 ] ?* ] ] .#. ;
-          1ConjV _ ; 
+          1ConjV _ ; ! This does not seem to match anything TODO
             
 where Vx in ( а а́ о́ )
       Vy in ( я я́ ё )
@@ -260,7 +261,8 @@ where Vx in ( а а́ о́ )
 "у>ю (1) after soft-consonant stems (including й: муравей, семья, бельё, etc) and vowel stems (музей, критерий, понятие, Мария, etc) including 1st conj verbs like читать, болеть, воевать, etc. (2) in 1st conjugation after л or ь"
 Vx:Vy <=> [ SCEnd | VEnd | JEnd | jEnd ] _ [ ?* - [ [ в:й | в:0 ] ?* ] ] .#. ;
           [ 1ConjV | 1ConjJ ] _ ;
-          :л %<:0 _ ; ! Verbs in ~роть have ю in the lexc output
+          :л %<:0 _ ;
+          %^R:р %<:0 _ ; ! Verbs in ~роть
 where Vx in ( у у́ )
       Vy in ( ю ю́ )
     matched;
@@ -358,7 +360,7 @@ where Ex in ( %^Iu %^Is ) ;
 "Iu>и in Imperatives with double-consonant stems, and щ stems"
 %^Iu:и <=> :C (:ь) [ :C - :й ] (%^M:0) %<:0 _ (т е) (с [ :я | :ь ]) .#. ;
            :щ (%^M:0) %<:0 _ (т е) (с [ :я | :ь ]) .#. ; !Is this true? Examples?
-!           .#. ( :п :о ) :в :ы́ [ :Letter | %^F:0 ]*-:V :C (%^M:0) %<:0 _ (т е) (с [ :я | :ь ]) .#. ; ! BROKEN handled in lexc
+!           .#. ( п: о: ) в: ы́: [ Letter | %^F:0 ]* :V :C (%^M:0) %<:0 _ (т е) ( с я: ) .#. ; ! BROKEN handled in lexc
                 ! по́мн<I   обры́скM<I  мо́рщ<I
                 ! по́мн0и   обры́0щ00и  мо́рщ0и
 

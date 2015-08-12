@@ -35,6 +35,7 @@ Multichar_Symbols
 %^Z  !!= * @CODE@ = Zero ending (resolves to 0/й/ь)
 %^M  !!= * @CODE@ = Verb stem mutation
 %^D  !!= * @CODE@ = archiphoneme for д~жд alternation in past passive participles
+%^R  !!= * @CODE@ = archiphoneme for бороть and пороть
 %^T  !!= * @CODE@ = archiphoneme for т~щ alternation in verbs
 %^Iu !!= * @CODE@ = Imperative ending (unstressed)
 %^Is !!= * @CODE@ = Imperative ending (stressed)

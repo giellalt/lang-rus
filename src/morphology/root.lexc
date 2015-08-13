@@ -30,15 +30,15 @@ Multichar_Symbols
 %>   !!= * @CODE@ = End-of-stem marker (nominals)
 %<   !!= * @CODE@ = End-of-stem marker (verbs)
 %^F  !!= * @CODE@ = Fleeting vowel marker
-%^pFо %^pFо́ !!= * @CODE@ = Verbal prefix fleeting vowel
+%^o %^O !!= * @CODE@ = Verbal prefix fleeting vowel
 %^G  !!= * @CODE@ = Irregular GenPl marker (to keep ов/ев on n stems, e.g. ов%^G
 %^Z  !!= * @CODE@ = Zero ending (resolves to 0/й/ь)
 %^M  !!= * @CODE@ = Verb stem mutation
 %^D  !!= * @CODE@ = archiphoneme for д~жд alternation in past passive participles
 %^R  !!= * @CODE@ = archiphoneme for бороть and пороть
 %^T  !!= * @CODE@ = archiphoneme for т~щ alternation in verbs
-%^Iu !!= * @CODE@ = Imperative ending (unstressed)
-%^Is !!= * @CODE@ = Imperative ending (stressed)
+%^U  !!= * @CODE@ = Imperative ending (unstressed)
+%^S !!= * @CODE@ = Imperative ending (stressed)
 
 !! !!POS
 +A      !!= * @CODE@ = Adjective

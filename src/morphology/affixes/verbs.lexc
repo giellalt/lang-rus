@@ -1456,9 +1456,9 @@ LEXICON св_5a?_еть_повел._затрудн.
 +V+Perf+TV:е Perf_Inf_V_stem ;
 +V+Perf+TV: Perf_Fut_2_stem_ImpPrb ;
 
-LEXICON св_нп_5a_еть_Impи
+LEXICON св_нп_5a_еть
 +V+Perf+IV:е Perf_Inf_V_stem ;
-+V+Perf+IV: Perf_Fut_2_stem_Impи ;
++V+Perf+IV: Perf_Fut_2_stem ;
 
 LEXICON св_5a_еть_прич._страд._ви/денный
 +V+Perf+IV:е Perf_Inf_V_stem ;
@@ -3804,14 +3804,14 @@ LEXICON св_15a_R
 !====================================== Stem type 16 =====================================
 !                                        жить, etc.
 
-LEXICON св_16a_Impи
-св_нп_16a_Impи ;
+LEXICON св_16a
+св_нп_16a ;
 +V+Perf+TV: Perf_Inf_V_stem ;
-+V+Perf+TV:в Perf_Fut_1_stem_Impи ;
++V+Perf+TV:в Perf_Fut_1_stem ;
 
-LEXICON св_нп_16a_Impи
+LEXICON св_нп_16a
 +V+Perf+IV: Perf_Inf_V_stem ;
-+V+Perf+IV:в Perf_Fut_1_stem_Impи ;
++V+Perf+IV:в Perf_Fut_1_stem ;
 
 LEXICON нсв_нп_16b/c
 +V+Impf+IV: Impf_Inf_V_shift ;
@@ -6043,68 +6043,68 @@ LEXICON PresFut_сыпаться_Fac
 +Pl3+Fac:%<ятся # ;
 
 LEXICON Imper_unstressed
-+Imp+Sg2:%<%^Iu # ;
-+Imp+Pl2:%<%^Iuте # ;
++Imp+Sg2:%<%^U # ;
++Imp+Pl2:%<%^Uте # ;
 
 LEXICON Imper_unstressed_Fac
-+Imp+Sg2+Fac:%<%^Iu # ;
-+Imp+Pl2+Fac:%<%^Iuте # ;
++Imp+Sg2+Fac:%<%^U # ;
++Imp+Pl2+Fac:%<%^Uте # ;
 
 LEXICON Imper_unstressed_Prb
-+Imp+Sg2+Prb:%<%^Iu # ;
-+Imp+Pl2+Prb:%<%^Iuте # ;
++Imp+Sg2+Prb:%<%^U # ;
++Imp+Pl2+Prb:%<%^Uте # ;
 
 LEXICON Imper_unstressed_R
-+Imp+Sg2:%<%^Iuся # ;
-+Imp+Pl2:%<%^Iuтесь # ;
++Imp+Sg2:%<%^Uся # ;
++Imp+Pl2:%<%^Uтесь # ;
 
 LEXICON Imper_unstressed_R_Fac
-+Imp+Sg2+Fac:%<%^Iuся # ;
-+Imp+Pl2+Fac:%<%^Iuтесь # ;
++Imp+Sg2+Fac:%<%^Uся # ;
++Imp+Pl2+Fac:%<%^Uтесь # ;
 
 LEXICON Imper_unstressed_R_Prb
-+Imp+Sg2+Prb:%<%^Iuся # ;
-+Imp+Pl2+Prb:%<%^Iuтесь # ;
++Imp+Sg2+Prb:%<%^Uся # ;
++Imp+Pl2+Prb:%<%^Uтесь # ;
 
 LEXICON Imper_stressed
-+Imp+Sg2:%<%^Is # ;
-+Imp+Pl2:%<%^Isте # ;
++Imp+Sg2:%<%^S # ;
++Imp+Pl2:%<%^Sте # ;
 
 LEXICON Imper_stressed_Prb
-+Imp+Sg2+Prb:%<%^Is # ;
-+Imp+Pl2+Prb:%<%^Isте # ;
++Imp+Sg2+Prb:%<%^S # ;
++Imp+Pl2+Prb:%<%^Sте # ;
 
 LEXICON Imper_stressed_R
-+Imp+Sg2:%<%^Isся # ;
-+Imp+Pl2:%<%^Isтесь # ;
++Imp+Sg2:%<%^Sся # ;
++Imp+Pl2:%<%^Sтесь # ;
 
 LEXICON Imper_stressed_R_Prb
-+Imp+Sg2+Prb:%<%^Isся # ;
-+Imp+Pl2+Prb:%<%^Isтесь # ;
++Imp+Sg2+Prb:%<%^Sся # ;
++Imp+Pl2+Prb:%<%^Sтесь # ;
 
 LEXICON Imper_mut_unstressed
-+Imp+Sg2:%^M%<%^Iu # ;
-+Imp+Pl2:%^M%<%^Iuте # ;
++Imp+Sg2:%^M%<%^U # ;
++Imp+Pl2:%^M%<%^Uте # ;
 
 LEXICON Imper_mut_unstressed_R
-+Imp+Sg2:%^M%<%^Iuся # ;
-+Imp+Pl2:%^M%<%^Iuтесь # ;
++Imp+Sg2:%^M%<%^Uся # ;
++Imp+Pl2:%^M%<%^Uтесь # ;
 
 LEXICON Imper_mut_stressed
-+Imp+Sg2:%^M%<%^Is # ;
-+Imp+Pl2:%^M%<%^Isте # ;
++Imp+Sg2:%^M%<%^S # ;
++Imp+Pl2:%^M%<%^Sте # ;
 
 LEXICON Imper_mut_stressed_R
-+Imp+Sg2:%^M%<%^Isся # ;
-+Imp+Pl2:%^M%<%^Isтесь # ;
++Imp+Sg2:%^M%<%^Sся # ;
++Imp+Pl2:%^M%<%^Sтесь # ;
 
 LEXICON Imper_и_stem
-+Imp+Sg2:и # ;
-+Imp+Pl2:ите # ;
++Imp+Sg2:%<и # ;
++Imp+Pl2:%<ите # ;
 
 LEXICON Imper_и_stem_R
-+Imp+Sg2:ись # ;
-+Imp+Pl2:итесь # ;
++Imp+Sg2:%<ись # ;
++Imp+Pl2:%<итесь # ;
 
 LEXICON Imper_mut_и_stem
 +Imp+Sg2:%^M%<и # ;
@@ -6115,52 +6115,52 @@ LEXICON Imper_mut_и_stem_R
 +Imp+Pl2:%^M%<итесь # ;
 
 LEXICON Imper_и_end
-+Imp+Sg2:и́ # ;
-+Imp+Pl2:и́те # ;
++Imp+Sg2:%<и́ # ;
++Imp+Pl2:%<и́те # ;
 
 LEXICON Imper_и_end_R
-+Imp+Sg2:и́сь # ;
-+Imp+Pl2:и́тесь # ;
++Imp+Sg2:%<и́сь # ;
++Imp+Pl2:%<и́тесь # ;
 
 LEXICON Imper_2
-+Imp+Sg2:й # ;
-+Imp+Pl2:йте # ;
++Imp+Sg2:%<й # ;
++Imp+Pl2:%<йте # ;
 
 LEXICON Imper_2_R
-+Imp+Sg2:йся # ;
-+Imp+Pl2:йтесь # ;
++Imp+Sg2:%<йся # ;
++Imp+Pl2:%<йтесь # ;
 
 LEXICON Imper_[2]
-+Imp+Sg2:и # ;
-+Imp+Sg2+Fac:й # ;
-+Imp+Pl2:ите # ;
-+Imp+Pl2+Fac:йте # ;
++Imp+Sg2:%<и # ;
++Imp+Sg2+Fac:%<й # ;
++Imp+Pl2:%<ите # ;
++Imp+Pl2+Fac:%<йте # ;
 
 LEXICON Imper_[2]_R
-+Imp+Sg2:ись # ;
-+Imp+Sg2+Fac:йся # ;
-+Imp+Pl2:итесь # ;
-+Imp+Pl2+Fac:йтесь # ;
++Imp+Sg2:%<ись # ;
++Imp+Sg2+Fac:%<йся # ;
++Imp+Pl2:%<итесь # ;
++Imp+Pl2+Fac:%<йтесь # ;
 
 LEXICON Imper_3
-+Imp+Sg2:и # ;
-+Imp+Pl2:ьте # ;
++Imp+Sg2:%<и # ;
++Imp+Pl2:%<ьте # ;
 
 LEXICON Imper_3_R
-+Imp+Sg2:ись # ;
-+Imp+Pl2:ьтесь # ;
++Imp+Sg2:%<ись # ;
++Imp+Pl2:%<ьтесь # ;
 
 LEXICON Imper_[3]
-+Imp+Sg2:и # ;
-+Imp+Sg2:ь # ;
-+Imp+Pl2+Prb:ите # ;
-+Imp+Pl2:ьте # ;
++Imp+Sg2:%<и # ;
++Imp+Sg2:%<ь # ;
++Imp+Pl2+Prb:%<ите # ;
++Imp+Pl2:%<ьте # ;
 
 LEXICON Imper_[3]_R
-+Imp+Sg2:ись # ;
-+Imp+Sg2:ься # ;
-+Imp+Pl2+Prb:итесь # ;
-+Imp+Pl2:ьтесь # ;
++Imp+Sg2:%<ись # ;
++Imp+Sg2:%<ься # ;
++Imp+Pl2+Prb:%<итесь # ;
++Imp+Pl2:%<ьтесь # ;
 
 LEXICON PresVrbAdv_stem
 +PrsAct+Adv:%<я # ;

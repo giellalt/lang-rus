@@ -3,15 +3,15 @@ Alphabet
       %>:0   ! End of nominal stem
       %<:0   ! End of verbal stem
       %^F:0  ! placed immediately before fleeting vowels Fа Fе Fо Fи Fя Fа́ Fе́ Fё Fо́ Fи́ Fя́
-      %^pFо:о %^pFо́:о́ ! verbal prefix fleeting vowels
+      %^o:о %^O:о́ ! verbal prefix fleeting vowels
       %^G:0  ! Facilitates GenPl ов/ев when it "should" be zero or ей (its presence blocks the transformation rule)
       %^Z:0  ! "Zero ending" resolves to 0/ь/й (used for short-form adj's)
       %^M:0  ! Verb stem mutation
       %^T:т  ! Archiphoneme for realizing the т~щ verbal alternation (as opposed to т~ч)
       %^D:д  ! Archiphoneme for realizing the д~жд verbal alternation (as opposed to д~ж)
       %^R:р  ! Archiphoneme for бороть and пороть
-      %^Iu:ь %^Iu:й %^Iu:и   ! Imperative ending (unstressed)
-      %^Is:й %^Is:и́ %^Is:0   ! Imperative ending (stressed)
+      %^U:ь %^U:й %^U:и   ! Imperative ending (unstressed)
+      %^S:й %^S:и́ %^S:0   ! Imperative ending (stressed)
       
       %[%>%]:%> %[%<%]:%< ! angle brackets (this is to avoid the internal use of < and >)
       
@@ -108,6 +108,7 @@ jEnd = [ jEndV | jEndC ] ;
 1ConjV = V %<:0 ;                            ! читать, умолять, белеть, воевать, etc.?
 1ConjJ = (%^F:0 V:) :ь %<:0 ;                  ! бить, бей, бью
 VerbHUSH = :HUSH (%^M:0) %<:0 ;             ! слышу (ю)
+VyPrefix = ( [ п о | п е р е | с а м о ] ) в ы́  ;
 
 Rules
 
@@ -158,26 +159,26 @@ where Vx in ( а е́ ё и я а́ и́ я́ ) ;
                     ! кни́га>ов   чудо́вище>ов   пти́ца>ов   пи́ла́>о́в   ба́шFеня>ов   се́мFе́йя́>ов   ва́йя>ов
                     ! кни́г0000   чудо́вищ0000   пти́ц0000   пи́л0000   ба́ш0ен0000   сем0е́й0000   ва́й0000
 
-"pFо/pFо́>0 Delete verbal prefix fleeting vowels"
-[ %^pFо:0 | %^pFо́:0 ] <=> [ в | н а д | н а́: д | о б | о́: б | о т | о́: т | п о д | п о́: д | п р е д | п р е́: д | с | в з: | в о з: | в о́: з: | и з: | и́: з: | н и з: | н и́: з: | р а з: | р а́: з: ] _ C (%^F:0) :V ; 
+"o/O>0 Delete verbal prefix fleeting vowels"
+[ %^o:0 | %^O:0 ] <=> [ в | н а д | н а́: д | о б | о́: б | о т | о́: т | п о д | п о́: д | п р е д | п р е́: д | с | в з: | в о з: | в о́: з: | и з: | и́: з: | н и з: | н и́: з: | р а з: | р а́: з: ] _ C (%^F:0) :V ; 
                     ! Fleeting vowels in prefixes, like сожгла сжег
                     ! сFого́н<ю́ 
                     ! с00гон0ю́
-                    ! TODO FIX об^pFо́гна́<ть = обо́гна́ть (two stress marks)
+                    ! TODO FIX об^Oгна́<ть = обо́гна́ть (two stress marks)
 
-!"pFо>о Realize unstressed verbal prefix fleeting vowel"
-!%^pFо:о <=> [ в | н а д | н а́: д | о б | о́: б | о т | о́: т | п о д | п о́: д | п р е д | п р е́: д | с | в з: | в о з: | в о́: з: | и з: | и́: з: | н и з: | н и́: з: | р а з: | р а́: з: ] _ [ ?* - [ C (%^F:0) :V ?* ] ] .#. ; 
+!"o>о Realize unstressed verbal prefix fleeting vowel"
+!%^o:о <=> [ в | н а д | н а́: д | о б | о́: б | о т | о́: т | п о д | п о́: д | п р е д | п р е́: д | с | в з: | в о з: | в о́: з: | и з: | и́: з: | н и з: | н и́: з: | р а з: | р а́: з: ] _ [ ?* - [ C (%^F:0) :V ?* ] ] .#. ; 
                     ! сFгна́<ть
                     ! согна́0ть
 
-!"pFо́>о́ Realize stressed verbal prefix fleeting vowel, if there is no stress to the right"
-!%^pFо́:о́ <=> [ в | н а д | н а́: д | о б | о́: б | о т | о́: т | п о д | п о́: д | п р е д | п р е́: д | с | в з: | в о з: | в о́: з: | и з: | и́: з: | н и з: | н и́: з: | р а з: | р а́: з: ] _ [ [ ?* - :StressedV ] - [ C (%^F:0) :V [ ?* - :StressedV ] ] ] .#. ;
+!"O>о́ Realize stressed verbal prefix fleeting vowel, if there is no stress to the right"
+!%^O:о́ <=> [ в | н а д | н а́: д | о б | о́: б | о т | о́: т | п о д | п о́: д | п р е д | п р е́: д | с | в з: | в о з: | в о́: з: | и з: | и́: з: | н и з: | н и́: з: | р а з: | р а́: з: ] _ [ [ ?* - :StressedV ] - [ C (%^F:0) :V [ ?* - :StressedV ] ] ] .#. ;
 
-"pFо́>о Destress verbal prefix fleeting vowel, if there is stress to the right"
-%^pFо́:о <=> [ в | н а д | н а́: д | о б | о́: б | о т | о́: т | п о д | п о́: д | п р е д | п р е́: д | с | в з: | в о з: | в о́: з: | и з: | и́: з: | н и з: | н и́: з: | р а з: | р а́: з: ] _ [ [ ?* :StressedV ?* ] - [ C (%^F:0) :V ?* ] ] .#. ;
+"O>о Destress verbal prefix fleeting vowel, if there is stress to the right"
+%^O:о <=> [ в | н а д | н а́: д | о б | о́: б | о т | о́: т | п о д | п о́: д | п р е д | п р е́: д | с | в з: | в о з: | в о́: з: | и з: | и́: з: | н и з: | н и́: з: | р а з: | р а́: з: ] _ [ [ ?* :StressedV ?* ] - [ C (%^F:0) :V ?* ] ] .#. ;
 
 "з>с in some verbal prefixes with dropped fleeting vowels, when the following consonant is unvoiced"
-з:с <=> [ в | в о | в о́: | и | и́: | н и | н и́: | р а | р а́: ] _ [ %^pFо:0 | %^pFо́:0 ] :UnvoicedC ;
+з:с <=> [ в | в о | в о́: | и | и́: | н и | н и́: | р а | р а́: ] _ [ %^o:0 | %^O:0 ] :UnvoicedC ;
             ! разFошFе́й<у́   разFоши́л
             ! раз0ош00ь0ю́   рас00ши́л
 
@@ -292,20 +293,20 @@ where Vx in ( у у́ )
 
 "г>ж (1) with comparative(-ее)/superlative(-ейший) adjectives (2) with ^M symbol (verbs) (3) in pres/fut before е/ё"
 г:ж <=> _ %>:0 [ е | е́: ] [ е: | й: ] ( ш: V: Letter: (V:) ) .#. ;
-          _ %^M: ;
-          _ %<:0 [ е: | ё: ] ;
+        _ %^M: ;
+        _ %<:0 [ е: | ё: ] ;
 
 "х>ш (1) with comparative(-ее)/superlative(-ейший) adjectives (2) with ^M symbol (verbs)"
 х:ш <=> _ %>:0 [ е | е́: ] [ е: | й: ] ( ш: V: Letter: (V:) ) .#. ;
-          _ %^M: ;
+        _ %^M: ;
 
 "к>ч Velar mutation (1) with comparative(-ее)/superlative(-ейший) adjectives (2) with ^M symbol (verbs) (as opposed to ск>щ) (3) in pres/fut before е/ё"
 к:ч <=> _ %>:0 [ е | е́: ] [ е: | й: ] ( ш: V: Letter: (V:) ) .#. ;
-        \с:0 _ %^M: ;
-        _ %<:0 [ е: | ё: ] ;
+   \с:0 _ %^M: ;
+     \т _ %<:0 [ е: | ё: ] ; ! печёшь, but ткёшь
 
 "т>ч (1) Pres/Fut mutation of т (as opposed to ст>щ); (2) гть/кть > 0чь"
-т:ч <=> \с: _ %^M: ;
+т:ч <=>              \с: _ %^M: ;
         [ г: | к: ] %<:0 _ ь ( с я ) .#. ;
 
 "г/к>0 before infinitive ending: гть/кть > чь"
@@ -347,35 +348,36 @@ where Cx in ( д з с %^T %^D )
 "л>0 in Masc past tense after consonant stems"
 л:0 <=> CNoDT: %<:0 _ ( с я ) .#. ;
 
-"Is>0 in imperatives with й stems (e.g. бить, вить, лить, пить, шить)"
-%^Is:0 <=> й %<:0 _ (т е) (с [ :я | :ь ]) .#. ;
+"S>0 in imperatives with й stems (e.g. бить, вить, лить, пить, шить)"
+%^S:0 <=>                                                                й %<:0 _ ( т е ) ( с [ я: | ь ] ) .#. ;
 
-"Is>и́ in imperatives with consonant stems"
-%^Is:и́ <=> [ :C - :й ] (%^M:) %<:0 _ (т е) (с [ :я | :ь ]) .#. ;
+"S>и́ in imperatives with consonant stems"
+%^S:и́ <=>                                               [ :C - :й ] (%^M:) %<:0 _ ( т е ) ( с [ я: | ь ] ) .#. ;
 
-"Is/Iu>й in Imperatives with vowel stems"
-Ex:й <=> :V %<:0 _ (т е) (с [ :я | :ь ]) .#. ;
-where Ex in ( %^Iu %^Is ) ;
+"S/U>й in Imperatives with vowel stems"
+Ex:й <=>                                                                :V %<:0 _ ( т е ) ( с [ я: | ь ] ) .#. ;
+where Ex in ( %^U %^S ) ;
 
-"Iu>и in Imperatives with double-consonant stems, and щ stems"
-%^Iu:и <=> :C (:ь) [ :C - :й ] (%^M:0) %<:0 _ (т е) (с [ :я | :ь ]) .#. ;
-           :щ (%^M:0) %<:0 _ (т е) (с [ :я | :ь ]) .#. ; !Is this true? Examples?
-!           .#. ( п: о: ) в: ы́: [ Letter | %^F:0 ]* :V :C (%^M:0) %<:0 _ (т е) ( с я: ) .#. ; ! BROKEN handled in lexc
+"U>и in Imperatives with double-consonant stems, щ stems, and single-consonant stems with prefix вы́-"
+%^U:и <=>                                      :C (:ь) [ :C - :й ] (%^M:0) %<:0 _ ( т е ) ( с [ я: | ь ] ) .#. ;
+                                                                :щ (%^M:0) %<:0 _ ( т е ) ( с [ я: | ь ] ) .#. ; !TODO native S this true?
+          .#. VyPrefix [ Letter | %^F:0 ]* :V [ :C - [ :г | :й ] ] (%^M:0) %<:0 _ ( т е ) ( с [ я: | ь ] ) .#. ;
                 ! по́мн<I   обры́скM<I  мо́рщ<I
                 ! по́мн0и   обры́0щ00и  мо́рщ0и
 
-"Iu>ь in Imperatives with consonant stem (exceptions in previous rule)"
-%^Iu:ь <=> :V [ :C - [ :щ | :г | :й ] ] (%^M:0) %<:0 _ (т е) (с [ :я | :ь ]) .#. ;
+"U>ь in Imperatives with consonant stem (exceptions in previous rule)"
+%^U:ь <=> .#. [ ?* - [ VyPrefix ?* ]] :V [ :C - [ :щ | :г | :й ] ] (%^M:0) %<:0 _ ( т е ) ( с [ я: | ь ] ) .#. ;
                 ! отве́т<I
                 ! отве́т0ь
 
-"Iu>0 in Imperatives with velar stem, e.g. лечь"
-%^Iu:0 <=> :я́ :г (%^M:0) %<:0 _ (т е) (с [ я | ь ]) .#. ;
-           й %<:0 _ (т е) (с [ :я | :ь ]) .#. ;
+"U>0 in Imperatives with velar stem, i.e. лечь"
+%^U:0 <=>                                                    :я́ :г (%^M:0) %<:0 _ ( т е ) ( с [ я: | ь ] ) .#. ; ! only applies to ~лечь
+                                                                         й %<:0 _ ( т е ) ( с [ я: | ь ] ) .#. ;
+	! повы́бFей<U    ля́г<U
+	! повы́б_ей__	ля́г__
 
-"я>ь (i.e. ся>сь) in reflexive imperatives"
+"я>ь (i.e. ся>сь) in singular reflexive imperatives"
 я:ь <=> %<:0 [ :и | :и́ ] с: _ .#. ;
-        %<:0 [ :и | :и́ | :ь | :й ] т е с _ .#. ;
 
 !If one wants to test specific two-level rules one can add test pairs to the twolc files. Support for this type of testing has only recently been added, and works only for the Xerox tools (because the pair-testing facilities in Hfst use a different format, and converting from one to the other is non-trivial without knowledge of the alphabet).
 !The test data looks like the following: (€ for positive, $ for negative)

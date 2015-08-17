@@ -164,7 +164,6 @@ where Vx in ( а е́ ё и я а́ и́ я́ ) ;
                     ! Fleeting vowels in prefixes, like сожгла сжег
                     ! сFого́н<ю́ 
                     ! с00гон0ю́
-                    ! TODO FIX об^Oгна́<ть = обо́гна́ть (two stress marks)
 
 !"o>о Realize unstressed verbal prefix fleeting vowel"
 !%^o:о <=> [ в | н а д | н а́: д | о б | о́: б | о т | о́: т | п о д | п о́: д | п р е д | п р е́: д | с | в з: | в о з: | в о́: з: | и з: | и́: з: | н и з: | н и́: з: | р а з: | р а́: з: ] _ [ ?* - [ C (%^F:0) :V ?* ] ] .#. ; 
@@ -178,7 +177,7 @@ where Vx in ( а е́ ё и я а́ и́ я́ ) ;
 %^O:о <=> [ в | н а д | н а́: д | о б | о́: б | о т | о́: т | п о д | п о́: д | п р е д | п р е́: д | с | в з: | в о з: | в о́: з: | и з: | и́: з: | н и з: | н и́: з: | р а з: | р а́: з: ] _ [ [ ?* :StressedV ?* ] - [ C (%^F:0) :V ?* ] ] .#. ;
 
 "з>с in some verbal prefixes with dropped fleeting vowels, when the following consonant is unvoiced"
-з:с <=> [ в | в о | в о́: | и | и́: | н и | н и́: | р а | р а́: ] _ [ %^o:0 | %^O:0 ] :UnvoicedC ;
+з:с <=> [ в | в о | в о́: | и | и́: | н и | н и́: | р а | р а́: ] _ [ %^o:0 | %^O:0 ] :UnvoicedC (%^F:0) :V ;
             ! разFошFе́й<у́   разFоши́л
             ! раз0ош00ь0ю́   рас00ши́л
 
@@ -361,17 +360,18 @@ where Ex in ( %^U %^S ) ;
 "U>и in Imperatives with double-consonant stems, щ stems, and single-consonant stems with prefix вы́-"
 %^U:и <=>                                      :C (:ь) [ :C - :й ] (%^M:0) %<:0 _ ( т е ) ( с [ я: | ь ] ) .#. ;
                                                                 :щ (%^M:0) %<:0 _ ( т е ) ( с [ я: | ь ] ) .#. ; !TODO native S this true?
-          .#. VyPrefix [ Letter | %^F:0 ]* :V [ :C - [ :г | :й ] ] (%^M:0) %<:0 _ ( т е ) ( с [ я: | ь ] ) .#. ;
-                ! по́мн<I   обры́скM<I  мо́рщ<I
-                ! по́мн0и   обры́0щ00и  мо́рщ0и
+          .#. VyPrefix [ Letter | %^F:0 ]* :V [ :C - [ :г | :й ] ] (%^M:0) %<:0 _ ( т е ) ( с [ я: | ь ] ) .#. ; ! TODO fix ~вы́сить, etc. perhaps by explicitly marking the prefix вы́- with an archiphoneme %^Y? This could also be used in stress rules and remove -a continuation classes that are only for вы́-prefixed verbs.
+          .#. VyPrefix [ Letter | %^F:0 ]* [ :V - [ :я́ | :я ] ] :г (%^M:0) %<:0 _ ( т е ) ( с [ я: | ь ] ) .#. ;
+                ! по́мн<U   мо́рщ<U  вы́бег<U
+                ! по́мн_и   мо́рщ_и  бы́бег_и
 
 "U>ь in Imperatives with consonant stem (exceptions in previous rule)"
 %^U:ь <=> .#. [ ?* - [ VyPrefix ?* ]] :V [ :C - [ :щ | :г | :й ] ] (%^M:0) %<:0 _ ( т е ) ( с [ я: | ь ] ) .#. ;
-                ! отве́т<I
-                ! отве́т0ь
+                ! отве́т<U
+                ! отве́т_ь
 
 "U>0 in Imperatives with velar stem, i.e. лечь"
-%^U:0 <=>                                                    :я́ :г (%^M:0) %<:0 _ ( т е ) ( с [ я: | ь ] ) .#. ; ! only applies to ~лечь
+%^U:0 <=>                                             [:я́ | :я] :г (%^M:0) %<:0 _ ( т е ) ( с [ я: | ь ] ) .#. ; ! only applies to ~лечь
                                                                          й %<:0 _ ( т е ) ( с [ я: | ь ] ) .#. ;
 	! повы́бFей<U    ля́г<U
 	! повы́б_ей__	ля́г__

@@ -3868,7 +3868,7 @@ LEXICON св_нп_a_выбежать
 +V+Perf+IV+Fut+Pl1:жим # ;
 +V+Perf+IV+Fut+Pl2:жите # ;
 +V+Perf+IV+Fut+Pl3:гут # ;
-+V+Perf+IV:г Imper_и_stem ;
++V+Perf+IV:г Imper_unstressed ;
 +V+Perf+IV+Imp+Pl1:жим # ;
 
 LEXICON нсв_нп_a/c_быть

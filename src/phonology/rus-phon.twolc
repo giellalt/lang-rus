@@ -12,6 +12,8 @@ Alphabet
       %^R:р  ! Archiphoneme for бороть and пороть
       %^U:ь %^U:й %^U:и   ! Imperative ending (unstressed)
       %^S:й %^S:и́ %^S:0   ! Imperative ending (stressed)
+      %^P:0 ! п in prefix по for comparatives
+      %^A:0 ! о in prefix по for comparatives
       
       %[%>%]:%> %[%<%]:%< ! angle brackets (this is to avoid the internal use of < and >)
       
@@ -120,13 +122,8 @@ where Vx in ( а́ э́ о́ у́ ы́ я́ е́ ё ю́ и́ )
       Vy in ( а э о у ы я е е ю и )
     matched ;
 
-"е́>е in comparative adjective ending after velar mutation"
-! ли́х>е́е   
-! ли́ш0е0   
-е́:е <=> [ г: | к: | х: ] %>:0 _ [ е: | й: ] .#. ; ! After velar mutation with comparative adjectives
-
 "V>0: Delete lexical vowel endings (o/о́ and е are covered in other rules), and delete most fleeting vowels with syllabic endings"
-Vx:0 <=> .#. [ Letter: | %^F:0 | %>:0 ]+ _ %>:0 ;
+Vx:0 <=> .#. ( %^P: %^A: ) [ Letter: | %^F:0 | %>:0 ]+ _ %>:0 ;
             ! Тама́ра>а   мо́ре>о		Петр>овна>а
             ! Тама́р00а   мо́р00е		Петр0овн00а
          %^F:0 _ [ Letter ]+ (End) %>:0 :V ; ! This does not delete люб(о)вью, since the ь is 1st
@@ -140,7 +137,7 @@ Vx:0 <=> .#. [ Letter: | %^F:0 | %>:0 ]+ _ %>:0 ;
 where Vx in ( а е́ ё и я а́ и́ я́ ) ;
 
 "е>0: 1) Delete lexical vowel endings; 2) Delete fleeting vowels where ending begins with a vowel; 3) Delete е after comparative adjective stem mutation."
-е:0 <=> .#. [ Letter: | %^F:0 ]+ _ %>:0 ;
+е:0 <=> .#. ( %^P: %^A: ) [ Letter: | %^F:0 ]+ _ %>:0 ;
             ! see examples in parallel rule of "V>0" above
          %^F:0 _ [ Letter ]+ (End) %>:0 :V ;
             ! see examples in parallel rule of "V>0" above
@@ -149,7 +146,7 @@ where Vx in ( а е́ ё и я а́ и́ я́ ) ;
             ! ли́ш0е0   
 
 "о/о́>0 in lexical endings, fleeting vowels (including verbal prefixes), and zero GenPl"
-[ о:0 | о́:0 ] <=> .#. [ Letter: | %^F:0 ]+ _  %>:0 ; ! lexical ending
+[ о:0 | о́:0 ] <=> .#. ( %^P: %^A: ) [ Letter: | %^F:0 ]+ _  %>:0 ; ! lexical ending
                     ! see examples in parallel rule of "V>0" above
                   %^F:0 _ [ Letter ]+ (End) %>:0 :V ; ! fleeting vowel
                     ! see examples in parallel rule of "V>0" above
@@ -165,14 +162,6 @@ where Vx in ( а е́ ё и я а́ и́ я́ ) ;
                     ! сFого́н<ю́ 
                     ! с00гон0ю́
 
-!"o>о Realize unstressed verbal prefix fleeting vowel"
-!%^o:о <=> [ в | н а д | н а́: д | о б | о́: б | о т | о́: т | п о д | п о́: д | п р е д | п р е́: д | с | в з: | в о з: | в о́: з: | и з: | и́: з: | н и з: | н и́: з: | р а з: | р а́: з: ] _ [ ?* - [ C (%^F:0) :V ?* ] ] .#. ; 
-                    ! сFгна́<ть
-                    ! согна́0ть
-
-!"O>о́ Realize stressed verbal prefix fleeting vowel, if there is no stress to the right"
-!%^O:о́ <=> [ в | н а д | н а́: д | о б | о́: б | о т | о́: т | п о д | п о́: д | п р е д | п р е́: д | с | в з: | в о з: | в о́: з: | и з: | и́: з: | н и з: | н и́: з: | р а з: | р а́: з: ] _ [ [ ?* - :StressedV ] - [ C (%^F:0) :V [ ?* - :StressedV ] ] ] .#. ;
-
 "O>о Destress verbal prefix fleeting vowel, if there is stress to the right"
 %^O:о <=> [ в | н а д | н а́: д | о б | о́: б | о т | о́: т | п о д | п о́: д | п р е д | п р е́: д | с | в з: | в о з: | в о́: з: | и з: | и́: з: | н и з: | н и́: з: | р а з: | р а́: з: ] _ [ [ ?* :StressedV ?* ] - [ C (%^F:0) :V ?* ] ] .#. ;
 
@@ -182,21 +171,21 @@ where Vx in ( а е́ ё и я а́ и́ я́ ) ;
             ! раз0ош00ь0ю́   рас00ши́л
 
 "ь>0 in lexical endings, and before fleeting vowels"
-ь:0 <=> .#. [ Letter: | %^F:0 ]+ _  %>:0 ;
+ь:0 <=> .#. ( %^P: %^A: ) [ Letter: | %^F:0 ]+ _  %>:0 ;
             ! ко́сть>ь   ми́лость>ы
             ! ко́ст00ь   ми́лост00и
-        .#. Letter+ _ %^F:0 V ;
+        .#. ( %^P: %^A: ) Letter+ _ %^F:0 V ;
             ! во́сьFемь>ь
             ! во́с00ем00ь
 
 "й>0 in lexical endings, and before fleeting vowels, and in comparative adjectives with velar mutation"
-й:0 <=> .#. Letter+ V _  %>:0 ; ! in lexical ending
+й:0 <=> .#. ( %^P: %^A: ) Letter+ V _  %>:0 ; ! in lexical ending
             ! музе́й>а   
             ! музе́00я   
-        .#. Letter+ V й:й _  %>:0 ; ! in lexical ending
+        .#. ( %^P: %^A: ) Letter+ V й:й _  %>:0 ; ! in lexical ending
             ! Гава́йй>ы
             ! Гава́й00и
-        .#. Letter+ _ %^F:0 V ; ! before fleeting vowel
+        .#. ( %^P: %^A: ) Letter+ _ %^F:0 V ; ! before fleeting vowel
             ! копе́йFека>ов
             ! копе́00ек0000
         [ г: | к: | х: ] %>:0 [ е | е́: ] _ .#. ; ! comparative adjectives with velar mutation
@@ -290,17 +279,28 @@ where Vx in ( у у́ )
 "о/о́>й: GenPl zero after V"
 [ о:й | о́:й ] <=> VEndV _ в:0 .#. ;
 
+"P>п in comparatives"
+%^P:п <=> .#. _ %^A: ?* [ е: | й: ] %^P:0 .#. ;
+
+"A>о in comparatives"
+%^A:о <=> .#. %^P: _ ?* [ е: | й: ] %^P:0 .#. ;
+
+"е́>е in comparative adjective ending after velar mutation"
+! ли́х>е́е   
+! ли́ш0е0   
+е́:е <=> [ г: | к: | х: ] %>:0 _ [ е: | й: ] (%^P:0) .#. ; ! After velar mutation with comparative adjectives
+
 "г>ж (1) with comparative(-ее)/superlative(-ейший) adjectives (2) with ^M symbol (verbs) (3) in pres/fut before е/ё"
-г:ж <=> _ %>:0 [ е | е́: ] [ е: | й: ] ( ш: V: Letter: (V:) ) .#. ;
+г:ж <=> _ %>:0 [ е | е́: ] [ е: | й: ] ([ %^P: | ш: V: Letter: (V:) ]) .#. ;
         _ %^M: ;
         _ %<:0 [ е: | ё: ] ;
 
 "х>ш (1) with comparative(-ее)/superlative(-ейший) adjectives (2) with ^M symbol (verbs)"
-х:ш <=> _ %>:0 [ е | е́: ] [ е: | й: ] ( ш: V: Letter: (V:) ) .#. ;
+х:ш <=> _ %>:0 [ е | е́: ] [ е: | й: ] ([ %^P: | ш: V: Letter: (V:) ]) .#. ;
         _ %^M: ;
 
 "к>ч Velar mutation (1) with comparative(-ее)/superlative(-ейший) adjectives (2) with ^M symbol (verbs) (as opposed to ск>щ) (3) in pres/fut before е/ё"
-к:ч <=> _ %>:0 [ е | е́: ] [ е: | й: ] ( ш: V: Letter: (V:) ) .#. ;
+к:ч <=> _ %>:0 [ е | е́: ] [ е: | й: ] ([ %^P: | ш: V: Letter: (V:) ]) .#. ;
    \с:0 _ %^M: ;
      \т _ %<:0 [ е: | ё: ] ; ! печёшь, but ткёшь
 

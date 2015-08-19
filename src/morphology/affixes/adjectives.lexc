@@ -161,13 +161,13 @@ LEXICON п_a/b_малый
 +A:ма́л LF_stem ;
 +A:ма́л SF_b ;
 +A+Cmpar+Pred:ме́ньше # ;
-+A+Cmpar+Pred+Dim:ме́ньше%^P # ;
++A+Cmpar+Pred+Att:ме́ньше%^P # ;
 
 LEXICON п_a/b_хороший
 +A:хоро́ш LF_stem ;
 +A:хоро́ш SF_b ;
 +A+Cmpar+Pred:лу́чше # ;
-+A+Cmpar+Pred+Dim:лу́чше%^P # ;
++A+Cmpar+Pred+Att:лу́чше%^P # ;
 
 LEXICON п_a/b_ёгок_егч
 +A:ёгк LF_stem ;
@@ -211,8 +211,8 @@ LEXICON п_a/c_дешевый
 +A:дёшев SF_c ;
 +A+Cmpar+Pred:деше́вле # ;
 +A+Cmpar+Pred+Use/NG:дешеве́е # ;
-+A+Cmpar+Pred+Dim:деше́вле%^P # ;
-+A+Cmpar+Pred+Use/NG+Dim:дешеве́е%^P # ;
++A+Cmpar+Pred+Att:деше́вле%^P # ;
++A+Cmpar+Pred+Use/NG+Att:дешеве́е%^P # ;
 
 LEXICON п_a/c_г_ьш
 +A:г LF_stem ;
@@ -234,7 +234,7 @@ LEXICON п_a/c_к_ч(е)
 +A:к SF_c ;
 +A: SF_comp_ЧЕ ;
 +A+Cmpar+Pred:че́е # ;
-+A+Cmpar+Pred+Dim:че́е%^P # ;
++A+Cmpar+Pred+Att:че́е%^P # ;
 
 LEXICON п_a/c_ок_(че)
 +A:к LF_stem ;
@@ -295,7 +295,7 @@ LEXICON п_a/c'_короткий
 +A:коро́тк LF_stem ;
 +A:ко́рот%^Fок SF_c' ;
 +A+Cmpar+Pred:коро́че # ;
-+A+Cmpar+Pred+Dim:коро́че%^P # ;
++A+Cmpar+Pred+Att:коро́че%^P # ;
 
 LEXICON п_a/c'_еселый
 +A:есёл LF_stem ;
@@ -332,7 +332,7 @@ LEXICON п_a/c'_ек_ч(е́)
 +A:%^Fек SF_c' ;
 +A:к SF_comp_end ;
 +A+Cmpar+Pred:че́е # ;
-+A+Cmpar+Pred+Dim:че́е%^P # ;
++A+Cmpar+Pred+Att:че́е%^P # ;
 
 LEXICON п_a/c'_зок_ж
 +A:зк LF_stem ;
@@ -344,7 +344,7 @@ LEXICON п_a/c'_ок_ч(е)
 +A:%^Fок SF_c' ;
 +A:к SF_comp_end ;
 +A+Cmpar+Pred:че́е # ;
-+A+Cmpar+Pred+Dim:че́е%^P # ;
++A+Cmpar+Pred+Att:че́е%^P # ;
 
 LEXICON п_a/c'_ок_ьч
 +A:к LF_stem ;
@@ -384,7 +384,7 @@ LEXICON п_a/c''_ок_0
 +A:о́к LF_stem ;
 +A:о́к SF_c'' ;
 +A+Cmpar+Pred:е # ;
-+A+Cmpar+Pred+Dim:е%^P # ;
++A+Cmpar+Pred+Att:е%^P # ;
 
 LEXICON п_a/c''_ок_ж
 +A:о́к LF_stem ;
@@ -475,7 +475,7 @@ LEXICON п_b_большой
 +A:больш LF_end ;
 +A:вели́к SF_b ;
 +A+Cmpar+Pred:бо́льше # ;
-+A+Cmpar+Pred+Dim:бо́льше%^P # ;
++A+Cmpar+Pred+Att:бо́льше%^P # ;
 
 LEXICON п_b_кф_м_затрудн.
 +A: LF_end ;
@@ -557,7 +557,7 @@ LEXICON п_b/c'_плохой
 +A:плох LF_end ;
 +A:пло́х SF_c' ;
 +A+Cmpar+Pred:ху́же # ;
-+A+Cmpar+Pred+Dim:ху́же%^P # ;
++A+Cmpar+Pred+Att:ху́же%^P # ;
 
 LEXICON п_b/c'_дурной
 +A:н LF_end ;
@@ -1533,43 +1533,43 @@ LEXICON SF_c''
 LEXICON SF_comp_stem
 +Cmpar+Pred:%>ее # ;
 +Cmpar+Pred+Elid:%>ей # ;
-+Cmpar+Pred+Dim:%>ее%^P # ;
-+Cmpar+Pred+Elid+Dim:%>ей%^P # ;
++Cmpar+Pred+Att:%>ее%^P # ;
++Cmpar+Pred+Elid+Att:%>ей%^P # ;
 
 LEXICON SF_comp_stem_Prb
 +Cmpar+Pred+Prb:%>ее # ;
 +Cmpar+Pred+Prb+Elid:%>ей # ;
-+Cmpar+Pred+Prb+Dim:%>ее%^P # ;
-+Cmpar+Pred+Prb+Elid+Dim:%>ей%^P # ;
++Cmpar+Pred+Prb+Att:%>ее%^P # ;
++Cmpar+Pred+Prb+Elid+Att:%>ей%^P # ;
 
 LEXICON SF_comp_end
 +Cmpar+Pred:%>е́е # ;
 +Cmpar+Pred+Elid:%>е́й # ;
-+Cmpar+Pred+Dim:%>е́е%^P # ;
-+Cmpar+Pred+Elid+Dim:%>е́й%^P # ;
++Cmpar+Pred+Att:%>е́е%^P # ;
++Cmpar+Pred+Elid+Att:%>е́й%^P # ;
 
 LEXICON SF_comp_end_Prb
 +Cmpar+Pred+Prb:%>е́е # ;
 +Cmpar+Pred+Prb+Elid:%>е́й # ;
-+Cmpar+Pred+Prb+Dim:%>е́е%^P # ;
-+Cmpar+Pred+Prb+Elid+Dim:%>е́й%^P # ;
++Cmpar+Pred+Prb+Att:%>е́е%^P # ;
++Cmpar+Pred+Prb+Elid+Att:%>е́й%^P # ;
 
 LEXICON SF_comp_ЖЕ
 +Cmpar+Pred:же # ;
-+Cmpar+Pred+Dim:же%^P # ;
++Cmpar+Pred+Att:же%^P # ;
 
 LEXICON SF_comp_ЧЕ
 +Cmpar+Pred:че # ;
-+Cmpar+Pred+Dim:че%^P # ;
++Cmpar+Pred+Att:че%^P # ;
 
 LEXICON SF_comp_ЧЕ_Prb
 +Cmpar+Pred+Prb:че # ;
-+Cmpar+Pred+Prb+Dim:че%^P # ;
++Cmpar+Pred+Prb+Att:че%^P # ;
 
 LEXICON SF_comp_ШЕ
 +Cmpar+Pred:ше # ;
-+Cmpar+Pred+Dim:ше%^P # ;
++Cmpar+Pred+Att:ше%^P # ;
 
 LEXICON SF_comp_ЩЕ
 +Cmpar+Pred:ще # ;
-+Cmpar+Pred+Dim:ще%^P # ;
++Cmpar+Pred+Att:ще%^P # ;

@@ -102,7 +102,7 @@ Multichar_Symbols
 +Sint   !!= * @CODE@  = Synthetic comparative is possible, e.g. старее
 +Pred   !!= * @CODE@  = "Predicate", also used for short-form adjectives
 +Cmpnd  !!= * @CODE@  = "Compound", used for compounding adjectives, such as русско-английский
-+Dim    !!= * @CODE@  = Diminished for comparatives like получше, поновее, etc. !TODO FIX What are these really called?
++Att    !!= * @CODE@  = Attenuative comparatives like получше, поновее, etc.
 
 !! !!Punctuation
 +SENT   !!= * @CODE@ = Clause boundary

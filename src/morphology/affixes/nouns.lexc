@@ -1226,6 +1226,14 @@ LEXICON с_0
 +N+Neu: Indecl_Sg_inan ;
 +N+Neu: Indecl_Pl_inan ;
 
+LEXICON с_0.sent
++N+Neu: Indecl_Sg_inan.sent ;
++N+Neu: Indecl_Pl_inan.sent ;
+
+LEXICON Letter
+с_0 ;
+с_0.sent ;
+
 LEXICON Time_halfhour ! e.g. полпервого
 +N+Neu: Indecl_Sg_inan ;
 
@@ -2647,6 +2655,14 @@ LEXICON Indecl_Sg_inan
 +Inan+Sg+Dat: # ;
 +Inan+Sg+Ins: # ;
 
+LEXICON Indecl_Sg_inan.sent
++Inan+Sg+Nom#.+SENT:. # ;
++Inan+Sg+Acc#.+SENT:. # ;
++Inan+Sg+Gen#.+SENT:. # ;
++Inan+Sg+Loc#.+SENT:. # ;
++Inan+Sg+Dat#.+SENT:. # ;
++Inan+Sg+Ins#.+SENT:. # ;
+
 LEXICON Indecl_Sg_anim
 +Anim+Sg+Nom: # ;
 +Anim+Sg+Acc: # ;
@@ -2662,6 +2678,14 @@ LEXICON Indecl_Pl_inan
 +Inan+Pl+Loc: # ;
 +Inan+Pl+Dat: # ;
 +Inan+Pl+Ins: # ;
+
+LEXICON Indecl_Pl_inan.sent
++Inan+Pl+Nom#.+SENT:. # ;
++Inan+Pl+Acc#.+SENT:. # ;
++Inan+Pl+Gen#.+SENT:. # ;
++Inan+Pl+Loc#.+SENT:. # ;
++Inan+Pl+Dat#.+SENT:. # ;
++Inan+Pl+Ins#.+SENT:. # ;
 
 LEXICON Indecl_Pl_anim
 +Anim+Pl+Nom: # ;

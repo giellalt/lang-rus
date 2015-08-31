@@ -3202,11 +3202,17 @@ LEXICON Pl_ин_anim
 +Anim+Pl+Gen: # ;
 PlPeriphEnd_anim ;
 
-LEXICON пол-NomAccOnly ! see Zaliznjak §1 (pg 73)
+LEXICON пол-NomAccOnly_Msc ! see Zaliznjak §1 (pg 73)
++N+Msc+Inan+Sg+Nom: # ;
++N+Msc+Inan+Sg+Acc: # ;
+
+LEXICON пол-NomAccOnly_Neu ! see Zaliznjak §1 (pg 73)
 +N+Neu+Inan+Sg+Nom: # ;
 +N+Neu+Inan+Sg+Acc: # ;
-+N+Neu+Inan+Pl+Nom: # ;
-+N+Neu+Inan+Pl+Acc: # ;
+
+LEXICON пол-NomAccOnly_Fem ! see Zaliznjak §1 (pg 73)
++N+Fem+Inan+Sg+Nom: # ;
++N+Fem+Inan+Sg+Acc: # ;
 
 LEXICON пол-м_a
 +N+Msc: MSgObliqStem ;
@@ -3245,73 +3251,199 @@ LEXICON пол-ж_d
 +N+Fem: ыPlStem ;
 
 LEXICON полкилометра
-:по̀лкиломе́тра пол-NomAccOnly ;
-:полукиломе́тр пол-м_a ;
+пол+Num+Nom#километр+N+Msc+Inan+Sg+Gen:по̀лкиломе́тра # ;
+пол+Num+Acc#километр+N+Msc+Inan+Sg+Gen:по̀лкиломе́тра # ;
+полкилометра:полукиломе́тр пол-м_a ;
 
 LEXICON пол-литра
-:по̀л-ли́тра пол-NomAccOnly ;
-:полули́тр пол-м_a ;
+пол+Num+Nom#литр+N+Msc+Inan+Sg+Gen:по̀л-ли́тра # ;
+пол+Num+Acc#литр+N+Msc+Inan+Sg+Gen:по̀л-ли́тра # ;
+пол-литра:полули́тр пол-м_a ;
 
 LEXICON полметра
-:по̀лме́тра пол-NomAccOnly ;
-:полуме́тр пол-м_a ;
+пол+Num+Nom#метр+N+Msc+Inan+Sg+Gen:по̀лме́тра # ;
+пол+Num+Acc#метр+N+Msc+Inan+Sg+Gen:по̀лме́тра # ;
+полметра:полуме́тр пол-м_a ;
 
 LEXICON полмиллиона
-:по̀лмиллио́на пол-NomAccOnly ;
-:полумиллио́н пол-м_a ;
+пол+Num+Nom#миллион+N+Msc+Inan+Sg+Gen:по̀лмиллио́на # ;
+пол+Num+Acc#миллион+N+Msc+Inan+Sg+Gen:по̀лмиллио́на # ;
+полмиллиона:полумиллио́н пол-м_a ;
 
 LEXICON полфунта
-:по̀лфу́нта пол-NomAccOnly ;
-:полуфу́нт пол-м_a ;
+пол+Num+Nom#фунт+N+Msc+Inan+Sg+Gen:по̀лфу́нта # ;
+пол+Num+Acc#фунт+N+Msc+Inan+Sg+Gen:по̀лфу́нта # ;
+полфунта:полуфу́нт пол-м_a ;
 
 LEXICON пол-листа
-:по̀л-листа́ пол-NomAccOnly ;
-:полули́ст пол-м_b ;
+пол+Num+Nom#лист+N+Msc+Inan+Sg+Gen:по̀л-листа́ # ;
+пол+Num+Acc#лист+N+Msc+Inan+Sg+Gen:по̀л-листа́ # ;
+пол-листа:полули́ст пол-м_b ;
 
 LEXICON полчаса
-:по̀лчаса́ пол-NomAccOnly ;
-:получа́с пол-м_c ;
+пол+Num+Nom#час+N+Msc+Inan+Sg+Gen+Count:по̀лчаса́ # ;
+пол+Num+Acc#час+N+Msc+Inan+Sg+Gen+Count:по̀лчаса́ # ;
+полчаса:получа́с пол-м_c ;
 
 LEXICON полшага
-:по̀лшага́ пол-NomAccOnly ;
-:полуша́г пол-м_c ;
+пол+Num+Nom#шаг+N+Msc+Inan+Sg+Gen+Count:по̀лшага́ # ;
+пол+Num+Acc#шаг+N+Msc+Inan+Sg+Gen+Count:по̀лшага́ # ;
+полшага:полуша́г пол-м_c ;
 
 LEXICON полвека
-:по̀лве́ка пол-NomAccOnly ;
-:полуве́к пол-м_c1 ;
+пол+Num+Nom#век¹+N+Msc+Inan+Sg+Gen:по̀лве́ка # ;
+пол+Num+Acc#век¹+N+Msc+Inan+Sg+Gen:по̀лве́ка # ;
+полвека:полуве́к пол-м_c1 ;
 
 LEXICON полгода
-:по̀лго́да пол-NomAccOnly ;
-:полуго́д пол-м_e ;
+пол+Num+Nom#год+N+Msc+Inan+Sg+Gen:по̀лго́да # ;
+пол+Num+Acc#год+N+Msc+Inan+Sg+Gen:по̀лго́да # ;
+полгода:полуго́д пол-м_e ;
 
 LEXICON пол-очка
-:по̀л-очка́ пол-NomAccOnly ;
-:полуочко́ пол-с_b12 ;
+пол+Num+Nom#очко+N+Neu+Inan+Sg+Gen:по̀л-очка́ # ;
+пол+Num+Acc#очко+N+Neu+Inan+Sg+Gen:по̀л-очка́ # ;
+пол-очка:полуочко́ пол-с_b12 ;
 
 LEXICON полведра
-:по̀лведра́ пол-NomAccOnly ;
-:полувёдро́ пол-с_d ;
+пол+Num+Nom#ведро+N+Neu+Inan+Sg+Gen:по̀лведра́ # ;
+пол+Num+Acc#ведро+N+Neu+Inan+Sg+Gen:по̀лведра́ # ;
+полведра:полувёдро́ пол-с_d ;
 
 LEXICON полминуты
-:по̀лмину́ты пол-NomAccOnly ;
-:полумину́та пол-ж_a ;
+пол+Num+Nom#минута+N+Fem+Inan+Sg+Gen:по̀лмину́ты # ;
+пол+Num+Acc#минута+N+Fem+Inan+Sg+Gen:по̀лмину́ты # ;
+полминуты:полумину́та пол-ж_a ;
 
 LEXICON полтонны
-:по̀лто́нны пол-NomAccOnly ;
-:полуто́нна пол-ж_a ;
+пол+Num+Nom#тонна+N+Fem+Inan+Sg+Gen:по̀лто́нны # ;
+пол+Num+Acc#тонна+N+Fem+Inan+Sg+Gen:по̀лто́нны # ;
+полтонны:полуто́нна пол-ж_a ;
 
 LEXICON полдюжины
-:по̀лдю́жины пол-NomAccOnly ;
-:полудю́жина пол-ж_a ;
+пол+Num+Nom#дюжина+N+Fem+Inan+Sg+Gen:по̀лдю́жины # ;
+пол+Num+Acc#дюжина+N+Fem+Inan+Sg+Gen:по̀лдю́жины # ;
+полдюжины:полудю́жина пол-ж_a ;
 
 LEXICON полсотни
-:по̀лсо́тни пол-NomAccOnly ;
-:полусо́т%^Fеня пол-ж_a ;
+пол+Num+Nom#сотня+N+Fem+Inan+Sg+Gen:по̀лсо́тни # ;
+пол+Num+Acc#сотня+N+Fem+Inan+Sg+Gen:по̀лсо́тни # ;
+полсотни:полусо́т%^Fеня пол-ж_a ;
 
 LEXICON полтысячи
-:по̀лты́сячи пол-NomAccOnly ;
-:полуты́сяча пол-ж_a ;
+пол+Num+Nom#тысяча+N+Fem+Inan+Sg+Gen:по̀лты́сячи # ;
+пол+Num+Acc#тысяча+N+Fem+Inan+Sg+Gen:по̀лты́сячи # ;
+полтысячи:полуты́сяча пол-ж_a ;
 
 LEXICON полверсты
-:по̀лверсты́ пол-NomAccOnly ;
-:полувёрста́ пол-ж_d ;
+пол+Num+Nom#верста+N+Fem+Inan+Sg+Gen:по̀лверсты́ # ;
+пол+Num+Acc#верста+N+Fem+Inan+Sg+Gen:по̀лверсты́ # ;
+полверсты:полувёрста́ пол-ж_d ;
+
+LEXICON полкруга
+пол+Num+Nom#круг+N+Msc+Inan+Sg+Gen:по̀лкру́га # ;
+пол+Num+Acc#круг+N+Msc+Inan+Sg+Gen:по̀лкру́га # ;
+
+LEXICON полгорода
+пол+Num+Nom#город+N+Msc+Inan+Sg+Gen:по̀лго́рода # ;
+пол+Num+Acc#город+N+Msc+Inan+Sg+Gen:по̀лго́рода # ;
+
+LEXICON полчасика
+пол+Num+Nom#часик+N+Msc+Inan+Sg+Gen:по̀лча́сика # ;
+пол+Num+Acc#часик+N+Msc+Inan+Sg+Gen:по̀лча́сика # ;
+
+LEXICON полкилограмма
+пол+Num+Nom#килограмм+N+Msc+Inan+Sg+Gen:по̀лкилогра́мма # ;
+пол+Num+Acc#килограмм+N+Msc+Inan+Sg+Gen:по̀лкилогра́мма # ;
+
+LEXICON полномера
+пол+Num+Nom#номер+N+Msc+Inan+Sg+Gen:по̀лно́мера # ;
+пол+Num+Acc#номер+N+Msc+Inan+Sg+Gen:по̀лно́мера # ;
+
+LEXICON полмира
+пол+Num+Nom#мир+N+Msc+Inan+Sg+Gen:по̀лми́ра # ;
+пол+Num+Acc#мир+N+Msc+Inan+Sg+Gen:по̀лми́ра # ;
+
+LEXICON полкорпуса
+пол+Num+Nom#корпус+N+Msc+Inan+Sg+Gen:по̀лко́рпуса # ;
+пол+Num+Acc#корпус+N+Msc+Inan+Sg+Gen:по̀лко́рпуса # ;
+
+LEXICON полсвета
+пол+Num+Nom#свет²+N+Msc+Inan+Sg+Gen:по̀лсве́та # ;
+пол+Num+Acc#свет²+N+Msc+Inan+Sg+Gen:по̀лсве́та # ;
+
+LEXICON пол-оборота
+пол+Num+Nom#оборот+N+Msc+Inan+Sg+Gen:по̀л-оборо́та # ;
+пол+Num+Acc#оборот+N+Msc+Inan+Sg+Gen:по̀л-оборо́та # ;
+
+LEXICON полмесяца
+пол+Num+Nom#месяц+N+Msc+Inan+Sg+Gen:по̀лме́сяца # ;
+пол+Num+Acc#месяц+N+Msc+Inan+Sg+Gen:по̀лме́сяца # ;
+
+LEXICON полнеба
+пол+Num+Nom#небо+N+Neu+Inan+Sg+Gen:по̀лне́ба # ;
+пол+Num+Acc#небо+N+Neu+Inan+Sg+Gen:по̀лне́ба # ;
+
+LEXICON полслова
+пол+Num+Nom#слово+N+Neu+Inan+Sg+Gen:по̀лсло́ва # ;
+пол+Num+Acc#слово+N+Neu+Inan+Sg+Gen:по̀лсло́ва # ;
+
+LEXICON полстолька
+пол+Num+Nom#столькo+N+Neu+Inan+Sg+Gen:по̀лсто́лька # ;
+пол+Num+Acc#столькo+N+Neu+Inan+Sg+Gen:по̀лсто́лька # ;
+
+LEXICON полдела
+пол+Num+Nom#дело+N+Neu+Inan+Sg+Gen:по̀лде́ла # ;
+пол+Num+Acc#дело+N+Neu+Inan+Sg+Gen:по̀лде́ла # ;
+
+LEXICON полдороги
+пол+Num+Nom#дорога+N+Fem+Inan+Sg+Gen:по̀лдоро́ги # ;
+пол+Num+Acc#дорога+N+Fem+Inan+Sg+Gen:по̀лдоро́ги # ;
+
+LEXICON полпорции
+пол+Num+Nom#порция+N+Fem+Inan+Sg+Gen:по̀лпо́рции # ;
+пол+Num+Acc#порция+N+Fem+Inan+Sg+Gen:по̀лпо́рции # ;
+
+LEXICON полставки
+пол+Num+Nom#ставка+N+Fem+Inan+Sg+Gen:по̀лста́вки # ;
+пол+Num+Acc#ставка+N+Fem+Inan+Sg+Gen:по̀лста́вки # ;
+
+LEXICON полбутылки
+пол+Num+Nom#бутылка+N+Fem+Inan+Sg+Gen:по̀лбуты́лки # ;
+пол+Num+Acc#бутылка+N+Fem+Inan+Sg+Gen:по̀лбуты́лки # ;
+
+LEXICON полбанки
+пол+Num+Nom#банка+N+Fem+Inan+Sg+Gen:по̀лба́нки # ;
+пол+Num+Acc#банка+N+Fem+Inan+Sg+Gen:по̀лба́нки # ;
+
+LEXICON полжизни
+пол+Num+Nom#жизнь+N+Fem+Inan+Sg+Gen:по̀лжи́зни # ;
+пол+Num+Acc#жизнь+N+Fem+Inan+Sg+Gen:по̀лжи́зни # ;
+
+LEXICON полпути
+пол+Num+Nom#путь+N+Msc+Inan+Sg+Gen:по̀лпути́ # ;
+пол+Num+Acc#путь+N+Msc+Inan+Sg+Gen:по̀лпути́ # ;
+
+LEXICON полночи
+пол+Num+Nom#ночь+N+Fem+Inan+Sg+Gen:по̀лно́чи # ;
+пол+Num+Acc#ночь+N+Fem+Inan+Sg+Gen:по̀лно́чи # ;
+
+LEXICON полсуток
+пол+Num+Nom#сутки+N+Fem+Inan+Pl+Gen:по̀лсу́ток # ;
+пол+Num+Acc#сутки+N+Fem+Inan+Pl+Gen:по̀лсу́ток # ;
+
+LEXICON полсмены
+пол+Num+Nom#смена+N+Fem+Inan+Sg+Gen:по̀лсме́ны # ;
+пол+Num+Acc#смена+N+Fem+Inan+Sg+Gen:по̀лсме́ны # ;
+
+LEXICON полцены
+пол+Num+Nom#цена+N+Fem+Inan+Sg+Gen:по̀лцены́ # ;
+пол+Num+Acc#цена+N+Fem+Inan+Sg+Gen:по̀лцены́ # ;
+
+LEXICON полкомнаты
+пол+Num+Nom#комната+N+Fem+Inan+Sg+Gen:по̀лко́мнаты # ;
+пол+Num+Acc#комната+N+Fem+Inan+Sg+Gen:по̀лко́мнаты # ;
+
+LEXICON полдня
+пол+Num+Nom#день+N+Msc+Inan+Sg+Gen:по̀лдня́ # ;
+пол+Num+Acc#день+N+Msc+Inan+Sg+Gen:по̀лдня́ # ;

@@ -141,7 +141,7 @@ where Vx in ( а е́ ё и я а́ и́ я́ ) ;
             ! see examples in parallel rule of "V>0" above
          %^F:0 _ [ Letter ]+ (End) %>:0 :V ;
             ! see examples in parallel rule of "V>0" above
-         [ г: | к: | х: ] %>:0 [ е | е́: ] _ .#. ; ! After comparative adjective mutation
+         [ г: | к: | х: ] %>:0 [ е | е́: ] _ ( %^P: ).#. ; ! After comparative adjective mutation
             ! ли́х>е́е   
             ! ли́ш0е0   
 
@@ -188,7 +188,7 @@ where Vx in ( а е́ ё и я а́ и́ я́ ) ;
         .#. ( %^P: %^A: ) Letter+ _ %^F:0 V ; ! before fleeting vowel
             ! копе́йFека>ов
             ! копе́00ек0000
-        [ г: | к: | х: ] %>:0 [ е | е́: ] _ .#. ; ! comparative adjectives with velar mutation
+        [ г: | к: | х: ] %>:0 [ е | е́: ] _ ( %^P: ) .#. ; ! comparative adjectives with velar mutation
             ! ли́х>е́й
             ! ли́ш0е0
 
@@ -280,29 +280,32 @@ where Vx in ( у у́ )
 [ о:й | о́:й ] <=> VEndV _ в:0 .#. ;
 
 "P>п in comparatives"
-%^P:п <=> .#. _ %^A: ?* [ е: | й: ] %^P:0 .#. ;
+%^P:п <=> .#. _ %^A: ?* %>:0 [ е | е́: ] [ е: | й: ] %^P:0 .#. ;
 
 "A>о in comparatives"
-%^A:о <=> .#. %^P: _ ?* [ е: | й: ] %^P:0 .#. ;
+%^A:о <=> .#. %^P: _ ?* %>:0 [ е | е́: ] [ е: | й: ] %^P:0 .#. ;
 
 "е́>е in comparative adjective ending after velar mutation"
 ! ли́х>е́е   
 ! ли́ш0е0   
-е́:е <=> [ г: | к: | х: ] %>:0 _ [ е: | й: ] (%^P:0) .#. ; ! After velar mutation with comparative adjectives
+е́:е <=> [ г: | к: | х: ] %>:0 _ [ е: | й: ] (%^P:0) .#. ;
 
-"г>ж (1) with comparative(-ее)/superlative(-ейший) adjectives (2) with ^M symbol (verbs) (3) in pres/fut before е/ё"
-г:ж <=> _ %>:0 [ е | е́: ] [ е: | й: ] ([ %^P: | ш: V: Letter: (V:) ]) .#. ;
+"г>ж (1) with comparative(-ее) adjectives (2) with ^M symbol (verbs) (3) in pres/fut before е/ё"
+г:ж <=> _ %>:0 [ е | е́: ] [ е: | й: ] ( %^P: ) .#. ;
         _ %^M: ;
         _ %<:0 [ е: | ё: ] ;
+        ! TODO make ~ейший productive in lexc (ш: V: Letter: (V:))
 
-"х>ш (1) with comparative(-ее)/superlative(-ейший) adjectives (2) with ^M symbol (verbs)"
-х:ш <=> _ %>:0 [ е | е́: ] [ е: | й: ] ([ %^P: | ш: V: Letter: (V:) ]) .#. ;
+"х>ш (1) with comparative(-ее) adjectives (2) with ^M symbol (verbs)"
+х:ш <=> _ %>:0 [ е | е́: ] [ е: | й: ] ( %^P: ) .#. ;
         _ %^M: ;
+        ! TODO make ~ейший productive in lexc (ш: V: Letter: (V:))
 
-"к>ч Velar mutation (1) with comparative(-ее)/superlative(-ейший) adjectives (2) with ^M symbol (verbs) (as opposed to ск>щ) (3) in pres/fut before е/ё"
-к:ч <=> _ %>:0 [ е | е́: ] [ е: | й: ] ([ %^P: | ш: V: Letter: (V:) ]) .#. ;
+"к>ч Velar mutation (1) with comparative(-ее) adjectives (2) with ^M symbol (verbs) (as opposed to ск>щ) (3) in pres/fut before е/ё"
+к:ч <=> _ %>:0 [ е | е́: ] [ е: | й: ] ( %^P: ) .#. ;
    \с:0 _ %^M: ;
      \т _ %<:0 [ е: | ё: ] ; ! печёшь, but ткёшь
+        ! TODO make ~ейший productive in lexc (ш: V: Letter: (V:))
 
 "т>ч (1) Pres/Fut mutation of т (as opposed to ст>щ); (2) гть/кть > 0чь"
 т:ч <=>              \с: _ %^M: ;

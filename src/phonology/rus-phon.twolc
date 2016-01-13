@@ -385,7 +385,7 @@ where Ex in ( %^U %^S ) ;
 !If one wants to test specific two-level rules one can add test pairs to the twolc files. Support for this type of testing has only recently been added, and works only for the Xerox tools (because the pair-testing facilities in Hfst use a different format, and converting from one to the other is non-trivial without knowledge of the alphabet).
 !The test data looks like the following: (€ for positive, $ for negative)
 
-!€ рабо́та>у
-!€ рабо́т00у
-!$ рабо́та>у
-!$ рабо́та00
+!!€ рабо́та>у
+!!€ рабо́т00у
+!!$ рабо́та>у
+!!$ рабо́та00

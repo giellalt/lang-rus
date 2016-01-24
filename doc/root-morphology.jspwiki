@@ -19,12 +19,15 @@
  * %>    = End-of-stem marker (nominals)
  * %<    = End-of-stem marker (verbs)
  * %^F   = Fleeting vowel marker
- * %^pFо %^pFо́  = Verbal prefix fleeting vowel
+ * %^o %^O  = Verbal prefix fleeting vowel
  * %^G   = Irregular GenPl marker (to keep ов/ев on n stems, e.g. ов%^G
  * %^Z   = Zero ending (resolves to 0/й/ь)
  * %^M   = Verb stem mutation
- * %^Iu  = Imperative ending (unstressed)
- * %^Is  = Imperative ending (stressed)
+ * %^D   = archiphoneme for д~жд alternation in past passive participles
+ * %^R   = archiphoneme for бороть and пороть
+ * %^T   = archiphoneme for т~щ alternation in verbs
+ * %^U   = Imperative ending (unstressed)
+ * %^S  = Imperative ending (stressed)
 
 !!POS
  * +A       = Adjective
@@ -86,6 +89,7 @@
  * +Sint     = Synthetic comparative is possible, e.g. старее
  * +Pred     = "Predicate", also used for short-form adjectives
  * +Cmpnd    = "Compound", used for compounding adjectives, such as русско-английский
+ * +Att      = Attenuative comparatives like получше, поновее, etc.
 
 !!Punctuation
  * +SENT    = Clause boundary
@@ -115,7 +119,7 @@
  * LEXICON Root    
 
  * Abbreviation ;	
- * Adjective ;	    
+ * :%^P%^A Adjective ;	    
  * Adverb ;	    
  * Comparative ;   
  * Conjunction ;   

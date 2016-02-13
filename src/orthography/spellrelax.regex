@@ -5,7 +5,11 @@ X (->) Х, # roman numerals written in cyrillic
 M (->) М, # --"--
 x (->) х, # --"--
 #c (->) с, # --"--
-m (->) м  # --"--
+m (->) м,  # --"--
+й (->) й,  # Combining breve (\u0306) (encountered in pdfs, mostly)
+Й (->) Й,
+ё (->) ё,  # Combining diaeresis (\u0308) (encountered in pdfs, mostly)
+Ё (->) Ё
 ;
 
 # Explanation:

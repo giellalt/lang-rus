@@ -5438,8 +5438,11 @@ LEXICON Past_stem_zero
 LEXICON Past_stem_zero_R
 +Pst+Msc+Sg:ся # ; 
 +Pst+Fem+Sg:%<лась # ;
++Pst+Fem+Sg+Use/Ant:%<лася # ;
 +Pst+Neu+Sg:%<лось # ;
++Pst+Neu+Sg+Use/Ant:%<лося # ;
 +Pst+MFN+Pl:%<лись # ;
++Pst+MFN+Pl+Use/Ant:%<лися # ;
 
 LEXICON Past_stem5
 +Pst+Msc+Sg:%<нул # ; 
@@ -5458,29 +5461,42 @@ LEXICON Past_stem[5]_R
 +Pst+Msc+Sg:ся # ; 
 +Pst+Msc+Sg+Fac:%<нулся # ; 
 +Pst+Fem+Sg:%<лась # ;
++Pst+Fem+Sg+Use/Ant:%<лася # ;
 +Pst+Neu+Sg:%<лось # ;
++Pst+Neu+Sg+Use/Ant:%<лося # ;
 +Pst+MFN+Pl:%<лись # ;
++Pst+MFN+Pl+Use/Ant:%<лися # ;
 
 LEXICON Past_stem_R
 +Pst+Msc+Sg:%<лся # ; 
 +Pst+Fem+Sg:%<лась # ;
++Pst+Fem+Sg+Use/Ant:%<лася # ;
 +Pst+Neu+Sg:%<лось # ;
++Pst+Neu+Sg+Use/Ant:%<лося # ;
 +Pst+MFN+Pl:%<лись # ;
++Pst+MFN+Pl+Use/Ant:%<лися # ;
 
 LEXICON Past_stem_R_Fac
 +Pst+Msc+Sg+Fac:%<лся # ; 
 +Pst+Fem+Sg+Fac:%<лась # ;
++Pst+Fem+Sg+Fac+Use/Ant:%<лася # ;
 +Pst+Neu+Sg+Fac:%<лось # ;
++Pst+Neu+Sg+Fac+Use/Ant:%<лося # ;
 +Pst+MFN+Pl+Fac:%<лись # ;
++Pst+MFN+Pl+Fac+Use/Ant:%<лися # ;
 
 LEXICON Past_stem_R_безл.
 +Pst+Neu+Sg:%<лось # ;
++Pst+Neu+Sg+Use/Ant:%<лося # ;
 
 LEXICON Past_stem_Pass
 +Pst+Msc+Sg+Pass:%<лся # ; 
 +Pst+Fem+Sg+Pass:%<лась # ;
++Pst+Fem+Sg+Pass+Use/Ant:%<лася # ;
 +Pst+Neu+Sg+Pass:%<лось # ;
++Pst+Neu+Sg+Pass+Use/Ant:%<лося # ;
 +Pst+MFN+Pl+Pass:%<лись # ;
++Pst+MFN+Pl+Pass+Use/Ant:%<лися # ;
 
 LEXICON Past_stem_(-д-)
 +Pst+Msc+Sg:%<л # ; 
@@ -5506,24 +5522,34 @@ LEXICON Past_end_безл.
 LEXICON Past_end_R
 +Pst+Msc+Sg:%<лся # ; 
 +Pst+Fem+Sg:%<ла́сь # ;
++Pst+Fem+Sg+Use/Ant:%<ла́ся # ;
 +Pst+Neu+Sg:%<ло́сь # ;
++Pst+Neu+Sg+Use/Ant:%<ло́ся # ;
 +Pst+MFN+Pl:%<ли́сь # ;
++Pst+MFN+Pl+Use/Ant:%<ли́ся # ;
 
 LEXICON Past_end_R_безл.
 +Pst+Neu+Sg:%<ло́сь # ;
++Pst+Neu+Sg+Use/Ant:%<ло́ся # ;
 
 LEXICON Past_end''_R
 +Pst+Msc+Sg:%<лся́ # ; 
 +Pst+Msc+Sg:%<лся # ; 
 +Pst+Fem+Sg:%<ла́сь # ;
++Pst+Fem+Sg+Use/Ant:%<ла́ся # ;
 +Pst+Neu+Sg:%<ло́сь # ;
++Pst+Neu+Sg+Use/Ant:%<ло́ся # ;
 +Pst+MFN+Pl:%<ли́сь # ;
++Pst+MFN+Pl+Use/Ant:%<ли́ся # ;
 
 LEXICON Past_end_Pass
 +Pst+Msc+Sg+Pass:%<лся # ; 
 +Pst+Fem+Sg+Pass:%<ла́сь # ;
++Pst+Fem+Sg+Pass+Use/Ant:%<ла́ся # ;
 +Pst+Neu+Sg+Pass:%<ло́сь # ;
++Pst+Neu+Sg+Pass+Use/Ant:%<ло́ся # ;
 +Pst+MFN+Pl+Pass:%<ли́сь # ;
++Pst+MFN+Pl+Pass+Use/Ant:%<ли́ся # ;
 
 LEXICON Past_end_(-д-)
 +Pst+Msc+Sg:%<л # ; 
@@ -5534,8 +5560,11 @@ LEXICON Past_end_(-д-)
 LEXICON Past_end_(-д-)_R
 +Pst+Msc+Sg:%<лся # ; 
 +Pst+Fem+Sg:д%<ла́сь # ;
++Pst+Fem+Sg+Use/Ant:д%<ла́ся # ;
 +Pst+Neu+Sg:д%<ло́сь # ;
++Pst+Neu+Sg+Use/Ant:д%<ло́ся # ;
 +Pst+MFN+Pl:д%<ли́сь # ;
++Pst+MFN+Pl+Use/Ant:д%<ли́ся # ;
 
 LEXICON Past_end_(-т-)
 +Pst+Msc+Sg:%<л # ; 
@@ -5546,8 +5575,11 @@ LEXICON Past_end_(-т-)
 LEXICON Past_end_(-т-)_R
 +Pst+Msc+Sg:%<лся # ; 
 +Pst+Fem+Sg:т%<ла́сь # ;
++Pst+Fem+Sg+Use/Ant:т%<ла́ся # ;
 +Pst+Neu+Sg:т%<ло́сь # ;
++Pst+Neu+Sg+Use/Ant:т%<ло́ся # ;
 +Pst+MFN+Pl:т%<ли́сь # ;
++Pst+MFN+Pl+Use/Ant:т%<ли́ся # ;
 
 LEXICON Past_shift
 +Pst+Msc+Sg:%<л # ; 
@@ -5564,8 +5596,11 @@ LEXICON Past_shift_Fac
 LEXICON Past_shift_R
 +Pst+Msc+Sg:%<лся # ; 
 +Pst+Fem+Sg:%<ла́сь # ;
++Pst+Fem+Sg+Use/Ant:%<ла́ся # ;
 +Pst+Neu+Sg:%<лось # ;
++Pst+Neu+Sg+Use/Ant:%<лося # ;
 +Pst+MFN+Pl:%<лись # ;
++Pst+MFN+Pl+Use/Ant:%<лися # ;
 
 LEXICON Past_shift' ! Only дать and взять
 +Pst+Msc+Sg:%<л # ; 
@@ -5577,33 +5612,47 @@ LEXICON Past_shift' ! Only дать and взять
 LEXICON Past_shift'_R
 +Pst+Msc+Sg:%<лся # ; 
 +Pst+Fem+Sg:%<ла́сь # ;
++Pst+Fem+Sg+Use/Ant:%<ла́ся # ;
 +Pst+Neu+Sg:%<лось # ;
++Pst+Neu+Sg+Use/Ant:%<лося # ;
 +Pst+Neu+Sg:%<ло́сь # ;
++Pst+Neu+Sg+Use/Ant:%<ло́ся # ;
 +Pst+MFN+Pl:%<лись # ;
++Pst+MFN+Pl+Use/Ant:%<лися # ;
 
 LEXICON Past_shift''_R
 +Pst+Msc+Sg:%<лся # ; 
 +Pst+Msc+Sg+Fac:%<лся́ # ; 
 +Pst+Fem+Sg:%<ла́сь # ;
++Pst+Fem+Sg+Use/Ant:%<ла́ся # ;
 +Pst+Neu+Sg:%<лось # ;
++Pst+Neu+Sg+Use/Ant:%<лося # ;
 +Pst+MFN+Pl:%<лись # ;
++Pst+MFN+Pl+Use/Ant:%<лися # ;
 
 LEXICON Past_shift''_R_безл.
 +Pst+Neu+Sg:%<лось # ;
++Pst+Neu+Sg+Use/Ant:%<лося # ;
 
 LEXICON Past_shift''_R_Fac
 +Pst+Msc+Sg+Fac:%<лся # ; 
 +Pst+Msc+Sg+Fac:%<лся́ # ; 
 +Pst+Fem+Sg+Fac:%<ла́сь # ;
++Pst+Fem+Sg+Fac+Use/Ant:%<ла́ся # ;
 +Pst+Neu+Sg+Fac:%<лось # ;
++Pst+Neu+Sg+Fac+Use/Ant:%<лося # ;
 +Pst+MFN+Pl+Fac:%<лись # ;
++Pst+MFN+Pl+Fac+Use/Ant:%<лися # ;
 
 LEXICON Past_shift''_Pass
 +Pst+Msc+Sg+Pass:%<лся # ; 
 +Pst+Msc+Sg+Pass+Fac:%<лся́ # ; 
 +Pst+Fem+Sg+Pass:%<ла́сь # ;
++Pst+Fem+Sg+Pass+Use/Ant:%<ла́ся # ;
 +Pst+Neu+Sg+Pass:%<лось # ;
++Pst+Neu+Sg+Pass+Use/Ant:%<лося # ;
 +Pst+MFN+Pl+Pass:%<лись # ;
++Pst+MFN+Pl+Pass+Use/Ant:%<лися # ;
 
 LEXICON ImpfFut
 +Fut:%<ть% бу́д PresFut_1_stem ;

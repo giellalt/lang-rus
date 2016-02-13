@@ -2248,6 +2248,12 @@ LEXICON ф._[п_b]
 LEXICON ф._0
 +N+Prop+Sem/Sur: Surname_0 ;
 
+LEXICON ф._0_22
+! Ukrainian/Polish/Belorusian -ко
++N+Prop+Sem/Sur:о Surname_0 ;
+!+N+Prop+Sem/Sur:а Surname_0 ; !TODO add XIX-century жо 3*a readings
+
+
 LEXICON Noun_мс-п_a_Msc_inan
 +Inan: Noun_мс-п_a_Msc ;
 +Inan+Sg+Acc: # ;

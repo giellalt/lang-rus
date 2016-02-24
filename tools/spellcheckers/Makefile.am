@@ -17,23 +17,28 @@ SUBDIRS = . fstbased listbased
 #	build rules
 
 # We need to remove accents from the speller fst's:
-generator-speller-gt-norm.hfst: generator-speller-gt-norm.tmp.hfst \
-				  $(top_builddir)/src/orthography/destress.lookup.hfst
-	$(AM_V_RGX2FST)$(PRINTF) "\
+generator-speller-gt-norm.%: analyser-speller-gt-norm.tmp.% \
+				  $(top_builddir)/src/orthography/destress.lookup.%
+	$(AM_V_XFST_TOOL)$(PRINTF) "read regex                                    \
 				@\"$<\" \
-			.o. @\"$(top_builddir)/src/orthography/destress.lookup.hfst\" \
-			;" \
-		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --xerox-composition=ON \
-		> $@
+			.o. @\"$(top_builddir)/src/orthography/destress.lookup.$*\" \
+		; \n\
+		save stack $@\n\
+		quit\n" | $(XFST_TOOL)
 
-analyser-speller-gt-norm.xfst: analyser-speller-gt-norm.tmp.xfst \
-				  $(top_builddir)/src/orthography/destress.lookup.xfst
-	$(AM_V_XFST)$(PRINTF) "read regex \
+analyser-speller-gt-norm.%: analyser-speller-gt-norm.tmp.% \
+				  $(top_builddir)/src/orthography/destress.lookup.% \
+		$(top_builddir)/src/filters/remove-hyphenation-marks.% \
+		$(top_builddir)/src/filters/remove-infl_deriv-borders.%
+	$(AM_V_XFST_TOOL)$(PRINTF) "read regex                                    \
 				@\"$<\" \
-			.o. @\"$(top_builddir)/src/orthography/destress.lookup.xfst\" \
-			;\n\
-		 save stack $@\n\
-		 quit\n" | $(XFST) $(VERBOSITY)
+			.o. @\"$(top_builddir)/src/orthography/destress.lookup.$*\" \
+		.o. @\"$(top_builddir)/src/filters/remove-hyphenation-marks.$*\"    \
+		.o. @\"$(top_builddir)/src/filters/remove-infl_deriv-borders.$*\"   \
+		; \n\
+		$(INVERT_HFST)\
+		save stack $@\n\
+		quit\n" | $(XFST_TOOL)
 
 # END: Local processing
 #########################################

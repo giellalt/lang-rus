@@ -130,15 +130,15 @@ REMOVE nom IF (0 n + acc)(-1 vblex);
 
 
 
-MAP @VMAIN TARGET finite ;
-MAP @SUBJ> TARGET n + nom OR prn + nom IF (NOT *-1 finite)(*1 finite);
-MAP @<SUBJ TARGET n + nom OR prn + nom IF (*-1 finite)(NOT *1 finite);
+MAP ( @VMAIN ) TARGET finite ;
+MAP ( @SUBJ> ) TARGET n + nom OR prn + nom IF (NOT *-1 finite)(*1 finite);
+MAP ( @<SUBJ ) TARGET n + nom OR prn + nom IF (*-1 finite)(NOT *1 finite);
 
-MAP @<OBJ TARGET n + acc IF (-1 vblex) ;
-MAP @P< TARGET n + acc IF (-1 pr) ;
+MAP ( @<OBJ ) TARGET n + acc IF (-1 vblex) ;
+MAP ( @P< ) TARGET n + acc IF (-1 pr) ;
 
-MAP @<ADVL TARGET pr OR adv IF (*-1 finite)(NOT *1 finite BARRIER (","));
-MAP @ADVL> TARGET pr OR adv IF (NOT *-1 finite)(*1 finite);
+MAP ( @<ADVL ) TARGET pr OR adv IF (*-1 finite)(NOT *1 finite BARRIER (","));
+MAP ( @ADVL> ) TARGET pr OR adv IF (NOT *-1 finite)(*1 finite);
 
 
 

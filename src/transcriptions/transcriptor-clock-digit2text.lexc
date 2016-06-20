@@ -226,18 +226,18 @@ LEXICON HOUR
 NOMHOUR ; !^N^
  
 LEXICON NOMHOUR !^N^
-@U.TIME.1@:второго@U.TIME.1@ # ; !^N^
-@U.TIME.2@:третьего@U.TIME.2@ # ; !^N^
-@U.TIME.3@:четвёртого@U.TIME.3@ # ; !^N^
-@U.TIME.4@:пятого@U.TIME.4@ # ; !^N^
-@U.TIME.5@:шестого@U.TIME.5@ # ; !^N^
-@U.TIME.6@:седьмого@U.TIME.6@ # ; !^N^
-@U.TIME.7@:восьмого@U.TIME.7@ # ; !^N^
-@U.TIME.8@:девятого@U.TIME.8@ # ; !^N^
-@U.TIME.9@:десятого@U.TIME.9@ # ; !^N^
-@U.TIME.10@:одинна́дцатого@U.TIME.10@ # ; !^N^
-@U.TIME.11@:двена́дцатого@U.TIME.11@ # ; !^N^
-@U.TIME.12@:первого@U.TIME.12@ # ; !^N^
+@U.TIME.1@второго:@U.TIME.1@ # ; !^N^
+@U.TIME.2@третьего:@U.TIME.2@ # ; !^N^
+@U.TIME.3@четвёртого:@U.TIME.3@ # ; !^N^
+@U.TIME.4@пятого:@U.TIME.4@ # ; !^N^
+@U.TIME.5@шестого:@U.TIME.5@ # ; !^N^
+@U.TIME.6@седьмого:@U.TIME.6@ # ; !^N^
+@U.TIME.7@восьмого:@U.TIME.7@ # ; !^N^
+@U.TIME.8@девятого:@U.TIME.8@ # ; !^N^
+@U.TIME.9@десятого:@U.TIME.9@ # ; !^N^
+@U.TIME.10@одинна́дцатого:@U.TIME.10@ # ; !^N^
+@U.TIME.11@двена́дцатого:@U.TIME.11@ # ; !^N^
+@U.TIME.12@первого:@U.TIME.12@ # ; !^N^
  
  
 

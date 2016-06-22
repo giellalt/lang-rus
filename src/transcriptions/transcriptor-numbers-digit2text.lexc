@@ -30,7 +30,7 @@ LEXICON TEENT
 1:оди́ннадцать%   THOUSANDSS ;
 2:двена́дцать%   THOUSANDSS ;
 3:трина́дцать%   THOUSANDSS ;
-4:четырна́дцать%   THOUSANDSS ;
+4:четы́рнадцать%   THOUSANDSS ;
 5:пятна́дцать%   THOUSANDSS ;
 6:шестна́дцать%   THOUSANDSS ;
 7:семна́дцать%   THOUSANDSS ;
@@ -44,13 +44,13 @@ LEXICON TENST
 4:со́рок%   TENCOUNTT ;
 5:пятьдеся́т%   TENCOUNTT ;
 6:шестьдеся́т%   TENCOUNTT ;
-7:семьдеся́т%   TENCOUNTT ;
+7:се́мьдесят%   TENCOUNTT ;
 8:во́семьдесят%   TENCOUNTT ;
 9:девяно́сто%    TENCOUNTT ;
 
 LEXICON TENCOUNTT
 2to9T ;
-1:одна%   THOUSAND ;
+1:одна́%   THOUSAND ;
 %0: THOUSANDSS ;
 
 
@@ -62,12 +62,12 @@ LEXICON HUNDREDST
 5:пятьсо́т%    1to99T ;
 6:шестьсо́т%   1to99T ;
 7:семьсо́т%    1to99T ;
-8:во́семьсот%  1to99T ;
-9:де́вятьсот%  1to99T ;
+8:восемьсо́т%  1to99T ;
+9:девятьсо́т%  1to99T ;
 
 LEXICON 1to99T
 %0: 2to9T ;
-%01:одна%   THOUSAND ;
+%01:одна́%   THOUSAND ;
 10to99T ;
 
 LEXICON THOUSAND  ! 1
@@ -96,8 +96,8 @@ LEXICON HUNDREDS
 5:пятьсо́т%   HUNDRED ;
 6:шестьсо́т%   HUNDRED ;
 7:семьсо́т%   HUNDRED ;
-8:во́семьсот%   HUNDRED ;
-9:де́вятьсот%   HUNDRED ;
+8:восемьсо́т%   HUNDRED ;
+9:девятьсо́т%   HUNDRED ;
 
 LEXICON HUNDRED
  1to99 ;
@@ -128,7 +128,7 @@ LEXICON TEEN
 1:оди́ннадцать  # ;
 2:двена́дцать # ;
 3:трина́дцать # ;
-4:четырна́дцать # ;
+4:четы́рнадцать # ;
 5:пятна́дцать # ;
 6:шестна́дцать # ;
 7:семна́дцать # ;
@@ -142,7 +142,7 @@ LEXICON TENS
 4:со́рок  TENCOUNT ;
 5:пятьдеся́т  TENCOUNT ;
 6:шестьдеся́т  TENCOUNT ;
-7:семьдеся́т  TENCOUNT ;
+7:се́мьдесят  TENCOUNT ;
 8:во́семьдесят  TENCOUNT ;
 9:девяно́сто   TENCOUNT ;
 
@@ -195,7 +195,7 @@ LEXICON ORD_TEENT
 1:оди́ннадцать%   ORD_THOUSANDSS ;
 2:двена́дцать%  ORD_THOUSANDSS ;
 3:трина́дцать%  ORD_THOUSANDSS ;
-4:четырна́дцать%  ORD_THOUSANDSS ;
+4:четы́рнадцать%  ORD_THOUSANDSS ;
 5:пятна́дцать%  ORD_THOUSANDSS ;
 6:шестна́дцать%  ORD_THOUSANDSS ;
 7:семна́дцать%  ORD_THOUSANDSS ;
@@ -209,13 +209,13 @@ LEXICON ORD_TENST
 4:со́рок%  ORD_TENCOUNTT ;
 5:пятьдеся́т%  ORD_TENCOUNTT ;
 6:шестьдеся́т%  ORD_TENCOUNTT ;
-7:семьдеся́т%  ORD_TENCOUNTT ;
+7:се́мьдесят%  ORD_TENCOUNTT ;
 8:во́семьдесят%  ORD_TENCOUNTT ;
 9:девяно́сто%  ORD_TENCOUNTT ;
 
 LEXICON ORD_TENCOUNTT
 ORD_2to9T ;
-1:одна%    ORD_THOUSAND ;
+1:одна́%    ORD_THOUSAND ;
 %0: ORD_THOUSANDSS ;
 
 
@@ -232,7 +232,7 @@ LEXICON ORD_HUNDREDST
 
 LEXICON ORD_1to99T
 %0: ORD_2to9T ;
-%01:одна%   ORD_THOUSAND ;
+%01:одна́%   ORD_THOUSAND ;
 ORD_10to99T ;
 
 LEXICON ORD_THOUSAND
@@ -253,14 +253,14 @@ LEXICON ORD_THOUSANDSS
 
 LEXICON ORD_HUNDREDS
 1:со́тый%   ORD_HUNDREDTH ;
-2:дву́хсотый%  ORD_HUNDREDTH ;
-3:трёхсотый%  ORD_HUNDREDTH ;
-4:четы́рёхсотый%  ORD_HUNDREDTH ;
-5:пятисотый%  ORD_HUNDREDTH ;
-6:шестисотый%  ORD_HUNDREDTH ;
-7:семисотый%  ORD_HUNDREDTH ;
-8:восьмисотый%  ORD_HUNDREDTH ;
-9:девятисотый%  ORD_HUNDREDTH ;
+2:дву́хсо́тый%  ORD_HUNDREDTH ;
+3:трёхсо́тый%  ORD_HUNDREDTH ;
+4:четырёхсо́тый%  ORD_HUNDREDTH ;
+5:пяти́со́тый%  ORD_HUNDREDTH ;
+6:шести́со́тый%  ORD_HUNDREDTH ;
+7:семи́со́тый%  ORD_HUNDREDTH ;
+8:восьми́со́тый%  ORD_HUNDREDTH ;
+9:девяти́со́тый%  ORD_HUNDREDTH ;
 
 1:сто%   ORD_HUNDRED ;
 2:две́сти%  ORD_HUNDRED ;
@@ -301,9 +301,9 @@ LEXICON ORD_10to99
 
 LEXICON ORD_TEEN
 %0-й:деся́тый   # ;
-1-й:одинна́дцатый   # ;
+1-й:оди́ннадцатый   # ;
 2-й:двена́дцатый   # ;
-3-й:тринадцатый   # ;
+3-й:трина́дцатый   # ;
 4-й:четы́рнадцатый   # ;
 5-й:пятна́дцатый   # ;
 6-й:шестна́дцатый   # ;
@@ -313,13 +313,13 @@ LEXICON ORD_TEEN
 
 
 LEXICON ORD_TENS
-2%0-й:два́дцатый    # ;
-3%0-й:три́дцатый    # ;
-4%0-й:соро́ковой    # ;
+2%0-й:двадца́тый    # ;
+3%0-й:тридца́тый    # ;
+4%0-й:сороково́й    # ;
 5%0-й:пятидеся́тый    # ;
 6%0-й:шестидеся́тый    # ;
 7%0-й:семидеся́тый    # ;
-8%0-й:во́сьмидесятый    # ;
+8%0-й:восьмидеся́тый    # ;
 9%0-й:девяно́стый   # ;
 
 2:два́дцать%  ORD_1to9 ;

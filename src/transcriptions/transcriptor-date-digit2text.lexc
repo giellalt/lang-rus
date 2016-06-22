@@ -25,6 +25,8 @@ Multichar_Symbols
 
 LEXICON Root
 DAY ;
+DAY10 ;
+%0: DAY ;
 
 LEXICON DAY
 1.:пе́рвoе%  29MONTH ;
@@ -36,6 +38,8 @@ LEXICON DAY
 7.:седьмо́е%  29MONTH ;
 8.:восьмо́е%  29MONTH ;
 9.:девя́тoе%  29MONTH ;
+
+LEXICON DAY10
 1%0.:десято́е%  29MONTH ;
 11.:одинна́дцатoе%  29MONTH ;
 12.:двена́дцатoе%  29MONTH ;
@@ -64,13 +68,19 @@ LEXICON DAY
  
 LEXICON 29MONTH
 2:февраля PUNCT ;
+%02:февраля PUNCT ;
+30MONTH ;
+31MONTH ;
  
 LEXICON 30MONTH
 4:апреля PUNCT ;
 6:июня PUNCT ;
 9:сентября PUNCT ;
 11:ноября PUNCT ;
-29MONTH ;
+%04:апреля PUNCT ;
+%06:июня PUNCT ;
+%09:сентября PUNCT ;
+31MONTH ;
  
 LEXICON 31MONTH
 1:января PUNCT ;
@@ -80,9 +90,14 @@ LEXICON 31MONTH
 8:августа PUNCT ;
 1%0:октября PUNCT ;
 12:декабря PUNCT ;
-30MONTH ;
+%01:января PUNCT ;
+%03:марта PUNCT ;
+%05:мая PUNCT ;
+%07:июля PUNCT ;
+%08:августа PUNCT ;
  
 LEXICON PUNCT 
      %.: # ; ! STRICT 12.3.
-+Use/NG: # ; ! SLOPPY 12.3
+       : # ; ! SLOPPY 12.3
+!+Use/NG: # ; ! SLOPPY 12.3
  

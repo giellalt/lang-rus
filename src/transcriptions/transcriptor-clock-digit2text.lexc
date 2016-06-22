@@ -52,6 +52,7 @@ LEXICON Root
 BEFORE ; ! :31-59
 !HALF ;
 AFTER ; ! :1-29
+NOMHOUR ;
 
 LEXICON BEFORE
 :без%  BEFOREHOURS ;
@@ -124,23 +125,22 @@ LEXICON afterlargehours
 @U.TIME.11@23:@U.TIME.11@ AFTpunkt ; !23:00 - 23:29
 @U.TIME.12@%0%0:@U.TIME.12@ AFTpunkt ; !00:00 - 00:29
 24%:%0%0:двадцать% четыре% часа # ; !24:00
-24.%0%0:двадцать% четыре% часа # ; !24:00
-24%:%0%0:полночь # ; !24:00
-24.%0%0:полночь # ; !24:00
+24.%0%0+Use/NG:двадцать% четыре% часа # ; !24:00
+24%:%0%0+Use/NG:полночь # ; !24:00
+24.%0%0+Use/NG:полночь # ; !24:00
 
 LEXICON BEFpunkt
 !%:+Use/NA: BEF ;
 !%.+Use/NA: BEF ;
 %:: BEF ;
-%.: BEF ;
+%.+Use/NG: BEF ;
   
 LEXICON AFTpunkt
 !%:+Use/NA: AFT ; ! 2.00 = göökte
 !%.+Use/NA: AFT ; ! 2.00 = göökte
 !+Use/NA: HOUR ; ! 2 = göökte
 %:: AFT ; 
-%.: AFT ; 
-HOUR ;
+%.+Use/NG: AFT ; 
  
 LEXICON BEF
 31:два́дцати% девя́ти%  TO ;
@@ -211,7 +211,7 @@ LEXICON AFT
 
 LEXICON TO ! 
 :минут%  NOMHOUR ;
-NOMHOUR ;
++Use/NG: NOMHOUR ;
 
 LEXICON NOMHOUR !^N^
 @U.TIME.1@:@U.TIME.1@час # ; !^N^

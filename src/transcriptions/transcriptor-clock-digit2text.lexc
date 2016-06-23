@@ -52,7 +52,6 @@ LEXICON Root
 BEFORE ; ! :31-59
 !HALF ;
 AFTER ; ! :1-29
-NOMHOUR ;
 
 LEXICON BEFORE
 :без%  BEFOREHOURS ;
@@ -134,6 +133,7 @@ LEXICON BEFpunkt
 !%.+Use/NA: BEF ;
 %:: BEF ;
 %.+Use/NG: BEF ;
+NOMHOUR ;
   
 LEXICON AFTpunkt
 !%:+Use/NA: AFT ; ! 2.00 = göökte
@@ -174,8 +174,8 @@ LEXICON BEF
 59:одно́й% мину́ты%  NOMHOUR ;
 59+Use/NG:мину́ты%  NOMHOUR ;
  
-LEXICON AFT
-%0%0: TO ;
+LEXICON AFT  
+%0%0: NOMHOUR ; 
 %01:одна́%  1OVER ;
 %01+Use/NG:мину́та%  HOUR ;
 %02:две%  2to4OVER ;

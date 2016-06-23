@@ -43,6 +43,10 @@ Multichar_Symbols
 @U.TIME.11@
 @U.TIME.12@
 
+@U.EXACT.YES@
+@R.EXACT.YES@
+@D.EXACT@
+
 +Use/NG
 +Use/NA
 
@@ -132,15 +136,15 @@ LEXICON BEFpunkt
 !%:+Use/NA: BEF ;
 !%.+Use/NA: BEF ;
 %:: BEF ;
-%.+Use/NG: BEF ;
-NOMHOUR ;
+%.: BEF ;
++Use/NG: NOMHOUR ; 
   
 LEXICON AFTpunkt
 !%:+Use/NA: AFT ; ! 2.00 = göökte
 !%.+Use/NA: AFT ; ! 2.00 = göökte
 !+Use/NA: HOUR ; ! 2 = göökte
 %:: AFT ; 
-%.+Use/NG: AFT ; 
+%.: AFT ; 
  
 LEXICON BEF
 31:двадцати́% девяти́%  TO ;
@@ -175,7 +179,7 @@ LEXICON BEF
 59+Use/NG:мину́ты%  NOMHOUR ;
  
 LEXICON AFT  
-%0%0: NOMHOUR ; 
+@U.EXACT.YES@%0%0:@U.EXACT.YES@ NOMHOUR ; 
 %01:одна́%  1OVER ;
 %01+Use/NG:мину́та%  HOUR ;
 %02:две%  2to4OVER ;
@@ -215,17 +219,27 @@ LEXICON TO !
 
 LEXICON NOMHOUR !^N^
 @U.TIME.1@:@U.TIME.1@час # ; !^N^
-@U.TIME.2@:@U.TIME.2@два # ; !^N^
-@U.TIME.3@:@U.TIME.3@три # ; !^N^
-@U.TIME.4@:@U.TIME.4@четы́ре # ; !^N^
-@U.TIME.5@:@U.TIME.5@пять # ; !^N^
-@U.TIME.6@:@U.TIME.6@шесть # ; !^N^
-@U.TIME.7@:@U.TIME.7@семь # ; !^N^
-@U.TIME.8@:@U.TIME.8@во́семь # ; !^N^
-@U.TIME.9@:@U.TIME.9@де́вять # ; !^N^
-@U.TIME.10@:@U.TIME.10@де́сять # ; !^N^
-@U.TIME.11@:@U.TIME.11@оди́ннадцать # ; !^N^
-@U.TIME.12@:@U.TIME.12@двена́дцать # ; !^N^
+@U.TIME.2@:@U.TIME.2@два H234 ; !^N^
+@U.TIME.3@:@U.TIME.3@три H234 ; !^N^
+@U.TIME.4@:@U.TIME.4@четы́ре H234 ; !^N^
+@U.TIME.5@:@U.TIME.5@пять H5 ; !^N^
+@U.TIME.6@:@U.TIME.6@шесть H5 ; !^N^
+@U.TIME.7@:@U.TIME.7@семь H5 ; !^N^
+@U.TIME.8@:@U.TIME.8@во́семь H5 ; !^N^
+@U.TIME.9@:@U.TIME.9@де́вять H5 ; !^N^
+@U.TIME.10@:@U.TIME.10@де́сять H5 ; !^N^
+@U.TIME.11@:@U.TIME.11@оди́ннадцать H5 ; !^N^
+@U.TIME.12@:@U.TIME.12@двена́дцать H5 ; !^N^
+
+LEXICON H234
+@R.EXACT.YES@:@R.EXACT.YES@% часа́ # ;
+@D.EXACT@+Use/NG:@D.EXACT@% часа́ # ;
+@D.EXACT@:@D.EXACT@ # ;
+
+LEXICON H5
+@R.EXACT.YES@:@R.EXACT.YES@% часо́в # ;
+@D.EXACT@+Use/NG:@D.EXACT@% часо́в # ;
+@D.EXACT@:@D.EXACT@ # ;
  
 
 LEXICON 1OVER

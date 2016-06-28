@@ -47,6 +47,15 @@ Multichar_Symbols
 @R.EXACT.YES@
 @D.EXACT@
 
+@U.DAY.NIGHT@
+@U.DAY.MORNING@
+@U.DAY.DAY@
+@U.DAY.EVENING@
+@R.DAY.NIGHT@
+@R.DAY.MORNING@
+@R.DAY.DAY@
+@R.DAY.EVENING@
+
 +Use/NG
 +Use/NA
 
@@ -101,32 +110,36 @@ LEXICON AFTER
          afterlargehours ;
  
 LEXICON aftersmallhours
-@U.TIME.12@%0:@U.TIME.12@ AFTpunkt ; !00:00 - 00:29
-@U.TIME.1@1:@U.TIME.1@ AFTpunkt ; !01:00 - 01:29
-@U.TIME.2@2:@U.TIME.2@ AFTpunkt ; !02:00 - 02:29
-@U.TIME.3@3:@U.TIME.3@ AFTpunkt ; !03:00 - 03:29
-@U.TIME.4@4:@U.TIME.4@ AFTpunkt ; !04:00 - 04:29
-@U.TIME.5@5:@U.TIME.5@ AFTpunkt ; !05:00 - 05:29
-@U.TIME.6@6:@U.TIME.6@ AFTpunkt ; !06:00 - 06:29
-@U.TIME.7@7:@U.TIME.7@ AFTpunkt ; !07:00 - 07:29
-@U.TIME.8@8:@U.TIME.8@ AFTpunkt ; !08:00 - 08:29
-@U.TIME.9@9:@U.TIME.9@ AFTpunkt ; !09:00 - 09:29
+%0%:%0%0+Use/NG:ноль% часо́в # ; !00:00
+%0.%0%0+Use/NG:ноль% часо́в # ; !00:00
+%0%:%0%0+Use/NG:по́лночь # ; !00:00
+%0.%0%0+Use/NG:по́лночь # ; !00:00
+@U.TIME.12@@U.DAY.NIGHT@%0:@U.TIME.12@@U.DAY.NIGHT@ AFTpunkt ; !00:00 - 00:29
+@U.TIME.1@@U.DAY.NIGHT@1:@U.TIME.1@@U.DAY.NIGHT@ AFTpunkt ; !01:00 - 01:29
+@U.TIME.2@@U.DAY.NIGHT@2:@U.TIME.2@@U.DAY.NIGHT@ AFTpunkt ; !02:00 - 02:29
+@U.TIME.3@@U.DAY.NIGHT@3:@U.TIME.3@@U.DAY.NIGHT@ AFTpunkt ; !03:00 - 03:29
+@U.TIME.4@@U.DAY.NIGHT@4:@U.TIME.4@@U.DAY.NIGHT@ AFTpunkt ; !04:00 - 04:29
+@U.TIME.5@@U.DAY.MORNING@5:@U.TIME.5@@U.DAY.MORNING@ AFTpunkt ; !05:00 - 05:29
+@U.TIME.6@@U.DAY.MORNING@6:@U.TIME.6@@U.DAY.MORNING@ AFTpunkt ; !06:00 - 06:29
+@U.TIME.7@@U.DAY.MORNING@7:@U.TIME.7@@U.DAY.MORNING@ AFTpunkt ; !07:00 - 07:29
+@U.TIME.8@@U.DAY.MORNING@8:@U.TIME.8@@U.DAY.MORNING@ AFTpunkt ; !08:00 - 08:29
+@U.TIME.9@@U.DAY.MORNING@9:@U.TIME.9@@U.DAY.MORNING@ AFTpunkt ; !09:00 - 09:29
 
 LEXICON afterlargehours
-@U.TIME.10@1%0:@U.TIME.10@ AFTpunkt ; !10:00 - 10:29
-@U.TIME.11@11:@U.TIME.11@ AFTpunkt ; !11:00 - 11:59
-@U.TIME.12@12:@U.TIME.12@ AFTpunkt ; !12:00 - 12:29
-@U.TIME.1@13:@U.TIME.1@ AFTpunkt ; !13:00 - 13:29
-@U.TIME.2@14:@U.TIME.2@ AFTpunkt ; !14:00 - 114:29
-@U.TIME.3@15:@U.TIME.3@ AFTpunkt ; !15:00 - 15:29
-@U.TIME.4@16:@U.TIME.4@ AFTpunkt ; !16:00 - 16:29
-@U.TIME.5@17:@U.TIME.5@ AFTpunkt ; !17:00 - 17:29
-@U.TIME.6@18:@U.TIME.6@ AFTpunkt ; !18:00 - 18:29
-@U.TIME.7@19:@U.TIME.7@ AFTpunkt ; !19:00 - 19:29
-@U.TIME.8@2%0:@U.TIME.8@ AFTpunkt ; !20:00 - 20:29
-@U.TIME.9@21:@U.TIME.9@ AFTpunkt ; !21:00 - 21:29
-@U.TIME.10@22:@U.TIME.10@ AFTpunkt ; !22:00 - 22:29
-@U.TIME.11@23:@U.TIME.11@ AFTpunkt ; !23:00 - 23:29
+@U.TIME.10@@U.DAY.MORNING@1%0:@U.TIME.10@@U.DAY.MORNING@ AFTpunkt ; !10:00 - 10:29
+@U.TIME.11@@U.DAY.MORNING@11:@U.TIME.11@@U.DAY.MORNING@ AFTpunkt ; !11:00 - 11:59
+@U.TIME.12@@U.DAY.DAY@12:@U.TIME.12@@U.DAY.DAY@ AFTpunkt ; !12:00 - 12:29
+@U.TIME.1@@U.DAY.DAY@13:@U.TIME.1@@U.DAY.DAY@ AFTpunkt ; !13:00 - 13:29
+@U.TIME.2@@U.DAY.DAY@14:@U.TIME.2@@U.DAY.DAY@ AFTpunkt ; !14:00 - 114:29
+@U.TIME.3@@U.DAY.DAY@15:@U.TIME.3@@U.DAY.DAY@ AFTpunkt ; !15:00 - 15:29
+@U.TIME.4@@U.DAY.DAY@16:@U.TIME.4@@U.DAY.DAY@ AFTpunkt ; !16:00 - 16:29
+@U.TIME.5@@U.DAY.EVENING@17:@U.TIME.5@@U.DAY.EVENING@ AFTpunkt ; !17:00 - 17:29
+@U.TIME.6@@U.DAY.EVENING@18:@U.TIME.6@@U.DAY.EVENING@ AFTpunkt ; !18:00 - 18:29
+@U.TIME.7@@U.DAY.EVENING@19:@U.TIME.7@@U.DAY.EVENING@ AFTpunkt ; !19:00 - 19:29
+@U.TIME.8@@U.DAY.EVENING@2%0:@U.TIME.8@@U.DAY.EVENING@ AFTpunkt ; !20:00 - 20:29
+@U.TIME.9@@U.DAY.EVENING@21:@U.TIME.9@@U.DAY.EVENING@ AFTpunkt ; !21:00 - 21:29
+@U.TIME.10@@U.DAY.EVENING@22:@U.TIME.10@@U.DAY.EVENING@ AFTpunkt ; !22:00 - 22:29
+@U.TIME.11@@U.DAY.EVENING@23:@U.TIME.11@@U.DAY.EVENING@ AFTpunkt ; !23:00 - 23:29
 24%:%0%0:два́дцать% четы́ре% часа́ # ; !24:00
 24.%0%0+Use/NG:два́дцать% четы́ре% часа́ # ; !24:00
 24%:%0%0+Use/NG:по́лночь # ; !24:00
@@ -218,7 +231,7 @@ LEXICON TO !
 +Use/NG: NOMHOUR ;
 
 LEXICON NOMHOUR !^N^
-@U.TIME.1@:@U.TIME.1@час # ; !^N^
+@U.TIME.1@:@U.TIME.1@час DNJA_NOCHI ; !^N^
 @U.TIME.2@:@U.TIME.2@два H234 ; !^N^
 @U.TIME.3@:@U.TIME.3@три H234 ; !^N^
 @U.TIME.4@:@U.TIME.4@четы́ре H234 ; !^N^
@@ -229,18 +242,29 @@ LEXICON NOMHOUR !^N^
 @U.TIME.9@:@U.TIME.9@де́вять H5 ; !^N^
 @U.TIME.10@:@U.TIME.10@де́сять H5 ; !^N^
 @U.TIME.11@:@U.TIME.11@оди́ннадцать H5 ; !^N^
-@U.TIME.12@:@U.TIME.12@двена́дцать H5 ; !^N^
+@U.TIME.12@@D.EXACT@:@U.TIME.12@@D.EXACT@двена́дцать DNJA_NOCHI ; !^N^
+@U.TIME.12@:@U.TIME.12@двена́дцать% часо́в DNJA_NOCHI ; !^N^
 
 LEXICON H234
-@R.EXACT.YES@:@R.EXACT.YES@% часа́ # ;
-@D.EXACT@+Use/NG:@D.EXACT@% часа́ # ;
-@D.EXACT@:@D.EXACT@ # ;
+@R.EXACT.YES@:@R.EXACT.YES@% часа́ DNJA_NOCHI ;
+@D.EXACT@+Use/NG:@D.EXACT@% часа́ DNJA_NOCHI ;
+@D.EXACT@:@D.EXACT@ DNJA_NOCHI ;
+
+LEXICON DNJA_NOCHI
+@R.DAY.NIGHT@:@R.DAY.NIGHT@% но́чи # ;
+@R.DAY.DAY@:@R.DAY.DAY@% дня # ;
+# ;
 
 LEXICON H5
-@R.EXACT.YES@:@R.EXACT.YES@% часо́в # ;
-@D.EXACT@+Use/NG:@D.EXACT@% часо́в # ;
-@D.EXACT@:@D.EXACT@ # ;
+@R.EXACT.YES@:@R.EXACT.YES@% часо́в UTRA_VECHERA ;
+@D.EXACT@+Use/NG:@D.EXACT@% часо́в UTRA_VECHERA ;
+@D.EXACT@:@D.EXACT@ UTRA_VECHERA ;
  
+LEXICON UTRA_VECHERA
+@R.DAY.MORNING@:@R.DAY.MORNING@% утра́ # ;
+@R.DAY.EVENING@:@R.DAY.EVENING@% ве́чера # ;
+# ;
+
 
 LEXICON 1OVER
 :мину́та%  HOUR ;

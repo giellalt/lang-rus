@@ -1,0 +1,18 @@
+# Russian
+
+X (->) Х, # roman numerals written in cyrillic
+#C (->) С, # --"-- Relaxing the C results in massive over analysis with the preposition с
+M (->) М, # --"--
+x (->) х, # --"--
+#c (->) с, # --"--
+m (->) м,  # --"--
+й (->) й,  # Combining breve (\u0306) (encountered in pdfs, mostly)
+Й (->) Й,
+ё (->) ё,  # Combining diaeresis (\u0308) (encountered in pdfs, mostly)
+Ё (->) Ё
+;
+
+# Explanation:
+# lexical side (->) input 
+# Or, in other words:
+# correct (->) in use out there

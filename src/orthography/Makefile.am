@@ -12,7 +12,9 @@ GT_ORTHOGRAPHIC_REGEX_SRCS=\
 		spellrelax-mobile-keyboard.regex \
 		destress.regex \
 		destressOptional.regex \
-		spellrelax-tags.regex
+		spellrelax-tags.regex \
+		raw-to-accented.regex \
+		spellrelax.accented.regex
 
 GT_ORTHOGRAPHIC_XFSCRIPT_SRCS=\
 		allcaps.xfscript      \

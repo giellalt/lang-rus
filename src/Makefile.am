@@ -63,45 +63,45 @@ endif # CAN_FOMA
 #################################################
 #### Add language-specific build rules here: ####
 
-analyser-gt-%.hfst: analyser-gt-%.tmp.hfst \
-				 orthography/destressOptional.compose.hfst
-	$(AM_V_RGX2FST)$(PRINTF) "\
-				@\"$<\" \
-			.o. @\"orthography/destressOptional.compose.hfst\" \
-			;" \
-		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --xerox-composition=ON \
-		| $(HFST_INVERT) \
-		| $(HFST_FST2FST) $(HFST_FLAGS) -f olw \
-		> $@
+# We need to add processing of language-specific tags in the analysers:
+define giella_fsts
+# We also need language-specific processing in the accented analysers:
+analyser-gt-%.accented.$(1): analyser-gt-%.accented.tmp.$(1)
+	$$(AM_V_XFST_TOOL)$$(PRINTF) "load stack $$<\n\
+		 $$(INVERT_HFST)\
+		 save stack $$@\n\
+		 quit\n" | $$(XFST_TOOL)
 
-generator-gt-%.hfst: generator-gt-%.tmp.hfst \
-				  orthography/destress.compose.hfst
-	$(AM_V_RGX2FST)$(PRINTF) "\
-				@\"$<\" \
-			.o. @\"orthography/destress.compose.hfst\" \
-			;" \
-		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --xerox-composition=ON \
-		| $(HFST_FST2FST) $(HFST_FLAGS) -f olw \
-		> $@
+# We also need language-specific processing in the accented generators:
+generator-gt-%.accented.$(1): generator-gt-%.accented.tmp.$(1)
+	$$(AM_V_XFST_TOOL)$$(PRINTF) "load stack $$<\n\
+		 $$(INVERT_XFST)$$(INVERT_FOMA)\
+		 save stack $$@\n\
+		 quit\n" | $$(XFST_TOOL)
 
-analyser-gt-%.xfst: analyser-gt-%.tmp.xfst \
-				 orthography/destressOptional.compose.xfst
-	$(AM_V_XFST)$(PRINTF) "read regex \
-				@\"$<\" \
-			.o. @\"orthography/destressOptional.compose.xfst\" \
+analyser-gt%.$(1): analyser-gt%.tmp.$(1) \
+					 orthography/destressOptional.compose.$(1)
+	$$(AM_V_XFST_TOOL)$$(PRINTF) "read regex \
+				@\"$$<\"                                      \
+			.o. @\"orthography/destressOptional.compose.$(1)\" \
 			;\n\
-		 save stack $@\n\
-		 quit\n" | $(XFST) $(VERBOSITY)
+		 $$(INVERT_HFST)\
+		 save stack $$@\n\
+		 quit\n" | $$(XFST_TOOL)
 
-generator-gt-%.xfst: generator-gt-%.tmp.xfst \
-				  orthography/destress.compose.xfst
-	$(AM_V_XFST)$(PRINTF) "read regex \
-				@\"$<\" \
-			.o. @\"orthography/destress.compose.xfst\" \
+# We need to add processing of language-specific tags in the generators:
+generator-gt%.$(1): generator-gt%.tmp.$(1) \
+					 orthography/destress.compose.$(1)
+	$$(AM_V_XFST_TOOL)$$(PRINTF) "read regex \
+				@\"$$<\"                                      \
+			.o. @\"orthography/destress.compose.$(1)\" \
 			;\n\
-		 invert net\n\
-		 save stack $@\n\
-		 quit\n" | $(XFST) $(VERBOSITY)
+		 $$(INVERT_XFST)$$(INVERT_FOMA)\
+		 save stack $$@\n\
+		 quit\n" | $$(XFST_TOOL)
+
+endef
+$(foreach fst,hfst xfst foma,$(eval $(call giella_fsts,$(fst))))
 
 ##################################################################
 #### END: Add local processing instructions ABOVE this line ######

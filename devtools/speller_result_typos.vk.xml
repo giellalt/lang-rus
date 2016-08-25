@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet href="https://gtsvn.uit.no/langtech/trunk/giella-core/scripts/style/speller_xml.css" type="text/css"?>
-<?xml-stylesheet href="https://gtsvn.uit.no/langtech/trunk/gtcore/scripts/style/speller_xml.css" type="text/css"?>
+<?xml-stylesheet type="text/css" href="https://gtsvn.uit.no/langtech/trunk/gtcore/scripts/style/speller_xml.css"?>
 <spelltestresult>
   <header>
     <engine abbreviation="vk">
       <toolversion>n/a</toolversion>
-      <processing memoryusage="n/a" usertime="0" systime="0" realtime="0"/>
+      <processing memoryusage="n/a" realtime="0" usertime="0" systime="0"/>
     </engine>
-    <lexicon version="ru version 0.1, 25.08.2016, rev139185"/>
+    <lexicon version="ru version 0.1, 25.08.2016, rev139247"/>
     <document>typos.txt</document>
-    <timestamp>20160825-2057</timestamp>
+    <timestamp>20160825-2313</timestamp>
     <truefalsesummary wordcount="966">
       <original correct="0" error="966"/>
       <speller correct="74" error="892"/>
@@ -20,18 +20,18 @@
       <accuracy>0.92</accuracy>
     </truefalsesummary>
     <suggestionsummary>
-      <sugg1 editdist1="465" editdist2="30" editdist3plus="0"/>
-      <sugg2 editdist1="87" editdist2="7" editdist3plus="0"/>
-      <sugg3 editdist1="37" editdist2="5" editdist3plus="0"/>
-      <sugg4 editdist1="21" editdist2="3" editdist3plus="0"/>
-      <sugg5 editdist1="13" editdist2="1" editdist3plus="0"/>
+      <sugg1 editdist1="479" editdist2="37" editdist3plus="4"/>
+      <sugg2 editdist1="78" editdist2="8" editdist3plus="0"/>
+      <sugg3 editdist1="32" editdist2="2" editdist3plus="0"/>
+      <sugg4 editdist1="23" editdist2="1" editdist3plus="0"/>
+      <sugg5 editdist1="13" editdist2="2" editdist3plus="0"/>
       <suggbelow5 editdist1="0" editdist2="0" editdist3plus="0"/>
-      <nosugg editdist1="57" editdist2="54" editdist3plus="51"/>
-      <badsuggs editdist1="45" editdist2="52" editdist3plus="38"/>
-      <averageposition>1.46</averageposition>
-      <top5pos_percent>75.00</top5pos_percent>
-      <allpos_percent>75.00</allpos_percent>
-      <averagesuggs_with_correct>3.55</averagesuggs_with_correct>
+      <nosugg editdist1="56" editdist2="52" editdist3plus="51"/>
+      <badsuggs editdist1="44" editdist2="50" editdist3plus="34"/>
+      <averageposition>1.42</averageposition>
+      <top5pos_percent>76.12</top5pos_percent>
+      <allpos_percent>76.12</allpos_percent>
+      <averagesuggs_with_correct>3.63</averagesuggs_with_correct>
     </suggestionsummary>
   </header>
   <results>
@@ -42,10 +42,10 @@
       <edit_dist>2</edit_dist>
       <suggestions count="5">
         <suggestion>тех</suggestion>
+        <suggestion>их</suggestion>
+        <suggestion>них</suggestion>
         <suggestion>цех</suggestion>
-        <suggestion>вех</suggestion>
-        <suggestion>мех</suggestion>
-        <suggestion>чех</suggestion>
+        <suggestion>Лех</suggestion>
       </suggestions>
     </word>
     <word corrsugg="-1">
@@ -73,24 +73,28 @@
         <suggestion>аборигену</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="0">
+    <word corrsugg="1">
       <original status="error">Азейрбаджан</original>
       <speller status="error"/>
       <expected>Азербайджан</expected>
       <edit_dist>2</edit_dist>
+      <position>1</position>
+      <suggestions count="1">
+        <suggestion expected="yes">Азербайджан</suggestion>
+      </suggestions>
     </word>
-    <word corrsugg="2">
+    <word corrsugg="1">
       <original status="error">ана</original>
       <speller status="error"/>
       <expected>она</expected>
       <edit_dist>1</edit_dist>
-      <position>2</position>
+      <position>1</position>
       <suggestions count="5">
-        <suggestion>на</suggestion>
         <suggestion expected="yes">она</suggestion>
+        <suggestion>на</suggestion>
+        <suggestion>оно</suggestion>
         <suggestion>дна</suggestion>
-        <suggestion>хана</suggestion>
-        <suggestion>сна</suggestion>
+        <suggestion>но</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -118,7 +122,7 @@
         <suggestion expected="yes">Опять</suggestion>
         <suggestion>Впять</suggestion>
         <suggestion>Спять</suggestion>
-        <suggestion>Путь</suggestion>
+        <suggestion>Пить</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -130,9 +134,9 @@
       <suggestions count="5">
         <suggestion expected="yes">опять</suggestion>
         <suggestion>пять</suggestion>
-        <suggestion>впять</suggestion>
+        <suggestion>опить</suggestion>
         <suggestion>спять</suggestion>
-        <suggestion>напять</suggestion>
+        <suggestion>впять</suggestion>
       </suggestions>
     </word>
     <word corrsugg="0">
@@ -152,7 +156,7 @@
         <suggestion expected="yes">отлично</suggestion>
         <suggestion>отличны</suggestion>
         <suggestion>отливна</suggestion>
-        <suggestion>ялична</suggestion>
+        <suggestion>отличная</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -186,36 +190,38 @@
       <edit_dist>2</edit_dist>
       <suggestions count="5">
         <suggestion>арки</suggestion>
+        <suggestion>Шацки</suggestion>
         <suggestion>аски</suggestion>
         <suggestion>цацки</suggestion>
-        <suggestion>реки</suggestion>
-        <suggestion>науки</suggestion>
+        <suggestion>очки</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="-1">
+    <word corrsugg="1">
       <original status="error">аццки</original>
       <speller status="error"/>
       <expected>адски</expected>
       <edit_dist>2</edit_dist>
+      <position>1</position>
       <suggestions count="5">
-        <suggestion>акции</suggestion>
-        <suggestion>атаки</suggestion>
-        <suggestion>яицки</suggestion>
-        <suggestion>арки</suggestion>
-        <suggestion>абаки</suggestion>
+        <suggestion expected="yes">адски</suggestion>
+        <suggestion>адских</suggestion>
+        <suggestion>адские</suggestion>
+        <suggestion>адским</suggestion>
+        <suggestion>адска</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="3">
+    <word corrsugg="1">
       <original status="error">аццкий</original>
       <speller status="error"/>
       <expected>адский</expected>
       <edit_dist>2</edit_dist>
-      <position>3</position>
-      <suggestions count="4">
-        <suggestion>акций</suggestion>
-        <suggestion>яицкий</suggestion>
+      <position>1</position>
+      <suggestions count="5">
         <suggestion expected="yes">адский</suggestion>
-        <suggestion>ниццкий</suggestion>
+        <suggestion>адской</suggestion>
+        <suggestion>адские</suggestion>
+        <suggestion>адских</suggestion>
+        <suggestion>адским</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -226,8 +232,8 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">бабешку</suggestion>
-        <suggestion>бабенку</suggestion>
         <suggestion>бабёшку</suggestion>
+        <suggestion>бабенку</suggestion>
         <suggestion>побежку</suggestion>
         <suggestion>бабушку</suggestion>
       </suggestions>
@@ -240,10 +246,10 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">баррикады</suggestion>
-        <suggestion>бригады</suggestion>
         <suggestion>баррикад</suggestion>
-        <suggestion>аркады</suggestion>
+        <suggestion>баррикада</suggestion>
         <suggestion>баррикаду</suggestion>
+        <suggestion>баррикаде</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -255,9 +261,9 @@
       <suggestions count="5">
         <suggestion expected="yes">барьер</suggestion>
         <suggestion>бартер</suggestion>
-        <suggestion>партер</suggestion>
         <suggestion>барьера</suggestion>
         <suggestion>барьеры</suggestion>
+        <suggestion>карьер</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -293,9 +299,9 @@
       <suggestions count="5">
         <suggestion>более</suggestion>
         <suggestion expected="yes">больше</suggestion>
-        <suggestion>боше</suggestion>
         <suggestion>болте</suggestion>
-        <suggestion>поле</suggestion>
+        <suggestion>боше</suggestion>
+        <suggestion>боли</suggestion>
       </suggestions>
     </word>
     <word corrsugg="badaccept">
@@ -363,18 +369,18 @@
         <suggestion>безысходностью</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="2">
+    <word corrsugg="1">
       <original status="error">в4ера</original>
       <speller status="error"/>
       <expected>вчера</expected>
       <edit_dist>1</edit_dist>
-      <position>2</position>
+      <position>1</position>
       <suggestions count="5">
-        <suggestion>вера</suggestion>
         <suggestion expected="yes">вчера</suggestion>
+        <suggestion>вера</suggestion>
         <suggestion>веера</suggestion>
         <suggestion>века</suggestion>
-        <suggestion>озера</suggestion>
+        <suggestion>веря</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -390,17 +396,18 @@
         <suggestion>Малейшие</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="-1">
+    <word corrsugg="1">
       <original status="error">ваще</original>
       <speller status="error"/>
       <expected>вообще</expected>
       <edit_dist>3</edit_dist>
+      <position>1</position>
       <suggestions count="5">
-        <suggestion>чаще</suggestion>
-        <suggestion>вяще</suggestion>
+        <suggestion expected="yes">вообще</suggestion>
         <suggestion>ваше</suggestion>
-        <suggestion>вале</suggestion>
-        <suggestion>варе</suggestion>
+        <suggestion>вяще</suggestion>
+        <suggestion>чаще</suggestion>
+        <suggestion>ваши</suggestion>
       </suggestions>
     </word>
     <word corrsugg="-1">
@@ -409,11 +416,11 @@
       <expected>вообще</expected>
       <edit_dist>3</edit_dist>
       <suggestions count="5">
-        <suggestion>чаще</suggestion>
-        <suggestion>вотще</suggestion>
         <suggestion>вяще</suggestion>
-        <suggestion>вящее</suggestion>
-        <suggestion>вящие</suggestion>
+        <suggestion>чаще</suggestion>
+        <suggestion>ваше</suggestion>
+        <suggestion>веще</suggestion>
+        <suggestion>вотще</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -427,7 +434,7 @@
         <suggestion>взвеселились</suggestion>
         <suggestion>взвеселялись</suggestion>
         <suggestion>увеселялись</suggestion>
-        <suggestion>веселилась</suggestion>
+        <suggestion>вселились</suggestion>
       </suggestions>
     </word>
     <word corrsugg="2">
@@ -454,32 +461,32 @@
         <suggestion expected="yes">вернулась</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="3">
+    <word corrsugg="4">
       <original status="error">веть</original>
       <speller status="error"/>
       <expected>ведь</expected>
       <edit_dist>1</edit_dist>
-      <position>3</position>
+      <position>4</position>
       <suggestions count="5">
+        <suggestion>вить</suggestion>
         <suggestion>сеть</suggestion>
         <suggestion>весь</suggestion>
         <suggestion expected="yes">ведь</suggestion>
         <suggestion>ветвь</suggestion>
-        <suggestion>вещь</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="1">
+    <word corrsugg="3">
       <original status="error">Вечром</original>
       <speller status="error"/>
       <expected>Вечером</expected>
       <edit_dist>1</edit_dist>
-      <position>1</position>
+      <position>3</position>
       <suggestions count="5">
+        <suggestion>Верам</suggestion>
+        <suggestion>Петром</suggestion>
         <suggestion expected="yes">Вечером</suggestion>
         <suggestion>Ветром</suggestion>
         <suggestion>Мечом</suggestion>
-        <suggestion>Пером</suggestion>
-        <suggestion>Речном</suggestion>
       </suggestions>
     </word>
     <word corrsugg="badaccept">
@@ -496,10 +503,10 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">вещей</suggestion>
+        <suggestion>вещий</suggestion>
         <suggestion>вашей</suggestion>
         <suggestion>пешей</suggestion>
         <suggestion>вшей</suggestion>
-        <suggestion>вежей</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -527,7 +534,7 @@
         <suggestion>слева</suggestion>
         <suggestion>хлева</suggestion>
         <suggestion>влета</suggestion>
-        <suggestion>клева</suggestion>
+        <suggestion>елева</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -572,10 +579,10 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">возрастающей</suggestion>
+        <suggestion>возрастающий</suggestion>
         <suggestion>возрастающее</suggestion>
         <suggestion>взрастающей</suggestion>
         <suggestion>возрастающем</suggestion>
-        <suggestion>возрождающей</suggestion>
       </suggestions>
     </word>
     <word corrsugg="-1">
@@ -585,35 +592,37 @@
       <edit_dist>6</edit_dist>
       <suggestions count="5">
         <suggestion>вообще</suggestion>
+        <suggestion>сообщим</suggestion>
         <suggestion>общем</suggestion>
         <suggestion>всеобщем</suggestion>
         <suggestion>сообщаем</suggestion>
-        <suggestion>вобьем</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="-1">
+    <word corrsugg="1">
       <original status="error">воооот</original>
       <speller status="error"/>
       <expected>вот</expected>
       <edit_dist>3</edit_dist>
-      <suggestions count="3">
+      <position>1</position>
+      <suggestions count="4">
+        <suggestion expected="yes">вот</suggestion>
         <suggestion>ворот</suggestion>
         <suggestion>волоок</suggestion>
         <suggestion>вколот</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="3">
+    <word corrsugg="1">
       <original status="error">вооот</original>
       <speller status="error"/>
       <expected>вот</expected>
       <edit_dist>2</edit_dist>
-      <position>3</position>
+      <position>1</position>
       <suggestions count="5">
-        <suggestion>ворот</suggestion>
-        <suggestion>водой</suggestion>
         <suggestion expected="yes">вот</suggestion>
+        <suggestion>ворот</suggestion>
+        <suggestion>вощат</suggestion>
+        <suggestion>водой</suggestion>
         <suggestion>ворота</suggestion>
-        <suggestion>высот</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -625,9 +634,9 @@
       <suggestions count="5">
         <suggestion expected="yes">вообще</suggestion>
         <suggestion>вотще</suggestion>
+        <suggestion>вощи</suggestion>
         <suggestion>войне</suggestion>
         <suggestion>воде</suggestion>
-        <suggestion>вовсе</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -638,10 +647,10 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">восхитительный</suggestion>
-        <suggestion>восхитительней</suggestion>
         <suggestion>восхитительны</suggestion>
         <suggestion>восхитительных</suggestion>
-        <suggestion>осветительный</suggestion>
+        <suggestion>восхитительные</suggestion>
+        <suggestion>восхитительным</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -687,17 +696,17 @@
         <suggestion>встретила</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="2">
+    <word corrsugg="1">
       <original status="error">встречавщимися</original>
       <speller status="error"/>
       <expected>встречавшимися</expected>
       <edit_dist>1</edit_dist>
-      <position>2</position>
+      <position>1</position>
       <suggestions count="4">
-        <suggestion>встречающимися</suggestion>
         <suggestion expected="yes">встречавшимися</suggestion>
-        <suggestion>встречающимся</suggestion>
+        <suggestion>встречающимися</suggestion>
         <suggestion>встречавшимся</suggestion>
+        <suggestion>встречающимся</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -735,9 +744,9 @@
       <suggestions count="5">
         <suggestion expected="yes">выразился</suggestion>
         <suggestion>выродился</suggestion>
-        <suggestion>вывозился</suggestion>
         <suggestion>выроился</suggestion>
-        <suggestion>выносился</suggestion>
+        <suggestion>вывозился</suggestion>
+        <suggestion>выразимся</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -748,10 +757,10 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">высыпание</suggestion>
+        <suggestion>высыпании</suggestion>
         <suggestion>высыпнее</suggestion>
         <suggestion>высыхание</suggestion>
         <suggestion>высыпания</suggestion>
-        <suggestion>высыпавшие</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -768,18 +777,18 @@
         <suggestion>выходы</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="2">
+    <word corrsugg="1">
       <original status="error">вьехал</original>
       <speller status="error"/>
       <expected>въехал</expected>
       <edit_dist>1</edit_dist>
-      <position>2</position>
+      <position>1</position>
       <suggestions count="5">
-        <suggestion>выехал</suggestion>
         <suggestion expected="yes">въехал</suggestion>
-        <suggestion>уехал</suggestion>
-        <suggestion>воевал</suggestion>
-        <suggestion>поехал</suggestion>
+        <suggestion>выехал</suggestion>
+        <suggestion>въехали</suggestion>
+        <suggestion>въехав</suggestion>
+        <suggestion>въехала</suggestion>
       </suggestions>
     </word>
     <word corrsugg="-1">
@@ -789,24 +798,24 @@
       <edit_dist>1</edit_dist>
       <suggestions count="5">
         <suggestion>гены</suggestion>
+        <suggestion>Беныч</suggestion>
+        <suggestion>Кеныч</suggestion>
         <suggestion>гений</suggestion>
-        <suggestion>цены</suggestion>
-        <suggestion>жены</suggestion>
         <suggestion>гения</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="2">
+    <word corrsugg="4">
       <original status="error">Гнде</original>
       <speller status="error"/>
       <expected>Где</expected>
       <edit_dist>1</edit_dist>
-      <position>2</position>
+      <position>4</position>
       <suggestions count="5">
+        <suggestion>Инде</suggestion>
         <suggestion>Не</suggestion>
+        <suggestion>Ганди</suggestion>
         <suggestion expected="yes">Где</suggestion>
         <suggestion>Виде</suggestion>
-        <suggestion>Ходе</suggestion>
-        <suggestion>Де</suggestion>
       </suggestions>
     </word>
     <word corrsugg="badaccept">
@@ -849,30 +858,32 @@
         <suggestion>гостинцам</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="-1">
+    <word corrsugg="1">
       <original status="error">грю</original>
       <speller status="error"/>
       <expected>говорю</expected>
       <edit_dist>3</edit_dist>
+      <position>1</position>
       <suggestions count="5">
+        <suggestion expected="yes">говорю</suggestion>
         <suggestion>гаю</suggestion>
+        <suggestion>ерю</suggestion>
+        <suggestion>зрю</suggestion>
         <suggestion>гею</suggestion>
-        <suggestion>гирю</suggestion>
-        <suggestion>граю</suggestion>
-        <suggestion>прю</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="-1">
+    <word corrsugg="2">
       <original status="error">гуливера</original>
       <speller status="error"/>
       <expected>Гулливера</expected>
       <edit_dist>2</edit_dist>
+      <position>2</position>
       <suggestions count="5">
         <suggestion>гулливера</suggestion>
-        <suggestion>кливера</suggestion>
+        <suggestion expected="yes">Гулливера</suggestion>
+        <suggestion>гулливере</suggestion>
+        <suggestion>гулливеру</suggestion>
         <suggestion>гулливер</suggestion>
-        <suggestion>гулливеры</suggestion>
-        <suggestion>универа</suggestion>
       </suggestions>
     </word>
     <word corrsugg="badaccept">
@@ -912,10 +923,10 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">довольно</suggestion>
+        <suggestion>довольна</suggestion>
         <suggestion>давильно</suggestion>
         <suggestion>довольны</suggestion>
-        <suggestion>довольна</suggestion>
-        <suggestion>довольное</suggestion>
+        <suggestion>давильна</suggestion>
       </suggestions>
     </word>
     <word corrsugg="badaccept">
@@ -934,21 +945,21 @@
         <suggestion>Рае</suggestion>
         <suggestion>Лае</suggestion>
         <suggestion>На</suggestion>
-        <suggestion>Бае</suggestion>
+        <suggestion>Дон</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="4">
+    <word corrsugg="5">
       <original status="error">даф</original>
       <speller status="error"/>
       <expected>дав</expected>
       <edit_dist>1</edit_dist>
-      <position>4</position>
+      <position>5</position>
       <suggestions count="5">
         <suggestion>дал</suggestion>
+        <suggestion>до</suggestion>
         <suggestion>да</suggestion>
         <suggestion>дар</suggestion>
         <suggestion expected="yes">дав</suggestion>
-        <suggestion>дан</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -961,8 +972,8 @@
         <suggestion expected="yes">движение</suggestion>
         <suggestion>движении</suggestion>
         <suggestion>движения</suggestion>
+        <suggestion>движений</suggestion>
         <suggestion>движением</suggestion>
-        <suggestion>движениях</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -976,7 +987,7 @@
         <suggestion>дева</suggestion>
         <suggestion>зевак</suggestion>
         <suggestion>девай</suggestion>
-        <suggestion>деваю</suggestion>
+        <suggestion>девал</suggestion>
       </suggestions>
     </word>
     <word corrsugg="5">
@@ -1037,9 +1048,9 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">деньги</suggestion>
+        <suggestion>тенге</suggestion>
         <suggestion>денди</suggestion>
         <suggestion>донги</suggestion>
-        <suggestion>тенге</suggestion>
         <suggestion>день</suggestion>
       </suggestions>
     </word>
@@ -1105,8 +1116,8 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">эгоистично</suggestion>
-        <suggestion>эгоистичной</suggestion>
         <suggestion>эгоистична</suggestion>
+        <suggestion>эгоистичной</suggestion>
         <suggestion>эгоистичны</suggestion>
         <suggestion>эгоистичною</suggestion>
       </suggestions>
@@ -1127,7 +1138,7 @@
         <suggestion>файл</suggestion>
         <suggestion>майя</suggestion>
         <suggestion>мал</suggestion>
-        <suggestion>ехал</suggestion>
+        <suggestion>Ямал</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -1138,9 +1149,9 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">энергия</suggestion>
-        <suggestion>анергия</suggestion>
         <suggestion>энергии</suggestion>
         <suggestion>энергию</suggestion>
+        <suggestion>анергия</suggestion>
         <suggestion>энергий</suggestion>
       </suggestions>
     </word>
@@ -1163,8 +1174,8 @@
       <expected>естественно</expected>
       <edit_dist>4</edit_dist>
       <suggestions count="3">
-        <suggestion>естество</suggestion>
         <suggestion>истесано</suggestion>
+        <suggestion>естество</suggestion>
         <suggestion>стесано</suggestion>
       </suggestions>
     </word>
@@ -1186,10 +1197,10 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">естественно</suggestion>
+        <suggestion>естественна</suggestion>
         <suggestion>естественной</suggestion>
         <suggestion>естественном</suggestion>
         <suggestion>естественное</suggestion>
-        <suggestion>естественна</suggestion>
       </suggestions>
     </word>
     <word corrsugg="-1">
@@ -1202,7 +1213,7 @@
         <suggestion>что</suggestion>
         <suggestion>его</suggestion>
         <suggestion>то</suggestion>
-        <suggestion>кто</suggestion>
+        <suggestion>эта</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -1216,35 +1227,35 @@
         <suggestion>что</suggestion>
         <suggestion>его</suggestion>
         <suggestion>то</suggestion>
-        <suggestion>кто</suggestion>
+        <suggestion>эта</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="2">
+    <word corrsugg="1">
       <original status="error">еше</original>
       <speller status="error"/>
       <expected>еще</expected>
       <edit_dist>1</edit_dist>
-      <position>2</position>
+      <position>1</position>
       <suggestions count="5">
-        <suggestion>ее</suggestion>
         <suggestion expected="yes">еще</suggestion>
-        <suggestion>еде</suggestion>
+        <suggestion>ещё</suggestion>
+        <suggestion>ее</suggestion>
         <suggestion>её</suggestion>
-        <suggestion>еже</suggestion>
+        <suggestion>еде</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="3">
+    <word corrsugg="4">
       <original status="error">Ещее</original>
       <speller status="error"/>
       <expected>Еще</expected>
       <edit_dist>1</edit_dist>
-      <position>3</position>
+      <position>4</position>
       <suggestions count="5">
+        <suggestion>Шее</suggestion>
         <suggestion>Общее</suggestion>
         <suggestion>Ее</suggestion>
         <suggestion expected="yes">Еще</suggestion>
         <suggestion>Идее</suggestion>
-        <suggestion>Ищет</suggestion>
       </suggestions>
     </word>
     <word corrsugg="-1">
@@ -1264,10 +1275,10 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">женщина</suggestion>
-        <suggestion>женина</suggestion>
         <suggestion>женщин</suggestion>
         <suggestion>женщины</suggestion>
-        <suggestion>женщину</suggestion>
+        <suggestion>Шеншина</suggestion>
+        <suggestion>женина</suggestion>
       </suggestions>
     </word>
     <word corrsugg="badaccept">
@@ -1297,7 +1308,7 @@
         <suggestion expected="yes">заботились</suggestion>
         <suggestion>забились</suggestion>
         <suggestion>зароились</suggestion>
-        <suggestion>забоялися</suggestion>
+        <suggestion>забавились</suggestion>
       </suggestions>
     </word>
     <word corrsugg="badaccept">
@@ -1331,7 +1342,7 @@
         <suggestion>зажор</suggestion>
         <suggestion>зажёг</suggestion>
         <suggestion expected="yes">зажег</suggestion>
-        <suggestion>замок</suggestion>
+        <suggestion>ожог</suggestion>
       </suggestions>
     </word>
     <word corrsugg="-1">
@@ -1340,11 +1351,11 @@
       <expected>Зайти</expected>
       <edit_dist>1</edit_dist>
       <suggestions count="5">
-        <suggestion>Части</suggestion>
+        <suggestion>Гаити</suggestion>
+        <suggestion>Таити</suggestion>
         <suggestion>Найти</suggestion>
-        <suggestion>Расти</suggestion>
-        <suggestion>Таите</suggestion>
-        <suggestion>Нити</suggestion>
+        <suggestion>Части</suggestion>
+        <suggestion>Заире</suggestion>
       </suggestions>
     </word>
     <word corrsugg="badaccept">
@@ -1375,8 +1386,8 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">запропала</suggestion>
-        <suggestion>закрапала</suggestion>
         <suggestion>запропало</suggestion>
+        <suggestion>закрапала</suggestion>
         <suggestion>запропал</suggestion>
         <suggestion>запропали</suggestion>
       </suggestions>
@@ -1397,18 +1408,18 @@
       <expected>зашла</expected>
       <edit_dist>3</edit_dist>
     </word>
-    <word corrsugg="1">
+    <word corrsugg="4">
       <original status="error">Зафтра</original>
       <speller status="error"/>
       <expected>Завтра</expected>
       <edit_dist>1</edit_dist>
-      <position>1</position>
+      <position>4</position>
       <suggestions count="5">
+        <suggestion>Сартра</suggestion>
+        <suggestion>Заира</suggestion>
+        <suggestion>Шартра</suggestion>
         <suggestion expected="yes">Завтра</suggestion>
         <suggestion>Натра</suggestion>
-        <suggestion>Тафта</suggestion>
-        <suggestion>Астра</suggestion>
-        <suggestion>Афера</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -1446,7 +1457,7 @@
       <suggestions count="5">
         <suggestion expected="yes">захотела</suggestion>
         <suggestion>запотела</suggestion>
-        <suggestion>запотело</suggestion>
+        <suggestion>заботила</suggestion>
         <suggestion>захотело</suggestion>
         <suggestion>золотела</suggestion>
       </suggestions>
@@ -1493,18 +1504,18 @@
         <suggestion>сруб</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="2">
+    <word corrsugg="1">
       <original status="error">Значет</original>
       <speller status="error"/>
       <expected>Значит</expected>
       <edit_dist>1</edit_dist>
-      <position>2</position>
+      <position>1</position>
       <suggestions count="5">
-        <suggestion>Начет</suggestion>
         <suggestion expected="yes">Значит</suggestion>
+        <suggestion>Начет</suggestion>
+        <suggestion>Начёт</suggestion>
         <suggestion>Иначе</suggestion>
         <suggestion>Знает</suggestion>
-        <suggestion>Начат</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -1542,23 +1553,24 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">зубные</suggestion>
+        <suggestion>юные</suggestion>
         <suggestion>зоны</suggestion>
         <suggestion>зоне</suggestion>
-        <suggestion>юные</suggestion>
         <suggestion>иные</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="-1">
+    <word corrsugg="1">
       <original status="error">иво</original>
       <speller status="error"/>
       <expected>его</expected>
       <edit_dist>2</edit_dist>
+      <position>1</position>
       <suggestions count="5">
+        <suggestion expected="yes">его</suggestion>
         <suggestion>во</suggestion>
+        <suggestion>ива</suggestion>
         <suggestion>ибо</suggestion>
         <suggestion>идо</suggestion>
-        <suggestion>изо</suggestion>
-        <suggestion>пиво</suggestion>
       </suggestions>
     </word>
     <word corrsugg="badaccept">
@@ -1567,31 +1579,32 @@
       <expected>бы</expected>
       <edit_dist>2</edit_dist>
     </word>
-    <word corrsugg="-1">
+    <word corrsugg="2">
       <original status="error">Извените</original>
       <speller status="error"/>
       <expected>Извините</expected>
       <edit_dist>1</edit_dist>
+      <position>2</position>
       <suggestions count="5">
         <suggestion>Звените</suggestion>
+        <suggestion expected="yes">Извините</suggestion>
         <suggestion>Зените</suggestion>
         <suggestion>Взвезите</suggestion>
         <suggestion>Зазвените</suggestion>
-        <suggestion>Позвените</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="2">
+    <word corrsugg="1">
       <original status="error">извените</original>
       <speller status="error"/>
       <expected>извините</expected>
       <edit_dist>1</edit_dist>
-      <position>2</position>
+      <position>1</position>
       <suggestions count="5">
-        <suggestion>звените</suggestion>
         <suggestion expected="yes">извините</suggestion>
+        <suggestion>звените</suggestion>
         <suggestion>измените</suggestion>
         <suggestion>изведите</suggestion>
-        <suggestion>изменить</suggestion>
+        <suggestion>извинить</suggestion>
       </suggestions>
     </word>
     <word corrsugg="badaccept">
@@ -1611,7 +1624,7 @@
         <suggestion>изба</suggestion>
         <suggestion>изма</suggestion>
         <suggestion>из</suggestion>
-        <suggestion>за</suggestion>
+        <suggestion>изо</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -1669,9 +1682,9 @@
       <suggestions count="5">
         <suggestion expected="yes">ирокез</suggestion>
         <suggestion>иракец</suggestion>
-        <suggestion>ракет</suggestion>
-        <suggestion>браке</suggestion>
         <suggestion>ирокеза</suggestion>
+        <suggestion>ирокезе</suggestion>
+        <suggestion>ирокезу</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -1693,10 +1706,11 @@
       <speller status="error"/>
       <expected>Еще</expected>
       <edit_dist>4</edit_dist>
-      <suggestions count="4">
+      <suggestions count="5">
         <suggestion>Шло</suggestion>
+        <suggestion>Ио</suggestion>
         <suggestion>Ушло</suggestion>
-        <suggestion>Ушко</suggestion>
+        <suggestion>Ишим</suggestion>
         <suggestion>Ушно</suggestion>
       </suggestions>
     </word>
@@ -1711,10 +1725,12 @@
       <speller status="error"/>
       <expected>Как</expected>
       <edit_dist>3</edit_dist>
-      <suggestions count="3">
+      <suggestions count="5">
+        <suggestion>Кааба</suggestion>
+        <suggestion>Каабам</suggestion>
         <suggestion>Аааа</suggestion>
-        <suggestion>Ааааа</suggestion>
         <suggestion>Саадак</suggestion>
+        <suggestion>Ааааа</suggestion>
       </suggestions>
     </word>
     <word corrsugg="-1">
@@ -1740,8 +1756,8 @@
         <suggestion>казак</suggestion>
         <suggestion>кабак</suggestion>
         <suggestion expected="yes">как</suggestion>
-        <suggestion>казаки</suggestion>
-        <suggestion>канал</suggestion>
+        <suggestion>каток</suggestion>
+        <suggestion>кадок</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -1767,9 +1783,9 @@
       <suggestions count="5">
         <suggestion>кабы</suggestion>
         <suggestion expected="yes">как</suggestion>
+        <suggestion>коксы</suggestion>
+        <suggestion>колбы</suggestion>
         <suggestion>какой</suggestion>
-        <suggestion>карты</suggestion>
-        <suggestion>какие</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -1780,10 +1796,10 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">как-то</suggestion>
-        <suggestion>ракет</suggestion>
-        <suggestion>какао</suggestion>
-        <suggestion>какое-то</suggestion>
-        <suggestion>пакет</suggestion>
+        <suggestion>кокета</suggestion>
+        <suggestion>пакета</suggestion>
+        <suggestion>ракета</suggestion>
+        <suggestion>карета</suggestion>
       </suggestions>
     </word>
     <word corrsugg="badaccept">
@@ -1828,8 +1844,8 @@
         <suggestion>какао</suggestion>
         <suggestion expected="yes">как-то</suggestion>
         <suggestion>како</suggestion>
-        <suggestion>как</suggestion>
-        <suggestion>часто</suggestion>
+        <suggestion>карта</suggestion>
+        <suggestion>факта</suggestion>
       </suggestions>
     </word>
     <word corrsugg="-1">
@@ -1838,24 +1854,25 @@
       <expected>Какая</expected>
       <edit_dist>1</edit_dist>
       <suggestions count="5">
+        <suggestion>Катя</suggestion>
+        <suggestion>Кая</suggestion>
         <suggestion>Как</suggestion>
         <suggestion>Так</suggestion>
-        <suggestion>Мая</suggestion>
-        <suggestion>Царя</suggestion>
-        <suggestion>Факт</suggestion>
+        <suggestion>Раки</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="-1">
+    <word corrsugg="1">
       <original status="error">канешна</original>
       <speller status="error"/>
       <expected>конечно</expected>
       <edit_dist>3</edit_dist>
+      <position>1</position>
       <suggestions count="5">
+        <suggestion expected="yes">конечно</suggestion>
         <suggestion>конечна</suggestion>
         <suggestion>канона</suggestion>
         <suggestion>кантона</suggestion>
         <suggestion>канна</suggestion>
-        <suggestion>каньона</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -1881,9 +1898,9 @@
       <suggestions count="5">
         <suggestion expected="yes">короче</suggestion>
         <suggestion>карче</suggestion>
-        <suggestion>кроме</suggestion>
         <suggestion>короне</suggestion>
         <suggestion>короле</suggestion>
+        <suggestion>карате</suggestion>
       </suggestions>
     </word>
     <word corrsugg="-1">
@@ -1892,11 +1909,11 @@
       <expected>катином</expected>
       <edit_dist>1</edit_dist>
       <suggestions count="5">
-        <suggestion>Ватином</suggestion>
+        <suggestion>Каином</suggestion>
+        <suggestion>Катоном</suggestion>
+        <suggestion>Кашином</suggestion>
         <suggestion>Ратином</suggestion>
-        <suggestion>Сатином</suggestion>
-        <suggestion>Шатеном</suggestion>
-        <suggestion>Зарином</suggestion>
+        <suggestion>Ватином</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -1913,17 +1930,18 @@
         <suggestion>катастрофический</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="-1">
+    <word corrsugg="1">
       <original status="error">кедал</original>
       <speller status="error"/>
       <expected>кидал</expected>
       <edit_dist>1</edit_dist>
+      <position>1</position>
       <suggestions count="5">
+        <suggestion expected="yes">кидал</suggestion>
         <suggestion>ведал</suggestion>
-        <suggestion>едал</suggestion>
+        <suggestion>Дедал</suggestion>
         <suggestion>кеда</suggestion>
         <suggestion>кедам</suggestion>
-        <suggestion>кедах</suggestion>
       </suggestions>
     </word>
     <word corrsugg="-1">
@@ -1932,11 +1950,11 @@
       <expected>Кидалы</expected>
       <edit_dist>1</edit_dist>
       <suggestions count="5">
+        <suggestion>Дедалы</suggestion>
         <suggestion>Медали</suggestion>
         <suggestion>Педали</suggestion>
         <suggestion>Ведали</suggestion>
-        <suggestion>Медаль</suggestion>
-        <suggestion>Едали</suggestion>
+        <suggestion>Уедали</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -1948,9 +1966,9 @@
       <suggestions count="5">
         <suggestion expected="yes">кино</suggestion>
         <suggestion>сено</suggestion>
+        <suggestion>Пено</suggestion>
         <suggestion>вено</suggestion>
-        <suggestion>рено</suggestion>
-        <suggestion>его</suggestion>
+        <suggestion>жена</suggestion>
       </suggestions>
     </word>
     <word corrsugg="0">
@@ -1982,9 +2000,9 @@
       <suggestions count="5">
         <suggestion expected="yes">когда-то</suggestion>
         <suggestion>когда</suggestion>
+        <suggestion>когната</suggestion>
         <suggestion>богато</suggestion>
         <suggestion>кого-то</suggestion>
-        <suggestion>когнат</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -1996,9 +2014,9 @@
       <suggestions count="5">
         <suggestion expected="yes">Когда</suggestion>
         <suggestion>Тогда</suggestion>
+        <suggestion>Корея</suggestion>
         <suggestion>Огня</suggestion>
         <suggestion>Вождя</suggestion>
-        <suggestion>Когтя</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -2010,9 +2028,9 @@
       <suggestions count="5">
         <suggestion expected="yes">когда</suggestion>
         <suggestion>когтя</suggestion>
+        <suggestion>когти</suggestion>
         <suggestion>тогда</suggestion>
-        <suggestion>код</suggestion>
-        <suggestion>кода</suggestion>
+        <suggestion>кадя</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -2023,10 +2041,10 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">коктейль</suggestion>
+        <suggestion>картель</suggestion>
+        <suggestion>кокиль</suggestion>
         <suggestion>отель</suggestion>
         <suggestion>коктейля</suggestion>
-        <suggestion>костел</suggestion>
-        <suggestion>китель</suggestion>
       </suggestions>
     </word>
     <word corrsugg="0">
@@ -2115,9 +2133,9 @@
       <suggestions count="5">
         <suggestion expected="yes">кому-то</suggestion>
         <suggestion>ком-то</suggestion>
-        <suggestion>кому</suggestion>
-        <suggestion>кометы</suggestion>
-        <suggestion>комет</suggestion>
+        <suggestion>комета</suggestion>
+        <suggestion>хомута</suggestion>
+        <suggestion>омута</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -2128,10 +2146,10 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">конечно</suggestion>
+        <suggestion>конечна</suggestion>
         <suggestion>конечном</suggestion>
         <suggestion>конечной</suggestion>
         <suggestion>конечное</suggestion>
-        <suggestion>колено</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -2148,16 +2166,16 @@
         <suggestion>контакту</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="3">
+    <word corrsugg="1">
       <original status="error">корачках</original>
       <speller status="error"/>
       <expected>карачках</expected>
       <edit_dist>1</edit_dist>
-      <position>3</position>
+      <position>1</position>
       <suggestions count="5">
+        <suggestion expected="yes">карачках</suggestion>
         <suggestion>корочках</suggestion>
         <suggestion>корячках</suggestion>
-        <suggestion expected="yes">карачках</suggestion>
         <suggestion>крачках</suggestion>
         <suggestion>корочка</suggestion>
       </suggestions>
@@ -2186,8 +2204,8 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">кощунство</suggestion>
-        <suggestion>кощунств</suggestion>
         <suggestion>кощунства</suggestion>
+        <suggestion>кощунств</suggestion>
         <suggestion>кощунству</suggestion>
         <suggestion>кощунством</suggestion>
       </suggestions>
@@ -2212,17 +2230,18 @@
         <suggestion>Травимо</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="-1">
+    <word corrsugg="1">
       <original status="error">краснодаре</original>
       <speller status="error"/>
       <expected>Краснодаре</expected>
       <edit_dist>1</edit_dist>
+      <position>1</position>
       <suggestions count="5">
+        <suggestion expected="yes">Краснодаре</suggestion>
         <suggestion>краснодарец</suggestion>
         <suggestion>краснодарце</suggestion>
         <suggestion>краснотале</suggestion>
-        <suggestion>краснодарск</suggestion>
-        <suggestion>краснодарцем</suggestion>
+        <suggestion>Краснодар</suggestion>
       </suggestions>
     </word>
     <word corrsugg="0">
@@ -2231,18 +2250,18 @@
       <expected>креатив</expected>
       <edit_dist>8</edit_dist>
     </word>
-    <word corrsugg="4">
+    <word corrsugg="3">
       <original status="error">кривлятся</original>
       <speller status="error"/>
       <expected>кривляться</expected>
       <edit_dist>1</edit_dist>
-      <position>4</position>
+      <position>3</position>
       <suggestions count="5">
         <suggestion>кривляются</suggestion>
+        <suggestion>кривляется</suggestion>
+        <suggestion expected="yes">кривляться</suggestion>
         <suggestion>кривляйся</suggestion>
         <suggestion>кривлялся</suggestion>
-        <suggestion expected="yes">кривляться</suggestion>
-        <suggestion>кривляется</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -2255,8 +2274,8 @@
         <suggestion expected="yes">кровищи</suggestion>
         <suggestion>кровище</suggestion>
         <suggestion>коровищи</suggestion>
-        <suggestion>кровинки</suggestion>
-        <suggestion>кровищами</suggestion>
+        <suggestion>кровивши</suggestion>
+        <suggestion>кровищ</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -2277,10 +2296,10 @@
       <edit_dist>2</edit_dist>
       <suggestions count="5">
         <suggestion>кстати</suggestion>
+        <suggestion>стати</suggestion>
         <suggestion>стать</suggestion>
         <suggestion>статье</suggestion>
         <suggestion>статей</suggestion>
-        <suggestion>штате</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -2291,10 +2310,10 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">кстати</suggestion>
+        <suggestion>стати</suggestion>
         <suggestion>стать</suggestion>
         <suggestion>статье</suggestion>
         <suggestion>статей</suggestion>
-        <suggestion>штате</suggestion>
       </suggestions>
     </word>
     <word corrsugg="4">
@@ -2304,9 +2323,9 @@
       <edit_dist>1</edit_dist>
       <position>4</position>
       <suggestions count="5">
-        <suggestion>Стихи</suggestion>
-        <suggestion>Остите</suggestion>
         <suggestion>Мстите</suggestion>
+        <suggestion>Остите</suggestion>
+        <suggestion>Стихи</suggestion>
         <suggestion expected="yes">Кстати</suggestion>
         <suggestion>Стили</suggestion>
       </suggestions>
@@ -2319,10 +2338,10 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">кто-то</suggestion>
+        <suggestion>кота</suggestion>
         <suggestion>того</suggestion>
         <suggestion>этого</suggestion>
         <suggestion>этот</suggestion>
-        <suggestion>тот</suggestion>
       </suggestions>
     </word>
     <word corrsugg="0">
@@ -2341,8 +2360,8 @@
         <suggestion expected="yes">любви</suggestion>
         <suggestion>лови</suggestion>
         <suggestion>люди</suggestion>
-        <suggestion>ли</suggestion>
-        <suggestion>бои</suggestion>
+        <suggestion>лаве</suggestion>
+        <suggestion>леве</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -2372,17 +2391,18 @@
       <expected>Лекарственные</expected>
       <edit_dist>2</edit_dist>
     </word>
-    <word corrsugg="-1">
+    <word corrsugg="1">
       <original status="error">лешил</original>
       <speller status="error"/>
       <expected>лишил</expected>
       <edit_dist>1</edit_dist>
+      <position>1</position>
       <suggestions count="5">
+        <suggestion expected="yes">лишил</suggestion>
         <suggestion>решил</suggestion>
         <suggestion>леший</suggestion>
         <suggestion>лешие</suggestion>
         <suggestion>леших</suggestion>
-        <suggestion>лешим</suggestion>
       </suggestions>
     </word>
     <word corrsugg="0">
@@ -2397,32 +2417,31 @@
       <expected>лучше</expected>
       <edit_dist>1</edit_dist>
     </word>
-    <word corrsugg="2">
+    <word corrsugg="1">
       <original status="error">лушче</original>
       <speller status="error"/>
       <expected>лучше</expected>
       <edit_dist>2</edit_dist>
-      <position>2</position>
+      <position>1</position>
       <suggestions count="5">
-        <suggestion>луче</suggestion>
         <suggestion expected="yes">лучше</suggestion>
+        <suggestion>луче</suggestion>
+        <suggestion>лучи</suggestion>
         <suggestion>лучшие</suggestion>
         <suggestion>легче</suggestion>
-        <suggestion>лучей</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="2">
+    <word corrsugg="-1">
       <original status="error">Лчше</original>
       <speller status="error"/>
       <expected>Лучше</expected>
       <edit_dist>1</edit_dist>
-      <position>2</position>
       <suggestions count="5">
+        <suggestion>Леше</suggestion>
+        <suggestion>Луше</suggestion>
+        <suggestion>Лёше</suggestion>
+        <suggestion>Люше</suggestion>
         <suggestion>Выше</suggestion>
-        <suggestion expected="yes">Лучше</suggestion>
-        <suggestion>Наше</suggestion>
-        <suggestion>Душе</suggestion>
-        <suggestion>Суше</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -2436,7 +2455,7 @@
         <suggestion>лише</suggestion>
         <suggestion>лишь</suggestion>
         <suggestion>выше</suggestion>
-        <suggestion>наше</suggestion>
+        <suggestion>лиши</suggestion>
       </suggestions>
     </word>
     <word corrsugg="badaccept">
@@ -2451,9 +2470,12 @@
       <expected>Любимый</expected>
       <edit_dist>1</edit_dist>
       <position>2</position>
-      <suggestions count="2">
+      <suggestions count="5">
         <suggestion>Любимой</suggestion>
         <suggestion expected="yes">Любимый</suggestion>
+        <suggestion>Любимова</suggestion>
+        <suggestion>Любимов</suggestion>
+        <suggestion>Любимовн</suggestion>
       </suggestions>
     </word>
     <word corrsugg="2">
@@ -2462,19 +2484,26 @@
       <expected>Люблю</expected>
       <edit_dist>1</edit_dist>
       <position>2</position>
-      <suggestions count="2">
+      <suggestions count="5">
         <suggestion>Блюд</suggestion>
         <suggestion expected="yes">Люблю</suggestion>
+        <suggestion>Люблин</suggestion>
+        <suggestion>Люблян</suggestion>
+        <suggestion>Любою</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="1">
+    <word corrsugg="3">
       <original status="error">Любоее</original>
       <speller status="error"/>
       <expected>Любое</expected>
       <edit_dist>1</edit_dist>
-      <position>1</position>
-      <suggestions count="1">
+      <position>3</position>
+      <suggestions count="5">
+        <suggestion>Любови</suggestion>
+        <suggestion>Любаве</suggestion>
         <suggestion expected="yes">Любое</suggestion>
+        <suggestion>Любовь</suggestion>
+        <suggestion>Любой</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -2497,32 +2526,31 @@
         <suggestion expected="yes">любовь</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="2">
+    <word corrsugg="-1">
       <original status="error">Любю</original>
       <speller status="error"/>
       <expected>Люблю</expected>
       <edit_dist>1</edit_dist>
-      <position>2</position>
       <suggestions count="5">
-        <suggestion>Любую</suggestion>
-        <suggestion expected="yes">Люблю</suggestion>
-        <suggestion>Июлю</suggestion>
-        <suggestion>Июню</suggestion>
-        <suggestion>Любо</suggestion>
+        <suggestion>Люб</suggestion>
+        <suggestion>Люба</suggestion>
+        <suggestion>Люсю</suggestion>
+        <suggestion>Любе</suggestion>
+        <suggestion>Любою</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="2">
+    <word corrsugg="1">
       <original status="error">любю</original>
       <speller status="error"/>
       <expected>люблю</expected>
       <edit_dist>1</edit_dist>
-      <position>2</position>
+      <position>1</position>
       <suggestions count="5">
-        <suggestion>любую</suggestion>
         <suggestion expected="yes">люблю</suggestion>
+        <suggestion>любую</suggestion>
         <suggestion>любо</suggestion>
         <suggestion>любя</suggestion>
-        <suggestion>любе</suggestion>
+        <suggestion>люба</suggestion>
       </suggestions>
     </word>
     <word corrsugg="0">
@@ -2545,32 +2573,32 @@
         <suggestion>аленьких</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="1">
+    <word corrsugg="2">
       <original status="error">малолетнии</original>
       <speller status="error"/>
       <expected>малолетние</expected>
       <edit_dist>1</edit_dist>
-      <position>1</position>
+      <position>2</position>
       <suggestions count="5">
-        <suggestion expected="yes">малолетние</suggestion>
         <suggestion>малолетний</suggestion>
-        <suggestion>малолетними</suggestion>
-        <suggestion>малолетних</suggestion>
-        <suggestion>малолетни</suggestion>
+        <suggestion expected="yes">малолетние</suggestion>
+        <suggestion>малолетнее</suggestion>
+        <suggestion>малолетней</suggestion>
+        <suggestion>малолетняя</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="1">
+    <word corrsugg="2">
       <original status="error">Малчик</original>
       <speller status="error"/>
       <expected>Мальчик</expected>
       <edit_dist>1</edit_dist>
-      <position>1</position>
+      <position>2</position>
       <suggestions count="5">
+        <suggestion>Мали</suggestion>
         <suggestion expected="yes">Мальчик</suggestion>
         <suggestion>Валик</suggestion>
         <suggestion>Датчик</suggestion>
-        <suggestion>Зальчик</suggestion>
-        <suggestion>Мазчик</suggestion>
+        <suggestion>Малакк</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -2585,11 +2613,14 @@
         <suggestion>тальвеги</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="0">
+    <word corrsugg="-1">
       <original status="error">Маршурт</original>
       <speller status="error"/>
       <expected>Маршрут</expected>
       <edit_dist>2</edit_dist>
+      <suggestions count="1">
+        <suggestion>Марбург</suggestion>
+      </suggestions>
     </word>
     <word corrsugg="1">
       <original status="error">мастре-классах</original>
@@ -2609,10 +2640,10 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">машине</suggestion>
-        <suggestion>малине</suggestion>
-        <suggestion>марине</suggestion>
+        <suggestion>машины</suggestion>
+        <suggestion>машин</suggestion>
+        <suggestion>машина</suggestion>
         <suggestion>матине</suggestion>
-        <suggestion>махине</suggestion>
       </suggestions>
     </word>
     <word corrsugg="-1">
@@ -2623,9 +2654,9 @@
       <suggestions count="5">
         <suggestion>мелодрамами</suggestion>
         <suggestion>мелодраме</suggestion>
+        <suggestion>мелодрамой</suggestion>
         <suggestion>мелодраму</suggestion>
         <suggestion>мелодрам</suggestion>
-        <suggestion>мелодрамою</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -2674,8 +2705,8 @@
         <suggestion expected="yes">много</suggestion>
         <suggestion>нога</suggestion>
         <suggestion>минога</suggestion>
-        <suggestion>множа</suggestion>
         <suggestion>многом</suggestion>
+        <suggestion>иного</suggestion>
       </suggestions>
     </word>
     <word corrsugg="badaccept">
@@ -2693,9 +2724,9 @@
       <suggestions count="5">
         <suggestion expected="yes">Может</suggestion>
         <suggestion>Дожить</suggestion>
+        <suggestion>Ожить</suggestion>
+        <suggestion>Пожить</suggestion>
         <suggestion>Можете</suggestion>
-        <suggestion>Можешь</suggestion>
-        <suggestion>Рожать</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -2708,8 +2739,8 @@
         <suggestion expected="yes">можно</suggestion>
         <suggestion>мошна</suggestion>
         <suggestion>ложна</suggestion>
+        <suggestion>кожна</suggestion>
         <suggestion>модна</suggestion>
-        <suggestion>мощна</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -2720,10 +2751,10 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">можно</suggestion>
-        <suggestion>моего</suggestion>
         <suggestion>манго</suggestion>
+        <suggestion>Конго</suggestion>
+        <suggestion>моего</suggestion>
         <suggestion>мощного</suggestion>
-        <suggestion>ложного</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -2736,35 +2767,35 @@
         <suggestion expected="yes">может</suggestion>
         <suggestion>мост</suggestion>
         <suggestion>моют</suggestion>
+        <suggestion>март</suggestion>
         <suggestion>мот</suggestion>
-        <suggestion>моет</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="2">
+    <word corrsugg="3">
       <original status="error">Мозайка</original>
       <speller status="error"/>
       <expected>Мозаика</expected>
       <edit_dist>1</edit_dist>
-      <position>2</position>
-      <suggestions count="4">
+      <position>3</position>
+      <suggestions count="5">
         <suggestion>Хозяйка</suggestion>
+        <suggestion>Можайска</suggestion>
         <suggestion expected="yes">Мозаика</suggestion>
         <suggestion>Зайка</suggestion>
-        <suggestion>Ногайка</suggestion>
+        <suggestion>Моздока</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="4">
+    <word corrsugg="-1">
       <original status="error">Мозк</original>
       <speller status="error"/>
       <expected>Мозг</expected>
       <edit_dist>1</edit_dist>
-      <position>4</position>
       <suggestions count="5">
+        <suggestion>Марк</suggestion>
+        <suggestion>Майк</suggestion>
+        <suggestion>Маек</suggestion>
         <suggestion>Воск</suggestion>
         <suggestion>Полк</suggestion>
-        <suggestion>Ток</suggestion>
-        <suggestion expected="yes">Мозг</suggestion>
-        <suggestion>Тоск</suggestion>
       </suggestions>
     </word>
     <word corrsugg="2">
@@ -2776,9 +2807,9 @@
       <suggestions count="5">
         <suggestion>молодежи</suggestion>
         <suggestion expected="yes">молодежь</suggestion>
+        <suggestion>молодёжи</suggestion>
         <suggestion>молодев</suggestion>
-        <suggestion>молодец</suggestion>
-        <suggestion>молодею</suggestion>
+        <suggestion>молодел</suggestion>
       </suggestions>
     </word>
     <word corrsugg="2">
@@ -2815,17 +2846,17 @@
         <suggestion>монголоидном</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="4">
+    <word corrsugg="1">
       <original status="error">Мошный</original>
       <speller status="error"/>
       <expected>Мощный</expected>
       <edit_dist>1</edit_dist>
-      <position>4</position>
+      <position>1</position>
       <suggestions count="5">
-        <suggestion>Сошный</suggestion>
-        <suggestion>Тошный</suggestion>
-        <suggestion>Полный</suggestion>
         <suggestion expected="yes">Мощный</suggestion>
+        <suggestion>Тошный</suggestion>
+        <suggestion>Сошный</suggestion>
+        <suggestion>Полный</suggestion>
         <suggestion>Водный</suggestion>
       </suggestions>
     </word>
@@ -2868,22 +2899,24 @@
       <speller status="error"/>
       <expected>Мужчина</expected>
       <edit_dist>2</edit_dist>
-      <suggestions count="1">
+      <suggestions count="3">
+        <suggestion>Пущина</suggestion>
         <suggestion>Гущина</suggestion>
+        <suggestion>Мухина</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="1">
+    <word corrsugg="4">
       <original status="error">мущщина</original>
       <speller status="error"/>
       <expected>мужчина</expected>
       <edit_dist>2</edit_dist>
-      <position>1</position>
+      <position>4</position>
       <suggestions count="5">
-        <suggestion expected="yes">мужчина</suggestion>
+        <suggestion>Пущина</suggestion>
         <suggestion>гущина</suggestion>
-        <suggestion>морщина</suggestion>
         <suggestion>мушина</suggestion>
-        <suggestion>муцина</suggestion>
+        <suggestion expected="yes">мужчина</suggestion>
+        <suggestion>мужнина</suggestion>
       </suggestions>
     </word>
     <word corrsugg="-1">
@@ -2891,8 +2924,10 @@
       <speller status="error"/>
       <expected>Мужчину</expected>
       <edit_dist>2</edit_dist>
-      <suggestions count="1">
+      <suggestions count="3">
+        <suggestion>Пущину</suggestion>
         <suggestion>Гущину</suggestion>
+        <suggestion>Мухину</suggestion>
       </suggestions>
     </word>
     <word corrsugg="4">
@@ -2909,32 +2944,32 @@
         <suggestion>мыслящие</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="4">
+    <word corrsugg="5">
       <original status="error">Мысные</original>
       <speller status="error"/>
       <expected>Мясные</expected>
       <edit_dist>1</edit_dist>
-      <position>4</position>
+      <position>5</position>
       <suggestions count="5">
+        <suggestion>Мирные</suggestion>
         <suggestion>Лесные</suggestion>
         <suggestion>Тесные</suggestion>
         <suggestion>Рыбные</suggestion>
         <suggestion expected="yes">Мясные</suggestion>
-        <suggestion>Лыжные</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="2">
+    <word corrsugg="4">
       <original status="error">Мягше</original>
       <speller status="error"/>
       <expected>Мягче</expected>
       <edit_dist>1</edit_dist>
-      <position>2</position>
+      <position>4</position>
       <suggestions count="5">
+        <suggestion>Мише</suggestion>
+        <suggestion>Мокше</suggestion>
         <suggestion>Тяге</suggestion>
         <suggestion expected="yes">Мягче</suggestion>
-        <suggestion>Лягте</suggestion>
-        <suggestion>Тягле</suggestion>
-        <suggestion>Яге</suggestion>
+        <suggestion>Маше</suggestion>
       </suggestions>
     </word>
     <word corrsugg="badaccept">
@@ -2949,18 +2984,18 @@
       <expected>я</expected>
       <edit_dist>1</edit_dist>
     </word>
-    <word corrsugg="3">
+    <word corrsugg="1">
       <original status="error">Наберала</original>
       <speller status="error"/>
       <expected>Набирала</expected>
       <edit_dist>1</edit_dist>
-      <position>3</position>
+      <position>1</position>
       <suggestions count="5">
+        <suggestion expected="yes">Набирала</suggestion>
+        <suggestion>Забирала</suggestion>
         <suggestion>Забрала</suggestion>
         <suggestion>Набрала</suggestion>
-        <suggestion expected="yes">Набирала</suggestion>
         <suggestion>Либерала</suggestion>
-        <suggestion>Забежала</suggestion>
       </suggestions>
     </word>
     <word corrsugg="4">
@@ -3008,9 +3043,9 @@
       <suggestions count="5">
         <suggestion>Таврено</suggestion>
         <suggestion>Таврёно</suggestion>
+        <suggestion>Таврена</suggestion>
         <suggestion>Дарено</suggestion>
         <suggestion>Зазрено</suggestion>
-        <suggestion>Тавреное</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -3278,10 +3313,10 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">настоящий</suggestion>
+        <suggestion>настоящей</suggestion>
         <suggestion>настоявший</suggestion>
         <suggestion>настояний</suggestion>
-        <suggestion>настоящей</suggestion>
-        <suggestion>настоянию</suggestion>
+        <suggestion>настоящие</suggestion>
       </suggestions>
     </word>
     <word corrsugg="-1">
@@ -3297,17 +3332,18 @@
         <suggestion>Гасят</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="-1">
+    <word corrsugg="1">
       <original status="error">наташа</original>
       <speller status="error"/>
       <expected>Наташа</expected>
       <edit_dist>1</edit_dist>
+      <position>1</position>
       <suggestions count="5">
-        <suggestion>начала</suggestion>
+        <suggestion expected="yes">Наташа</suggestion>
         <suggestion>поташа</suggestion>
-        <suggestion>начата</suggestion>
-        <suggestion>наша</suggestion>
+        <suggestion>начала</suggestion>
         <suggestion>натяга</suggestion>
+        <suggestion>натащат</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -3318,9 +3354,9 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">Начали</suggestion>
+        <suggestion>Натали</suggestion>
         <suggestion>Затаили</suggestion>
-        <suggestion>Зачадили</suggestion>
-        <suggestion>Зачалили</suggestion>
+        <suggestion>Начадили</suggestion>
         <suggestion>Тачали</suggestion>
       </suggestions>
     </word>
@@ -3350,18 +3386,18 @@
         <suggestion>Тачальнее</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="3">
+    <word corrsugg="1">
       <original status="error">начальнег</original>
       <speller status="error"/>
       <expected>начальник</expected>
       <edit_dist>2</edit_dist>
-      <position>3</position>
+      <position>1</position>
       <suggestions count="5">
+        <suggestion expected="yes">начальник</suggestion>
         <suggestion>начальнее</suggestion>
         <suggestion>начальней</suggestion>
-        <suggestion expected="yes">начальник</suggestion>
         <suggestion>начальных</suggestion>
-        <suggestion>начальной</suggestion>
+        <suggestion>начальниц</suggestion>
       </suggestions>
     </word>
     <word corrsugg="5">
@@ -3388,8 +3424,8 @@
         <suggestion>Нашёл</suggestion>
         <suggestion expected="yes">Нашел</suggestion>
         <suggestion>Зашёл</suggestion>
-        <suggestion>Салол</suggestion>
-        <suggestion>Закол</suggestion>
+        <suggestion>Навои</suggestion>
+        <suggestion>Никол</suggestion>
       </suggestions>
     </word>
     <word corrsugg="2">
@@ -3401,9 +3437,9 @@
       <suggestions count="5">
         <suggestion>нашёл</suggestion>
         <suggestion expected="yes">нашел</suggestion>
+        <suggestion>начал</suggestion>
         <suggestion>намол</suggestion>
         <suggestion>нашил</suggestion>
-        <suggestion>начал</suggestion>
       </suggestions>
     </word>
     <word corrsugg="-1">
@@ -3412,11 +3448,11 @@
       <expected>насчет</expected>
       <edit_dist>2</edit_dist>
       <suggestions count="5">
+        <suggestion>нашит</suggestion>
+        <suggestion>нашей</suggestion>
         <suggestion>намет</suggestion>
-        <suggestion>налет</suggestion>
-        <suggestion>начет</suggestion>
-        <suggestion>нищет</suggestion>
-        <suggestion>навет</suggestion>
+        <suggestion>наше</suggestion>
+        <suggestion>надет</suggestion>
       </suggestions>
     </word>
     <word corrsugg="0">
@@ -3472,8 +3508,8 @@
         <suggestion>небыли</suggestion>
         <suggestion>небыль</suggestion>
         <suggestion>было</suggestion>
-        <suggestion>немало</suggestion>
-        <suggestion>небо</suggestion>
+        <suggestion>небито</suggestion>
+        <suggestion>нежило</suggestion>
       </suggestions>
     </word>
     <word corrsugg="0">
@@ -3482,32 +3518,32 @@
       <expected>Невозможно</expected>
       <edit_dist>3</edit_dist>
     </word>
-    <word corrsugg="4">
+    <word corrsugg="1">
       <original status="error">негодныэ</original>
       <speller status="error"/>
       <expected>негодные</expected>
       <edit_dist>1</edit_dist>
-      <position>4</position>
+      <position>1</position>
       <suggestions count="5">
-        <suggestion>негодный</suggestion>
-        <suggestion>негодных</suggestion>
-        <suggestion>негодным</suggestion>
         <suggestion expected="yes">негодные</suggestion>
+        <suggestion>негодных</suggestion>
+        <suggestion>негодный</suggestion>
+        <suggestion>негодным</suggestion>
         <suggestion>негодны</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="1">
+    <word corrsugg="5">
       <original status="error">Недаво</original>
       <speller status="error"/>
       <expected>Недавно</expected>
       <edit_dist>1</edit_dist>
-      <position>1</position>
+      <position>5</position>
       <suggestions count="5">
-        <suggestion expected="yes">Недавно</suggestion>
         <suggestion>Бедово</suggestion>
+        <suggestion>Дедово</suggestion>
         <suggestion>Ледово</suggestion>
         <suggestion>Медово</suggestion>
-        <suggestion>Дедово</suggestion>
+        <suggestion expected="yes">Недавно</suggestion>
       </suggestions>
     </word>
     <word corrsugg="badaccept">
@@ -3516,15 +3552,14 @@
       <expected>закрывается</expected>
       <edit_dist>10</edit_dist>
     </word>
-    <word corrsugg="2">
+    <word corrsugg="-1">
       <original status="error">незнаю</original>
       <speller status="error"/>
       <expected>знаю</expected>
       <edit_dist>2</edit_dist>
-      <position>2</position>
       <suggestions count="5">
         <suggestion>незнающ</suggestion>
-        <suggestion expected="yes">знаю</suggestion>
+        <suggestion>небною</suggestion>
         <suggestion>незлою</suggestion>
         <suggestion>резною</suggestion>
         <suggestion>нежною</suggestion>
@@ -3564,18 +3599,18 @@
         <suggestion>на-ка</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="2">
+    <word corrsugg="3">
       <original status="error">Неконец</original>
       <speller status="error"/>
       <expected>Наконец</expected>
       <edit_dist>1</edit_dist>
-      <position>2</position>
+      <position>3</position>
       <suggestions count="5">
+        <suggestion>Никоне</suggestion>
         <suggestion>Конец</suggestion>
         <suggestion expected="yes">Наконец</suggestion>
         <suggestion>Вконец</suggestion>
-        <suggestion>Беконен</suggestion>
-        <suggestion>Пекинец</suggestion>
+        <suggestion>Нероне</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -3598,9 +3633,9 @@
       <suggestions count="5">
         <suggestion expected="yes">некоторые</suggestion>
         <suggestion>некоторых</suggestion>
+        <suggestion>никоторые</suggestion>
         <suggestion>некоторое</suggestion>
         <suggestion>некоторым</suggestion>
-        <suggestion>некоторый</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -3622,8 +3657,8 @@
       <suggestions count="5">
         <suggestion expected="yes">Некоторые</suggestion>
         <suggestion>Секторе</suggestion>
-        <suggestion>Векторные</suggestion>
         <suggestion>Векторы</suggestion>
+        <suggestion>Векторные</suggestion>
         <suggestion>Секторы</suggestion>
       </suggestions>
     </word>
@@ -3636,9 +3671,9 @@
       <suggestions count="5">
         <suggestion expected="yes">некоторые</suggestion>
         <suggestion>некоторых</suggestion>
-        <suggestion>некоторое</suggestion>
-        <suggestion>некоторым</suggestion>
-        <suggestion>секторе</suggestion>
+        <suggestion>нектаре</suggestion>
+        <suggestion>нектары</suggestion>
+        <suggestion>нестарые</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -3668,10 +3703,11 @@
       <expected>Ненавижу</expected>
       <edit_dist>1</edit_dist>
       <position>1</position>
-      <suggestions count="3">
+      <suggestions count="4">
         <suggestion expected="yes">Ненавижу</suggestion>
-        <suggestion>Перевижу</suggestion>
+        <suggestion>Несвижу</suggestion>
         <suggestion>Теневику</suggestion>
+        <suggestion>Перевижу</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -3704,9 +3740,9 @@
       <suggestions count="5">
         <suggestion expected="yes">неожиданно</suggestion>
         <suggestion>неожидан</suggestion>
+        <suggestion>неожиданна</suggestion>
         <suggestion>неожиданное</suggestion>
         <suggestion>неожиданной</suggestion>
-        <suggestion>неожиданна</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -3754,9 +3790,12 @@
       <expected>Некоторые</expected>
       <edit_dist>1</edit_dist>
       <position>2</position>
-      <suggestions count="2">
+      <suggestions count="5">
         <suggestion>Которые</suggestion>
         <suggestion expected="yes">Некоторые</suggestion>
+        <suggestion>Несторе</suggestion>
+        <suggestion>Несторыче</suggestion>
+        <suggestion>Несторы</suggestion>
       </suggestions>
     </word>
     <word corrsugg="5">
@@ -3813,18 +3852,18 @@
         <suggestion expected="yes">Несколько</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="2">
+    <word corrsugg="1">
       <original status="error">неудачнеги</original>
       <speller status="error"/>
       <expected>неудачники</expected>
       <edit_dist>2</edit_dist>
-      <position>2</position>
+      <position>1</position>
       <suggestions count="5">
-        <suggestion>неудачнее</suggestion>
         <suggestion expected="yes">неудачники</suggestion>
+        <suggestion>неудачней</suggestion>
+        <suggestion>неудачнее</suggestion>
         <suggestion>неудачного</suggestion>
         <suggestion>неудачными</suggestion>
-        <suggestion>неудачней</suggestion>
       </suggestions>
     </word>
     <word corrsugg="2">
@@ -3872,22 +3911,22 @@
       <edit_dist>3</edit_dist>
       <suggestions count="5">
         <suggestion>никуда</suggestion>
-        <suggestion>цикада</suggestion>
         <suggestion>никогда</suggestion>
+        <suggestion>цикада</suggestion>
         <suggestion>декада</suggestion>
         <suggestion>некуда</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="3">
+    <word corrsugg="2">
       <original status="error">никада</original>
       <speller status="error"/>
       <expected>никогда</expected>
       <edit_dist>2</edit_dist>
-      <position>3</position>
+      <position>2</position>
       <suggestions count="5">
         <suggestion>никуда</suggestion>
-        <suggestion>цикада</suggestion>
         <suggestion expected="yes">никогда</suggestion>
+        <suggestion>цикада</suggestion>
         <suggestion>декада</suggestion>
         <suggestion>некуда</suggestion>
       </suggestions>
@@ -3904,22 +3943,24 @@
       <expected>Никогда</expected>
       <edit_dist>1</edit_dist>
       <position>1</position>
-      <suggestions count="1">
+      <suggestions count="3">
         <suggestion expected="yes">Никогда</suggestion>
+        <suggestion>Никола</suggestion>
+        <suggestion>Никомеда</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="2">
+    <word corrsugg="3">
       <original status="error">Никуде</original>
       <speller status="error"/>
       <expected>Никуда</expected>
       <edit_dist>1</edit_dist>
-      <position>2</position>
+      <position>3</position>
       <suggestions count="5">
+        <suggestion>Никите</suggestion>
         <suggestion>Цикуте</suggestion>
         <suggestion expected="yes">Никуда</suggestion>
-        <suggestion>Иуде</suggestion>
-        <suggestion>Фикусе</suggestion>
-        <suggestion>Цикаде</suggestion>
+        <suggestion>Никоне</suggestion>
+        <suggestion>Ниде</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -3944,11 +3985,11 @@
       <expected>Ничего</expected>
       <edit_dist>3</edit_dist>
       <suggestions count="5">
+        <suggestion>Нила</suggestion>
+        <suggestion>Нил</suggestion>
+        <suggestion>Нина</suggestion>
         <suggestion>Дичи</suggestion>
-        <suggestion>Дичь</suggestion>
-        <suggestion>Бича</suggestion>
-        <suggestion>Бичи</suggestion>
-        <suggestion>Личн</suggestion>
+        <suggestion>Ники</suggestion>
       </suggestions>
     </word>
     <word corrsugg="-1">
@@ -3959,9 +4000,9 @@
       <suggestions count="5">
         <suggestion>ничто</suggestion>
         <suggestion>него</suggestion>
-        <suggestion>но</suggestion>
-        <suggestion>них</suggestion>
         <suggestion>нечто</suggestion>
+        <suggestion>небо</suggestion>
+        <suggestion>нища</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -4014,7 +4055,7 @@
         <suggestion>ныне</suggestion>
         <suggestion>вне</suggestion>
         <suggestion>мне</suggestion>
-        <suggestion>дне</suggestion>
+        <suggestion>они</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -4027,17 +4068,18 @@
         <suggestion expected="yes">Новозаветная</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="-1">
+    <word corrsugg="2">
       <original status="error">новокузнецке</original>
       <speller status="error"/>
       <expected>Новокузнецке</expected>
       <edit_dist>1</edit_dist>
+      <position>2</position>
       <suggestions count="5">
+        <suggestion>новокузнецки</suggestion>
+        <suggestion expected="yes">Новокузнецке</suggestion>
+        <suggestion>новокузнецкие</suggestion>
         <suggestion>новокузнецк</suggestion>
         <suggestion>новокузнецка</suggestion>
-        <suggestion>новокузнецки</suggestion>
-        <suggestion>новокузнецко</suggestion>
-        <suggestion>новокузнецкие</suggestion>
       </suggestions>
     </word>
     <word corrsugg="badaccept">
@@ -4046,16 +4088,16 @@
       <expected>на</expected>
       <edit_dist>1</edit_dist>
     </word>
-    <word corrsugg="3">
+    <word corrsugg="1">
       <original status="error">Нородные</original>
       <speller status="error"/>
       <expected>Народные</expected>
       <edit_dist>1</edit_dist>
-      <position>3</position>
+      <position>1</position>
       <suggestions count="5">
+        <suggestion expected="yes">Народные</suggestion>
         <suggestion>Дородные</suggestion>
         <suggestion>Породные</suggestion>
-        <suggestion expected="yes">Народные</suggestion>
         <suggestion>Холодные</suggestion>
         <suggestion>Воротные</suggestion>
       </suggestions>
@@ -4072,18 +4114,18 @@
       <expected>нравится</expected>
       <edit_dist>3</edit_dist>
     </word>
-    <word corrsugg="1">
+    <word corrsugg="2">
       <original status="error">нравяться</original>
       <speller status="error"/>
       <expected>нравятся</expected>
       <edit_dist>1</edit_dist>
-      <position>1</position>
+      <position>2</position>
       <suggestions count="5">
-        <suggestion expected="yes">нравятся</suggestion>
         <suggestion>нравиться</suggestion>
+        <suggestion expected="yes">нравятся</suggestion>
         <suggestion>нравится</suggestion>
-        <suggestion>равняться</suggestion>
-        <suggestion>наняться</suggestion>
+        <suggestion>правиться</suggestion>
+        <suggestion>нравишься</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -4095,9 +4137,9 @@
       <suggestions count="5">
         <suggestion expected="yes">Если</suggestion>
         <suggestion>Ясли</suggestion>
+        <suggestion>Нали</suggestion>
+        <suggestion>Нели</suggestion>
         <suggestion>Или</suggestion>
-        <suggestion>Были</suggestion>
-        <suggestion>Ли</suggestion>
       </suggestions>
     </word>
     <word corrsugg="4">
@@ -4121,9 +4163,9 @@
       <suggestions count="5">
         <suggestion>нужда</suggestion>
         <suggestion>нуда</suggestion>
+        <suggestion>нукая</suggestion>
+        <suggestion>нудя</suggestion>
         <suggestion>суда</suggestion>
-        <suggestion>наука</suggestion>
-        <suggestion>куда</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -4163,9 +4205,9 @@
       <suggestions count="5">
         <suggestion expected="yes">обратно</suggestion>
         <suggestion>обкатно</suggestion>
-        <suggestion>обычно</suggestion>
         <suggestion>охотно</suggestion>
-        <suggestion>опасно</suggestion>
+        <suggestion>обратна</suggestion>
+        <suggestion>обычно</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -4200,10 +4242,10 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">обязательно</suggestion>
+        <suggestion>обязательна</suggestion>
         <suggestion>обязательное</suggestion>
         <suggestion>обязательном</suggestion>
         <suggestion>обязательной</suggestion>
-        <suggestion>обязательны</suggestion>
       </suggestions>
     </word>
     <word corrsugg="-1">
@@ -4228,16 +4270,16 @@
         <suggestion>Бесчинные</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="3">
+    <word corrsugg="1">
       <original status="error">Обешают</original>
       <speller status="error"/>
       <expected>Обещают</expected>
       <edit_dist>1</edit_dist>
-      <position>3</position>
+      <position>1</position>
       <suggestions count="5">
+        <suggestion expected="yes">Обещают</suggestion>
         <suggestion>Решают</suggestion>
         <suggestion>Мешают</suggestion>
-        <suggestion expected="yes">Обещают</suggestion>
         <suggestion>Бегают</suggestion>
         <suggestion>Вешают</suggestion>
       </suggestions>
@@ -4310,9 +4352,9 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">Общая</suggestion>
-        <suggestion>Решая</suggestion>
         <suggestion>Лишая</suggestion>
         <suggestion>Мешая</suggestion>
+        <suggestion>Решая</suggestion>
         <suggestion>Вешая</suggestion>
       </suggestions>
     </word>
@@ -4360,15 +4402,15 @@
       <expected>экзаменатору</expected>
       <edit_dist>11</edit_dist>
     </word>
-    <word corrsugg="2">
+    <word corrsugg="1">
       <original status="error">Обычныэ</original>
       <speller status="error"/>
       <expected>Обычные</expected>
       <edit_dist>1</edit_dist>
-      <position>2</position>
+      <position>1</position>
       <suggestions count="5">
-        <suggestion>Обычных</suggestion>
         <suggestion expected="yes">Обычные</suggestion>
+        <suggestion>Обычных</suggestion>
         <suggestion>Обычным</suggestion>
         <suggestion>Обычный</suggestion>
         <suggestion>Обычны</suggestion>
@@ -4414,10 +4456,10 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">обязательно</suggestion>
+        <suggestion>обязательна</suggestion>
         <suggestion>обязательное</suggestion>
         <suggestion>обязательном</suggestion>
         <suggestion>обязательной</suggestion>
-        <suggestion>обязательны</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -4434,18 +4476,18 @@
         <suggestion>пояснить</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="4">
+    <word corrsugg="5">
       <original status="error">Огда</original>
       <speller status="error"/>
       <expected>Тогда</expected>
       <edit_dist>2</edit_dist>
-      <position>4</position>
+      <position>5</position>
       <suggestions count="5">
         <suggestion>Года</suggestion>
         <suggestion>Где</suggestion>
         <suggestion>Когда</suggestion>
+        <suggestion>Охта</suggestion>
         <suggestion expected="yes">Тогда</suggestion>
-        <suggestion>Ряда</suggestion>
       </suggestions>
     </word>
     <word corrsugg="-1">
@@ -4458,7 +4500,7 @@
         <suggestion>около</suggestion>
         <suggestion>того</suggestion>
         <suggestion>этого</suggestion>
-        <suggestion>кого</suggestion>
+        <suggestion>алого</suggestion>
       </suggestions>
     </word>
     <word corrsugg="-1">
@@ -4509,16 +4551,16 @@
         <suggestion>Дно</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="3">
+    <word corrsugg="2">
       <original status="error">Однем</original>
       <speller status="error"/>
       <expected>Одним</expected>
       <edit_dist>1</edit_dist>
-      <position>3</position>
+      <position>2</position>
       <suggestions count="5">
         <suggestion>Днем</suggestion>
-        <suggestion>Днём</suggestion>
         <suggestion expected="yes">Одним</suggestion>
+        <suggestion>Днём</suggestion>
         <suggestion>Дней</suggestion>
         <suggestion>Одном</suggestion>
       </suggestions>
@@ -4614,9 +4656,9 @@
       <suggestions count="5">
         <suggestion>отельное</suggestion>
         <suggestion expected="yes">отдельное</suggestion>
+        <suggestion>артельное</suggestion>
         <suggestion>остальное</suggestion>
         <suggestion>отбельное</suggestion>
-        <suggestion>удельное</suggestion>
       </suggestions>
     </word>
     <word corrsugg="badaccept">
@@ -4744,26 +4786,24 @@
       <speller status="error"/>
       <expected>Опасался</expected>
       <edit_dist>2</edit_dist>
-      <suggestions count="5">
-        <suggestion>Паслася</suggestion>
-        <suggestion>Упаслася</suggestion>
-        <suggestion>Спаслася</suggestion>
-        <suggestion>Паслося</suggestion>
-        <suggestion>Спаслося</suggestion>
+      <suggestions count="3">
+        <suggestion>Паслась</suggestion>
+        <suggestion>Спаслась</suggestion>
+        <suggestion>Упаслась</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="4">
+    <word corrsugg="5">
       <original status="error">Оплаьа</original>
       <speller status="error"/>
       <expected>Оплата</expected>
       <edit_dist>1</edit_dist>
-      <position>4</position>
+      <position>5</position>
       <suggestions count="5">
         <suggestion>Плана</suggestion>
         <suggestion>Плата</suggestion>
         <suggestion>Сплава</suggestion>
+        <suggestion>Олафа</suggestion>
         <suggestion expected="yes">Оплата</suggestion>
-        <suggestion>Уплата</suggestion>
       </suggestions>
     </word>
     <word corrsugg="0">
@@ -4806,9 +4846,9 @@
       <suggestions count="5">
         <suggestion>Пять</suggestion>
         <suggestion expected="yes">Опять</suggestion>
-        <suggestion>Пядь</suggestion>
-        <suggestion>Пят</suggestion>
-        <suggestion>Спящ</suggestion>
+        <suggestion>Ось</suggestion>
+        <suggestion>Оять</suggestion>
+        <suggestion>Ося</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -4851,8 +4891,9 @@
       <expected>Основной</expected>
       <edit_dist>1</edit_dist>
       <position>1</position>
-      <suggestions count="2">
+      <suggestions count="3">
         <suggestion expected="yes">Основной</suggestion>
+        <suggestion>Овновной</suggestion>
         <suggestion>Основный</suggestion>
       </suggestions>
     </word>
@@ -4903,11 +4944,12 @@
       <expected>Осталось</expected>
       <edit_dist>1</edit_dist>
       <position>1</position>
-      <suggestions count="4">
+      <suggestions count="5">
         <suggestion expected="yes">Осталось</suggestion>
-        <suggestion>Сталось</suggestion>
-        <suggestion>Усталому</suggestion>
+        <suggestion>Остапом</suggestion>
         <suggestion>Усталом</suggestion>
+        <suggestion>Усталому</suggestion>
+        <suggestion>Сталось</suggestion>
       </suggestions>
     </word>
     <word corrsugg="2">
@@ -4932,9 +4974,9 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">Остается</suggestion>
+        <suggestion>Осетия</suggestion>
         <suggestion>Истерся</suggestion>
-        <suggestion>Стекся</suggestion>
-        <suggestion>Эстетск</suggestion>
+        <suggestion>Сеется</suggestion>
         <suggestion>Усеется</suggestion>
       </suggestions>
     </word>
@@ -5160,9 +5202,9 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">отсутствие</suggestion>
+        <suggestion>отсутствии</suggestion>
         <suggestion>отсутствия</suggestion>
         <suggestion>отсутствием</suggestion>
-        <suggestion>отсутствии</suggestion>
         <suggestion>отсутствию</suggestion>
       </suggestions>
     </word>
@@ -5176,8 +5218,8 @@
         <suggestion>откуда</suggestion>
         <suggestion>туда</suggestion>
         <suggestion expected="yes">оттуда</suggestion>
+        <suggestion>отсюда</suggestion>
         <suggestion>дотуда</suggestion>
-        <suggestion>остуда</suggestion>
       </suggestions>
     </word>
     <word corrsugg="5">
@@ -5212,10 +5254,10 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">официально</suggestion>
+        <suggestion>официальна</suggestion>
         <suggestion>официальной</suggestion>
         <suggestion>официальное</suggestion>
         <suggestion>официальном</suggestion>
-        <suggestion>официальна</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -5264,8 +5306,8 @@
         <suggestion>Чем</suggestion>
         <suggestion expected="yes">Очень</suggestion>
         <suggestion>Счет</suggestion>
+        <suggestion>Олег</suggestion>
         <suggestion>Чей</suggestion>
-        <suggestion>Чел</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -5276,10 +5318,10 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">Очень</suggestion>
+        <suggestion>Один</suggestion>
         <suggestion>Чин</suggestion>
         <suggestion>Чины</suggestion>
         <suggestion>Чина</suggestion>
-        <suggestion>Учить</suggestion>
       </suggestions>
     </word>
     <word corrsugg="3">
@@ -5302,11 +5344,11 @@
       <expected>Очень</expected>
       <edit_dist>2</edit_dist>
       <suggestions count="5">
-        <suggestion>Очнее</suggestion>
+        <suggestion>Овне</suggestion>
+        <suggestion>Онег</suggestion>
         <suggestion>Очней</suggestion>
-        <suggestion>Ячнее</suggestion>
         <suggestion>Ячней</suggestion>
-        <suggestion>Ячнев</suggestion>
+        <suggestion>Ячнее</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -5396,10 +5438,10 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">приезжей</suggestion>
+        <suggestion>приезжий</suggestion>
         <suggestion>проезжей</suggestion>
         <suggestion>приезжай</suggestion>
-        <suggestion>приезже</suggestion>
-        <suggestion>приезжий</suggestion>
+        <suggestion>приезжее</suggestion>
       </suggestions>
     </word>
     <word corrsugg="-1">
@@ -5417,11 +5459,11 @@
       <expected>подонок</expected>
       <edit_dist>3</edit_dist>
       <suggestions count="5">
+        <suggestion>Дадонах</suggestion>
+        <suggestion>падунах</suggestion>
         <suggestion>падинах</suggestion>
         <suggestion>пардонах</suggestion>
-        <suggestion>падунах</suggestion>
         <suggestion>радонах</suggestion>
-        <suggestion>падинам</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -5537,11 +5579,11 @@
       <expected>Спасибо</expected>
       <edit_dist>3</edit_dist>
       <suggestions count="5">
-        <suggestion>Кариб</suggestion>
-        <suggestion>Басив</suggestion>
-        <suggestion>Басим</suggestion>
-        <suggestion>Гасив</suggestion>
-        <suggestion>Касик</suggestion>
+        <suggestion>Париж</suggestion>
+        <suggestion>Паисия</suggestion>
+        <suggestion>Павии</suggestion>
+        <suggestion>Паши</suggestion>
+        <suggestion>Паисий</suggestion>
       </suggestions>
     </word>
     <word corrsugg="-1">
@@ -5583,10 +5625,10 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">потому</suggestion>
+        <suggestion>пятому</suggestion>
         <suggestion>патам</suggestion>
         <suggestion>патами</suggestion>
         <suggestion>патану</suggestion>
-        <suggestion>панаму</suggestion>
       </suggestions>
     </word>
     <word corrsugg="-1">
@@ -5596,10 +5638,10 @@
       <edit_dist>2</edit_dist>
       <suggestions count="5">
         <suggestion>пути</suggestion>
-        <suggestion>пасти</suggestion>
         <suggestion>почти</suggestion>
-        <suggestion>паутин</suggestion>
-        <suggestion>пауки</suggestion>
+        <suggestion>пасти</suggestion>
+        <suggestion>пяти</suggestion>
+        <suggestion>парти</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -5625,7 +5667,7 @@
         <suggestion>Левый</suggestion>
         <suggestion>Серый</suggestion>
         <suggestion>Еврей</suggestion>
-        <suggestion>Щедрый</suggestion>
+        <suggestion>Петры</suggestion>
         <suggestion>Севры</suggestion>
       </suggestions>
     </word>
@@ -5643,18 +5685,18 @@
         <suggestion>Пейзажу</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="1">
+    <word corrsugg="2">
       <original status="error">Первй</original>
       <speller status="error"/>
       <expected>Первый</expected>
       <edit_dist>1</edit_dist>
-      <position>1</position>
+      <position>2</position>
       <suggestions count="5">
+        <suggestion>Пирей</suggestion>
         <suggestion expected="yes">Первый</suggestion>
         <suggestion>Первой</suggestion>
+        <suggestion>Перу</suggestion>
         <suggestion>Герой</suggestion>
-        <suggestion>Серий</suggestion>
-        <suggestion>Верой</suggestion>
       </suggestions>
     </word>
     <word corrsugg="badaccept">
@@ -5750,9 +5792,9 @@
       <suggestions count="5">
         <suggestion expected="yes">пишется</suggestion>
         <suggestion>пишешься</suggestion>
+        <suggestion>лишиться</suggestion>
         <suggestion>переться</suggestion>
-        <suggestion>пишутся</suggestion>
-        <suggestion>питаться</suggestion>
+        <suggestion>пилиться</suggestion>
       </suggestions>
     </word>
     <word corrsugg="4">
@@ -5838,7 +5880,7 @@
         <suggestion>Тогда</suggestion>
         <suggestion>Года</suggestion>
         <suggestion>Иногда</suggestion>
-        <suggestion>Рода</suggestion>
+        <suggestion>Магда</suggestion>
       </suggestions>
     </word>
     <word corrsugg="3">
@@ -5936,9 +5978,9 @@
       <suggestions count="5">
         <suggestion expected="yes">подозрительно</suggestion>
         <suggestion>поощрительно</suggestion>
+        <suggestion>поощрительна</suggestion>
+        <suggestion>подозрительна</suggestion>
         <suggestion>одобрительно</suggestion>
-        <suggestion>подозрительное</suggestion>
-        <suggestion>подозрительны</suggestion>
       </suggestions>
     </word>
     <word corrsugg="2">
@@ -5947,9 +5989,10 @@
       <expected>Подробный</expected>
       <edit_dist>1</edit_dist>
       <position>2</position>
-      <suggestions count="2">
+      <suggestions count="3">
         <suggestion>Подобный</suggestion>
         <suggestion expected="yes">Подробный</suggestion>
+        <suggestion>Поддубный</suggestion>
       </suggestions>
     </word>
     <word corrsugg="0">
@@ -6004,23 +6047,22 @@
       <suggestions count="5">
         <suggestion expected="yes">Поэтому</suggestion>
         <suggestion>Потому</suggestion>
+        <suggestion>Понтом</suggestion>
         <suggestion>Боевому</suggestion>
-        <suggestion>Вдетому</suggestion>
-        <suggestion>Попетому</suggestion>
+        <suggestion>Потьму</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="5">
+    <word corrsugg="-1">
       <original status="error">Поеште</original>
       <speller status="error"/>
       <expected>Поешьте</expected>
       <edit_dist>1</edit_dist>
-      <position>5</position>
       <suggestions count="5">
-        <suggestion>Воете</suggestion>
-        <suggestion>Доешьте</suggestion>
+        <suggestion>Плоешти</suggestion>
+        <suggestion>Понте</suggestion>
+        <suggestion>Пете</suggestion>
         <suggestion>Моете</suggestion>
         <suggestion>Роете</suggestion>
-        <suggestion expected="yes">Поешьте</suggestion>
       </suggestions>
     </word>
     <word corrsugg="4">
@@ -6048,30 +6090,31 @@
         <suggestion>пожалуйте</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="3">
+    <word corrsugg="2">
       <original status="error">Поженаем</original>
       <speller status="error"/>
       <expected>Пожинаем</expected>
       <edit_dist>1</edit_dist>
-      <position>3</position>
-      <suggestions count="3">
+      <position>2</position>
+      <suggestions count="4">
         <suggestion>Дожинаем</suggestion>
-        <suggestion>Пожелаем</suggestion>
         <suggestion expected="yes">Пожинаем</suggestion>
+        <suggestion>Боженам</suggestion>
+        <suggestion>Пожелаем</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="2">
+    <word corrsugg="3">
       <original status="error">Пожже</original>
       <speller status="error"/>
       <expected>Позже</expected>
       <edit_dist>1</edit_dist>
-      <position>2</position>
+      <position>3</position>
       <suggestions count="5">
         <suggestion>Вожже</suggestion>
+        <suggestion>Вожжи</suggestion>
         <suggestion expected="yes">Позже</suggestion>
         <suggestion>Тоже</suggestion>
-        <suggestion>Ложе</suggestion>
-        <suggestion>Коже</suggestion>
+        <suggestion>Поле</suggestion>
       </suggestions>
     </word>
     <word corrsugg="0">
@@ -6166,9 +6209,9 @@
       <position>5</position>
       <suggestions count="5">
         <suggestion>Окапаться</suggestion>
-        <suggestion>Оказаться</suggestion>
-        <suggestion>Окопаться</suggestion>
         <suggestion>Докопаться</suggestion>
+        <suggestion>Закапаться</suggestion>
+        <suggestion>Окопаться</suggestion>
         <suggestion expected="yes">Покопаться</suggestion>
       </suggestions>
     </word>
@@ -6178,8 +6221,9 @@
       <expected>Поклонники</expected>
       <edit_dist>1</edit_dist>
       <position>1</position>
-      <suggestions count="1">
+      <suggestions count="2">
         <suggestion expected="yes">Поклонники</suggestion>
+        <suggestion>Полониичи</suggestion>
       </suggestions>
     </word>
     <word corrsugg="2">
@@ -6228,8 +6272,8 @@
         <suggestion expected="yes">получается</suggestion>
         <suggestion>получаешься</suggestion>
         <suggestion>получаться</suggestion>
-        <suggestion>получаются</suggestion>
         <suggestion>получиться</suggestion>
+        <suggestion>получаются</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -6324,7 +6368,7 @@
         <suggestion>помойник</suggestion>
         <suggestion>поморник</suggestion>
         <suggestion>помощника</suggestion>
-        <suggestion>поморники</suggestion>
+        <suggestion>помощники</suggestion>
       </suggestions>
     </word>
     <word corrsugg="0">
@@ -6353,8 +6397,8 @@
         <suggestion expected="yes">понимают</suggestion>
         <suggestion>поймают</suggestion>
         <suggestion>помают</suggestion>
-        <suggestion>понимает</suggestion>
         <suggestion>подмоют</suggestion>
+        <suggestion>поноют</suggestion>
       </suggestions>
     </word>
     <word corrsugg="2">
@@ -6367,8 +6411,8 @@
         <suggestion>Оподлись</suggestion>
         <suggestion expected="yes">Попадались</suggestion>
         <suggestion>Лопались</suggestion>
-        <suggestion>Попались</suggestion>
         <suggestion>Попаслись</suggestion>
+        <suggestion>Попались</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -6402,18 +6446,17 @@
       <expected>попытке</expected>
       <edit_dist>1</edit_dist>
     </word>
-    <word corrsugg="4">
+    <word corrsugg="-1">
       <original status="error">порсто</original>
       <speller status="error"/>
       <expected>просто</expected>
       <edit_dist>2</edit_dist>
-      <position>4</position>
       <suggestions count="5">
+        <suggestion>поста</suggestion>
+        <suggestion>порта</suggestion>
         <suggestion>пористо</suggestion>
         <suggestion>порто</suggestion>
         <suggestion>порыто</suggestion>
-        <suggestion expected="yes">просто</suggestion>
-        <suggestion>пост</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -6461,17 +6504,17 @@
         <suggestion expected="yes">Поскользнулся</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="2">
+    <word corrsugg="3">
       <original status="error">Посколько</original>
       <speller status="error"/>
       <expected>Поскольку</expected>
       <edit_dist>1</edit_dist>
-      <position>2</position>
+      <position>3</position>
       <suggestions count="5">
+        <suggestion>Насколько</suggestion>
         <suggestion>Несколько</suggestion>
         <suggestion expected="yes">Поскольку</suggestion>
         <suggestion>Сколько</suggestion>
-        <suggestion>Насколько</suggestion>
         <suggestion>Нисколько</suggestion>
       </suggestions>
     </word>
@@ -6484,9 +6527,9 @@
       <suggestions count="5">
         <suggestion expected="yes">последний</suggestion>
         <suggestion>последней</suggestion>
-        <suggestion>подледный</suggestion>
         <suggestion>последние</suggestion>
         <suggestion>последних</suggestion>
+        <suggestion>последним</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -6518,9 +6561,9 @@
       <expected>Поссорилась</expected>
       <edit_dist>1</edit_dist>
       <suggestions count="5">
+        <suggestion>Засорилась</suggestion>
         <suggestion>Покорилась</suggestion>
         <suggestion>Вострилась</suggestion>
-        <suggestion>Говорилась</suggestion>
         <suggestion>Позорилась</suggestion>
         <suggestion>Ссорилась</suggestion>
       </suggestions>
@@ -6549,15 +6592,15 @@
         <suggestion>Сосешь</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="1">
+    <word corrsugg="2">
       <original status="error">Поссмотрела</original>
       <speller status="error"/>
       <expected>Посмотрела</expected>
       <edit_dist>1</edit_dist>
-      <position>1</position>
+      <position>2</position>
       <suggestions count="5">
-        <suggestion expected="yes">Посмотрела</suggestion>
         <suggestion>Рассмотрела</suggestion>
+        <suggestion expected="yes">Посмотрела</suggestion>
         <suggestion>Обсмотрела</suggestion>
         <suggestion>Отсмотрела</suggestion>
         <suggestion>Досмотрела</suggestion>
@@ -6623,18 +6666,17 @@
         <suggestion expected="yes">потихоньку</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="4">
+    <word corrsugg="-1">
       <original status="error">потмо</original>
       <speller status="error"/>
       <expected>потом</expected>
       <edit_dist>2</edit_dist>
-      <position>4</position>
       <suggestions count="5">
         <suggestion>поимо</suggestion>
         <suggestion>потно</suggestion>
+        <suggestion>поэма</suggestion>
         <suggestion>потому</suggestion>
-        <suggestion expected="yes">потом</suggestion>
-        <suggestion>помимо</suggestion>
+        <suggestion>поима</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -6645,24 +6687,24 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">потому</suggestion>
-        <suggestion>потом</suggestion>
-        <suggestion>поток</suggestion>
+        <suggestion>отмою</suggestion>
         <suggestion>помою</suggestion>
         <suggestion>поэмою</suggestion>
+        <suggestion>подмою</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="2">
+    <word corrsugg="4">
       <original status="error">Потму</original>
       <speller status="error"/>
       <expected>Потому</expected>
       <edit_dist>1</edit_dist>
-      <position>2</position>
+      <position>4</position>
       <suggestions count="5">
+        <suggestion>Потьму</suggestion>
+        <suggestion>Парму</suggestion>
         <suggestion>Тому</suggestion>
         <suggestion expected="yes">Потому</suggestion>
         <suggestion>Форму</suggestion>
-        <suggestion>Кому</suggestion>
-        <suggestion>Отцу</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -6673,10 +6715,10 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">Потому</suggestion>
+        <suggestion>Патону</suggestion>
+        <suggestion>Потапу</suggestion>
         <suggestion>Потоку</suggestion>
-        <suggestion>Потопу</suggestion>
-        <suggestion>Доточу</suggestion>
-        <suggestion>Оточу</suggestion>
+        <suggestion>Попову</suggestion>
       </suggestions>
     </word>
     <word corrsugg="0">
@@ -6715,10 +6757,10 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">Потому</suggestion>
+        <suggestion>Потсдаму</suggestion>
         <suggestion>Босому</suggestion>
-        <suggestion>Вотскому</suggestion>
+        <suggestion>Уотсону</suggestion>
         <suggestion>Косому</suggestion>
-        <suggestion>Сотскому</suggestion>
       </suggestions>
     </word>
     <word corrsugg="0">
@@ -6774,10 +6816,10 @@
       <edit_dist>1</edit_dist>
       <suggestions count="5">
         <suggestion>Одним</suggestion>
-        <suggestion>Гоним</suggestion>
-        <suggestion>Доящим</suggestion>
-        <suggestion>Помним</suggestion>
-        <suggestion>Фоним</suggestion>
+        <suggestion>Боянам</suggestion>
+        <suggestion>Бояном</suggestion>
+        <suggestion>Копним</suggestion>
+        <suggestion>Розним</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -6860,7 +6902,7 @@
         <suggestion expected="yes">проявить</suggestion>
         <suggestion>править</suggestion>
         <suggestion>проявит</suggestion>
-        <suggestion>развить</suggestion>
+        <suggestion>привить</suggestion>
         <suggestion>праветь</suggestion>
       </suggestions>
     </word>
@@ -6873,9 +6915,9 @@
       <suggestions count="5">
         <suggestion expected="yes">Проверку</suggestion>
         <suggestion>Поверку</suggestion>
-        <suggestion>Дверку</suggestion>
-        <suggestion>Зверку</suggestion>
-        <suggestion>Сверку</suggestion>
+        <suggestion>Выверку</suggestion>
+        <suggestion>Заверку</suggestion>
+        <suggestion>Сиверку</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -6941,15 +6983,15 @@
         <suggestion expected="yes">Предлагаю</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="2">
+    <word corrsugg="1">
       <original status="error">Предлогаю</original>
       <speller status="error"/>
       <expected>Предлагаю</expected>
       <edit_dist>1</edit_dist>
-      <position>2</position>
+      <position>1</position>
       <suggestions count="4">
-        <suggestion>Предлога</suggestion>
         <suggestion expected="yes">Предлагаю</suggestion>
+        <suggestion>Предлога</suggestion>
         <suggestion>Предлогах</suggestion>
         <suggestion>Предлогам</suggestion>
       </suggestions>
@@ -7030,18 +7072,18 @@
       <expected>Преинтереснейшее</expected>
       <edit_dist>1</edit_dist>
     </word>
-    <word corrsugg="2">
+    <word corrsugg="1">
       <original status="error">прекол</original>
       <speller status="error"/>
       <expected>прикол</expected>
       <edit_dist>1</edit_dist>
-      <position>2</position>
+      <position>1</position>
       <suggestions count="5">
-        <suggestion>прекос</suggestion>
         <suggestion expected="yes">прикол</suggestion>
+        <suggestion>прекос</suggestion>
         <suggestion>прокол</suggestion>
-        <suggestion>престол</suggestion>
-        <suggestion>греков</suggestion>
+        <suggestion>предал</suggestion>
+        <suggestion>упрекал</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -7196,12 +7238,11 @@
       <expected>приземлились</expected>
       <edit_dist>1</edit_dist>
       <position>1</position>
-      <suggestions count="5">
+      <suggestions count="4">
         <suggestion expected="yes">приземлились</suggestion>
         <suggestion>приземлялись</suggestion>
-        <suggestion>приземлилось</suggestion>
         <suggestion>приземлилась</suggestion>
-        <suggestion>приземлилися</suggestion>
+        <suggestion>приземлилось</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -7223,24 +7264,24 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">придется</suggestion>
-        <suggestion>пройдется</suggestion>
         <suggestion>придётся</suggestion>
-        <suggestion>пройдётся</suggestion>
+        <suggestion>пройдется</suggestion>
         <suggestion>придается</suggestion>
+        <suggestion>придутся</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="3">
+    <word corrsugg="1">
       <original status="error">прийдя</original>
       <speller status="error"/>
       <expected>придя</expected>
       <edit_dist>1</edit_dist>
-      <position>3</position>
+      <position>1</position>
       <suggestions count="5">
+        <suggestion expected="yes">придя</suggestion>
         <suggestion>прейдя</suggestion>
         <suggestion>пройдя</suggestion>
-        <suggestion expected="yes">придя</suggestion>
         <suggestion>прийти</suggestion>
-        <suggestion>перейдя</suggestion>
+        <suggestion>прейди</suggestion>
       </suggestions>
     </word>
     <word corrsugg="2">
@@ -7327,9 +7368,9 @@
       <suggestions count="5">
         <suggestion>Брехали</suggestion>
         <suggestion expected="yes">Приехали</suggestion>
+        <suggestion>Пристли</suggestion>
         <suggestion>Прижали</suggestion>
         <suggestion>Кричали</suggestion>
-        <suggestion>Придали</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -7341,9 +7382,9 @@
       <suggestions count="5">
         <suggestion expected="yes">приехали</suggestion>
         <suggestion>прижали</suggestion>
+        <suggestion>приняли</suggestion>
         <suggestion>придали</suggestion>
         <suggestion>привали</suggestion>
-        <suggestion>припали</suggestion>
       </suggestions>
     </word>
     <word corrsugg="badaccept">
@@ -7362,16 +7403,16 @@
         <suggestion expected="yes">Причисляя</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="1">
+    <word corrsugg="2">
       <original status="error">Пришлесь</original>
       <speller status="error"/>
       <expected>Пришлось</expected>
       <edit_dist>1</edit_dist>
-      <position>1</position>
+      <position>2</position>
       <suggestions count="4">
+        <suggestion>Пришлись</suggestion>
         <suggestion expected="yes">Пришлось</suggestion>
         <suggestion>Пришлась</suggestion>
-        <suggestion>Пришлись</suggestion>
         <suggestion>Пришлешь</suggestion>
       </suggestions>
     </word>
@@ -7427,18 +7468,18 @@
         <suggestion>Рьяно</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="3">
+    <word corrsugg="4">
       <original status="error">Прлку</original>
       <speller status="error"/>
       <expected>Полку</expected>
       <edit_dist>1</edit_dist>
-      <position>3</position>
+      <position>4</position>
       <suggestions count="5">
         <suggestion>Реку</suggestion>
+        <suggestion>Прокл</suggestion>
         <suggestion>Руку</suggestion>
         <suggestion expected="yes">Полку</suggestion>
-        <suggestion>Браку</suggestion>
-        <suggestion>Треку</suggestion>
+        <suggestion>Прагу</suggestion>
       </suggestions>
     </word>
     <word corrsugg="2">
@@ -7466,7 +7507,7 @@
         <suggestion>Кометы</suggestion>
         <suggestion>Гаметы</suggestion>
         <suggestion>Сметы</suggestion>
-        <suggestion>Заметы</suggestion>
+        <suggestion>Греты</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -7485,8 +7526,10 @@
       <expected>Продавцы</expected>
       <edit_dist>1</edit_dist>
       <position>1</position>
-      <suggestions count="1">
+      <suggestions count="3">
         <suggestion expected="yes">Продавцы</suggestion>
+        <suggestion>Протвы</suggestion>
+        <suggestion>Провы</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -7551,22 +7594,22 @@
         <suggestion>программ</suggestion>
         <suggestion expected="yes">программу</suggestion>
         <suggestion>программы</suggestion>
+        <suggestion>погрому</suggestion>
         <suggestion>программа</suggestion>
-        <suggestion>программе</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="2">
+    <word corrsugg="4">
       <original status="error">Продаа</original>
       <speller status="error"/>
       <expected>Продажа</expected>
       <edit_dist>1</edit_dist>
-      <position>2</position>
+      <position>4</position>
       <suggestions count="5">
         <suggestion>Рода</suggestion>
+        <suggestion>Протва</suggestion>
+        <suggestion>Прокла</suggestion>
         <suggestion expected="yes">Продажа</suggestion>
         <suggestion>Продаж</suggestion>
-        <suggestion>Продал</suggestion>
-        <suggestion>Продана</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -7575,11 +7618,12 @@
       <expected>Продукты</expected>
       <edit_dist>1</edit_dist>
       <position>1</position>
-      <suggestions count="4">
+      <suggestions count="5">
         <suggestion expected="yes">Продукты</suggestion>
         <suggestion>Проекты</suggestion>
-        <suggestion>Продеты</suggestion>
         <suggestion>Продуты</suggestion>
+        <suggestion>Продеты</suggestion>
+        <suggestion>Проклы</suggestion>
       </suggestions>
     </word>
     <word corrsugg="badaccept">
@@ -7610,18 +7654,18 @@
         <suggestion expected="yes">Продолжение</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="2">
+    <word corrsugg="1">
       <original status="error">прожегам</original>
       <speller status="error"/>
       <expected>прожигам</expected>
       <edit_dist>1</edit_dist>
-      <position>2</position>
+      <position>1</position>
       <suggestions count="5">
-        <suggestion>пробегам</suggestion>
         <suggestion expected="yes">прожигам</suggestion>
+        <suggestion>пробегам</suggestion>
         <suggestion>прожогам</suggestion>
-        <suggestion>прожогом</suggestion>
-        <suggestion>пробегом</suggestion>
+        <suggestion>прожигал</suggestion>
+        <suggestion>прожигай</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -7678,8 +7722,8 @@
         <suggestion expected="yes">простите</suggestion>
         <suggestion>промостите</suggestion>
         <suggestion>прогостите</suggestion>
+        <suggestion>прорастите</suggestion>
         <suggestion>простоте</suggestion>
-        <suggestion>простить</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -7708,9 +7752,9 @@
       <expected>просмотреть</expected>
       <edit_dist>1</edit_dist>
       <suggestions count="5">
+        <suggestion>просмотрит</suggestion>
         <suggestion>просмотре</suggestion>
         <suggestion>просмотрел</suggestion>
-        <suggestion>просмотрит</suggestion>
         <suggestion>просмотрят</suggestion>
         <suggestion>просмотрев</suggestion>
       </suggestions>
@@ -7785,13 +7829,14 @@
         <suggestion expected="yes">Процветание</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="1">
+    <word corrsugg="2">
       <original status="error">Прочтала</original>
       <speller status="error"/>
       <expected>Прочитала</expected>
       <edit_dist>1</edit_dist>
-      <position>1</position>
-      <suggestions count="2">
+      <position>2</position>
+      <suggestions count="3">
+        <suggestion>Протаса</suggestion>
         <suggestion expected="yes">Прочитала</suggestion>
         <suggestion>Роптала</suggestion>
       </suggestions>
@@ -7802,10 +7847,12 @@
       <expected>Пройдя</expected>
       <edit_dist>1</edit_dist>
       <position>1</position>
-      <suggestions count="3">
+      <suggestions count="5">
         <suggestion expected="yes">Пройдя</suggestion>
-        <suggestion>Бродя</suggestion>
+        <suggestion>Протея</suggestion>
+        <suggestion>Проня</suggestion>
         <suggestion>Родя</suggestion>
+        <suggestion>Бродя</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -7843,10 +7890,10 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">прямо</suggestion>
+        <suggestion>пряма</suggestion>
         <suggestion>прямой</suggestion>
         <suggestion>прямое</suggestion>
         <suggestion>прямом</suggestion>
-        <suggestion>прям</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -7869,9 +7916,9 @@
       <suggestions count="5">
         <suggestion expected="yes">пришлось</suggestion>
         <suggestion>прошлось</suggestion>
-        <suggestion>нашлось</suggestion>
         <suggestion>пришлась</suggestion>
-        <suggestion>пришлись</suggestion>
+        <suggestion>прошлась</suggestion>
+        <suggestion>нашлось</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -7898,9 +7945,9 @@
       <suggestions count="5">
         <suggestion>сто</suggestion>
         <suggestion>пусто</suggestion>
+        <suggestion>поста</suggestion>
+        <suggestion>ста</suggestion>
         <suggestion>исто</suggestion>
-        <suggestion>по</suggestion>
-        <suggestion>что</suggestion>
       </suggestions>
     </word>
     <word corrsugg="-1">
@@ -7922,23 +7969,26 @@
       <expected>Пусть</expected>
       <edit_dist>1</edit_dist>
       <position>1</position>
-      <suggestions count="2">
+      <suggestions count="5">
         <suggestion expected="yes">Пусть</suggestion>
+        <suggestion>Мусь</suggestion>
+        <suggestion>Песью</suggestion>
+        <suggestion>Песь</suggestion>
         <suggestion>Гусь</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="3">
+    <word corrsugg="4">
       <original status="error">Пучему</original>
       <speller status="error"/>
       <expected>Почему</expected>
       <edit_dist>1</edit_dist>
-      <position>3</position>
+      <position>4</position>
       <suggestions count="5">
+        <suggestion>Пучежу</suggestion>
         <suggestion>Сущему</suggestion>
         <suggestion>Чему</suggestion>
         <suggestion expected="yes">Почему</suggestion>
         <suggestion>Пущему</suggestion>
-        <suggestion>Лучшему</suggestion>
       </suggestions>
     </word>
     <word corrsugg="-1">
@@ -7964,18 +8014,18 @@
         <suggestion expected="yes">Пытаюсь</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="2">
+    <word corrsugg="3">
       <original status="error">пяный</original>
       <speller status="error"/>
       <expected>пьяный</expected>
       <edit_dist>1</edit_dist>
-      <position>2</position>
+      <position>3</position>
       <suggestions count="5">
         <suggestion>пятый</suggestion>
+        <suggestion>пиний</suggestion>
         <suggestion expected="yes">пьяный</suggestion>
         <suggestion>пряный</suggestion>
         <suggestion>паяный</suggestion>
-        <suggestion>полный</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -7987,9 +8037,9 @@
       <suggestions count="5">
         <suggestion expected="yes">пятница</suggestion>
         <suggestion>пятницка</suggestion>
+        <suggestion>пятницко</suggestion>
         <suggestion>пятницу</suggestion>
         <suggestion>пятницы</suggestion>
-        <suggestion>пятницко</suggestion>
       </suggestions>
     </word>
     <word corrsugg="-1">
@@ -7998,11 +8048,11 @@
       <expected>рaда</expected>
       <edit_dist>3</edit_dist>
       <suggestions count="5">
+        <suggestion>рокада</suggestion>
         <suggestion>распада</suggestion>
         <suggestion>запада</suggestion>
+        <suggestion>Канада</suggestion>
         <suggestion>рачата</suggestion>
-        <suggestion>рокада</suggestion>
-        <suggestion>рада</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -8021,11 +8071,11 @@
       <expected>района</expected>
       <edit_dist>2</edit_dist>
       <suggestions count="5">
+        <suggestion>раина</suggestion>
         <suggestion>равна</suggestion>
         <suggestion>рана</suggestion>
         <suggestion>ранена</suggestion>
-        <suggestion>раина</suggestion>
-        <suggestion>рамена</suggestion>
+        <suggestion>равно</suggestion>
       </suggestions>
     </word>
     <word corrsugg="-1">
@@ -8035,10 +8085,10 @@
       <edit_dist>4</edit_dist>
       <suggestions count="5">
         <suggestion>развито</suggestion>
-        <suggestion>развило</suggestion>
         <suggestion>развита</suggestion>
-        <suggestion>развитой</suggestion>
-        <suggestion>развиты</suggestion>
+        <suggestion>разница</suggestion>
+        <suggestion>развило</suggestion>
+        <suggestion>развила</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -8071,8 +8121,8 @@
         <suggestion expected="yes">разрушается</suggestion>
         <suggestion>разрушаться</suggestion>
         <suggestion>разрушаешься</suggestion>
+        <suggestion>разрушиться</suggestion>
         <suggestion>разрешается</suggestion>
-        <suggestion>разрушаются</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -8095,17 +8145,18 @@
         <suggestion expected="yes">Результаты</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="1">
+    <word corrsugg="4">
       <original status="error">Разьве</original>
       <speller status="error"/>
       <expected>Разве</expected>
       <edit_dist>1</edit_dist>
-      <position>1</position>
-      <suggestions count="4">
+      <position>4</position>
+      <suggestions count="5">
+        <suggestion>Лозьве</suggestion>
+        <suggestion>Розове</suggestion>
+        <suggestion>Ральфе</suggestion>
         <suggestion expected="yes">Разве</suggestion>
-        <suggestion>Зазыве</suggestion>
-        <suggestion>Лазьте</suggestion>
-        <suggestion>Мальве</suggestion>
+        <suggestion>Разине</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -8116,21 +8167,21 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">разве</suggestion>
+        <suggestion>Лозьве</suggestion>
         <suggestion>разные</suggestion>
         <suggestion>раньше</suggestion>
         <suggestion>разное</suggestion>
-        <suggestion>разуме</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="1">
+    <word corrsugg="2">
       <original status="error">ральные</original>
       <speller status="error"/>
       <expected>реальные</expected>
       <edit_dist>1</edit_dist>
-      <position>1</position>
+      <position>2</position>
       <suggestions count="5">
-        <suggestion expected="yes">реальные</suggestion>
         <suggestion>рольные</suggestion>
+        <suggestion expected="yes">реальные</suggestion>
         <suggestion>бальные</suggestion>
         <suggestion>зальные</suggestion>
         <suggestion>оральные</suggestion>
@@ -8260,9 +8311,10 @@
       <expected>Расчетов</expected>
       <edit_dist>1</edit_dist>
       <position>1</position>
-      <suggestions count="2">
+      <suggestions count="3">
         <suggestion expected="yes">Расчетов</suggestion>
         <suggestion>Рассветов</suggestion>
+        <suggestion>Расселов</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -8285,9 +8337,10 @@
       <expected>Расчеты</expected>
       <edit_dist>1</edit_dist>
       <position>1</position>
-      <suggestions count="3">
+      <suggestions count="4">
         <suggestion expected="yes">Расчеты</suggestion>
         <suggestion>Кассеты</suggestion>
+        <suggestion>Расселы</suggestion>
         <suggestion>Рассветы</suggestion>
       </suggestions>
     </word>
@@ -8320,24 +8373,23 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">расстоянии</suggestion>
-        <suggestion>настоянии</suggestion>
         <suggestion>состоянии</suggestion>
         <suggestion>расстояние</suggestion>
         <suggestion>расстояния</suggestion>
+        <suggestion>настоянии</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="3">
+    <word corrsugg="-1">
       <original status="error">Расчитан</original>
       <speller status="error"/>
       <expected>Рассчитан</expected>
       <edit_dist>1</edit_dist>
-      <position>3</position>
       <suggestions count="5">
         <suggestion>Засчитан</suggestion>
         <suggestion>Насчитан</suggestion>
-        <suggestion expected="yes">Рассчитан</suggestion>
         <suggestion>Посчитан</suggestion>
         <suggestion>Сосчитан</suggestion>
+        <suggestion>Досчитан</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -8377,8 +8429,8 @@
         <suggestion expected="yes">рассчитаны</suggestion>
         <suggestion>насчитаны</suggestion>
         <suggestion>засчитаны</suggestion>
-        <suggestion>рассчитана</suggestion>
-        <suggestion>рассчитан</suggestion>
+        <suggestion>просчитаны</suggestion>
+        <suggestion>сосчитаны</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -8413,11 +8465,12 @@
       <expected>Реклама</expected>
       <edit_dist>1</edit_dist>
       <position>2</position>
-      <suggestions count="4">
+      <suggestions count="5">
         <suggestion>Текла</suggestion>
         <suggestion expected="yes">Реклама</suggestion>
-        <suggestion>Пекла</suggestion>
         <suggestion>Секла</suggestion>
+        <suggestion>Пекла</suggestion>
+        <suggestion>Фекла</suggestion>
       </suggestions>
     </word>
     <word corrsugg="0">
@@ -8466,8 +8519,8 @@
       <expected>рисунком</expected>
       <edit_dist>1</edit_dist>
       <suggestions count="5">
-        <suggestion>рисунки</suggestion>
         <suggestion>рисунка</suggestion>
+        <suggestion>рисунки</suggestion>
         <suggestion>рисунке</suggestion>
         <suggestion>рисунков</suggestion>
         <suggestion>рисунку</suggestion>
@@ -8516,8 +8569,8 @@
         <suggestion>ручейки</suggestion>
         <suggestion>рученьки</suggestion>
         <suggestion expected="yes">ручонки</suggestion>
-        <suggestion>учении</suggestion>
-        <suggestion>ученики</suggestion>
+        <suggestion>рученьке</suggestion>
+        <suggestion>ручонке</suggestion>
       </suggestions>
     </word>
     <word corrsugg="-1">
@@ -8526,11 +8579,11 @@
       <expected>рыться</expected>
       <edit_dist>4</edit_dist>
       <suggestions count="5">
-        <suggestion>меццо</suggestion>
-        <suggestion>рацио</suggestion>
         <suggestion>рыбца</suggestion>
-        <suggestion>рыбцу</suggestion>
-        <suggestion>рысцы</suggestion>
+        <suggestion>рысца</suggestion>
+        <suggestion>Ареццо</suggestion>
+        <suggestion>рыбно</suggestion>
+        <suggestion>рыбцом</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -8539,9 +8592,12 @@
       <expected>Ремонт</expected>
       <edit_dist>1</edit_dist>
       <position>1</position>
-      <suggestions count="2">
+      <suggestions count="5">
         <suggestion expected="yes">Ремонт</suggestion>
+        <suggestion>Рамон</suggestion>
         <suggestion>Мамонт</suggestion>
+        <suggestion>Рамону</suggestion>
+        <suggestion>Рамона</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -8554,11 +8610,18 @@
         <suggestion expected="yes">Рюкзак</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="0">
+    <word corrsugg="1">
       <original status="error">Рязнань</original>
       <speller status="error"/>
       <expected>Рязань</expected>
       <edit_dist>1</edit_dist>
+      <position>1</position>
+      <suggestions count="4">
+        <suggestion expected="yes">Рязань</suggestion>
+        <suggestion>Познань</suggestion>
+        <suggestion>Рязани</suggestion>
+        <suggestion>Рязанью</suggestion>
+      </suggestions>
     </word>
     <word corrsugg="1">
       <original status="error">сааамый</original>
@@ -8589,9 +8652,9 @@
       <suggestions count="5">
         <suggestion expected="yes">Самые</suggestion>
         <suggestion>Малые</suggestion>
-        <suggestion>Талые</suggestion>
-        <suggestion>Аиле</suggestion>
-        <suggestion>Маисе</suggestion>
+        <suggestion>Савы</suggestion>
+        <suggestion>Каире</suggestion>
+        <suggestion>Заире</suggestion>
       </suggestions>
     </word>
     <word corrsugg="-1">
@@ -8599,7 +8662,10 @@
       <speller status="error"/>
       <expected>Самой-то</expected>
       <edit_dist>1</edit_dist>
-      <suggestions count="2">
+      <suggestions count="5">
+        <suggestion>Самойла</suggestion>
+        <suggestion>Самойле</suggestion>
+        <suggestion>Самойлой</suggestion>
         <suggestion>Замойте</suggestion>
         <suggestion>Намойте</suggestion>
       </suggestions>
@@ -8614,18 +8680,18 @@
         <suggestion expected="yes">Самодостаточность</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="4">
+    <word corrsugg="1">
       <original status="error">Самыи</original>
       <speller status="error"/>
       <expected>Самый</expected>
       <edit_dist>1</edit_dist>
-      <position>4</position>
+      <position>1</position>
       <suggestions count="5">
+        <suggestion expected="yes">Самый</suggestion>
         <suggestion>Самые</suggestion>
         <suggestion>Самых</suggestion>
         <suggestion>Самым</suggestion>
-        <suggestion expected="yes">Самый</suggestion>
-        <suggestion>Сами</suggestion>
+        <suggestion>Амии</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -8683,7 +8749,7 @@
         <suggestion>свои</suggestion>
         <suggestion>свое</suggestion>
         <suggestion>своем</suggestion>
-        <suggestion>своею</suggestion>
+        <suggestion>своих</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -8730,18 +8796,18 @@
         <suggestion expected="yes">Священнослужители</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="1">
+    <word corrsugg="3">
       <original status="error">Сгодня</original>
       <speller status="error"/>
       <expected>Сегодня</expected>
       <edit_dist>1</edit_dist>
-      <position>1</position>
+      <position>3</position>
       <suggestions count="5">
+        <suggestion>Сходня</suggestion>
+        <suggestion>Сходни</suggestion>
         <suggestion expected="yes">Сегодня</suggestion>
         <suggestion>Угодно</suggestion>
         <suggestion>Угодья</suggestion>
-        <suggestion>Сходня</suggestion>
-        <suggestion>Ходня</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -8753,9 +8819,9 @@
       <suggestions count="5">
         <suggestion expected="yes">Здесь</suggestion>
         <suggestion>День</suggestion>
+        <suggestion>Удись</suggestion>
         <suggestion>Весь</suggestion>
         <suggestion>Смесь</suggestion>
-        <suggestion>Ересь</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -8834,11 +8900,11 @@
       <expected>Сегодня</expected>
       <edit_dist>2</edit_dist>
       <suggestions count="5">
+        <suggestion>Сеня</suggestion>
+        <suggestion>Сиднея</suggestion>
         <suggestion>Дня</suggestion>
-        <suggestion>Меня</suggestion>
-        <suggestion>Песня</suggestion>
-        <suggestion>Летня</suggestion>
-        <suggestion>Ведя</suggestion>
+        <suggestion>Сидня</suggestion>
+        <suggestion>Сени</suggestion>
       </suggestions>
     </word>
     <word corrsugg="-1">
@@ -8847,11 +8913,11 @@
       <expected>Сегодня</expected>
       <edit_dist>3</edit_dist>
       <suggestions count="5">
-        <suggestion>садня</suggestion>
-        <suggestion>седея</suggestion>
         <suggestion>сидня</suggestion>
-        <suggestion>средня</suggestion>
+        <suggestion>сидни</suggestion>
+        <suggestion>садня</suggestion>
         <suggestion>седая</suggestion>
+        <suggestion>седея</suggestion>
       </suggestions>
     </word>
     <word corrsugg="-1">
@@ -8860,11 +8926,11 @@
       <expected>сегодня</expected>
       <edit_dist>2</edit_dist>
       <suggestions count="5">
-        <suggestion>садня</suggestion>
-        <suggestion>седея</suggestion>
         <suggestion>сидня</suggestion>
-        <suggestion>средня</suggestion>
+        <suggestion>сидни</suggestion>
+        <suggestion>садня</suggestion>
         <suggestion>седая</suggestion>
+        <suggestion>седея</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -8873,8 +8939,11 @@
       <expected>Сейчас</expected>
       <edit_dist>1</edit_dist>
       <position>1</position>
-      <suggestions count="1">
+      <suggestions count="4">
         <suggestion expected="yes">Сейчас</suggestion>
+        <suggestion>Сейма</suggestion>
+        <suggestion>Сеймам</suggestion>
+        <suggestion>Сеймах</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -8949,8 +9018,8 @@
         <suggestion expected="yes">сердце</suggestion>
         <suggestion>серые</suggestion>
         <suggestion>сере</suggestion>
-        <suggestion>севце</suggestion>
-        <suggestion>серее</suggestion>
+        <suggestion>серии</suggestion>
+        <suggestion>Герце</suggestion>
       </suggestions>
     </word>
     <word corrsugg="2">
@@ -8997,7 +9066,7 @@
         <suggestion expected="yes">симпатичный</suggestion>
         <suggestion>симпатичных</suggestion>
         <suggestion>симпатичные</suggestion>
-        <suggestion>символичный</suggestion>
+        <suggestion>симпатичней</suggestion>
         <suggestion>симпатичны</suggestion>
       </suggestions>
     </word>
@@ -9007,9 +9076,12 @@
       <expected>Симптомы</expected>
       <edit_dist>1</edit_dist>
       <position>1</position>
-      <suggestions count="2">
+      <suggestions count="5">
         <suggestion expected="yes">Симптомы</suggestion>
+        <suggestion>Симеоны</suggestion>
         <suggestion>Истомы</suggestion>
+        <suggestion>Симом</suggestion>
+        <suggestion>Симоны</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -9023,7 +9095,7 @@
         <suggestion>скрала</suggestion>
         <suggestion>скала</suggestion>
         <suggestion>стала</suggestion>
-        <suggestion>сказал</suggestion>
+        <suggestion>сизаля</suggestion>
       </suggestions>
     </word>
     <word corrsugg="badaccept">
@@ -9089,10 +9161,10 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">следующее</suggestion>
+        <suggestion>следующие</suggestion>
         <suggestion>сведущее</suggestion>
         <suggestion>следящее</suggestion>
         <suggestion>следует</suggestion>
-        <suggestion>следующие</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -9120,7 +9192,7 @@
         <suggestion>сведущий</suggestion>
         <suggestion>следящий</suggestion>
         <suggestion>следующей</suggestion>
-        <suggestion>следующие</suggestion>
+        <suggestion>следящей</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -9170,8 +9242,8 @@
       <edit_dist>1</edit_dist>
       <position>3</position>
       <suggestions count="3">
-        <suggestion>Пленяться</suggestion>
         <suggestion>Слезиться</suggestion>
+        <suggestion>Пленяться</suggestion>
         <suggestion expected="yes">Слезятся</suggestion>
       </suggestions>
     </word>
@@ -9187,16 +9259,17 @@
         <suggestion>Лишкам</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="-1">
+    <word corrsugg="2">
       <original status="error">Смерительную</original>
       <speller status="error"/>
       <expected>Смирительную</expected>
       <edit_dist>1</edit_dist>
+      <position>2</position>
       <suggestions count="5">
         <suggestion>Мерительную</suggestion>
+        <suggestion expected="yes">Смирительную</suggestion>
         <suggestion>Смертельную</suggestion>
         <suggestion>Верительную</suggestion>
-        <suggestion>Мерительною</suggestion>
         <suggestion>Смесительную</suggestion>
       </suggestions>
     </word>
@@ -9224,23 +9297,23 @@
       <suggestions count="5">
         <suggestion expected="yes">смотрятся</suggestion>
         <suggestion>смотреться</suggestion>
-        <suggestion>всмотреться</suggestion>
-        <suggestion>всмотрятся</suggestion>
-        <suggestion>смотаться</suggestion>
+        <suggestion>смориться</suggestion>
+        <suggestion>смотрится</suggestion>
+        <suggestion>смотришься</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="5">
+    <word corrsugg="1">
       <original status="error">Смушение</original>
       <speller status="error"/>
       <expected>Смущение</expected>
       <edit_dist>1</edit_dist>
-      <position>5</position>
+      <position>1</position>
       <suggestions count="5">
+        <suggestion expected="yes">Смущение</suggestion>
         <suggestion>Смешение</suggestion>
         <suggestion>Крушение</suggestion>
         <suggestion>Глушение</suggestion>
         <suggestion>Вкушение</suggestion>
-        <suggestion expected="yes">Смущение</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -9257,32 +9330,32 @@
         <suggestion>смежные</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="2">
+    <word corrsugg="1">
       <original status="error">сначало</original>
       <speller status="error"/>
       <expected>сначала</expected>
       <edit_dist>1</edit_dist>
-      <position>2</position>
+      <position>1</position>
       <suggestions count="5">
-        <suggestion>начало</suggestion>
         <suggestion expected="yes">сначала</suggestion>
+        <suggestion>начало</suggestion>
+        <suggestion>начала</suggestion>
         <suggestion>скачало</suggestion>
         <suggestion>стачало</suggestion>
-        <suggestion>начале</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="3">
+    <word corrsugg="4">
       <original status="error">Сначла</original>
       <speller status="error"/>
       <expected>Сначала</expected>
       <edit_dist>1</edit_dist>
-      <position>3</position>
+      <position>4</position>
       <suggestions count="5">
         <suggestion>Начла</suggestion>
         <suggestion>Начала</suggestion>
+        <suggestion>Начло</suggestion>
         <suggestion expected="yes">Сначала</suggestion>
         <suggestion>Нашла</suggestion>
-        <suggestion>Начло</suggestion>
       </suggestions>
     </word>
     <word corrsugg="badaccept">
@@ -9306,8 +9379,8 @@
         <suggestion>соосно</suggestion>
         <suggestion>соусно</suggestion>
         <suggestion>сосна</suggestion>
-        <suggestion>сосны</suggestion>
-        <suggestion>собрано</suggestion>
+        <suggestion>соосна</suggestion>
+        <suggestion>соусна</suggestion>
       </suggestions>
     </word>
     <word corrsugg="-1">
@@ -9365,16 +9438,16 @@
         <suggestion>Повышенно</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="3">
+    <word corrsugg="1">
       <original status="error">Соедените</original>
       <speller status="error"/>
       <expected>Соедините</expected>
       <edit_dist>1</edit_dist>
-      <position>3</position>
+      <position>1</position>
       <suggestions count="3">
-        <suggestion>Ледените</suggestion>
-        <suggestion>Оледените</suggestion>
         <suggestion expected="yes">Соедините</suggestion>
+        <suggestion>Оледените</suggestion>
+        <suggestion>Ледените</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -9399,10 +9472,10 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">солнышком</suggestion>
-        <suggestion>волнушкой</suggestion>
+        <suggestion>солнышкам</suggestion>
+        <suggestion>волнушкам</suggestion>
         <suggestion>слушком</suggestion>
         <suggestion>соловушком</suggestion>
-        <suggestion>волнушкою</suggestion>
       </suggestions>
     </word>
     <word corrsugg="-1">
@@ -9411,11 +9484,11 @@
       <expected>Солнце</expected>
       <edit_dist>2</edit_dist>
       <suggestions count="5">
+        <suggestion>Солоне</suggestion>
+        <suggestion>Солуне</suggestion>
+        <suggestion>Солуни</suggestion>
         <suggestion>Долине</suggestion>
         <suggestion>Волне</suggestion>
-        <suggestion>Поляне</suggestion>
-        <suggestion>Колене</suggestion>
-        <suggestion>Долбне</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -9468,8 +9541,8 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">соответственно</suggestion>
-        <suggestion>соответственное</suggestion>
         <suggestion>соответственна</suggestion>
+        <suggestion>соответственное</suggestion>
         <suggestion>соответственной</suggestion>
         <suggestion>соответственны</suggestion>
       </suggestions>
@@ -9527,9 +9600,9 @@
       <position>5</position>
       <suggestions count="5">
         <suggestion>Охрою</suggestion>
-        <suggestion>Дохаю</suggestion>
+        <suggestion>Сократ</suggestion>
         <suggestion>Охаю</suggestion>
-        <suggestion>Охрам</suggestion>
+        <suggestion>Охраню</suggestion>
         <suggestion expected="yes">Сохраню</suggestion>
       </suggestions>
     </word>
@@ -9639,8 +9712,8 @@
       <suggestions count="5">
         <suggestion>Бранно</suggestion>
         <suggestion>Кранно</suggestion>
-        <suggestion>Равно</suggestion>
-        <suggestion>Рано</suggestion>
+        <suggestion>Бранна</suggestion>
+        <suggestion>Кронно</suggestion>
         <suggestion>Дрянно</suggestion>
       </suggestions>
     </word>
@@ -9721,10 +9794,10 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">строятся</suggestion>
-        <suggestion>сторонятся</suggestion>
         <suggestion>строится</suggestion>
-        <suggestion>ссорятся</suggestion>
+        <suggestion>сторонятся</suggestion>
         <suggestion>сторонится</suggestion>
+        <suggestion>старятся</suggestion>
       </suggestions>
     </word>
     <word corrsugg="0">
@@ -9755,9 +9828,10 @@
       <expected>Статусы</expected>
       <edit_dist>1</edit_dist>
       <position>2</position>
-      <suggestions count="2">
+      <suggestions count="3">
         <suggestion>Страусы</suggestion>
         <suggestion expected="yes">Статусы</suggestion>
+        <suggestion>Штраусы</suggestion>
       </suggestions>
     </word>
     <word corrsugg="badaccept">
@@ -9833,9 +9907,9 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">Скажи</suggestion>
-        <suggestion>Выкажи</suggestion>
-        <suggestion>Кажи</suggestion>
-        <suggestion>Откажи</suggestion>
+        <suggestion>Суражи</suggestion>
+        <suggestion>Докажи</suggestion>
+        <suggestion>Накажи</suggestion>
         <suggestion>Укажи</suggestion>
       </suggestions>
     </word>
@@ -9847,10 +9921,10 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">ссылка</suggestion>
-        <suggestion>ссылки</suggestion>
-        <suggestion>ссылке</suggestion>
-        <suggestion>ссылку</suggestion>
         <suggestion>спилка</suggestion>
+        <suggestion>стилка</suggestion>
+        <suggestion>сцилла</suggestion>
+        <suggestion>сцинка</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -9912,44 +9986,46 @@
         <suggestion>съемочное</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="5">
+    <word corrsugg="1">
       <original status="error">Сьездил</original>
       <speller status="error"/>
       <expected>Съездил</expected>
       <edit_dist>1</edit_dist>
-      <position>5</position>
+      <position>1</position>
       <suggestions count="5">
+        <suggestion expected="yes">Съездил</suggestion>
         <suggestion>Ездил</suggestion>
         <suggestion>Доездил</suggestion>
         <suggestion>Заездил</suggestion>
-        <suggestion>Уездил</suggestion>
-        <suggestion expected="yes">Съездил</suggestion>
+        <suggestion>Выездил</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="-1">
+    <word corrsugg="3">
       <original status="error">тайланде</original>
       <speller status="error"/>
       <expected>Таиланде</expected>
       <edit_dist>2</edit_dist>
+      <position>3</position>
       <suggestions count="5">
         <suggestion>таланте</suggestion>
         <suggestion>айланте</suggestion>
-        <suggestion>баланде</suggestion>
-        <suggestion>таиландке</suggestion>
+        <suggestion expected="yes">Таиланде</suggestion>
+        <suggestion>талане</suggestion>
         <suggestion>шаланде</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="-1">
+    <word corrsugg="2">
       <original status="error">тайланд</original>
       <speller status="error"/>
       <expected>Таиланд</expected>
       <edit_dist>2</edit_dist>
+      <position>2</position>
       <suggestions count="5">
         <suggestion>талант</suggestion>
+        <suggestion expected="yes">Таиланд</suggestion>
         <suggestion>айлант</suggestion>
-        <suggestion>баланд</suggestion>
-        <suggestion>талана</suggestion>
-        <suggestion>таланы</suggestion>
+        <suggestion>талан</suggestion>
+        <suggestion>талану</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -9961,9 +10037,9 @@
       <suggestions count="5">
         <suggestion expected="yes">старыми</suggestion>
         <suggestion>талыми</suggestion>
-        <suggestion>тарными</suggestion>
-        <suggestion>тарами</suggestion>
         <suggestion>такими</suggestion>
+        <suggestion>тарами</suggestion>
+        <suggestion>тарными</suggestion>
       </suggestions>
     </word>
     <word corrsugg="3">
@@ -9999,10 +10075,10 @@
       <edit_dist>1</edit_dist>
       <suggestions count="5">
         <suggestion>Варите</suggestion>
-        <suggestion>Вварите</suggestion>
         <suggestion>Сварите</suggestion>
+        <suggestion>Вварите</suggestion>
         <suggestion>Уварите</suggestion>
-        <suggestion>Иврите</suggestion>
+        <suggestion>Сворите</suggestion>
       </suggestions>
     </word>
     <word corrsugg="0">
@@ -10036,11 +10112,11 @@
       <expected>Теперь</expected>
       <edit_dist>2</edit_dist>
       <suggestions count="5">
-        <suggestion>Вепре</suggestion>
+        <suggestion>Терек</suggestion>
+        <suggestion>Терез</suggestion>
         <suggestion>Вепрей</suggestion>
-        <suggestion>Вепрь</suggestion>
         <suggestion>Лепре</suggestion>
-        <suggestion>Вепрем</suggestion>
+        <suggestion>Вепрь</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -10092,8 +10168,8 @@
         <suggestion>тень</suggestion>
         <suggestion>течь</suggestion>
         <suggestion>терм</suggestion>
-        <suggestion>ерь</suggestion>
-        <suggestion>теть</suggestion>
+        <suggestion>верь</suggestion>
+        <suggestion>мерь</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -10233,23 +10309,22 @@
       <suggestions count="5">
         <suggestion>ты</suggestion>
         <suggestion>тыл</suggestion>
+        <suggestion>тип</suggestion>
         <suggestion>кыш</suggestion>
-        <suggestion>туш</suggestion>
-        <suggestion>тык</suggestion>
+        <suggestion>теш</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="5">
+    <word corrsugg="-1">
       <original status="error">Убрть</original>
       <speller status="error"/>
       <expected>Убрать</expected>
       <edit_dist>1</edit_dist>
-      <position>5</position>
       <suggestions count="5">
+        <suggestion>Уборть</suggestion>
         <suggestion>Быть</suggestion>
         <suggestion>Убить</suggestion>
         <suggestion>Брать</suggestion>
         <suggestion>Бить</suggestion>
-        <suggestion expected="yes">Убрать</suggestion>
       </suggestions>
     </word>
     <word corrsugg="0">
@@ -10258,17 +10333,17 @@
       <expected>Угораздило</expected>
       <edit_dist>1</edit_dist>
     </word>
-    <word corrsugg="4">
+    <word corrsugg="2">
       <original status="error">Угошали</original>
       <speller status="error"/>
       <expected>Угощали</expected>
       <edit_dist>1</edit_dist>
-      <position>4</position>
+      <position>2</position>
       <suggestions count="5">
+        <suggestion>Угашали</suggestion>
+        <suggestion expected="yes">Угощали</suggestion>
         <suggestion>Сгорали</suggestion>
         <suggestion>Гопали</suggestion>
-        <suggestion>Пошали</suggestion>
-        <suggestion expected="yes">Угощали</suggestion>
         <suggestion>Угорали</suggestion>
       </suggestions>
     </word>
@@ -10340,7 +10415,7 @@
         <suggestion>уже</suggestion>
         <suggestion>ужи</suggestion>
         <suggestion>ужин</suggestion>
-        <suggestion>мыс</suggestion>
+        <suggestion>укис</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -10422,9 +10497,9 @@
       <suggestions count="5">
         <suggestion>флаги</suggestion>
         <suggestion expected="yes">фаланги</suggestion>
-        <suggestion>салаги</suggestion>
+        <suggestion>налоги</suggestion>
+        <suggestion>Малаги</suggestion>
         <suggestion>малаги</suggestion>
-        <suggestion>фалами</suggestion>
       </suggestions>
     </word>
     <word corrsugg="0">
@@ -10441,10 +10516,10 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">все</suggestion>
+        <suggestion>всё</suggestion>
         <suggestion>се</suggestion>
         <suggestion>фасе</suggestion>
-        <suggestion>с</suggestion>
-        <suggestion>фре</suggestion>
+        <suggestion>оси</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -10466,8 +10541,8 @@
       <position>1</position>
       <suggestions count="4">
         <suggestion expected="yes">химиотерапии</suggestion>
-        <suggestion>химиотерапия</suggestion>
         <suggestion>химиотерапий</suggestion>
+        <suggestion>химиотерапия</suggestion>
         <suggestion>химиотерапию</suggestion>
       </suggestions>
     </word>
@@ -10494,18 +10569,18 @@
         <suggestion>Поорлее</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="1">
+    <word corrsugg="2">
       <original status="error">хороше</original>
       <speller status="error"/>
       <expected>хорошо</expected>
       <edit_dist>1</edit_dist>
-      <position>1</position>
+      <position>2</position>
       <suggestions count="5">
+        <suggestion>хороши</suggestion>
         <suggestion expected="yes">хорошо</suggestion>
         <suggestion>хорошей</suggestion>
         <suggestion>хорошие</suggestion>
         <suggestion>хорошее</suggestion>
-        <suggestion>хорошем</suggestion>
       </suggestions>
     </word>
     <word corrsugg="-1">
@@ -10527,8 +10602,8 @@
         <suggestion expected="yes">хочется</suggestion>
         <suggestion>хочешься</suggestion>
         <suggestion>хотеться</suggestion>
-        <suggestion>одеться</suggestion>
-        <suggestion>мочиться</suggestion>
+        <suggestion>точиться</suggestion>
+        <suggestion>холиться</suggestion>
       </suggestions>
     </word>
     <word corrsugg="-1">
@@ -10541,7 +10616,7 @@
         <suggestion>хотела</suggestion>
         <suggestion>хочешь</suggestion>
         <suggestion>холера</suggestion>
-        <suggestion>кочета</suggestion>
+        <suggestion>Почепа</suggestion>
       </suggestions>
     </word>
     <word corrsugg="badaccept">
@@ -10590,7 +10665,7 @@
         <suggestion>дать</suggestion>
         <suggestion>чуть</suggestion>
         <suggestion>мать</suggestion>
-        <suggestion>рать</suggestion>
+        <suggestion>пять</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -10667,7 +10742,7 @@
         <suggestion>летел</suggestion>
         <suggestion>влетел</suggestion>
         <suggestion expected="yes">слетел</suggestion>
-        <suggestion>полетел</suggestion>
+        <suggestion>членил</suggestion>
       </suggestions>
     </word>
     <word corrsugg="3">
@@ -10680,20 +10755,20 @@
         <suggestion>чёрный</suggestion>
         <suggestion>горный</suggestion>
         <suggestion expected="yes">черный</suggestion>
-        <suggestion>сорный</suggestion>
+        <suggestion>норный</suggestion>
         <suggestion>шорный</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="3">
+    <word corrsugg="2">
       <original status="error">чОртов</original>
       <speller status="error"/>
       <expected>чертов</expected>
       <edit_dist>1</edit_dist>
-      <position>3</position>
+      <position>2</position>
       <suggestions count="5">
         <suggestion>чартов</suggestion>
-        <suggestion>чёртов</suggestion>
         <suggestion expected="yes">чертов</suggestion>
+        <suggestion>чёртов</suggestion>
         <suggestion>портов</suggestion>
         <suggestion>чертой</suggestion>
       </suggestions>
@@ -10706,10 +10781,10 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">что-то</suggestion>
+        <suggestion>часто</suggestion>
         <suggestion>то-то</suggestion>
         <suggestion>что</suggestion>
-        <suggestion>часто</suggestion>
-        <suggestion>чисто</suggestion>
+        <suggestion>та-то</suggestion>
       </suggestions>
     </word>
     <word corrsugg="badaccept">
@@ -10771,7 +10846,7 @@
         <suggestion>чуть</suggestion>
         <suggestion>ять</suggestion>
         <suggestion>четь</suggestion>
-        <suggestion>чтя</suggestion>
+        <suggestion>чти</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -10780,8 +10855,9 @@
       <expected>Чувствую</expected>
       <edit_dist>1</edit_dist>
       <position>1</position>
-      <suggestions count="1">
+      <suggestions count="2">
         <suggestion expected="yes">Чувствую</suggestion>
+        <suggestion>Чусовую</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -10841,22 +10917,23 @@
       <suggestions count="5">
         <suggestion>об</suggestion>
         <suggestion>шоу</suggestion>
+        <suggestion>Боб</suggestion>
         <suggestion>лоб</suggestion>
         <suggestion>шок</suggestion>
-        <suggestion>шобл</suggestion>
       </suggestions>
     </word>
-    <word corrsugg="-1">
+    <word corrsugg="2">
       <original status="error">шта</original>
       <speller status="error"/>
       <expected>что</expected>
       <edit_dist>2</edit_dist>
+      <position>2</position>
       <suggestions count="5">
         <suggestion>эта</suggestion>
+        <suggestion expected="yes">что</suggestion>
         <suggestion>шла</suggestion>
         <suggestion>штат</suggestion>
-        <suggestion>та</suggestion>
-        <suggestion>ста</suggestion>
+        <suggestion>то</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -10907,10 +10984,10 @@
       <position>1</position>
       <suggestions count="5">
         <suggestion expected="yes">Эксперты</suggestion>
-        <suggestion>Вперты</suggestion>
+        <suggestion>Экхарты</suggestion>
+        <suggestion>Доперты</suggestion>
+        <suggestion>Поперты</suggestion>
         <suggestion>Оперты</suggestion>
-        <suggestion>Уперты</suggestion>
-        <suggestion>Отперты</suggestion>
       </suggestions>
     </word>
     <word corrsugg="1">
@@ -10997,7 +11074,7 @@
         <suggestion>щека</suggestion>
         <suggestion>ящера</suggestion>
         <suggestion>ящерка</suggestion>
-        <suggestion>века</suggestion>
+        <suggestion>ящик</suggestion>
       </suggestions>
     </word>
   </results>

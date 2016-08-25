@@ -1,3 +1,10 @@
 # Add complete words here as misspelling:correct followed by a TAB and the
 # weight:
-#jih:jïh	0.0
+в4ера	вчера	0
+ваще	вообще	0
+грит	говорит	0
+грю	говорю	0
+гришь	гоборишь	0
+кто то	кто-то	0
+что то	что-то	0
+

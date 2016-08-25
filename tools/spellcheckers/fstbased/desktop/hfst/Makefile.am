@@ -56,7 +56,7 @@ FINAL_STRING_EDITS=no
 # Variable to define whether to enable whole-word replacements. Possible values:
 # - yes
 # - no
-WORD_REPLACEMENTS=no
+WORD_REPLACEMENTS=yes
 
 include $(top_srcdir)/am-shared/tools-spellcheckers-fstbased-desktop-hfst-dir-include.am
 

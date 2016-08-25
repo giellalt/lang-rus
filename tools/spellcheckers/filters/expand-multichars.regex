@@ -1,0 +1,56 @@
+# Change multicharacter symbols to their component parts
+
+[
+а́  ->  {а́}, # Primary stress marks
+э́  ->  {э́}, 
+о́  ->  {о́}, 
+у́  ->  {у́}, 
+ы́  ->  {ы́}, 
+я́  ->  {я́}, 
+е́  ->  {е́}, 
+ё́  ->  {ё́},
+ю́  ->  {ю́}, 
+и́  ->  {и́}, 
+А́  ->  {А́}, 
+Э́  ->  {Э́}, 
+О́  ->  {О́}, 
+У́  ->  {У́}, 
+Ы́  ->  {Ы́}, 
+Я́  ->  {Я́}, 
+Е́  ->  {Е́}, 
+Ё́  ->  {Ё́},
+Ю́  ->  {Ю́}, 
+И́  ->  {И́},  
+
+а̀  ->  {а̀}, # 2ndary stress marks
+э̀  ->  {э̀}, 
+о̀  ->  {о̀}, 
+у̀  ->  {у̀}, 
+ы̀  ->  {ы̀}, 
+я̀  ->  {я̀}, 
+ѐ  ->  {ѐ}, 
+ё̀  ->  {ё̀},
+ю̀  ->  {ю̀}, 
+ѝ  ->  {ѝ}, 
+А̀  ->  {А̀}, 
+Э̀  ->  {Э̀}, 
+О̀  ->  {О̀}, 
+У̀  ->  {У̀}, 
+Ы̀  ->  {Ы̀}, 
+Я̀  ->  {Я̀}, 
+Ѐ  ->  {Ѐ}, 
+Ё̀  ->  {Ё̀},
+Ю̀  ->  {Ю̀}, 
+Ѝ  ->  {Ѝ} 
+
+];
+
+# (A short note about when to write the dots over ё in Standard Russian.)
+# In short, for young children, and foreigners. In texts when the context cannot distinguish between possible pronunciations, i.e. to avoid mispronunciation. Should always be written in personal names.
+# In all other instances, the dots over ё are facultative, i.e. not obligatory.
+# Азбучная истина № 7. Употребление буквы ё обязательно в текстах с последовательно поставленными знаками ударения, в книгах для детей младшего возраста (в том числе учебниках для школьников младших классов), в учебниках для иностранцев. В обычных печатных текстах ё пишется в тех случаях, когда возможно неправильное прочтение слова, когда надо указать правильное произношение редкого слова или предупредить речевую ошибку. Букву ё следует также писать в собственных именах. В остальных случаях употребление ё факультативно, т. е. необязательно. (http://www.gramota.ru/class/istiny/istiny_7_jo/)
+
+# Explanation:
+# lexical side (->) input 
+# Or, in other words:
+# correct (->) in use out there

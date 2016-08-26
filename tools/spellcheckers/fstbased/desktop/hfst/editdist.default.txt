@@ -66,6 +66,7 @@
 ю
 я
 -
+ы́
 
 ## Transition pairs + weight - section separator:
 @@

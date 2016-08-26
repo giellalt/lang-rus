@@ -93,6 +93,7 @@
 
 б	п	7
 в	ф	7
+ф	в	7
 г	к	7
 г	х	8
 д	т	7
@@ -108,4 +109,5 @@
 ## Change dh into hd with the weight 4:
 ## d,h	h,d	4
 ## TODO
+о,ч	ч,о	4
 

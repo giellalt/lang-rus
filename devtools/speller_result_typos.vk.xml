@@ -5,11 +5,11 @@
   <header>
     <engine abbreviation="vk">
       <toolversion>n/a</toolversion>
-      <processing memoryusage="n/a" systime="0" realtime="0" usertime="0"/>
+      <processing memoryusage="n/a" usertime="0" realtime="0" systime="0"/>
     </engine>
     <lexicon version="ru version 0.1, 26.08.2016, rev139296"/>
     <document>typos.txt</document>
-    <timestamp>20160826-1954</timestamp>
+    <timestamp>20160829-1513</timestamp>
     <truefalsesummary wordcount="966">
       <original correct="0" error="966"/>
       <speller correct="74" error="892"/>
@@ -29,9 +29,12 @@
       <nosugg editdist1="56" editdist2="51" editdist3plus="46"/>
       <badsuggs editdist1="48" editdist2="56" editdist3plus="24"/>
       <averageposition>1.37</averageposition>
+      <averagesuggs_with_correct>3.65</averagesuggs_with_correct>
+      <top1pos_percent>60.43</top1pos_percent>
       <top5pos_percent>76.79</top5pos_percent>
       <allpos_percent>76.79</allpos_percent>
-      <averagesuggs_with_correct>3.65</averagesuggs_with_correct>
+      <nosugg_percent>8.86</nosugg_percent>
+      <badsugg_percent>14.35</badsugg_percent>
     </suggestionsummary>
   </header>
   <results>

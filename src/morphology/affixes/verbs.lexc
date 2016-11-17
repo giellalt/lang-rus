@@ -322,6 +322,61 @@ LEXICON св_1a_я́ть_прич._страд._V/енный
 св_1a_я́ть? ;
 :е PastPass_нн_stem ;
 
+LEXICON св_1a_ё_еба́ть
+:еба́ св_нп_1a ;
++V+Perf+TV:еба́ Perf_Inf_V_stem ;
++V+Perf+TV:еба́ Perf_Fut_1_stem ;
++V+Perf+TV:ёба PastPass_нн_stem ;
+
+LEXICON св_1a_ё_ева́ть
+:ева́ св_нп_1a ;
++V+Perf+TV:ева́ Perf_Inf_V_stem ;
++V+Perf+TV:ева́ Perf_Fut_1_stem ;
++V+Perf+TV:ёва PastPass_нн_stem ;
+
+LEXICON св_1a_ё_ега́ть
+:ега́ св_нп_1a ;
++V+Perf+TV:ега́ Perf_Inf_V_stem ;
++V+Perf+TV:ега́ Perf_Fut_1_stem ;
++V+Perf+TV:ёга PastPass_нн_stem ;
+
+LEXICON св_1a_ё_едла́ть
+:едла́ св_нп_1a ;
++V+Perf+TV:едла́ Perf_Inf_V_stem ;
++V+Perf+TV:едла́ Perf_Fut_1_stem ;
++V+Perf+TV:ёдла PastPass_нн_stem ;
+
+LEXICON св_1a_ё_ена́ть_PstPss_атый/утый
+:ена́ св_нп_1a ;
++V+Perf+TV:ена́ Perf_Inf_V_stem ;
++V+Perf+TV:ена́ Perf_Fut_1_stem ;
++V+Perf+TV:ёна PastPass_stem ;
++V+Perf+TV:ёну PastPass_stem ;
+
+LEXICON св_1a_ё_епа́ть
+:епа́ св_нп_1a ;
++V+Perf+TV:епа́ Perf_Inf_V_stem ;
++V+Perf+TV:епа́ Perf_Fut_1_stem ;
++V+Perf+TV:ёпа PastPass_нн_stem ;
+
+LEXICON св_1a_ё_ерка́ть
+:ерка́ св_нп_1a ;
++V+Perf+TV:ерка́ Perf_Inf_V_stem ;
++V+Perf+TV:ерка́ Perf_Fut_1_stem ;
++V+Perf+TV:ёрка PastPass_нн_stem ;
+
+LEXICON св_1a_ё_ерста́ть
+:ерста́ св_нп_1a ;
++V+Perf+TV:ерста́ Perf_Inf_V_stem ;
++V+Perf+TV:ерста́ Perf_Fut_1_stem ;
++V+Perf+TV:ёрста PastPass_нн_stem ;
+
+LEXICON св_1a_ё_ерха́ть
+:ерха́ св_нп_1a ;
++V+Perf+TV:ерха́ Perf_Inf_V_stem ;
++V+Perf+TV:ерха́ Perf_Fut_1_stem ;
++V+Perf+TV:ёрха PastPass_нн_stem ;
+
 LEXICON св_1a_ё_ета́ть
 :ета́ св_нп_1a ;
 +V+Perf+TV:ета́ Perf_Inf_V_stem ;
@@ -2613,7 +2668,7 @@ LEXICON св_7b_(-д-)
 св_нп_7b_(-д-) ;
 +V+Perf+TV: Perf_Inf_C_stem ;
 +V+Perf+TV: Perf_Fut_1_end ;
-+V+Perf+TV:ё PastPass_нн_end ;
++V+Perf+TV:е PastPass_нн_end ;
 
 LEXICON св_7b_(-д-)_R
 +V+Perf+IV: Perf_Inf_stem_R ;
@@ -2855,7 +2910,7 @@ LEXICON св_7b/b9_ё
 св_нп_7b/b9_ё ;
 +V+Perf+TV: Perf_Infи_C_end9 ;
 +V+Perf+TV: Perf_Fut_1_end ;
-+V+Perf+TV: PastPass_нн_end ;
++V+Perf+TV:ё PastPass_нн_end ;
 
 LEXICON св_нп_7b/b9_ё
 +V+Perf+IV: Perf_Infи_C_end9 ;
@@ -4002,7 +4057,7 @@ LEXICON св_b_-шибить
 +V+Perf+TV: Perf_PastVrbAdv_C ;
 +V+Perf+TV: PastAct ;
 +V+Perf+TV: Perf_Fut_1_end ;
-+V+Perf+TV:%^Mё PastPass_нн_end ;
++V+Perf+TV:%^Mе PastPass_нн_end ;
 
 LEXICON св_нп_b/b9_буд._йду/,_-ёт_прош._шёл,_шла/,_ше/дший
 +V+Perf+IV+Inf:йти́ # ;

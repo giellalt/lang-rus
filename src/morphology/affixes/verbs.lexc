@@ -2723,14 +2723,16 @@ LEXICON нсв_7b/b_(-д-)_ё_вести
 +V+Impf+IV:ед Imper_stressed ; 
 +V+Impf+IV:ед PresVrbAdv_end ; 
 +V+Impf+IV:ед%<у́ PresAct ;
-+V+Impf+IV:е́д PastAct ;
++V+Impf+IV:е́%^d Impf_PastVrbAdv_C ;
++V+Impf+IV:е́%^d PastAct ;
 +V+Impf+TV+Inf:ести́ # ;
 +V+Impf+TV:ёд Past_end ;
 +V+Impf+TV+Prs:ед PresFut_1_end ;
 +V+Impf+TV:ед Imper_stressed ; 
 +V+Impf+TV:ед PresVrbAdv_end ; 
 +V+Impf+TV:ед%<у́ PresAct ;
-+V+Impf+TV:е́д PastAct ;
++V+Impf+TV:е́%^d Impf_PastVrbAdv_C ;
++V+Impf+TV:е́%^d PastAct ;
 +V+Impf+TV+Inf+Pass:ести́сь # ;
 +V+Impf+TV:ёд Past_end_Pass ;
 +V+Impf+TV+Prs:ед PresFut_1_end_Pass ;
@@ -2739,7 +2741,7 @@ LEXICON нсв_7b/b_(-д-)_ё_вести
 
 LEXICON нсв_7b/b_(-д-)_R_безл.
 +V+Impf+IV+Inf:ести́сь # ;
-+V+Impf+IV:ёд Past_end_R_безл. ;
++V+Impf+IV:ё%^d Past_end_R_безл. ;
 +V+Impf+IV+Prs:ед PresFut_1_end_R_безл. ;
 
 LEXICON нсв_7b/b_(-т-)_ё
@@ -2759,7 +2761,7 @@ LEXICON нсв_7b/b_(-т-)_ё_R
 +V+Impf+IV: Impf_Pres_1_end_R ;
 
 LEXICON нсв_нп_7b/b_безл.
-+V+Impf+IV+Inf:езти́ # ;
++V+Impf+IV+Inf:езти́ # ; ! TODO Probably either this is сти́ or else the stems should end in з
 +V+Impf+IV:ёд Past_end_безл. ;
 +V+Impf+IV+Prs:ед PresFut_1_end_безл. ;
 
@@ -2773,15 +2775,15 @@ LEXICON нсв_нп_7b/b_(-ст-)_прош._рос,_росла/,_ро/сший
 LEXICON нсв_нп_7b/b_(-д-)_ё_(но_прич._прош._е/дший)
 +V+Impf+IV+Inf:ед%<ти́ # ;
 +V+Impf+IV:ёд Past_end ;
-+V+Impf+IV:е́д Impf_PastVrbAdv_C ;
-+V+Impf+IV:е́д PastAct ;
++V+Impf+IV:е́%^d Impf_PastVrbAdv_C ;
++V+Impf+IV:е́%^d PastAct ;
 +V+Impf+IV:ёд Impf_Pres_1_end ;
 
 LEXICON нсв_нп_7b/b_(-т-)_ё_(но_прич._прош._е/тший)
 +V+Impf+IV+Inf:ет%<ти́ # ;
 +V+Impf+IV:ёт Past_end ;
 +V+Impf+IV:е́т Impf_PastVrbAdv_C ;
-+V+Impf+IV:е́т PastAct ;
++V+Impf+IV:е́%^t PastAct ;
 +V+Impf+IV:ёт Impf_Pres_1_end ;
 
 LEXICON св_нп_7b/b
@@ -2842,7 +2844,7 @@ LEXICON св_7b/b_(-д-)9_ё_(но_прич._прош._е/дший) ! завес
 +V+Perf+TV+Fut:ед PresFut_1_end ;
 +V+Perf+TV+Imp+Pl1:едём # ;
 +V+Perf+TV:ед Imper_stressed ; 
-+V+Perf+TV:е́д PastAct ;
++V+Perf+TV:е́%^d PastAct ;
 +V+Perf+TV:едё PastPass_нн_end ;
 
 LEXICON св_нп_7b/b_(-д-)9_ё_(но_прич._прош._е/дший)
@@ -2852,7 +2854,7 @@ LEXICON св_нп_7b/b_(-д-)9_ё_(но_прич._прош._е/дший)
 +V+Perf+IV+Fut:ед PresFut_1_end ;
 +V+Perf+IV+Imp+Pl1:едём # ;
 +V+Perf+IV:ед Imper_stressed ; 
-+V+Perf+IV:е́д PastAct ;
++V+Perf+IV:е́%^d PastAct ;
 
 LEXICON св_7b/b_(-д-)9_ё_R_(но_прич._прош._е/дшийся)_прош._м_вёл ! завестись, etc.
 +V+Perf+IV+Inf:ести́сь # ;
@@ -2861,11 +2863,11 @@ LEXICON св_7b/b_(-д-)9_ё_R_(но_прич._прош._е/дшийся)_про
 +V+Perf+IV+Fut:ед PresFut_1_end_R ;
 +V+Perf+IV+Imp+Pl1:едёмся # ;
 +V+Perf+IV:ед Imper_stressed_R ; 
-+V+Perf+IV:е́д PastAct_R ;
++V+Perf+IV:е́%^d PastAct_R ;
 
 LEXICON св_7b/b_(-д-)_R_безл.
 +V+Perf+IV+Inf:ести́сь # ;
-+V+Perf+IV:ёд Past_end_R_безл. ;
++V+Perf+IV:ё%^d Past_end_R_безл. ;
 +V+Perf+IV+Fut:ед PresFut_1_end_R_безл. ;
 +V+Perf+IV:ед Imper_stressed_R ; 
 
@@ -2932,7 +2934,7 @@ LEXICON св_7b/b_(-с-)9_ё_R
 
 LEXICON св_7b/b_(-т-)9_ё
 св_нп_7b/b_(-т-)9_ё ;
-+V+Perf+TV:ёт Perf_Infи_C_end9 ;
++V+Perf+TV:ё%^t Perf_Infи_C_end9 ;
 +V+Perf+TV:ет Perf_Fut_1_end ;
 +V+Perf+TV:етё PastPass_нн_end ;
 
@@ -2944,7 +2946,7 @@ LEXICON св_7b/b_(-т-)9_-честь
 +V+Perf+TV:тё PastPass_нн_end ;
 
 LEXICON св_нп_7b/b_(-т-)9_ё
-+V+Perf+IV:ёт Perf_Infи_C_end9 ;
++V+Perf+IV:ё%^t Perf_Infи_C_end9 ;
 +V+Perf+IV:ет Perf_Fut_1_end ;
 
 LEXICON св_7b/b_(-т-)9_ё_(но_прич._прош._е/тший)
@@ -2954,14 +2956,14 @@ LEXICON св_7b/b_(-т-)9_ё_(но_прич._прош._е/тший)
 +V+Perf+TV+Fut:ет PresFut_1_end ;
 +V+Perf+TV+Imp+Pl1:етём # ;
 +V+Perf+TV:ет Imper_stressed ; 
-+V+Perf+TV:е́т PastAct ;
++V+Perf+TV:е́%^t PastAct ;
 +V+Perf+IV+Inf:ести́ # ;
 +V+Perf+IV:ёт Past_end ;
 +V+Perf+IV:ёт PastVrbAdv_9_end ;
 +V+Perf+IV+Fut:ет PresFut_1_end ;
 +V+Perf+IV+Imp+Pl1:етём # ;
 +V+Perf+IV:ет Imper_stressed ; 
-+V+Perf+IV:е́т PastAct ;
++V+Perf+IV:е́%^t PastAct ;
 +V+Perf+TV:етё PastPass_нн_end ;
 
 LEXICON св_7b/c_(-д-)

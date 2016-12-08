@@ -7,8 +7,10 @@ Alphabet
       %^G:0  ! Facilitates GenPl ов/ев when it "should" be zero or ей (its presence blocks the transformation rule)
       %^Z:0  ! "Zero ending" resolves to 0/ь/й (used for short-form adj's)
       %^M:0  ! Verb stem mutation
-      %^T:т  ! Archiphoneme for realizing the т~щ verbal alternation (as opposed to т~ч)
       %^D:д  ! Archiphoneme for realizing the д~жд verbal alternation (as opposed to д~ж)
+      %^T:т  ! Archiphoneme for realizing the т~щ verbal alternation (as opposed to т~ч)
+      %^d:д  ! Archiphoneme for verb stems with -дший past active participles (-сти 7 (-д-) )
+      %^t:т  ! Archiphoneme for verb stems with -тший past active participles (-сти 7 (-т-) )
       %^R:р  ! Archiphoneme for бороть and пороть
       %^U:ь %^U:й %^U:и   ! Imperative ending (unstressed)
       %^S:й %^S:и́ %^S:0   ! Imperative ending (stressed)
@@ -134,8 +136,9 @@ Vx:0 <=> .#. ( %^P: %^A: ) [ Letter: | %^F:0 | %>:0 ]+ _ %>:0 ;
          %^F:0 _ й: %<:0 :V ;
             ! бFе́й<у́   бFе́й<Iте
             ! б00ь0ю́   б0е́й00те
-         %^F:0 _ ( C: ) %<:0 :л :V ( :с :ь ) .#. ;
-            ! TODO examples that are subject to this rule?
+         %^F:0 _ ( :C ) %<:0 :л :V ( :с :ь ) .#. ;
+            ! жFёг<ла́
+            ! ж00г0ла́
 where Vx in ( а е́ ё и я а́ и́ я́ ) ;
 
 "е>0: 1) Delete lexical vowel endings; 2) Delete fleeting vowels where ending begins with a vowel; 3) Delete е after comparative adjective stem mutation."
@@ -147,7 +150,7 @@ where Vx in ( а е́ ё и я а́ и́ я́ ) ;
             ! ли́х>е́е   
             ! ли́ш0е0   
 
-"о/о́>0 in lexical endings, fleeting vowels (including verbal prefixes), and zero GenPl"
+"[оо́]>0 in lexical endings, fleeting vowels (including verbal prefixes), and zero GenPl"
 [ о:0 | о́:0 ] <=> .#. ( %^P: %^A: ) [ Letter: | %^F:0 ]+ _  %>:0 ; ! lexical ending
                     ! see examples in parallel rule of "V>0" above
                   %^F:0 _ [ Letter ]+ (End) %>:0 :V ; ! fleeting vowel
@@ -158,14 +161,14 @@ where Vx in ( а е́ ё и я а́ и́ я́ ) ;
                     ! кни́га>ов   чудо́вище>ов   пти́ца>ов   пи́ла́>о́в   ба́шFеня>ов   се́мFе́йя́>ов   ва́йя>ов
                     ! кни́г0000   чудо́вищ0000   пти́ц0000   пи́л0000   ба́ш0ен0000   сем0е́й0000   ва́й0000
 
-"o/O>0 Delete verbal prefix fleeting vowels"
-[ %^o:0 | %^O:0 ] <=> [ в | н а д | н а́: д | о б | о́: б | о т | о́: т | п о д | п о́: д | п р е д | п р е́: д | с | в з: | в о з: | в о́: з: | и з: | и́: з: | н и з: | н и́: з: | р а з: | р а́: з: ] _ C (%^F:0) :V ; 
+"[oO]>0 Delete verbal prefix fleeting vowels"
+[ %^o:0 | %^O:0 ] <=> [ в | н а д | н а́: д | о б | о́: б | о т | о́: т | п о д | п о́: д | п р е д | п р е́: д | с | в з: | в о з: | в о́: з: | и з: | и́: з: | н и з: | н и́: з: | р а з: | р а́: з: ] _ :C (%^F:0) :V ; 
                     ! Fleeting vowels in prefixes, like сожгла сжег
                     ! с^ого́н<ю́ 
                     ! с^0гон0ю́
 
 "O>о Destress verbal prefix fleeting vowel, if there is stress to the right"
-%^O:о <=> [ в | н а д | н а́: д | о б | о́: б | о т | о́: т | п о д | п о́: д | п р е д | п р е́: д | с | в з: | в о з: | в о́: з: | и з: | и́: з: | н и з: | н и́: з: | р а з: | р а́: з: ] _ [ [ ?* :StressedV ?* ] - [ C (%^F:0) :V ?* ] ] .#. ;
+%^O:о <=> [ в | н а д | н а́: д | о б | о́: б | о т | о́: т | п о д | п о́: д | п р е д | п р е́: д | с | в з: | в о з: | в о́: з: | и з: | и́: з: | н и з: | н и́: з: | р а з: | р а́: з: ] _ [ [ ?* :StressedV ?* ] - [ :C (%^F:0) :V ?* ] ] .#. ;
 
 "з>с in some verbal prefixes with dropped fleeting vowels, when the following consonant is unvoiced"
 з:с <=> [ в | в о | в о́: | и | и́: | н и | н и́: | р а | р а́: ] _ [ %^o:0 | %^O:0 ] :UnvoicedC (%^F:0) :V ;
@@ -195,7 +198,7 @@ where Vx in ( а е́ ё и я а́ и́ я́ ) ;
             ! ли́ш0е0
 
 "й>ь (1) when after a fleeting vowel and before a vowel ( муравей > муравья; семей > семья ) (2) in verbs with й-stems, such as бить"
-й:ь <=> C: %^F:0 V: _ ([ я́: | ё: | е́: | я: | е: ]) %>:0 :V ;
+й:ь <=> :C %^F:0 V: _ ([ я́: | ё: | е́: | я: | е: ]) %>:0 :V ;
             ! муравFе́й>а́   белFе́йё>о́
             ! мурав00ь0я́   бел00ь00ё
         C: %^F:0 V: _ %<:0 :V ;
@@ -271,14 +274,14 @@ where Vx in ( у у́ )
 в:0 <=> [ VELEndV | цEndV | HCEndV | VEndV | JEndV | jEndV ] [ о: | о́: ] _ .#. ;
         HUSHEndV о: _ .#. ;
         SCEndV о: _ .#. ;
-        !C: %<:0 _ ( с я ) .#. ; ! Past verbal adverb (handled by lexc)
-        !C: %<:0 _ (ш и ( с :ь ) ) .#. ; ! Past verbal adverb reflexive (handled by lexc)
-        C: %<:0 _ ш %>:0 V: [ C (V) | V ] ( с я ) .#. ; ! Past active ppl TODO BROKEN?
+        !:C %<:0 _ ( с я ) .#. ; ! Past verbal adverb (handled by lexc)
+        :C %<:0 _ ш и ( с :ь ) .#. ; ! Past verbal adverb reflexive (handled by lexc)
+        :C %<:0 _ ш %>:0 ; ! Past active ppl TODO check that all DT stems are correct (see Zaliznjak intro pg 85) л>вший, no л +ший EXCEPTION: 7-сти (-д-) or (-т-) > дший/тший
 "о>ь: GenPl zero after soft C"
 о:ь <=> SCEndVNoN _ в:0 .#. ; ! However, Fem 2*a in ~ня go to 0, not ь (characterized by F V н я)
         \[%^F:0] V: н: я:0 %>:0 _ в:0 .#. ; ! However, Fem 2*a in н, e.g. башня~башен
         C: н: [ е́:0 | е:0 | ё:0 | я́:0 ] %>:0 _ в:0 .#. ;
-"о/о́>й: GenPl zero after V"
+"[оо́]>й: GenPl zero after V"
 [ о:й | о́:й ] <=> VEndV _ в:0 .#. ;
 
 "P>п in comparatives"
@@ -313,7 +316,7 @@ where Vx in ( у у́ )
 т:ч <=>              \с: _ %^M: ;
         [ г: | к: ] %<:0 _ ь ( с я ) .#. ;
 
-"г/к>0 before infinitive ending: гть/кть > чь"
+"[гк]>0 before infinitive ending: гть/кть > чь"
 Cx:0 <=> _ %<:0 т: ь ( с я ) .#. ;
 where Cx in ( г к ) ;
 
@@ -321,14 +324,18 @@ where Cx in ( г к ) ;
 ё:е́ <=> _ [ г: | к: ] %<:0 т: ь ( с я ) .#. ;
         _ [ б: | д: | с | (с) т:с ] %<:0 т ь ( с я ) .#. ;
 
-"д/т>0 before past tense"
+"[дтdt]>0 before past tense"
 Cx:0 <=> _ %<:0 л ( [ V ( с :ь ) | с [ :я | :я́ ] ] ) .#.  ;
+where Cx in ( д т %^d %^t ) ;
+
+"[дт]>0 before past active deverbals"
+Cx:0 <=> _ %<:0 в ш %>:0 ;
 where Cx in ( д т ) ;
 
-"[бдт]>с in before infinitive endings"
+"[бдтdt]>с in before infinitive endings"
 Cx:с <=> _ %<:0 т ( [ и́ ( с :ь ) | ь ( с я ) ] ) .#.  ;
          $[ :в :ы́ ] _ %<:0 т ( и ( с :ь ) ) .#.  ;
-where Cx in ( б д т ) ;
+where Cx in ( б д т %^d %^t ) ;
 
 "с>0 before т>щ and к>щ stem mutations"
 с:0 <=> _ [ к: | т: ] %^M: ;
@@ -358,7 +365,7 @@ where Cx in ( д з с %^T %^D )
 "S>и́ in imperatives with consonant stems"
 %^S:и́ <=>                                               [ :C - :й ] (%^M:) %<:0 _ ( т е ) ( с [ я: | ь ] ) .#. ;
 
-"S/U>й in Imperatives with vowel stems"
+"[SU]>й in Imperatives with vowel stems"
 Ex:й <=>                                                                :V %<:0 _ ( т е ) ( с [ я: | ь ] ) .#. ;
 where Ex in ( %^U %^S ) ;
 

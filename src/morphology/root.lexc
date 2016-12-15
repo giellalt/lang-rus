@@ -41,8 +41,9 @@ Multichar_Symbols
 %^R  !!= * @CODE@ = archiphoneme for бороть and пороть
 %^U  !!= * @CODE@ = Imperative ending (unstressed)
 %^S !!= * @CODE@ = Imperative ending (stressed)
-%^P ! Test for comparatives: по~
-%^A ! Test for comparatives: по~
+%^P !!= * @CODE@ = Attenuative comparative prefix: по~
+%^A !!= * @CODE@ = Attenuative comparative prefix: по~
+%^Y !!= * @CODE@ = Verbal prefix вы́-
 
 !! !!POS
 +A      !!= * @CODE@ = Adjective

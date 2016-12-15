@@ -170,7 +170,7 @@ Past
 
 "1"  1  ①      stress in past tense and short-form ppl one syllable to left (except Fem)
 "2"  2  ②      Command form: ь/й instead of и
-"3"  3  ③      Command form: и instead of ь in singular
+"3"  3  ③      Command form: и in sg, ь in plural
 "4"  4  ④      Present active participle: stress one syllable to the left
 "5"  5  ⑤      In 3**, -ну- is kept in the masc past tense
 "6"  6  ⑥      In 3**, -ну- is kept in past active participle and past verbal adverb

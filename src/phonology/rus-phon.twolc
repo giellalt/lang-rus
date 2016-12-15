@@ -16,6 +16,7 @@ Alphabet
       %^S:й %^S:и́ %^S:0   ! Imperative ending (stressed)
       %^P:0 ! п in prefix по for comparatives
       %^A:0 ! о in prefix по for comparatives
+      %^Y:ы́ ! ы́ in verbal prefix вы́- (Triggers rules for forming the imperative with %^U and %^S)
       
       %[%>%]:%> %[%<%]:%< ! angle brackets (this is to avoid the internal use of < and >)
       
@@ -114,7 +115,7 @@ jEnd = [ jEndV | jEndC ] ;
 1ConjV = V %<:0 ;                            ! читать, умолять, белеть, воевать, etc.?
 1ConjJ = (%^F:0 V:) :ь %<:0 ;                  ! бить, бей, бью
 VerbHUSH = :HUSH (%^M:0) %<:0 ;             ! слышу (ю)
-VyPrefix = ( [ п о | п е р е | с а м о ] ) в ы́  ;
+VyPrefix = ( [ п о | п е р е | с а м о ] ) в %^Y:ы́  ;
 
 Rules
 
@@ -139,6 +140,7 @@ Vx:0 <=> .#. ( %^P: %^A: ) [ Letter: | %^F:0 | %>:0 ]+ _ %>:0 ;
          %^F:0 _ ( :C ) %<:0 :л :V ( :с :ь ) .#. ;
             ! жFёг<ла́
             ! ж00г0ла́
+         %^F:0 _ ( :C ) %<:0 :V ;
 where Vx in ( а е́ ё и я а́ и́ я́ ) ;
 
 "е>0: 1) Delete lexical vowel endings; 2) Delete fleeting vowels where ending begins with a vowel; 3) Delete е after comparative adjective stem mutation."
@@ -149,6 +151,8 @@ where Vx in ( а е́ ё и я а́ и́ я́ ) ;
          [ г: | к: | х: ] %>:0 [ е | е́: ] _ ( %^P: ).#. ; ! After comparative adjective mutation
             ! ли́х>е́е   
             ! ли́ш0е0   
+         %^F:0 _ ( :C ) %<:0 :л :V ( :с :ь ) .#. ;
+         %^F:0 _ ( :C ) %<:0 :V ;
 
 "[оо́]>0 in lexical endings, fleeting vowels (including verbal prefixes), and zero GenPl"
 [ о:0 | о́:0 ] <=> .#. ( %^P: %^A: ) [ Letter: | %^F:0 ]+ _  %>:0 ; ! lexical ending
@@ -160,6 +164,8 @@ where Vx in ( а е́ ё и я а́ и́ я́ ) ;
                   [ VELEndV | HUSHEndV | цEndV | HCEndV | FVn0 | JEndV | jEndV ] _ в:0 .#. ; ! zero GenPl
                     ! кни́га>ов   чудо́вище>ов   пти́ца>ов   пи́ла́>о́в   ба́шFеня>ов   се́мFе́йя́>ов   ва́йя>ов
                     ! кни́г0000   чудо́вищ0000   пти́ц0000   пи́л0000   ба́ш0ен0000   сем0е́й0000   ва́й0000
+                  %^F:0 _ ( :C ) %<:0 :л :V ( :с :ь ) .#. ;
+                  %^F:0 _ ( :C ) %<:0 :V ;
 
 "[oO]>0 Delete verbal prefix fleeting vowels"
 [ %^o:0 | %^O:0 ] <=> [ в | н а д | н а́: д | о б | о́: б | о т | о́: т | п о д | п о́: д | п р е д | п р е́: д | с | в з: | в о з: | в о́: з: | и з: | и́: з: | н и з: | н и́: з: | р а з: | р а́: з: ] _ :C (%^F:0) :V ; 
@@ -197,13 +203,16 @@ where Vx in ( а е́ ё и я а́ и́ я́ ) ;
             ! ли́х>е́й
             ! ли́ш0е0
 
-"й>ь (1) when after a fleeting vowel and before a vowel ( муравей > муравья; семей > семья ) (2) in verbs with й-stems, such as бить"
+"й>ь (1) when after a fleeting vowel and before a vowel ( муравей > муравья; семей > семья ) (2) in verbs with й-stems, such as бить (3) in imperatives of code 2 on consonant stems"
 й:ь <=> :C %^F:0 V: _ ([ я́: | ё: | е́: | я: | е: ]) %>:0 :V ;
             ! муравFе́й>а́   белFе́йё>о́
             ! мурав00ь0я́   бел00ь00ё
         C: %^F:0 V: _ %<:0 :V ;
             ! бFе́й<у́
             ! б00ь0ю́
+        :C %<:0 _ ( т е ) ( с [ я: | ь ] ) .#. ;
+            ! вы́бурав<й
+            ! вы́бурав0ь
 
 "Z>0"
 %^Z:0 <=> [ VELEnd | HUSHEnd | цEnd | HCEnd | JEnd | FVn0 ] _ .#. ; ! Fem 2*a in н, e.g. столетний~столетен
@@ -274,9 +283,8 @@ where Vx in ( у у́ )
 в:0 <=> [ VELEndV | цEndV | HCEndV | VEndV | JEndV | jEndV ] [ о: | о́: ] _ .#. ;
         HUSHEndV о: _ .#. ;
         SCEndV о: _ .#. ;
-        !:C %<:0 _ ( с я ) .#. ; ! Past verbal adverb (handled by lexc)
-        :C %<:0 _ ш и ( с :ь ) .#. ; ! Past verbal adverb reflexive (handled by lexc)
-        :C %<:0 _ ш %>:0 ; ! Past active ppl TODO check that all DT stems are correct (see Zaliznjak intro pg 85) л>вший, no л +ший EXCEPTION: 7-сти (-д-) or (-т-) > дший/тший
+        :C %<:0 _ ( ш и ( с :ь ) ) .#. ; ! Past verbal adverb (handled by lexc)
+        :C %<:0 _ ш %>:0 ; ! Past active ppl (see Zaliznjak intro pg 85) л>вший, no л +ший EXCEPTION: 7-сти (-д-) or (-т-) > дший/тший uses %^d/%^t
 "о>ь: GenPl zero after soft C"
 о:ь <=> SCEndVNoN _ в:0 .#. ; ! However, Fem 2*a in ~ня go to 0, not ь (characterized by F V н я)
         \[%^F:0] V: н: я:0 %>:0 _ в:0 .#. ; ! However, Fem 2*a in н, e.g. башня~башен
@@ -328,8 +336,10 @@ where Cx in ( г к ) ;
 Cx:0 <=> _ %<:0 л ( [ V ( с :ь ) | с [ :я | :я́ ] ] ) .#.  ;
 where Cx in ( д т %^d %^t ) ;
 
-"[дт]>0 before past active deverbals"
-Cx:0 <=> _ %<:0 в ш %>:0 ;
+"[дт]>в before past active deverbals" ! NB! Compare меtший etc.
+Cx:в <=> _ %<:0 ( в:0 ) ш и ( с ь ) .#. ;
+         _ %<:0 в:0 .#. ;
+         _ %<:0 в:0 ш %>:0 ;
 where Cx in ( д т ) ;
 
 "[бдтdt]>с in before infinitive endings"

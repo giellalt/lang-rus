@@ -35,8 +35,10 @@ This is free and open source Russian morphology.
  * %^Z   = Zero ending (resolves to 0/й/ь)
  * %^M   = Verb stem mutation
  * %^D   = archiphoneme for д~жд alternation in past passive participles
- * %^R   = archiphoneme for бороть and пороть
  * %^T   = archiphoneme for т~щ alternation in verbs
+ * %^d   = archiphoneme for verb stems with -дший past active participles (-сти 7 (-д-) )
+ * %^t   = archiphoneme for verb stems with -тший past active participles (-сти 7 (-т-) )
+ * %^R   = archiphoneme for бороть and пороть
  * %^U   = Imperative ending (unstressed)
  * %^S  = Imperative ending (stressed)
 

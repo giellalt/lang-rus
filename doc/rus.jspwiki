@@ -41,6 +41,9 @@ This is free and open source Russian morphology.
  * %^R   = archiphoneme for бороть and пороть
  * %^U   = Imperative ending (unstressed)
  * %^S  = Imperative ending (stressed)
+ * %^P  = Attenuative comparative prefix: по~
+ * %^A  = Attenuative comparative prefix: по~
+ * %^Y  = Verbal prefix вы́-
 
 !!POS
  * +A       = Adjective

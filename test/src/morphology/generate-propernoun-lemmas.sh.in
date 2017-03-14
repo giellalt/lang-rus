@@ -61,7 +61,12 @@ pythonbin=@PYTHON@
 ##### --include "(pattern1|pattern2|...)"                          #####
 ##### --exclude "(pattern1|pattern2|...)"                          #####
 @GTCORE@/scripts/extract-lemmas.sh \
+    --exclude "( соб-мо_a_й )" \
     $source_file > $lemmas
+
+@GTCORE@/scripts/extract-lemmas.sh \
+    --include "( соб-мо_a_й )" \
+    $source_file | sed 's/$/евич/' >> $lemmas
 
 ###### Start testing: #######
 transducer_found=0

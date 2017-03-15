@@ -89,6 +89,16 @@ analyser-gt%.$(1): analyser-gt%.tmp.$(1) \
 		 save stack $$@\n\
 		 quit\n" | $$(XFST_TOOL)
 
+analyser-disamb-gt%.$(1): analyser-disamb-gt%.tmp.$(1) \
+					 orthography/destressOptional.compose.$(1)
+	$$(AM_V_XFST_TOOL)$$(PRINTF) "read regex \
+				@\"$$<\"                                      \
+			.o. @\"orthography/destressOptional.compose.$(1)\" \
+			;\n\
+		 $$(INVERT_HFST)\
+		 save stack $$@\n\
+		 quit\n" | $$(XFST_TOOL)
+
 # We need to add processing of language-specific tags in the generators:
 generator-gt%.$(1): generator-gt%.tmp.$(1) \
 					 orthography/destress.compose.$(1)

@@ -1,7 +1,7 @@
 Alphabet
 
-      %>:0   ! End of nominal stem
-      %<:0   ! End of verbal stem
+      %>   ! End of nominal stem
+      %<   ! End of verbal stem
       %^F:0  ! placed immediately before fleeting vowels Fа Fе Fо Fи Fя Fа́ Fе́ Fё Fо́ Fи́ Fя́
       %^o:о %^O:о́ ! verbal prefix fleeting vowels
       %^G:0  ! Facilitates GenPl ов/ев when it "should" be zero or ей (its presence blocks the transformation rule)
@@ -18,7 +18,10 @@ Alphabet
       %^A:0 ! о in prefix по for comparatives
       %^Y:ы́ ! ы́ in verbal prefix вы́- (Triggers rules for forming the imperative with %^U and %^S)
       
-      %[%>%]:%> %[%<%]:%< ! angle brackets (this is to avoid the internal use of < and >)
+      »7     ! »
+      «7     ! «
+      %[%>%]
+      %[%<%] ! angle brackets (this is to avoid the internal use of < and >)
       
       %%
       %  ! space

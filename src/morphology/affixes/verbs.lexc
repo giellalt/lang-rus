@@ -3577,8 +3577,8 @@ LEXICON св_11b/c
 
 LEXICON св_11b/c_развить
 св_11b/c? ;
-+V+Perf+TV+PstPss:и́т LF_stem ;
-+V+Perf+TV+PstPss:ит LF_stem ;
++V+Perf+TV+PstPss:и́т LF_stem "weight: 20" ;
++V+Perf+TV+PstPss:ит LF_stem "weight: 20" ;
 +V+Perf+TV+PstPss:и́т SF_c ;
 +V+Perf+TV+PstPss:ит SF_c ;
 
@@ -6647,97 +6647,97 @@ LEXICON PastVrbAdv_9_end_R   ! Code 9 only occurs with perfective verbs
 +PstAct+Adv:%<я́сь # ;
 
 LEXICON PresAct
-+PrsAct:%<щ LF_stem ;
++PrsAct:%<щ LF_stem "weight: 20" ;
 
 LEXICON PresAct_Prb
-+PrsAct:%<щ LF_stem_Prb ;
++PrsAct:%<щ LF_stem_Prb "weight: 20" ;
 
 LEXICON PresAct_Fac
-+PrsAct:%<щ LF_stem_Fac ;
++PrsAct:%<щ LF_stem_Fac "weight: 20" ;
 
 LEXICON PresAct_Sub
-+PrsAct:%<щ LF_stem_Sub ;
++PrsAct:%<щ LF_stem_Sub "weight: 20" ;
 
 LEXICON PresAct_R
-+PrsAct:%<щ LF_stem_R ;
++PrsAct:%<щ LF_stem_R "weight: 20" ;
 
 LEXICON PresAct_R_Prb
-+PrsAct:%<щ LF_stem_R_Prb ;
++PrsAct:%<щ LF_stem_R_Prb "weight: 20" ;
 
 LEXICON PresAct_R_Fac
-+PrsAct:%<щ LF_stem_R_Fac ;
++PrsAct:%<щ LF_stem_R_Fac "weight: 20" ;
 
 LEXICON PresAct_R_Sub
-+PrsAct:%<щ LF_stem_R_Sub ;
++PrsAct:%<щ LF_stem_R_Sub "weight: 20" ;
 
 LEXICON PresAct_Pass
-+PrsAct+Pass:%<щ LF_stem_R ;
++PrsAct+Pass:%<щ LF_stem_R "weight: 20" ;
 
 LEXICON PresAct_Pass_Prb
-+PrsAct+Pass:%<щ LF_stem_R_Prb ;
++PrsAct+Pass:%<щ LF_stem_R_Prb "weight: 20" ;
 
 LEXICON PresAct_Pass_Fac
-+PrsAct+Pass:%<щ LF_stem_R_Fac ;
++PrsAct+Pass:%<щ LF_stem_R_Fac "weight: 20" ;
 
 LEXICON PresPass
-+PrsPss:м LF_stem ;
-+PrsPss:м SF_a ;
++PrsPss:м LF_stem "weight: 20" "weight: 20" ;
++PrsPss:м SF_a "weight: 20" ;
 
 LEXICON PresPass_Prb
-+PrsPss:м LF_stem_Prb ;
-+PrsPss:м SF_a_Prb ;
++PrsPss:м LF_stem_Prb "weight: 20" ;
++PrsPss:м SF_a_Prb "weight: 20" ;
 
 LEXICON PresPass_Ant
-+PrsPss:м LF_stem_Ant ;
-+PrsPss:м SF_a_Ant ;
++PrsPss:м LF_stem_Ant "weight: 20" ;
++PrsPss:м SF_a_Ant "weight: 20" ;
 
 LEXICON PastAct
-+PstAct:%<вш LF_stem ;
++PstAct:%<вш LF_stem "weight: 20" ;
 
 LEXICON PastAct_R
-+PstAct:%<вш LF_stem_R ;
++PstAct:%<вш LF_stem_R "weight: 20" ;
 
 LEXICON PastAct_R_Fac
-+PstAct:%<вш LF_stem_R_Fac ;
++PstAct:%<вш LF_stem_R_Fac "weight: 20" ;
 
 LEXICON PastAct_Pass
-+PstAct+Pass:%<вш LF_stem_R ;
++PstAct+Pass:%<вш LF_stem_R "weight: 20" ;
 
 LEXICON PastAct_Fac
-+PstAct:%<вш LF_stem_Fac ;
++PstAct:%<вш LF_stem_Fac "weight: 20" ;
 
 LEXICON PastPass_stem
-+PstPss:т LF_stem ;
-+PstPss:т SF_a ;
++PstPss:т LF_stem "weight: 20" ;
++PstPss:т SF_a "weight: 20" ;
 
 LEXICON PastPass_stem_Prb
-+PstPss:т LF_stem_Prb ;
-+PstPss:т SF_a_Prb ;
++PstPss:т LF_stem_Prb "weight: 20" ;
++PstPss:т SF_a_Prb "weight: 20" ;
 
 LEXICON PastPass_stem_Fac
-+PstPss:т LF_stem_Fac ;
-+PstPss:т SF_a_Fac ;
++PstPss:т LF_stem_Fac "weight: 20" ;
++PstPss:т SF_a_Fac "weight: 20" ;
 
 LEXICON PastPass_нн_stem
-+PstPss:нн LF_stem ;
-+PstPss:н SF_a ;
++PstPss:нн LF_stem "weight: 20" ;
++PstPss:н SF_a "weight: 20" ;
 
 LEXICON PastPass_нн_stem_Fac
-+PstPss:нн LF_stem_Fac ;
-+PstPss:н SF_a_Fac ;
++PstPss:нн LF_stem_Fac "weight: 20" ;
++PstPss:н SF_a_Fac "weight: 20" ;
 
 LEXICON PastPass_нн_stem_Prb
-+PstPss:нн LF_stem_Prb ;
-+PstPss:н SF_a_Prb ;
++PstPss:нн LF_stem_Prb "weight: 20" ;
++PstPss:н SF_a_Prb "weight: 20" ;
 
 LEXICON PastPass_нн_end
-+PstPss:нн LF_stem ;
-+PstPss:н SF_b ;
++PstPss:нн LF_stem "weight: 20" ;
++PstPss:н SF_b "weight: 20" ;
 
 LEXICON PastPass_нн_end_Prb
-+PstPss:нн LF_stem_Prb ;
-+PstPss:н SF_b_Prb ;
++PstPss:нн LF_stem_Prb "weight: 20" ;
++PstPss:н SF_b_Prb "weight: 20" ;
 
 LEXICON PastPass_нн_end_Fac
-+PstPss:нн LF_stem_Fac ;
-+PstPss:н SF_b_Fac ;
++PstPss:нн LF_stem_Fac "weight: 20" ;
++PstPss:н SF_b_Fac "weight: 20" ;

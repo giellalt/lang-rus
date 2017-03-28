@@ -6680,7 +6680,7 @@ LEXICON PresAct_Pass_Fac
 +PrsAct+Pass:%<щ LF_stem_R_Fac "weight: 20" ;
 
 LEXICON PresPass
-+PrsPss:м LF_stem "weight: 20" "weight: 20" ;
++PrsPss:м LF_stem "weight: 20" ;
 +PrsPss:м SF_a "weight: 20" ;
 
 LEXICON PresPass_Prb

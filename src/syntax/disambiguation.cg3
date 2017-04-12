@@ -5,7 +5,7 @@
 DELIMITERS = "<.>" "<..>" "<...>" "<!>" "<?>" "<¶>" ; 
 SOFT-DELIMITERS = "<,>" ;
 SUBREADINGS = LTR ; 
-OPTIONS += no-inline-sets no-inline-templates ;
+#OPTIONS += no-inline-sets no-inline-templates ;
 
 LIST BOS = (>>>) ; 
 LIST EOS = (<<<) ; 
@@ -262,6 +262,7 @@ LIST Ili = "или" ;
 LIST Že = "же" ; 
 LIST To = "то" ; 
 LIST Eto = "это" ;
+LIST Oneletterp = "с" "в" "к";
 
 LIST PrefixNado = "<[бвгджзйклмнпрстуфхцчшщъь][бвгджзйклмнпрстуфхцчшщъь].*>"r ; 
 
@@ -369,6 +370,10 @@ SET CLB = Rel | CS ;
 
 SECTION 
 
+SELECT:SV Pr IF (0 Oneletterp);
+
+SELECT:CC CC IF (0 I);
+
 ## Non-sentences 
 
 SELECT Nom IF (-1 BOS) (0C N) (1 EOS) ; 
@@ -387,6 +392,8 @@ REMOVE Det IF (1 EOS) ;
 SELECT Adv IF (0 I) (-1 No) ; 
 
 SELECT A + $$NGDAIP IF (-1C Samyj + $$NGDAIP) ;
+
+SELECT $$NGDAIP IF (-1C A + $$NGDAIP)(0 N);
 
 ## Safe operations around punctuation
 
@@ -422,6 +429,9 @@ SELECT Gen IF (-1 Num/Neskolko) (1C* N + Gen BARRIER (*) - Gen) (0 A + Gen) ;
 REMOVE Adv/Neskolko IF (-1C Pr) (1 Gen) ; 
 
 REMOVE Nom IF (-1C Pr) ;
+
+#моей as prn, if "из моей школы"
+REMOVE A IF (-1C Pr)(0 Pron OR A) ;
 
 REMOVE NGDAIP - Gen IF (-1C* Pr/Dlja OR Pr/U OR Pr/Do OR Pr/Ot OR Pr/Iz OR Pr/Iz-za OR Pr/Krome OR Pr/Protiv OR Pr/Posle OR Pr/Bez OR Pr/Sredi OR Pr/Okolo OR Pr/Pomimo CBARRIER (*) - Adv - Comp - DetIndecl) ;
 
@@ -493,7 +503,8 @@ REMOVE Det IF (0 Det OR Pron) (1C Ne) ;
 
 REMOVE Det IF (0 Det OR Pron) (1 Cm LINK 1 CC OR CS) ; 
 
-REMOVE Det IF (0 Det OR Pron) (1C* Fin BARRIER (*) - Adv) ; 
+#REMOVE Det IF (0 Det OR Pron) (1C* Fin BARRIER (*) - Adv) ; 
+REMOVE Det IF (0 Det OR Pron) (1C* V BARRIER (*) - Adv) ; 
 
 ## Safe options with proper names 
 
@@ -662,6 +673,8 @@ REMOVE Imper IF (1C Fin) ;
 SELECT Prp IF (0C N) (-1* Pr/Na OR Pr/V CBARRIER (*) - Prp) (-1C Prp) (-1C Modif) ; 
 
 SELECT A + $$MFN IF (0C A + $$NGDAIP) (1C N + $$MFN + $$NGDAIP) ;
+
+SELECT A + $$NGDAIP IF (0C A + $$MFN ) (1 N + $$MFN + $$NGDAIP) ;
 
 REMOVE CC IF (0 Takže OR Tože) (-1 CC) ;
 
@@ -1090,6 +1103,15 @@ REMOVE SUB:1 Sent IF (1 Sent) ;
 REMOVE SUB:1 Sent IF (NOT 1 Majusc OR Title) ; 
 
 REMOVE SUB:1 Sent IF (1 Cog) ; 
+
+
+
+###############################################################################
+# Weighting rules
+###############################################################################
+
+SELECT:minweight (<W=MIN>) ;
+
 
 
 ###############################################################################

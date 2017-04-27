@@ -1110,7 +1110,7 @@ REMOVE SUB:1 Sent IF (1 Cog) ;
 # Weighting rules
 ###############################################################################
 
-SELECT:minweight (<W=MIN>) ;
+SELECT:maxweight (<W=MAX>) ;
 
 
 

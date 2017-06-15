@@ -370,9 +370,9 @@ SET CLB = Rel | CS ;
 
 SECTION 
 
-SELECT:SV Pr IF (0 Oneletterp);
+SELECT Pr IF (0 Oneletterp);
 
-SELECT:CC CC IF (0 I);
+SELECT CC IF (0 I);
 
 ## Non-sentences 
 

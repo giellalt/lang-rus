@@ -1,0 +1,5 @@
+# This file makes cyrillic Ё and ё optionally into unaccented Е and е, to ease
+# generation from dictionary lemmas.
+
+Е (<-) Ё,
+е (<-) ё;

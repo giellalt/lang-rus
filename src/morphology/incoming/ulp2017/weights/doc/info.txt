@@ -1,0 +1,76 @@
+IMPLEMENTATION OF WEIGHTS (140817)
+
+STEP1
+Retrieve duplicates from the frequency list rnc-modern-lpos.num
+
+The duplicates summed up and removed manually.
+Prepositions
+$ cat rnc-modern-lpos.num | grep -E "Sc" | tr '[:upper:]' '[:lower:]' | awk '{print $(NF-1)}'| sort | uniq -c | grep -v '^ *1
+   6 в
+   3 к
+   3 о
+   6 с
+   3 у
+   3 во
+   2 до
+   4 за
+   2 из
+   2 ко
+   4 на
+   3 об
+   2 от
+   4 по
+   3 со
+   2 из-за
+   2 без
+   2 для
+   2 над
+   2 обо
+   3 под
+   2 при
+   2 про
+   2 надо
+   2 ради
+   2 кроме
+   3 между
+   2 перед
+   2 среди
+   2 через
+   2 вместо
+   2 помимо
+   2 против
+   2 сквозь
+   2 спустя
+
+Conjunctions
+$cat rnc-modern-lpos.num | grep -E "C" | tr '[:upper:]' '[:lower:]' | awk '{print $(NF-1)}'| sort | uniq -c | grep -v '^ *1 '
+   2 а
+   2 и
+
+Interjections
+$ cat rnc-modern-lpos.num | grep -E "I" | tr '[:upper:]' '[:lower:]' | awk '{print $(NF-1)}'| sort | uniq -c | grep -v '^ *1 '
+  2 о
+
+Abbreviations (Ncmsvn), determiners, particles (Q): no duplicate detected
+
+Duplicates for propernouns, pronouns, numerals, prepositions were retrieved and stored into files
+duplicates_(propernouns|numerals_mc|numerals_mo|pronouns).txt. The lists were then used in sum_dup.sh to unify duplicate lemmas and sum their frequencies. The unified lemmas and summed up frequencies were then inserted manually into rnc-modern-lpos.num.sorted after duplicates were removed from the list.
+
+STEP2
+Logarithmically transform frequencies into weights using weight-convert.py script
+output files:
+../dataset/lemma.al.conv.weight.csv
+../dataset/rnc-modern-lpos.num.sorted.weight.csv
+
+STEP3
+Split the file ../dataset/rnc-modern-lpos.num.sorted.weight.csv into subfiles:
+rnc-modern-lpos.num.sorted.weight.abbreviation.csv
+rnc-modern-lpos.num.sorted.weight.conjunction.csv
+rnc-modern-lpos.num.sorted.weight.determin_particle.csv
+rnc-modern-lpos.num.sorted.weight.interjection.csv
+rnc-modern-lpos.num.sorted.weight.numeral.csv
+rnc-modern-lpos.num.sorted.weight.preposition.csv
+rnc-modern-lpos.num.sorted.weight.propernoun.csv
+
+STEP4
+Use the script assign_weight-140817.py to assign weights from rnc-modern-lpos.num.sorted.weight.(preposition|interjection|etc.).csv and lemma.al.conv.weight.csv to .lexc files

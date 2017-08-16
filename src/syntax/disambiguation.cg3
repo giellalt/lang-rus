@@ -463,7 +463,7 @@ SELECT A + $$NGDAIP IF (0C A) (-1C A + $$NGDAIP LINK -1C* Pr BARRIER (*) - A - A
 REMOVE Pers IF (0C Pers OR Det) (NOT 0 Pprep) (-1C Pr) ;
   # Так что для меня вся моя университетская наука как бы для того только и существовала под конец, чтобы ...
 
-REMOVE Loc IF (NOT -1* Pr/V OR Pr/Na) ;
+REMOVE Loc IF (NOT -1* Prep/Prp) ;
 
 SELECT Pr IF (0 Prep/Prp) (1C* Prp BARRIER (*) - Prp - DetIndecl) ; 
 

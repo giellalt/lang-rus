@@ -90,7 +90,7 @@ LIST Dem = Dem dem  ;
 LIST Interr = Interr itg  ; 
 LIST Rel = Rel rel  ; 
 
-LIST DetIndecl = DetIndecl ("её" det pos) ("его" det pos") ("их" det pos)  ;
+LIST DetIndecl = DetIndecl ("её" det pos) ("его" det pos) ("их" det pos)  ;
 
 LIST Nom = Nom nom  ; 
 LIST Gen = Gen gen  ; 

@@ -1,0 +1,7 @@
+!! Drop SCEnd, VEnd, JEnd, and jEnd
+!! ============================================================================
+"[а а́ о́] > [я я́ ё] 1st conj verbs like читать, болеть, воевать, etc."
+Vx:Vy <=> 1ConjV _ ; ! This does not seem to match anything TODO
+where Vx in ( а а́ о́ )
+      Vy in ( я я́ ё )
+    matched;

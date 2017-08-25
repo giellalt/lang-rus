@@ -1,0 +1,7 @@
+!! ============================================================================
+"в>0: (1) GenPl zero and (2) Masc past tense endings or past deverbals, after consonant stems"
+в:0 <=> [ VELEndV | цEndV | HCEndV | VEndV | JEndV | jEndV ] [ о: | о́: ] _ .#. ;
+        HUSHEndV о: _ .#. ;
+        SCEndV о: _ .#. ;
+        :C %<: _ ( ш и ( с :ь ) ) .#. ; ! Past verbal adverb (handled by lexc)
+        :C %<: _ ш %>: ; ! Past active ppl (see Zaliznjak intro pg 85) л>вший, no л +ший EXCEPTION: 7-сти (-д-) or (-т-) > дший/тший uses %^d/%^t

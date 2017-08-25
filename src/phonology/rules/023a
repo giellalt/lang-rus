@@ -1,0 +1,6 @@
+!! o>0 instead of о>ь
+!! ============================================================================
+"о>0: GenPl zero after soft C"
+о:0 <=> SCEndVNoN _ в:0 .#. ; ! However, Fem 2*a in ~ня go to 0, not ь (characterized by F V н я)
+        \[%^F:0] V: н: я:0 %>: _ в:0 .#. ; ! However, Fem 2*a in н, e.g. башня~башен
+        C: н: [ е́:0 | е:0 | ё:0 | я́:0 ] %>: _ в:0 .#. ;

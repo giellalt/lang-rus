@@ -1,0 +1,6 @@
+!! ============================================================================
+"[ з с д T D ] > [ ж ш ж щ ж ] Verb stem mutations with ^M symbol (г к х covered in another rule)"
+Cx:Cy <=> _ %^M: ;
+where Cx in ( д з с %^T %^D )
+      Cy in ( ж ж ш щ   ж )
+      matched ;

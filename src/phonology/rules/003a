@@ -1,0 +1,11 @@
+!! ============================================================================
+"е>0: 1) Delete lexical vowel endings; 2) Delete fleeting vowels where ending begins with a vowel; 3) Delete е after comparative adjective stem mutation."
+е:0 <=> .#. ( %^P: %^A: ) [ Letter: | %^F:0 ]+ _ %>: ;
+            ! see examples in parallel rule of "V>0" above
+         %^F:0 _ [ Letter ]+ (End) %>: ;
+            ! see examples in parallel rule of "V>0" above
+         [ г: | к: | х: ] %>: [ е | е́: ] _ ( %^P: ).#. ; ! After comparative adjective mutation
+!!€ ли́х>е́е
+!!€ ли́ш>е0
+         %^F:0 _ ( :C ) %<: :л :V ( :с :ь ) .#. ;
+         %^F:0 _ ( :C ) %<: :V ;

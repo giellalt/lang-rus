@@ -1,0 +1,25 @@
+!! ============================================================================
+"V>0: Delete lexical vowel endings (o/о́ and е are covered in other rules), and delete most fleeting vowels with syllabic endings"
+Vx:0 <=> .#. ( %^P: %^A: ) [ Letter: | %^F:0 | %>: ]+ _ %>: ;
+!!€ Тама́ра>а
+!!€ Тама́р0>а
+!!€ мо́ре>о
+!!€ мо́р0>е
+!!€ Петр>овна>а
+!!€ Петр>овн0>а
+         %^F:0 _ [ Letter ]+ (End) %>: :V ; ! This does not delete люб(о)вью, since the ь is 1st
+!!€ о́к^Fоно>о́
+!!€ ок00н0>о́
+!!€ зе́м^Fе́ля́>е́
+!!€ зем00л0>е́
+         %^F:0 _ й: %<: :V ;
+!!€ б^Fе́й<у́
+!!€ б00ь<ю́
+!!€ б^Fе́й<^Sте
+!!€ б0е́й<0те
+         %^F:0 _ ( :C ) %<: :л :V ( :с :ь ) .#. ;
+!!€ ж^Fёг<ла́
+!!€ ж00г<ла́
+         %^F:0 _ ( :C ) %<: :V ;
+! TODO examples to test for this rule
+where Vx in ( а е́ ё и я а́ и́ я́ ) ;

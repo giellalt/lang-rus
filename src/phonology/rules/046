@@ -1,0 +1,8 @@
+!! ============================================================================
+"U>и in Imperatives with double-consonant stems, щ stems, and single-consonant stems with prefix вы́-"
+%^U:и <=>                                      :C (:ь) [ :C - :й ] (%^M:0) %<: _ ( т е ) ( с [ я: | ь ] ) .#. ;
+                                                                :щ (%^M:0) %<: _ ( т е ) ( с [ я: | ь ] ) .#. ; !TODO native S this true?
+          .#. VyPrefix [ Letter | %^F:0 ]* :V [ :C - [ :г | :й ] ] (%^M:0) %<: _ ( т е ) ( с [ я: | ь ] ) .#. ; ! TODO fix ~вы́сить, etc. perhaps by explicitly marking the prefix вы́- with an archiphoneme %^Y? This could also be used in stress rules and remove -a continuation classes that are only for вы́-prefixed verbs.
+          .#. VyPrefix [ Letter | %^F:0 ]* [ :V - [ :я́ | :я ] ] :г (%^M:0) %<: _ ( т е ) ( с [ я: | ь ] ) .#. ;
+                ! по́мн<U   мо́рщ<U  вы́бег<U
+                ! по́мн_и   мо́рщ_и  бы́бег_и

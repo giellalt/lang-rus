@@ -1,0 +1,7 @@
+!! ============================================================================
+"[а а́ о́] > [я я́ ё] after soft-consonant stems (including й: муравей, семья, бельё, etc) and vowel stems (музей, критерий, понятие, Мария, etc) including 1st conj verbs like читать, болеть, воевать, etc."
+Vx:Vy <=> [ SCEnd | VEnd | JEnd | jEnd ] _ [ ?* - [ [ %>: | в:й | в:0 ] ?* ] ] .#. ;
+          1ConjV _ ; ! This does not seem to match anything TODO
+where Vx in ( а а́ о́ )
+      Vy in ( я я́ ё )
+    matched;

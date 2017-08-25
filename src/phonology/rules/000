@@ -1,0 +1,152 @@
+!! ============================================================================
+Alphabet
+      %>     ! End of nominal stem
+      %<     ! End of verbal stem
+      %^F:0  ! placed immediately before fleeting vowels Fа Fе Fо Fи Fя Fа́ Fе́ Fё Fо́ Fи́ Fя́
+      %^o:о %^O:о́ ! verbal prefix fleeting vowels
+      %^G:0  ! Facilitates GenPl ов/ев when it "should" be zero or ей (its presence blocks the transformation rule)
+      %^Z:0  ! "Zero ending" resolves to 0/ь/й (used for short-form adj's)
+      %^M:0  ! Verb stem mutation
+      %^D:д  ! Archiphoneme for realizing the д~жд verbal alternation (as opposed to д~ж)
+      %^T:т  ! Archiphoneme for realizing the т~щ verbal alternation (as opposed to т~ч)
+      %^d:д  ! Archiphoneme for verb stems with -дший past active participles (-сти 7 (-д-) )
+      %^t:т  ! Archiphoneme for verb stems with -тший past active participles (-сти 7 (-т-) )
+      %^R:р  ! Archiphoneme for бороть and пороть
+      %^U:ь %^U:й %^U:и   ! Imperative ending (unstressed)
+      %^S:й %^S:и́ %^S:0   ! Imperative ending (stressed)
+      %^P:0 ! п in prefix по for comparatives
+      %^A:0 ! о in prefix по for comparatives
+      %^Y:ы́ ! ы́ in verbal prefix вы́- (Triggers rules for forming the imperative with %^U and %^S)
+
+      »7     ! »
+      «7     ! «
+      %[%>%]
+      %[%<%] ! angle brackets (this is to avoid the internal use of < and >)
+
+      %%
+      %  ! space
+      %-
+
+      ¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ⁰ ! Used to enumerate homonymous lemmas
+
+      № 1 2 3 4 5 6 7 8 9 %0 ! numerals in compounds like 10-летие
+
+      P S ! as in, PS
+
+      А Б В Г Д Е Ё Ж З И Й К Л М Н О П Р С Т У Ф Х Ц Ч Ш Щ Ъ Ы Ь Э Ю Я
+      А́         Е́ Ё́     И́           О́         У́               Ы́   Э́ Ю́ Я́
+      А̀         Ѐ Ё̀     Ѝ           О̀         У̀               Ы̀   Э̀ Ю̀ Я̀
+      а б в г д е ё ж з и й к л м н о п р с т у ф х ц ч ш щ ъ ы ь э ю я
+      а́         е́ ё́     и́           о́         у́               ы́   э́ ю́ я́   ! ё́ is not currently used, since = ё
+      а̀         ѐ ё̀     ѝ           о̀         у̀               ы̀   э̀ ю̀ я̀ ;
+
+Sets
+
+Letter = А Б В Г Д Е Ё Ж З И Й К Л М Н О П Р С Т У Ф Х Ц Ч Ш Щ Ъ Ы Ь Э Ю Я
+         А́         Е́ Ё́     И́           О́         У́               Ы́   Э́ Ю́ Я́
+         А̀         Ѐ Ё̀     Ѝ           О̀         У̀               Ы̀   Э̀ Ю̀ Я̀
+         а б в г д е ё ж з и й к л м н о п р с т у ф х ц ч ш щ ъ ы ь э ю я
+         а́         е́ ё́     и́           о́         у́               ы́   э́ ю́ я́
+         а̀         ѐ ё̀     ѝ           о̀         у̀               ы̀   э̀ ю̀ я̀
+         %- %  № 1 2 3 4 5 6 7 8 9 %0 ;
+! Consonants
+C = Б В Г Д Ж З Й К Л М Н П Р С Т Ф Х Ц Ч Ш Щ
+    б в г д ж з й к л м н п р с т ф х ц ч ш щ ;
+! Consonants, excluding { Д д Т т }
+CNoDT = Б В Г Ж З Й К Л М Н П Р С Ф Х Ц Ч Ш Щ
+        б в г ж з й к л м н п р с ф х ц ч ш щ ;
+! Unvoiced consonants
+UnvoicedC = К П С Т Ф Х Ц Ч Ш Щ
+            к п с т ф х ц ч ш щ ;
+! Hushers
+HUSH = Ж Ш Щ Ч
+       ж ш щ ч ;
+! Velars
+VEL = Г К Х
+      г к х ;
+! Paired consonants (consonants that have both a hard and soft variant, excluding Velars)
+PC = Б В Д З Л М Н П Р С Т Ф
+     б в д з л м н п р с т ф ;
+! Paired consonants, excluding { Н н }
+PCNoN = Б В Д З Л М П Р С Т Ф
+        б в д з л м п р с т ф ;
+! Vowels
+V = А Е Ё И О У Ы Э Ю Я
+    А́ Е́ Ё́ И́ О́ У́ Ы́ Э́ Ю́ Я́
+    А̀ Ѐ Ё̀ Ѝ О̀ У̀ Ы̀ Э̀ Ю̀ Я̀
+    а е ё и о у ы э ю я
+    а́ е́ ё́ и́ о́ у́ ы́ э́ ю́ я́
+    а̀ ѐ ё̀ ѝ о̀ у̀ ы̀ э̀ ю̀ я̀ ;
+! Stressed vowels
+StressedV = А́ Е́ Ё́ Ё И́ О́ У́ Ы́ Э́ Ю́ Я́
+            а́ е́ ё́ ё и́ о́ у́ ы́ э́ ю́ я́ ;
+! Unstressed vowels
+UnstressedV = А Е И О У Ы Э Ю Я
+              а е и о у ы э ю я ;
+
+Definitions
+
+End = [ а́:0 | о́:0 | а:0 | о:0 | я́:0 | ё:0 | е́:0 | я:0 | е:0 | ь:0 | й:0 ] ;
+VELEndV = :VEL [ а́:0 | о́:0 | а:0 | о:0 ] %>: ;     ! тоска́, молоко́, кни́га, я́блоко
+VELEndC = :VEL %>: ;                               ! уче́бник
+VELEnd = [ VELEndV | VELEndC ] ;
+HUSHEndV = :HUSH [ а́:0 | о́:0 | а:0 | е:0 ] %>: ;   ! моча́, плечо́, пи́ща, чудо́вище
+HUSHEndC = :HUSH ( ь:0 ) %>: ;                     ! мяч, вещь
+HUSHEnd = [ HUSHEndV | HUSHEndC ] ;
+цEndV = :ц [ а́:0 | о́:0 | а:0 | е:0 ] %>: ;         ! рысца́, мясцо́, учи́тельница, се́рдце
+цEndC = :ц %>: ;                                   ! молоде́ц
+цEnd = [ цEndV | цEndC ] ;
+SCEndV = :PC [ е́:0 | е:0 | ё:0 | я́:0 | я:0 ] %>: ; ! мо́ре, земля́, неде́ля
+SCEndVNoN = :PCNoN [ е́:0 | е:0 | ё:0 | я́:0 | я:0 ] %>: ;
+! SCEndVNoNcleanup = \%^F:0 ? :н [ е́:0 | е:0 | ё:0 | я́:0 | я:0 ] %>: ;
+! SCEndVNoN = [ SCEndVNoNmostly | SCEndVNoNcleanup ] ;
+FVn0 = %^F:0 V: :н [ ь:0 | я:0 ] %>: ; ! GenPl of e.g. башня and MscShortForm of e.g. столетний
+SCEndC = :PC ь:0 %>: ;                                 ! конь
+SCEnd = [ SCEndV | SCEndC ] ;
+HCEndV = :PC [ а́:0 | о́:0 | а:0 | о:0 ] %>: ;           ! красота́, окно́, ве́ра, сло́во
+HCEndC = :PC %>: ;                                     ! пол
+HCEnd = [ HCEndV | HCEndC ] ;
+VEndV = V: [ я́:0 | ё:0 | е́:0 | я:0 | е:0 ] %>: ;       ! судия́, остриё, житие́, Мари́я, поня́тие
+VEndC = \%^F:0 V: й:0 %>: ;                            ! музе́й
+VEnd = [ VEndV | VEndC ] ;
+JEndV = C: %^F:0 V: й: [ я́:0 | ё:0 | я:0 | е:0 ] %>: ; ! семья́, бельё, колдунья, счастье
+JEndC = C: %^F:0 V: й: %>: ;                           ! мураве́й
+JEnd = [ JEndV | JEndC ] ;
+jEndV = \%^F:0 V: (%^F:0 V:) й:й [ я́:0 | ё:0 | я:0 | е:0 ] %>: ; ! вайя
+jEndC = \%^F:0 V: (%^F:0 V:) й:й й:0 %>: ;                       ! Гавайи (lexical form = Гавайй)
+jEnd = [ jEndV | jEndC ] ;
+1ConjV = V %<: ;                      ! читать, умолять, белеть, воевать, etc.?
+1ConjJ = (%^F:0 V:) :ь %<: ;          ! бить, бей, бью
+VerbHUSH = :HUSH (%^M:0) %<: ;        ! слышу (ю)
+VyPrefix = ( [ п о | п е р е | с а м о ] ) в %^Y:ы́  ;
+
+Rules
+!! 01_base_rules.twolc
+!! 02_stem_palatalization.twolc
+!! 03_spellingrule-husher.twolc
+!! 04_spellingrule-velar.twolc
+!! 05_spellingrule-c.twolc
+!! 06_fleeting-vowel-deletion.twolc
+!! 07_fleeting-vowel-insertion.twolc
+!! 08_nouns_ie-ii.twolc
+!! 09_stress.twolc
+!! Genitive plural of nouns
+!! Comparative adjectives
+!! Masculine short-form adjectives
+!! Stem alternations
+!! Vowels in nonpast endings
+!! Imperatives
+!! Verbal prefix fleeting vowels and voicing assimilation
+
+! If one wants to test specific two-level rules one can add test pairs to the
+! twolc files. Support for this type of testing has only recently been added, and
+! works only for the Xerox tools (because the pair-testing facilities in Hfst use
+! a different format, and converting from one to the other is non-trivial without
+! knowledge of the alphabet).
+
+! The test data looks like the following: (€ for positive, $ for negative)
+
+!!€ рабо́та>у
+!!€ рабо́т0>у
+!!$ рабо́та>у
+!!$ рабо́та>0

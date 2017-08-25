@@ -1,0 +1,9 @@
+!! ============================================================================
+"у>ю (1) after soft-consonant stems (including й: муравей, семья, бельё, etc) and vowel stems (музей, критерий, понятие, Мария, etc) including 1st conj verbs like читать, болеть, воевать, etc. (2) in 1st conjugation after л or ь"
+Vx:Vy <=> [ SCEnd | VEnd | JEnd | jEnd ] _ [ ?* - [ [ в:й | в:0 ] ?* ] ] .#. ;
+          [ 1ConjV | 1ConjJ ] _ ;
+          :л %<: _ ;
+          %^R:р %<: _ ; ! Verbs in ~роть
+where Vx in ( у у́ )
+      Vy in ( ю ю́ )
+    matched;

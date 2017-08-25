@@ -1,0 +1,26 @@
+!! Do not delete any nominal fleeting vowels
+!! ============================================================================
+"[оо́]>0 in lexical endings, fleeting vowels (including verbal prefixes), and zero GenPl"
+[ о:0 | о́:0 ] <=> .#. ( %^P: %^A: ) [ Letter: | %^F:0 ]+ _  %>: ; ! lexical ending
+                    ! see examples in parallel rule of "V>0" above
+!!€ люб^Fо́вь>ы́
+!!€ люб00в0>и́
+!!€ люб^Fо́вь>ью
+!!€ люб0о́в0>ью
+                  [ VELEndV | HUSHEndV | цEndV | HCEndV | FVn0 | JEndV | jEndV ] _ в:0 .#. ; ! zero GenPl
+!!€ кни́га>ов
+!!€ кни́г0>00
+!!€ чудо́вище>ов
+!!€ чудо́вищ0>00
+!!€ пти́ца>ов
+!!€ пти́ц0>00
+!!€ пи́ла́>о́в
+!!€ пи́л0>00
+!!€ ба́ш^Fеня>ов
+!!€ ба́ш0ен0>00
+!!€ се́м^Fе́йя́>ов
+!!€ сем0е́й0>00
+!!€ ва́йя>ов
+!!€ ва́й0>00
+                  %^F:0 _ ( :C ) %<: :л :V ( :с :ь ) .#. ;
+                  %^F:0 _ ( :C ) %<: :V ;

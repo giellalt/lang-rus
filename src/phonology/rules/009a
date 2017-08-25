@@ -1,0 +1,12 @@
+!! Since fleeting vowels are always deleted, remove FV sub-rule (probably unnecessary, since rule simply won't match anything)
+!! ============================================================================
+"й>0 in lexical endings, and before fleeting vowels, and in comparative adjectives with velar mutation"
+й:0 <=> .#. ( %^P: %^A: ) Letter+ V _  %>: ; ! in lexical ending
+!!€ музе́й>а
+!!€ музе́0>я
+        .#. ( %^P: %^A: ) Letter+ V й:й _  %>: ; ! in lexical ending
+!!€ Гава́йй>ы
+!!€ Гава́й0>и
+        [ г: | к: | х: ] %>: [ е | е́: ] _ ( %^P: ) .#. ; ! comparative adjectives with velar mutation
+!!€ ли́х>е́й
+!!€ ли́ш>е0

@@ -1,0 +1,10 @@
+!! ============================================================================
+"ю>у and я>а (stressed or unstressed) after a velar, husher, or ц"  ! This rule does not seem to ever apply for nominals
+Vx:Vy <=> [ VELEnd | HUSHEnd | цEnd | VerbHUSH ] _ [ ?* - [ %>: ?* ] ] .#. ;
+!!€ слы́ш<ю
+!!€ слы́ш<у
+!!€ и́ск^M<я́
+!!€ и0щ0<а́
+where Vx in ( ю ю́ я я́ )
+      Vy in ( у у́ а а́ )
+    matched;

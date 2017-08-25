@@ -1,0 +1,9 @@
+!! Remove SCEnd, VEnd, JEnd, and jEnd
+!! ============================================================================
+"у>ю (1) after 1st conj verbs like читать, болеть, воевать, etc. (2) in 1st conjugation after л or ь"
+Vx:Vy <=> [ 1ConjV | 1ConjJ ] _ ;
+          :л %<: _ ;
+          %^R:р %<: _ ; ! Verbs in ~роть
+where Vx in ( у у́ )
+      Vy in ( ю ю́ )
+    matched;

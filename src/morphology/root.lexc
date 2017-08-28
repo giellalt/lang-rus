@@ -128,7 +128,9 @@ Multichar_Symbols
 +Use/Obs !!= * @CODE@ = Obsolete
 +Use/Ant !!= * @CODE@ = Antiquated "устаревшее"
 +Err/Orth !!= * @CODE@ = Substandard
-+Err/Pal !!= * @CODE@ = L2 error: failure to place soft-indicating symbol after soft stem, e.g. земла (compare земля)
++Err/L2_Pal  !!= * @CODE@ = L2 error: failure to place soft-indicating symbol after soft stem, e.g. земла (compare земля)
++Err/L2_FV   !!= * @CODE@ = L2 error: presence of fleeting vowel where it should be deleted, e.g. отеца (compare отца)
++Err/L2_NoFV !!= * @CODE@ = L2 error: lack of fleeting vowel where it should be inserted, e.g. окн (compare окон)
 
 ! More use tags:
 ! ласкательное - +Use/Aff(ectionate)

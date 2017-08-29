@@ -128,6 +128,7 @@ This is free and open source Russian morphology.
  * +Use/Obs  = Obsolete
  * +Use/Ant  = Antiquated "устаревшее"
  * +Err/Orth  = Substandard
+ * +Err/Pal  = L2 error: failure to place soft-indicating symbol after soft stem, e.g. земла (compare земля)
 
 
 !!!Key lexicon

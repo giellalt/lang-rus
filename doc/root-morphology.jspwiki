@@ -117,7 +117,9 @@
  * +Use/Obs  = Obsolete
  * +Use/Ant  = Antiquated "устаревшее"
  * +Err/Orth  = Substandard
- * +Err/Pal  = L2 error: failure to place soft-indicating symbol after soft stem, e.g. земла (compare земля)
+ * +Err/L2_Pal   = L2 error: failure to place soft-indicating symbol after soft stem, e.g. земла (compare земля)
+ * +Err/L2_FV    = L2 error: presence of fleeting vowel where it should be deleted, e.g. отеца (compare отца)
+ * +Err/L2_NoFV  = L2 error: lack of fleeting vowel where it should be inserted, e.g. окн (compare окон)
 
 
 !!!Key lexicon

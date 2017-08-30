@@ -1,3 +1,4 @@
+!!  Delete fleeting vowel in all contexts (not just before :V)
 !! ============================================================================
 "е>0: 1) Delete lexical vowel endings; 2) Delete fleeting vowels where ending begins with a vowel; 3) Delete е after comparative adjective stem mutation."
 е:0 <=> .#. ( %^P: %^A: ) [ Letter: | %^F:0 ]+ _ %>: ;

@@ -128,9 +128,12 @@ Multichar_Symbols
 +Use/Obs !!= * @CODE@ = Obsolete
 +Use/Ant !!= * @CODE@ = Antiquated "устаревшее"
 +Err/Orth !!= * @CODE@ = Substandard
++Err/L2_ii   !!= * @CODE@ = L2 error: failure to change ие to ии, e.g. о Марие, о кафетерие, о знание
 +Err/L2_Pal  !!= * @CODE@ = L2 error: failure to place soft-indicating symbol after soft stem, e.g. земла (compare земля)
 +Err/L2_FV   !!= * @CODE@ = L2 error: presence of fleeting vowel where it should be deleted, e.g. отеца (compare отца)
 +Err/L2_NoFV !!= * @CODE@ = L2 error: lack of fleeting vowel where it should be inserted, e.g. окн (compare окон)
++Err/L2_SRo  !!= * @CODE@ = L2 error: failure to change о to е after hushers and ц, e.g. Сашой (compare Сашей)
++Err/L2_SRy  !!= * @CODE@ = L2 error: failure to change ы to и after hushers and velars, e.g. книгы (compare книги)
 
 ! More use tags:
 ! ласкательное - +Use/Aff(ectionate)

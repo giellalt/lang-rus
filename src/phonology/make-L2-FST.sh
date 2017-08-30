@@ -1,12 +1,15 @@
-L2_ERRS="FV NoFV Pal"
+L2_ERRS="ii FV NoFV Pal SRo SRy"
 
-echo "compiling the standard two-level phonology..."
+echo "##### rebuilding twolc source files from rules/ ..."
+bash make-twolc.sh
+
+echo "##### compiling the standard two-level phonology..."
 test -r rus-phon.hfst && /usr/local/bin/hfst-twolc -v \
                         --format=openfst-tropical \
                         -i rus-phon.twolc \
                         -o rus-phon.hfst
 
-echo "compiling the raw standard generator FST..."
+echo "##### compiling the raw standard generator FST..."
 /usr/local/bin/hfst-determinize -v  ../morphology/lexicon.hfst \
     | /usr/local/bin/hfst-minimize -v  \
     | /usr/local/bin/hfst-compose-intersect  \
@@ -17,17 +20,17 @@ echo "compiling the raw standard generator FST..."
 
 for tag in ${L2_ERRS}
 do
-    echo "compiling add-tag-err-L2_${tag} FST..."
+    echo "##### compiling add-tag-err-L2_${tag} FST..."
     /usr/local/bin/hfst-regexp2fst  --format=openfst-tropical \
         --xerox-composition=ON -v -S add-tag-err-L2_${tag}.regex \
         -o add-tag-err-L2_${tag}.hfst
 
-    echo "compiling the mal-rule two-level phonology..."
+    echo "##### compiling the ${tag} two-level phonology..."
     /usr/local/bin/hfst-twolc -v \
         --format=openfst-tropical -i rus-phon-err-L2_${tag}.twolc \
         -o rus-phon-err-L2_${tag}.hfst
 
-    echo "compiling the raw mal-rule generator FST..."
+    echo "##### compiling the raw ${tag} generator FST..."
     /usr/local/bin/hfst-determinize -v  ../morphology/lexicon.hfst \
         | /usr/local/bin/hfst-minimize -v  \
         | /usr/local/bin/hfst-compose-intersect  \
@@ -36,12 +39,12 @@ do
         | /usr/local/bin/hfst-minimize -v  \
         -o generator-raw-gt-desc-err-L2_${tag}.tmp1.hfst
 
-    echo "removing entries that overlap with the standard FST..."
+    echo "##### removing entries in ${tag} that overlap with the std FST..."
     /usr/local/bin/hfst-subtract generator-raw-gt-desc-err-L2_${tag}.tmp1.hfst \
         generator-raw-gt-desc.tmp1.hfst \
         > generator-raw-gt-desc-err-L2_${tag}.tmp2.hfst
 
-    echo "composing with some filters for the generator..."
+    echo "##### composing ${tag} with some filters for the generator..."
     /opt/local/libexec/gnubin/printf "read regex \
                 @\"../filters/reorder-subpos-tags.hfst\"   \
             .o. @\"../filters/reorder-semantic-tags.hfst\" \
@@ -77,7 +80,7 @@ do
          save stack analyser-gt-desc-err-L2_${tag}.tmp.hfst\n\
          quit\n" | /usr/local/bin/hfst-xfst -p -v --format=openfst-tropical
 
-    echo "making stress optional..."
+    echo "##### making stress optional for ${tag}..."
     /opt/local/libexec/gnubin/printf "read regex @\"analyser-gt-desc-err-L2_${tag}.tmp.hfst\" \
             .o. @\"../orthography/destressOptional.compose.hfst\" \
             ;\n \
@@ -86,13 +89,13 @@ do
             quit\n" | /usr/local/bin/hfst-xfst -p -v --format=openfst-tropical
 
 
-    echo "adding +Err to the ${tag} transducer..."
+    echo "##### adding +Err tags to the ${tag} transducer..."
     hfst-compose-intersect -v -1 analyser-gt-desc-err-L2_${tag}.tmp1.hfst \
                           -2 add-tag-err-L2_${tag}.hfst \
                           -o analyser-gt-desc-err-L2_${tag}.tmp2.hfst
 done
 
-echo "combining FSTs..."
+echo "##### combining FSTs..."
 cp ../analyser-gt-desc.hfst analyser-gt-desc.hfst
 for tag in ${L2_ERRS}
 do
@@ -103,5 +106,6 @@ do
 done
 hfst-minimize analyser-gt-desc.hfst > fst.tmp
 mv fst.tmp analyser-gt-desc.hfst
+hfst-fst2fst -w -i analyser-gt-desc.hfst -o analyser-gt-desc.hfstol
 
 rm *tmp*

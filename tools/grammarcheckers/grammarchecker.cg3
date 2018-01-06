@@ -14,7 +14,7 @@
 # giellatekno@hum.uit.no or divvun@hum.uit.no
 
 # ==================================================================== #
-#!! !!!       [ L A N G U A G E ]  G R A M M A R   C H E C K E R
+#!! !!!       R U S S I A N   G R A M M A R   C H E C K E R
 # ==================================================================== #
 # ====================================================================
 
@@ -24,7 +24,7 @@
 #   Development setup:   #
 # ---------------------- #
 #
-# cd $GTHOME/langs/??? # replace ??? with your language code
+# cd $GTHOME/langs/rus
 # ./autogen.sh
 # ./configure --enable-apertium --with-hfst --enable-syntax --enable-grammarchecker --enable-tokenisers --enable-alignment --enable-reversed-intersect
 # make
@@ -36,7 +36,7 @@
 # ---------------------- #
 #
 # emacs grammarchecker.cg3  # and C-c C-i / C-c C-c if you have cg-mode installed
-# echo "Sun ij puátá." | sh modes/???gram.mode  # from the terminal, replacing ??? with your language code
+# echo "Sun ij puátá." | sh modes/rusgram.mode  # from the terminal
 #
 # ---------------------- #
 #   Other debug-pipes:   #
@@ -80,517 +80,362 @@ SETS
 #!! in the syntactic analysis. The next section, __Sets__, contains sets defined
 #!! on the basis of the tags listed here, those set names are not visible in the output.
 
-
-
-# Tags declared as single-membered LISTs
-# ======================================
-
-#!! !Beginning and end of sentence
-LIST BOS = (>>>) (<s>) ;  #!! BOS
-LIST EOS = (<<<) (</s>) ; #!! EOS
-
-# We define end of clause and beginning of clause in a way so that the file
-# may be read both by the CG-2 and the vislcg formalisms.
-# CG3 doesn´t function without >>> and <<< !
-
-
-#!! !Parts of speech tags
-
-LIST N = N ;		    #!! N
-LIST A = A ;		    #!! A
-LIST Adv = Adv ;	    #!! Adv
-LIST V = V ;		    #!! V
-LIST Pron = Pron ;	    #!! Pron
-LIST CS = CS ;		    #!! CS
-LIST CC = CC ;		    #!! CC
-SET CC-CS = CC OR CS ;  #!! CC-CS
-LIST Po = Po ;		    #!! Po
-LIST Pr = Pr ;		    #!! Pr
-LIST Pcle = Pcle ;	    #!! Pcle
-LIST Num = Num ;	    #!! Num
-LIST Interj = Interj ;  #!! Interj
-LIST ABBR = ABBR ;	    #!! ABBR
-LIST ACR = ACR ;	    #!! ACR
-LIST CLB = CLB ;	    #!! CLB
-LIST LEFT = LEFT ;	    #!! LEFT
-LIST RIGHT = RIGHT ;    #!! RIGHT
-LIST WEB = WEB ;	    #!! WEB
-LIST QMARK = """ ; # "  #!! QMARK
-LIST PPUNCT = PUNCT ;   #!! PPUNCT
-SET PUNCT = PPUNCT - QMARK ;  #!! PUNCT
-
-LIST COMMA = "," ;  #!! COMMA
-LIST ¶ = ¶;   #!! ¶
-
-
-
-#!! !Tags for POS sub-categories
-
-LIST Pers = Pers ;	    #!! Pers
-LIST Dem = Dem ;	    #!! Dem
-LIST Interr = Interr ;  #!! Interr
-LIST Indef = Indef ;    #!! Indef
-LIST Recipr = Recipr ;  #!! Recipr
-LIST Refl = Refl ;	    #!! Refl
-LIST Rel = Rel ;	    #!! Rel
-LIST Coll = Coll ;	    #!! Coll
-LIST NomAg = NomAg ;    #!! NomAg
-LIST Prop = Prop ;	    #!! Prop
-LIST Allegro = Allegro ; #!! Allegro
-LIST Arab = Arab ; #!! Arab
-LIST Rom = Rom ; #!! Romertall
-
-
-#!! !Tags for morphosyntactic properties
-
-LIST Nom = Nom ; #!! Nom
-LIST Acc = Acc ; #!! Acc
-LIST Gen = Gen ; #!! Gen
-LIST Ill = Ill ; #!! Ill
-LIST Loc = Loc ; #!! Loc
-LIST Com = Com ; #!! Com
-LIST Ess = Ess ; #!! Ess
-LIST Par = Par ; #!! Ess
-LIST Sg = Sg ;   #!! Sg
-LIST Du = Du ;   #!! Du
-LIST Pl = Pl ;   #!! Pl
-LIST Cmp/SplitR = Cmp/SplitR ;	   #!! Cmp/SplitR
-LIST Cmp/SgNom = Cmp/SgNom ; #!! Cmp/SgNom Cmp/SgGen
-LIST Cmp/SgGen = Cmp/SgGen ; #!! Cmp/SgGen
-LIST PxSg1 = PxSg1 ;	   #!! PxSg1
-LIST PxSg2 = PxSg2 ;	   #!! PxSg2
-LIST PxSg3 = PxSg3 ;	   #!! PxSg3
-LIST PxDu1 = PxDu1 ;	   #!! PxDu1
-LIST PxDu2 = PxDu2 ;	   #!! PxDu2
-LIST PxDu3 = PxDu3 ;	   #!! PxDu3
-LIST PxPl1 = PxPl1 ;	   #!! PxPl1
-LIST PxPl2 = PxPl2 ;	   #!! PxPl2
-LIST PxPl3 = PxPl3 ;	   #!! PxPl3
-LIST Px = PxSg1 PxSg2 PxSg3 PxDu1 PxDu2 PxDu3 PxPl1 PxPl2 PxPl3 ; #!! Px
-
-LIST Comp = Comp ;		   #!! Comp
-LIST Superl = Superl ;	   #!! Superl
-LIST Attr = Attr ;		   #!! Attr
-LIST Ord = Ord ;		   #!! Ord
-LIST Qst = Qst ;		   #!! Qst
-LIST IV = IV ; #!! IV
-LIST TV = TV ; #!! TV
-LIST Prt = Prt;				   #!! Prt
-LIST Prs = Prs ;			   #!! Prs
-LIST Ind = Ind ;			   #!! Ind
-LIST Pot = Pot ;			   #!! Pot
-LIST Cond = Cond ;			   #!! Cond
-LIST Imprt = Imprt ;		   #!! Imprt
-LIST ImprtII = ImprtII ;	   #!! ImprtII
-LIST Sg1 = Sg1 (p1 sg) ;			   #!! Sg1
-LIST Sg2 = Sg2 (p2 sg) ;			   #!! Sg2
-LIST Sg3 = Sg3 (p3 sg) ;			   #!! Sg3
-LIST Du1 = Du1 (p1 du) ;			   #!! Du1
-LIST Du2 = Du2 (p2 du) ;			   #!! Du2
-LIST Du3 = Du3 (p3 du) ;			   #!! Du3
-LIST Pl1 = Pl1 (p1 pl) ;			   #!! Pl1
-LIST Pl2 = Pl2 (p2 pl);			   #!! Pl2
-LIST Pl3 = Pl3 (p3 pl);			   #!! Pl3
-LIST Inf = Inf ;			   #!! Inf
-LIST ConNeg = ConNeg ;		   #!! ConNeg
-LIST Neg = Neg ;			   #!! Neg
-LIST PrfPrc = PrfPrc ;		   #!! PrfPrc
-LIST VGen = VGen ;			   #!! VGen
-LIST PrsPrc = PrsPrc ;		   #!! PrsPrc
-LIST Ger = Ger ;			   #!! Ger
-LIST Sup = Sup ;			   #!! Sup
-LIST Actio = Actio ;		   #!! Actio
-LIST VAbess = VAbess ;		   #!! VAbess
-
-
-
-LIST Err/Orth = Err/Orth Err/Orth-a/á Err/Orth-nom/gen Err/Orth-nom/acc Err/DerSub Err/CmpSub Err/UnspaceCmp Err/HyphSub Err/SpaceCmp Err/Spellrelax err_orth_mt ; #!! Err/Orth
-
-
-
-#!! !Semantic tags
-
-LIST Sem/Act = Sem/Act ;				    #!! Sem/Act
-LIST Sem/Ani = Sem/Ani ;				    #!! Sem/Ani
-LIST Sem/Atr = Sem/Atr ;				    #!! Sem/Atr
-LIST Sem/Body = Sem/Body ;				    #!! Sem/Body
-LIST Sem/Clth = Sem/Clth ;				    #!! Sem/Clth
-LIST Sem/Domain = Sem/Domain ;			    #!! Sem/Domain
-LIST Sem/Feat-phys = Sem/Feat-phys ;	    #!! Sem/Feat-phys
-LIST Sem/Fem = Sem/Fem ;				    #!! Sem/Fem
-LIST Sem/Group = Sem/Group ;			    #!! Sem/Group
-LIST Sem/Lang = Sem/Lang ;				    #!! Sem/Lang
-LIST Sem/Mal = Sem/Mal ;				    #!! Sem/Mal
-LIST Sem/Measr = Sem/Measr ;			    #!! Sem/Measr
-LIST Sem/Money = Sem/Money ;			    #!! Sem/Money
-LIST Sem/Obj = Sem/Obj ;				    #!! Sem/Obj
-LIST Sem/Obj-el = Sem/Obj-el ;			    #!! Sem/Obj-el
-LIST Sem/Org = Sem/Org ;				    #!! Sem/Org
-LIST Sem/Perc-emo = Sem/Perc-emo ;		    #!! Sem/Perc-emo
-LIST Sem/Plc = Sem/Plc ;				    #!! Sem/Plc
-LIST Sem/Sign = Sem/Sign ;				    #!! Sem/Sign
-LIST Sem/State-sick = Sem/State-lang-sick ; #!! Sem/State-sick
-LIST Sem/Sur = Sem/Sur ;				    #!! Sem/Sur
-LIST Sem/Time = Sem/Time ;				    #!! Sem/Time
-LIST Sem/Txt = Sem/Txt ;				    #!! Sem/Txt
-
-LIST HUMAN = Sem/Fem Sem/Mal Sem/Sur ;	    #!! HUMAN
-
-SET HAB-ACTOR = HUMAN ; # Goal: make this like the sme one. #!! HAB-ACTOR
-SET HAB-ACTOR-NOT-HUMAN = Sem/Org ; # make this like the sme one #!! HAB-ACTOR-NOT-HUMAN
-
-
-LIST PROP-ATTR = Sem/Mal Sem/Sur Sem/Fem ; #!! PROP-ATTR
-LIST PROP-SUR = Sem/Sur Sem/Mal Sem/Fem ; #!! PROP-SUR
-
-
-
-SET TIME-N-SET = N + Sem/Time ;  #!! TIME-N-SET
-
-
-#!! ! Syntactic tags
-
-LIST @+FAUXV = @+FAUXV ;	         #!! @+FAUXV
-LIST @+FMAINV = @+FMAINV ;	         #!! @+FMAINV
-LIST @-FAUXV = @-FAUXV ;	         #!! @-FAUXV
-LIST @-FMAINV = @-FMAINV ;	         #!! @-FMAINV
-LIST @-FSUBJ> = @-FSUBJ> ;	         #!! @-FSUBJ>
-LIST @-F<OBJ = @-F<OBJ ;	         #!! @-F<OBJ
-LIST @-FOBJ> = @-FOBJ> ;	         #!! @-FOBJ>
-LIST @SPRED<OBJ = @SPRED<OBJ ;       #!! @-FSPRED<OBJ
-LIST @-F<ADVL = @-F<ADVL ;	         #!! @-F<ADVL
-LIST @-FADVL> = @-FADVL> ;	         #!! @-FADVL>
-LIST @-F<SPRED = @-F<SPRED ;         #!! @-F<SPRED
-LIST @-F<OPRED = @-F<OPRED ;         #!! @-F<OPRED
-LIST @-FSPRED> = @-FSPRED> ;         #!! @-FSPRED>
-LIST @-FOPRED> = @-FOPRED> ;         #!! @-FOPRED>
-SET FOBJ = @-F<OBJ OR @-FOBJ> ;
-SET FMAINV = @-FMAINV OR @+FMAINV ;
-SET FAUXV = @-FAUXV OR @+FAUXV ;
-LIST @>ADVL = @>ADVL ;               #!! @>ADVL
-LIST @ADVL< = @ADVL< ;               #!! @ADVL<
-LIST @<ADVL = @<ADVL ;               #!! @<ADVL
-LIST @ADVL> = @ADVL> ;               #!! @ADVL>
-LIST ADVL = @ADVL @ADVL> @ADVL< @<ADVL @>ADVL @-F<ADVL @-FADVL> ;  #!! @ADVL
-LIST @HAB> = @HAB> ;                    #!! @HAB>
-LIST @<HAB = @<HAB ;                    #!! @<HAB
-SET @HAB = @<HAB OR @HAB> ;
-LIST @>N = @>N ;		      #!! @>N
-LIST @Interj = @Interj ;    #!! @Interj
-LIST @N< = @N< ;		      #!! @N<
-LIST @>A = @>A ;		      #!! @>A
-LIST @P< = @P< ;		      #!! @P<
-LIST @>P = @>P ;		      #!! @>P
-LIST @HNOUN = @HNOUN ;	      #!! @HNOUN
-LIST @INTERJ = @INTERJ ;      #!! @INTERJ
-LIST @>Num = @>Num;		      #!! @>Num
-LIST @Pron< = @Pron< ;	      #!! @Pron<
-LIST @>Pron = @>Pron ;	      #!! @>Pron
-LIST @Num< = @Num< ;	      #!! @Num<
-LIST @OBJ = @OBJ ;			  #!! @OBJ
-LIST @<OBJ = @<OBJ ;		  #!! @<OBJ
-LIST @OBJ> = @OBJ> ;		  #!! @OBJ>
-LIST @OPRED = @OPRED ;		  #!! @OPRED
-LIST @<OPRED = @<OPRED ;	  #!! @<OPRED
-LIST @OPRED> = @OPRED> ;	  #!! @OPRED>
-LIST @PCLE = @PCLE ;		  #!! @PCLE
-LIST @COMP-CS< = @COMP-CS< ;  #!! @COMP-CS<
-LIST @SPRED = @SPRED ;		  #!! @SPRED
-LIST @<SPRED = @<SPRED ;	  #!! @<SPRED
-LIST @SPRED> = @SPRED> ;	  #!! @SPRED>
-LIST @SUBJ = @SUBJ ;		  #!! @SUBJ
-LIST @<SUBJ = @<SUBJ ;		  #!! @<SUBJ
-LIST @SUBJ> = @SUBJ> ;		  #!! @SUBJ>
-SET SUBJ = @<SUBJ OR @SUBJ> OR @SUBJ ; #!! SUBJ
-SET SPRED = @<SPRED OR @SPRED> OR @SPRED ; #!! SPRED
-SET OPRED = @<OPRED OR @OPRED> OR @OPRED ; #!! OPRED
-LIST @PPRED = @PPRED ;        #!! @PPRED
-LIST @APP = @APP ;			   #!! @APP
-LIST @APP-N< = @APP-N< ;	   #!! @APP-N<
-LIST @APP-Pron< = @APP-Pron< ; #!! @APP-Pron<
-LIST @APP>Pron = @APP>Pron ;   #!! @APP>Pron
-LIST @APP-Num< = @APP-Num< ;   #!! @APP-Num<
-LIST @APP-ADVL< = @APP-ADVL< ; #!! @APP-ADVL<
-LIST @VOC = @VOC ;			   #!! @VOC
-LIST @CVP = @CVP ;			   #!! @CVP
-LIST @CNP = @CNP ;			   #!! @CNP
-SET OBJ = (@<OBJ) OR (@OBJ>) OR (@OBJ) OR (@-F<OBJ) OR (@-FOBJ>) ; #!! OBJ
-LIST <OBJ = @-F<OBJ @<OBJ ;     #!! <OBJ
-LIST OBJ> = @OBJ> @-FOBJ> ;    #!! OBJ>
-SET <OBJ-OTHERS = <OBJ OR (Gen) OR (Nom) OR (Ess) OR (Loc) OR (Adv) ; #!! <OBJ-OTHERS
-SET OBJ>-OTHERS = OBJ> OR (Gen) OR (Nom) OR (Ess) OR (Loc) OR (Adv) ; #!! OBJ>-OTHERS
-SET NOT-FAUXV = FMAINV OR OBJ + V OR ADVL + V ;
-# Works after the mapping rules for verbs.
-SET SYN-V = FMAINV OR FAUXV OR V + SUBJ OR OBJ + V OR ADVL + V OR (V @>N) OR (V @N<) OR (V @A<) ; #!! SYN-V
-LIST @X = @X ;    #!! @X
-
-
-
-# ========
-  SETS
-# ========
-
-
-#!! !!Sets containing sets of lists and tags
-
-#!! This part of the file lists a large number of sets based partly upon the tags defined above, and
-#!! partly upon lexemes drawn from the lexicon.
-#!! See the sourcefile itself to inspect the sets, what follows here is an overview of the set types.
-
-
-
-#!! !Sets for Single-word sets
-
-LIST INITIAL = "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m"
-        "n" "o" "p" "q" "r" "s" "t" "u" "v" "w" "x" "y" "z"
-        "á" "æ" "ø" "å" "ö" "ä" ; #!! INITIAL
-
-
-#!! !Sets for word or not
-
-LIST WORD = N A Adv V Pron CS CC Po Pr Interj Pcle Num ABBR ACR  \? ; #!! WORD
- # any word
-# SET REAL-WORD = WORD - Num - Ord ; #!! REAL-WORD
-SET REAL-WORD-NOT-ABBR = WORD - Num - Ord - (ABBR N) ; # This is former REALWORD-NOTABBR #!! REAL-WORD-NOT-ABBR
-SET NOT-COMMA = WORD - COMMA ;  #!! NOT-COMMA
-
-
-#!! !Case sets
-# ---------
-
-LIST ADVLCASE = Ill Loc Com Ess ; #!! ADLVCASE
-
-LIST CASE-AGREEMENT = Nom Acc Gen (Pl Ill) Loc Com Ess ; #!! CASE-AGREEMENT
-LIST CASE = Nom Acc Gen Ill Loc Com Ess ; #!! CASE
-
-SET NOT-NOM = CASE - Nom ; #!! NOT-NOM
-SET NOT-GEN = CASE - Gen ; #!! NOT-GEN
-SET NOT-ACC = CASE - Acc ; #!! NOT-ACC
-
-#!! !Verb sets
-# ---------
-
-# Verbs and their complements
-# - - - - - - - - - - - - - -
-
-SET NOT-V = WORD - V ; #!! NOT-V
-
-#!! !Sets for finiteness and mood
-# - - - - - - - - - -
-
-SET REAL-NEG = Neg - Sup ; #!! REAL-NEG
-
-SET MOOD-V = Ind OR Pot OR Imprt OR ImprtII OR Cond OR (Neg Sup) ; #!! MOOD-V
-
-SET NOT-PRFPRC = WORD - PrfPrc ; #!! NOT-PRFPRC
-
-
-#!! !Sets for person
-# - - - -
-
-LIST SG1-V = (V Sg1)  ; #!! SG1-V
-LIST SG2-V = (V Sg2)  ;  #!! SG2-V
-LIST SG3-V = (V Sg3)  ;  #!! SG3-V
-LIST DU1-V = (V Du1)  ;  #!! DU1-V
-LIST DU2-V = (V Du2)  ;  #!! DU2-V
-LIST DU3-V = (V Du3)  ;  #!! DU3-V
-LIST PL1-V = (V Pl1) ;   #!! PL1-V
-LIST PL2-V = (V Pl2) ;   #!! PL2-V
-LIST PL3-V = (V Pl3)  ;  #!! PL3-V
-
- # Note that imperative verbs are not included in these sets!
-
-# Some subsets of the VFIN sets
-# - - - - - - - - - - - - - - -
-SET SG-V = SG1-V OR SG2-V OR SG3-V ;
-SET DU-V = DU1-V OR DU2-V OR DU3-V ;
-SET PL-V = PL1-V OR PL2-V OR PL3-V ;
-
-SET DU-PL-V = DU1-V OR DU2-V OR DU3-V OR PL1-V OR PL2-V OR PL3-V ;
-
-SET 1-2-V = SG1-V OR SG2-V OR DU1-V OR DU2-V OR PL1-V OR PL2-V ;
-
-#!! !Pronoun sets
-# ------------
-
-LIST MUN = (Pron Pers Sg1 Nom) (pers p1 sg nom) ;
-LIST DON = (Pron Pers Sg2 Nom) (pers p2 sg nom) ;
-LIST SON = (Pron Pers Sg3 Nom) (pers p3 sg nom) ;
-LIST MOAI = (Pron Pers Du1 Nom) (pers p1 du nom) ;
-LIST DOAI = (Pron Pers Du2 Nom) (pers p2 du nom) ;
-LIST SOAI = (Pron Pers Du3 Nom) (pers p3 du nom) ;
-LIST MII-PERS = (Pron Pers Pl1 Nom) (pers p1 pl nom) ;
-LIST DII = (Pron Pers Pl2 Nom) (pers p2 pl nom) ;
-LIST SII = (Pron Pers Pl3 Nom) (pers p3 pl nom) ;
-
-SET PPRON-NOM-NOT-DAT = MUN OR DON OR SON OR MOAI OR DOAI OR SOAI OR MII-PERS OR DII OR SII ;
-
-SET PPRON-DU-PL = MOAI OR DOAI OR SOAI OR MII-PERS OR DII OR SII ;
-SET PPRON-PL = MII-PERS OR DII OR SII ;
-
-SET PRON-DU = MOAI OR DOAI OR SOAI ;
-
-SET PPRON-NOT-SII = MUN OR DON OR SON OR MOAI OR DOAI OR SOAI OR MII-PERS OR DII ;
-
-LIST PPRON-GEN = (Sg1 Gen) (Sg2 Gen) (Sg3 Gen) (Du1 Gen) (Du2 Gen) (Du3 Gen)
-	(Pl1 Gen) (Pl2 Gen) (Pl3 Gen) (p1 sg gen) (p2 sg gen) (p3 sg gen) (p1 du gen) (p2 du gen) (p3 du gen)
-	(p1 pl gen) (p2 pl gen) (p3 pl gen) ;
-
-SET PPRON-NOT-GEN = (Pron Pers) - PPRON-GEN ;
-
-LIST SG-DEM = (Pron Dem Sg Nom);
-LIST PL-DEM = (Pron Dem Pl Nom);
-SET NOT-DEM = WORD - Dem ;
-
-LIST SG-PRON = (Pron Sg1) (Pron Sg2) (Pron Sg3) (Pron Sg) (Pron PxSg1) (Pron PxSg2) (Pron PxSg3) (pron p1 sg) (pron p2 sg) (pron p3 sg);
-LIST DU-PRON = (Pron Du1) (Pron Du2) (Pron Du3)  (Pron PxDu1) (Pron PxDu2) (Pron PxDu3) (pron p1 du) (pron p2 du) (pron p3 du);
-LIST PL-PRON = (Pron Pl1) (Pron Pl2) (Pron Pl3) (Pron Pl) (Pron PxPl1) (Pron PxPl2) (Pron PxPl3) (pron p1 pl) (pron p2 pl) (pron p3 pl);
-LIST DU-PRON-NOTPX = (Pron Du1) (Pron Du2) (Pron Du3) (pron p1 du) (pron p2 du) (pron p3 du) ;
-
-
-LIST FIRST-PX = PxSg1 PxDu1 PxPl1 ;
-LIST SECOND-PX = PxSg2 PxDu2 PxPl2 ;
-LIST THIRD-PX = PxSg3 PxDu3 PxPl3 ;
-
-LIST SG-PX = PxSg1 PxSg2 PxSg3 ;
-LIST DU-PX = PxDu1 PxDu2 PxDu3 ;
-LIST PL-PX = PxPl1 PxPl2 PxPl3 ;
-
-LIST PX = PxSg1 PxDu1 PxPl1 PxSg2 PxDu2 PxPl2 PxSg3 PxDu3 PxPl3 ;
-
-LIST DU-NR = Du1 Du2 Du3 ;
-
-SET NOT-SG-PRON = DU-PRON OR PL-PRON ;
-
-
-#!! !Adjectival sets and their complements
-# -------------------------------------
-SET A-CASE = A - Attr - Adv ;
-
-LIST A-CC = A CC ;
-
-SET NOT-A = WORD - A ; # This is former NOT-ADJ
-SET NOT-A-COMMA = WORD - A - COMMA ;
-SET NOT-Attr = WORD - Attr ;
-SET NOT-A-PCLE = WORD - A - Pcle ;
-SET NOT-A-CC = WORD - A-CC ;
-
- # and many others
-
-#!! !Adverbial sets and their complements
-# ------------------------------------
-SET LEX-ADV = Adv - (AA) ;
-
-SET NOT-ADV-DE            = WORD - Adv ;
-SET NOT-ADV            = NOT-ADV-DE OR CLB ;
-SET NOT-ADV-N          = NOT-ADV - N;
-SET NOT-ADV-PCLE       = NOT-ADV - Pcle ;
-SET NOT-ADV-INDEF      = NOT-ADV - Indef ;
-SET NOT-ADV-PCLE-ILL-LOC-COM = WORD - Adv - Pcle - Ill - Loc - Com;
-SET NOT-A-ADV-PCLE = WORD - Pcle - A - Adv ; #
-
-
-
-#!! !Sets of elements with common syntactic behaviour
-# ================================================
-
-SETS
-
-#!! !NP sets defined according to their morphosyntactic features
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-LIST N-SG-NOM = (N Sg Nom);
-
-LIST PROP = (N Prop);
-
-SET COMMON-N = N - Prop;
-
-SET HEAD-N = N - Cmp/SplitR ;
-
-SET HEAD-N-NOM = (N Nom) - Cmp/SplitR ;
-
-# SET SUBJECTHEAD = N OR A OR Pron - Refl ; # These, can be subject heads
-
-SET NP = N OR A ;                      # anything that can take except numerals
-SET NP-HEAD        = Pron OR HEAD-N ;
-SET NP-HEAD-SG     = SG-PRON OR (N Sg) OR (A Sg) - Cmp/SplitR  ;
-SET NP-HEAD-PL     = PL-PRON OR (N Pl) OR (A Pl) - Cmp/SplitR  ;
-SET NP-HEAD-SG-NOM = SG-PRON + Nom OR (N Sg Nom) OR (A Sg Nom) - Cmp/SplitR ;
-SET NP-HEAD-PL-NOM = PL-PRON + Nom OR (N Pl Nom) OR (N Coll Nom) OR (A Pl Nom) - Cmp/SplitR ;
-SET NP-HEAD-NOM    = NP-HEAD-SG-NOM OR NP-HEAD-PL-NOM ;
-SET NP-HEAD-ACC    = (Pron Acc) OR (N Acc) OR (A Acc) - Cmp/SplitR - (Dem Attr);
-SET NP-HEAD-GEN    = (Pron Gen) OR (N Gen) OR (A Gen) - Cmp/SplitR - (Dem Attr)   ;
-
-#!! !The PRE-NP-HEAD family of sets
-
-#!! These sets model noun phrases (NPs). The idea is to first define whatever can
-#!! occur in front of the head of the NP, and thereafter negate that with the
-#!! expression __WORD - premodifiers__.
-
-
-SET PRE-NP-HEAD = (Prop Attr) OR (Prop @>N) OR (A Attr) OR (ABBR Attr)
-         OR (Pron Pers Gen) OR (N Gen) OR
-         Num OR Cmp/SplitR OR CC OR (Pron Dem) OR (Pron Refl Gen) OR (Indef Attr) OR
-         (PrfPrc @>N) OR PrsPrc OR (A Ord) ;
-         # The strict version of items that can only be premodifiers, not parts of the predicate
-
-SET PRE-A-N     = (Pron Pers Gen) OR (Pron Pers Acc) OR (Pron Indef) OR Num OR (A Ord) OR (Pron Dem) OR (Pron Refl Gen) OR (Pron Refl Acc) ;
-
-SET NOT-PRE-A-N = WORD - PRE-A-N ;
-
-LIST PUNCT-LEFT = (PUNCT LEFT) ;
-LIST PUNCT-RIGHT = (PUNCT RIGHT) ;
-
-
-
-SET NOT-NPMOD     = WORD - PRE-NP-HEAD OR ABBR OR @CVP ;
-# This is the previous NPNH (npnh) set.
-# NOT-NPMOD  = "NOT-PRE-NP-HEAD"
-
-SET NOT-NPMOD-ACC     = NOT-NPMOD - Acc OR ABBR ;
-SET NOT-NPMOD-ACC-ADV     = NOT-NPMOD - Acc - Adv OR ABBR ;
-
-SET NOT-NPMODADV    = WORD - PRE-NP-HEAD - Adv ;
-SET NOT-NPMODADV-INDEF   = WORD - PRE-NP-HEAD - Adv - Indef ;
-
-
-SET NOT-N = WORD - N ;
-
-SET NOT-N-A = WORD - N - A ;
-
-SET NOT-NP = Inf OR Pcle OR Interj OR CS ;
-
-SET NUM = Num ;
-
-SET NOT-NUM = WORD - Num ;
-
-SET NOT-CC = WORD - CC ;
-
-SET NOT-PCLE = WORD - Pcle ;
-
-SET REAL-CLB = CLB - COMMA ;
-
-
-#!! !Border sets and their complements
-# ---------------------------------
-
-SET CP = (Pron Interr) OR (Pron Rel) ;
-
-LIST BOUNDARYSYMBOLS =  "\;" ":" "-" "–" ;
-
-SET S-BOUNDARY = BOUNDARYSYMBOLS OR (@CVP) ;
-
-SET BOC = S-BOUNDARY OR BOS ;
-SET BOC-PUNCT = BOC - ("-") - ("–") ;
-SET EOC = S-BOUNDARY OR EOS ;
-
-SET NP-BOUNDARY = BOS OR EOS OR REAL-CLB OR Inf OR VGen OR Sup OR PPRON-NOT-GEN OR Recipr OR Po OR Pr OR Pcle OR Interj OR CS OR CP OR @CVP ;
-
-SET SV-BOUNDARY = S-BOUNDARY OR Inf OR Sup OR FMAINV ;
-
-SET CCCOMMA = CC OR COMMA ;
-	# remember that those are potential sentence boundaries, too
-
+LIST BOS = (>>>) ; 
+LIST EOS = (<<<) ; 
+
+LIST N =  n N ; 
+LIST Prop =  np Prop ;
+LIST Pr =  pr Pr ; 
+LIST Pron =  prn Pron ;
+LIST Det =  det Det ; 
+LIST Num =  num Num "<[0-9]+>"r ("млн" abbr) ("тыс" abbr)  ("млн" Abbr) ("тыс" Abbr)  ;
+LIST A =  adj A ; 
+LIST Adv =  adv Adv ; 
+LIST CS =  cnjsub CS ; 
+LIST CC =  cnjcoo CC ;
+LIST Interj =  ij Interj ;
+LIST CC =  cnjcoo CC ; 
+LIST V =  vblex vbser vbmod V ; 
+LIST Pred =  pred Pred ; 
+LIST Part =  part Part ; 
+LIST Abbr =  abbr Abbr ;
+
+LIST Pass =  pass pasv Pass ;  # Check
+LIST V/Pass =  pass V/Pass ; 
+
+LIST Cop =  ("быть" vblex)  ("быть" V)  ;
+
+LIST Guio =  guio "-"  ; 
+LIST SafeGuio =  "—"  ; 
+LIST Cm =  cm  ; 
+LIST Excl =  ("!")  ;
+LIST Ques =  ("?")  ;
+LIST Sent =  sent  ; 
+
+LIST Percent =  ("<[0-9]+%>"r) percent  ; 
+LIST Roman =  roman ("<M{0,4}(CM|CD|D(C{0,3}))?(XC|XL|L(X{0,3}))?(IX|IV|V(I{0,3}))?>"ri num) ("<[MCDXLIVМСХ]+>"ri num)  ("<M{0,4}(CM|CD|D(C{0,3}))?(XC|XL|L(X{0,3}))?(IX|IV|V(I{0,3}))?>"ri Num) ("<[MCDXLIVМСХ]+>"ri Num)  ;
+LIST Count =  count Count ; 
+#LIST Cipher =  "<[0-9]+>"r  ;
+LIST Cipher =  "[0-9]+"r  ;
+
+LIST Pprep =  pprep pobj Pprep ; 
+LIST Pers =  pers Pers ;
+LIST Paren =  paren Paren ; 
+
+LIST Lparen =  lpar Lparen ; 
+LIST Parens =  lpar rpar par Parens ;
+LIST Apos =  apos Apos ; 
+LIST Quot =  lquot rquot quot Quot ;
+
+LIST Comp = Comp (comp pred)  ; 
+LIST Short = Short short (adj m pred) (adj f pred) (adj mfn pred) (adj nt pred)  ; # pred
+LIST Cmp = Cmp cmp  ; 
+
+LIST PrcPast = PrcPast pp  ;
+LIST PrcPres = PrcPres pprs  ;
+
+LIST TV = TV tv  ; 
+LIST IV = IV iv  ; 
+
+LIST Ant = Ant ant  ; 
+LIST Cog = Cog cog  ; 
+LIST Al = Al al  ;  # includes Top
+
+LIST Msc = Msc m  ; 
+LIST Fem = Fem f  ; 
+LIST Neu = Neu nt  ; 
+
+LIST Sg = Sg sg  ; 
+LIST Pl = Pl pl  ;
+
+LIST Sg1 = Sg1 (p1 sg)  ; 
+LIST Sg2 = Sg2 (p2 sg)  ; 
+LIST Sg3 = Sg3 (p3 sg)  ; 
+LIST Pl1 = Pl1 (p1 pl)  ; 
+LIST Pl2 = Pl2 (p2 pl)  ; 
+LIST Pl3 = Pl3 (p3 pl)  ; 
+
+LIST Impf = Impf impf  ; 
+LIST Perf = Perf perf  ; 
+
+LIST Ord = Ord ord  ; 
+LIST Dem = Dem dem  ; 
+LIST Interr = Interr itg  ; 
+LIST Rel = Rel rel  ; 
+
+LIST DetIndecl = DetIndecl ("её" det pos) ("его" det pos) ("их" det pos)  ;
+
+LIST Nom = Nom nom  ; 
+LIST Gen = Gen gen  ; 
+LIST Dat = Dat dat  ;
+LIST Acc = Acc acc  ;
+LIST Ins = Ins ins  ; 
+LIST Prp = Prp prp  ; 
+
+LIST Loc = Loc loc  ; 
+LIST Par = Par par  ; 
+
+LIST Anim = Anim aa an  ; 
+LIST Inanim = Inanim nn an  ; 
+
+LIST Inf = Inf inf  ; 
+LIST Imper = Imper imp  ; 
+LIST Past = Past past  ; 
+LIST Fin = Past Pres Fut past pres fut  ; 
+
+LIST Prn/Sebe =  ("<себе>"i prn)  ("<себе>"i Pron)  ;
+LIST Prn/Tebe =  ("<тебе>"i prn)  ("<тебе>"i Pron)  ;
+LIST Prn/Komu =  ("<кому>"i prn)  ("<кому>"i Pron)  ;
+LIST Prn/Tot =  ("тот"i prn)  ("<тот>"i Pron)  ;
+LIST Prn/To =  ("то"i prn)  ("<то>"i Pron)  ;
+LIST Prn/Togo =  ("<того>"i prn)  ("<того>"i Pron)  ;
+
+LIST Num/Neskolko =  ("несколько" num)  ("несколько" Num)  ;
+LIST Num/Tri =  ("три" num)  ("три" Num)  ;
+
+LIST CS/Čto =  ("что²" cnjsub)  ("что²" CS)   ;
+LIST CC/I =  ("и" cnjcoo)  ; 
+
+LIST Paren/Konečno =  ("конечно" paren)  ("конечно" Paren)  ; 
+
+LIST Jest =  ("<есть>"i)  ;
+
+LIST Prop/Maša =  ("Маша" np)  ("Маша" N Prop)  ;
+
+LIST Pr/V = ("в" pr) ("в" Pr) ;
+LIST Pr/Na = ("на" pr) ("на" Pr) ;
+LIST Pr/S = ("с" pr) ("с" Pr) ;
+LIST Pr/Po = ("по" pr) ("по" Pr) ;
+LIST Pr/Iz = ("из" pr) ("из" Pr) ;
+LIST Pr/K = ("к" pr) ("к" Pr) ;
+LIST Pr/Ot = ("от" pr) ("от" Pr) ;
+LIST Pr/Dlja = ("для" pr) ("для" Pr) ; 
+LIST Pr/Do = ("до" pr) ("до" Pr) ;
+LIST Pr/Za = ("за" pr) ("за" Pr) ;
+LIST Pr/O = ("о" pr) ("о" Pr) ;
+LIST Pr/Pri = ("при" pr) ("при" Pr) ;
+LIST Pr/U = ("у" pr) ("у" Pr) ;
+LIST Pr/Posle = ("после" pr) ("после" Pr) ;
+LIST Pr/Pod = ("<под>"i pr) ("<под>"i Pr) ;
+LIST Pr/Meždu = ("между" pr) ("между" Pr) ;
+LIST Pr/Okolo = ("около" pr) ("около" Pr) ; 
+LIST Pr/Čerez = ("через" pr) ("через" Pr) ;
+LIST Pr/Protiv = ("против" pr) ("против" Pr) ;
+LIST Pr/Naprotiv = ("напротив" pr) ("напротив" Pr) ;
+LIST Pr/Nad = ("над" pr) ("над" Pr) ;
+LIST Pr/Bez = ("без" pr) ("без" Pr) ; 
+LIST Pr/Sredi = ("среди" pr) ("среди" Pr) ;
+LIST Pr/Iz-za = ("из-за" pr) ("из-за" Pr) ;
+LIST Pr/Pered = ("перед" pr) ("перед" Pr) ;
+LIST Pr/Blagodarja = ("благодаря" pr) ("благодаря" Pr) ;
+LIST Pr/Krome = ("кроме" pr) ("кроме" Pr) ;
+LIST Pr/Vključaja = ("включая" pr) ("включая" Pr) ; 
+LIST Pr/Soglasno = ("согласно" pr) ("согласно" Pr) ;
+LIST Pr/Pomimo = ("помимо" pr) ("помимо" Pr); 
+LIST Pr/Vnutri = ("внутри" pr) ("внутри" Pr) ;
+ 
+LIST Pr/Nado = ("<надо>"i pr) ("<надо>"i Pr) ;
+ 
+LIST N/Filma = ("фильма" n) ("фильма" N) ;
+LIST N/Film = ("фильм" n) ("фильм" N) ;
+LIST N/Bukva = ("буква" n) ("буква" N) ;
+LIST N/Goda = ("<года>"i n) ("<года>"i N) ;
+LIST N/Godah = ("<годах>"i n) ("<годах>"i N) ;
+LIST N/Potom = ("<потом>"i n) ("<потом>"i N) ;
+LIST N/Krov = ("кровь" n) ("кровь" N) ;
+LIST N/Tomu = ("<тому>"i n) ("<тому>"i N) ;
+LIST N/Golova = ("голова" n) ("голова" N) ;
+LIST N/Denga = ("деньга" n) ("деньга" N) ;
+LIST N/Voda = ("<вода>"i n) ("<вода>"i N) ; 
+LIST N/Vode = ("<водe>"i n) ("<водe>"i N) ; 
+LIST N/Beregu = ("<берегу>"i n) ("<берегу>"i N) ;
+LIST N/Vek = ("век¹" n) ("век¹" N);
+LIST N/Veko = ("веко" n) ("веко" N) ;
+LIST N/Vtora = ("<второй>"i n) ("<второй>"i N); 
+LIST N/Mat = ("мать" n) ("мать" N) ;
+LIST N/Mater = ("матерь" n) ("матерь" N) ;
+LIST N/Pomoč = ("помочь" n) ("помочь" N) ;
+LIST N/Polku = ("<полку>"i n) ("<полку>"i N); 
+LIST N/Mire = ("<мире>"i n) ("<мире>"i N); 
+LIST N/Miro = ("миро" n) ("миро" N); 
+LIST N/Metr = ("метр" n) ("километр" n) ("метр" N) ("километр" n);
+LIST N/Primer = ("пример" n) ("пример" N);
+LIST N/Delo = ("дело" n) ("дело" N) ;
+LIST N/Pravilo¹ = ("правило¹" n) ("правило¹" N) ;
+LIST N/Pravilo² = ("правило²" n) ("правило²" N) ;
+LIST N/Noga = ("нога" n) ("нога" N) ;
+LIST N/Lob = ("лоб" n) ("лоб" N) ;
+LIST N/Byli = ("<были>"i n) ("<были>"i N) ;
+LIST N/On = ("он²" n) ("он²" N) ;
+LIST N/Stradanje = ("страданье" n) ("страданье" N) ;
+LIST N/Stradanie = ("страдание" n) ("страдание" N) ;
+LIST N/Slony = ("слоны" n) ("слоны" N) ;
+LIST N/Denj = ("день" n) ("день" N) ;
+LIST N/Čelovek = ("человек" n) ("человек" N) ;
+LIST N/Ljudi = ("люди²" n) ("люди²" N) ;
+LIST N/Maj = ("май" n) ("май" N) ;
+ 
+LIST A/Malo = ("<мало>"i adj) ("<мало>"i A) ;
+LIST A/Božij = ("божий" adj) ("божий" A) ;
+LIST A/Metrov = ("<метров>"i adj) ("<километров>"i adj) ("<метров>"i A) ("<километров>"i adj) ;
+LIST A/Prišlij = ("пришлый" adj) ("пришлый" A) ; 
+LIST A/Boevoj = ("боевой" adj) ("боевой" A) ;
+ 
+LIST Adv/I = ("и" adv) ("и" Adv) ; 
+LIST Adv/Ješë = ("ещё" adv) ("ещё" Adv) ; 
+LIST Adv/Krugom² = ("кругом²" adv) ("кругом²" Adv) ; 
+LIST Adv/Celikom = ("целиком" adv) ("целиком" Adv) ; 
+LIST Adv/Posle = ("после" adv) ("после" Adv) ; 
+LIST Adv/Neskolko = ("несколько" adv) ("несколько" Adv) ;
+ 
+LIST V/Oblivatsja = ("обливаться" vblex) ("обливаться" V) ;
+LIST V/Pahnut = ("пахнуть" vblex) ("пахнуть" V) ;
+LIST V/Isteč = ("истечь" vblex) ("истечь" V) ;
+LIST V/Vypuskat = ("выпускать" vblex) ("выпускать" V) ;
+LIST V/Takaja = ("<такая>"i vblex) ("<такая>"i V) ; 
+LIST V/Primer = ("<пример>"i vblex) ("<пример>"i V) ; 
+LIST V/Dela = ("<дела>"i vblex) ("<дела>"i V) ; 
+LIST V/Pisat = ("писать" vblex) ("написать" vblex) ("описать" vblex) ("писать" V) ("написать" vblex) ("описать" vblex) ; 
+LIST V/Prijti = ("прийти" vblex) ("прийти" V) ; 
+LIST V/Stroit = ("строит" vblex) ("строит" V) ; 
+LIST V/Vyhodit = ("выходить" vblex) ("выходить¹⁻²" vblex) ("выходить" V) ("выходить¹⁻²" vblex) ; 
+LIST V/Idjot = ("идти" vblex pres) ("идти" V Pres) ;
+LIST V/Byt = ("быть" vblex) ("быть" V) ; 
+ 
+LIST Ij/Na = ("на" ij) ("на" Interj) ;
+LIST Ij/Ih = ("их²" ij) ("их²" Interj) ;
+LIST Ij/I = ("и¹" ij) ("и¹" Interj) ;
+LIST Ij/A = ("а¹" ij) ("а¹" Interj) ; 
+LIST Ij/No = ("но²" ij) ("но²" Interj) ; 
+
+LIST O = "о" ; 
+LIST Ja = "я" "я¹" "я²" ; 
+LIST I = "и" ;
+LIST No = "но" ; 
+LIST Ne = "не" ; 
+LIST Samyj = "самый" ; 
+LIST Kotoryj = "который" ;
+LIST Posle = "после" ;
+LIST Čto = "что¹" "что²" ;
+LIST Kto = "кто" ; 
+LIST Nazad = "назад" ;
+LIST Sliškom = "слишком" ; 
+LIST Našej = "<нашей>"i ; 
+LIST Sej = "сей" ; 
+LIST Takže = "также" ; 
+LIST Tože = "тоже" ; 
+LIST Tak = "так" ; 
+LIST Kak = "как" ;
+LIST Tak_I = "так и" ; 
+LIST Sam = "сам" ; 
+LIST Bylo = "<было>"i ; 
+LIST U = "у¹" "у²" "у" ; 
+LIST Vo = "<во>"i ; 
+LIST Ili = "или" ; 
+LIST Že = "же" ; 
+LIST To = "то" ; 
+LIST Eto = "это" ;
+LIST Oneletterp = "с" "в" "к";
+
+LIST PrefixNado = "<[бвгджзйклмнпрстуфхцчшщъь][бвгджзйклмнпрстуфхцчшщъь].*>"r ; 
+
+LIST NumNotNom = "<([0-9])*[023456789]>"r "<([0-9])*11>"r ;
+
+LIST Unknown = "\*.*"r ;
+
+LIST LesserNum = "полтора" "два" "три" "четыре" "обо" "<([2-90]+)*[1-4]>"r ;
+
+LIST Poltora = "полтора" ; 
+LIST Pjat = "пять" "5" "<([0-9])*5>"r ; 
+LIST Sto = "сто" "100" ; 
+LIST Tysjača = "тысяча" "1000" ; 
+
+LIST Day = "день" ; 
+LIST Month = "месяц" ;
+LIST Months = "январь" "февраль" "март" "апрель" "май" "июнь" "июль" "август" "сентябрь" "октябрь" "ноябрь" "декабрь" ; 
+LIST Year = "год" "год¹" ("г." abbr) ;
+LIST Century = "век" ; 
+LIST Season = "сезон" ; 
+LIST Seasons = "весна" "лето" "осень" "зима" ;
+LIST TimeOfDay = "день" "вечер" "утро" "ночь" ; 
+LIST Polovina = "половина" ;
+LIST CardPoint = "западный" "южный" "юго-западный" "северный" "восточный" "юго-восточный" "северо-восточный" "северо-западный" "центральный" ;
+LIST TimePart = "начало" "конец" "течение" "середина" "половина" ; 
+LIST LetterEnum = "модель" "план" "вариант" "коэффициент" "витамин" "марка" "полимиксин" "система" ; 
+LIST PersonTitleMsc = "князь" "император" "принц" "атаман" "царь"  "митрополит" ;
+LIST PersonTitleFem = "императрица" ;
+
+LIST PersonTitleBoth = "президент" "генерал" "секретарь" "обер-прокурор" ;
+LIST Profession = "историк" "академик" "химик" "секретарь" "философ" "врач" ; 
+LIST Toponymy = "река" ;
+
+SET PersonTitle = PersonTitleMsc | PersonTitleFem | PersonTitleBoth ; 
+
+LIST Letters = ("же" n) ("у²" n) ("о²" n) ("и²" n) ("а²" n) ("в" n) ("с" n) ("к" n) ; # etc.
+
+LIST Notes = ("до" n) ; # etc.
+
+LIST InsAdv = "часом" "потом" "кругом" "рядом" "летом" "разом" "весной" "зимой" "осенью" "утром" "вечером" "днём" "ночью"  ; 
+
+LIST AccAdv = "вечер" "день" "раз" "минута" "неделя" ;
+
+LIST Title = ("<[А-ЯA-Z][а-яa-z]+>"r) ;
+LIST Majusc = ("<[А-ЯA-Z]+>"r) ;
+LIST Minusc = ("<[а-яa-z]+>"r) ;
+
+LIST DicTitle = ("[А-ЯA-Z][а-яa-z]+"r) ;
+LIST DicMajusc = ("[А-ЯA-Z]+"r) ;
+LIST DicMinusc = ("[а-яa-z]+"r) ;
+
+LIST Prob = prb ;
+
+LIST Facul = fac ;
+
+LIST V/Gen = "достичь" "достигнуть" "добиться" "бояться" "выдерживать" "выражать" "давать" "добавлять" "добиваться" "добывать" "дожидаться" "допускать" "жаждать" "жалеть" "желать" "заменять" "засыпать" "избегать" "искать" "касаться" "колоть" "кушать" "лишать" "лишаться" "набирать" "наливать" "ожидать" "отдыхать" "покупать" "предвидеть" "прибавлять" "приносить" "просить" "проходить" "рекомендовать" "слушаться" "спрашивать" "стесняться" "стоит" "требовать" "тянуть" "удерживать" "хватит" "хоронить" "отсутствовать" "отговорить" "опасаться" "вспоминать" "хотеть" "требовать" ; 
+
+LIST V/Dat = "адресовать" "варить" "вводить" "вернуть" "взглянуть" "возить" "возмещать" "возражать" "вручать" "встречаться" "выписать" "гарантировать" "готовить" "грозить" "гулять" "дарить" "докладывать" "жаловаться" "жать" "изменять" "кивать" "класть" "копать" "кричать" "курить" "ломать" "махать" "менять" "мешать" "мыть" "навязывать" "надоедать" "назначать" "напоминать" "направлять" "ненавидеть" "обучать" "оказывать" "описывать" "определять" "осложнять" "оставаться" "открывать" "отозвать" "отражать" "отсылать" "перевязывать" "повторять" "подтверждать" "подчинять" "показывать" "помогать" "посвящать" "предоставлять" "предпочитать" "принадлежать" "присваивать" "радоваться" "раскрывать" "резать" "рекомендовать" "ремонтировать" "ручаться" "светить" "служить" "собирать" "советовать" "сообщать" "соответствовать" "сопровождать" "составлять" "таскать" "удвоить" "удивляться" "упрощать" "устраивать" "характеризовать" "чинить" "явиться" "нравиться" "предать" "учить" "противопоставлять" ; # Clean up this list! # Check "предать"/"учить"!
+
+
+SET Sem/Time = Month | Months | Year | Century | Season | Seasons | TimeOfDay | ("период") ; 
+
+SET Sem/Distance = ("километр") | ("метр") ; 
+
+SET Sem/Quantity = ("дюжина") ;
+
+SET Sem/Weight = ("килограмм") | ("грамм") ;
+
+SET Sem/Unit = Sem/Time | Sem/Distance | Sem/Weight | Sem/Quantity ; 
+
+SET Sem/Person = PersonTitle | Profession ; 
+
+SET MscFemNeu = Msc | Fem | Neu ; 
+
+SET Prep/Prp = Pr/Pri | Pr/Na | Pr/V | Pr/O | Pr/Po ; 
+
+SET Prep/Ins = Pr/S | Pr/Nad | Pr/Pod | Pr/Meždu | Pr/Pered ;
+
+SET Prep/Acc = Pr/Na | Pr/V | Pr/Po | Pr/Pod | Pr/Čerez ; # complete
+
+SET Prep/Dat =  Pr/K | Pr/Soglasno | Pr/Po | Pr/Blagodarja ; 
+
+SET Prep/Gen = Pr/Protiv | Pr/Naprotiv | Pr/Vnutri ; # complete
+
+SET NBR = Sg | Pl ;
+
+SET MFN = Msc | Fem | Neu ; 
+
+SET NGDAIP = Nom | Gen | Dat | Acc | Ins | Prp | Loc ;  
+
+SET Modif = Det | A - Short | Ord | ("же" part) ; # Fix tag of že
+
+SET ModAcc = Modif + Acc ; 
+SET ModPrp = Modif + Prp ; 
+
+SET SentNotExcl = (".") | ("...") | ("?") | (":")  ; 
+
+SET Punct = Guio | Cm | Excl | Ques ;
+
+SET CLB = Rel | CS ;
 
 
 
@@ -620,6 +465,10 @@ ADD:err-agr (&err-agr) TARGET V IF (-1C Pron + Sg1 + Nom) (0 V) (NOT 0 Sg1);
 ADD:err-agr (&err-agr) TARGET V IF (-1C Pron + Sg2 + Nom) (0 V) (NOT 0 Sg2);
 ADD:err-agr (&err-agr) TARGET V IF (-1C Pron + Pl1 + Nom) (0 V) (NOT 0 Pl1);
 ADD:err-agr (&err-agr) TARGET V IF (-1C Pron + Pl2 + Nom) (0 V) (NOT 0 Pl2);
+
+ADD:err-poss-concord-neusg (&err-poss-concord-neusg) TARGET Pron IF (0 Pron + Pos + Msc)(0 Neu);
+#ok Это мое яблоко.
+#err Это мой яблоко.
 
 # And one with a suggestion where we simply change the tag Sg into Attr:
 ADD:attr-not-pred (&attr-not-pred) TARGET (A Sg) IF (NOT 0 Attr OR Gen) (1 CC LINK *1 COMMON-N) ;

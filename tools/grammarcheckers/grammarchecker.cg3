@@ -443,7 +443,14 @@ SET CLB = Rel | CS ;
 
 
 
-#!! !Grammarchecker sets
+
+
+# ===================================== #
+#!! !!! Grammarchecker rules begin here 
+# ===================================== #
+
+
+#!! !!Grammarchecker sets
 
 LIST &err-agr = &err-agr ;
 LIST &err-gen-po = &err-gen-po ;
@@ -453,6 +460,11 @@ LIST &err-ext-agr = &err-ext-agr ;
 LIST &err-ext-vagr = &err-ext-vagr ;
 
 MAPPING-PREFIX = & ;
+
+
+
+
+#!! !!Grammarchecker rules
 
 SECTION
 

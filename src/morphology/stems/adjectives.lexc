@@ -17335,7 +17335,7 @@ LEXICON Adjective
 подавленный:пода́влен п_a2 ; ! Z 1*a%2%
 преисполненный:преиспо́лнен п_a2 "weight: 1.7474040540085507" ; ! Z 1*a%2%
 настроенный:настро́ен п_a2 ; ! Z 1*a%2%
-расстроенный:расстро́ен%^Fен п_a2 ; ! RNC 1*a?? TODO CHECK REVIEW FIX
+расстроенный:расстро́ен п_a2 ; ! RNC 1*a?? TODO CHECK REVIEW FIX
 трудоустроенный:трудоустро́ен п_a2 ; ! Z 1*a%2%
 уверенный:уве́рен п_a2 "weight: 3.6183936744321743" ; ! Znew 1*a%2%
 неуверенный:неуве́рен п_a2 "weight: 2.9343601969904363" ; ! Znew 1*a%2%
@@ -17475,6 +17475,7 @@ LEXICON Adjective
 !_невыясненный:невы́яснен%^Fен п_a?? ; ! RNC 1*a?? TODO CHECK REVIEW FIX
 !_обеспокоенный:обеспоко́ен%^Fен п_a?? ; ! RNC 1*a?? TODO CHECK REVIEW FIX
 !_недостроенный:недостро́ен%^Fен п_a?? ; ! RNC 1*a?? TODO CHECK REVIEW FIX
+!_расстроенный:расстро́ен%^Fен п_a?? ; ! RNC 1*a?? TODO CHECK REVIEW FIX
 !_непредусмотренный:непредусмо́трен%^Fен п_a?? ; ! RNC 1*a?? TODO CHECK REVIEW FIX
 !_малообеспеченный:малообеспе́чен%^Fен п_a?? ; ! RNC 1*a?? TODO CHECK REVIEW FIX
 !_всклокоченный:всклоко́чен%^Fен п_a?? ; ! RNC 1*a?? TODO CHECK REVIEW FIX

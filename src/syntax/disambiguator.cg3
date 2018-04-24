@@ -26,6 +26,7 @@ LIST V =  vblex vbser vbmod V ;
 LIST Pred =  pred Pred ;
 LIST Part =  part Part ;
 LIST Abbr =  abbr Abbr ;
+LIST Poss = poss Poss ;
 
 LIST Pass =  pass pasv Pass ;  # Check
 LIST V/Pass =  pass V/Pass ;
@@ -230,6 +231,7 @@ LIST V/Stroit = ("строит" vblex) ("строит" V) ;
 LIST V/Vyhodit = ("выходить" vblex) ("выходить¹⁻²" vblex) ("выходить" V) ("выходить¹⁻²" vblex) ;
 LIST V/Idjot = ("идти" vblex pres) ("идти" V Pres) ;
 LIST V/Byt = ("быть" vblex) ("быть" V) ;
+LIST V/Byt = ("мочь" vblex) ("мочь" V) ;
 
 LIST Ij/Na = ("на" ij) ("на" Interj) ;
 LIST Ij/Ih = ("их²" ij) ("их²" Interj) ;
@@ -343,6 +345,16 @@ SET NOT-VERB = WORD - V ;
 # ---------
 SET S-BOUNDARY = CS | Interr | (";") | BOS | EOS ;
 
+# Case sets
+
+# Some case, but not...
+SET NOTNOM = Dat | Gen | Acc | Ins ;
+
+# Anything but the following case...
+SET NOACC = WORD - Acc ;
+SET NODAT = WORD - Dat ;
+SET NOACCDAT = WORD - Acc - Dat ;
+
 SET Sem/Time = Month | Months | Year | Century | Season | Seasons | TimeOfDay | ("период") ;
 
 SET Sem/Distance = ("километр") | ("метр") ;
@@ -373,7 +385,7 @@ SET MFN = Msc | Fem | Neu ;
 
 SET NGDAIP = Nom | Gen | Dat | Acc | Ins | Prp | Loc ;
 
-SET NGDAIPInsDatAcc = Dat | Ins | Acc ;
+SET NGDAIPGenDatAccIns = Gen | Dat | Acc | Ins ;
 
 SET Modif = Det | A - Short | Ord | ("же" part) ; # Fix tag of že
 
@@ -414,8 +426,6 @@ REMOVE Det IF (1 EOS) ;
 
 SELECT Adv IF (0 I) (-1 No) ;
 
-SELECT:DsmbgPtcp A + $$NGDAIP IF (-1C Samyj + $$NGDAIP) ;
-
 SELECT $$NGDAIP IF (-1C A + $$NGDAIP)(0 N);
 
 ## Safe operations around punctuation
@@ -454,7 +464,7 @@ REMOVE Adv/Neskolko IF (-1C Pr) (1 Gen) ;
 REMOVE Nom IF (-1C Pr) ;
 
 #моей as prn, if "из моей школы"
-REMOVE A IF (-1C Pr)(0 Pron OR A) ;
+REMOVE A IF (-1C Pr)(0 Pron + Poss)(0 A);
 
 REMOVE NGDAIP - Gen IF (-1C* Pr/Dlja OR Pr/U OR Pr/Do OR Pr/Ot OR Pr/Iz OR Pr/Iz-za OR Pr/Krome OR Pr/Protiv OR Pr/Posle OR Pr/Bez OR Pr/Sredi OR Pr/Okolo OR Pr/Pomimo CBARRIER (*) - Adv - Comp - DetIndecl) ;
 
@@ -1130,73 +1140,39 @@ REMOVE SUB:1 Sent IF (1 Cog) ;
 ###############################################################################
 # Test rules on ambiguous participles and adjectives (uliana)
 ###############################################################################
-REMOVE:DsmbgPtcp N IF (0 V )(-1 Comm LINK -1 N) ;
-#Большинство поляков, задержанных 12 июня, оказались жителями предместий Варшавы.
+#REMOVE N:
+#Rules:
+REMOVE:DsmbgPtcpN1 N IF (0 V + $$NGDAIP)(-1 Comm LINK -1 N + $$NGDAIP) ;
+REMOVE:DsmbgPtcpN2 N IF (0 V + $$NGDAIP)(-1 PurposeAdv)(1 N + $$NGDAIP);
 
-#Variants:
-#Поляки, задержанные 12 июня, оказались жителями предместий Варшавы.
-#Поляки из соседнего поселка, задержанные 12 июня, оказались жителями предместий Варшавы.
-#Большинство поляков из соседнего поселка, задержанных 12 июня, оказались жителями предместий Варшавы.
-#Большинство поляков, задержанных 12 июня, оказались жителями предместий Варшавы.
+#REMOVE V:
+#Rules:
+REMOVE:DsmbgPtcpV1 V IF (0 V + $$NGDAIP)((1 N + $$NGDAIP OR Pron + $$NGDAIP LINK NOT 1 Pr) OR (1 N + $$NGDAIP OR Pron + $$NGDAIP));
+REMOVE:DsmbgPtcpV2 V IF (0 V OR A)((-1 MeasureDegreeAdv) OR (-1 Ne LINK -1 MeasureDegreeAdv))(NOT 1C* Pr + Ins OR N + Ins) ;
+REMOVE:DsmbgPtcpV3 V IF (0 V OR A LINK 0 (<W=MIN>))((-1 CC LINK -1* MeasureDegreeAdv) OR (-1 Ne LINK -1 CC LINK -1* MeasureDegreeAdv))(1 Comm);
+REMOVE:DsmbgPtcpV4 V IF (0 V + $$NGDAIP OR A + $$NGDAIP)((-1 MeasureDegreeAdv) OR (-1 Ne LINK -1 MeasureDegreeAdv))(1 Pron + $$NGDAIP LINK 1 N + $$NGDAIP) ;
+REMOVE:DsmbgPtcpV5 V IF (0 V + $$NGDAIP OR A + $$NGDAIP)((-1 Adv/Cmpar) OR (-1 Ne LINK -1 Adv/Cmpar))(NOT 1 N + Ins);
+REMOVE:DsmbgPtcpV6 V IF (0 V + $$NGDAIP OR A + $$NGDAIP)((-1 N + $$NGDAIP) OR (-1 Ne LINK -1 N + $$NGDAIP))(1 (CC LINK 1 WORD LINK 1 S-BOUNDARY) OR S-BOUNDARY);
+REMOVE:DsmbgPtcpV7 V IF (0 V + $$NGDAIP OR A + $$NGDAIP)((-1 CC) OR (-1 Ne LINK -1 CC))(1 S-BOUNDARY or (WORD S-BOUNDARY));
+REMOVE:DsmbgPtcpV8 V IF (0 V + $$NGDAIP OR A + $$NGDAIP)((-1 Comm LINK -1 N + $$NGDAIP) OR (-1 Ne LINK -1 Comm LINK -1 N + $$NGDAIP))(1 Pr LINK 1 N) ;
+REMOVE:DsmbgPtcpV9 V  IF (0 V + $$NGDAIP OR A + $$NGDAIP)((-1 Adv) OR (-1 Ne LINK -1 Adv))(1 Pr LINK 1 N + $$NGDAIP) ;
+REMOVE:DsmbgPtcpV10 A IF (0 V + $$NGDAIP OR A + $$NGDAIP)((-1 N LINK -1 Adv) OR (-1 Ne LINK -1 N LINK -1 Adv))(1 CC LINK 1 V + $$NGDAIP OR A + $$NGDAIP);
 
-REMOVE:DsmbgPtcp N IF (0 V)(-1 PurposeAdv)(1 N);
-#Третье отделение по существу почти ничего о них не знало до тех пор, пока один случайно задержанный человек не оказался предателем-идеалистом: он добровольно, по самым хорошим побуждениям, выдал все тайны своих товарищей народовольцев.
+#REMOVE A
+REMOVE:DsmbgPtcpA1 A IF(0 V + $$NGDAIP OR A + $$NGDAIP)((-1 Comm LINK -1 N + $$NGDAIP) OR (-1 Ne LINK -1 Comm LINK -1 N + $$NGDAIP))(1 Pr) ;
+REMOVE:DsmbgPtcpA2 A IF (0 V + $$NGDAIP OR A + $$NGDAIP) (1 Pr LINK 1* Comm) ;
+REMOVE:DsmbgPtcpA3 A IF (0 V OR A)((-1 MeasureDegreeAdv) OR (-1 Ne LINK -1 MeasureDegreeAdv))(1 Det + Ins OR N + Ins LINK 1 N + Ins) ;
+REMOVE:DsmbgPtcpA4 A IF (0 V OR A)((-1 CC) OR (-1 Ne LINK -1 CC))(1C* Pr + Ins OR N + Ins) ;
+REMOVE:DsmbgPtcpA5 A IF (0 V + $$NGDAIP OR A + $$NGDAIP)((-1 Adv OR Pron OR A + Pred) OR (-1 Ne LINK -1 Adv OR Pron OR A + Pred))(1 (Pron|N|Det) + $$NGDAIPGenDatAccIns LINK 1 N + $$NGDAIPGenDatAccIns OR Pr + $$NGDAIPGenDatAccIns LINK 1 (N|Pron) + Anim);
+REMOVE:DsmbgPtcpA6 A IF (0 V + $$NGDAIP OR A + $$NGDAIP)((-1 Comm LINK -1 N + $$NGDAIP) OR (-1 Ne LINK -1 Comm LINK -1 N + $$NGDAIP))((1 N + Ins LINK 1 CC LINK 1 N + Ins) OR (1 N + NOTNOM OR Pron + NOTNOM));
 
-REMOVE:DsmbgPtcp V IF (0 V + $$NGDAIP OR A + $$NGDAIP)(1 N + $$NGDAIP);
-#― Вы что, знаете этого цыгана? У вас такой потерянный вид…
-#В некрологах о нем на полном серьезе: крупный художник, большой талант, выдающийся деятель.
-#Молодые люди, курящие табак, вопреки общепринятому мнению имеют довольно привлекательный вид.
+#REMOVE:DsmbgPtcpA7 A IF (0 V + $$NGDAIP OR A + $$NGDAIP)((-1 Comm LINK -1 N + $$NGDAIP OR Pron + $$NGDAIP) OR (-1 Ne LINK -1 Comm LINK -1 N + $$NGDAIP OR Pron + $$NGDAIP))(1 N + NOTNOM OR Pron + NOTNOM) ;
 
-REMOVE:DsmbgPtcp V IF (0 V + $$NGDAIP OR A + $$NGDAIP)(1 N + $$NGDAIP);
-#Я так же брожу одинокий, потерянный в толпе товарищей.
+REMOVE:DsmbgPtcpA8 A IF (0 V + $$NGDAIP OR A + $$NGDAIP)(-1 Ne LINK -1 Comm LINK -1 N + $$NGDAIP OR Pron + $$NGDAIP)((1 N + NOTNOM) OR (1 Pr LINK 1 N));
+REMOVE:DsmbgPtcpA9 A IF (0 V + $$NGDAIP OR A + $$NGDAIP)(1 Pr LINK 1 N LINK 1 N + $$NGDAIP) ;
+REMOVE:DsmbgPtcpA10 A IF (0 V + $$NGDAIP)((-1 Ne LINK -1 Comm LINK -1* N + $$NGDAIP) OR (-1 Comm LINK -1* N + $$NGDAIP))((1 N + NOTNOM OR Pron  + NOTNOM) OR (1 CC LINK 1 Ne LINK 1 Adv LINK 1 Pr LINK 1 N OR Pron) OR (1 Pr LINK 1 N OR Pron));
 
-REMOVE:DsmbgPtcp A IF(0 V + $$NGDAIP OR A + $$NGDAIP)(-1 Comm LINK -1 N + $$NGDAIP)(1 Pr) ;
-#Когда подходишь близко к стаду спящих на воде моржей, то видишь только несколько бурых бугров, выдающихся из воды и свободно уносимых течением.
-
-REMOVE:DsmbgPtcp A IF (0 V OR A)(1 Pr LINK 1 N LINK 1 N + $$NGDAIP) ;
-#МКС угрожало столкновение с потерянным на орбите болтом.(does not work for now--)
-
-REMOVE:DsmbgPtcp A IF (0 V + $$NGDAIP OR A + $$NGDAIP) (1 Pr BARRIER Comm) ;
-#Образованный в суровую военную пору, ваш институт был с самого начала ориентирован на решение самых важных, самых сложных проблем отечественной газовой индустрии.
-
-REMOVE:DsmbgPtcp A IF (0 V OR A)(-1 MeasureDegreeAdv)(1 Det + Ins OR N + Ins LINK 1 N + Ins) ;
-#Как правило, функционал подобного рода сайтов настолько продуман его разработчиками, что на интуитивном уровне понятен даже самым неискушенным в пользовании компьютером и Интернетом посетителям.
-
-#N/A
-#Это сооружение механики в разобранном виде привозят на гонки на шести трейлерах и затем собирают с помощью гидроподъемников в течение 13 часов, причем процесс этот настолько продуман и автоматизирован, что даже не требует привозить на Гран При лишних людей.
-
-REMOVE:DsmbgPtcp V IF (0 V OR A)(-1 MeasureDegreeAdv )(NOT 1C* Pr + Ins OR N + Ins) ;
-#― Так вы коллекционируете насекомых? ― спросил философ, настолько удивленный, насколько было это возможно при его характере. adj
-#― Тогда я готов пригласить вас назавтра на breakfast, ― ответил он, весьма удивленный не то нашей осведомленностью, не то нахальством, не то с ног сшибающей непосредственностью. adj not selected
-
-REMOVE:DsmbgPtcp A IF (0 V OR A)(-1 CC)(1C* Pr + Ins OR N + Ins) ;
-#«― спрашивает Дмитриев, все более и более удивленный и испуганный словами солдата.
-
-#Variants:
-#― Так вы коллекционируете насекомых? ― спросил философ, настолько удивленный этим событием, насколько было это возможно при его характере.
-
-REMOVE:DsmbgPtcp V IF (0 V OR A LINK 0 (<W=MIN>))(-1 CC BARRIER MeasureDegreeAdv)(1 Comm);
-#― Так вы коллекционируете насекомых? ― спросил философ, настолько удивленный и обиженный, насколько было это возможно при его характере.
-
-REMOVE:DsmbgPtcp A IF (0 V + $$NGDAIP OR A + $$NGDAIP)(-1 Adv OR Pron OR A + Pred)(1 (Pron|N|Det) + $$NGDAIPInsDatAcc LINK 1 N + $$NGDAIPInsDatAcc OR Pr + $$NGDAIPInsDatAcc LINK 1 (N|Pron) + Anim);
-#Выражение большой сосредоточенности и углублённости во что-то понятное ему одному и дотоле тщательно скрываемое от всех лежало на его лице ...
-
-REMOVE:DsmbgPtcp V IF (0 V + $$NGDAIP OR A + $$NGDAIP)(-1 MeasureDegreeAdv)(1 Pron + $$NGDAIP LINK 1 N + $$NGDAIP) ;
-#Шехтель очень дорожил этой своей работой, и есть очень обиженное его письмо, когда уже в советское время, всех почтили к юбилею театра наградами, а о нем не вспомнили.
-
-REMOVE:DsmbgPtcp A IF (0 V + $$NGDAIP OR A + $$NGDAIP)(-1 Comm LINK -1 N + $$NGDAIP)(1 N + Ins LINK 1 CC LINK 1 N + Ins);
-#Том и его товарищи, обиженные близкими и родителями, решаются уйти из дома.
-
-REMOVE:DsmbgPtcp V IF (0 V + $$NGDAIP OR A + $$NGDAIP)(-1 Adv/Cmpar)(NOT 1 N + Ins);
-#Менее одаренный природой человек может стать более развитым, чем более одаренный, развитием которого никто не занимался.
-
-REMOVE:DsmbgPtcp V IF (0 V + $$NGDAIP OR A + $$NGDAIP)(-1 N + $$NGDAIP)(1 (CC LINK 1 WORD LINK 1 S-BOUNDARY) OR S-BOUNDARY);
-#Как класс правящий и порабощенный.
-
-REMOVE:DsmbgPtcp V IF (0 V + $$NGDAIP OR A + $$NGDAIP)(-1 CC)(1 S-BOUNDARY or (WORD S-BOUNDARY));
-#Variation: Как класс порабощенный и правящий.
-
-
+SELECT:DsmbgPtcpA0 A + $$NGDAIP IF (-1C Samyj + $$NGDAIP) ; #from safe lexicalised operations
 
 ###############################################################################
 # Weighting rules
@@ -1228,3 +1204,7 @@ SELECT:maxweight (<W=MAX>) ;
 
 #SELECT Prop IF (-1 Quot) (0 Prop OR N) (1 Quot) ;
   #! «Мамонт», которое по-гречески значит «материнский», ...
+
+#моей as prn, if "из моей школы"
+#REMOVE A IF (-1C Pr)(0 Pron OR A);
+#(1) it also covers "человек с говорящей фамилией", because of "either or" condition "0 Pron OR A", (2) мой is not defined as an adj in the lexicon

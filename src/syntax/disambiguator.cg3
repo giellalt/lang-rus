@@ -348,7 +348,7 @@ SET S-BOUNDARY = CS | Interr | (";") | BOS | EOS ;
 # Case sets
 
 # Some case, but not...
-SET NOTNOM = Dat | Gen | Acc | Ins ;
+SET NOTNOMPREP = Dat | Gen | Acc | Ins ;
 
 # Anything but the following case...
 SET NOACC = WORD - Acc ;
@@ -1144,35 +1144,106 @@ REMOVE SUB:1 Sent IF (1 Cog) ;
 #Rules:
 REMOVE:DsmbgPtcpN1 N IF (0 V + $$NGDAIP)(-1 Comm LINK -1 N + $$NGDAIP) ;
 REMOVE:DsmbgPtcpN2 N IF (0 V + $$NGDAIP)(-1 PurposeAdv)(1 N + $$NGDAIP);
+##Тут цвет какого-то нового общества, ещё не устоявшегося, ещё кипящего в водовороте отбора, ещё в этом водовороте не выработались окончательные правила, говорящие "да" и "нет", но уже вознесённого на гребень успеха. ==> говорящие
 
 #REMOVE V:
+
 #Rules:
-REMOVE:DsmbgPtcpV1 V IF (0 V + $$NGDAIP)((1 N + $$NGDAIP OR Pron + $$NGDAIP LINK NOT 1 Pr) OR (1 N + $$NGDAIP OR Pron + $$NGDAIP));
-REMOVE:DsmbgPtcpV2 V IF (0 V OR A)((-1 MeasureDegreeAdv) OR (-1 Ne LINK -1 MeasureDegreeAdv))(NOT 1C* Pr + Ins OR N + Ins) ;
-REMOVE:DsmbgPtcpV3 V IF (0 V OR A LINK 0 (<W=MIN>))((-1 CC LINK -1* MeasureDegreeAdv) OR (-1 Ne LINK -1 CC LINK -1* MeasureDegreeAdv))(1 Comm);
-REMOVE:DsmbgPtcpV4 V IF (0 V + $$NGDAIP OR A + $$NGDAIP)((-1 MeasureDegreeAdv) OR (-1 Ne LINK -1 MeasureDegreeAdv))(1 Pron + $$NGDAIP LINK 1 N + $$NGDAIP) ;
-REMOVE:DsmbgPtcpV5 V IF (0 V + $$NGDAIP OR A + $$NGDAIP)((-1 Adv/Cmpar) OR (-1 Ne LINK -1 Adv/Cmpar))(NOT 1 N + Ins);
-REMOVE:DsmbgPtcpV6 V IF (0 V + $$NGDAIP OR A + $$NGDAIP)((-1 N + $$NGDAIP) OR (-1 Ne LINK -1 N + $$NGDAIP))(1 (CC LINK 1 WORD LINK 1 S-BOUNDARY) OR S-BOUNDARY);
-REMOVE:DsmbgPtcpV7 V IF (0 V + $$NGDAIP OR A + $$NGDAIP)((-1 CC) OR (-1 Ne LINK -1 CC))(1 S-BOUNDARY or (WORD S-BOUNDARY));
-REMOVE:DsmbgPtcpV8 V IF (0 V + $$NGDAIP OR A + $$NGDAIP)((-1 Comm LINK -1 N + $$NGDAIP) OR (-1 Ne LINK -1 Comm LINK -1 N + $$NGDAIP))(1 Pr LINK 1 N) ;
-REMOVE:DsmbgPtcpV9 V  IF (0 V + $$NGDAIP OR A + $$NGDAIP)((-1 Adv) OR (-1 Ne LINK -1 Adv))(1 Pr LINK 1 N + $$NGDAIP) ;
-REMOVE:DsmbgPtcpV10 A IF (0 V + $$NGDAIP OR A + $$NGDAIP)((-1 N LINK -1 Adv) OR (-1 Ne LINK -1 N LINK -1 Adv))(1 CC LINK 1 V + $$NGDAIP OR A + $$NGDAIP);
+REMOVE:DsmbgPtcpV1 V IF (0 V + $$NGDAIP OR A + $$NGDAIP)(1 N + $$NGDAIP OR Pron + $$NGDAIP LINK NOT 1 Pr LINK 1 N OR Pron);
+#if in the cohort there is an adjectival or verbal reading
+#to the right: a noun or a pronoun agreeing in case with V in the context 0, followed by a preposition
+#Для умных и думающих людей хочу напомнить: подготовка квалифицированных учителей – русистов в Азербайджане началась с 30-х годов прошлого века. ==> квалифицированных
+
+REMOVE:DsmbgPtcpV2 V IF (0 V OR A)((-1 MeasureDegreeAdv OR Det OR Pron + Poss) OR (-1 Ne LINK -1 MeasureDegreeAdv OR Det))((NOT 1C** Pr LINK 1 N OR Pron OR Det) OR (NOT 1C** Pron + (Ins|Dat|Acc) OR N + (Ins|Dat|Acc) OR Det + (Ins|Dat|Acc))) ;
+#Это сооружение механики в разобранном виде привозят на гонки на шести трейлерах и затем собирают с помощью гидроподъемников в течение 13 часов, причем процесс этот настолько продуман и автоматизирован, что даже не требует привозить на Гран При лишних людей. ==>  настолько продуман
+#Вернувшись, рассказал, что доклад М. был очень продуман, отчетлив и верно излагал основные мысли Ни.
+#― Так вы коллекционируете насекомых? ― спросил философ, настолько удивленный и обиженный, насколько было это возможно при его характере. ==> удивленный
+
+REMOVE:DsmbgPtcpV3 V IF (0 V OR A LINK 0 (<W=MIN>))((-1 CC LINK -1* MeasureDegreeAdv OR Det OR Pron + Poss) OR (-1 Ne LINK -1 CC LINK -1* MeasureDegreeAdv))(1 Comm);
+#― Так вы коллекционируете насекомых? ― спросил философ, настолько удивленный и обиженный, насколько было это возможно при его характере. ==> и обиженный
+#Это сооружение механики в разобранном виде привозят на гонки на шести трейлерах и затем собирают с помощью гидроподъемников в течение 13 часов, причем процесс этот настолько продуман и автоматизирован, что даже не требует привозить на Гран При лишних людей. ==>  и автоматизирован
+
+REMOVE:DsmbgPtcpV4 V IF (0 V + $$NGDAIP OR A + $$NGDAIP)((-1 MeasureDegreeAdv OR Det) OR (-1 Ne LINK -1 MeasureDegreeAdv OR Det) OR (-1 V))(1 Pron + $$NGDAIP LINK 1 N + $$NGDAIP) ;
+#Шехтель очень дорожил этой своей работой, и есть очень обиженное его письмо, когда уже в советское время, всех почтили к юбилею театра наградами, а о нем не вспомнили.
+
+REMOVE:DsmbgPtcpV5 V IF (0 V OR A )((-1 Adv/Cmpar) OR (-1 Ne LINK -1 Adv/Cmpar))(NOT 1C* N + NOTNOMPREP OR Pron + NOTNOMPREP);
+#Менее одаренный природой человек может стать более развитым, чем более одаренный, развитием которого никто не занимался.
+
+REMOVE:DsmbgPtcpV6 V IF (0 V + $$NGDAIP OR A + $$NGDAIP)((-1 N + $$NGDAIP OR Pron + $$NGDAIP) OR (-1 Ne LINK -1 N + $$NGDAIP))(1 (CC LINK 1 WORD LINK 1 S-BOUNDARY) OR S-BOUNDARY);
+
+REMOVE:DsmbgPtcpV7 V IF (0 V OR A)((-1 CC) OR (-1 Ne LINK -1 CC))(1* S-BOUNDARY or (WORD S-BOUNDARY));
+#Фурсенко отмечает, что и повышенные зарплаты по-прежнему недотягивают до справедливого уровня.
+#Variation: Как класс порабощенный и правящий. ==> правящий
+#Для умных и думающих людей хочу напомнить: подготовка квалифицированных учителей – русистов в Азербайджане началась с 30-х годов прошлого века. ==> думающих
+
+REMOVE:DsmbgPtcpV8 V  IF (0 V + $$NGDAIP OR A + $$NGDAIP)((-1 Adv) OR (-1 Ne LINK -1 Adv))(1 Pr LINK 1 N + $$NGDAIP) ;
+
+REMOVE:DsmbgPtcpV9 V IF (0 V + $$NGDAIP OR A + $$NGDAIP)((-1 N LINK -1 A OR Det OR Pron + Poss OR Adv) OR (-1 Ne LINK -1 N LINK -1 Adv OR A OR Pron + Poss OR Adv) OR (-1 V LINK -1 N + $$NGDAIP OR Pron + $$NGDAIP OR Adv) OR (-1 Ne LINK -1 V LINK -1 N + $$NGDAIP OR Pron + $$NGDAIP OR Adv))((1 CC LINK 1 V + $$NGDAIP OR A + $$NGDAIP) OR (1 S-BOUNDARY OR CC));
+#Ладно, что ж… давай показывай. Располнел; да и взгляд был загнанный.
+#Как класс правящий и порабощенный. ==> правящий
+#rule 776 also works here on "загнать" V Perf TV PstPss Msc Inan Sg Acc <W:2.2045135498>
+
+REMOVE:DsmbgPtcpV10 V IF (0 V + $$NGDAIP OR A + $$NGDAIP)((-1 Adv) OR (-1 Adv LINK -1 Adv) OR (-1 CC LINK -1 A OR N) OR (-1 V))(1 N + $$NGDAIP);
+#Поэтому к гидроизоляционным материалам, используемым на подобных кровлях, предъявляются повышенные требования.
+#Если бы он курил, то он непременно курил бы сейчас, как это обычно делают курящие люди в задумчивости. ==> курящие
+
+REMOVE:DsmbgPtcpV11 V IF (0 V + Gen OR A + Gen)((-1 Adv) OR (-1 Adv LINK -1 Adv) OR (-1 CC LINK -1 A OR N) OR (-1 N) OR (-1 N LINK -1 Ne))(1 N + Gen);
+#Variant: #Поэтому к гидроизоляционным материалам, используемым на подобных кровлях, предъявляется список повышенных требований.
+
+REMOVE:DsmbgPtcpV12 V IF (0 V + $$NGDAIP OR A + $$NGDAIP)(-1 CC OR Comm LINK -1 A)(1 Comm OR CC);
+#Поэтому, чтобы нами управляли, руководили, считали там, люди компетентные, знающие, думающие и не просто за зарплату, а за совесть работающие, думающие о людях. ==> , знающие, думающие
+
+REMOVE:DsmbgPtcpV13 V IF (0 V + $$NGDAIP OR A + $$NGDAIP)(1 N + $$NGDAIP OR Pron + $$NGDAIP LINK NOT 1 Pr);
+#В некрологах о нем на полном серьезе: крупный художник, большой талант, выдающийся деятель.
+
 
 #REMOVE A
-REMOVE:DsmbgPtcpA1 A IF(0 V + $$NGDAIP OR A + $$NGDAIP)((-1 Comm LINK -1 N + $$NGDAIP) OR (-1 Ne LINK -1 Comm LINK -1 N + $$NGDAIP))(1 Pr) ;
-REMOVE:DsmbgPtcpA2 A IF (0 V + $$NGDAIP OR A + $$NGDAIP) (1 Pr LINK 1* Comm) ;
-REMOVE:DsmbgPtcpA3 A IF (0 V OR A)((-1 MeasureDegreeAdv) OR (-1 Ne LINK -1 MeasureDegreeAdv))(1 Det + Ins OR N + Ins LINK 1 N + Ins) ;
-REMOVE:DsmbgPtcpA4 A IF (0 V OR A)((-1 CC) OR (-1 Ne LINK -1 CC))(1C* Pr + Ins OR N + Ins) ;
-REMOVE:DsmbgPtcpA5 A IF (0 V + $$NGDAIP OR A + $$NGDAIP)((-1 Adv OR Pron OR A + Pred) OR (-1 Ne LINK -1 Adv OR Pron OR A + Pred))(1 (Pron|N|Det) + $$NGDAIPGenDatAccIns LINK 1 N + $$NGDAIPGenDatAccIns OR Pr + $$NGDAIPGenDatAccIns LINK 1 (N|Pron) + Anim);
-REMOVE:DsmbgPtcpA6 A IF (0 V + $$NGDAIP OR A + $$NGDAIP)((-1 Comm LINK -1 N + $$NGDAIP) OR (-1 Ne LINK -1 Comm LINK -1 N + $$NGDAIP))((1 N + Ins LINK 1 CC LINK 1 N + Ins) OR (1 N + NOTNOM OR Pron + NOTNOM));
 
-#REMOVE:DsmbgPtcpA7 A IF (0 V + $$NGDAIP OR A + $$NGDAIP)((-1 Comm LINK -1 N + $$NGDAIP OR Pron + $$NGDAIP) OR (-1 Ne LINK -1 Comm LINK -1 N + $$NGDAIP OR Pron + $$NGDAIP))(1 N + NOTNOM OR Pron + NOTNOM) ;
+REMOVE:DsmbgPtcpA1 A IF (0 V + $$NGDAIP OR A + $$NGDAIP)((-1 Ne LINK -1 Comm LINK -1* N + $$NGDAIP OR Pron + $$NGDAIP) OR (-1 Comm LINK -1* N + $$NGDAIP))((1 N + NOTNOMPREP OR Pron  + NOTNOMPREP) OR (1 CC LINK 1 Ne LINK 1 Adv LINK 1 Pr LINK 1 N OR Pron) OR (1 Pr LINK 1 N OR Pron));
+#Особую склонность избегать самостоятельных решений проявляют в японском деловом мире люди, только что повышенные в ранге.
+#Ястржембский, паркетный царедворец, не знающий свиста пуль, сделавший карьеру на том, что выносил за Ельциным ночную вазу, учит нас правильно понимать.
 
-REMOVE:DsmbgPtcpA8 A IF (0 V + $$NGDAIP OR A + $$NGDAIP)(-1 Ne LINK -1 Comm LINK -1 N + $$NGDAIP OR Pron + $$NGDAIP)((1 N + NOTNOM) OR (1 Pr LINK 1 N));
-REMOVE:DsmbgPtcpA9 A IF (0 V + $$NGDAIP OR A + $$NGDAIP)(1 Pr LINK 1 N LINK 1 N + $$NGDAIP) ;
-REMOVE:DsmbgPtcpA10 A IF (0 V + $$NGDAIP)((-1 Ne LINK -1 Comm LINK -1* N + $$NGDAIP) OR (-1 Comm LINK -1* N + $$NGDAIP))((1 N + NOTNOM OR Pron  + NOTNOM) OR (1 CC LINK 1 Ne LINK 1 Adv LINK 1 Pr LINK 1 N OR Pron) OR (1 Pr LINK 1 N OR Pron));
+REMOVE:DsmbgPtcpA2 A IF (0 V + $$NGDAIP OR A + $$NGDAIP)((-1 Ne LINK -1 Comm LINK -1* N + $$NGDAIP OR Pron + $$NGDAIP) OR (-1 Comm LINK -1* N + $$NGDAIP))((1 N + NOTNOMPREP OR Pron  + NOTNOMPREP) OR (1 CC LINK 1 Ne LINK 1 Adv LINK 1 Pr LINK 1 N OR Pron) OR (1 Pr LINK 1 N OR Pron));
+#Поэтому, чтобы нами управляли, руководили, считали там, люди компетентные, знающие, думающие и не просто за зарплату, а за совесть работающие, думающие о людях.  ==> ,думающие о людях
+#Когда подходишь близко к стаду спящих на воде моржей, то видишь только несколько бурых бугров, выдающихся из воды и свободно уносимых течением. ==> выдающихся из
+#Да и интеллектуальные тоже, люди, правящие миром, неспроста добились своего положения.
 
-SELECT:DsmbgPtcpA0 A + $$NGDAIP IF (-1C Samyj + $$NGDAIP) ; #from safe lexicalised operations
+REMOVE:DsmbgPtcpA3 A IF(0 V + $$NGDAIP OR A + $$NGDAIP)((-1 Comm LINK -1 N + $$NGDAIP OR Pron + $$NGDAIP) OR (-1 Ne LINK -1 Comm LINK -1 N + $$NGDAIP OR Pron + $$NGDAIP))(1 Pr) ;
+#Отсюда его знаменитые бегства — то, что так поражало людей, мало его знающих, и нравилось женщинам.
+
+REMOVE:DsmbgPtcpA4 A IF (0 V + $$NGDAIP OR A + $$NGDAIP) (1 Pr LINK 1* Comm) ;
+#Образованный в суровую военную пору, ваш институт был с самого начала ориентирован на решение самых важных, самых сложных проблем отечественной газовой индустрии. ==> Образованный
+#Пройдя первый двор и оказавшись в точно таком же втором, Ирка высунула нос из-за своего невероятного букета и, заприметив мирно курящих в стороне мальчишек, подгребла к ним. ==> курящих
+#Когда подходишь близко к стаду спящих на воде моржей, то видишь только несколько бурых бугров, выдающихся из воды и свободно уносимых течением. ==> спящих на
+
+REMOVE:DsmbgPtcpA5 A IF (0 V OR A)((-1 N LINK -1 Pr) OR (-1 N LINK -1 Det OR A LINK -1 Pr) OR (-1 N LINK -1 Pr) OR (-1 Adv))(1 Pr LINK 1 N) ;
+#Образованный в суровую военную пору, ваш институт был с самого начала ориентирован на решение самых важных, самых сложных проблем отечественной газовой индустрии. ==> ориентирован
+
+REMOVE:DsmbgPtcpA6 A IF (0 V OR A)((-1 MeasureDegreeAdv) OR (-1 MeasureDegreeAdv LINK -1 Adv) OR (-1 Ne LINK -1 MeasureDegreeAdv) OR (-1 Ne LINK -1 MeasureDegreeAdv LINK -1 Adv))(1 Pron + NOTNOMPREP OR Pron + Poss + NOTNOMPREP OR N + NOTNOMPREP OR A + NOTNOMPREP OR Det + NOTNOMPREP);
+#Как правило, функционал подобного рода сайтов настолько продуман его разработчиками, что на интуитивном уровне понятен даже самым неискушенным в пользовании компьютером и Интернетом посетителям. ==> продуман
+
+REMOVE:DsmbgPtcpA7 A IF (0 V OR A)((-1 CC) OR (-1 Ne LINK -1 CC) OR (-1 MeasureDegreeAdv) OR (-1 MeasureDegreeAdv LINK -1 Adv) OR (-1 Ne LINK -1 MeasureDegreeAdv) OR (-1 Ne LINK -1 MeasureDegreeAdv LINK -1 Adv) )(1 CC LINK 1 A + NOTNOMPREP OR Pron + NOTNOMPREP OR Det + NOTNOMPREP LINK 1 N + NOTNOMPREP) ;
+#― Тогда я готов пригласить вас назавтра на breakfast, ― ответил он, весьма удивленный не то нашей осведомленностью, не то нахальством, не то с ног сшибающей непосредственностью. adj not selected
+#«― спрашивает Дмитриев, все более и более удивленный и испуганный словами солдата. ==> удивленный, испуганный
+
+REMOVE:DsmbgPtcpA8 A IF (0 V + $$NGDAIP OR A + $$NGDAIP)((-1 Comm LINK -1 N + $$NGDAIP OR Pron + $$NGDAIP) OR (-1 Ne LINK -1 Comm LINK -1 N + $$NGDAIP OR Pron + $$NGDAIP))((1 N + Ins LINK 1 CC LINK 1 N + Ins or Pron + Ins) OR (1 N + NOTNOMPREP OR Pron + NOTNOMPREP));
+
+REMOVE:DsmbgPtcpA9 A IF (0 V + $$NGDAIP OR A + $$NGDAIP)(-1 Ne LINK -1 Comm LINK -1 N + $$NGDAIP OR Pron + $$NGDAIP)((1 N + NOTNOMPREP or Pron + NOTNOMPREP) OR (1 Pr LINK 1 N or Pron));
+
+REMOVE:DsmbgPtcpA10 A IF (0 V + $$NGDAIP OR A + $$NGDAIP)(1 Pr LINK 1 N LINK 1 N + $$NGDAIP) ;
+#МКС угрожало столкновение с потерянным на орбите болтом.(does not work as the rule 467 replaces it. Without 467 it works.)
+#Длинные, красивые, блестящие на солнце волосы - это мечта любой женщины. ==> блестящие
+
+REMOVE:DsmbgPtcpA11 A IF (0 V + $$NGDAIP OR A + $$NGDAIP)((-1 Comm LINK -1 N + $$NGDAIP) OR (-1 Ne LINK -1 Comm LINK -1 N + $$NGDAIP))(1 Pr LINK 1 N) ;
+
+REMOVE:DsmbgPtcp12 A IF (0 V + $$NGDAIP)(-1 Comm LINK -1** N + $$NGDAIP)(1** N + NOTNOMPREP OR Pron  + NOTNOMPREP);
+#Тут цвет какого-то нового общества, ещё не устоявшегося, ещё кипящего в водовороте отбора, ещё в этом водовороте не выработались окончательные правила, говорящие "да" и "нет", но уже вознесённого на гребень успеха.
+
+REMOVE:DsmbgPtcp13 V IF (0 V OR A LINK 0 (<W=MIN>))(-1 CC LINK -1* MeasureDegreeAdv)(1 Comm);
+
+#SELECT A:
+
+SELECT:DsmbgPtcpA0 A + $$NGDAIP IF (-1C Samyj + $$NGDAIP OR Adv/Cmpar )(0 A OR V)(0 A LINK 0 (<W=MIN>)) ; #from safe lexicalised operations
 
 ###############################################################################
 # Weighting rules

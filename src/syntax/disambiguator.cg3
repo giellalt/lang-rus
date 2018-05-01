@@ -1143,15 +1143,21 @@ REMOVE SUB:1 Sent IF (1 Cog) ;
 #REMOVE N:
 #Rules:
 REMOVE:DsmbgPtcpN1 N IF (0 V + $$NGDAIP)(-1 Comm LINK -1 N + $$NGDAIP) ;
+#Тут цвет какого-то нового общества, ещё не устоявшегося, ещё кипящего в водовороте отбора, ещё в этом водовороте не выработались окончательные правила, говорящие "да" и "нет", но уже вознесённого на гребень успеха. ==> говорящие
+
 REMOVE:DsmbgPtcpN2 N IF (0 V + $$NGDAIP)(-1 PurposeAdv)(1 N + $$NGDAIP);
-##Тут цвет какого-то нового общества, ещё не устоявшегося, ещё кипящего в водовороте отбора, ещё в этом водовороте не выработались окончательные правила, говорящие "да" и "нет", но уже вознесённого на гребень успеха. ==> говорящие
+
+REMOVE:DsmbgPtcpN3 N IF (0 V + $$NGDAIP)((1 N + $$NGDAIP) OR (1 Pr LINK 1 N LINK 1 N + $$NGDAIP));
+#Variant
+#Курящие в стороне люди.
+
+REMOVE:DsmbgPtcpN4 N IF (0 V + $$NGDAIP)(-1 Comm LINK -1 N + $$NGDAIP)(1 Num LINK 1 N);
+#optional rule
 
 #REMOVE V:
 
 #Rules:
 REMOVE:DsmbgPtcpV1 V IF (0 V + $$NGDAIP OR A + $$NGDAIP)(1 N + $$NGDAIP OR Pron + $$NGDAIP LINK NOT 1 Pr LINK 1 N OR Pron);
-#if in the cohort there is an adjectival or verbal reading
-#to the right: a noun or a pronoun agreeing in case with V in the context 0, followed by a preposition
 #Для умных и думающих людей хочу напомнить: подготовка квалифицированных учителей – русистов в Азербайджане началась с 30-х годов прошлого века. ==> квалифицированных
 
 REMOVE:DsmbgPtcpV2 V IF (0 V OR A)((-1 MeasureDegreeAdv OR Det OR Pron + Poss) OR (-1 Ne LINK -1 MeasureDegreeAdv OR Det))((NOT 1C** Pr LINK 1 N OR Pron OR Det) OR (NOT 1C** Pron + (Ins|Dat|Acc) OR N + (Ins|Dat|Acc) OR Det + (Ins|Dat|Acc))) ;
@@ -1195,7 +1201,6 @@ REMOVE:DsmbgPtcpV12 V IF (0 V + $$NGDAIP OR A + $$NGDAIP)(-1 CC OR Comm LINK -1 
 
 REMOVE:DsmbgPtcpV13 V IF (0 V + $$NGDAIP OR A + $$NGDAIP)(1 N + $$NGDAIP OR Pron + $$NGDAIP LINK NOT 1 Pr);
 #В некрологах о нем на полном серьезе: крупный художник, большой талант, выдающийся деятель.
-
 
 #REMOVE A
 

@@ -761,8 +761,8 @@ SELECT Gen IF (-1C N LINK 0 NGDAIP - Gen) (0C A) (1C N + Gen) ;
 
 REMOVE Short IF (0 Pr/Soglasno) (1 Dat) ;
 
-SELECT A + $$NGDAIP IF (1C* N + $$NGDAIP BARRIER Punct OR Pr OR Lparen OR NGDAIP - $$NGDAIP LINK -1C* A + $$NGDAIP BARRIER Punct OR Pr OR Lparen OR NGDAIP - $$NGDAIP);
-   #! Движущей силой в поездах являются локомотивы, использующие электричество или производящие собственную мощность, обычно дизельными двигателями.
+SELECT:DsmbgPtcpV A + $$NGDAIP IF (1C* N + $$NGDAIP BARRIER Punct OR Pr OR Lparen OR NGDAIP - $$NGDAIP LINK -1C* A + $$NGDAIP BARRIER Punct OR Pr OR Lparen OR NGDAIP - $$NGDAIP);
+#! Движущей силой в поездах являются локомотивы, использующие электричество или производящие собственную мощность, обычно дизельными двигателями.
 
 SELECT Acc IF (-1 Pr/Na OR Pr/V) (0C Modif) (0C Acc OR Prp) (1C N + Acc);
 
@@ -1154,6 +1154,9 @@ REMOVE:DsmbgPtcpN3 N IF (0 V + $$NGDAIP)((1 N + $$NGDAIP) OR (1 Pr LINK 1 N LINK
 REMOVE:DsmbgPtcpN4 N IF (0 V + $$NGDAIP)(-1 Comm LINK -1 N + $$NGDAIP)(1 Num LINK 1 N);
 #optional rule
 
+REMOVE:DsmbgPtcpN5 V IF (0 V + $$NGDAIP OR N + $$NGDAIP)(-1 Comm LINK -1 N)(1 Pr);
+#...написанные руководителями команд, участвующих в RoboCup.
+
 #REMOVE V:
 
 #Rules:
@@ -1202,6 +1205,11 @@ REMOVE:DsmbgPtcpV12 V IF (0 V + $$NGDAIP OR A + $$NGDAIP)(-1 CC OR Comm LINK -1 
 REMOVE:DsmbgPtcpV13 V IF (0 V + $$NGDAIP OR A + $$NGDAIP)(1 N + $$NGDAIP OR Pron + $$NGDAIP LINK NOT 1 Pr);
 #В некрологах о нем на полном серьезе: крупный художник, большой талант, выдающийся деятель.
 
+#Additional rules:
+
+REMOVE:DsmbgPtcpV14 V IF (0 A + $$NGDAIP OR V + $$NGDAIP)(1 A + $$NGDAIP LINK 1 N + $$NGDAIP);
+#При сохранении без изменений существующей социально-политической системы.
+
 #REMOVE A
 
 REMOVE:DsmbgPtcpA1 A IF (0 V + $$NGDAIP OR A + $$NGDAIP)((-1 Ne LINK -1 Comm LINK -1* N + $$NGDAIP OR Pron + $$NGDAIP) OR (-1 Comm LINK -1* N + $$NGDAIP))((1 N + NOTNOMPREP OR Pron  + NOTNOMPREP) OR (1 CC LINK 1 Ne LINK 1 Adv LINK 1 Pr LINK 1 N OR Pron) OR (1 Pr LINK 1 N OR Pron));
@@ -1245,6 +1253,9 @@ REMOVE:DsmbgPtcp12 A IF (0 V + $$NGDAIP)(-1 Comm LINK -1** N + $$NGDAIP)(1** N +
 #Тут цвет какого-то нового общества, ещё не устоявшегося, ещё кипящего в водовороте отбора, ещё в этом водовороте не выработались окончательные правила, говорящие "да" и "нет", но уже вознесённого на гребень успеха.
 
 REMOVE:DsmbgPtcp13 V IF (0 V OR A LINK 0 (<W=MIN>))(-1 CC LINK -1* MeasureDegreeAdv)(1 Comm);
+
+REMOVE:DsmbgPtcp14 A IF (0 V + $$NGDAIP OR A + $$NGDAIP)(-1 Comm LINK -1 N)(1 Adv OR Kak);
+#Учеников, мыслящих иначе, мы готовы немедленно занести в списки нерадивых.
 
 #SELECT A:
 

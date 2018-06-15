@@ -1,0 +1,90 @@
+LEXICON abbr
++Abbr: # ;
+
+LEXICON abbr.
+!.+Abbr+Use/NG: # ;
+abbr.sent ;
+
+LEXICON abbr.sent
+.+Abbr:. # ;
+.+Abbr#.+SENT:. # ;
+
+LEXICON Abbreviation
+PS:PS abbr ;
+тыс:тыс abbr. ;
+лат:лат abbr. ;
+в:в abbr. ;
+вв:вв abbr. ;
+мм:мм abbr. ;
+км:км abbr. ;
+кв:кв abbr. ; 
+км²:км² abbr ;
+км³:км³ abbr ;
+г:г abbr. ;
+гг:гг abbr. ;
+млн:млн abbr. ;
+руб:руб abbr. ;
+млрд:млрд abbr. "weight: 4.731925026643751" ;
+напр:напр abbr. ;
+см:см abbr. ;
+св:св abbr. ; 
+и% т.% п:и% т.% п abbr.sent ;
+и% т.%п:и% т.%п abbr.sent ;
+и% т.% д:и% т.% д abbr.sent ;
+и% т.%д:и% т.%д abbr.sent ;
+и% др:и% др abbr.sent ;
+им:им abbr.sent ;
+н.% э:н.% э abbr.sent ;
+н.э:н.э abbr.sent ;
+т.% е:т.% е abbr. ;
+т.е:т.е abbr. ;
+А:А abbr. ;
+Б:Б abbr. ;
+В:В abbr. ;
+Г:Г abbr. ;
+Д:Д abbr. ;
+Е:Е abbr. ;
+Ё:Ё abbr. ;
+Ж:Ж abbr. ;
+З:З abbr. ;
+И:И abbr. ;
+Й:Й abbr. ;
+К:К abbr. ;
+Л:Л abbr. ;
+М:М abbr. ;
+Н:Н abbr. ;
+О:О abbr. ;
+П:П abbr. ;
+Р:Р abbr. ;
+С:С abbr. ;
+Т:Т abbr. ;
+У:У abbr. ;
+Ф:Ф abbr. ;
+Х:Х abbr. ;
+Ц:Ц abbr. ;
+Ч:Ч abbr. ;
+Ш:Ш abbr. ;
+Щ:Щ abbr. ;
+Ъ:Ъ abbr. ;
+Ы:Ы abbr. ;
+Ь:Ь abbr. ;
+Э:Э abbr. ;
+Ю:Ю abbr. ;
+Я:Я abbr. ;
+Дж:Дж abbr. ; 
+°C:°C abbr ; 
+°F:°F abbr ; 
+
+№:№ abbr ;
+№№:№№ abbr ;
+\$:\$ abbr ;
+\¢:\¢ abbr ;
+\€:\€ abbr ;
+\£:\£ abbr ;
+\￡:\￡ abbr ;
+\¥:\¥ abbr ;
+\￥:\￥ abbr ;
+
+!http\://:http\:// abbr ;
+!https\://:https\:// abbr ;
+

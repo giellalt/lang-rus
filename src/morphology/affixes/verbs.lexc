@@ -6744,7 +6744,7 @@ LEXICON PastPass_нн_end_Fac
 
 !! Derivation of lexicalized participial forms
 
-LEXICON LexicalizedParticiple
+LEXICON Lxc
 +Lxc: PresAct ;
 +Lxc: PresAct_Prb ;
 +Lxc: PresAct_Fac ;

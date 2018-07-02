@@ -6742,88 +6742,35 @@ LEXICON PastPass_нн_end_Fac
 +PstPss:нн LF_stem_Fac "weight: -0.626080481" ;
 +PstPss:н SF_b_Fac "weight: -0.626080481" ;
 
-!! Derivation of participial forms
+!! Derivation of lexicalized participial forms
 
-LEXICON PresActLxc
-PresAct+Lxc ;
-
-LEXICON PresAct_PrbLxc
-PresAct_Prb+Lxc ;
-
-LEXICON PresAct_FacLxc
-PresAct_Fac+Lxc ;
-
-LEXICON PresAct_SubLxc
-PresAct_Sub+Lxc ;
-
-LEXICON PresAct_RLxc
-PresAct_R+Lxc ;
-
-LEXICON PresAct_R_PrbLxc
-PresAct_R_Prb+Lxc ;
-
-LEXICON PresAct_R_FacLxc
-PresAct_R_Fac+Lxc ;
-
-LEXICON PresAct_R_SubLxc
-PresAct_R_Sub+Lxc ;
-
-LEXICON PresAct_PassLxc
-PresAct_Pass+Lxc ;
-
-LEXICON PresAct_Pass_PrbLxc
-PresAct_Pass_Prb+Lxc ;
-
-LEXICON PresAct_Pass_FacLxc
-PresAct_Pass_Fac+Lxc ;
-
-LEXICON PresPassLxc
-PresPass+Lxc ;
-
-LEXICON PresPass_PrbLxc
-PresPass_Prb+Lxc ;
-
-LEXICON PresPass_AntLxc
-PresPass_Ant+Lxc ;
-
-LEXICON PastActLxc
-PastAct+Lxc ;
-
-LEXICON PastAct_RLxc
-PastAct_R+Lxc ;
-
-LEXICON PastAct_R_FacLxc
-PastAct_R_Fac+Lxc ;
-
-LEXICON PastAct_PassLxc
-PastAct_Pass+Lxc ;
-
-LEXICON PastAct_FacLxc
-PastAct_Fac+Lxc ;
-
-LEXICON PastPass_stemLxc
-PastPass_stem+Lxc ;
-
-LEXICON PastPass_stem_PrbLxc
-PastPass_stem_Prb+Lxc ;
-
-LEXICON PastPass_stem_FacLxc
-PastPass_stem_Fac+Lxc ;
-
-LEXICON PastPass_нн_stemLxc
-PastPass_нн_stem+Lxc ;
-
-LEXICON PastPass_нн_stem_FacLxc
-PastPass_нн_stem_Fac+Lxc ;
-
-LEXICON PastPass_нн_stem_PrbLxc
-PastPass_нн_stem_Prb+Lxc ;
-
-LEXICON PastPass_нн_endLxc
-PastPass_нн_end+Lxc ;
-
-LEXICON PastPass_нн_end_PrbLxc
-PastPass_нн_end_Prb+Lxc ;
-
-LEXICON PastPass_нн_end_FacLxc
-PastPass_нн_end_Fac+Lxc ;
+LEXICON lxc
++Lxc: PresAct ;
++Lxc: PresAct_Prb ;
++Lxc: PresAct_Fac ;
++Lxc: PresAct_Sub ;
++Lxc: PresAct_R ;
++Lxc: PresAct_R ;
++Lxc: PresAct_R_Prb ;
++Lxc: PresAct_R_Fac ;
++Lxc: PresAct_R_Sub ;
++Lxc: PresAct_Pass ;
++Lxc: PresAct_Pass_Prb ;
++Lxc: PresAct_Pass_Fac ;
++Lxc: PresPass ;
++Lxc: PresPass_Prb ;
++Lxc: PresPass_Ant ;
++Lxc: PastAct ;
++Lxc: PastAct_R ;
++Lxc: PastAct_R_Fac ;
++Lxc: PastAct_Pass ;
++Lxc: PastAct_Fac ;
++Lxc: PastPass_stem ;
++Lxc: PastPass_stem_Prb ;
++Lxc: PastPass_stem_Fac ;
++Lxc: PastPass_нн_stem ;
++Lxc: PastPass_нн_stem_Fac ;
++Lxc: PastPass_нн_stem_Prb ;
++Lxc: PastPass_нн_end ;
++Lxc: PastPass_нн_end_Prb ;
++Lxc: PastPass_нн_end_Fac ;

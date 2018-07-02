@@ -89,6 +89,8 @@ Multichar_Symbols
 +PstAct +PstPss   !!= * @CODE@ = Participles
 +Pass             !!= * @CODE@ = Passive
 +Imprs            !!= * @CODE@ = Impersonal (cannot have explicit subject)
++Lxc            !!= * @CODE@ = Lexicalized (for participial forms)
++Drv            !!= * @CODE@ = Derived (for participial forms)
 
 !! !!Nominal MSP
 +Msc +Fem +Neu +MFN  !!= * @CODE@ = grammatical gender,  +MFN = gender unspecifiable (pl tantum)

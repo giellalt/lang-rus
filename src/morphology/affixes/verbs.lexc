@@ -39,7 +39,7 @@
 ! 1A has present passive ppl
 
 LEXICON нсв_1a_Lxc
-+Lxc: ;
++Lxc: нсв_1a ;
 
 LEXICON нсв_1a
 нсв_нп_1a ;
@@ -3730,7 +3730,7 @@ LEXICON св_нп_12b/c
 ! TODO 13 has present passive ppl (high/archaic register)
 
 LEXICON нсв_13b_Lxc
-+Lxc: ;
++Lxc: нсв_13b ;
 
 LEXICON нсв_13b
 нсв_нп_13b ;

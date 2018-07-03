@@ -23,6 +23,8 @@
 ! Present passive ppl
 ! Past active ppl
 ! Past passive ppl
+! Lexicalized		(+Lxc)
+! Derived		(+Drv)
 ! ======= (the following are formed from transitive impf only)
 ! Passive Infinitive            (+Inf)
 ! Passive Past                  (+Pst)
@@ -6744,33 +6746,98 @@ LEXICON PastPass_нн_end_Fac
 
 !! Derivation of lexicalized participial forms
 
-LEXICON lxc
-+Lxc: PresAct ;
-+Lxc: PresAct_Prb ;
-+Lxc: PresAct_Fac ;
-+Lxc: PresAct_Sub ;
-+Lxc: PresAct_R ;
-+Lxc: PresAct_R ;
-+Lxc: PresAct_R_Prb ;
-+Lxc: PresAct_R_Fac ;
-+Lxc: PresAct_R_Sub ;
-+Lxc: PresAct_Pass ;
-+Lxc: PresAct_Pass_Prb ;
-+Lxc: PresAct_Pass_Fac ;
-+Lxc: PresPass ;
-+Lxc: PresPass_Prb ;
-+Lxc: PresPass_Ant ;
-+Lxc: PastAct ;
-+Lxc: PastAct_R ;
-+Lxc: PastAct_R_Fac ;
-+Lxc: PastAct_Pass ;
-+Lxc: PastAct_Fac ;
-+Lxc: PastPass_stem ;
-+Lxc: PastPass_stem_Prb ;
-+Lxc: PastPass_stem_Fac ;
-+Lxc: PastPass_нн_stem ;
-+Lxc: PastPass_нн_stem_Fac ;
-+Lxc: PastPass_нн_stem_Prb ;
-+Lxc: PastPass_нн_end ;
-+Lxc: PastPass_нн_end_Prb ;
-+Lxc: PastPass_нн_end_Fac ;
+LEXICON PresAct_Lxc
++PrsAct+Lxc:%<щ LF_stem ;
+
+LEXICON PresAct_Prb_Lxc
++PrsAct+Lxc:%<щ LF_stem_Prb ;
+
+LEXICON PresAct_Fac_Lxc
++PrsAct:%<щ LF_stem_Fac ;
+
+LEXICON PresAct_Sub_Lxc
++PrsAct+Lxc:%<щ LF_stem_Sub ;
+
+LEXICON PresAct_R_Lxc
++PrsAct+Lxc:%<щ LF_stem_R ;
+
+LEXICON PresAct_R_Prb_Lxc
++PrsAct+Lxc:%<щ LF_stem_R_Prb ;
+
+LEXICON PresAct_R_Fac_Lxc
++PrsAct+Lxc:%<щ LF_stem_R_Fac ;
+
+LEXICON PresAct_R_Sub_Lxc
++PrsAct+Lxc:%<щ LF_stem_R_Sub ;
+
+LEXICON PresAct_Pass_Lxc
++PrsAct+Pass+Lxc:%<щ LF_stem_R ;
+
+LEXICON PresAct_Pass_Prb_Lxc
++PrsAct+Pass+Lxc:%<щ LF_stem_R_Prb ;
+
+LEXICON PresAct_Pass_Fac_Lxc
++PrsAct+Pass+Lxc:%<щ LF_stem_R_Fac ;
+
+LEXICON PresPass_Lxc
++PrsPss+Lxc:м LF_stem ;
++PrsPss+Lxc:м SF_a ;
+
+LEXICON PresPass_Prb_Lxc
++PrsPss+Lxc:м LF_stem_Prb ;
++PrsPss+Lxc:м SF_a_Prb ;
+
+LEXICON PresPass_Ant_Lxc
++PrsPss+Lxc:м LF_stem_Ant ;
++PrsPss+Lxc:м SF_a_Ant ;
+
+LEXICON PastAct_Lxc
++PstAct+Lxc:%<вш LF_stem ;
+
+LEXICON PastAct_R_Lxc
++PstAct+Lxc:%<вш LF_stem_R ;
+
+LEXICON PastAct_R_Fac_Lxc
++PstAct+Lxc:%<вш LF_stem_R_Fac ;
+
+LEXICON PastAct_Pass_Lxc
++PstAct+Pass+Lxc:%<вш LF_stem_R ;
+
+LEXICON PastAct_Fac_Lxc
++PstAct+Lxc:%<вш LF_stem_Fac ;
+
+LEXICON PastPass_stem_Lxc
++PstPss+Lxc:т LF_stem ;
++PstPss+Lxc:т SF_a ;
+
+LEXICON PastPass_stem_Prb_Lxc
++PstPss+Lxc:т LF_stem_Prb ;
++PstPss+Lxc:т SF_a_Prb ;
+
+LEXICON PastPass_stem_Fac_Lxc
++PstPss+Lxc:т LF_stem_Fac ;
++PstPss+Lxc:т SF_a_Fac ;
+
+LEXICON PastPass_нн_stem_Lxc
++PstPss+Lxc:нн LF_stem ;
++PstPss+Lxc:н SF_a ;
+
+LEXICON PastPass_нн_stem_Fac_Lxc
++PstPss+Lxc:нн LF_stem_Fac ;
++PstPss+Lxc:н SF_a_Fac ;
+
+LEXICON PastPass_нн_stem_Prb_Lxc
++PstPss+Lxc:нн LF_stem_Prb ;
++PstPss+Lxc:н SF_a_Prb ;
+
+LEXICON PastPass_нн_end_Lxc
++PstPss+Lxc:нн LF_stem ;
++PstPss+Lxc:н SF_b ;
+
+LEXICON PastPass_нн_end_Prb_Lxc
++PstPss+Lxc:нн LF_stem_Prb ;
++PstPss+Lxc:н SF_b_Prb ;
+
+LEXICON PastPass_нн_end_Fac_Lxc
++PstPss+Lxc:нн LF_stem_Fac ;
++PstPss+Lxc:н SF_b_Fac ;

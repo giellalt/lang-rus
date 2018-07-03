@@ -38,6 +38,9 @@
 !                                       читать, etc.
 ! 1A has present passive ppl
 
+LEXICON нсв_1a_Lxc
++Lxc: ;
+
 LEXICON нсв_1a
 нсв_нп_1a ;
 +V+Impf+TV: Impf_Inf_V_stem_w/Pass ;
@@ -3725,6 +3728,9 @@ LEXICON св_нп_12b/c
 !====================================== Stem type 13 =====================================
 !                                           авать
 ! TODO 13 has present passive ppl (high/archaic register)
+
+LEXICON нсв_13b_Lxc
++Lxc: ;
 
 LEXICON нсв_13b
 нсв_нп_13b ;

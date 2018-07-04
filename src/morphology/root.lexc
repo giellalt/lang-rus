@@ -188,4 +188,4 @@ Verb ;		    !!= * @CODE@
 Propernoun ;    !!= * @CODE@
 Punctuation ;   !!= * @CODE@
 LexicalizedParticiple ;   !!= * @CODE@
-NonLexicalizedParticiple ;   !!= * @CODE@
+! NonLexicalizedParticiple ;   !!= * @CODE@

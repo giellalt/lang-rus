@@ -39,7 +39,10 @@
 ! 1A has present passive ppl
 
 LEXICON нсв_1a_Lxc
-+Lxc: нсв_1a ;
+нсв_нп_1a ;
++V+Impf+TV: Impf_Inf_V_stem_w/Pass ;
++V+Impf+TV: Impf_Pres_1_stem_w/Pass ;
++V+Impf+TV:е PresPass_Lxc ;
 
 LEXICON нсв_1a
 нсв_нп_1a ;
@@ -6752,98 +6755,6 @@ LEXICON PastPass_нн_end_Fac
 
 !! Derivation of lexicalized participial forms
 
-LEXICON PresAct_Lxc
-+PrsAct+Lxc:%<щ LF_stem ;
-
-LEXICON PresAct_Prb_Lxc
-+PrsAct+Lxc:%<щ LF_stem_Prb ;
-
-LEXICON PresAct_Fac_Lxc
-+PrsAct:%<щ LF_stem_Fac ;
-
-LEXICON PresAct_Sub_Lxc
-+PrsAct+Lxc:%<щ LF_stem_Sub ;
-
-LEXICON PresAct_R_Lxc
-+PrsAct+Lxc:%<щ LF_stem_R ;
-
-LEXICON PresAct_R_Prb_Lxc
-+PrsAct+Lxc:%<щ LF_stem_R_Prb ;
-
-LEXICON PresAct_R_Fac_Lxc
-+PrsAct+Lxc:%<щ LF_stem_R_Fac ;
-
-LEXICON PresAct_R_Sub_Lxc
-+PrsAct+Lxc:%<щ LF_stem_R_Sub ;
-
-LEXICON PresAct_Pass_Lxc
-+PrsAct+Pass+Lxc:%<щ LF_stem_R ;
-
-LEXICON PresAct_Pass_Prb_Lxc
-+PrsAct+Pass+Lxc:%<щ LF_stem_R_Prb ;
-
-LEXICON PresAct_Pass_Fac_Lxc
-+PrsAct+Pass+Lxc:%<щ LF_stem_R_Fac ;
-
 LEXICON PresPass_Lxc
-+PrsPss+Lxc:м LF_stem ;
-+PrsPss+Lxc:м SF_a ;
-
-LEXICON PresPass_Prb_Lxc
-+PrsPss+Lxc:м LF_stem_Prb ;
-+PrsPss+Lxc:м SF_a_Prb ;
-
-LEXICON PresPass_Ant_Lxc
-+PrsPss+Lxc:м LF_stem_Ant ;
-+PrsPss+Lxc:м SF_a_Ant ;
-
-LEXICON PastAct_Lxc
-+PstAct+Lxc:%<вш LF_stem ;
-
-LEXICON PastAct_R_Lxc
-+PstAct+Lxc:%<вш LF_stem_R ;
-
-LEXICON PastAct_R_Fac_Lxc
-+PstAct+Lxc:%<вш LF_stem_R_Fac ;
-
-LEXICON PastAct_Pass_Lxc
-+PstAct+Pass+Lxc:%<вш LF_stem_R ;
-
-LEXICON PastAct_Fac_Lxc
-+PstAct+Lxc:%<вш LF_stem_Fac ;
-
-LEXICON PastPass_stem_Lxc
-+PstPss+Lxc:т LF_stem ;
-+PstPss+Lxc:т SF_a ;
-
-LEXICON PastPass_stem_Prb_Lxc
-+PstPss+Lxc:т LF_stem_Prb ;
-+PstPss+Lxc:т SF_a_Prb ;
-
-LEXICON PastPass_stem_Fac_Lxc
-+PstPss+Lxc:т LF_stem_Fac ;
-+PstPss+Lxc:т SF_a_Fac ;
-
-LEXICON PastPass_нн_stem_Lxc
-+PstPss+Lxc:нн LF_stem ;
-+PstPss+Lxc:н SF_a ;
-
-LEXICON PastPass_нн_stem_Fac_Lxc
-+PstPss+Lxc:нн LF_stem_Fac ;
-+PstPss+Lxc:н SF_a_Fac ;
-
-LEXICON PastPass_нн_stem_Prb_Lxc
-+PstPss+Lxc:нн LF_stem_Prb ;
-+PstPss+Lxc:н SF_a_Prb ;
-
-LEXICON PastPass_нн_end_Lxc
-+PstPss+Lxc:нн LF_stem ;
-+PstPss+Lxc:н SF_b ;
-
-LEXICON PastPass_нн_end_Prb_Lxc
-+PstPss+Lxc:нн LF_stem_Prb ;
-+PstPss+Lxc:н SF_b_Prb ;
-
-LEXICON PastPass_нн_end_Fac_Lxc
-+PstPss+Lxc:нн LF_stem_Fac ;
-+PstPss+Lxc:н SF_b_Fac ;
++PrsPss+Lxc:м LF_stem_Lxc ;
++PrsPss+Lxc:м SF_a_Lxc ;

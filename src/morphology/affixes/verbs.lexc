@@ -6756,5 +6756,5 @@ LEXICON PastPass_нн_end_Fac
 !! Derivation of lexicalized participial forms
 
 LEXICON PresPass_Lxc
-+PrsPss+Lxc:м LF_stem_Lxc ;
-+PrsPss+Lxc:м SF_a_Lxc ;
++PrsPss+Lxc:м LF_stem ;
++PrsPss+Lxc:м SF_a ;

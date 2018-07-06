@@ -1613,6 +1613,9 @@ LEXICON св-нсв_4a_Lxc
 нсв_4a_Lxc ;
 св_4a_Lxc ;
 
+LEXICON нсв_4a_Lxc
+нсв_4a? ;
+
 LEXICON св_4a_Lxc
 св_нп_4a_Lxc ;
 +V+Perf+TV:и Perf_Inf_V_stem_Lxc ;

@@ -938,7 +938,7 @@ LEXICON св_3c_R
 
 !- - - - - - - Stem type 3 Lexicalized participial forms- - - - - - - 
 
-LEXICON св_3a
+LEXICON св_3a_Lxc
 св_нп_3a ;
 +V+Perf+TV:ну Perf_Inf_V_stem_Lxc ;
 +V+Perf+TV:н Perf_Fut_1_stem_Lxc ;
@@ -965,6 +965,10 @@ LEXICON св_3c?_Lxc
 св_нп_3c ;
 +V+Perf+TV:ну́ Perf_Inf_V_stem_Lxc ;
 +V+Perf+TV:н Perf_Fut_1_shift ;
+
+LEXICON св_нп_3c_Lxc
++V+Perf+IV:ну́ Perf_Inf_V_stem_Lxc ;
++V+Perf+IV:н Perf_Fut_1_shift ;
 
 LEXICON св_нп_3a_Lxc
 +V+Perf+IV:ну Perf_Inf_V_stem_Lxc ;
@@ -1724,7 +1728,7 @@ LEXICON св_нп_4c_Lxc
 +V+Perf+IV: Perf_Fut_2_shift ;
 
 LEXICON св_4c?_Lxc
-св_нп_4c ;
+св_нп_4c_Lxc ;
 +V+Perf+TV:и́ Perf_Inf_V_stem_Lxc ;
 +V+Perf+TV: Perf_Fut_2_shift ;
 
@@ -2213,7 +2217,7 @@ LEXICON св_5c/c''_-гнаться
 !- - - - - - - Stem type 5 Lexicalized participial forms- - - - - - - 
 
 LEXICON св_5a_ать_Lxc
-св_нп_5a_ать ;
+св_нп_5a_ать_Lxc ;
 +V+Perf+TV:а Perf_Inf_V_stem_Lxc ;
 +V+Perf+TV: Perf_Fut_2_stem ;
 +V+Perf+TV:а PastPass_нн_stem_Lxc ;
@@ -2273,7 +2277,7 @@ Perf_PastVrbAdv_V ;
 PastAct_Lxc ;
 
 LEXICON св_5c?_а́ть_Lxc
-св_нп_5b_а́ть ;
+св_нп_5b_а́ть_Lxc ;
 +V+Perf+TV:а́ Perf_Inf_V_stem_Lxc ;
 +V+Perf+TV: Perf_Fut_2_shift ;
 
@@ -3005,11 +3009,11 @@ LEXICON св_6c_ё_трепа́ть_Lxc
 +V+Perf+TV:ёпа PastPass_нн_stem_Lxc ; 
 
 LEXICON св_6c_а́ть_Lxc
-св_6c?_а́ть ;
+св_6c?_а́ть_Lxc ;
 +V+Perf+TV:а PastPass_нн_stem_Lxc ;
 
 LEXICON св_6°b/c_а́ть_(е)рать_Lxc
-св_нп_6°b/c_а́ть_(е)рать ;
+св_нп_6°b/c_а́ть_(е)рать_Lxc ;
 +V+Perf+TV:ра́ Perf_Inf_V_shift_Lxc ;
 +V+Perf+TV:ер Perf_Fut_1_end ;
 +V+Perf+TV:ра PastPass_нн_stem_Lxc ;
@@ -3022,11 +3026,11 @@ LEXICON св_6°b/c_а́ть_(о)вать_Lxc ! назвать, etc.
 +V+Perf+TV:ва PastPass_нн_stem_Lxc ;
 
 LEXICON св_6°b/c_а́ть_Lxc
-св_6°b/c?_а́ть ;
+св_6°b/c?_а́ть_Lxc ;
 +V+Perf+TV:а PastPass_нн_stem_Lxc ;
 
 LEXICON св_6a?_ать_Lxc
-св_нп_6a_ать ;
+св_нп_6a_ать_Lxc ;
 +V+Perf+TV:а Perf_Inf_V_stem_Lxc ;
 +V+Perf+TV: Perf_Fut_1_mut_stem ;
 
@@ -3035,7 +3039,7 @@ LEXICON св_нп_6a_ать_Lxc
 +V+Perf+IV: Perf_Fut_1_mut_stem ;
 
 LEXICON св_6a?_ять_Lxc
-св_нп_6a_ять ;
+св_нп_6a_ять_Lxc ;
 +V+Perf+TV:я Perf_Inf_V_stem_Lxc ;
 +V+Perf+TV: Perf_Fut_1_stem ;
 
@@ -3044,7 +3048,7 @@ LEXICON св_нп_6a_ять_Lxc
 +V+Perf+IV: Perf_Fut_1_stem ;
 
 LEXICON св_6c?_а́ть_Lxc
-св_нп_6c_а́ть ;
+св_нп_6c_а́ть_Lxc ;
 +V+Perf+TV:а́ Perf_Inf_V_stem_Lxc ;
 +V+Perf+TV: Perf_Fut_1_mut_shift ;
 
@@ -3057,13 +3061,9 @@ LEXICON св_нп_6°b/c_а́ть_(е)рать_Lxc
 +V+Perf+IV:ер Perf_Fut_1_end ;
 
 LEXICON св_6°b/c?_а́ть_Lxc
-св_нп_6°b/c_а́ть ;
+св_нп_6°b/c_а́ть_Lxc ;
 +V+Perf+TV:а́ Perf_Inf_V_shift_Lxc ;
 +V+Perf+TV: Perf_Fut_1_end ;
-
-LEXICON св_нп_6°b/c_а́ть_Lxc
-+V+Perf+IV:а́ Perf_Inf_V_shift_Lxc ;
-+V+Perf+IV: Perf_Fut_1_end ;
 
 !====================================== Stem type 7 ======================================
 !                                    зти, зть, сти, сть
@@ -3701,11 +3701,11 @@ LEXICON св_8c/b_R
 !- - - - - - - Stem type 8 Lexicalized participial forms- - - - - - - 
 
 LEXICON св_8b/b_Lxc
-св_8b/b? ;
+св_8b/b?_Lxc ;
 +V+Perf+TV:%^Mё PastPass_нн_end_Lxc ;
 
 LEXICON св_8b/b?_Lxc
-св_нп_8b/b ;
+св_нп_8b/b_Lxc ;
 +V+Perf+TV: Perf_Inf_C_end_Lxc ;
 +V+Perf+TV: Perf_Fut_1_end ;
 
@@ -4327,19 +4327,8 @@ LEXICON нсв_13b_Lxc
 
 LEXICON нсв_нп_13b_Lxc
 +V+Impf+IV:ва́ Impf_Inf_V_stem_Lxc ;
-+V+Impf+IV: Impf_Pres_1_end_авать ;
++V+Impf+IV: Impf_Pres_1_end_авать_Lxc ;
 +V+Impf+IV:ва́ PresVrbAdv_stem ;
-
-LEXICON Impf_Pres_1_end_авать_Lxc
-+Prs: PresFut_1_end ;
-:ва́ Imper_stressed ;
-:%<у́ PresAct_Lxc ;
-:ва́ PresVrbAdv_stem ;
-
-LEXICON Impf_Pres_1_end_w/Pass_авать_Lxc
-Impf_Pres_1_end_авать ;
-+Prs: PresFut_1_end_Pass ;
-:%<у́ PresAct_Pass_Lxc ;
 
 !====================================== Stem type 14 =====================================
 !                                   занять, взять, etc.
@@ -4580,12 +4569,6 @@ LEXICON св_14b/c_я́ть_(йм)_1_Lxc
 +V+Perf+IV:йм Perf_Fut_1_end ;
 +V+Perf+TV:ня PastPass_stem_Lxc ;
 
-LEXICON Perf_Inf_V_shift1_я́ть_Lxc
-+Inf:%<я́ть # ;
-:я Past_shift ;
-:я́ Perf_PastVrbAdv_V ;
-:я́ PastAct_Lxc ;
-
 !====================================== Stem type 15 =====================================
 !                                       стать, etc.
 ! No present verbal adverb
@@ -4622,7 +4605,7 @@ LEXICON св_15a_Lxc
 +V+Perf+TV: PastPass_stem_Lxc ;
 
 LEXICON св_15a?_Lxc
-св_нп_15a ;
+св_нп_15a_Lxc ;
 +V+Perf+TV: Perf_Inf_V_stem_Lxc ;
 +V+Perf+TV:н Perf_Fut_1_stem ;
 
@@ -5142,7 +5125,7 @@ LEXICON св_b/c''_R_-клясться
 +V+Perf+IV:н Perf_Fut_1_end_R ;
 +V+Perf+IV:д Perf_Inf_shift''_R ;
 
-!- - - - - - - Miscellaneous types: Lexicalized participles- - - - - - - 
+!- - - - - - - Miscellaneous stem types: Lexicalized participles- - - - - - - 
 
 LEXICON св_b/c'_дать_Lxc ! simplex дать
 +V+Perf+IV+Inf:да́ть # ;
@@ -5173,7 +5156,7 @@ LEXICON св_b/c'_дать_Lxc ! simplex дать
 
 LEXICON св_b/c1_-клясть_Lxc
 +V+Perf+IV:я́н Perf_Fut_1_end ;
-+V+Perf+IV: Perf_Inf_V_shift1_яд ;
++V+Perf+IV: Perf_Inf_V_shift1_яд_Lxc ;
 +V+Perf+TV:я́н Perf_Fut_1_end ;
 +V+Perf+TV: Perf_Inf_V_shift1_яд_Lxc ;
 +V+Perf+TV:я PastPass_stem_Lxc ;
@@ -7450,13 +7433,13 @@ Imper_unstressed ;
 +Imp+Pl1:%<ем # ;
 
 LEXICON Impf_Inf_V_stem_w/Pass_Lxc
-Impf_Inf_V_stem ;
+Impf_Inf_V_stem_Lxc ;
 +Inf+Pass:%<ться # ;
 Past_stem_Pass ;
 PastAct_Pass_Lxc ;
 
 LEXICON Impf_Pres_1_stem_w/Pass_Lxc
-Impf_Pres_1_stem ;
+Impf_Pres_1_stem_Lxc ;
 +Prs: PresFut_1_stem_Pass ;
 :%<у PresAct_Pass_Lxc ;
 
@@ -7474,6 +7457,23 @@ LEXICON Impf_Inf_V_stem_Fac_Lxc
 Past_stem_Fac ;
 Impf_PastVrbAdv_V_Fac ;
 PastAct_Fac_Lxc ;
+
+LEXICON Impf_Pres_1_end_авать_Lxc
++Prs: PresFut_1_end ;
+:ва́ Imper_stressed ;
+:%<у́ PresAct_Lxc ;
+:ва́ PresVrbAdv_stem ;
+
+LEXICON Impf_Pres_1_end_w/Pass_авать_Lxc
+Impf_Pres_1_end_авать ;
++Prs: PresFut_1_end_Pass ;
+:%<у́ PresAct_Pass_Lxc ;
+
+LEXICON Perf_Inf_V_shift1_я́ть_Lxc
++Inf:%<я́ть # ;
+:я Past_shift ;
+:я́ Perf_PastVrbAdv_V ;
+:я́ PastAct_Lxc ;
 
 LEXICON PresAct_Lxc
 +PrsAct+Lxc:%<щ LF_stem ;

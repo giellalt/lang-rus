@@ -3899,6 +3899,32 @@ LEXICON св_нп_9b/c1_прич._прош._V/ме/рший
 св_нп_9b/c1_прич._прош._ме/рший ;
 +V+Perf+IV:ер PastAct ;
 
+!- - - - - - - Stem type 9 Lexicalized participial forms- - - - - - - 
+
+LEXICON св_9b_ё_Lxc
+св_нп_9b_ё_Lxc ;
++V+Perf+TV+Inf:ере́%<ть # ;
++V+Perf+TV:ёр Past_stem ;
++V+Perf+TV:ёр Perf_PastVrbAdv_C ;
++V+Perf+TV:ере́ Perf_PastVrbAdv_V ;
++V+Perf+TV+Fut:р PresFut_1_end ;
++V+Perf+TV+Imp+Pl1:рём # ;
++V+Perf+TV:р Imper_stressed ; 
++V+Perf+TV:ёр PastAct_Lxc ;
++V+Perf+TV:ере́ PastAct_Lxc ;
++V+Perf+TV:ёр PastPass_stem_Lxc ;
+
+LEXICON св_нп_9b_ё_Lxc
++V+Perf+IV+Inf:ере́%<ть # ;
++V+Perf+IV:ёр Past_stem ;
++V+Perf+IV:ёр Perf_PastVrbAdv_C ;
++V+Perf+IV:ере́ Perf_PastVrbAdv_V ;
++V+Perf+IV+Fut:р PresFut_1_end ;
++V+Perf+IV+Imp+Pl1:рём # ;
++V+Perf+IV:р Imper_stressed ; 
++V+Perf+IV:ёр PastAct_Lxc ;
++V+Perf+IV:ере́ PastAct_Lxc ;
+
 !====================================== Stem type 10 =====================================
 !                                           оть
 ! Make sure that the lexical stems are stressed.

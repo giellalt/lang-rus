@@ -3068,6 +3068,10 @@ LEXICON св_6°b/c?_а́ть_Lxc
 +V+Perf+TV:а́ Perf_Inf_V_shift_Lxc ;
 +V+Perf+TV: Perf_Fut_1_end ;
 
+LEXICON св_нп_6°b/c_а́ть_Lxc
++V+Perf+IV:а́ Perf_Inf_V_shift_Lxc ;
++V+Perf+IV: Perf_Fut_1_end ;
+
 !====================================== Stem type 7 ======================================
 !                                    зти, зть, сти, сть
 ! Some 7 verbs have present passive ppl

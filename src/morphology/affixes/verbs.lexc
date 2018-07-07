@@ -1614,7 +1614,7 @@ LEXICON св-нсв_4a_Lxc
 св_4a_Lxc ;
 
 LEXICON нсв_4a_Lxc
-нсв_4a? ;
+нсв_4a?_Lxc ;
 
 LEXICON св_4a_Lxc
 св_нп_4a_Lxc ;
@@ -1734,6 +1734,16 @@ LEXICON св_4c?_Lxc
 св_нп_4c_Lxc ;
 +V+Perf+TV:и́ Perf_Inf_V_stem_Lxc ;
 +V+Perf+TV: Perf_Fut_2_shift ;
+
+LEXICON нсв_4a?_Lxc
+нсв_нп_4a_Lxc ;
++V+Impf+TV:и Impf_Inf_V_stem_w/Pass_Lxc ;
++V+Impf+TV: Impf_Pres_2_stem_w/Pass_Lxc ;
++V+Impf+TV:и PresPass_Ant_Lxc ;
+
+LEXICON нсв_нп_4a_Lxc
++V+Impf+IV:и Impf_Inf_V_stem_Lxc ;
++V+Impf+IV: Impf_Pres_2_stem_Lxc ;
 
 
 !====================================== Stem type 5 ======================================
@@ -7507,6 +7517,17 @@ LEXICON Perf_Inf_V_shift1_я́ть_Lxc
 :я Past_shift ;
 :я́ Perf_PastVrbAdv_V ;
 :я́ PastAct_Lxc ;
+
+LEXICON Impf_Pres_2_stem_w/Pass_Lxc
+Impf_Pres_2_stem_Lxc ;
++Prs: PresFut_2_stem_Pass ;
+:%<я PresAct_Pass_Lxc ;
+
+LEXICON Impf_Pres_2_stem_Lxc
++Prs: PresFut_2_stem ;
+Imper_unstressed ;
+:%<я PresAct_Lxc ;
+PresVrbAdv_stem ;
 
 LEXICON PresAct_Lxc
 +PrsAct+Lxc:%<щ LF_stem ;

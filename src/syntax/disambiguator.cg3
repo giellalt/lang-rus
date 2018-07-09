@@ -586,9 +586,9 @@ REMOVE NGDAIP - Ins IF (0C A OR Det) (1C* N + Ins BARRIER NGDAIP - Ins);
 
 REMOVE Short IF (-1C Pr) ;
 
-#REMOVE Acc IF (-1* BOS BARRIER NGDAIP - Nom) (0C Nom OR Acc) (NOT 1* TV) (NOT -1 Num LINK 1 Sem/Time OR Sem/Distance) (NOT 0 Sem/Time) (NOT 0 Sem/Distance) ;
+REMOVE Acc IF (-1* BOS BARRIER NGDAIP - Nom) (0C Nom OR Acc) (NOT 1* TV) (NOT -1 Num LINK 1 Sem/Time OR Sem/Distance) (NOT 0 Sem/Time) (NOT 0 Sem/Distance) ;
 
-#REMOVE Acc IF (-1* BOS BARRIER Fin OR NGDAIP - Nom)  (0C Nom OR Acc) (NOT 1* TV) (NOT -1* Prep/Acc) (NOT 0 Sem/Time) (NOT 0 Sem/Distance) ;
+REMOVE Acc IF (-1* BOS BARRIER Fin OR NGDAIP - Nom)  (0C Nom OR Acc) (NOT 1* TV) (NOT -1* Prep/Acc) (NOT 0 Sem/Time) (NOT 0 Sem/Distance) ;
 
 REMOVE Cmp IF (0 Cmp OR Adv) (NOT 1 Guio) ; # (NOT 1 Guio LINK 1 A) ;
 
@@ -710,7 +710,7 @@ REMOVE Nom IF (0C Pl + Nom OR Sg + Gen) (1 EOS) (-1* Fin BARRIER Fin OR CS) (NOT
 
 SELECT Paren/Konečno IF (-1 Cm) (1 Cm) ;
 
-#REMOVE TV - Pass IF (NOT 1* Acc) (NOT -1* Acc) ;
+REMOVE TV - Pass IF (NOT 1* Acc) (NOT -1* Acc) ;
 
 REMOVE Gen IF (-1 BOS) (0 Title OR Majusc) (NOT 1* V/Gen);
 
@@ -897,7 +897,7 @@ SELECT Nom IF (-1 BOS) (0 Nom OR Acc) (1 Nom LINK 1 Short LINK 1 Guio) ;
 
 SELECT N IF (0C N OR A) (-1 Pr) (1 EOS) ;
 
-#REMOVE Acc IF (NOT -1* TV LINK NOT 0 V/Pass) (NOT 0 AccAdv) (NOT 1* TV LINK NOT 0 V/Pass) (NOT -1* Pr BARRIER CLB) ;
+REMOVE Acc IF (NOT -1* TV LINK NOT 0 V/Pass) (NOT 0 AccAdv) (NOT 1* TV LINK NOT 0 V/Pass) (NOT -1* Pr BARRIER CLB) ;
   # barrier was (*) - Acc
 
 SELECT Nom IF (0C N) (0 Acc OR Nom) (-1 Modif) (-1* SafeGuio BARRIER (*) - Nom LINK -1C Nom) ;

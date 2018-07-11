@@ -235,7 +235,7 @@ LIST V/Stroit = ("строит" vblex) ("строит" V) ;
 LIST V/Vyhodit = ("выходить" vblex) ("выходить¹⁻²" vblex) ("выходить" V) ("выходить¹⁻²" vblex) ;
 LIST V/Idjot = ("идти" vblex pres) ("идти" V Pres) ;
 LIST V/Byt = ("быть" vblex) ("быть" V) ;
-LIST V/Byt = ("мочь" vblex) ("мочь" V) ;
+#LIST V/Byt = ("мочь" vblex) ("мочь" V) ;
 
 LIST Ij/Na = ("на" ij) ("на" Interj) ;
 LIST Ij/Ih = ("их²" ij) ("их²" Interj) ;
@@ -317,8 +317,10 @@ LIST AccAdv = "вечер" "день" "раз" "минута" "неделя" ;
 LIST PurposeAdv = "нечаянно" "назло" "нарочно" "напоказ" "спьяну" "спроста" "специально" "наперекор" "зря" "невзначай" "умышленно" "насмех" "преднамеренно" "ненамеренно" "бесцельно" "неспроста" "ненароком" "случайно" ;
 #adverbs of purpose
 
-LIST MeasureDegreeAdv = "совсем" "очень" "страшно" "крайне" "соврешенно" "чересчур" "почти" "чрезвычайно" "слегка" "исключительно" "гораздо" "много" "немного" мало немало "абсолютно" "чуть" "чуть-чуть" "еле" "еле-еле" "столь" "весьма" "почти" "никак" "едва" "капельку" "настолько" "так" "очень" "неприлично" "невероятно" "более" "наиболее" "глубоко" "мертвецки" "ничтожно" "смехотворно" "по-черному" "гораздо" "намного" "слегка" "немного" "сильно" "менее";
+LIST MeasureDegreeAdv = "совсем" "очень" "страшно" "крайне" "соврешенно" "чересчур" "почти" "чрезвычайно" "слегка" "исключительно" "гораздо" "много" "немного" мало немало "абсолютно" "чуть" "чуть-чуть" "еле" "еле-еле" "столь" "весьма" "почти" "никак" "едва" "капельку" "настолько" "так" "очень" "неприлично" "невероятно" "более" "наиболее" "глубоко" "мертвецки" "ничтожно" "смехотворно" "по-черному" "гораздо" "намного" "слегка" "немного" "сильно" "менее" "просто";
 #adverbs of measure and degree
+
+LIST TempLocAdv = "вовне", "донельзя", "доныне", "поныне", "заранее", "зазря", "извне", "навсегда", "назавтра", "повсюду", "позавчера", "послезавтра", "отсюда",  "откуда", "отныне", "повсюду" ;
 
 LIST Title = ("<[А-ЯA-Z][а-яa-z]+>"r) ;
 LIST Majusc = ("<[А-ЯA-Z]+>"r) ;
@@ -1153,6 +1155,7 @@ REMOVE SUB:1 Sent IF (1 Cog) ;
 ###############################################################################
 # Test rules on ambiguous participles and adjectives (uliana)
 ###############################################################################
+
 #REMOVE N:
 #Rules:
 REMOVE:DsmbgPtcpN1 N IF (0 V + $$NGDAIP) (0 N + $$NGDAIP)(-1 Comm LINK -1 N + $$NGDAIP) ;
@@ -1197,7 +1200,9 @@ REMOVE:DsmbgPtcpV4 V IF (0 V + $$NGDAIP) (0 A + $$NGDAIP)((-1 MeasureDegreeAdv O
 REMOVE:DsmbgPtcpV5 V IF (0 V OR A )((-1 Adv/Cmpar) OR (-1 Ne LINK -1 Adv/Cmpar))(NOT 1C* N + NOTNOMPREP OR Pron + NOTNOMPREP);
 #Менее одаренный природой человек может стать более развитым, чем более одаренный, развитием которого никто не занимался.
 
-REMOVE:DsmbgPtcpV6 V IF (0 V + $$NGDAIP) (0 A + $$NGDAIP)((-1 N + $$NGDAIP OR Pron + $$NGDAIP) OR (-1 Ne LINK -1 N + $$NGDAIP))(1 (CC LINK 1 WORD LINK 1 S-BOUNDARY) OR S-BOUNDARY);
+REMOVE:DsmbgPtcpV6.1 V IF (0 V + $$NGDAIP) (0 A + $$NGDAIP)((-1 N + $$NGDAIP OR Pron + $$NGDAIP) OR (-1 Ne LINK -1 N + $$NGDAIP))(NOT 1 WORD);
+
+REMOVE:DsmbgPtcpV6.2 V IF (0 V + $$NGDAIP) (0 A + $$NGDAIP)((-1 N + $$NGDAIP OR Pron + $$NGDAIP) OR (-1 Ne LINK -1 N + $$NGDAIP))(1 Comm);
 
 REMOVE:DsmbgPtcpV7 V IF (0 V OR A)((-1 CC) OR (-1 Ne LINK -1 CC))(1* S-BOUNDARY or (WORD S-BOUNDARY));
 #Фурсенко отмечает, что и повышенные зарплаты по-прежнему недотягивают до справедливого уровня.
@@ -1211,7 +1216,11 @@ REMOVE:DsmbgPtcpV9 V IF (0 V + $$NGDAIP) (0 A + $$NGDAIP)((-1 N LINK -1 A OR Det
 #Как класс правящий и порабощенный. ==> правящий
 #rule 776 also works here on "загнать" V Perf TV PstPss Msc Inan Sg Acc <W:2.2045135498>
 
-REMOVE:DsmbgPtcpV10 V IF (0 V + $$NGDAIP) (0 A + $$NGDAIP)((-1 Adv) OR (-1 Adv LINK -1 Adv) OR (-1 CC LINK -1 A OR N) OR (-1 V))(1 N + $$NGDAIP);
+REMOVE:DsmbgPtcpV10.1 V IF (0 V + $$NGDAIP)(0 A + $$NGDAIP)(-1 CC LINK -1 A OR N)(1 N + $$NGDAIP);
+#Поэтому к гидроизоляционным материалам, используемым на подобных кровлях, предъявляются повышенные требования.
+#Если бы он курил, то он непременно курил бы сейчас, как это обычно делают курящие люди в задумчивости. ==> курящие
+
+REMOVE:DsmbgPtcpV10.2 V IF (0 V + $$NGDAIP) (0 A + $$NGDAIP)((-1 CC LINK -1 A OR N) OR (-1 V))(1 N + $$NGDAIP);
 #Поэтому к гидроизоляционным материалам, используемым на подобных кровлях, предъявляются повышенные требования.
 #Если бы он курил, то он непременно курил бы сейчас, как это обычно делают курящие люди в задумчивости. ==> курящие
 
@@ -1221,7 +1230,7 @@ REMOVE:DsmbgPtcpV11 V IF (0 V + Gen) (0 A + Gen)((-1 Adv) OR (-1 Adv LINK -1 Adv
 REMOVE:DsmbgPtcpV12 V IF (0 V + $$NGDAIP) (0 A + $$NGDAIP)(-1 CC OR Comm LINK -1 A)(1 Comm OR CC);
 #Поэтому, чтобы нами управляли, руководили, считали там, люди компетентные, знающие, думающие и не просто за зарплату, а за совесть работающие, думающие о людях. ==> , знающие, думающие
 
-REMOVE:DsmbgPtcpV13 V IF (0 V + $$NGDAIP) (0 A + $$NGDAIP)(1 N + $$NGDAIP OR Pron + $$NGDAIP LINK NOT 1 Pr);
+#REMOVE:DsmbgPtcpV13 V IF (0 V + $$NGDAIP) (0 A + $$NGDAIP)(1 N + $$NGDAIP OR Pron + $$NGDAIP LINK NOT 1 Pr);
 #В некрологах о нем на полном серьезе: крупный художник, большой талант, выдающийся деятель.
 
 REMOVE:DsmbgPtcpV14 V IF (0 V OR A)((-1 Adv LINK -1 Pr) OR (-1 Pr) OR (-1 Adv LINK -1 N LINK -1 Pr) OR (-1 N LINK -1 Pr))(1 Dash);
@@ -1235,9 +1244,13 @@ REMOVE:DsmbgPtcpV14 V IF (0 A + $$NGDAIP OR V + $$NGDAIP)(1 A + $$NGDAIP LINK 1 
 
 #REMOVE A
 
-REMOVE:DsmbgPtcpA1 A IF (0 V + $$NGDAIP)(0 A + $$NGDAIP)((-1 Ne LINK -1 Comm LINK -1* N + $$NGDAIP OR Pron + $$NGDAIP) OR (-1 Comm LINK -1* N + $$NGDAIP))((1 N + NOTNOMPREP OR Pron  + NOTNOMPREP) OR (1 CC LINK 1 Ne LINK 1 Adv LINK 1 Pr LINK 1 N OR Pron) OR (1 Pr LINK 1 N OR Pron));
+
+REMOVE:DsmbgPtcpA1.1 A IF (0 V + $$NGDAIP)(0 A + $$NGDAIP)((-1 Ne LINK -1 Comm LINK -1* N + $$NGDAIP OR Pron + $$NGDAIP) OR (-1 Comm LINK -1* N + $$NGDAIP))((1 N + NOTNOMPREP OR Pron  + NOTNOMPREP) OR (1 CC LINK 1 Ne LINK 1 Adv LINK 1 Pr LINK 1 N OR Pron) OR (1 Pr LINK 1 N OR Pron));
 #Особую склонность избегать самостоятельных решений проявляют в японском деловом мире люди, только что повышенные в ранге.
 #Ястржембский, паркетный царедворец, не знающий свиста пуль, сделавший карьеру на том, что выносил за Ельциным ночную вазу, учит нас правильно понимать.
+
+REMOVE:DsmbgPtcpA1.2 A IF (0 V + $$NGDAIP) (0 A + $$NGDAIP)(-1 TempLocAdv)(1 N + $$NGDAIP);
+#заранее заданными свойствами
 
 REMOVE:DsmbgPtcpA2 A IF (0 V + $$NGDAIP) (0 A + $$NGDAIP)((-1 Ne LINK -1 Comm LINK -1* N + $$NGDAIP OR Pron + $$NGDAIP) OR (-1 Comm LINK -1* N + $$NGDAIP))((1 N + NOTNOMPREP OR Pron  + NOTNOMPREP) OR (1 CC LINK 1 Ne LINK 1 Adv LINK 1 Pr LINK 1 N OR Pron) OR (1 Pr LINK 1 N OR Pron));
 #Поэтому, чтобы нами управляли, руководили, считали там, люди компетентные, знающие, думающие и не просто за зарплату, а за совесть работающие, думающие о людях.  ==> ,думающие о людях
@@ -1252,8 +1265,11 @@ REMOVE:DsmbgPtcpA4 A IF (0 V + $$NGDAIP) (0 A + $$NGDAIP) (1 Pr LINK 1* Comm) ;
 #Пройдя первый двор и оказавшись в точно таком же втором, Ирка высунула нос из-за своего невероятного букета и, заприметив мирно курящих в стороне мальчишек, подгребла к ним. ==> курящих
 #Когда подходишь близко к стаду спящих на воде моржей, то видишь только несколько бурых бугров, выдающихся из воды и свободно уносимых течением. ==> спящих на
 
-REMOVE:DsmbgPtcpA5 A IF (0 V)(0 A)((-1 N LINK -1 Pr) OR (-1 N LINK -1 Det OR A LINK -1 Pr) OR (-1 N LINK -1 Pr) OR (-1 Adv))(1 Pr LINK 1 N) ;
+REMOVE:DsmbgPtcpA5.1 A IF (0 V)(0 A)((-1 N LINK -1 Pr) OR (-1 N LINK -1 Det OR A LINK -1 Pr) OR (-1 N LINK -1 Pr) OR (-1 Adv))(1 Pr LINK 1 N) ;
 #Образованный в суровую военную пору, ваш институт был с самого начала ориентирован на решение самых важных, самых сложных проблем отечественной газовой индустрии. ==> ориентирован
+
+REMOVE:DsmbgPtcpA5.2 A IF (0 V + $$NGDAIP)(0 A + $$NGDAIP)(-1 TempLocAdv)(1 N + $$NGDAIP) ;
+#заранее заданными свойствами
 
 REMOVE:DsmbgPtcpA6 A IF (0 V)(0 A)((-1 MeasureDegreeAdv) OR (-1 MeasureDegreeAdv LINK -1 Adv) OR (-1 Ne LINK -1 MeasureDegreeAdv) OR (-1 Ne LINK -1 MeasureDegreeAdv LINK -1 Adv))(1 Pron + NOTNOMPREP OR Pron + Poss + NOTNOMPREP OR N + NOTNOMPREP OR A + NOTNOMPREP OR Det + NOTNOMPREP);
 #Как правило, функционал подобного рода сайтов настолько продуман его разработчиками, что на интуитивном уровне понятен даже самым неискушенным в пользовании компьютером и Интернетом посетителям. ==> продуман
@@ -1289,6 +1305,21 @@ REMOVE:DsmbgPtcp16 A IF (0 V + $$NGDAIP + PrcPast + Pass)(0 A + $$NGDAIP);
 #SELECT A:
 
 SELECT:DsmbgPtcpA0 A + $$NGDAIP IF (-1C Samyj + $$NGDAIP OR Adv/Cmpar )(0 A OR V)(0 A LINK 0 (<W=MIN>)) ; #from safe lexicalised operations
+SELECT:DsmbgPtcpA1 A IF (0 V + $$NGDAIP) (0 A + $$NGDAIP) (1 N + $$NGDAIP) ;
+
+
+#SELECT N:
+SELECT:DsmbgPtcpN0 N IF (0 N) (0 V) (-1 Pr)(1 N + Gen) ;
+
+#SELECT V:
+SELECT:DsmbgPtcpV0 V IF (0 V) (0 A) (1 Ins) ;
+SELECT:DsmbgPtcpV1 V IF (0 V) (0 A) (1 Acc) ;
+SELECT:DsmbgPtcpV2 V IF (0 V) (0 A) (1 Dat) ;
+SELECT:DsmbgPtcpV2 V IF (0 V) (0 A) (-1 Comm) (1 Ins) ;
+SELECT:DsmbgPtcpV3 V IF (0 V) (0 A) (-1 Comm) (1 Acc) ;
+SELECT:DsmbgPtcpV4 V IF (0 V) (0 A)(1 Pr LINK 1 N) ;
+SELECT:DsmbgPtcpV5 V IF (0 V + Pred)(0 A)(-1 Cop);
+SELECT:DsmbgPtcpV6 V IF (0 V + $$NGDAIP)(0 A + $$NGDAIP)(-1 TempLocAdv)(1 N + $$NGDAIP);
 
 #Remove analysis for verbal lemmas and their weights IF there is analysis for lexicalized participles
 

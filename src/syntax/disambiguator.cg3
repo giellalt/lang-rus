@@ -1158,7 +1158,7 @@ REMOVE SUB:1 Sent IF (1 Cog) ;
 ###############################################################################
 # Test rules on ambiguous participles and adjectives (uliana)
 ###############################################################################
-LEVEL 1: rules for specific contexts (SC)
+# LEVEL 1: rules for specific contexts (SC)
 ###############################################################################
 #REMOVE N:
 
@@ -1314,7 +1314,7 @@ REMOVE:SCPtcp17 A IF (0 V) (0 A + $$NGDAIP)(-1 Pr LINK -1 V)(1 N + Dat LINK 1 N 
 REMOVE:SCPtcp18 A IF (0 V + PrcPast + Pass)(0 A + $$NGDAIP);
 
 ###############################################################################
-LEVEL 2: rules for general contexts (GC)
+# LEVEL 2: rules for general contexts (GC)
 ###############################################################################
 
 #SELECT A:

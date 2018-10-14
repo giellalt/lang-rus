@@ -89,6 +89,8 @@ This is free and open source Russian morphology.
  * +PstAct +PstPss    = Participles
  * +Pass              = Passive
  * +Imprs             = Impersonal (cannot have explicit subject)
+ * +Lxc             = Lexicalized (for participial forms)
+ * +Drv             = Derived (for participial forms)
 
 !!Nominal MSP
  * +Msc +Fem +Neu +MFN   = grammatical gender,  +MFN = gender unspecifiable (pl tantum)
@@ -156,4 +158,4 @@ This is free and open source Russian morphology.
  * Verb ;		    
  * Propernoun ;    
  * Punctuation ;   
-
+ * LexicalizedParticiple ;   

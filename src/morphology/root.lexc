@@ -92,6 +92,12 @@ Multichar_Symbols
 +Lxc            !!= * @CODE@ = Lexicalized (for participial forms)
 +Drv            !!= * @CODE@ = Derived (for participial forms)
 
++Der            !!= * @CODE@ = Derived (for participial forms)
++Der/PrsAct            !!= * @CODE@ = Derived (for participial forms)
++Der/PrsPss            !!= * @CODE@ = Derived (for participial forms)
++Der/PstAct            !!= * @CODE@ = Derived (for participial forms)
++Der/PstPss            !!= * @CODE@ = Derived (for participial forms)
+
 !! !!Nominal MSP
 +Msc +Fem +Neu +MFN  !!= * @CODE@ = grammatical gender,  +MFN = gender unspecifiable (pl tantum)
 +Inan +Anim +AnIn    !!= * @CODE@ = animacy (+AnIn = ambivalent animacy for non-accusative modifiers)

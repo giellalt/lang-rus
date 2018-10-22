@@ -4116,9 +4116,13 @@ LEXICON св_11b/c
 LEXICON св_11b/c_развить
 св_11b/c? ;
 +V+Perf+TV+PstPss:и́т LF_stem "weight: -0.626080481" ;
++V+Perf+TV+Der+Der/PstPss+A:и́т LF_stem "weight: -0.626080481" ;
 +V+Perf+TV+PstPss:ит LF_stem "weight: -0.626080481" ;
++V+Perf+TV+Der+Der/PstPss+A:ит LF_stem "weight: -0.626080481" ;
 +V+Perf+TV+PstPss:и́т SF_c ;
++V+Perf+TV+Der+Der&PstPss+A:и́т SF_c ;
 +V+Perf+TV+PstPss:ит SF_c ;
++V+Perf+TV+Der+Der/PstPss+A:ит SF_c ;
 
 LEXICON св_11b/c[1]
 св_11b/c? ;
@@ -7350,44 +7354,59 @@ LEXICON PastVrbAdv_9_end_R   ! Code 9 only occurs with perfective verbs
 
 LEXICON PresAct
 +PrsAct:%<щ LF_stem "weight: -0.626080481" ;
++Der+Der/PrsAct+A:%<щ LF_stem "weight: -0.626080481" ;
 
 LEXICON PresAct_Prb
 +PrsAct:%<щ LF_stem_Prb "weight: -0.626080481" ;
++Der+Der/PrsAct+A:%<щ LF_stem_Prb "weight: -0.626080481" ;
 
 LEXICON PresAct_Fac
 +PrsAct:%<щ LF_stem_Fac "weight: -0.626080481" ;
++Der+Der/PrsAct+A:%<щ LF_stem_Fac "weight: -0.626080481" ;
 
 LEXICON PresAct_Sub
 +PrsAct:%<щ LF_stem_Sub "weight: -0.626080481" ;
++Der+Der/PrsAct+A:%<щ LF_stem_Sub "weight: -0.626080481" ;
 
 LEXICON PresAct_R
 +PrsAct:%<щ LF_stem_R "weight: -0.626080481" ;
++Der+Der/PrsAct+A:%<щ LF_stem_R "weight: -0.626080481" ;
 
 LEXICON PresAct_R_Prb
 +PrsAct:%<щ LF_stem_R_Prb "weight: -0.626080481" ;
++Der+Der/PrsAct+A:%<щ LF_stem_R_Prb "weight: -0.626080481" ;
 
 LEXICON PresAct_R_Fac
 +PrsAct:%<щ LF_stem_R_Fac "weight: -0.626080481" ;
++Der+Der/PrsAct+A:%<щ LF_stem_R_Fac "weight: -0.626080481" ;
 
 LEXICON PresAct_R_Sub
 +PrsAct:%<щ LF_stem_R_Sub "weight: -0.626080481" ;
++Der+Der/PrsAct+A:%<щ LF_stem_R_Sub "weight: -0.626080481" ;
 
 LEXICON PresAct_Pass
 +PrsAct+Pass:%<щ LF_stem_R "weight: -0.626080481" ;
++Der+Der/PrsAct+Pass+A:%<щ LF_stem_R "weight: -0.626080481" ;
 
 LEXICON PresAct_Pass_Prb
 +PrsAct+Pass:%<щ LF_stem_R_Prb "weight: -0.626080481" ;
++Der+Der/PrsAct+Pass+A:%<щ LF_stem_R_Prb "weight: -0.626080481" ;
 
 LEXICON PresAct_Pass_Fac
 +PrsAct+Pass:%<щ LF_stem_R_Fac "weight: -0.626080481" ;
++Der+Der/PrsAct+Pass+A:%<щ LF_stem_R_Fac "weight: -0.626080481" ;
 
 LEXICON PresPass
 +PrsPss:м LF_stem "weight: -0.626080481" ;
++Der+Der/PrsPss+A:м LF_stem "weight: -0.626080481" ;
 +PrsPss:м SF_a "weight: -0.626080481" ;
++Der+Der/PrsPss+A:м SF_a "weight: -0.626080481" ;
 
 LEXICON PresPass_Prb
 +PrsPss:м LF_stem_Prb "weight: -0.626080481" ;
++Der+Der/PrsPss+A:м LF_stem_Prb "weight: -0.626080481" ;
 +PrsPss:м SF_a_Prb "weight: -0.626080481" ;
++Der+Der/PrsPss+A:м SF_a_Prb "weight: -0.626080481" ;
 
 LEXICON PresPass_Ant
 +PrsPss:м LF_stem_Ant "weight: -0.626080481" ;

@@ -90,7 +90,6 @@ Multichar_Symbols
 +Pass             !!= * @CODE@ = Passive
 +Imprs            !!= * @CODE@ = Impersonal (cannot have explicit subject)
 +Lxc            !!= * @CODE@ = Lexicalized (for participial forms)
-+Drv            !!= * @CODE@ = Derived (for participial forms)
 
 +Der            !!= * @CODE@ = Derived (for participial forms)
 +Der/PrsAct            !!= * @CODE@ = Derived (for participial forms)

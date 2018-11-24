@@ -1155,10 +1155,12 @@ REMOVE SUB:1 Sent IF (NOT 1 Majusc OR Title) ;
 
 REMOVE SUB:1 Sent IF (1 Cog) ;
 
+SECTION
+#Section 2: rules for specific contexts
 ###############################################################################
 # Test rules on ambiguous participles and adjectives (uliana)
 ###############################################################################
-# LEVEL 1: rules for specific contexts (SC)
+#LEVEL 1: rules for specific contexts (SC)
 ###############################################################################
 #REMOVE N:
 
@@ -1314,8 +1316,11 @@ REMOVE:SCPtcp17 A IF (0 V) (0 A + $$NGDAIP)(-1 Pr LINK -1 V)(1 N + Dat LINK 1 N 
 REMOVE:SCPtcp18 A IF (0 V + PrcPast + Pass)(0 A + $$NGDAIP);
 
 ###############################################################################
-# LEVEL 2: rules for general contexts (GC)
+#LEVEL 2: rules for general contexts (GC)
 ###############################################################################
+
+SECTION
+#Section 3: rules for general contexts
 
 #SELECT A:
 
@@ -1325,9 +1330,11 @@ SELECT:GCPtcpA1 A IF (0 V) (0 A + $$NGDAIP) (1 N + $$NGDAIP LINK 1 Sent) ;
 
 
 #SELECT N:
+
 SELECT:GCPtcpN1 N IF (0 N)(0 V)(-1 Pr)(1 N + Gen) ;
 
 #SELECT V:
+
 SELECT:GCPtcpV1 V IF (0 V)(0 A)(1 Ins) ;
 #«― спрашивает Дмитриев, все более и более удивленный и испуганный словами солдата. ==> удивленный, испуганный
 SELECT:GCPtcpV2 V IF (0 V)(0 A)(1 Acc) ;
@@ -1368,15 +1375,15 @@ SELECT:maxweight (<W=MAX>) ;
 
 # REMOVE CS IF (0 CS/Čto) (NOT -1* V OR Pred) ;
 
-  # Нападающие выжигали огнем места, где могли спрятаться их жертвы: дома с труднодоступными помещениями, церкви, леса, перелески и т. п.
+# Нападающие выжигали огнем места, где могли спрятаться их жертвы: дома с труднодоступными помещениями, церкви, леса, перелески и т. п.
 
 # Distinguishing between adj/participle: if it gets arguments, it's not an adjective.
 
 # REMOVE Fin IF (-1C SafeGuio) ;
-   # Maybe just with начало
+# Maybe just with начало
 
 #SELECT Prop IF (-1 Quot) (0 Prop OR N) (1 Quot) ;
-  #! «Мамонт», которое по-гречески значит «материнский», ...
+#! «Мамонт», которое по-гречески значит «материнский», ...
 
 #моей as prn, if "из моей школы"
 #REMOVE A IF (-1C Pr)(0 Pron OR A);

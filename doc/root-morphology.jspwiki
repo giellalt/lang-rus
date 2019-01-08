@@ -79,7 +79,12 @@
  * +Pass              = Passive
  * +Imprs             = Impersonal (cannot have explicit subject)
  * +Lxc             = Lexicalized (for participial forms)
- * +Drv             = Derived (for participial forms)
+
+ * +Der             = Derived (for participial forms)
+ * +Der/PrsAct             = Derived (for participial forms)
+ * +Der/PrsPss             = Derived (for participial forms)
+ * +Der/PstAct             = Derived (for participial forms)
+ * +Der/PstPss             = Derived (for participial forms)
 
 !!Nominal MSP
  * +Msc +Fem +Neu +MFN   = grammatical gender,  +MFN = gender unspecifiable (pl tantum)

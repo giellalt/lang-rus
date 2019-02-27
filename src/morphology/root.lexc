@@ -192,5 +192,6 @@ Pronoun ;	    !!= * @CODE@
 Verb ;		    !!= * @CODE@
 Propernoun ;    !!= * @CODE@
 Punctuation ;   !!= * @CODE@
+Symbols     ;   !!= * @CODE@
 LexicalizedParticiple ;   !!= * @CODE@
 ! NonLexicalizedParticiple ;   !!= * @CODE@

@@ -99,6 +99,17 @@ analyser-disamb-gt%.$(1): analyser-disamb-gt%.tmp.$(1) \
 		 save stack $$@\n\
 		 quit\n" | $$(XFST_TOOL)
 
+# The hfst specific tokeniser disamb fst also needs to be destressed:
+analyser-pmatchdisamb-gt%.$(1): analyser-pmatchdisamb-gt%.tmp.$(1) \
+					 orthography/destressOptional.compose.$(1)
+	$$(AM_V_XFST_TOOL)$$(PRINTF) "read regex \
+				@\"$$<\"                                      \
+			.o. @\"orthography/destressOptional.compose.$(1)\" \
+			;\n\
+		 $$(INVERT_HFST)\
+		 save stack $$@\n\
+		 quit\n" | $$(XFST_TOOL)
+
 analyser-gramcheck-gt%.$(1): analyser-gramcheck-gt%.tmp.$(1) \
 					 orthography/destressOptional.compose.$(1)
 	$$(AM_V_XFST_TOOL)$$(PRINTF) "read regex \

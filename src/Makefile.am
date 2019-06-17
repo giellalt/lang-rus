@@ -123,9 +123,11 @@ analyser-gramcheck-gt%.$(1): analyser-gramcheck-gt%.tmp.$(1) \
 # We need to add processing of language-specific tags in the generators:
 generator-gt%.$(1): generator-gt%.tmp.$(1) \
 					 orthography/destress.compose.$(1) \
-					 filters/make-optional-cyrillic-jo.$(1)
+					 filters/make-optional-cyrillic-jo.$(1) \
+					 filters/make-ambiguous-AnIn.$(1)
 	$$(AM_V_XFST_TOOL)$$(PRINTF) "read regex \
 				@\"filters/make-optional-cyrillic-jo.$(1)\" \
+		        .o. @\"filters/make-ambiguous-AnIn.$(1)\" \
 			.o. @\"$$<\"                                    \
 			.o. @\"orthography/destress.compose.$(1)\"      \
 			;\n\

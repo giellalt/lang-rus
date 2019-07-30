@@ -387,6 +387,13 @@ LEXICON Numeral
 восьмой:восьм числ.-п_[п_b] "weight: 3.944350770710531" ; 
 сороковой:сороков числ.-п_[п_b] ; 
 
+!!!! compound numeral adjectives, e.g. двухлетний, двухлетие, трехэтажный и т.д.
+compound_num_ones ;
+compound_num_teens ;
+compound_num_tens ;
+compound_num_hundreds ;
+compound_num_thousands ;
+
 №:№ DIGITLEX ; ! TODO FIX CHECK In this context, only a cardinal/nominal ending is likely
 DIGITLEX ; 
 LASTDIGIT ;
@@ -459,3 +466,133 @@ LEXICON DIGITLEX
 7:7 LOOP "weight: 5.260418941256702" ;
 8:8 LOOP "weight: 5.229733156116501" ;
 9:9 LOOP "weight: 5.1030881393779595" ;
+
+LEXICON compound_num_ones
+одно:одно compound_num_term ;
+двух:дву̀х compound_num_term ;
+трёх:трё̀х compound_num_term ;
+четырёх:четырё̀х compound_num_term ;
+пяти:пятѝ compound_num_term ;
+шести:шестѝ compound_num_term ;
+семи:семѝ compound_num_term ;
+восьми:восьмѝ compound_num_term ;
+девяти:девятѝ compound_num_term ;
+десяти:десятѝ compound_num_term ;
+
+LEXICON compound_num_teens
+одиннадцати:одѝннадцати compound_num_term ;
+двенадцати:двена̀дцати compound_num_term ;
+тринадцати:трина̀дцати compound_num_term ;
+четырнадцати:четы̀рнадцати compound_num_term ;
+пятнадцати:пятна̀дцати compound_num_term ;
+шестнадцати:шестна̀дцати compound_num_term ;
+семнадцати:семна̀дцати compound_num_term ;
+восемнадцати:восемна̀дцати compound_num_term ;
+девятнадцати:девятна̀дцати compound_num_term ;
+
+LEXICON compound_num_from_tens
+compound_num_term ;
+compound_num_ones ;
+
+LEXICON compound_num_tens
+двадцати:двадцатѝ compound_num_from_tens ;
+тридцати:тридцатѝ compound_num_from_tens ;
+сорока:сорока compound_num_from_tens ;  ! TODO stress?
+пятидесяти:пятѝдесяти compound_num_from_tens ;
+шестидесяти:шестѝдесяти compound_num_from_tens ;
+семидесяти:семѝдесяти compound_num_from_tens ;
+восьмидесяти:восьмѝдесяти compound_num_from_tens ;
+девяносто:девяно̀сто compound_num_from_tens ;
+
+LEXICON compound_num_from_hundreds
+compound_num_from_tens ;
+compound_num_tens ;
+compound_num_teens ;
+
+LEXICON compound_num_hundreds
+сто:сто compound_num_from_hundreds ;
+двухсот:дву̀хсо̀т compound_num_from_hundreds ;
+трёхсот:трё̀хсо̀т compound_num_from_hundreds ;
+четырёхсот:четырё̀хсо̀т compound_num_from_hundreds ;
+пятисот:пятѝсо̀т compound_num_from_hundreds ;
+шестисот:шестѝсо̀т compound_num_from_hundreds ;
+семисот:семѝсо̀т compound_num_from_hundreds ;
+восьмисот:восьмѝсо̀т compound_num_from_hundreds ;
+девятисот:девятѝсо̀т compound_num_from_hundreds ;
+
+LEXICON compound_num_from_thousands
+compound_num_from_hundreds ;
+compound_num_hundreds ;
+
+LEXICON compound_num_thousands
+тысяче:ты̀сяче compound_num_from_thousands ;
+двухтысяче:дву̀хты̀сяче compound_num_from_thousands ;
+трёхтысяче:трё̀хты̀сяче compound_num_from_thousands ;
+четырёхтысяче:четрыё̀хты̀сяче compound_num_from_thousands ;
+пятитысяче:пятѝты̀сяче compound_num_from_thousands ;
+шеститысяче:шестѝты̀сяче compound_num_from_thousands ;
+семитысяче:семѝты̀сяче compound_num_from_thousands ;
+восьмитысяче:восьмѝты̀сяче compound_num_from_thousands ;
+девятитысяче:девятѝты̀сяче compound_num_from_thousands ;
+! TODO ten, teen, and hundred thousands
+
+LEXICON compound_num_from_millions
+compound_num_thousands ;
+compound_num_from_thousands ;
+
+LEXICON compound_num_millions
+миллионо:миллио̀но compound_num_from_millions ;
+двухмиллионо:дву̀хмиллио̀но compound_num_from_millions ;
+трёхмиллионо:трё̀хмиллио̀но compound_num_from_millions ;
+четырёхмиллионо:четырё̀хмиллио̀но compound_num_from_millions ;
+пятимиллионо:пятѝмиллио̀но compound_num_from_millions ;
+шестимиллионо:шестѝмиллио̀но compound_num_from_millions ;
+семимиллионо:семѝмиллио̀но compound_num_from_millions ;
+восьмимиллионо:восьмѝмиллио̀но compound_num_from_millions ;
+девятимиллионо:девятѝмиллио̀но compound_num_from_millions ;
+! TODO ten, teen, and hundred millions
+
+LEXICON compound_num_term  ! terminal
+адресный:а́дрес%^Fен п_a ;
+атомный:а́том%^Fен п_a ;
+актный:а́кт%^Fен п_a ;
+балльный:ба́лль%^Fен п_a ;
+буквенный:бу́квен%^Fен п_a ;
+дневный:дне́в%^Fен п_a ;
+дольный:до́ль%^Fен п_a ;
+дюймовый:дю́ймов п_a ;
+километровый:километро́в п_a ;
+комнатный:ко́мнат%^Fен п_a ;
+кратный:кра́т%^Fен п_a ;
+лапый:ла́п п_a ;
+летний:ле́т%^Fень п_a ;
+листный:ли́ст%^Fен п_a ;
+литровый:литро́в п_a ;
+матчевый:ма́тчев п_a ;
+месячный:ме́сяч%^Fен п_a ;
+метровый:метро́в п_a ;
+минутный:мину́т%^Fен п_a ;
+недельный:неде́ль%^Fен п_a ;
+ногий:но́г п_a ;
+процентный:проце́нт%^Fен п_a ;
+разовый:ра́зов п_a ;
+рогий:ро́г п_a ;
+ручный:ру́ч%^Fен п_a ;
+рядный:ря́д%^Fен п_a ;
+серийный:сери́й%^Fен п_a ;
+сотенный:со́тен%^Fен п_a ;  ! TODO check with native
+стопный:сто́п%^Fен п_a ;
+сторонний:сторо́н%^Fень п_a ;
+строчный:стро́ч%^Fен п_a ;
+томный:то́м%^Fен п_a ;
+точечный:то́чеч%^Fен п_a ;
+тысячный:ты́сяч%^Fен п_a ;
+угольный:уго́ль%^Fен п_a ;
+уровневый:у́ровнев п_a ;
+футовый:фу́тов п_a ;
+цветный:цве́т%^Fен п_a ;
+часовой:часов п_b ;
+этажный:эта́ж%^Fен п_a ;
+
+летие:ле́тие с_a ;
+угольник:уго́льник м_a ;

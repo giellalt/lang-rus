@@ -136,12 +136,18 @@ Multichar_Symbols
 +Use/Obs !!= * @CODE@ = Obsolete
 +Use/Ant !!= * @CODE@ = Antiquated "устаревшее"
 +Err/Orth !!= * @CODE@ = Substandard
-+Err/L2_ii   !!= * @CODE@ = L2 error: failure to change ие to ии, e.g. о Марие, о кафетерие, о знание
-+Err/L2_Pal  !!= * @CODE@ = L2 error: failure to place soft-indicating symbol after soft stem, e.g. земла (compare земля)
-+Err/L2_FV   !!= * @CODE@ = L2 error: presence of fleeting vowel where it should be deleted, e.g. отеца (compare отца)
-+Err/L2_NoFV !!= * @CODE@ = L2 error: lack of fleeting vowel where it should be inserted, e.g. окн (compare окон)
-+Err/L2_SRo  !!= * @CODE@ = L2 error: failure to change о to е after hushers and ц, e.g. Сашой (compare Сашей)
-+Err/L2_SRy  !!= * @CODE@ = L2 error: failure to change ы to и after hushers and velars, e.g. книгы (compare книги)
++Err/L2_ii   !!= * @CODE@ = L2 error: Failure to change ending ие to ии in +Sg+Loc or +Sg+Dat, e.g. к Марие, о кафетерие, о знание
+	! +Err/L2_ii is only possible on nouns with a stem in и
++Err/L2_Pal  !!= * @CODE@ = L2 error: Palatalization: failure to place soft-indicating symbol after soft stem, e.g. земла (compare земля)
+	! +Err/L2_Pal only occurs on 1) nouns and modifiers that have a soft stem, or 2) verbs in евать, e.g. малует (compare малюет) 
++Err/L2_FV   !!= * @CODE@ = L2 error: Presence of fleeting vowel where it should be deleted, e.g. отеца (compare отца)
+	! +Err/L2_FV only occurs in lexemes that have a fleeting vowel in at least one form.
++Err/L2_NoFV !!= * @CODE@ = L2 error: Lack of fleeting vowel where it should be inserted, e.g. окн (compare окон)
+	! +Err/L2_NoFV only occurs in lexemes that have a fleeting vowel in at least one form.
++Err/L2_SRo  !!= * @CODE@ = L2 error: Failure to change о to е after hushers and ц, e.g. Сашой (compare Сашей)
+	! +Err/L2+SRo only occurs in 1) nouns and modifiers with stems in hushers or ц, or 2) verbs in евать, e.g. танцовать (compare танцевать)
++Err/L2_SRy  !!= * @CODE@ = L2 error: Failure to change ы to и after hushers and velars, e.g. книгы (compare книги)
+	! +Err/L2+SRo only occurs in nouns and modifiers with stems in hushers or velars
 
 ! More use tags:
 ! ласкательное - +Use/Aff(ectionate)

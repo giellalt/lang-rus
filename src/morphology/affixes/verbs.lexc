@@ -523,7 +523,7 @@ LEXICON св_2a_ова́
 св_нп_2a_ова́ ;
 +V+Perf+TV:%>ова́ Perf_Inf_V_stem ;
 +V+Perf+TV:%>у́ Perf_Fut_1_stem ;
-+V+Perf+TV:%>ова́ PastPass_нн_stem ;
++V+Perf+TV:%>о́ва PastPass_нн_stem ;
 
 LEXICON св_нп_2a_ова́
 +V+Perf+IV:%>ова́ Perf_Inf_V_stem ;
@@ -678,7 +678,7 @@ LEXICON св_2a_ова́_Lxc
 св_нп_2a_ова́ ;
 +V+Perf+TV:%>ова́ Perf_Inf_V_stem_Lxc ;
 +V+Perf+TV:%>у́ Perf_Fut_1_stem_Lxc ;
-+V+Perf+TV:%>ова́ PastPass_нн_stem_Lxc ;
++V+Perf+TV:%>о́ва PastPass_нн_stem_Lxc ;
 
 LEXICON св_2b_Lxc
 св_нп_2b_Lxc ;

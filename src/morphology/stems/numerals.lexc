@@ -393,6 +393,13 @@ compound_num_teens ;
 compound_num_tens ;
 compound_num_hundreds ;
 compound_num_thousands ;
+compound_num_teen_thousands ;
+compound_num_ten_thousands ;
+compound_num_hundred_thousands ;
+compound_num_millions ;
+compound_num_teen_millions ;
+compound_num_ten_millions ;
+compound_num_hundred_millions ;
 
 №:№ DIGITLEX ; ! TODO FIX CHECK In this context, only a cardinal/nominal ending is likely
 DIGITLEX ; 
@@ -521,36 +528,119 @@ LEXICON compound_num_hundreds
 девятисот:девятѝсо̀т compound_num_from_hundreds ;
 
 LEXICON compound_num_from_thousands
-compound_num_from_hundreds ;
-compound_num_hundreds ;
+тысяче:ты̀сяче compound_num_from_hundreds ;
+тысяче:ты̀сяче compound_num_hundreds ;
 
 LEXICON compound_num_thousands
-тысяче:ты̀сяче compound_num_from_thousands ;
-двухтысяче:дву̀хты̀сяче compound_num_from_thousands ;
-трёхтысяче:трё̀хты̀сяче compound_num_from_thousands ;
-четырёхтысяче:четрыё̀хты̀сяче compound_num_from_thousands ;
-пятитысяче:пятѝты̀сяче compound_num_from_thousands ;
-шеститысяче:шестѝты̀сяче compound_num_from_thousands ;
-семитысяче:семѝты̀сяче compound_num_from_thousands ;
-восьмитысяче:восьмѝты̀сяче compound_num_from_thousands ;
-девятитысяче:девятѝты̀сяче compound_num_from_thousands ;
-! TODO ten, teen, and hundred thousands
+compound_num_from_thousands ;
+двух:дву̀х compound_num_from_thousands ;
+трёх:трё̀х compound_num_from_thousands ;
+четырёх:четырё̀х compound_num_from_thousands ;
+пяти:пятѝ compound_num_from_thousands ;
+шести:шестѝ compound_num_from_thousands ;
+семи:семѝ compound_num_from_thousands ;
+восьми:восьмѝ compound_num_from_thousands ;
+девяти:девятѝ compound_num_from_thousands ;
+десяти:десятѝ compound_num_from_thousands ;
+
+LEXICON compound_num_teen_thousands
+одиннадцати:одѝннадцати compound_num_from_thousands ;
+двенадцати:двена̀дцати compound_num_from_thousands ;
+тринадцати:трина̀дцати compound_num_from_thousands ;
+четырнадцати:четы̀рнадцати compound_num_from_thousands ;
+пятнадцати:пятна̀дцати compound_num_from_thousands ;
+шестнадцати:шестна̀дцати compound_num_from_thousands ;
+семнадцати:семна̀дцати compound_num_from_thousands ;
+восемнадцати:восемна̀дцати compound_num_from_thousands ;
+девятнадцати:девятна̀дцати compound_num_from_thousands ;
+
+LEXICON compound_num_from_ten_thousands
+compound_num_from_thousands ;
+compound_num_thousands ;
+
+LEXICON compound_num_ten_thousands
+двадцати:двадцатѝ compound_num_from_ten_thousands ;
+тридцати:тридцатѝ compound_num_from_ten_thousands ;
+сорока:сорока compound_num_from_ten_thousands ;  ! TODO stress?
+пятидесяти:пятѝдесяти compound_num_from_ten_thousands ;
+шестидесяти:шестѝдесяти compound_num_from_ten_thousands ;
+семидесяти:семѝдесяти compound_num_from_ten_thousands ;
+восьмидесяти:восьмѝдесяти compound_num_from_ten_thousands ;
+девяносто:девяно̀сто compound_num_from_ten_thousands ;
+
+LEXICON compound_num_from_hundred_thousands
+compound_num_from_ten_thousands ;
+compound_num_ten_thousands ;
+compound_num_teen_thousands ;
+
+LEXICON compound_num_hundred_thousands
+сто:сто compound_num_from_hundred_thousands ;
+двухсот:дву̀хсо̀т compound_num_from_hundred_thousands ;
+трёхсот:трё̀хсо̀т compound_num_from_hundred_thousands ;
+четырёхсот:четырё̀хсо̀т compound_num_from_hundred_thousands ;
+пятисот:пятѝсо̀т compound_num_from_hundred_thousands ;
+шестисот:шестѝсо̀т compound_num_from_hundred_thousands ;
+семисот:семѝсо̀т compound_num_from_hundred_thousands ;
+восьмисот:восьмѝсо̀т compound_num_from_hundred_thousands ;
+девятисот:девятѝсо̀т compound_num_from_hundred_thousands ;
 
 LEXICON compound_num_from_millions
-compound_num_thousands ;
-compound_num_from_thousands ;
+миллионо:миллио̀но compound_num_from_hundred_thousands ;
+миллионо:миллио̀но compound_num_hundred_thousands ;
+миллионо:миллио̀но compound_num_from_hundreds ;
+миллионо:миллио̀но compound_num_hundreds ;
 
 LEXICON compound_num_millions
-миллионо:миллио̀но compound_num_from_millions ;
-двухмиллионо:дву̀хмиллио̀но compound_num_from_millions ;
-трёхмиллионо:трё̀хмиллио̀но compound_num_from_millions ;
-четырёхмиллионо:четырё̀хмиллио̀но compound_num_from_millions ;
-пятимиллионо:пятѝмиллио̀но compound_num_from_millions ;
-шестимиллионо:шестѝмиллио̀но compound_num_from_millions ;
-семимиллионо:семѝмиллио̀но compound_num_from_millions ;
-восьмимиллионо:восьмѝмиллио̀но compound_num_from_millions ;
-девятимиллионо:девятѝмиллио̀но compound_num_from_millions ;
-! TODO ten, teen, and hundred millions
+compound_num_from_millions ;
+двух:дву̀х compound_num_from_millions ;
+трёх:трё̀х compound_num_from_millions ;
+четырёх:четырё̀х compound_num_from_millions ;
+пяти:пятѝ compound_num_from_millions ;
+шести:шестѝ compound_num_from_millions ;
+семи:семѝ compound_num_from_millions ;
+восьми:восьмѝ compound_num_from_millions ;
+девяти:девятѝ compound_num_from_millions ;
+
+LEXICON compound_num_teen_millions
+одиннадцати:одѝннадцати compound_num_from_millions ;
+двенадцати:двена̀дцати compound_num_from_millions ;
+тринадцати:трина̀дцати compound_num_from_millions ;
+четырнадцати:четы̀рнадцати compound_num_from_millions ;
+пятнадцати:пятна̀дцати compound_num_from_millions ;
+шестнадцати:шестна̀дцати compound_num_from_millions ;
+семнадцати:семна̀дцати compound_num_from_millions ;
+восемнадцати:восемна̀дцати compound_num_from_millions ;
+девятнадцати:девятна̀дцати compound_num_from_millions ;
+
+LEXICON compound_num_from_ten_millions
+compound_num_from_millions ;
+compound_num_millions ;
+
+LEXICON compound_num_ten_millions
+двадцати:двадцатѝ compound_num_from_ten_millions ;
+тридцати:тридцатѝ compound_num_from_ten_millions ;
+сорока:сорока compound_num_from_ten_millions ;  ! TODO stress?
+пятидесяти:пятѝдесяти compound_num_from_ten_millions ;
+шестидесяти:шестѝдесяти compound_num_from_ten_millions ;
+семидесяти:семѝдесяти compound_num_from_ten_millions ;
+восьмидесяти:восьмѝдесяти compound_num_from_ten_millions ;
+девяносто:девяно̀сто compound_num_from_ten_millions ;
+
+LEXICON compound_num_from_hundred_millions
+compound_num_from_ten_millions ;
+compound_num_ten_millions ;
+compound_num_teen_millions ;
+
+LEXICON compound_num_hundred_millions
+сто:сто compound_num_from_hundred_millions ;
+двухсот:дву̀хсо̀т compound_num_from_hundred_millions ;
+трёхсот:трё̀хсо̀т compound_num_from_hundred_millions ;
+четырёхсот:четырё̀хсо̀т compound_num_from_hundred_millions ;
+пятисот:пятѝсо̀т compound_num_from_hundred_millions ;
+шестисот:шестѝсо̀т compound_num_from_hundred_millions ;
+семисот:семѝсо̀т compound_num_from_hundred_millions ;
+восьмисот:восьмѝсо̀т compound_num_from_hundred_millions ;
+девятисот:девятѝсо̀т compound_num_from_hundred_millions ;
 
 LEXICON compound_num_term  ! terminal
 адресный:а́дрес%^Fен п_a ;

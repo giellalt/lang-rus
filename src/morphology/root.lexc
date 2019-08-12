@@ -121,7 +121,7 @@ Multichar_Symbols
 +DASH   !!= * @CODE@ = Dash
 +LQUOT   !!= * @CODE@ = Left quotation
 +RQUOT   !!= * @CODE@ = Right quotation
-+QUOT   !!= * @CODE@ = 'Ambidextrous' quotation
++QUOT   !!= * @CODE@ = "Ambidextrous" quotation
 +LPAR    !!= * @CODE@ = Left parenthesis/bracket
 +RPAR    !!= * @CODE@ = Right parenthesis/bracket
 

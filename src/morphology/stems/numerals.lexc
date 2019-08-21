@@ -20,8 +20,7 @@ LEXICON 2
 +Num+Msc+Inan+Acc:а́ # ; 
 +Num+Msc+Anim+Acc:у́х # ; 
 +Num+Neu+AnIn+Acc:а́ # ; 
-+Num+Fem+Inan+Acc:е́ # ; 
-+Num+Fem+Anim+Acc:е́ # ; 
++Num+Fem+AnIn+Acc:е́ # ; 
 +Num+Fem+Anim+Acc+Fac:у́х # ; 
 +Num+MFN+AnIn+Gen:у́х # ; 
 +Num+MFN+AnIn+Loc:у́х # ; 
@@ -67,7 +66,7 @@ LEXICON 3
 +Num+Msc+Inan+Acc:и́ # ; 
 +Num+Msc+Anim+Acc:ёх # ; 
 +Num+Neu+AnIn+Acc:и́ # ; 
-+Num+Fem+Inan+Acc:и́ # ; 
++Num+Fem+AnIn+Acc:и́ # ; 
 +Num+Fem+Anim+Acc+Fac:ёх # ; 
 +Num+MFN+AnIn+Gen:ёх # ; 
 +Num+MFN+AnIn+Loc:ёх # ; 
@@ -79,7 +78,7 @@ LEXICON 4
 +Num+Msc+Inan+Acc:ы́ре # ; 
 +Num+Msc+Anim+Acc:ырёх # ; 
 +Num+Neu+AnIn+Acc:ы́ре # ; 
-+Num+Fem+Inan+Acc:ы́ре # ; 
++Num+Fem+AnIn+Acc:ы́ре # ; 
 +Num+Fem+Anim+Acc+Fac:ырёх # ; 
 +Num+MFN+AnIn+Gen:ырёх # ; 
 +Num+MFN+AnIn+Loc:ырёх # ; 

@@ -503,7 +503,7 @@ compound_num_ones ;
 LEXICON compound_num_tens
 двадцати:двадцатѝ compound_num_from_tens ;
 тридцати:тридцатѝ compound_num_from_tens ;
-сорока:сорока compound_num_from_tens ;  ! TODO stress?
+сорока:сорока̀ compound_num_from_tens ;
 пятидесяти:пятѝдесяти compound_num_from_tens ;
 шестидесяти:шестѝдесяти compound_num_from_tens ;
 семидесяти:семѝдесяти compound_num_from_tens ;
@@ -560,7 +560,7 @@ compound_num_thousands ;
 LEXICON compound_num_ten_thousands
 двадцати:двадцатѝ compound_num_from_ten_thousands ;
 тридцати:тридцатѝ compound_num_from_ten_thousands ;
-сорока:сорока compound_num_from_ten_thousands ;  ! TODO stress?
+сорока:сорока̀ compound_num_from_ten_thousands ;
 пятидесяти:пятѝдесяти compound_num_from_ten_thousands ;
 шестидесяти:шестѝдесяти compound_num_from_ten_thousands ;
 семидесяти:семѝдесяти compound_num_from_ten_thousands ;
@@ -618,7 +618,7 @@ compound_num_millions ;
 LEXICON compound_num_ten_millions
 двадцати:двадцатѝ compound_num_from_ten_millions ;
 тридцати:тридцатѝ compound_num_from_ten_millions ;
-сорока:сорока compound_num_from_ten_millions ;  ! TODO stress?
+сорока:сорока̀ compound_num_from_ten_millions ;
 пятидесяти:пятѝдесяти compound_num_from_ten_millions ;
 шестидесяти:шестѝдесяти compound_num_from_ten_millions ;
 семидесяти:семѝдесяти compound_num_from_ten_millions ;

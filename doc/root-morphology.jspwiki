@@ -110,7 +110,7 @@
  * +DASH    = Dash
  * +LQUOT    = Left quotation
  * +RQUOT    = Right quotation
- * +QUOT    = 'Ambidextrous' quotation
+ * +QUOT    = "Ambidextrous" quotation
  * +LPAR     = Left parenthesis/bracket
  * +RPAR     = Right parenthesis/bracket
 
@@ -125,12 +125,12 @@
  * +Use/Obs  = Obsolete
  * +Use/Ant  = Antiquated "устаревшее"
  * +Err/Orth  = Substandard
- * +Err/L2_ii    = L2 error: failure to change ие to ии, e.g. о Марие, о кафетерие, о знание
- * +Err/L2_Pal   = L2 error: failure to place soft-indicating symbol after soft stem, e.g. земла (compare земля)
- * +Err/L2_FV    = L2 error: presence of fleeting vowel where it should be deleted, e.g. отеца (compare отца)
- * +Err/L2_NoFV  = L2 error: lack of fleeting vowel where it should be inserted, e.g. окн (compare окон)
- * +Err/L2_SRo   = L2 error: failure to change о to е after hushers and ц, e.g. Сашой (compare Сашей)
- * +Err/L2_SRy   = L2 error: failure to change ы to и after hushers and velars, e.g. книгы (compare книги)
+ * +Err/L2_ii    = L2 error: Failure to change ending ие to ии in +Sg+Loc or +Sg+Dat, e.g. к Марие, о кафетерие, о знание
+ * +Err/L2_Pal   = L2 error: Palatalization: failure to place soft-indicating symbol after soft stem, e.g. земла (compare земля)
+ * +Err/L2_FV    = L2 error: Presence of fleeting vowel where it should be deleted, e.g. отеца (compare отца)
+ * +Err/L2_NoFV  = L2 error: Lack of fleeting vowel where it should be inserted, e.g. окн (compare окон)
+ * +Err/L2_SRo   = L2 error: Failure to change о to е after hushers and ц, e.g. Сашой (compare Сашей)
+ * +Err/L2_SRy   = L2 error: Failure to change ы to и after hushers and velars, e.g. книгы (compare книги)
 
 
 !!!Key lexicon

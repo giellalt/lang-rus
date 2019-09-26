@@ -33,6 +33,7 @@ LIST V/Pass =  pass V/Pass ;
 LIST Actv = actv Actv ;
 
 LIST Lxc = lxc Lxc ; #lexicalized participial forms
+LIST Der = der Der; #readings assigned to all participial wordforms presupposing their ambiguity
 
 LIST Cop =  ("быть" vblex)  ("быть" V)  ;
 
@@ -42,7 +43,7 @@ LIST Cm =  cm  ;
 LIST Excl =  ("!")  ;
 LIST Ques =  ("?")  ;
 LIST Sent =  sent  ;
-LIST Comm = "," ;
+LIST Comm = "<,>" ;
 LIST Dash ="-";
 LIST QuotPlain = """;
 
@@ -321,7 +322,8 @@ LIST PurposeAdv = "нечаянно" "назло" "нарочно" "напока
 LIST MeasureDegreeAdv = "совсем" "очень" "страшно" "крайне" "соврешенно" "чересчур" "почти" "чрезвычайно" "слегка" "исключительно" "гораздо" "много" "немного" мало немало "абсолютно" "чуть" "чуть-чуть" "еле" "еле-еле" "столь" "весьма" "почти" "никак" "едва" "капельку" "настолько" "так" "очень" "неприлично" "невероятно" "более" "наиболее" "глубоко" "мертвецки" "ничтожно" "смехотворно" "по-черному" "гораздо" "намного" "слегка" "немного" "сильно" "менее" "просто";
 #adverbs of measure and degree
 
-LIST TempLocAdv = "вовне" "донельзя" "доныне" "поныне" "заранее" "зазря" "извне" "навсегда" "назавтра" "повсюду" "позавчера" "послезавтра" "отсюда"  "откуда" "отныне" "повсюду" ;
+LIST TempLocAdv = "вовне" "донельзя" "доныне" "поныне" "заранее" "зазря" "извне" "навсегда" "назавтра" "повсюду" "позавчера" "послезавтра" "отсюда"  "откуда" "отныне" "повсюду" "завтра" "сегодня" "вмиг" "сразу" "надолго" "долго" "немного" "часто" "редко" "неоднократно" "ежедневно" "помесячно" "дважды" "трижды" "многажды" "теперь" "сейчас" "раньше" "поздно" "рано" "послезавтра" "сегодня" "вмиг" "сразу" "уже";
+#UP: these adverbs include adverbs of duration and multiplicity (taken from rusgram.ru)
 
 LIST Title = ("<[А-ЯA-Z][а-яa-z]+>"r) ;
 LIST Majusc = ("<[А-ЯA-Z]+>"r) ;
@@ -783,9 +785,6 @@ SELECT Gen IF (-1C N LINK 0 NGDAIP - Gen) (0C A) (1C N + Gen) ;
 
 REMOVE Short IF (0 Pr/Soglasno) (1 Dat) ;
 
-SELECT:DsmbgPtcpV A + $$NGDAIP IF (1C* N + $$NGDAIP BARRIER Punct OR Pr OR Lparen OR NGDAIP - $$NGDAIP LINK -1C* A + $$NGDAIP BARRIER Punct OR Pr OR Lparen OR NGDAIP - $$NGDAIP);
-#! Движущей силой в поездах являются локомотивы, использующие электричество или производящие собственную мощность, обычно дизельными двигателями.
-
 SELECT Acc IF (-1 Pr/Na OR Pr/V) (0C Modif) (0C Acc OR Prp) (1C N + Acc);
 
 REMOVE Fin IF (-1C Fin) ;
@@ -1189,34 +1188,39 @@ REMOVE:SCPtcpN7 V OR A IF (0 V + Gen) (0 N + Gen)(0 A + Gen)(-1 N)(1 V);
 #...подавляющее большинство погибших составили вооруженные боевики, открывшие огонь по израильским силам во время их...
 
 #REMOVE V:
-
 #Rules:
-REMOVE:SCPtcpV1 V IF (0 V) (0 A + $$NGDAIP)(1 N + $$NGDAIP OR Pron + $$NGDAIP LINK NOT 1 Pr LINK 1 N OR Pron);
+REMOVE:Der V + Der IF (0 V + Der);
+#the rule removes double reading (A and V) so that it does not interfere into the following rules, the rule should be temporary. 
+
+REMOVE:SCPtcpV1 V IF (0 V)(0 A + $$NGDAIP)(1 N + $$NGDAIP LINK NOT 1 Pr LINK 1 N OR Pron);
 #Для умных и думающих людей хочу напомнить: подготовка квалифицированных учителей – русистов в Азербайджане началась с 30-х годов прошлого века. ==> квалифицированных ok
 
-REMOVE:SCPtcpV2 V IF (0 V) (0 A)(-1 MeasureDegreeAdv)(-1 Ne LINK -1 MeasureDegreeAdv)(NOT 1 Pron)(NOT 1 N)(NOT 1 Det)(NOT 1 Pron + Poss) ; 
+REMOVE:SCPtcpV1.1 V IF (0 V)(0 A + $$NGDAIP)(1 N + $$NGDAIP LINK NOT 1 Pr LINK 1 A LINK 1 N OR Pron);
+#Вскоре после этого волнующего события было заявлено о начавшейся разработке принципиально новой для российской действительности модели автомобиля с таинственным, но интригующим названием «проект С». => волнующего
+#Хотя мало кто знает, что «проект С» начал разрабатываться еще при Владимире Каданникове (бывший президент — генеральный директор АвтоВАЗа), а тот самый макет «новой модели» с того самого автосалона, по словам старожилов завода, успел покрыться толстым слоем пыли в лабораториях НТЦ еще задолго до прихода менеджеров «Рособоронэкспорта».=> бывший
 
-#Это сооружение механики в разобранном виде привозят на гонки на шести трейлерах и затем собирают с помощью гидроподъемников в течение 13 часов, причем процесс этот настолько продуман и автоматизирован, что даже не требует привозить на Гран При лишних людей. ==> настолько продуман ok
-#Вернувшись, рассказал, что доклад М. был очень продуман, отчетлив и верно излагал основные мысли Ни.
-#― Так вы коллекционируете насекомых? ― спросил философ, настолько удивленный и обиженный, насколько было это возможно при его характере. ==> удивленный ok
-#Шехтель очень дорожил этой своей работой, и есть очень обиженное его письмо, когда уже в советское время, всех почтили к юбилею театра наградами, а о нем не вспомнили. => обиженное ok
-#Менее одаренный природой человек может стать более развитым, чем более одаренный, развитием которого никто не занимался. => одаренный => одаренный, развитым
+REMOVE:SCPtcpV3.1 V IF (0 V) (0 A + $$NGDAIP)((-1 MeasureDegreeAdv LINK -1 Comm LINK -1 N + $$NGDAIP OR Pron + $$NGDAIP) OR (-1 MeasureDegreeAdv LINK -1 Ne LINK -1 Comm LINK -1 N + $$NGDAIP OR Pron + $$NGDAIP))(1 CC);
+#― Так вы коллекционируете насекомых? ― спросил философ, настолько удивленный и обиженный, насколько было это возможно при его характере. ==> удивленный
+#very specific context, no hits in opencorpora
 
-REMOVE:SCPtcpV3 V IF (0 V LINK 0 (<W=MIN>)) (0 A LINK 0 (<W=MIN>))(-1 CC LINK -1* MeasureDegreeAdv OR Det OR Pron + Poss)(-1 Ne LINK -1 CC LINK -1* MeasureDegreeAdv)(1 Comm);
-#Это сооружение механики в разобранном виде привозят на гонки на шести трейлерах и затем собирают с помощью гидроподъемников в течение 13 часов, причем процесс этот настолько продуман и автоматизирован, что даже не требует привозить на Гран При лишних людей. ==>  и автоматизирован ok
+REMOVE:SCPtcpV3.2 V IF (0 V) (0 A)((-1 CC LINK -1 A or V LINK -1 MeasureDegreeAdv)OR(-1 CC LINK -1 A LINK -1 MeasureDegreeAdv LINK -1 Ne))(1 Comm)(1 Comm);
 #― Так вы коллекционируете насекомых? ― спросил философ, настолько удивленный и обиженный, насколько было это возможно при его характере. ==> и обиженный
+#very specific context, no hits in opencorpora
 
-REMOVE:SCPtcpV4 V IF (0 V) (0 A + $$NGDAIP)((-1 MeasureDegreeAdv OR Det) OR (-1 Ne LINK -1 MeasureDegreeAdv OR Det) OR (-1 V))(1 Pron + $$NGDAIP LINK 1 N + $$NGDAIP) ;
-#?????
+REMOVE:SCPtcpV4 V IF (0 V) (0 A + $$NGDAIP)((-1 MeasureDegreeAdv OR Det) OR (-1 Ne LINK -1 MeasureDegreeAdv OR Det) OR (-1 V))(1 Pron + $$NGDAIP OR N + $$NGDAIP) ;
+#Мировую известность художникам Татьяне Арзамасовой, Льву Евзовичу и Евгению Святскому, по начальным буквам фамилий которых и назван коллектив (позже к художникам присоединился выдающийся фотограф Владимир Фридкес), принес скандальный «Исламский проект», в котором 100-метровый оплот американской независимости – статуя Свободы – облачается в паранджу, католический храм Саграда Фамилия вонзает в небо исламские полумесяцы, в Нью-Йорке горят небоскребы, а на Красной площади сидят арабские боевики с «калашами» наперевес. => выдающийся
+#Вскоре после этого волнующего события было заявлено о начавшейся разработке принципиально новой для российской действительности модели автомобиля с таинственным, но интригующим названием «проект С». => волнующего
 
 REMOVE:SCPtcpV5 V IF (0 V OR A )((-1 Adv/Cmpar) OR (-1 Ne LINK -1 Adv/Cmpar))(NOT 1 N + NOTNOMPREP OR Pron + NOTNOMPREP);
-#?????
+#На репетициях видели гораздо более собранного и звонкоголосого певца. =>собранного
+#« Я — киноглаз , я создаю человека , более совершенного , чем созданный Адам , я создаю тысячи разных людей по разным предварительным чертежам и схемам… =>совершенного
 
-#REMOVE:SCPtcpV6.1 V IF (0 V) (0 A + $$NGDAIP)((-1 N + $$NGDAIP OR Pron + $$NGDAIP) OR (-1 Ne LINK -1 N + $$NGDAIP))(NOT 1 WORD);
-#?????
+REMOVE:SCPtcpV6.1 V IF (0 V) (0 A + $$NGDAIP)((-1 N + $$NGDAIP OR Pron + $$NGDAIP) OR (-1 Ne LINK -1 N + $$NGDAIP))(NOT 1 WORD);
+#А любимее всего – финал открытый. => финал открытый
+#counterexample: А любимее всего – финал уже открыт. А любимее всего – финал открыт.
 
 #REMOVE:SCPtcpV6.2 V IF (0 V) (0 A + $$NGDAIP)((-1 N + $$NGDAIP OR Pron + $$NGDAIP) OR (-1 Ne LINK -1 N + $$NGDAIP))(1 Comm);
-#?????
+#
 
 REMOVE:SCPtcpV7 V IF (0 V OR A)((-1 CC) OR (-1 Ne LINK -1 CC))(1 S-BOUNDARY or (WORD S-BOUNDARY));
 #Фурсенко отмечает, что и повышенные зарплаты по-прежнему недотягивают до справедливого уровня. ok
@@ -1316,6 +1320,11 @@ REMOVE:SCPtcp16 A IF (0 V) (0 A + $$NGDAIP)(-1 Comm LINK -1 N)(1 Adv OR Kak);
 REMOVE:SCPtcp17 A IF (0 V) (0 A + $$NGDAIP)(-1 Pr LINK -1 V)(1 N + Dat LINK 1 N + Loc OR N + Prp);
 #... когда большинство членов кибуца не работают на принадлежащих кибуцу предприятиях ok
 
+REMOVE:SCPtcp18 A (0 V + Pred) (0 A + Pred)((-1 N) OR (-1 Ne LINK -1 N) OR (-1 TempLocAdv LINK -1 N));
+#predicative use of short participial forms
+#А любимее всего – финал уже открыт. А любимее всего – финал открыт. => открыт
+#А любимее всего – финал не открыт. => открыт
+
 ###Combination of weights and morphological information
 REMOVE:SCPtcp18 A IF (0 V + PrcPast + Pass)(0 A + $$NGDAIP);
 
@@ -1358,6 +1367,10 @@ SELECT:GCPtcpV9 V IF (0 V)(0 A + $$NGDAIP)(-1 TempLocAdv)(1 N + $$NGDAIP);
 
 REMOVE:GCLxc V - Lxc (0 V + Lxc)(0 A) ;
 
+SELECT:DsmbgPtcpV A + $$NGDAIP IF (1C* N + $$NGDAIP BARRIER Punct OR Pr OR Lparen OR NGDAIP - $$NGDAIP LINK -1C* A + $$NGDAIP BARRIER Punct OR Pr OR Lparen OR NGDAIP - $$NGDAIP);
+#! Движущей силой в поездах являются локомотивы, использующие электричество или производящие собственную мощность, обычно дизельными двигателями.
+#UP: this is Fran and Rob's rule, it used to be on line 786
+
 ###############################################################################
 # Weighting rules
 ###############################################################################
@@ -1396,3 +1409,16 @@ SELECT:maxweight (<W=MAX>) IF (0 A OR V);
 #моей as prn, if "из моей школы"
 #REMOVE A IF (-1C Pr)(0 Pron OR A);
 #(1) it also covers "человек с говорящей фамилией", because of "either or" condition "0 Pron OR A", (2) мой is not defined as an adj in the lexicon
+
+###############################################################################
+# Failed rules for ambiguous participles
+###############################################################################
+
+#!REMOVE:SCPtcpV2 V IF (0 V) (0 A)(-1 MeasureDegreeAdv)(-1 Ne LINK -1 MeasureDegreeAdv)(NOT 1 Pron)(NOT 1 N)(NOT 1 Det)(NOT 1 Pron + Poss) ; 
+#the rule does not work and is overtaken by REMOVE:1286:SCPtcpA8
+
+
+
+
+
+

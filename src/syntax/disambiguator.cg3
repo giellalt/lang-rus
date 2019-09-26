@@ -358,6 +358,8 @@ SET S-BOUNDARY = CS | Interr | (";") | BOS | EOS ;
 
 # Some case, but not...
 SET NOTNOMPREP = Dat | Gen | Acc | Ins ;
+SET SOMECASE = Nom | Acc | Gen | Dat | Ins | Prp ;
+SET OBLIQUECASE =  Acc | Gen | Dat | Ins | Prp ;
 
 # Anything but the following case...
 SET NOACC = WORD - Acc ;
@@ -426,6 +428,8 @@ SECTION
 SELECT Pr IF (0 Oneletterp);
 
 SELECT CC IF (0 I);
+
+REMOVE:AdvNotPr Pr IF (0 Adv) (NOT 1 N + OBLIQUECASE OR A + OBLIQUECASE OR Pron + OBLIQUECASE OR Num);
 
 ## Non-sentences
 
@@ -1357,8 +1361,12 @@ REMOVE:GCLxc V - Lxc (0 V + Lxc)(0 A) ;
 ###############################################################################
 # Weighting rules
 ###############################################################################
+SECTION # This is the final section, with an independent logic (remove non-max)
+###############################################################################
 
-SELECT:maxweight (<W=MAX>) ;
+
+SELECT:maxweight (<W=MAX>) IF (0 A OR V);
+# For now, we only do A vs. V, other rules may be added with more weights in the lexicon.
 
 ###############################################################################
 # Failed rules

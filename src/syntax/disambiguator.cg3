@@ -335,7 +335,7 @@ LIST AccAdv = "вечер" "день" "раз" "минута" "неделя" ;
 LIST PurposeAdv = "нечаянно" "назло" "нарочно" "напоказ" "спьяну" "спроста" "специально" "наперекор" "зря" "невзначай" "умышленно" "насмех" "преднамеренно" "ненамеренно" "бесцельно" "неспроста" "ненароком" "случайно" ;
 #adverbs of purpose
 
-LIST MeasureDegreeAdv = "совсем" "очень" "страшно" "крайне" "соврешенно" "чересчур" "почти" "чрезвычайно" "слегка" "исключительно" "гораздо" "много" "немного" мало немало "абсолютно" "чуть" "чуть-чуть" "еле" "еле-еле" "столь" "весьма" "почти" "никак" "едва" "капельку" "настолько" "так" "очень" "неприлично" "невероятно" "более" "наиболее" "глубоко" "мертвецки" "ничтожно" "смехотворно" "по-черному" "гораздо" "намного" "слегка" "немного" "сильно" "менее" "просто";
+LIST MeasureDegreeAdv = "совсем" "очень" "страшно" "крайне" "соврешенно" "чересчур" "почти" "чрезвычайно" "достаточно" "слегка" "исключительно" "гораздо" "много" "немного" мало немало "абсолютно" "чуть" "чуть-чуть" "еле" "еле-еле" "столь" "весьма" "почти" "никак" "едва" "капельку" "настолько" "так" "очень" "неприлично" "невероятно" "более" "наиболее" "глубоко" "мертвецки" "ничтожно" "смехотворно" "по-черному" "гораздо" "намного" "слегка" "немного" "сильно" "менее" "просто";
 #adverbs of measure and degree
 
 LIST TempLocAdv = "вовне" "донельзя" "доныне" "поныне" "заранее" "зазря" "извне" "навсегда" "назавтра" "повсюду" "позавчера" "послезавтра" "отсюда"  "откуда" "отныне" "повсюду" "завтра" "сегодня" "вмиг" "сразу" "надолго" "долго" "немного" "часто" "редко" "неоднократно" "ежедневно" "помесячно" "дважды" "трижды" "многажды" "теперь" "сейчас" "раньше" "поздно" "рано" "послезавтра" "сегодня" "вмиг" "сразу" "уже";
@@ -363,6 +363,7 @@ LIST V/Ref = ("[а-яa-z]+ся"r) ;
 # ====
 
 SET WORD = N | V | A | Pr | Pron | Det | Adv | CC | CS | Interj | Num | Abbr | Part | ("\?") ;
+
 
 # Verb sets
 # ---------
@@ -428,6 +429,10 @@ SET Punct = Guio | Cm | Excl | Ques ;
 SET CLB = Rel | CS ;
 
 SET Ptcp = PrsAct | PstAct | PrsPss | PstPss ;
+
+SET MOD =  A | Pron | Num | Det | Ptcp ;
+#pos modifying a noun
+SET ModLoc = MOD + Loc ;
 
 ###############################################################################
 # Rules that should be fairly safe.
@@ -1180,10 +1185,6 @@ REMOVE:SCPtcpN1 N IF (0 V) (0 N + $$NGDAIP)(-1 Comm LINK -1 N + $$NGDAIP) ;
 
 REMOVE:SCPtcpN2 N IF (0 V) (0 N + $$NGDAIP)(-1 PurposeAdv)(1 N + $$NGDAIP);
 
-REMOVE:SCPtcpN3 N IF (0 V) (0 N + $$NGDAIP)((1 N + $$NGDAIP) OR (1 Pr LINK 1 N LINK 1 N + $$NGDAIP));
-#Variant
-#Курящие в стороне люди.
-
 REMOVE:SCPtcpN4 N IF (0 V) (0 N + $$NGDAIP)(-1 Comm LINK -1 N + $$NGDAIP)(1 Num LINK 1 N);
 #optional rule
 
@@ -1192,9 +1193,29 @@ REMOVE:SCPtcpN5 V IF (0 V) (0 N + $$NGDAIP)(-1 Comm LINK -1 N)(1 Pr);
 
 REMOVE:SCPtcpN6 V IF (0 V + $$NGDAIP) (0 N + $$NGDAIP)(-1 Comm LINK -1 N)(1 Pr);
 
-REMOVE:SCPtcpN7 V OR A IF (0 V + Gen) (0 N + Gen)(0 A + Gen)(-1 N)(1 V);
+REMOVE:SCPtcpN7.1 V IF (0 V + Gen) (0C N + Gen)(0C A + Gen)(-1 N)(1 V);
+REMOVE:SCPtcpN7.2 A IF (0C A + Gen) (0C N + Gen)(0C A + Gen)(-1 N)(1 V);
 #...подавляющее большинство погибших составили вооруженные боевики, открывшие огонь по израильским силам во время их...
 
+REMOVE:SCPtcpN8.1 V IF (0 V) (0 N + Gen)(-1 N)(1 Pr);
+REMOVE:SCPtcpN8.2 A IF (0 A + Gen) (0 N + Gen)(-1 N)(1 Pr);
+#интервью ведущих с героем выпуска
+
+REMOVE:SCPtcpN9.1 V IF (0 V + Gen) (0 N + Gen)(-1 N OR Pr)(1 N + Gen);
+REMOVE:SCPtcpN9.2 A IF (0 A + Gen) (0 N + Gen)(-1 N OR Pr)(1 N + Gen);
+REMOVE:SCPtcpN9.1 V IF (0 V + Gen) (0 N + Gen)(-1 N OR Pr)(1 Quot LINK 1 N + Gen);
+REMOVE:SCPtcpN9.2 A IF (0 A + Gen) (0 N + Gen)(-1 N OR Pr)(1 Quot LINK 1 N + Gen);
+REMOVE:SCPtcpN9.1 V IF (0 V + Gen) (0 N + Gen)(-1 N OR Pr)(1 Quot);
+REMOVE:SCPtcpN9.2 A IF (0 A + Gen) (0 N + Gen)(-1 N OR Pr)(1 Quot);
+#интервью ведущих школы злословия
+#интервью ведущих "школы злословия"
+#у ведущих школы злословия
+#у ведущих "школы злословия"
+
+REMOVE:SCPtcpN3 N IF (0 V) (0 N + $$NGDAIP)((1 N + $$NGDAIP) OR (1 Pr LINK 1 N LINK 1 N + $$NGDAIP));
+#Variant
+#Курящие в стороне люди.
+#########################################################################################
 #REMOVE V:
 
 REMOVE:Der V + Der IF (0 Ptcp + Der);
@@ -1218,43 +1239,88 @@ REMOVE:SCPtcpV3.2 V IF (0 A)(0 Ptcp)((-1 CC LINK -1 A or V LINK -1 MeasureDegree
 REMOVE:SCPtcpV4 V IF (0 A + $$NGDAIP)(0 Ptcp)((-1 MeasureDegreeAdv OR Det) OR (-1 Ne LINK -1 MeasureDegreeAdv OR Det) OR (-1 V))(1 Pron + $$NGDAIP OR N + $$NGDAIP) ;
 #Мировую известность художникам Татьяне Арзамасовой, Льву Евзовичу и Евгению Святскому, по начальным буквам фамилий которых и назван коллектив (позже к художникам присоединился выдающийся фотограф Владимир Фридкес), принес скандальный «Исламский проект», в котором 100-метровый оплот американской независимости – статуя Свободы – облачается в паранджу, католический храм Саграда Фамилия вонзает в небо исламские полумесяцы, в Нью-Йорке горят небоскребы, а на Красной площади сидят арабские боевики с «калашами» наперевес. => выдающийся
 #Вскоре после этого волнующего события было заявлено о начавшейся разработке принципиально новой для российской действительности модели автомобиля с таинственным, но интригующим названием «проект С». => волнующего
+#Если бы он курил, то он непременно курил бы сейчас, как это обычно делают курящие люди в задумчивости. ==> курящие
 
-REMOVE:SCPtcpV5 V IF (0 Ptcp)(0 A)((-1 Adv/Cmpar) OR (-1 Ne LINK -1 Adv/Cmpar))(NOT 1 N + NOTNOMPREP OR Pron + NOTNOMPREP);
+#comparative/superlative degree SCPtcpV5
+REMOVE:SCPtcpV5.1 V IF (0 Ptcp)(0 A)((-1 Adv/Cmpar) OR (-1 Ne LINK -1 Adv/Cmpar))(NOT 1 N + NOTNOMPREP OR Pron + NOTNOMPREP);
 #На репетициях видели гораздо более собранного и звонкоголосого певца. =>собранного
-#« Я — киноглаз , я создаю человека , более совершенного , чем созданный Адам , я создаю тысячи разных людей по разным предварительным чертежам и схемам… =>совершенного
+#« Я — киноглаз, я создаю человека , более совершенного, чем созданный Адам, я создаю тысячи разных людей по разным предварительным чертежам и схемам… =>совершенного
 
-REMOVE:SCPtcpV6.1 V IF (0 A + $$NGDAIP)(0 Ptcp)((-1 N + $$NGDAIP OR Pron + $$NGDAIP) OR (-1 Ne LINK -1 N + $$NGDAIP))(NOT 1 Punct);
-#А любимее всего – финал открытый. => финал открытый
+REMOVE:SCPtcpV5.2 V IF (0 Ptcp)(0 A)((-1 Samyj) OR (-1 Ne LINK -1 Samyj))(NOT 1 N + NOTNOMPREP OR Pron + NOTNOMPREP);
+#Variation:
+#На репетициях видели самого собранного и звонкоголосого певца. =>собранного
+#« Я — киноглаз, я создаю человека, самого совершенного, => совершенного
+
+REMOVE:SCPtcpV6.1 V IF (0 A + $$NGDAIP)(0 Ptcp)(-1 N + $$NGDAIP OR Pron + $$NGDAIP)(1 Comm);
+# человека говорящего, но => говорящего
+
+REMOVE:SCPtcpV6.2 V IF (0 A + $$NGDAIP)(0 Ptcp)((-1 N + $$NGDAIP OR Pron + $$NGDAIP) OR (-1 Ne LINK -1 N + $$NGDAIP))(NOT 1 Punct);
+#А любимее всего – финал открытый. => открытый
 #Пожилая пара перед посещением выставки «Берлинская стена» находилась под впечатлением от архитектуры бывшей пивоварни: => бывшей
 #где помещение бывшей шелковой фабрики => бывшей
-#counterexample: А любимее всего – финал уже открыт. А любимее всего – финал открыт.
-
-REMOVE:SCPtcpV6.2 V IF (0 A + $$NGDAIP)(0 Ptcp)(-1 N + $$NGDAIP OR Pron + $$NGDAIP)(1 Comm);
-# человека говорящего, но does not work
 
 REMOVE:SCPtcpV7 V IF (0 V)(0 A)(0 Ptcp)((-1 CC) OR (-1 Ne LINK -1 CC))(1 S-BOUNDARY or (WORD S-BOUNDARY));
 #Все грязное и обтрёпанное. => обтрёпанное
 #Методика наших вычислений — упрощенная и схематичная, но зато прозрачная и открытая. => открытая
 
-REMOVE:SCPtcpV9 V IF (0 Ptcp)(0 A)(NOT 0 Pred)(-1 Cop)(1 S-BOUNDARY) ;
-#use of adjectives as copular verb objects, it excludes predicative use of participles
-#Ладно, что ж… давай показывай. Располнел; да и взгляд был загнанный. => загнанный
+####this set of rules applies to borderlines cases, these are non-predicative uses of ambiguous wordforms. These examples are artificial.
 
-REMOVE:SCPtcpV10 V IF (0 Ptcp)(0 A + $$NGDAIP)(-1 N + $$NGDAIP)(1 S-BOUNDARY OR CC) ;
-#Как класс правящий и порабощенный. ==> правящий ok
-#rule 776 also works here on "загнать" V Perf TV PstPss Msc Inan Sg Acc <W:2.2045135498>
+REMOVE:SCPtcpV8.1 V  IF (0 A + $$NGDAIP)(0 Ptcp + $$NGDAIP)((-1 MeasureDegreeAdv) OR (-1 MeasureDegreeAdv LINK -1 Ne))(1 Pr LINK 1 N + Loc OR Pron + Loc OR Det + Loc OR Ptcp + Loc LINK 1 N + $$NGDAIP);
+#adv. modifier + ambg. ptcp + preposition phrase + head noun
+#adv + pr + n/pron-Prp
 
-REMOVE:SCPtcpV11 V IF (0 Ptcp)(0 A + $$NGDAIP)(-1 V)(1 N + $$NGDAIP);
-#Если бы он курил, то он непременно курил бы сейчас, как это обычно делают курящие люди в задумчивости. ==> курящие ok
+#(up) Это был достаточно уверенный в себе человек. => уверенный
+#(up) Это был не достаточно уверенный в себе человек. => уверенный
+#(up) Это был не достаточно уверенный в происходящем человек. => уверенный
+#(up) Это был достаточно уверенный в происходящем человек. => уверенный
+#(up) Это был достаточно уверенный в этом человек. => уверенный
+#(up) Это был не достаточно уверенный в этом человек. => уверенный
+#not found in open corpora
 
-REMOVE:SCPtcpV12 V IF (0 Ptcp)(0 A + $$NGDAIP)(-1 V)(1 N + $$NGDAIP LINK 1 Prp);
-#?????
+REMOVE:SCPtcpV8.2 V  IF (0 A + $$NGDAIP)(0 Ptcp + $$NGDAIP)((-1 MeasureDegreeAdv)OR(-1 MeasureDegreeAdv LINK -1 Ne))(1 Pr LINK 1 Det + Loc LINK 1 N + Loc LINK 1 N + $$NGDAIP);
+#adv. modifier + ambg. ptcp + preposition phrase + head noun
+#Pr + Det + noun + head noun
+
+#(up) Это был достаточно осведомленный в этом вопросе человек. => осведомленный
+#(up) Это был не достаточно осведомленный в данном вопросе человек. => осведомленный
+#not found in open corpora
+
+REMOVE:SCPtcpV8.3 V  IF (0 A + $$NGDAIP)(0 Ptcp + $$NGDAIP)((-1 MeasureDegreeAdv)OR(-1 MeasureDegreeAdv LINK -1 Ne))(1 Pr LINK 1 A + Loc LINK 1 N + Loc LINK 1 N + $$NGDAIP);
+#adv. modifier + ambg. ptcp + preposition phrase + head noun
+#Pr + adj + noun + head noun
+
+#(up) Это был достаточно осведомленный в привычном распорядке человек. => осведомленный
+#(up) Это был не достаточно осведомленный в привычном распорядке человек. => осведомленный
+#not found in open corpora
+
+REMOVE:SCPtcpV8.4 V  IF (0 A + $$NGDAIP)(0 Ptcp + $$NGDAIP)((-1 MeasureDegreeAdv) OR (-1 MeasureDegreeAdv LINK -1 Ne))(1 Pr LINK 1 ModLoc LINK 1 N + Loc LINK 1 N + $$NGDAIP) ;
+#adv. modifier + ambg. ptcp + preposition phrase + head noun
+#Pr + WORD + head noun
+#more general cases
+
+#Это был достаточно уверенный в пяти случаях человек. => уверенный
+#Это был не достаточно уверенный в пяти случаях человек. => уверенный
+#not found in open corpora
+
+########################################################################################
 
 REMOVE:SCPtcpV13 V IF (0 Ptcp + $$NGDAIP) (0 A + $$NGDAIP)((-1 CC LINK -1 A OR N) OR (-1 V))(1 N + $$NGDAIP);
-#Поэтому к гидроизоляционным материалам, используемым на подобных кровлях, предъявляются повышенные требования. ==> повышенные ok
+#v + amb.ptcp + head noun ; preposition
+#Поэтому к гидроизоляционным материалам, используемым на подобных кровлях, предъявляются повышенные требования. ==> повышенные
+#(open corp) Общая фонетика и избранные статьи => избранные
+#(open corp)президент «Консоли» Владимир Константинов был доверенным лицом Виктора Януковича на президентских выборах => доверенным
 
 REMOVE:SCPtcpV14 V IF (0 Ptcp + Gen) (0 A + Gen)((-1 Adv) OR (-1 Adv LINK -1 Adv) OR (-1 CC LINK -1 A OR N) OR (-1 N) OR (-1 N LINK -1 Ne))(1 N + Gen);
-#Variant: #Поэтому к гидроизоляционным материалам, используемым на подобных кровлях, предъявляется список повышенных требований. ok
+#adv + amb.ptcp + noun-genetive
+#adv + adv + amb.ptcp + noun-genetive
+#adj/noun + conj + amb.ptcp + noun-genetive
+#noun + amb.ptcp + noun-genetive
+#ne + noun + amb.ptcp + noun-genetive
+
+#(variant)Поэтому к гидроизоляционным материалам, используемым на подобных кровлях, предъявляется список повышенных требований. => повышенных
+#(open corp) В начале текущего месяца АвтоВАЗ подписал договор о намерениях с банком «Сосьете Женераль Восток» (BSGV) о предоставлении кредита на выкуп у Renault лицензий на производство автомобилей на платформах пяти- и семиместных универсалов R90 и фургона F90. => текущего
+#(open corp) Югославская агрессия, казалось бы, стала лучшим подтверждением данного мнения. => данного
+#(open corp) Пожилая пара перед посещением выставки «Берлинская стена» находилась под впечатлением от архитектуры бывшей пивоварни: => бывшей (overlap with the rule SCPtcpV6.2)
 
 REMOVE:SCPtcpV15 V IF (0 Ptcp) (0 A + $$NGDAIP)(-1 CC OR Comm LINK -1 A)(1 Comm OR CC);
 #Поэтому, чтобы нами управляли, руководили, считали там, люди компетентные, знающие, думающие и не просто за зарплату, а за совесть работающие, думающие о людях. ==> , знающие, думающие ok
@@ -1354,13 +1420,13 @@ REMOVE:SCPtcp16 A IF (0 Ptcp)(0 A + $$NGDAIP)(-1 Comm LINK -1 N)(1 Adv OR Kak);
 REMOVE:SCPtcp17 A IF (0 Ptcp)(0 A + $$NGDAIP)(-1 Pr LINK -1 V)(1 N + Dat LINK 1 N + Loc OR N + Prp);
 #... когда большинство членов кибуца не работают на принадлежащих кибуцу предприятиях ok
 
-REMOVE:SCPtcp18 A (0 Ptcp + Pred) (0 A + Pred)((-1 N) OR (-1 Ne LINK -1 N) OR (-1 TempLocAdv LINK -1 N));
+REMOVE:SCPtcp18 A (0C Ptcp + Pred) (0C A + Pred)((-1 N) OR (-1 Ne LINK -1 N) OR (-1 TempLocAdv LINK -1 N));
 #predicative use of short participial forms
 #А любимее всего – финал уже открыт. А любимее всего – финал открыт. => открыт
 #А любимее всего – финал не открыт. => открыт
 
 ###Combination of weights and morphological information
-REMOVE:SCPtcp18 A IF (0 PstPss)(0 A + $$NGDAIP);
+#REMOVE:SCPtcp18 A IF (0 PstPss)(0 A + $$NGDAIP);
 
 ###############################################################################
 #LEVEL 2: rules for general contexts (GC)
@@ -1451,12 +1517,21 @@ SELECT:maxweight (<W=MAX>) IF (0 A)(0 Ptcp);
 #!REMOVE:SCPtcpV2 V IF (0 V) (0 A)(-1 MeasureDegreeAdv)(-1 Ne LINK -1 MeasureDegreeAdv)(NOT 1 Pron)(NOT 1 N)(NOT 1 Det)(NOT 1 Pron + Poss) ; 
 #the rule does not work and is overtaken by REMOVE:1286:SCPtcpA8
 
-#REMOVE:SCPtcpV8 V  IF (0 V) (0 A + $$NGDAIP)(0 Ptcp)(-1 Adv)(-1 Ne LINK -1 Adv)(1 Pr LINK 1 N + $$NGDAIP) ;
+#REMOVE:SCPtcpV9 V IF (0 Ptcp)(0 A)(NOT 0 Pred)(-1 Cop)(1 S-BOUNDARY) ;
+#use of adjectives as copular verb objects, it excludes predicative use of participles
+#Ладно, что ж… давай показывай. Располнел; да и взгляд был загнанный. => загнанный
+
+REMOVE:SCPtcpV10 V IF (0 Ptcp)(0 A + $$NGDAIP)(-1 N + $$NGDAIP)(1 S-BOUNDARY OR CC) ;
+#Как класс правящий и порабощенный. ==> правящий ok
+#rule 776 also works here on "загнать" V Perf TV PstPss Msc Inan Sg Acc <W:2.2045135498>
+#overtaken by rule SCPtcpV6.1
+
+#REMOVE:SCPtcpV12 V IF (0 Ptcp)(0 A + $$NGDAIP)(-1 V)(1 N + $$NGDAIP LINK 1 Prp);
 #?????
 
-
-
-
+#REMOVE:SCPtcpV11 V IF (0 Ptcp)(0 A + $$NGDAIP)(-1 V)(1 N + $$NGDAIP);
+#Если бы он курил, то он непременно курил бы сейчас, как это обычно делают курящие люди в задумчивости. ==> курящие
+#overtaken by rule REMOVE:SCPtcpV4
 
 
 

@@ -614,6 +614,10 @@ REMOVE Acc IF (-1* BOS BARRIER NGDAIP - Nom) (0C Nom OR Acc) (NOT 1* TV) (NOT -1
 
 REMOVE Acc IF (-1* BOS BARRIER Fin OR NGDAIP - Nom)  (0C Nom OR Acc) (NOT 1* TV) (NOT -1* Prep/Acc) (NOT 0 Sem/Time) (NOT 0 Sem/Distance) ;
 
+REMOVE:PoNNgen Acc IF (-1 N + Dat LINK *-1 ("по") BARRIER NODAT) (0 N + Gen) ;
+REMOVE:PoNNGen  Nom IF (-1 N + Dat LINK *-1 ("по") BARRIER NODAT) (0 N + Gen) ;
+## пю принципу самоуправления.
+
 REMOVE Cmp IF (0 Cmp OR Adv) (NOT 1 Guio) ; # (NOT 1 Guio LINK 1 A) ;
 
 SELECT Cmp IF (0 Cmp OR Adv) (1 Guio LINK 1 A LINK 1 N) ;
@@ -728,6 +732,9 @@ SELECT Gen IF (0 N/Vek) (0C Sg + Gen OR Pl) (-1 Roman LINK -1 Guio LINK -1 Roman
 
 SELECT Gen IF (0 N/Vek) (0C Sg + Gen OR Pl) (-1 A + Gen LINK -1 TimePart) ;
 
+SELECT Gen IF (-1 BOS)(0 Pron)(1 N) ;
+## Его друг
+
 SELECT Loc IF (-1 Pr/O) (0 N/Polku) ;
 
 REMOVE Nom IF (0C Pl + Nom OR Sg + Gen) (1 EOS) (-1* Fin BARRIER Fin OR CS) (NOT -1* Fin + Pl BARRIER Fin OR CS);
@@ -736,7 +743,7 @@ SELECT Paren/Konečno IF (-1 Cm) (1 Cm) ;
 
 REMOVE TV - Pass IF (NOT 1* Acc) (NOT -1* Acc) ;
 
-REMOVE Gen IF (-1 BOS) (0 Title OR Majusc) (NOT 1* V/Gen);
+REMOVE Gen IF (-1 BOS) (0 Title OR Majusc)(NOT 0 Pron) (NOT 1* V/Gen);
 
 REMOVE Imper IF (1C Fin) ;
 

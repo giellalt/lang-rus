@@ -1,0 +1,6 @@
+[
+  [ {подшибать} "+V" ?* \[ "+PstPss" | "+PstAct" | "+PrsPss" | "+PrsAct" | "+Der/PrsAct" | "+Der/PrsPss" | "+Der/PstAct" | "+Der/PstPss" ] ]::2.470369982450408
+| [ {подшибать} "+V" ?*  [ "+PstPss" | "+PstAct" | "+PrsPss" | "+PrsAct" | "+Der/PrsAct" | "+Der/PrsPss" | "+Der/PstAct" | "+Der/PstPss" ] ]::1.9449440481561908
+]
+.P.
+[ ?* ]::50 ;

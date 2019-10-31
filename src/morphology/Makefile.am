@@ -72,7 +72,7 @@ GT_LOCAL_SRCS=
 GT_LOCAL_XFSCRIPT_SRCS=
 
 # Define here any additional sources just included in the distro:
-GT_DISTRO_SRCS=
+GT_DISTRO_SRCS=weights.regex
 
 ### BEGIN: Local processing: ###
 
@@ -83,6 +83,19 @@ GT_DISTRO_SRCS=
 ### gle/ for an example of how this is used.
 
 GIELLA_LOCAL_TARGETS=
+
+if WITH_OFST_TROPICAL
+weights.hfst: weights.regex
+	$(AM_V_RGX2FST)$(HFST_REGEXP2FST) -S < $< > $@
+
+lexicon.hfst: lexicon.tmp.hfst weights.hfst
+	$(AM_V_HXFST)$(PRINTF) "read regex \
+			    @\"weights.hfst\" \
+			.o. @\"$<\"                                         \
+			;\n\
+		 save stack $@\n\
+		 quit\n" | $(HFST_XFST) -p $(MORE_VERBOSITY)
+endif
 
 ### END: Local processing: ###
 

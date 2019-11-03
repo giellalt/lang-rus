@@ -199,31 +199,31 @@ LEXICON 1000
 +Num+MFN+AnIn+Ins:ью # ; 
 
 LEXICON двое
-+Num+MFN+AnIn+Nom:о́е # ; 
-+Num+MFN+Inan+Acc:о́е # ; 
-+Num+MFN+Anim+Acc:ои́х # ; 
-+Num+MFN+AnIn+Gen:ои́х # ; 
-+Num+MFN+AnIn+Loc:ои́х # ; 
-+Num+MFN+AnIn+Dat:ои́м # ; 
-+Num+MFN+AnIn+Ins:ои́ми # ; 
++Num+Coll+MFN+AnIn+Nom:о́е # ; 
++Num+Coll+MFN+Inan+Acc:о́е # ; 
++Num+Coll+MFN+Anim+Acc:ои́х # ; 
++Num+Coll+MFN+AnIn+Gen:ои́х # ; 
++Num+Coll+MFN+AnIn+Loc:ои́х # ; 
++Num+Coll+MFN+AnIn+Dat:ои́м # ; 
++Num+Coll+MFN+AnIn+Ins:ои́ми # ; 
 
 LEXICON четверо
-+Num+MFN+AnIn+Nom:еро # ; 
-+Num+MFN+Inan+Acc:еро # ; 
-+Num+MFN+Anim+Acc:ерых # ; 
-+Num+MFN+AnIn+Gen:ерых # ; 
-+Num+MFN+AnIn+Loc:ерых # ; 
-+Num+MFN+AnIn+Dat:ерым # ; 
-+Num+MFN+AnIn+Ins:ерыми # ; 
++Num+Coll+MFN+AnIn+Nom:еро # ; 
++Num+Coll+MFN+Inan+Acc:еро # ; 
++Num+Coll+MFN+Anim+Acc:ерых # ; 
++Num+Coll+MFN+AnIn+Gen:ерых # ; 
++Num+Coll+MFN+AnIn+Loc:ерых # ; 
++Num+Coll+MFN+AnIn+Dat:ерым # ; 
++Num+Coll+MFN+AnIn+Ins:ерыми # ; 
 
 LEXICON девятеро
-+Num+MFN+AnIn+Nom:еро # ; 
-+Num+MFN+Inan+Acc:еро # ; 
-+Num+MFN+Anim+Acc:ер%>ы́х # ; 
-+Num+MFN+AnIn+Gen:ер%>ы́х # ; 
-+Num+MFN+AnIn+Loc:ер%>ы́х # ; 
-+Num+MFN+AnIn+Dat:ер%>ы́м # ; 
-+Num+MFN+AnIn+Ins:ер%>ы́ми # ; 
++Num+Coll+MFN+AnIn+Nom:еро # ; 
++Num+Coll+MFN+Inan+Acc:еро # ; 
++Num+Coll+MFN+Anim+Acc:ер%>ы́х # ; 
++Num+Coll+MFN+AnIn+Gen:ер%>ы́х # ; 
++Num+Coll+MFN+AnIn+Loc:ер%>ы́х # ; 
++Num+Coll+MFN+AnIn+Dat:ер%>ы́м # ; 
++Num+Coll+MFN+AnIn+Ins:ер%>ы́ми # ; 
 
 LEXICON числ._В./И._других_форм_нет
 +Num+MFN+AnIn+Nom: # ; 
@@ -430,11 +430,19 @@ LEXICON SQRD
 ³+Num:³ # ; 
 +Num: # ; 
 
+LEXICON NUM_CASES
++Nom: # ;
++Acc: # ;
++Gen: # ;
++Loc: # ;
++Dat: # ;
++Ins: # ;
+
 LEXICON NUM
-+Num: # ;
++Num: NUM_CASES ;
 +Num+Ord: ABBR_LF_stem_hard ;
-+Num+Prcnt:%% # ;
-+Num+Prcnt+Use/NG:% %% # ;
+! +Num+Prcnt:%% # ;
+! +Num+Prcnt+Use/NG:% %% # ;
 км:км SQRD ;
 мм:мм SQRD ;
 см:см SQRD ;

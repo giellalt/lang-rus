@@ -116,6 +116,8 @@ Multichar_Symbols
 +Att    !!= * @CODE@  = Attenuative comparatives like получше, поновее, etc.
 
 !! !!Punctuation
++PUNCT   !!= * @CODE@ = Punctuation
++CLB   !!= * @CODE@ = Clause boundary  ! TODO SENT vs CLB which is which?
 +SENT   !!= * @CODE@ = Clause boundary
 +COMMA  !!= * @CODE@ = Comma
 +DASH   !!= * @CODE@ = Dash
@@ -124,12 +126,14 @@ Multichar_Symbols
 +QUOT   !!= * @CODE@ = "Ambidextrous" quotation
 +LPAR    !!= * @CODE@ = Left parenthesis/bracket
 +RPAR    !!= * @CODE@ = Right parenthesis/bracket
++LEFT    !!= * @CODE@ = Left parenthesis/bracket/quote/etc.
++RIGHT    !!= * @CODE@ = Right parenthesis/bracket/quote/etc.
 
 !! !!Other tags
 +Prb     !!= * @CODE@ = +Prb(lematic): затруднительно - предположительно - нет
 +Fac     !!= * @CODE@ = Facultative
-+PObj    !!= * @CODE@ = Object of preposition (epenthetic н: него нее них) TODO FIX WITHFRAN merge PObj and Epenth > Epenth? Sandhi?
-+Epenth  !!= * @CODE@ = epenthesis on prepositions (о~об~обо or в~во)      TODO FIX WITHFRAN merge PObj and Epenth > Epenth? Sandhi?
++PObj    !!= * @CODE@ = Object of preposition (prothetic н: него нее них)
++Epenth  !!= * @CODE@ = epenthesis on prepositions (о~об~обо or в~во)
 +Leng    !!= * @CODE@ = Lengthened доброй~доброю (marks less-canonical wordform that has more syllables)
 +Elid    !!= * @CODE@ = Elided (Иванович~Иваныч, новее~новей, чтобы~чтоб, или~иль, коли~коль)
 +Use/NG  !!= * @CODE@ = Do not generate (used for apertium, etc.)

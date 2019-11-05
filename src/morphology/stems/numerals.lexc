@@ -400,9 +400,11 @@ compound_num_teen_millions ;
 compound_num_ten_millions ;
 compound_num_hundred_millions ;
 
-№:№ DIGITLEX ; ! TODO FIX CHECK In this context, only a cardinal/nominal ending is likely
-DIGITLEX ; 
-LASTDIGIT ;
+№:№ num_simple ; ! TODO FIX CHECK In this context, only a cardinal/nominal ending is likely
+num_simple ;
+num_ones ; 
+num_tens ;
+num_hundreds ;
 !< M^{0,4} ( C M | C D | (D) C^{0,3} ) ( X C | X L | (L) X^{0,3} ) ( I X | I V | (V) I^{0,3} ) > ROMNUM ;
 !< m^{0,4} ( c m | c d | (d) c^{0,3} ) ( x c | x l | (l) x^{0,3} ) ( i x | i v | (v) i^{0,3} ) > ROMNUM ;
 
@@ -428,9 +430,9 @@ LEXICON SQRD
 ³+Num+Use/NG:3 # ;  ! Dir/LR
 ²+Num:² # ; 
 ³+Num:³ # ; 
-+Num: # ; 
++Num: num_cases ;
 
-LEXICON NUM_CASES
+LEXICON num_cases
 +Nom: # ;
 +Acc: # ;
 +Gen: # ;
@@ -438,48 +440,91 @@ LEXICON NUM_CASES
 +Dat: # ;
 +Ins: # ;
 
-LEXICON NUM
-+Num: NUM_CASES ;
+LEXICON num_term
+num_continuous ;
 +Num+Ord: ABBR_LF_stem_hard ;
-! +Num+Prcnt:%% # ;
-! +Num+Prcnt+Use/NG:% %% # ;
+%-:%- compound_num_term ; ! TODO optional . breaks twolc rules: 8.534-летиео 
+
+LEXICON num_continuous
++Num: num_cases ;
 км:км SQRD ;
 мм:мм SQRD ;
 см:см SQRD ;
 м:м SQRD ;
--летие:-ле́тие с_a ; !TODO FIX 3,4-летие???
 
-LEXICON LASTDIGIT
-%0:%0 NUM "weight: 5.107963193867958" ;
-1:1 NUM "weight: 5.733953400151218" ;
-2:2 NUM "weight: 5.6522208739487745" ;
-3:3 NUM "weight: 5.539355547524602" ;
-4:4 NUM "weight: 5.429910385775572" ;
-5:5 NUM "weight: 5.53021460114657" ;
-6:6 NUM "weight: 5.336929274635792" ;
-7:7 NUM "weight: 5.260418941256702" ;
-8:8 NUM "weight: 5.229733156116501" ;
-9:9 NUM "weight: 5.1030881393779595" ;
+LEXICON num_simple_loop
+num_simple ;
+num_term ;
+%,:%, num_after_decimal ;
 
-LEXICON LOOP
-%,:%, DIGITLEX ; 
-%.:%. DIGITLEX ; 
-      DIGITLEX ; 
-%,:%, LASTDIGIT ; 
-%.:%. LASTDIGIT ; 
-      LASTDIGIT ;
+LEXICON num_simple
+%0:%0 num_simple_loop "weight: 5.107963193867958" ; 
+1:1 num_simple_loop "weight: 5.733953400151218" ;
+2:2 num_simple_loop "weight: 5.6522208739487745" ;
+3:3 num_simple_loop "weight: 5.539355547524602" ;
+4:4 num_simple_loop "weight: 5.429910385775572" ;
+5:5 num_simple_loop "weight: 5.53021460114657" ;
+6:6 num_simple_loop "weight: 5.336929274635792" ;
+7:7 num_simple_loop "weight: 5.260418941256702" ;
+8:8 num_simple_loop "weight: 5.229733156116501" ;
+9:9 num_simple_loop "weight: 5.1030881393779595" ;
 
-LEXICON DIGITLEX
-%0:%0 LOOP "weight: 5.107963193867958" ; 
-1:1 LOOP "weight: 5.733953400151218" ;
-2:2 LOOP "weight: 5.6522208739487745" ;
-3:3 LOOP "weight: 5.539355547524602" ;
-4:4 LOOP "weight: 5.429910385775572" ;
-5:5 LOOP "weight: 5.53021460114657" ;
-6:6 LOOP "weight: 5.336929274635792" ;
-7:7 LOOP "weight: 5.260418941256702" ;
-8:8 LOOP "weight: 5.229733156116501" ;
-9:9 LOOP "weight: 5.1030881393779595" ;
+LEXICON num_after_decimal_loop
+num_continuous ;
+num_after_decimal ;
+
+LEXICON num_after_decimal
+%0:%0 num_after_decimal_loop "weight: 5.107963193867958" ; 
+1:1 num_after_decimal_loop "weight: 5.733953400151218" ;
+2:2 num_after_decimal_loop "weight: 5.6522208739487745" ;
+3:3 num_after_decimal_loop "weight: 5.539355547524602" ;
+4:4 num_after_decimal_loop "weight: 5.429910385775572" ;
+5:5 num_after_decimal_loop "weight: 5.53021460114657" ;
+6:6 num_after_decimal_loop "weight: 5.336929274635792" ;
+7:7 num_after_decimal_loop "weight: 5.260418941256702" ;
+8:8 num_after_decimal_loop "weight: 5.229733156116501" ;
+9:9 num_after_decimal_loop "weight: 5.1030881393779595" ;
+
+LEXICON num_cycle
+%,:%, num_after_decimal ;
+%.:%. num_hundreds ;
+num_term ;
+
+LEXICON num_ones
+%0:%0 num_cycle "weight: 5.107963193867958" ; 
+1:1 num_cycle "weight: 5.733953400151218" ;
+2:2 num_cycle "weight: 5.6522208739487745" ;
+3:3 num_cycle "weight: 5.539355547524602" ;
+4:4 num_cycle "weight: 5.429910385775572" ;
+5:5 num_cycle "weight: 5.53021460114657" ;
+6:6 num_cycle "weight: 5.336929274635792" ;
+7:7 num_cycle "weight: 5.260418941256702" ;
+8:8 num_cycle "weight: 5.229733156116501" ;
+9:9 num_cycle "weight: 5.1030881393779595" ;
+
+LEXICON num_tens
+%0:%0 num_ones "weight: 5.107963193867958" ; 
+1:1 num_ones "weight: 5.733953400151218" ;
+2:2 num_ones "weight: 5.6522208739487745" ;
+3:3 num_ones "weight: 5.539355547524602" ;
+4:4 num_ones "weight: 5.429910385775572" ;
+5:5 num_ones "weight: 5.53021460114657" ;
+6:6 num_ones "weight: 5.336929274635792" ;
+7:7 num_ones "weight: 5.260418941256702" ;
+8:8 num_ones "weight: 5.229733156116501" ;
+9:9 num_ones "weight: 5.1030881393779595" ;
+
+LEXICON num_hundreds
+%0:%0 num_tens "weight: 5.107963193867958" ; 
+1:1 num_tens "weight: 5.733953400151218" ;
+2:2 num_tens "weight: 5.6522208739487745" ;
+3:3 num_tens "weight: 5.539355547524602" ;
+4:4 num_tens "weight: 5.429910385775572" ;
+5:5 num_tens "weight: 5.53021460114657" ;
+6:6 num_tens "weight: 5.336929274635792" ;
+7:7 num_tens "weight: 5.260418941256702" ;
+8:8 num_tens "weight: 5.229733156116501" ;
+9:9 num_tens "weight: 5.1030881393779595" ;
 
 LEXICON compound_num_ones
 одно:одно compound_num_term ;

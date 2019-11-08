@@ -1,11 +1,13 @@
 [
-  [ {насылать}  "+V" ?*  [ "+PstPss" | "+PstAct" | "+PrsPss" | "+PrsAct" | "+Der/PrsAct" | "+Der/PrsPss" | "+Der/PstAct" | "+Der/PstPss" ] ?* ]::2.4548578162721606
-| [ {насылать}  "+V" ?* \[ "+PstPss" | "+PstAct" | "+PrsPss" | "+PrsAct" | "+Der/PrsAct" | "+Der/PrsPss" | "+Der/PstAct" | "+Der/PstPss" ] ?* ]::4.792552993757104  ! <== replace negative definition with a positive one
-| [ {пропахать} "+V" ?*  [ "+PstPss" | "+PstAct" | "+PrsPss" | "+PrsAct" | "+Der/PrsAct" | "+Der/PrsPss" | "+Der/PstAct" | "+Der/PstPss" ] ?* ]::1.5595931667921736
-| [ {пропахать} "+V" ?* \[ "+PstPss" | "+PstAct" | "+PrsPss" | "+PrsAct" | "+Der/PrsAct" | "+Der/PrsPss" | "+Der/PstAct" | "+Der/PstPss" ] ?* ]::2.2196451050978228 ! <== replace negative definition with a positive one
-| [ {оползать}  "+V" ?*  [ "+PstPss" | "+PstAct" | "+PrsPss" | "+PrsAct" | "+Der/PrsAct" | "+Der/PrsPss" | "+Der/PstAct" | "+Der/PstPss" ] ?* ]::1.7144951267779167
-| [ {оползать}  "+V" ?* \[ "+PstPss" | "+PstAct" | "+PrsPss" | "+PrsAct" | "+Der/PrsAct" | "+Der/PrsPss" | "+Der/PstAct" | "+Der/PstPss" ] ?* ]::2.446888886600885  ! <== replace negative definition with a positive one
+[ {насылать} "+V" ?* [ "+PstPss" | "+PstAct" | "+PrsPss" | "+PrsAct" | "+Der/PrsAct" | "+Der/PrsPss" | "+Der/PstAct" | "+Der/PstPss"  ] ?* \"+Adv" ]::2.4548578162721606
+| [ {насылать} "+V" ?* [ "+Pst" | "+Prs" | "+Fut" ] ?* ]::4.792552993757104
+| [ {пропахать} "+V" ?* [ "+PstPss" | "+PstAct" | "+PrsPss" | "+PrsAct" | "+Der/PrsAct" | "+Der/PrsPss" | "+Der/PstAct" | "+Der/PstPss" ] ?* \"+Adv" ]::1.5595931667921736
+| [ {пропахать} "+V" ?* [ "+Pst" | "+Pst" | "+Fut" ] ?* ]::2.2196451050978228
+| [ {оползать} "+V" ?* [ "+PstPss" | "+PstAct" | "+PrsPss" | "+PrsAct" | "+Der/PrsAct" | "+Der/PrsPss" | "+Der/PstAct" | "+Der/PstPss" ] ?* \"+Adv" ]::1.7144951267779167
+| [ {оползать} "+V" ?* [ "+Pst" | "+Pst" | "+Fut" ] ?* ]::2.446888886600885
+| [ {тренировочный} "+A" ?* ]::3.5748331333489105
+| [ {почтальонский} "+A" ?* ]::1.7936763728255416
+| [ {пошаговый} "+A" ?* ]::1.4134651311139355
 ]
 .P.
-[ ?* ]::50
-;
+[ ?* ]::50 ;

@@ -1,10 +1,10 @@
 [
   [ {насылать}  "+V" ?*  [ "+PstPss" | "+PstAct" | "+PrsPss" | "+PrsAct" | "+Der/PrsAct" | "+Der/PrsPss" | "+Der/PstAct" | "+Der/PstPss" ] ?* ]::2.4548578162721606
-| [ {насылать}  "+V" ?* \[ "+PstPss" | "+PstAct" | "+PrsPss" | "+PrsAct" | "+Der/PrsAct" | "+Der/PrsPss" | "+Der/PstAct" | "+Der/PstPss" ] ?* ]::4.792552993757104
+| [ {насылать}  "+V" ?* \[ "+PstPss" | "+PstAct" | "+PrsPss" | "+PrsAct" | "+Der/PrsAct" | "+Der/PrsPss" | "+Der/PstAct" | "+Der/PstPss" ] ?* ]::4.792552993757104  ! <== replace negative definition with a positive one
 | [ {пропахать} "+V" ?*  [ "+PstPss" | "+PstAct" | "+PrsPss" | "+PrsAct" | "+Der/PrsAct" | "+Der/PrsPss" | "+Der/PstAct" | "+Der/PstPss" ] ?* ]::1.5595931667921736
-| [ {пропахать} "+V" ?* \[ "+PstPss" | "+PstAct" | "+PrsPss" | "+PrsAct" | "+Der/PrsAct" | "+Der/PrsPss" | "+Der/PstAct" | "+Der/PstPss" ] ?* ]::2.2196451050978228
+| [ {пропахать} "+V" ?* \[ "+PstPss" | "+PstAct" | "+PrsPss" | "+PrsAct" | "+Der/PrsAct" | "+Der/PrsPss" | "+Der/PstAct" | "+Der/PstPss" ] ?* ]::2.2196451050978228 ! <== replace negative definition with a positive one
 | [ {оползать}  "+V" ?*  [ "+PstPss" | "+PstAct" | "+PrsPss" | "+PrsAct" | "+Der/PrsAct" | "+Der/PrsPss" | "+Der/PstAct" | "+Der/PstPss" ] ?* ]::1.7144951267779167
-| [ {оползать}  "+V" ?* \[ "+PstPss" | "+PstAct" | "+PrsPss" | "+PrsAct" | "+Der/PrsAct" | "+Der/PrsPss" | "+Der/PstAct" | "+Der/PstPss" ] ?* ]::2.446888886600885
+| [ {оползать}  "+V" ?* \[ "+PstPss" | "+PstAct" | "+PrsPss" | "+PrsAct" | "+Der/PrsAct" | "+Der/PrsPss" | "+Der/PstAct" | "+Der/PstPss" ] ?* ]::2.446888886600885  ! <== replace negative definition with a positive one
 ]
 .P.
 [ ?* ]::50

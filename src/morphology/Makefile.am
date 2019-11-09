@@ -86,7 +86,7 @@ GIELLA_LOCAL_TARGETS=
 
 if WITH_OFST_TROPICAL
 weights.hfst: weights.regex
-	$(AM_V_RGX2FST)$(HFST_REGEXP2FST) -S < $< > $@
+	$(AM_V_RGX2FST)$(HFST_REGEXP2FST) --semicolon --encode-weights -i $< -o $@
 
 lexicon.hfst: lexicon.tmp.hfst weights.hfst
 	$(AM_V_HXFST)$(PRINTF) "read regex \

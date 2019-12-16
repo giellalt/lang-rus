@@ -683,6 +683,8 @@ SELECT Prp IF (-1C Pr) (0C Ord) (1C N/Godah) ;
 
 SELECT Inf IF (-1 Fin) (0 Inf OR Imper) (1 EOS) ;
 
+REMOVE:gennp Acc IF (0 A + Gen)(1C N + Gen);
+
 ## Parts: половина, часть, протяжение, прошествие, течение, (начало, конец,)
 
 #REMOVE Pl IF (0 N/Goda) (NOT -1* Num BARRIER NGDAIP - Nom OR Acc)

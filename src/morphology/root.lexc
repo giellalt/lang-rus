@@ -24,6 +24,8 @@ Multichar_Symbols
 %[%>%]  ! >
 %[%<%]  ! <
 
+#7 ! real #
+
 !! !!Markers
 
 ¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ⁰ !!= * @CODE@ = Used to enumerate homonymous lemmas

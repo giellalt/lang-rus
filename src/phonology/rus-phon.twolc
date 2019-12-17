@@ -29,6 +29,7 @@ Alphabet
       «7     ! «
       %[%>%]
       %[%<%] ! angle brackets (this is to avoid the internal use of < and >)
+      #7     ! real #, converted from #7 to # at a later stage.
 
       %%
       %  ! space

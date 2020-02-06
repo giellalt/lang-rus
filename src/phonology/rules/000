@@ -18,6 +18,10 @@ Alphabet
       %^A:0 ! о in prefix по for comparatives
       %^Y:ы́ ! ы́ in verbal prefix вы́- (Triggers rules for forming the imperative with %^U and %^S)
 
+      ! Special characters for graph2phone
+      Ω:ъ
+      ∂:в
+
       »7     ! »
       «7     ! «
       %[%>%]
@@ -48,13 +52,14 @@ Letter = А Б В Г Д Е Ё Ж З И Й К Л М Н О П Р С Т У Ф Х Ц
          а б в г д е ё ж з и й к л м н о п р с т у ф х ц ч ш щ ъ ы ь э ю я
          а́         е́ ё́     и́           о́         у́               ы́   э́ ю́ я́
          а̀         ѐ ё̀     ѝ           о̀         у̀               ы̀   э̀ ю̀ я̀
+         Ω:ъ ∂:в
          %- %  № 1 2 3 4 5 6 7 8 9 %0 ;
 ! Consonants
 C = Б В Г Д Ж З Й К Л М Н П Р С Т Ф Х Ц Ч Ш Щ
-    б в г д ж з й к л м н п р с т ф х ц ч ш щ ;
+    б в г д ж з й к л м н п р с т ф х ц ч ш щ ∂:в ;
 ! Consonants, excluding { Д д Т т }
 CNoDT = Б В Г Ж З Й К Л М Н П Р С Ф Х Ц Ч Ш Щ
-        б в г ж з й к л м н п р с ф х ц ч ш щ ;
+        б в г ж з й к л м н п р с ф х ц ч ш щ ∂:в ;
 ! Unvoiced consonants
 UnvoicedC = К П С Т Ф Х Ц Ч Ш Щ
             к п с т ф х ц ч ш щ ;
@@ -66,23 +71,23 @@ VEL = Г К Х
       г к х ;
 ! Paired consonants (consonants that have both a hard and soft variant, excluding Velars)
 PC = Б В Д З Л М Н П Р С Т Ф
-     б в д з л м н п р с т ф ;
+     б в д з л м н п р с т ф ∂:в ;
 ! Paired consonants, excluding { Н н }
 PCNoN = Б В Д З Л М П Р С Т Ф
-        б в д з л м п р с т ф ;
+        б в д з л м п р с т ф ∂:в ;
 ! Vowels
 V = А Е Ё И О У Ы Э Ю Я
     А́ Е́ Ё́ И́ О́ У́ Ы́ Э́ Ю́ Я́
     А̀ Ѐ Ё̀ Ѝ О̀ У̀ Ы̀ Э̀ Ю̀ Я̀
     а е ё и о у ы э ю я
     а́ е́ ё́ и́ о́ у́ ы́ э́ ю́ я́
-    а̀ ѐ ё̀ ѝ о̀ у̀ ы̀ э̀ ю̀ я̀ ;
+    а̀ ѐ ё̀ ѝ о̀ у̀ ы̀ э̀ ю̀ я̀ Ω:ъ ;
 ! Stressed vowels
 StressedV = А́ Е́ Ё́ Ё И́ О́ У́ Ы́ Э́ Ю́ Я́
             а́ е́ ё́ ё и́ о́ у́ ы́ э́ ю́ я́ ;
 ! Unstressed vowels
 UnstressedV = А Е И О У Ы Э Ю Я
-              а е и о у ы э ю я ;
+              а е и о у ы э ю я Ω:ъ ;
 
 Definitions
 

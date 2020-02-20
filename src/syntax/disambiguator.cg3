@@ -1771,6 +1771,9 @@ REMOVE:WPTCP-A-Pred A IF (0 A)(0 Ptcp + Pred + (<W=MAX>))(NOT 0 Adv)(NOT 0 N) ;
 #unweighted rule
 REMOVE:PTCP-A-Pred A IF (0 A)(0 Ptcp + Pred)(NOT 0 Adv)(NOT 0 N) ;
 
+#negation particle
+REMOVE:WPTCP-Ne-V A IF (0 A)(0 Ptcp + (<W=MIN>))(NOT 0 Adv)(NOT 0 N)(-1 Ne) ;
+
 ##################### + adjectivization => REMOVE V #####################
 #Constraints are based on morphological properties (+ some context) discouraging participial uses 
 
@@ -1855,9 +1858,6 @@ REMOVE:WPTCP-V10 V IF (0 A)(0 Ptcp + Perf  + (<W=MIN>))(NOT 0 Adv)(NOT 0 N)(NOT 
 
 #####################  - adjectivization: simple patterns #####################
 
-#negation particle
-REMOVE:WPTCP-V11 A IF (0 A)(0 Ptcp + (<W=MIN>))(NOT 0 Adv)(NOT 0 N)(-1 Ne) ;
-
 #past tense
 REMOVE:WPTCP-A5 A IF (0 A)(0 PrcPast + (<W=MAX>))(NOT 0 Adv)(NOT 0 N) ;
 
@@ -1871,26 +1871,15 @@ REMOVE:WPTCP-A7 A IF (0 A)(0 Ptcp + TV + (<W=MAX>))(NOT 0 Adv)(NOT 0 N) ;
 REMOVE:WPTCP-A8 A IF (0 A)(0 Ptcp + Actv + (<W=MAX>))(NOT 0 Adv)(NOT 0 N) ;
 
 ###############################################################################
-#Final weighted rules
+#Final weighted rule
 ###############################################################################
 
 SELECT:maxweight (<W=MAX>) IF (0 A)(0 Ptcp);
 # For now, we only do A vs. V, other rules may be added with more weights in the lexicon.
 
-SELECT:maxweight (<W=MAX>);
-
 ###############################################################################
 # Failed rules
 ###############################################################################
-
-#past tense + perfective
-#REMOVE:WPTCP-V6 V IF (0 A)(0 PrcPast + Perf + (<W=MIN>))(NOT 0 Adv)(NOT 0 N)(NOT 0 Pred) ;
-
-##########################################
-#other rule for testing
-#REMOVE:WPTCP-V6.1 V IF (0 A )(0 Ptcp + PstPss + (<W=MIN>))(NOT 0 Adv)(NOT 0 N)(NOT 0 Pred)(1 N + NOINS OR Pron + NOINS) ;
-#present participle with suffix -ся-
-REMOVE:WPTCP-A2 V IF (0 A)(0 PrcPres + V/Ref + (<W=MAX>))(NOT 0 Adv)(NOT 0 N) ;
 
 #part of NP (possessive) 
 #SELECT:NPV3 V IF (0 A)(0 (Ptcp <W=MAX>))(-1 N)(1 N + Gen OR Pron + Gen) ;
@@ -1920,56 +1909,3 @@ REMOVE:WPTCP-A2 V IF (0 A)(0 PrcPres + V/Ref + (<W=MAX>))(NOT 0 Adv)(NOT 0 N) ;
 #моей as prn, if "из моей школы"
 #REMOVE A IF (-1C Pr)(0 Pron OR A);
 #(1) it also covers "человек с говорящей фамилией", because of "either or" condition "0 Pron OR A", (2) мой is NOT defined as an adj in the lexicon
-
-###############################################################################
-# Failed rules for ambiguous participles
-###############################################################################
-
-#!REMOVE:SCPtcpV2 V IF (0 V) (0 A)(-1 MeasureDegreeAdv)(-1 Ne LINK -1 MeasureDegreeAdv)(NOT 1 Pron)(NOT 1 N)(NOT 1 Det)(NOT 1 Pron + Poss) ; 
-#the rule does NOT work and is overtaken by REMOVE:1286:SCPtcpA8
-
-#REMOVE:SCPtcpV9 V IF (0 Ptcp)(0 A)(NOT 0 Pred)(-1 Cop)(1 S-BOUNDARY) ;
-#use of adjectives as copular verb objects, it excludes predicative use of participles
-#Ладно, что ж… давай показывай. Располнел; да и взгляд был загнанный. => загнанный
-
-REMOVE:SCPtcpV10 V IF (0 Ptcp)(0 A + $$NGDAIP)(-1 N + $$NGDAIP)(1 S-BOUNDARY OR CC) ;
-#Как класс правящий и порабощенный. ==> правящий ok
-#rule 776 also works here on "загнать" V Perf TV PstPss Msc Inan Sg Acc <W:2.2045135498>
-#overtaken by rule SCPtcpV6.1
-
-#REMOVE:SCPtcpV12 V IF (0 Ptcp)(0 A + $$NGDAIP)(-1 V)(1 N + $$NGDAIP LINK 1 Prp);
-#???
-
-#REMOVE:SCPtcpV11 V IF (0 Ptcp)(0 A + $$NGDAIP)(-1 V)(1 N + $$NGDAIP);
-#Если бы он курил, то он непременно курил бы сейчас, как это обычно делают курящие люди в задумчивости. ==> курящие
-#overtaken by rule REMOVE:SCPtcpV4
-
-#REMOVE:SCPtcpV16 V IF (0 Ptcp)(NOT -1 TempLocAdv)(0 A + $$NGDAIP)(1 N + $$NGDAIP OR Pron + $$NGDAIP LINK NOT 1 Pr);
-#(NOT -1 TempLocAdv)
-#
-#The rules works for В некрологах о нем на полном серьезе: крупный художник, большой талант, выдающийся деятель, but then it also recognizes думающие о людях in Поэтому, чтобы нами управляли, руководили, считали там, люди компетентные, знающие, думающие и не просто за зарплату, а за совесть работающие, думающие о людях.
-
-#REMOVE:SCPtcpV17 V IF (0 Ptcp) (0 A)((-1 Adv LINK -1 Pr) OR (-1 Pr) OR (-1 Adv LINK -1 N LINK -1 Pr) OR (-1 N LINK -1 Pr))(1 Dash) ;
-#elliptical construction
-#... новый реактор будет возведен на месте уже существующего - на юге Сиднея. 
-#... новый реактор будет возведен на месте существующего - на юге Сиднея.
-#... новый реактор будет возведен вместо уже существующего - на юге Сиднея.
-
-#REMOVE:SCPtcpA5 A IF (0 Ptcp)(0 A + $$NGDAIP) (1 Pr LINK 1 Comm) ;
-#the rule represents a more general context than SCPtcpA6
-
-#REMOVE:SCPtcpA13 A IF (0 Ptcp)(0 A + $$NGDAIP)((-1 Comm LINK -1 N + $$NGDAIP) OR (-1 Ne LINK -1 Comm LINK -1 N + $$NGDAIP))(1 Pr LINK 1 N) ;
-#postposition
-#does NOT work
-
-#REMOVE:SC15 V IF (0 V LINK 0 (<W=MIN>)) (0 A LINK 0 (<W=MIN>))(-1 MeasureDegreeAdv LINK -1 CC)(1 Comm);
-
-####Combination of weights and morphological information
-#REMOVE:SCPtcp18 A IF (0 PstPss)(0 A + $$NGDAIP);
-
-#REMOVE:SCPtcpV18 V IF (0 A + $$NGDAIP)(0 Ptcp)(1 A + $$NGDAIP LINK 1 N + $$NGDAIP);
-#rule triggering a number of errors
-
-#SELECT:VPV1 V IF (0 A LINK 0 (<W=MIN>))(0 Ptcp)((-1 V) OR (-1 Pron OR Pron LINK -1 V))(1 N OR Pron) ;
-
-#SELECT:PPV1 V IF (0 A)(0 Ptcp LINK 0 (<W=MAX>))((-1 Pr) OR (-1 Det OR Pron LINK -1 Pr))(1 N OR Pron) ;

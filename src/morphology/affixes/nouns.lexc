@@ -1289,7 +1289,7 @@ LEXICON мн._[с_a]
 +N+Neu: аPlStem ;     !Cyrillic 'а' in 'аPl'
 
 LEXICON соб-мн._[с_a]
-+N+Prop+Sem/Alt+Neu:аPlStem ;
++N+Prop+Sem/Alt+Neu: аPlStem ;
 
 LEXICON с_a1
 +N+Neu: NSgStem ;

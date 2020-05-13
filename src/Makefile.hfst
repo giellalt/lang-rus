@@ -1,0 +1,64 @@
+# *************************************************************** #
+# This is a makefile that builds the Russian morphological parser #
+# using the HFST tools.                                           #
+# *************************************************************** #
+
+LEX = rus-lex.txt \
+	  noun-rus-lex.txt \
+	  noun-rus-morph.txt \
+	  propernoun-rus-lex.txt \
+	  propernoun-rus-morph.txt \
+	  adj-rus-lex.txt \
+	  adj-rus-morph.txt \
+	  verb-rus-lex.txt \
+	  verb-rus-morph.txt \
+	  adv-rus-lex.txt \
+#	  abbr-rus-lex.txt \
+#	  acro-rus-lex.txt \
+	  pron-rus-lex.txt \
+	  punct-rus-lex.txt \
+	  numeral-rus-lex.txt \
+	  pp-rus-lex.txt \
+	  cc-rus-lex.txt \
+	  cs-rus-lex.txt \
+	  interj-rus-lex.txt
+
+#	  propernoun-rus-lex.txt
+#	  propernoun-rus-morph.txt
+
+all: ../bin/rus.hfst
+
+lexc-rus.hfst: ../bin/lexc-rus.hfst
+../bin/lexc-rus.hfst: $(LEX)
+	@echo
+	@echo "*** Building $(notdir $@) ***" ;
+	@echo
+	hfst-lexc $^ -o $@
+
+twol-rus.hfst: ../bin/twol-rus.hfst
+../bin/twol-rus.hfst: twol-rus.txt
+	@echo
+	@echo "*** Building $(notdir $@) ***" ;
+	@echo
+	hfst-twolc -i $< -o $@
+
+rus-gen.hfst: ../bin/rus-gen.hfst
+../bin/rus-gen.hfst: ../bin/lexc-rus.hfst ../bin/twol-rus.hfst
+	@echo
+	@echo "*** Building $(notdir $@) ***" ;
+	@echo
+	hfst-compose-intersect -1 ../bin/lexc-rus.hfst -2 ../bin/twol-rus.hfst -o $@
+
+rus.hfst: ../bin/rus.hfst
+../bin/rus.hfst: ../bin/rus-gen.hfst
+	@echo
+	@echo "*** Building $(notdir $@) ***" ;
+	@echo
+	hfst-invert $^ -o $@
+	@echo
+	@echo "*** Building lookup-optimized $(notdir $@).ol ***" ;
+	@echo
+	hfst-fst2fst -O -i ../bin/rus-gen.hfst -o ../bin/rus.hfst.ol
+
+clean:
+	rm -f ../bin/* ../tmp/*

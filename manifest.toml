@@ -1,0 +1,9 @@
+name = "Russian"
+version = "0.1.0"
+
+[macos]
+system_pkg_id = "no.divvun.MacDivvun.ru"
+
+[windows]
+system_product_code = "8269141F-4C59-4038-97BC-24736F91131D"
+msoffice_product_code = "DB5D1126-5BC7-4B3E-9ABB-2AA097239B0B"

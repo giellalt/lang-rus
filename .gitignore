@@ -6,7 +6,6 @@ bygg
 build
 Makefile.in
 Makefile
-manifest.toml
 .DS_Store
 *.*fst
 *.hfstol

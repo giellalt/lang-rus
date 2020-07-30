@@ -4,8 +4,8 @@
 ========================================
 
 This directory contains source files for the Russian language morphology
-and dictionary. The data and implementation are licenced under __LICENCE__
-licence also detailed in the LICENCE file of this directory. The authors named
+and dictionary. The data and implementation are licenced under the GNU GPL3
+licence, also detailed in the LICENCE file of this directory. The authors named
 in the AUTHORS file are available to grant other licencing choices.
 
 Installation and compilation, and a short note on usage, is documented in the

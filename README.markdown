@@ -11,6 +11,7 @@ choices.
 
 [![GitHub issues](https://img.shields.io/github/issues-raw/giellalt/lang-rus)](https://github.com/giellalt/lang-rus/issues)
  [![Build Status](https://github.com/giellalt/lang-rus/workflows/Build%20Speller%20Archives%20and%20Bundles/badge.svg)](https://github.com/giellalt/lang-rus/actions)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 Install proofing tools and [keyboards](https://github.com/giellalt/keyboard-rus)
 for the Russian language by using the [Divvun Installer](http://divvun.no)

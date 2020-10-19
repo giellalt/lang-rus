@@ -1,0 +1,106 @@
+MAKEFILE_JUSTNAME := $(firstword $(MAKEFILE_LIST))
+MAKEFILE_COMPLETE := $(CURDIR)/$(MAKEFILE_JUSTNAME)
+
+.PHONY: all clean-tmp prereqs
+all: fst-dir analyser-gt-desc-L2.hfstol clean-tmp
+
+clean-tmp:
+	-rm *tmp*
+
+fst-dir:
+	$(MAKE) -C fst --makefile=Makefile_L2
+
+L2_ERRS := ii FV NoFV Pal SRo SRy
+
+analyser-gt-desc-L2.hfstol: analyser-gt-desc-L2.hfst
+	hfst-fst2fst -w -i analyser-gt-desc-L2.hfst -o analyser-gt-desc-L2.hfstol
+
+generator-raw-gt-desc.tmp1.hfst: 
+	$(MAKE) generator-raw-gt-desc.tmp1.hfst
+
+generator-raw-gt-desc-err-L2_%.tmp1.hfst: fst
+	echo "##### compiling the raw $* generator FST..."
+	hfst-determinize -v  fst/lexicon.hfst \
+	    | hfst-minimize -v  \
+	    | hfst-compose-intersect  \
+	    -v  \
+	    -2 fst/phonology-err-L2_$*.hfst \
+	    | hfst-minimize -v  \
+	    -o generator-raw-gt-desc-err-L2_$*.tmp1.hfst
+	
+generator-raw-gt-desc-err-L2_%.tmp2.hfst: generator-raw-gt-desc-err-L2_%.tmp1.hfst
+	echo "##### removing entries in $* that overlap with the std FST..."
+	hfst-subtract generator-raw-gt-desc-err-L2_$*.tmp1.hfst \
+	    generator-raw-gt-desc.tmp1.hfst \
+	    > generator-raw-gt-desc-err-L2_$*.tmp2.hfst
+
+generator-raw-gt-desc-err-L2_%.tmp.hfst: generator-raw-gt-desc-err-L2_%.tmp2.hfst
+	echo "##### composing $* with some filters for the generator..."
+	printf "read regex \
+	            @\"filters/reorder-subpos-tags.hfst\"   \
+	        .o. @\"filters/reorder-semantic-tags.hfst\" \
+	        .o. @\"filters/remove-mwe-tags.hfst\"       \
+	        .o. @\"generator-raw-gt-desc-err-L2_$*.tmp2.hfst\" \
+	        ;\n\
+	     save stack generator-raw-gt-desc-err-L2_$*.tmp.hfst\n\
+	     quit\n" | hfst-xfst -p -v --format=foma
+
+generator-raw-gt-desc-err-L2_%.hfst: generator-raw-gt-desc-err-L2_%.tmp.hfst
+	cp -f generator-raw-gt-desc-err-L2_$*.tmp.hfst generator-raw-gt-desc-err-L2_$*.hfst
+
+analyser-raw-gt-desc-err-L2_%.hfst: generator-raw-gt-desc-err-L2_%.hfst
+	cp generator-raw-gt-desc-err-L2_$*.hfst analyser-raw-gt-desc-err-L2_$*.hfst
+
+analyser-gt-desc-err-L2_%.tmp.hfst: analyser-raw-gt-desc-err-L2_%.hfst
+	printf "read regex \
+	            @\"filters/remove-area-tags.hfst\"                \
+	        .o. @\"filters/remove-dialect-tags.hfst\"             \
+	        .o. @\"filters/remove-number-string-tags.hfst\"       \
+	        .o. @\"filters/remove-usage-tags.hfst\"               \
+	        .o. @\"filters/remove-semantic-tags.hfst\"            \
+	        .o. @\"filters/remove-orig_lang-tags.hfst\"           \
+	        .o. @\"filters/remove-orthography-tags.hfst\"         \
+	        .o. @\"filters/remove-Orth_IPA-strings.hfst\"         \
+	        .o. @\"analyser-raw-gt-desc-err-L2_$*.hfst\" \
+	        .o. @\"orthography/downcase-derived_proper-strings.compose.hfst\" \
+	        .o. @\"filters/remove-hyphenation-marks.hfst\"        \
+	        .o. @\"filters/remove-infl_deriv-borders.hfst\"       \
+	        .o. @\"filters/remove-word-boundary.hfst\"            \
+	        ; \n\
+	        define fst \n\
+	        set flag-is-epsilon ON\n\
+	        read regex fst \
+	        .o. @\"orthography/inituppercase.compose.hfst\"       \
+	        .o. @\"orthography/spellrelax.compose.hfst\"          \
+	        ;\n\
+	     save stack analyser-gt-desc-err-L2_$*.tmp.hfst\n\
+	     quit\n" | hfst-xfst -p -v --format=foma
+
+analyser-gt-desc-err-L2_%.tmp1.hfst: analyser-gt-desc-err-L2_%.tmp.hfst
+	echo "##### making stress optional for $*..."
+	printf "read regex @\"analyser-gt-desc-err-L2_$*.tmp.hfst\" \
+	        .o. @\"orthography/destressOptional.compose.hfst\" \
+	        ;\n \
+	        invert net\n \
+	        save stack analyser-gt-desc-err-L2_$*.tmp1.hfst\n \
+	        quit\n" | hfst-xfst -p -v --format=foma
+
+analyser-gt-desc-err-L2_%.tmp2.hfst: analyser-gt-desc-err-L2_%.tmp1.hfst fst/add-tag-err-L2_%.hfst 
+	echo "##### adding +Err tags to the $* transducer..." ;
+	hfst-compose-intersect -v -1 analyser-gt-desc-err-L2_$*.tmp1.hfst \
+	                      -2 fst/add-tag-err-L2_$*.hfst \
+	                      -o analyser-gt-desc-err-L2_$*.tmp2.hfst
+
+analyser-gt-desc-L2.hfst: analyser-gt-desc.hfst
+	$(MAKE) analyser-gt-desc.hfst
+	cp analyser-gt-desc.hfst analyser-gt-desc-L2.tmp.hfst
+	for tag in $(L2_ERRS) ; \
+	do \
+		$(MAKE) --makefile=$(MAKEFILE_COMPLETE) analyser-gt-desc-err-L2_$${tag}.tmp1.hfst ; \
+		$(MAKE) --makefile=$(MAKEFILE_COMPLETE) analyser-gt-desc-err-L2_$${tag}.tmp2.hfst ; \
+		hfst-disjunct -1 analyser-gt-desc-L2.tmp.hfst \
+			      -2 analyser-gt-desc-err-L2_$${tag}.tmp2.hfst \
+			      > err.tmp.hfst && mv err.tmp.hfst analyser-gt-desc-L2.tmp.hfst ; \
+	done
+	hfst-minimize analyser-gt-desc-L2.tmp.hfst > fst.tmp
+	mv fst.tmp analyser-gt-desc-L2.hfst

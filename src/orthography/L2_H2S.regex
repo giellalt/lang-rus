@@ -1,0 +1,6 @@
+#Distributed under the terms of the GNU General Public License version 2 
+# or any later version.
+
+# L2_H2S: L2 error, replace soft sign with hard sign
+# (does not apply to inflectional endings; see L2_Pal)
+ь (<-) ъ ;

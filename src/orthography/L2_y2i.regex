@@ -1,0 +1,6 @@
+#Distributed under the terms of the GNU General Public License version 2 
+# or any later version.
+
+# L2_y2i: L2 error, replace ы with и
+# (does not apply to inflectional endings; see L2_Pal)
+и (<-) ы ;

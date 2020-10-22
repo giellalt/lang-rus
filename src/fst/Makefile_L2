@@ -1,10 +1,10 @@
 .PHONY: all
-all: add-tag-err-L2_ii.hfst   phonology-err-L2_ii.twolc   phonology-err-L2_ii.hfst  \
-     add-tag-err-L2_FV.hfst   phonology-err-L2_FV.twolc   phonology-err-L2_FV.hfst  \
-     add-tag-err-L2_NoFV.hfst phonology-err-L2_NoFV.twolc phonology-err-L2_NoFV.hfst  \
-     add-tag-err-L2_Pal.hfst  phonology-err-L2_Pal.twolc  phonology-err-L2_Pal.hfst  \
-     add-tag-err-L2_SRo.hfst  phonology-err-L2_SRo.twolc  phonology-err-L2_SRo.hfst  \
-     add-tag-err-L2_SRy.hfst  phonology-err-L2_SRy.twolc  phonology-err-L2_SRy.hfst  \
+all: phonology-err-L2_ii.twolc   phonology-err-L2_ii.hfst  \
+     phonology-err-L2_FV.twolc   phonology-err-L2_FV.hfst  \
+     phonology-err-L2_NoFV.twolc phonology-err-L2_NoFV.hfst  \
+     phonology-err-L2_Pal.twolc  phonology-err-L2_Pal.hfst  \
+     phonology-err-L2_SRo.twolc  phonology-err-L2_SRo.hfst  \
+     phonology-err-L2_SRy.twolc  phonology-err-L2_SRy.hfst  \
      lexicon.hfst phonology.hfst
 
 RULES_MAIN := phonology-rules/twolc_header  \
@@ -139,10 +139,6 @@ RULES_L2_SRy := phonology-rules/twolc_header  \
     phonology-rules/042  phonology-rules/043  phonology-rules/044  \
     phonology-rules/045  phonology-rules/046  phonology-rules/047  \
     phonology-rules/048  phonology-rules/049
-
-add-tag-err-L2_%.hfst: add-tag-err-L2_%.regex
-	hfst-regexp2fst  --format=foma --xerox-composition=ON -v  \
-		-S $< -o $@
 
 lexicon.hfst: 
 	$(MAKE) lexicon.hfst

@@ -1,0 +1,5 @@
+#Distributed under the terms of the GNU General Public License version 2 
+# or any later version.
+
+# L2_j2i: L2 error, replace й with и
+и (<-) й ;

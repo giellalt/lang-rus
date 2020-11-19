@@ -1,0 +1,6 @@
+#Distributed under the terms of the GNU General Public License version 2 
+# or any later version.
+
+# L2_Ikn: L2 error, replace е or я with и
+и (<-) е ,
+и (<-) я ;

@@ -1,0 +1,39 @@
+Alphabet
+      »7     ! »
+      «7     ! «
+      %[%>%]
+      %[%<%] ! angle brackets (this is to avoid the internal use of < and >)
+
+      %%
+      %  ! space
+      %-
+
+      ¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ⁰ ! Used to enumerate homonymous lemmas
+
+      № 1 2 3 4 5 6 7 8 9 %0 ! numerals in compounds like 10-летие
+
+      P S ! as in, PS
+
+      А Б В Г Д Е Ё Ж З И Й К Л М Н О П Р С Т У Ф Х Ц Ч Ш Щ Ъ Ы Ь Э Ю Я
+      А́         Е́ Ё́     И́           О́         У́               Ы́   Э́ Ю́ Я́
+      А̀         Ѐ Ё̀     Ѝ           О̀         У̀               Ы̀   Э̀ Ю̀ Я̀
+      а б в г д е ё ж з и й к л м н о п р с т у ф х ц ч ш щ ъ ы ь э ю я
+      а́         е́ ё́     и́           о́         у́               ы́   э́ ю́ я́   ! ё́ is not currently used, since = ё
+      а̀         ѐ ё̀     ѝ           о̀         у̀               ы̀   э̀ ю̀ я̀ ;
+
+Sets
+
+Letter = А Б В Г Д Е Ё Ж З И Й К Л М Н О П Р С Т У Ф Х Ц Ч Ш Щ Ъ Ы Ь Э Ю Я
+         А́         Е́ Ё́     И́           О́         У́               Ы́   Э́ Ю́ Я́
+         А̀         Ѐ Ё̀     Ѝ           О̀         У̀               Ы̀   Э̀ Ю̀ Я̀
+         а б в г д е ё ж з и й к л м н о п р с т у ф х ц ч ш щ ъ ы ь э ю я
+         а́         е́ ё́     и́           о́         у́               ы́   э́ ю́ я́
+         а̀         ѐ ё̀     ѝ           о̀         у̀               ы̀   э̀ ю̀ я̀
+         %- %  ;
+
+
+Rules
+
+"Remove geminates"
+Lx:0 => _ Lx ;
+	where Lx in Letter ;

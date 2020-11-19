@@ -14,7 +14,8 @@ orth-dir:
 	$(MAKE) -C orthography --makefile=Makefile_L2
 
 L2_MORPH_ERRS := ii FV NoFV Pal SRo SRy
-L2_ORTH_ERRS := e2je H2S i2y je2e NoSS sh2shch shch2sh y2i
+L2_ORTH_ERRS := Akn e2je H2S i2j i2y Ikn j2i je2e NoSS sh2shch shch2sh y2i
+L2_TWOLC_ORTH_ERRS := NoGem
 # ski
 
 analyser-gt-desc-L2.hfstol: analyser-gt-desc-L2.hfst
@@ -131,7 +132,32 @@ analyser-gt-desc-L2.hfst: analyser-gt-desc.hfst
 		      -o err.tagged.tmp.hfst ; \
 		hfst-disjunct -1 analyser-gt-desc-L2.tmp.hfst \
 		      -2 err.tagged.tmp.hfst \
+		      | hfst-determinize \
+		      | hfst-minimize \
 		      > err.tmp.hfst ; \
 		mv err.tmp.hfst analyser-gt-desc-L2.tmp.hfst ; \
+		echo "слово" | hfst-lookup analyser-gt-desc-L2.tmp.hfst ; \
+		hfst-summarize --verbose analyser-gt-desc-L2.tmp.hfst ; \
+	done
+	for tag in $(L2_TWOLC_ORTH_ERRS) ; \
+	do \
+		echo "[ ? -> ... \"\+Err\/L2_$${tag}\" || _ .#. ]" > add-tag-err-L2_$${tag}.regex.tmp ; \
+		hfst-regexp2fst  --format=foma --xerox-composition=ON -v  \
+			-S add-tag-err-L2_$${tag}.regex.tmp -o add-tag-err-L2_$${tag}.hfst ; \
+		hfst-invert analyser-gt-desc.hfst \
+			| hfst-compose-intersect -2 orthography/L2_$${tag}.hfst \
+			| hfst-invert \
+			> err.orth.tmp.hfst ; \
+		hfst-subtract -F err.orth.tmp.hfst \
+			      analyser-gt-desc-L2.tmp.hfst \
+			      > err.uniq.tmp.hfst ; \
+		hfst-compose-intersect -v -1 err.uniq.tmp.hfst \
+		      -2 add-tag-err-L2_$${tag}.hfst \
+		      -o err.tagged.tmp.hfst ; \
+		hfst-disjunct -1 analyser-gt-desc-L2.tmp.hfst \
+		      -2 err.tagged.tmp.hfst \
+		      > err.tmp.hfst ; \
+		mv err.tmp.hfst analyser-gt-desc-L2.tmp.hfst ; \
+		echo "слово" | hfst-lookup analyser-gt-desc-L2.tmp.hfst ; \
 	done
 	hfst-minimize analyser-gt-desc-L2.tmp.hfst > analyser-gt-desc-L2.hfst

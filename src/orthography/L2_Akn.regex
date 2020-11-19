@@ -1,0 +1,5 @@
+#Distributed under the terms of the GNU General Public License version 2 
+# or any later version.
+
+# L2_Akn: L2 error, replace о with а 
+а (<-) о ;

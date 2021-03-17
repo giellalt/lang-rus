@@ -1,15 +1,9 @@
 [What is this?|WhatIsThis.html]
 
 
-!!! Dynamic documentation
 
-* [Links to generated source file documentation|Links.html]
-* Source files: [stems|https://gtsvn.uit.no/langtech/trunk/langs/rus/src/fst/stems/]   
-  / [affixes|https://gtsvn.uit.no/langtech/trunk/langs/rus/src/fst/affixes/] 
-  / [syntax|https://gtsvn.uit.no/langtech/trunk/langs/rus/src/syntax] 
-  / [twolc|https://gtsvn.uit.no/langtech/trunk/langs/rus/src/phonology/rus-phon.twolc]   
-  / [yaml|https://gtsvn.uit.no/langtech/trunk/langs/rus/test/src/gt-norm-yamls/]
 
+ 
 !!! Grammatical issues
 
 * [The tags that are in use|https://gtsvn.uit.no/langtech/trunk/langs/rus/src/fst/root.lexc]   

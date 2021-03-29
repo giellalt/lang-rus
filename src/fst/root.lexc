@@ -142,18 +142,26 @@ Multichar_Symbols
 +Use/Obs !!= * @CODE@ = Obsolete
 +Use/Ant !!= * @CODE@ = Antiquated "устаревшее"
 +Err/Orth !!= * @CODE@ = Substandard
-+Err/L2_ii   !!= * @CODE@ = L2 error: Failure to change ending ие to ии in +Sg+Loc or +Sg+Dat, e.g. к Марие, о кафетерие, о знание
-	! +Err/L2_ii is only possible on nouns with a stem in и
-+Err/L2_Pal  !!= * @CODE@ = L2 error: Palatalization: failure to place soft-indicating symbol after soft stem, e.g. земла (compare земля)
-	! +Err/L2_Pal only occurs on 1) nouns and modifiers that have a soft stem, or 2) verbs in евать, e.g. малует (compare малюет) 
-+Err/L2_FV   !!= * @CODE@ = L2 error: Presence of fleeting vowel where it should be deleted, e.g. отеца (compare отца)
-	! +Err/L2_FV only occurs in lexemes that have a fleeting vowel in at least one form.
-+Err/L2_NoFV !!= * @CODE@ = L2 error: Lack of fleeting vowel where it should be inserted, e.g. окн (compare окон)
-	! +Err/L2_NoFV only occurs in lexemes that have a fleeting vowel in at least one form.
-+Err/L2_SRo  !!= * @CODE@ = L2 error: Failure to change о to е after hushers and ц, e.g. Сашой (compare Сашей)
-	! +Err/L2+SRo only occurs in 1) nouns and modifiers with stems in hushers or ц, or 2) verbs in евать, e.g. танцовать (compare танцевать)
-+Err/L2_SRy  !!= * @CODE@ = L2 error: Failure to change ы to и after hushers and velars, e.g. книгы (compare книги)
-	! +Err/L2+SRo only occurs in nouns and modifiers with stems in hushers or velars
++Err/L2_Akn   !!= * @CODE@ = L2 error: Akanje (а should be о)
++Err/L2_e2je   !!= * @CODE@ = L2 error: Misspelling (е should be э)
++Err/L2_FV   !!= * @CODE@ = L2 error: Presence of fleeting vowel where it should be deleted, e.g. отеца (compare отца). +Err/L2_FV only occurs in lexemes that have a fleeting vowel in at least one form.
++Err/L2_H2S   !!= * @CODE@ = L2 error: Misspelling (ь should be ъ)
++Err/L2_i2j   !!= * @CODE@ = L2 error: Misspelling (й should be и)
++Err/L2_i2y   !!= * @CODE@ = L2 error: Misspelling (ы should be и)
++Err/L2_ii   !!= * @CODE@ = L2 error: Failure to change ending ие to ии in +Sg+Loc or +Sg+Dat, e.g. к Марие, о кафетерие, о знание. +Err/L2_ii is only possible on nouns with a stem in и
++Err/L2_Ikn   !!= * @CODE@ = L2 error: Ikanje (и should be е or я)
++Err/L2_j2i   !!= * @CODE@ = L2 error: Misspelling (и should be й)
++Err/L2_je2e   !!= * @CODE@ = L2 error: Misspelling (э should be е)
++Err/L2_NoFV !!= * @CODE@ = L2 error: Lack of fleeting vowel where it should be inserted, e.g. окн (compare окон). +Err/L2_NoFV only occurs in lexemes that have a fleeting vowel in at least one form.
++Err/L2_NoGem   !!= * @CODE@ = L2 error: Geminate letter is missing
++Err/L2_NoSS   !!= * @CODE@ = L2 error: Misspelling (ь is missing)
++Err/L2_Pal  !!= * @CODE@ = L2 error: Palatalization: failure to place soft-indicating symbol after soft stem, e.g. земла (compare земля). +Err/L2_Pal only occurs on 1) nouns and modifiers that have a soft stem, or 2) verbs in евать, e.g. малует (compare малюет)
++Err/L2_sh2shch   !!= * @CODE@ = L2 error: Misspelling (щ should be ш)
++Err/L2_shch2sh   !!= * @CODE@ = L2 error: Misspelling (ш should be щ)
++Err/L2_ski   !!= * @CODE@ = L2 error: по-~ский instead of по-~ски
++Err/L2_SRo  !!= * @CODE@ = L2 error: Failure to change о to е after hushers and ц, e.g. Сашой (compare Сашей). +Err/L2+SRo only occurs in 1) nouns and modifiers with stems in hushers or ц, or 2) verbs in евать, e.g. танцовать (compare танцевать)
++Err/L2_SRy  !!= * @CODE@ = L2 error: Failure to change ы to и after hushers and velars, e.g. книгы (compare книги). +Err/L2+SRo only occurs in nouns and modifiers with stems in hushers or velars
++Err/L2_y2i   !!= * @CODE@ = L2 error: Misspelling (и should be ы)
 
 ! More use tags:
 ! ласкательное - +Use/Aff(ectionate)

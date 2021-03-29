@@ -2,7 +2,7 @@ MAKEFILE_JUSTNAME := $(firstword $(MAKEFILE_LIST))
 MAKEFILE_COMPLETE := $(CURDIR)/$(MAKEFILE_JUSTNAME)
 
 .PHONY: all clean-tmp prereqs
-all: fst-dir orth-dir analyser-gt-desc-L2.hfstol clean-tmp
+all: fst-dir orth-dir analyser-gt-desc-L2.hfstol
 
 clean-tmp:
 	-rm *tmp*
@@ -14,9 +14,9 @@ orth-dir:
 	$(MAKE) -C orthography --makefile=Makefile_L2
 
 L2_MORPH_ERRS := ii FV NoFV Pal SRo SRy
-L2_ORTH_ERRS := Akn e2je H2S i2j i2y Ikn j2i je2e NoSS sh2shch shch2sh y2i
-L2_TWOLC_ORTH_ERRS := NoGem
-# ski
+L2_ORTH_ERRS := o2a e2je H2S j2i NoSS shch2sh y2i Ikn
+# i2j i2y je2e sh2shch 
+# L2_TWOLC_ORTH_ERRS := ski NoGem
 
 analyser-gt-desc-L2.hfstol: analyser-gt-desc-L2.hfst
 	hfst-fst2fst -w -i analyser-gt-desc-L2.hfst -o analyser-gt-desc-L2.hfstol
@@ -111,8 +111,8 @@ analyser-gt-desc-L2.hfst: analyser-gt-desc.hfst
 		$(MAKE) --makefile=$(MAKEFILE_COMPLETE) analyser-gt-desc-err-L2_$${tag}.tmp2.hfst ; \
 		hfst-disjunct -1 analyser-gt-desc-L2.tmp.hfst \
 			      -2 analyser-gt-desc-err-L2_$${tag}.tmp2.hfst \
-			      > err.tmp.hfst ; \
-		mv err.tmp.hfst analyser-gt-desc-L2.tmp.hfst ; \
+			      > $${tag}.tmp.hfst ; \
+		mv $${tag}.tmp.hfst analyser-gt-desc-L2.tmp.hfst ; \
 	done
 	for tag in $(L2_ORTH_ERRS) ; \
 	do \
@@ -122,20 +122,20 @@ analyser-gt-desc-L2.hfst: analyser-gt-desc.hfst
 		printf "read regex @\"orthography/L2_$${tag}.compose.hfst\" \
 			.o. @\"analyser-gt-desc.hfst\" \
 			;\n \
-			save stack err.orth.tmp.hfst\n \
+			save stack $${tag}.orth.tmp.hfst\n \
 			quit\n" | hfst-xfst -p -v --format=foma ; \
-		hfst-subtract -F err.orth.tmp.hfst \
+		hfst-subtract -F $${tag}.orth.tmp.hfst \
 			      analyser-gt-desc-L2.tmp.hfst \
-			      > err.uniq.tmp.hfst ; \
-		hfst-compose-intersect -v -1 err.uniq.tmp.hfst \
+			      > $${tag}.uniq.tmp.hfst ; \
+		hfst-compose-intersect -v -1 $${tag}.uniq.tmp.hfst \
 		      -2 add-tag-err-L2_$${tag}.hfst \
-		      -o err.tagged.tmp.hfst ; \
+		      -o $${tag}.tagged.tmp.hfst ; \
 		hfst-disjunct -1 analyser-gt-desc-L2.tmp.hfst \
-		      -2 err.tagged.tmp.hfst \
+		      -2 $${tag}.tagged.tmp.hfst \
 		      | hfst-determinize \
 		      | hfst-minimize \
-		      > err.tmp.hfst ; \
-		mv err.tmp.hfst analyser-gt-desc-L2.tmp.hfst ; \
+		      > $${tag}.tmp.hfst ; \
+		mv $${tag}.tmp.hfst analyser-gt-desc-L2.tmp.hfst ; \
 		echo "слово" | hfst-lookup analyser-gt-desc-L2.tmp.hfst ; \
 		hfst-summarize --verbose analyser-gt-desc-L2.tmp.hfst ; \
 	done
@@ -147,17 +147,17 @@ analyser-gt-desc-L2.hfst: analyser-gt-desc.hfst
 		hfst-invert analyser-gt-desc.hfst \
 			| hfst-compose-intersect -2 orthography/L2_$${tag}.hfst \
 			| hfst-invert \
-			> err.orth.tmp.hfst ; \
-		hfst-subtract -F err.orth.tmp.hfst \
+			> $${tag}.orth.tmp.hfst ; \
+		hfst-subtract -F $${tag}.orth.tmp.hfst \
 			      analyser-gt-desc-L2.tmp.hfst \
-			      > err.uniq.tmp.hfst ; \
-		hfst-compose-intersect -v -1 err.uniq.tmp.hfst \
+			      > $${tag}.uniq.tmp.hfst ; \
+		hfst-compose-intersect -v -1 $${tag}.uniq.tmp.hfst \
 		      -2 add-tag-err-L2_$${tag}.hfst \
-		      -o err.tagged.tmp.hfst ; \
+		      -o $${tag}.tagged.tmp.hfst ; \
 		hfst-disjunct -1 analyser-gt-desc-L2.tmp.hfst \
-		      -2 err.tagged.tmp.hfst \
-		      > err.tmp.hfst ; \
-		mv err.tmp.hfst analyser-gt-desc-L2.tmp.hfst ; \
+		      -2 $${tag}.tagged.tmp.hfst \
+		      > $${tag}.tmp.hfst ; \
+		mv $${tag}.tmp.hfst analyser-gt-desc-L2.tmp.hfst ; \
 		echo "слово" | hfst-lookup analyser-gt-desc-L2.tmp.hfst ; \
 	done
 	hfst-minimize analyser-gt-desc-L2.tmp.hfst > analyser-gt-desc-L2.hfst

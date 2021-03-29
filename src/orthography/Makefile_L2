@@ -1,7 +1,7 @@
 .PHONY: all
 
-#    L2_ski.compose.hfst L2_ski.lookup.hfst
-all: L2_Akn.compose.hfst L2_Akn.lookup.hfst \
+#    L2_ski.compose.hfst L2_ski.lookup.hfst  TODO use regex instead of twolc?
+all: L2_o2a.compose.hfst L2_o2a.lookup.hfst \
      L2_e2je.compose.hfst L2_e2je.lookup.hfst \
      L2_H2S.compose.hfst L2_H2S.lookup.hfst \
      L2_i2j.compose.hfst L2_i2j.lookup.hfst \
@@ -13,7 +13,8 @@ all: L2_Akn.compose.hfst L2_Akn.lookup.hfst \
      L2_sh2shch.compose.hfst L2_sh2shch.lookup.hfst \
      L2_shch2sh.compose.hfst L2_shch2sh.lookup.hfst \
      L2_y2i.compose.hfst L2_y2i.lookup.hfst \
-     L2_NoGem.hfst
+     L2_NoGem.hfst \
+     L2_ski.hfst
 
 L2_%.compose.hfst: L2_%.regex
 	hfst-regexp2fst  --format=foma \

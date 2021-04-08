@@ -2,7 +2,7 @@ MAKEFILE_JUSTNAME := $(firstword $(MAKEFILE_LIST))
 MAKEFILE_COMPLETE := $(CURDIR)/$(MAKEFILE_JUSTNAME)
 
 .PHONY: all clean-tmp prereqs
-all: fst-dir orth-dir analyser-gt-desc-L2.hfstol
+all: fst-dir analyser-gt-desc-L2.hfstol
 
 clean-tmp:
 	-rm *tmp*
@@ -10,13 +10,9 @@ clean-tmp:
 fst-dir:
 	$(MAKE) -C fst --makefile=Makefile_L2
 
-orth-dir:
-	$(MAKE) -C orthography --makefile=Makefile_L2
-
 L2_MORPH_ERRS := ii FV NoFV Pal SRo SRy
-L2_ORTH_ERRS := o2a e2je H2S j2i NoSS shch2sh y2i Ikn
+L2_ORTH_ERRS := e2je H2S Ikn j2i NoGem NoSS o2a shch2sh ski y2i
 # i2j i2y je2e sh2shch 
-# L2_TWOLC_ORTH_ERRS := ski NoGem
 
 analyser-gt-desc-L2.hfstol: analyser-gt-desc-L2.hfst
 	hfst-fst2fst -w -i analyser-gt-desc-L2.hfst -o analyser-gt-desc-L2.hfstol
@@ -93,12 +89,11 @@ analyser-gt-desc-err-L2_%.tmp1.hfst: analyser-gt-desc-err-L2_%.tmp.hfst
 
 analyser-gt-desc-err-L2_%.tmp2.hfst: analyser-gt-desc-err-L2_%.tmp1.hfst
 	echo "##### adding +Err tags to the $* transducer..."
-	echo "[ ? -> ... \"\+Err\/L2_$*\" || _ .#. ]" > add-tag-err-L2_$*.regex.tmp
-	hfst-regexp2fst  --format=foma --xerox-composition=ON -v  \
-		-S add-tag-err-L2_$*.regex.tmp -o add-tag-err-L2_$*.hfst
-	hfst-compose-intersect -v -1 analyser-gt-desc-err-L2_$*.tmp1.hfst \
-	                      -2 add-tag-err-L2_$*.hfst \
-	                      -o analyser-gt-desc-err-L2_$*.tmp2.hfst
+	echo "[ ? -> ... \"\+Err\/L2_$*\" || _ .#. ]" \
+		| hfst-regexp2fst  --format=foma --xerox-composition=ON -v -S \
+		| hfst-compose-intersect -v \
+			-1 analyser-gt-desc-err-L2_$*.tmp1.hfst -2 - \
+	                -o analyser-gt-desc-err-L2_$*.tmp2.hfst
 
 analyser-gt-desc-L2.hfst: analyser-gt-desc.hfst
 	$(MAKE) analyser-gt-desc.hfst  # using the standard Makefile
@@ -116,48 +111,26 @@ analyser-gt-desc-L2.hfst: analyser-gt-desc.hfst
 	done
 	for tag in $(L2_ORTH_ERRS) ; \
 	do \
-		echo "[ ? -> ... \"\+Err\/L2_$${tag}\" || _ .#. ]" > add-tag-err-L2_$${tag}.regex.tmp ; \
-		hfst-regexp2fst  --format=foma --xerox-composition=ON -v  \
-			-S add-tag-err-L2_$${tag}.regex.tmp -o add-tag-err-L2_$${tag}.hfst ; \
-		printf "read regex @\"orthography/L2_$${tag}.compose.hfst\" \
-			.o. @\"analyser-gt-desc.hfst\" \
-			;\n \
-			save stack $${tag}.orth.tmp.hfst\n \
-			quit\n" | hfst-xfst -p -v --format=foma ; \
-		hfst-subtract -F $${tag}.orth.tmp.hfst \
-			      analyser-gt-desc-L2.tmp.hfst \
+		hfst-regexp2fst --format=foma -v -S orthography/L2_$${tag}.regex \
+			| hfst-compose-intersect -1 - -2 analyser-gt-desc-L2.tmp.hfst \
+			| hfst-subtract -F -1 - -2 analyser-gt-desc-L2.tmp.hfst \
 			      > $${tag}.uniq.tmp.hfst ; \
-		hfst-compose-intersect -v -1 $${tag}.uniq.tmp.hfst \
-		      -2 add-tag-err-L2_$${tag}.hfst \
-		      -o $${tag}.tagged.tmp.hfst ; \
-		hfst-disjunct -1 analyser-gt-desc-L2.tmp.hfst \
-		      -2 $${tag}.tagged.tmp.hfst \
-		      | hfst-determinize \
-		      | hfst-minimize \
-		      > $${tag}.tmp.hfst ; \
-		mv $${tag}.tmp.hfst analyser-gt-desc-L2.tmp.hfst ; \
-		echo "слово" | hfst-lookup analyser-gt-desc-L2.tmp.hfst ; \
-		hfst-summarize --verbose analyser-gt-desc-L2.tmp.hfst ; \
-	done
-	for tag in $(L2_TWOLC_ORTH_ERRS) ; \
-	do \
-		echo "[ ? -> ... \"\+Err\/L2_$${tag}\" || _ .#. ]" > add-tag-err-L2_$${tag}.regex.tmp ; \
-		hfst-regexp2fst  --format=foma --xerox-composition=ON -v  \
-			-S add-tag-err-L2_$${tag}.regex.tmp -o add-tag-err-L2_$${tag}.hfst ; \
-		hfst-invert analyser-gt-desc.hfst \
-			| hfst-compose-intersect -2 orthography/L2_$${tag}.hfst \
-			| hfst-invert \
-			> $${tag}.orth.tmp.hfst ; \
-		hfst-subtract -F $${tag}.orth.tmp.hfst \
-			      analyser-gt-desc-L2.tmp.hfst \
-			      > $${tag}.uniq.tmp.hfst ; \
-		hfst-compose-intersect -v -1 $${tag}.uniq.tmp.hfst \
-		      -2 add-tag-err-L2_$${tag}.hfst \
-		      -o $${tag}.tagged.tmp.hfst ; \
-		hfst-disjunct -1 analyser-gt-desc-L2.tmp.hfst \
-		      -2 $${tag}.tagged.tmp.hfst \
-		      > $${tag}.tmp.hfst ; \
-		mv $${tag}.tmp.hfst analyser-gt-desc-L2.tmp.hfst ; \
+		echo "[ ? -> ... \"\+Err\/L2_$${tag}\" || _ .#. ]" \
+			| hfst-regexp2fst --format=foma -v -S \
+			| hfst-compose-intersect -v -1 $${tag}.uniq.tmp.hfst -2 - \
+			| hfst-disjunct -1 analyser-gt-desc-L2.tmp.hfst -2 - \
+		        | hfst-prune-alphabet \
+		        | hfst-remove-epsilons \
+		        | hfst-determinize \
+		        | hfst-minimize \
+		        | hfst-fst2txt \
+		        | hfst-txt2fst --format=foma \
+		        > $${tag}.tmp.hfst ; \
+		cp $${tag}.tmp.hfst analyser-gt-desc-L2.tmp.hfst ; \
 		echo "слово" | hfst-lookup analyser-gt-desc-L2.tmp.hfst ; \
 	done
-	hfst-minimize analyser-gt-desc-L2.tmp.hfst > analyser-gt-desc-L2.hfst
+	hfst-prune-alphabet analyser-gt-desc-L2.tmp.hfst \
+		| hfst-remove-epsilons \
+		| hfst-determinize \
+		| hfst-minimize \
+		> analyser-gt-desc-L2.hfst

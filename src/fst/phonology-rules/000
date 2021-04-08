@@ -122,22 +122,6 @@ VerbHUSH = :HUSH (%^M:0) %<: ;        ! слышу (ю)
 VyPrefix = ( [ п о | п е р е | с а м о ] ) в %^Y:ы́  ;
 
 Rules
-!! 01_base_rules.twolc
-!! 02_stem_palatalization.twolc
-!! 03_spellingrule-husher.twolc
-!! 04_spellingrule-velar.twolc
-!! 05_spellingrule-c.twolc
-!! 06_fleeting-vowel-deletion.twolc
-!! 07_fleeting-vowel-insertion.twolc
-!! 08_nouns_ie-ii.twolc
-!! 09_stress.twolc
-!! Genitive plural of nouns
-!! Comparative adjectives
-!! Masculine short-form adjectives
-!! Stem alternations
-!! Vowels in nonpast endings
-!! Imperatives
-!! Verbal prefix fleeting vowels and voicing assimilation
 
 ! If one wants to test specific two-level rules one can add test pairs to the
 ! twolc files. Support for this type of testing has only recently been added, and

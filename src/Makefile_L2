@@ -10,10 +10,6 @@ clean-tmp:
 fst-dir:
 	$(MAKE) -C fst --makefile=Makefile_L2
 
-L2_MORPH_ERRS := ii FV NoFV Pal SRo SRy
-L2_ORTH_ERRS := e2je H2S Ikn j2i NoGem NoSS o2a shch2sh ski y2i
-# i2j i2y je2e sh2shch 
-
 analyser-gt-desc-L2.hfstol: analyser-gt-desc-L2.hfst
 	hfst-fst2fst -w -i analyser-gt-desc-L2.hfst -o analyser-gt-desc-L2.hfstol
 
@@ -97,40 +93,26 @@ analyser-gt-desc-err-L2_%.tmp2.hfst: analyser-gt-desc-err-L2_%.tmp1.hfst
 
 analyser-gt-desc-L2.hfst: analyser-gt-desc.hfst
 	$(MAKE) analyser-gt-desc.hfst  # using the standard Makefile
-	# TODO How do you add implicit dependencies to get rid of some of the $(MAKE)s below
-	# TODO L2_ORTH_ERRS currently collide with L2_MORPH_ERRS; limit ORTH errors
-	cp analyser-gt-desc.hfst analyser-gt-desc-L2.tmp.hfst
-	for tag in $(L2_MORPH_ERRS) ; \
+	# TODO L2_ORTH_ERRS currently collide with L2_MORPH_ERRS
+	# TODO move SRo and SRy to L2_ORTH_ERRS
+	cp analyser-gt-desc.hfst analyser-gt-desc-L2.hfst
+	for tag in ii FV NoFV Pal SRo SRy ; \
 	do \
 		$(MAKE) --makefile=$(MAKEFILE_COMPLETE) analyser-gt-desc-err-L2_$${tag}.tmp1.hfst ; \
 		$(MAKE) --makefile=$(MAKEFILE_COMPLETE) analyser-gt-desc-err-L2_$${tag}.tmp2.hfst ; \
-		hfst-disjunct -1 analyser-gt-desc-L2.tmp.hfst \
+		hfst-disjunct -1 analyser-gt-desc-L2.hfst \
 			      -2 analyser-gt-desc-err-L2_$${tag}.tmp2.hfst \
 			      > $${tag}.tmp.hfst ; \
-		mv $${tag}.tmp.hfst analyser-gt-desc-L2.tmp.hfst ; \
+		mv $${tag}.tmp.hfst analyser-gt-desc-L2.hfst ; \
 	done
-	for tag in $(L2_ORTH_ERRS) ; \
-	do \
-		hfst-regexp2fst --format=foma -v -S orthography/L2_$${tag}.regex \
-			| hfst-compose-intersect -1 - -2 analyser-gt-desc-L2.tmp.hfst \
-			| hfst-subtract -F -1 - -2 analyser-gt-desc-L2.tmp.hfst \
-			      > $${tag}.uniq.tmp.hfst ; \
-		echo "[ ? -> ... \"\+Err\/L2_$${tag}\" || _ .#. ]" \
-			| hfst-regexp2fst --format=foma -v -S \
-			| hfst-compose-intersect -v -1 $${tag}.uniq.tmp.hfst -2 - \
-			| hfst-disjunct -1 analyser-gt-desc-L2.tmp.hfst -2 - \
-		        | hfst-prune-alphabet \
-		        | hfst-remove-epsilons \
-		        | hfst-determinize \
-		        | hfst-minimize \
-		        | hfst-fst2txt \
-		        | hfst-txt2fst --format=foma \
-		        > $${tag}.tmp.hfst ; \
-		cp $${tag}.tmp.hfst analyser-gt-desc-L2.tmp.hfst ; \
-		echo "слово" | hfst-lookup analyser-gt-desc-L2.tmp.hfst ; \
-	done
-	hfst-prune-alphabet analyser-gt-desc-L2.tmp.hfst \
-		| hfst-remove-epsilons \
-		| hfst-determinize \
-		| hfst-minimize \
-		> analyser-gt-desc-L2.hfst
+	# In make_orth_err.sh calls, tags called together are added in parallel
+	# (i.e. errors from the same set do not co-occur)
+	./add_L2_orth_err.sh analyser-gt-desc-L2.hfst e2je je2e
+	./add_L2_orth_err.sh analyser-gt-desc-L2.hfst H2S
+	./add_L2_orth_err.sh analyser-gt-desc-L2.hfst i2j i2y j2i y2i
+	./add_L2_orth_err.sh analyser-gt-desc-L2.hfst Ikn
+	./add_L2_orth_err.sh analyser-gt-desc-L2.hfst NoGem
+	./add_L2_orth_err.sh analyser-gt-desc-L2.hfst NoSS
+	./add_L2_orth_err.sh analyser-gt-desc-L2.hfst o2a
+	./add_L2_orth_err.sh analyser-gt-desc-L2.hfst sh2shch shch2sh
+	./add_L2_orth_err.sh analyser-gt-desc-L2.hfst ski

@@ -93,10 +93,8 @@ analyser-gt-desc-err-L2_%.tmp2.hfst: analyser-gt-desc-err-L2_%.tmp1.hfst
 
 analyser-gt-desc-L2.hfst: analyser-gt-desc.hfst
 	$(MAKE) analyser-gt-desc.hfst  # using the standard Makefile
-	# TODO L2_ORTH_ERRS currently collide with L2_MORPH_ERRS
-	# TODO move SRo and SRy to L2_ORTH_ERRS
 	cp analyser-gt-desc.hfst analyser-gt-desc-L2.hfst
-	for tag in ii FV NoFV Pal SRo SRy ; \
+	for tag in ii FV NoFV Pal SRo ; \
 	do \
 		$(MAKE) --makefile=$(MAKEFILE_COMPLETE) analyser-gt-desc-err-L2_$${tag}.tmp1.hfst ; \
 		$(MAKE) --makefile=$(MAKEFILE_COMPLETE) analyser-gt-desc-err-L2_$${tag}.tmp2.hfst ; \
@@ -116,3 +114,4 @@ analyser-gt-desc-L2.hfst: analyser-gt-desc.hfst
 	./add_L2_orth_err.sh analyser-gt-desc-L2.hfst o2a
 	./add_L2_orth_err.sh analyser-gt-desc-L2.hfst sh2shch shch2sh
 	./add_L2_orth_err.sh analyser-gt-desc-L2.hfst ski
+	./add_L2_orth_err.sh analyser-gt-desc-L2.hfst SRy

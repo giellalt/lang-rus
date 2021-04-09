@@ -4,7 +4,6 @@ all: phonology-err-L2_ii.twolc   phonology-err-L2_ii.hfst  \
      phonology-err-L2_NoFV.twolc phonology-err-L2_NoFV.hfst  \
      phonology-err-L2_Pal.twolc  phonology-err-L2_Pal.hfst  \
      phonology-err-L2_SRo.twolc  phonology-err-L2_SRo.hfst  \
-     phonology-err-L2_SRy.twolc  phonology-err-L2_SRy.hfst  \
      lexicon.hfst phonology.hfst
 
 RULES_MAIN := phonology-rules/twolc_header  \
@@ -121,25 +120,6 @@ RULES_L2_SRo := phonology-rules/twolc_header  \
     phonology-rules/045  phonology-rules/046  phonology-rules/047  \
     phonology-rules/048  phonology-rules/049
 
-RULES_L2_SRy := phonology-rules/twolc_header  \
-    phonology-rules/000  phonology-rules/001  phonology-rules/002  \
-    phonology-rules/003  phonology-rules/004  phonology-rules/005  \
-    phonology-rules/006  phonology-rules/007  phonology-rules/008  \
-    phonology-rules/009  phonology-rules/010  phonology-rules/011  \
-    phonology-rules/012  phonology-rules/013  phonology-rules/014  \
-    phonology-rules/015b phonology-rules/016  phonology-rules/017  \
-    phonology-rules/018  phonology-rules/019  phonology-rules/020  \
-    phonology-rules/021  phonology-rules/022  phonology-rules/023  \
-    phonology-rules/024  phonology-rules/025  phonology-rules/026  \
-    phonology-rules/027  phonology-rules/028  phonology-rules/029  \
-    phonology-rules/030  phonology-rules/031  phonology-rules/032  \
-    phonology-rules/033  phonology-rules/034  phonology-rules/035  \
-    phonology-rules/036  phonology-rules/037  phonology-rules/038  \
-    phonology-rules/039  phonology-rules/040  phonology-rules/041  \
-    phonology-rules/042  phonology-rules/043  phonology-rules/044  \
-    phonology-rules/045  phonology-rules/046  phonology-rules/047  \
-    phonology-rules/048  phonology-rules/049
-
 lexicon.hfst: 
 	$(MAKE) lexicon.hfst
 
@@ -176,11 +156,6 @@ phonology-err-L2_SRo.twolc: $(RULES_L2_SRo)
 	tail -n +1 $(RULES_L2_SRo)  \
 		| sed "s/^==>/!! ==> sourced from/g"  \
 		> phonology-err-L2_SRo.twolc
-
-phonology-err-L2_SRy.twolc: $(RULES_L2_SRy)
-	tail -n +1 $(RULES_L2_SRy)  \
-		| sed "s/^==>/!! ==> sourced from/g"  \
-		> phonology-err-L2_SRy.twolc
 
 phonology-err-L2_%.hfst: phonology-err-L2_%.twolc
 	hfst-twolc -v --format=foma -i $< -o $@

@@ -30,6 +30,7 @@ do
         | hfst-fst2txt \
 	| hfst-txt2fst --format=foma \
         > ${tag}.tmp.hfst
+    rm ${tag}.uniq.tmp.hfst
 done
 
 
@@ -39,6 +40,7 @@ do
     hfst-disjunct -1 ${tmp_tr1} -2 ${tag}.tmp.hfst \
         > ${tmp_tr2}
     mv ${tmp_tr2} ${tmp_tr1}
+    # rm ${tag}.tmp.hfst
 done
 
 hfst-prune-alphabet ${tmp_tr1} \
@@ -49,4 +51,4 @@ hfst-prune-alphabet ${tmp_tr1} \
     | hfst-txt2fst --format=foma \
     > ${src_tr}
 
-rm ${tmp_tr1} ${tag}.uniq.tmp.hfst ${tag}.tmp.hfst
+rm ${tmp_tr1}

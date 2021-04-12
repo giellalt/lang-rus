@@ -1,5 +1,6 @@
 #Distributed under the terms of the GNU General Public License version 2 
 # or any later version.
 
-# L2_o2a: L2 error, replace о with а 
-а (<-) о ;
+# L2_revIkn: L2 error, replace и with е or я
+е (<-) и ,
+я (<-) и ;

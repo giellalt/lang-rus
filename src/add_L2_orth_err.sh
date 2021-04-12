@@ -14,24 +14,29 @@ echo "Adding the following tags to ${src_tr} in parallel: ${tags}"
 tmp_tr1=add_L2_orth_err.tmp1.hfst
 tmp_tr2=add_L2_orth_err.tmp2.hfst
 
-for tag in ${tags}
-do
-    hfst-regexp2fst --format=foma -v -S orthography/L2_${tag}.regex \
+compile_fst () {
+    hfst-regexp2fst --format=foma -v -S orthography/L2_$1.regex \
         | hfst-compose-intersect -1 - -2 ${src_tr} \
         | hfst-subtract -F -1 - -2 ${src_tr} \
-        > ${tag}.uniq.tmp.hfst
-    echo "[ ? -> ... \"\+Err\/L2_${tag}\" || _ .#. ]" \
+        > $1.uniq.tmp.hfst
+    echo "[ ? -> ... \"\+Err\/L2_$1\" || _ .#. ]" \
         | hfst-regexp2fst --format=foma -v -S \
-        | hfst-compose-intersect -v -1 ${tag}.uniq.tmp.hfst -2 - \
+        | hfst-compose-intersect -v -1 $1.uniq.tmp.hfst -2 - \
         | hfst-prune-alphabet \
         | hfst-remove-epsilons \
         | hfst-determinize \
         | hfst-minimize \
         | hfst-fst2txt \
 	| hfst-txt2fst --format=foma \
-        > ${tag}.tmp.hfst
-    rm ${tag}.uniq.tmp.hfst
+        > $1.tmp.hfst
+    rm $1.uniq.tmp.hfst
+}
+
+for tag in ${tags}
+do
+    compile_fst ${tag} &
 done
+wait
 
 
 cp ${src_tr} ${tmp_tr1}

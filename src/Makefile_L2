@@ -105,13 +105,12 @@ analyser-gt-desc-L2.hfst: analyser-gt-desc.hfst
 	done
 	# In make_orth_err.sh calls, tags called together are added in parallel
 	# (i.e. errors from the same set do not co-occur)
+	./add_L2_orth_err.sh analyser-gt-desc-L2.hfst prijti
 	./add_L2_orth_err.sh analyser-gt-desc-L2.hfst e2je je2e
 	./add_L2_orth_err.sh analyser-gt-desc-L2.hfst H2S
-	./add_L2_orth_err.sh analyser-gt-desc-L2.hfst i2j i2y j2i y2i
-	./add_L2_orth_err.sh analyser-gt-desc-L2.hfst Ikn
+	./add_L2_orth_err.sh analyser-gt-desc-L2.hfst i2j i2y Ikn j2i y2i revIkn SRc SRy
 	./add_L2_orth_err.sh analyser-gt-desc-L2.hfst NoGem
 	./add_L2_orth_err.sh analyser-gt-desc-L2.hfst NoSS
-	./add_L2_orth_err.sh analyser-gt-desc-L2.hfst o2a
+	./add_L2_orth_err.sh analyser-gt-desc-L2.hfst o2a a2o
 	./add_L2_orth_err.sh analyser-gt-desc-L2.hfst sh2shch shch2sh
 	./add_L2_orth_err.sh analyser-gt-desc-L2.hfst ski
-	./add_L2_orth_err.sh analyser-gt-desc-L2.hfst SRy

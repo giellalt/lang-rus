@@ -1,0 +1,7 @@
+#Distributed under the terms of the GNU General Public License version 2 
+# or any later version.
+
+# L2_prijti: L2 error, unnecessary й in forms of прийти
+# TODO add пришедши(й) ?
+[ й (<-) 0 || .#. п р и _ [ [ д [ у ( т ) | [ [ е | ё ] ш ь | т | м | т е ] | и ( т е ) | я ] ] | [ ш [ е л | ё л | л о | л а | л и ] ] ] ( с ь | с я ) .#. ]
+.o. [ д (<-) й || .#. п р и _ т и ( с ь ) .#. ] ;

@@ -1,5 +1,5 @@
 #Distributed under the terms of the GNU General Public License version 2 
 # or any later version.
 
-# L2_o2a: L2 error, replace о with а 
-а (<-) о ;
+# L2_a2o: L2 error, replace а with о
+о (<-) а ;

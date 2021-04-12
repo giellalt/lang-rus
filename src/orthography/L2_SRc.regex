@@ -1,0 +1,6 @@
+#Distributed under the terms of the GNU General Public License version 2 
+# or any later version.
+
+# L2_SRc: L2 error, replace и with ы or vice versa after ц
+[ ы (<-) и || ц _ ]
+.o. [ и (<-) ы || ц _ ] ;

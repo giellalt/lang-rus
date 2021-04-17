@@ -14,7 +14,7 @@
 # giellatekno@hum.uit.no or divvun@hum.uit.no
 
 # ==================================================================== #
-#!! !!!       R U S S I A N   G R A M M A R   C H E C K E R
+#!!       R U S S I A N   G R A M M A R   C H E C K E R
 # ==================================================================== #
 # ====================================================================
 
@@ -61,23 +61,23 @@
       # Grammar checking rules
 
 # =============== #
-#!! !!!DELIMITERS
+#!! # DELIMITERS
 # =============== #
 
 DELIMITERS = "<.>" "<!>" "<?>" "<...>" "<¶>" sent ;
 
 # ================== #
-#!! !!!TAGS AND SETS
+#!! # TAGS AND SETS
 # ================== #
 
 SETS
 
 
-#!! !!Tags
+#!! ## Tags
 
 
 #!! This section lists all the tags inherited from the fst, and used as tags
-#!! in the syntactic analysis. The next section, __Sets__, contains sets defined
+#!! in the syntactic analysis. The next section, **Sets**, contains sets defined
 #!! on the basis of the tags listed here, those set names are not visible in the output.
 
 LIST BOS = (>>>) ; 
@@ -446,11 +446,11 @@ SET CLB = Rel | CS ;
 
 
 # ===================================== #
-#!! !!! Grammarchecker rules begin here 
+#!! Grammarchecker rules begin here 
 # ===================================== #
 
 
-#!! !!Grammarchecker sets
+#!! ## Grammarchecker sets
 
 LIST &err-agr = &err-agr ;
 LIST &err-gen-po = &err-gen-po ;
@@ -464,7 +464,7 @@ MAPPING-PREFIX = & ;
 
 
 
-#!! !!Grammarchecker rules
+#!! ## Grammarchecker rules
 
 SECTION
 

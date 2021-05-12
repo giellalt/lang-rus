@@ -5,7 +5,7 @@
 [![Issues](https://img.shields.io/github/issues/giellalt/lang-rus)](https://github.com/giellalt/lang-rus/issues)
 [![Build status](https://github.com/giellalt/lang-rus/workflows/Speller%20CI+CD/badge.svg)](https://github.com/giellalt/lang-rus/actions)
 
-This page documents the work on the **Russian language model**. 
+This page documents the work on the [Russian language model](https://github.com/github/lang-rus). 
 
 # Project documentation
 

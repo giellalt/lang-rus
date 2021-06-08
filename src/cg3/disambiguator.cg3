@@ -135,6 +135,9 @@ LIST Imper = Imper imp  ;
 LIST Past = Past past  ;
 LIST Fin = Past Pres Fut past pres fut  ;
 
+LIST Err/L2_ii = Err/L2_ii ;
+LIST Err/L2_revIkn = Err/L2_revIkn ;
+
 LIST Prn/Sebe =  ("<себе>"i prn)  ("<себе>"i Pron)  ;
 LIST Prn/Tebe =  ("<тебе>"i prn)  ("<тебе>"i Pron)  ;
 LIST Prn/Komu =  ("<кому>"i prn)  ("<кому>"i Pron)  ;
@@ -599,6 +602,10 @@ REMOVE Det IF (0 Det OR Pron) (1C* V BARRIER (*) - Adv) ;
 SELECT Ant + $$NGDAIP IF (1C Cog + $$NGDAIP) ;
 
 SELECT Cog + $$NGDAIP IF (-1C Ant + $$NGDAIP) ;
+
+## Safe operations with L2 Error tags
+
+SELECT Err/L2_ii IF (0C Err/L2_ii OR Err/L2_revIkn);
 
 ###############################################################################
 # Heuristic rules that should be fairly safe.

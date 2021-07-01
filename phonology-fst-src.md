@@ -293,3 +293,5 @@ Verbal prefix fleeting vowels and voicing assimilation
 
 ==> sourced from phonology-rules/049 <==
 ============================================================================
+* * *
+<small>This (part of) documentation was generated from [../src/fst/phonology.twolc](http://github.com/giellalt/lang-rus/blob/main/../src/fst/phonology.twolc)</small>

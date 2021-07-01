@@ -1,5 +1,5 @@
 
-      R U S S I A N   G R A M M A R   C H E C K E R
+R U S S I A N   G R A M M A R   C H E C K E R
 
 
 
@@ -121,3 +121,5 @@ Grammarchecker rules begin here
 
 
 
+* * *
+<small>This (part of) documentation was generated from [../tools/grammarcheckers/grammarchecker.cg3](http://github.com/giellalt/lang-rus/blob/main/../tools/grammarcheckers/grammarchecker.cg3)</small>

@@ -1,13 +1,13 @@
 To do / Problems
 ================
 Tagging transitive and intransitive verbs.
-     - Difference between св_нп_1a and св_1a?
-     - нп = intransitive in ALL meanings.(i.e. lack of нп does not always signify transitivity, rather only the possibility of it). Which lemmas are ONLY transitive?
+- Difference between св_нп_1a and св_1a?
+- нп = intransitive in ALL meanings.(i.e. lack of нп does not always signify transitivity, rather only the possibility of it). Which lemmas are ONLY transitive?
 Manually check for consistency on issues such as:
-     - passive forms for transitive imperfectives
-     - present passives
-     - past passives
-     - impersonal tags
+- passive forms for transitive imperfectives
+- present passives
+- past passives
+- impersonal tags
 
 
 
@@ -1443,3 +1443,5 @@ Passive Voice
 
 
 
+* * *
+<small>This (part of) documentation was generated from [../src/fst/affixes/verbs.lexc](http://github.com/giellalt/lang-rus/blob/main/../src/fst/affixes/verbs.lexc)</small>

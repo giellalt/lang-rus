@@ -3,13 +3,13 @@ The Russian morphology and tools
 
 [![GitHub issues](https://img.shields.io/github/issues-raw/giellalt/lang-rus)](https://github.com/giellalt/lang-rus/issues)
 [![Build Status](https://github.com/giellalt/lang-rus/workflows/Speller%20CI+CD/badge.svg)](https://github.com/giellalt/lang-rus/actions)
-[![License](https://img.shields.io/github/license/giellalt/lang-rus)](https://raw.githubusercontent.com/giellalt/lang-rus/develop/LICENSE)
+[![License](https://img.shields.io/github/license/giellalt/lang-rus)](https://raw.githubusercontent.com/giellalt/lang-rus/main/LICENSE)
 
 This repository contains finite state source files for the Russian language,
 for building morphological analysers, proofing tools
 and dictionaries. The data and implementation are licenced under GNU GPLv3
 licence, also detailed in the
-[LICENCE](https://github.com/giellalt/lang-rus/blob/develop/LICENCE). The
+[LICENSE](https://github.com/giellalt/lang-rus/blob/main/LICENCE). The
 authors named in the AUTHORS file are available to grant other licencing
 choices.
 

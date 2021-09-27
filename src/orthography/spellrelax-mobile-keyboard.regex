@@ -1,19 +1,48 @@
 # Russian dummy mobile keyboard file
 
-S (->) S
-а́ (->) а,
+а́ (->) а, # primary stress
 е́ (->) е,
 и́ (->) и,
 о́ (->) о,
 у́ (->) у,
 я́ (->) я,
-э́  (->) э
-# ё (->) е, # Russian stressed vowel, accept je pro jo
-# Ё (->) Е # Russian stressed vowel, accept je pro jo
- ;
+э́ (->) э,
+ы́ (->) ы,
+ю́ (->) ю,
+А́ (->) А,
+Е́ (->) Е,
+Ё́ (->) Е,
+И́ (->) И,
+О́ (->) О,
+У́ (->) У,
+Ы́ (->) Ы,
+Э́ (->) Э, 
+Ю́ (->) Ю,
+Я́ (->) Я,
+А̀ (->) А, # secondary stress
+Ѐ (->) Е,
+Ё̀ (->) Е,
+Ѝ (->) И,
+О̀ (->) О,
+У̀ (->) У,
+Ы̀ (->) Ы,
+Э̀ (->) Э,
+Ю̀ (->) Ю,
+Я̀ (->) Я,
+а̀ (->) а,
+ѐ (->) е,
+ё̀ (->) е,
+ѝ (->) и,
+о̀ (->) и,
+у̀ (->) у,
+ы̀ (->) ы,
+э̀ (->) э,
+ю̀ (->) ю,
+я̀ (->) я,
+ё (->) е, # Russian stressed vowel, accept je pro jo
+Ё (->) Е # Russian stressed vowel, accept je pro jo
+;
 
-# This is a dummy awaiting a bright idea
-# for how to do ped-fst and ordinary text fst for russian.
 # The normal spellrelax relaxes stress and je/jo
 
 # Explanation:

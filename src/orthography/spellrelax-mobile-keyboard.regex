@@ -1,6 +1,13 @@
 # Russian dummy mobile keyboard file
 
-S (->) S 
+S (->) S
+а́ (->) а,
+е́ (->) е,
+и́ (->) и,
+о́ (->) о,
+у́ (->) у,
+я́ (->) я,
+э́  (->) э
 # ё (->) е, # Russian stressed vowel, accept je pro jo
 # Ё (->) Е # Russian stressed vowel, accept je pro jo
  ;

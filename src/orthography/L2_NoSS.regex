@@ -3,4 +3,5 @@
 
 # L2_NoSS: L2 error, failure to write lexical soft sign
 # (does not apply to inflectional endings; see L2_Pal)
-0 (<-) ь ;
+[ 0 (<-) ь ]
+.o. [ 0 (<-) Ь ] ;

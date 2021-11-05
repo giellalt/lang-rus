@@ -2,4 +2,5 @@
 # or any later version.
 
 # L2_o2a: L2 error, replace о with а 
-а (<-) о ;
+[ а (<-) о ]
+.o. [ А (<-) О ] ;

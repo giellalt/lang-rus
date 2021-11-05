@@ -3,4 +3,5 @@
 
 # L2 error, replace э with е
 # (does not apply to inflectional endings; see L2_Pal)
-е (<-) э ;
+[ е (<-) э ]
+.o. [ Е (<-) Э ] ;

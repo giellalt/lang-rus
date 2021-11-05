@@ -3,5 +3,8 @@
 
 # L2_SRy: L2 error, replace и with ы after hushers and velars
 # (does not apply to inflectional endings; see L2_Pal)
-ы (<-) и || [ г | к | х | ж | ч | ш | щ
-              Г | К | Х | Ж | Ч | Ш | Щ ] _ ;
+[ ы (<-) и || [ г | к | х | ж | ч | ш | щ
+                Г | К | Х | Ж | Ч | Ш | Щ ] _ ]
+.o.
+[ Ы (<-) И || [ г | к | х | ж | ч | ш | щ
+                Г | К | Х | Ж | Ч | Ш | Щ ] _ ] ;

@@ -2,5 +2,8 @@
 # or any later version.
 
 # L2_revIkn: L2 error, replace и with е or я
-е (<-) и ,
-я (<-) и ;
+# TODO remove collision with L2_ii
+[ е (<-) и ]
+.o. [ Е (<-) И ]
+.o. [ я (<-) и ]
+.o. [ Я (<-) И ] ;

@@ -2,4 +2,6 @@
 # or any later version.
 
 # L2_ski: L2 error, по-русский instead of по-русски
-й (<-) 0 || .#. п о (%-) ?+ с к и _ .#. ;
+# TODO other adverbs without the по- prefix?
+# TODO not 0, but [..]?
+й (<-) 0 || .#. [ п | П ]  о (%-) ?+ с к и _ .#. ;

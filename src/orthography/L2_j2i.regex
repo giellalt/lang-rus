@@ -2,4 +2,5 @@
 # or any later version.
 
 # L2_j2i: L2 error, replace й with и
-и (<-) й ;
+[ и (<-) й ]
+.o. [ И (<-) Й ] ;

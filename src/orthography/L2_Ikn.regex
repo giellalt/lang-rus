@@ -2,5 +2,7 @@
 # or any later version.
 
 # L2_Ikn: L2 error, replace е or я with и
-и (<-) е ,
-и (<-) я ;
+[ и (<-) е ]
+.o. [ И (<-) Е ]
+.o. [ и (<-) я ]
+.o. [ И (<-) Я ] ;

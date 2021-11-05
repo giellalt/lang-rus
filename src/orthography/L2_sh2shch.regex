@@ -3,4 +3,5 @@
 
 # L2 error, replace ш with щ
 # (does not apply to inflectional endings; see L2_Pal)
-щ (<-) ш ;
+[ щ (<-) ш ]
+.o. [ Щ (<-) Ш ] ;

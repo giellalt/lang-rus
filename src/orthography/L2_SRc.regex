@@ -2,5 +2,7 @@
 # or any later version.
 
 # L2_SRc: L2 error, replace и with ы or vice versa after ц
-[ ы (<-) и || ц _ ]
-.o. [ и (<-) ы || ц _ ] ;
+[ ы (<-) и || [ ц | Ц ] _ ]
+.o. [ Ы (<-) И || [ ц | Ц ] _ ]
+.o. [ и (<-) ы || [ ц | Ц ] _ ]
+.o. [ И (<-) Ы || [ ц | Ц ] _ ] ;

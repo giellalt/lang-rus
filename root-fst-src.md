@@ -67,7 +67,7 @@
  * +Recip   = Reciprocal: друг друга
  * +Refl    = Pronoun себя, possessive свой
  * +Rel     = Relativizer, e.g. который, где, как, куда, сколько, etc.
- * +Symbol = independent symbols in the text stream, like £, €, ©
+* +Symbol© = independent symbols in the text stream, like £, €, ©
 
 ## Verbal MSP
  * +Impf +Perf        = Imperfective, perfective

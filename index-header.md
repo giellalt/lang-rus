@@ -5,7 +5,8 @@
 [![Issues](https://img.shields.io/github/issues/giellalt/lang-rus)](https://github.com/giellalt/lang-rus/issues)
 [![Build status](https://github.com/giellalt/lang-rus/workflows/Speller%20CI+CD/badge.svg)](https://github.com/giellalt/lang-rus/actions)
 
-This page documents the work on the [Russian language model](https://github.com/github/lang-rus). 
+This page documents the work on the [Russian language model](https://github.com/github/lang-rus). The lexicon is a full-size lexicon of Russian (appr 125000 lemmata), and the morphological analysis is in place. The analyser contains stress marking. The syntactic disambiguation is still work in progress. 
+
 
 # Project documentation
 

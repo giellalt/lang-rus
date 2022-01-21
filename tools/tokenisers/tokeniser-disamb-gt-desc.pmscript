@@ -67,6 +67,7 @@ Define alphabet "a-z" !! * lower-case ASCII
                |"Ѐ-ӿ" !! * some cyrillics
                |Lst({àáâãāăȧäảåǎȁȃąạḁæǽǣèéêẽēĕėëẻěȅȇẹȩęḙḛìíîĩīīĭi̇ïỉǐịįȉȋḭɨòóôõōŏȯöỏőǒȍȏơǫọɵøờớỡởợǭộǿœùúûũūŭüủůűǔȕȗưụṳųṷṵừứữửựʉỳýŷỹȳẏÿỷƴỵɏÀÁÂÃĀĂȦÄẢÅǍȀȂĄẠḀÆǼǢÈÉÊẼĒĔĖËẺĚȄȆẸȨĘḘḚÌÍÎĨĪĪĬİÏỈǏỊĮȈȊḬƗÒÓÔÕŌŎȮÖỎŐǑȌȎƠǪỌƟØỜỚỠỞỢǬỘǾŒÙÚÛŨŪŬÜỦŮŰǓȔȖƯỤṲŲṶṴỪỨỮỬỰɄỲÝŶỸȲẎŸỶƳỴɎšžčđðíŋňŧñńŠŽČĐÐÍŊŇŦÑ})
                !! * select extended latin symbols
+               ! Then followed by all Cyrillic letters:
                | Lst({{ЁАА́БВГДЕЕ́ЁЖЗИИ́ЙЙКЛМНОО́ПРСТУУ́ФХЦЧШЩЪЫЬЭЭ́ЮЮ́ЯЯ́аа̀а́бвгдеѐе́ёжзиѝи́ййклмноо̀о́прстуу̀у́фхцчшщъыы̀ы́ьээ̀э́юю̀ю́яя̀я́ёё̀})
                !! * extended cyrillics
                | "0-9" !! ASCII digits
@@ -95,7 +96,7 @@ Define alphaword alphabet+ ( alphamiddle alphabet+ );
 !! ## Unknown handling
 Define unknownform [alphaword].u ;
 !! Unknowns are tagged ?? and treated specially with `hfst-tokenise`
-Define unknownword unknownform 0:% %?%? 
+Define unknownword unknownform 0:% %?%?::280284
                         LC([blank | #]) RC([[blank ] | # ]);
 !! hfst-tokenise --giella-cg will treat such empty analyses as unknowns, and
 !! remove empty analyses from other readings. Empty readings are also

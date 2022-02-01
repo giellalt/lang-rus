@@ -52,6 +52,7 @@
 /src/fst/*-error-log.txt
 /src/fst/generated_files/*.lexc
 /src/fst/lexicon*
+/src/fst/phonology-err-L2_*.twolc
 /src/fst/url.lexc
 /src/phonetics/tests/*.sh
 /test/run-morph-tester.sh

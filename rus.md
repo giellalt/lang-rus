@@ -903,194 +903,101 @@ Verbal prefix fleeting vowels and voicing assimilation
 * * *
 <small>This (part of) documentation was generated from [../src/fst/phonology.twolc](http://github.com/giellalt/lang-rus/blob/main/../src/fst/phonology.twolc)</small>
 
-# Russian tags
-
-## Stressed vowels
-
-* а́ е́ ё́ и́ о́ у́ ы́ э́ ю́ я́      Primary stress (lower)
-* а̀ ѐ ё̀ ѝ о̀ у̀ ы̀ э̀ ю̀ я̀      Secondary stress (lower)
-
-* А́ Е́ Ё́ И́ О́ У́ Ы́ Э́ Ю́ Я́     Primary stress (upper)
-* А̀ Ѐ Ё̀ Ѝ О̀ У̀ Ы̀ Э̀ Ю̀ Я̀     Secondary stress (upper)
-
-## Symbols that need to be escaped on the lower side (towards twolc): (copied from sme)
 
 
 
-## Markers
-
-* ¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ⁰  = Used to enumerate homonymous lemmas
-* %>    = End-of-stem marker (nominals)
-* %<    = End-of-stem marker (verbs)
-* %^F   = Fleeting vowel marker
-* %^o %^O  = Verbal prefix fleeting vowel
-* %^G   = Irregular GenPl marker (to keep ов/ев on n stems, e.g. ов%^G
-* %^Z   = Zero ending (resolves to 0/й/ь)
-* %^M   = Verb stem mutation
-* %^D   = archiphoneme for д~жд alternation in past passive participles
-* %^T   = archiphoneme for т~щ alternation in verbs
-* %^d   = archiphoneme for verb stems with -дший past active participles (-сти 7 (-д-) )
-* %^t   = archiphoneme for verb stems with -тший past active participles (-сти 7 (-т-) )
-* %^R   = archiphoneme for бороть and пороть
-* %^U   = Imperative ending (unstressed)
-* %^S  = Imperative ending (stressed)
-* %^P  = Attenuative comparative prefix: по~
-* %^A  = Attenuative comparative prefix: по~
-* %^Y  = Verbal prefix вы́-
-
-## POS
-* +A       = Adjective
-* +Abbr    = Abbreviation
-* +Adv     = Adverb
-* +CC      = Coordinating conjunction
-* +CS      = Subordinating conjunction
-* +Det     = Determiner
-* +Interj  = Interjection
-* +N       = Noun
-* +Num     = Numeral
-* +Paren   = Parenthetical вводное слово
-* +Pcle    = Particle
-* +Po      = Postposition (ради is the only postposition)
-* +Pr      = Preposition
-* +Pron    = Pronoun
-* +V       = Verb
-
-## Sub-POS
-* +All     = All: весь
-* +Coll    = Collective numerals
-* +Def     = Definite
-* +Dem     = Demonstrative
-* +Indef   = Indefinite: кто-то, кто-нибудь, кто-либо, кое-кто, etc.
-* +Interr  = Interrogative: кто, что, какой, ли, etc.
-* +Neg     = Negative: никто, некого, etc.
-* +Pers    = Personal
-* +Pos     = Possessive, e.g. его, наш
-* +Prcnt   = Percent
-* +Prop    = Proper
-* +Recip   = Reciprocal: друг друга
-* +Refl    = Pronoun себя, possessive свой
-* +Rel     = Relativizer, e.g. который, где, как, куда, сколько, etc.
-* +Symbol = independent symbols in the text stream, like £, €, ©
-
-## Verbal MSP
-* +Impf +Perf        = Imperfective, perfective
-* +IV +TV            = Intransitive, transitive (Zaliznjak does not mark trans-only, so transitive verbs all have both TV and IV)
-* +Inf +Imp          = Imperatives: 2nd person = читай, 1st person = прочитаем
-* +Pst +Prs +Fut     = Past, present, future
-* +Sg1 +Sg2 +Sg3     = person sg
-* +Pl1 +Pl2 +Pl3     = person pl
-* +PrsAct +PrsPss    = Participles (+PrsAct+Adv and +PstAct+Adv are used for the verbal adverbs)
-* +PstAct +PstPss    = Participles
-* +Pass              = Passive
-* +Imprs             = Impersonal (cannot have explicit subject)
-* +Lxc             = Lexicalized (for participial forms)
-
-* +Der             = Derived (for participial forms)
-* +Der/PrsAct             = Derived (for participial forms)
-* +Der/PrsPss             = Derived (for participial forms)
-* +Der/PstAct             = Derived (for participial forms)
-* +Der/PstPss             = Derived (for participial forms)
-
-## Nominal MSP
-* +Msc +Fem +Neu +MFN   = grammatical gender,  +MFN = gender unspecifiable (pl tantum)
-* +Inan +Anim +AnIn     = animacy (+AnIn = ambivalent animacy for non-accusative modifiers)
-* +Sem/Sur +Sem/Pat     = Surname (фамилия), Patronymic
-* +Sem/Ant +Sem/Alt     = Anthroponym/Given name, Other
-* +Sg +Pl               = number
-* +Nom +Acc +Gen       
-* +Loc +Dat +Ins       
-* +Loc2 +Gen2 +Voc     
-* +Count                = Count (for человек/людей or лет/годов, etc. also шага́/шара́/часа́/etc.)
-* +Ord      = Ordinal
-* +Cmpar    = Comparative
-* +Sint     = Synthetic comparative is possible, e.g. старее
-* +Pred     = "Predicate", also used for short-form adjectives
-* +Cmpnd    = "Compound", used for compounding adjectives, such as русско-английский
-* +Att      = Attenuative comparatives like получше, поновее, etc.
-
-## Punctuation
-* +PUNCT    = Punctuation
-* +CLB    = Clause boundary  ! TODO SENT vs CLB which is which?
-* +SENT    = Clause boundary
-* +COMMA   = Comma
-* +DASH    = Dash
-* +LQUOT    = Left quotation
-* +RQUOT    = Right quotation
-* +QUOT    = "Ambidextrous" quotation
-* +LPAR     = Left parenthesis/bracket
-* +RPAR     = Right parenthesis/bracket
-* +LEFT     = Left parenthesis/bracket/quote/etc.
-* +RIGHT     = Right parenthesis/bracket/quote/etc.
-
-## Other tags
-* +Prb      = +Prb(lematic): затруднительно - предположительно - нет
-* +Fac      = Facultative
-* +PObj     = Object of preposition (prothetic н: него нее них)
-* +Epenth   = epenthesis on prepositions (о~об~обо or в~во)
-* +Leng     = Lengthened доброй~доброю (marks less-canonical wordform that has more syllables)
-* +Elid     = Elided (Иванович~Иваныч, новее~новей, чтобы~чтоб, или~иль, коли~коль)
-* +Use/NG   = Do not generate (used for apertium, etc.)
-* +Use/Obs  = Obsolete
-* +Use/Ant  = Antiquated "устаревшее"
-* +Err/Orth  = Substandard
-* +Err/L2_a2o      = L2 error: Misspelling (о should be а)
-* +Err/L2_e2je     = L2 error: Misspelling (е should be э)
-* +Err/L2_FV       = L2 error: Presence of fleeting vowel where it should be deleted, e.g. отеца (compare отца). +Err/L2_FV only occurs in lexemes that have a fleeting vowel in at least one form.
-* +Err/L2_H2S      = L2 error: Misspelling (ь should be ъ)
-* +Err/L2_i2j      = L2 error: Misspelling (й should be и)
-* +Err/L2_i2y      = L2 error: Misspelling (ы should be и)
-* +Err/L2_ii       = L2 error: Failure to change ending ие to ии in +Sg+Loc or +Sg+Dat, e.g. к Марие, о кафетерие, о знание. +Err/L2_ii is only possible on nouns with a stem in и
-* +Err/L2_Ikn      = L2 error: Ikanje (и should be е or я)
-* +Err/L2_j2i      = L2 error: Misspelling (и should be й)
-* +Err/L2_je2e     = L2 error: Misspelling (э should be е)
-* +Err/L2_NoFV     = L2 error: Lack of fleeting vowel where it should be inserted, e.g. окн (compare окон). +Err/L2_NoFV only occurs in lexemes that have a fleeting vowel in at least one form.
-* +Err/L2_NoGem    = L2 error: Geminate letter is missing
-* +Err/L2_NoSS     = L2 error: Misspelling (ь is missing)
-* +Err/L2_o2a      = L2 error: Akanje (а should be о)
-* +Err/L2_Pal      = L2 error: Palatalization: failure to place soft-indicating symbol after soft stem, e.g. земла (compare земля). +Err/L2_Pal only occurs on 1) nouns and modifiers that have a soft stem, or 2) verbs in евать, e.g. малует (compare малюет)
-* +Err/L2_prijti   = L2 error: Misspelling the stem of прийти, especially the й
-* +Err/L2_revIkn   = L2 error: Reversed ikanje, i.e. spelling и as е/я/а to reflect supposed vowel reduction
-* +Err/L2_sh2shch  = L2 error: Misspelling (щ should be ш)
-* +Err/L2_shch2sh  = L2 error: Misspelling (ш should be щ)
-* +Err/L2_ski      = L2 error: по-~ский instead of по-~ски
-* +Err/L2_SRc      = L2 error: L2 error: replace и with ы or vice versa after ц
-* +Err/L2_SRo      = L2 error: Failure to change о to е after hushers and ц, e.g. Сашой (compare Сашей). +Err/L2+SRo only occurs in 1) nouns and modifiers with stems in hushers or ц, or 2) verbs in евать, e.g. танцовать (compare танцевать)
-* +Err/L2_SRy      = L2 error: Failure to change ы to и after hushers and velars, e.g. книгы (compare книги). +Err/L2+SRo only occurs in nouns and modifiers with stems in hushers or velars
-* +Err/L2_y2i      = L2 error: Misspelling (и should be ы)
 
 
-# Key lexicon
 
-* LEXICON Root    
 
-* Abbreviation ;	
-* :%^P%^A Adjective ;	    
-* Adverb ;	    
-* Comparative ;   
-* Conjunction ;   
-* Interjection ;  
-* Noun ;		    
-* Numeral ;       
-* Parenthetical ; 
-* Particle ;      
-* Predicative ;   
-* Preposition ;   
-* Pronoun ;	    
-* Verb ;		    
-* Propernoun ;    
-* Punctuation ;   
-* Symbols     ;   
-* LexicalizedParticiple ;   
-* * *
-<small>This (part of) documentation was generated from [../src/fst/root.lexc](http://github.com/giellalt/lang-rus/blob/main/../src/fst/root.lexc)</small>
-# Symbol affixes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/symbols.lexc](http://github.com/giellalt/lang-rus/blob/main/../src/fst/affixes/symbols.lexc)</small>To do / Problems
+<small>This (part of) documentation was generated from [../src/fst/stems/numerals.lexc](http://github.com/giellalt/lang-rus/blob/main/../src/fst/stems/numerals.lexc)</small>
+
+
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/adjectives.lexc](http://github.com/giellalt/lang-rus/blob/main/../src/fst/stems/adjectives.lexc)</small>To do / Problems
 ================
 Tagging transitive and intransitive verbs.
 - Difference between св_нп_1a and св_1a?
@@ -2537,119 +2444,421 @@ Passive Voice
 
 * * *
 <small>This (part of) documentation was generated from [../src/fst/affixes/verbs.lexc](http://github.com/giellalt/lang-rus/blob/main/../src/fst/affixes/verbs.lexc)</small>
-
-
-
-
-
-
-
-
+# Symbol affixes
 
 
 
 
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/stems/adjectives.lexc](http://github.com/giellalt/lang-rus/blob/main/../src/fst/stems/adjectives.lexc)</small>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<small>This (part of) documentation was generated from [../src/fst/affixes/symbols.lexc](http://github.com/giellalt/lang-rus/blob/main/../src/fst/affixes/symbols.lexc)</small>
+
+# Russian tags
+
+## Stressed vowels
+
+* а́ е́ ё́ и́ о́ у́ ы́ э́ ю́ я́      Primary stress (lower)
+* а̀ ѐ ё̀ ѝ о̀ у̀ ы̀ э̀ ю̀ я̀      Secondary stress (lower)
+
+* А́ Е́ Ё́ И́ О́ У́ Ы́ Э́ Ю́ Я́     Primary stress (upper)
+* А̀ Ѐ Ё̀ Ѝ О̀ У̀ Ы̀ Э̀ Ю̀ Я̀     Secondary stress (upper)
+
+## Symbols that need to be escaped on the lower side (towards twolc): (copied from sme)
+
+
+
+## Markers
+
+* ¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ⁰  = Used to enumerate homonymous lemmas
+* %>    = End-of-stem marker (nominals)
+* %<    = End-of-stem marker (verbs)
+* %^F   = Fleeting vowel marker
+* %^o %^O  = Verbal prefix fleeting vowel
+* %^G   = Irregular GenPl marker (to keep ов/ев on n stems, e.g. ов%^G
+* %^Z   = Zero ending (resolves to 0/й/ь)
+* %^M   = Verb stem mutation
+* %^D   = archiphoneme for д~жд alternation in past passive participles
+* %^T   = archiphoneme for т~щ alternation in verbs
+* %^d   = archiphoneme for verb stems with -дший past active participles (-сти 7 (-д-) )
+* %^t   = archiphoneme for verb stems with -тший past active participles (-сти 7 (-т-) )
+* %^R   = archiphoneme for бороть and пороть
+* %^U   = Imperative ending (unstressed)
+* %^S  = Imperative ending (stressed)
+* %^P  = Attenuative comparative prefix: по~
+* %^A  = Attenuative comparative prefix: по~
+* %^Y  = Verbal prefix вы́-
+
+## POS
+* +A       = Adjective
+* +Abbr    = Abbreviation
+* +Adv     = Adverb
+* +CC      = Coordinating conjunction
+* +CS      = Subordinating conjunction
+* +Det     = Determiner
+* +Interj  = Interjection
+* +N       = Noun
+* +Num     = Numeral
+* +Paren   = Parenthetical вводное слово
+* +Pcle    = Particle
+* +Po      = Postposition (ради is the only postposition)
+* +Pr      = Preposition
+* +Pron    = Pronoun
+* +V       = Verb
+
+## Sub-POS
+* +All     = All: весь
+* +Coll    = Collective numerals
+* +Def     = Definite
+* +Dem     = Demonstrative
+* +Indef   = Indefinite: кто-то, кто-нибудь, кто-либо, кое-кто, etc.
+* +Interr  = Interrogative: кто, что, какой, ли, etc.
+* +Neg     = Negative: никто, некого, etc.
+* +Pers    = Personal
+* +Pos     = Possessive, e.g. его, наш
+* +Prcnt   = Percent
+* +Prop    = Proper
+* +Recip   = Reciprocal: друг друга
+* +Refl    = Pronoun себя, possessive свой
+* +Rel     = Relativizer, e.g. который, где, как, куда, сколько, etc.
+* +Symbol = independent symbols in the text stream, like £, €, ©
+
+## Verbal MSP
+* +Impf +Perf        = Imperfective, perfective
+* +IV +TV            = Intransitive, transitive (Zaliznjak does not mark trans-only, so transitive verbs all have both TV and IV)
+* +Inf +Imp          = Imperatives: 2nd person = читай, 1st person = прочитаем
+* +Pst +Prs +Fut     = Past, present, future
+* +Sg1 +Sg2 +Sg3     = person sg
+* +Pl1 +Pl2 +Pl3     = person pl
+* +PrsAct +PrsPss    = Participles (+PrsAct+Adv and +PstAct+Adv are used for the verbal adverbs)
+* +PstAct +PstPss    = Participles
+* +Pass              = Passive
+* +Imprs             = Impersonal (cannot have explicit subject)
+* +Lxc             = Lexicalized (for participial forms)
+
+* +Der             = Derived (for participial forms)
+* +Der/PrsAct             = Derived (for participial forms)
+* +Der/PrsPss             = Derived (for participial forms)
+* +Der/PstAct             = Derived (for participial forms)
+* +Der/PstPss             = Derived (for participial forms)
+
+## Nominal MSP
+* +Msc +Fem +Neu +MFN   = grammatical gender,  +MFN = gender unspecifiable (pl tantum)
+* +Inan +Anim +AnIn     = animacy (+AnIn = ambivalent animacy for non-accusative modifiers)
+* +Sem/Sur +Sem/Pat     = Surname (фамилия), Patronymic
+* +Sem/Ant +Sem/Alt     = Anthroponym/Given name, Other
+* +Sg +Pl               = number
+* +Nom +Acc +Gen       
+* +Loc +Dat +Ins       
+* +Loc2 +Gen2 +Voc     
+* +Count                = Count (for человек/людей or лет/годов, etc. also шага́/шара́/часа́/etc.)
+* +Ord      = Ordinal
+* +Cmpar    = Comparative
+* +Sint     = Synthetic comparative is possible, e.g. старее
+* +Pred     = "Predicate", also used for short-form adjectives
+* +Cmpnd    = "Compound", used for compounding adjectives, such as русско-английский
+* +Att      = Attenuative comparatives like получше, поновее, etc.
+
+## Punctuation
+* +PUNCT    = Punctuation
+* +CLB    = Clause boundary  ! TODO SENT vs CLB which is which?
+* +SENT    = Clause boundary
+* +COMMA   = Comma
+* +DASH    = Dash
+* +LQUOT    = Left quotation
+* +RQUOT    = Right quotation
+* +QUOT    = "Ambidextrous" quotation
+* +LPAR     = Left parenthesis/bracket
+* +RPAR     = Right parenthesis/bracket
+* +LEFT     = Left parenthesis/bracket/quote/etc.
+* +RIGHT     = Right parenthesis/bracket/quote/etc.
+
+## Other tags
+* +Prb      = +Prb(lematic): затруднительно - предположительно - нет
+* +Fac      = Facultative
+* +PObj     = Object of preposition (prothetic н: него нее них)
+* +Epenth   = epenthesis on prepositions (о~об~обо or в~во)
+* +Leng     = Lengthened доброй~доброю (marks less-canonical wordform that has more syllables)
+* +Elid     = Elided (Иванович~Иваныч, новее~новей, чтобы~чтоб, или~иль, коли~коль)
+* +Use/NG   = Do not generate (used for apertium, etc.)
+* +Use/Obs  = Obsolete
+* +Use/Ant  = Antiquated "устаревшее"
+* +Err/Orth  = Substandard
+* +Err/L2_a2o      = L2 error: Misspelling (о should be а)
+* +Err/L2_e2je     = L2 error: Misspelling (е should be э)
+* +Err/L2_FV       = L2 error: Presence of fleeting vowel where it should be deleted, e.g. отеца (compare отца). +Err/L2_FV only occurs in lexemes that have a fleeting vowel in at least one form.
+* +Err/L2_H2S      = L2 error: Misspelling (ь should be ъ)
+* +Err/L2_i2j      = L2 error: Misspelling (й should be и)
+* +Err/L2_i2y      = L2 error: Misspelling (ы should be и)
+* +Err/L2_ii       = L2 error: Failure to change ending ие to ии in +Sg+Loc or +Sg+Dat, e.g. к Марие, о кафетерие, о знание. +Err/L2_ii is only possible on nouns with a stem in и
+* +Err/L2_Ikn      = L2 error: Ikanje (и should be е or я)
+* +Err/L2_j2i      = L2 error: Misspelling (и should be й)
+* +Err/L2_je2e     = L2 error: Misspelling (э should be е)
+* +Err/L2_NoFV     = L2 error: Lack of fleeting vowel where it should be inserted, e.g. окн (compare окон). +Err/L2_NoFV only occurs in lexemes that have a fleeting vowel in at least one form.
+* +Err/L2_NoGem    = L2 error: Geminate letter is missing
+* +Err/L2_NoSS     = L2 error: Misspelling (ь is missing)
+* +Err/L2_o2a      = L2 error: Akanje (а should be о)
+* +Err/L2_Pal      = L2 error: Palatalization: failure to place soft-indicating symbol after soft stem, e.g. земла (compare земля). +Err/L2_Pal only occurs on 1) nouns and modifiers that have a soft stem, or 2) verbs in евать, e.g. малует (compare малюет)
+* +Err/L2_prijti   = L2 error: Misspelling the stem of прийти, especially the й
+* +Err/L2_revIkn   = L2 error: Reversed ikanje, i.e. spelling и as е/я/а to reflect supposed vowel reduction
+* +Err/L2_sh2shch  = L2 error: Misspelling (щ should be ш)
+* +Err/L2_shch2sh  = L2 error: Misspelling (ш should be щ)
+* +Err/L2_ski      = L2 error: по-~ский instead of по-~ски
+* +Err/L2_SRc      = L2 error: L2 error: replace и with ы or vice versa after ц
+* +Err/L2_SRo      = L2 error: Failure to change о to е after hushers and ц, e.g. Сашой (compare Сашей). +Err/L2+SRo only occurs in 1) nouns and modifiers with stems in hushers or ц, or 2) verbs in евать, e.g. танцовать (compare танцевать)
+* +Err/L2_SRy      = L2 error: Failure to change ы to и after hushers and velars, e.g. книгы (compare книги). +Err/L2+SRo only occurs in nouns and modifiers with stems in hushers or velars
+* +Err/L2_y2i      = L2 error: Misspelling (и should be ы)
+
+
+# Key lexicon
+
+* LEXICON Root    
+
+* Abbreviation ;	
+* :%^P%^A Adjective ;	    
+* Adverb ;	    
+* Comparative ;   
+* Conjunction ;   
+* Interjection ;  
+* Noun ;		    
+* Numeral ;       
+* Parenthetical ; 
+* Particle ;      
+* Predicative ;   
+* Preposition ;   
+* Pronoun ;	    
+* Verb ;		    
+* Propernoun ;    
+* Punctuation ;   
+* Symbols     ;   
+* LexicalizedParticiple ;   
 * * *
-<small>This (part of) documentation was generated from [../src/fst/stems/numerals.lexc](http://github.com/giellalt/lang-rus/blob/main/../src/fst/stems/numerals.lexc)</small>
+<small>This (part of) documentation was generated from [../src/fst/root.lexc](http://github.com/giellalt/lang-rus/blob/main/../src/fst/root.lexc)</small>
 
 
-We describe here how abbreviations are in Russian are read out, e.g.
-for text-to-speech systems.
-
-For example:
-
-* s.:syntynyt # ;  
-* os.:omaa% sukua # ;  
-* v.:vuosi # ;  
-* v.:vuonna # ;  
-* esim.:esimerkki # ; 
-* esim.:esimerkiksi # ; 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+retroflex plosive, voiceless			t`  ʈ	    0288, 648 (` = ASCII 096)
+retroflex plosive, voiced			d`	ɖ		0256, 598
+labiodental nasal					F 	ɱ		0271, 625
+retroflex nasal						n` 	ɳ		0273, 627
+palatal nasal						J 	ɲ		0272, 626
+velar nasal							N 	ŋ		014B, 331
+uvular nasal							N\	ɴ		0274, 628
+	
+bilabial trill						B\ 	ʙ		0299, 665
+uvular trill							R\ 	ʀ		0280, 640
+alveolar tap							4	ɾ		027E, 638
+retroflex flap						r` 	ɽ		027D, 637
+bilabial fricative, voiceless		p\ 	ɸ		0278, 632
+bilabial fricative, voiced			B 	β		03B2, 946
+dental fricative, voiceless			T 	θ		03B8, 952
+dental fricative, voiced				D 	ð		00F0, 240
+postalveolar fricative, voiceless	S	ʃ		0283, 643
+postalveolar fricative, voiced		Z 	ʒ		0292, 658
+retroflex fricative, voiceless		s` 	ʂ		0282, 642
+retroflex fricative, voiced			z` 	ʐ		0290, 656
+palatal fricative, voiceless			C 	ç		00E7, 231
+palatal fricative, voiced			j\ 	ʝ		029D, 669
+velar fricative, voiced	        	G 	ɣ		0263, 611
+uvular fricative, voiceless			X	χ		03C7, 967
+uvular fricative, voiced				R 	ʁ		0281, 641
+pharyngeal fricative, voiceless		X\ 	ħ		0127, 295
+pharyngeal fricative, voiced			?\ 	ʕ		0295, 661
+glottal fricative, voiced			h\	ɦ		0266, 614
+
+alveolar lateral fricative, vl.		K 
+alveolar lateral fricative, vd.		K\
+
+labiodental approximant				P (or v\) 
+alveolar approximant					r\ 
+retroflex approximant				r\` 
+velar approximant					M\
+
+retroflex lateral approximant		l` 
+palatal lateral approximant			L 
+velar lateral approximant			L\
+Clicks
+
+bilabial								O\	(O = capital letter) 
+dental								|\
+(post)alveolar						!\ 
+palatoalveolar						=\ 
+alveolar lateral						|\|\
+Ejectives, implosives
+
+ejective								_>	e.g. ejective p		p_>
+implosive							_<	e.g. implosive b	b_<
+Vowels
+
+close back unrounded					M
+close central unrounded 				1 
+close central rounded				} 
+lax i								I 
+lax y								Y 
+lax u								U
+
+close-mid front rounded				2 
+close-mid central unrounded			@\ 
+close-mid central rounded			8 
+close-mid back unrounded				7
+
+schwa	ə							@
+
+open-mid front unrounded				E 
+open-mid front rounded				9
+open-mid central unrounded			3 
+open-mid central rounded				3\ 
+open-mid back unrounded				V 
+open-mid back rounded				O
+
+ash (ae digraph)						{ 
+open schwa (turned a)				6
+
+open front rounded					& 
+open back unrounded	        		A 
+open back rounded					Q
+Other symbols
+
+voiceless labial-velar fricative		W 
+voiced labial-palatal approx.		H 
+voiceless epiglottal fricative		H\ 
+voiced epiglottal fricative			<\ 
+epiglottal plosive					>\
+
+alveolo-palatal fricative, vl. 		s\ 
+alveolo-palatal fricative, voiced	z\ 
+alveolar lateral flap				l\ 
+simultaneous S and x					x\ 
+tie bar								_
+Suprasegmentals
+
+primary stress						" 
+secondary stress						% 
+long									: 
+half-long							:\ 
+extra-short							_X 
+linking mark							-\
+Tones and word accents
+
+level extra high						_T 
+level high							_H
+level mid							_M 
+level low							_L 
+level extra low						_B
+downstep								! 
+upstep								^	(caret, circumflex)
+
+contour, rising						 
+contour, falling						_F 
+contour, high rising					_H_T 
+contour, low rising					_B_L 
+
+contour, rising-falling				_R_F 
+(NB Instead of being written as diacritics with _, all prosodic 
+marks can alternatively be placed in a separate tier, set off 
+by < >, as recommended for the next two symbols.)
+global rise						<R> 
+global fall						<F>
+Diacritics						
+									
+voiceless						_0	(0 = figure), e.g. n_0
+voiced							_v 
+aspirated						_h 
+more rounded						_O	(O = letter) 
+less rounded						_c 
+advanced							_+
+retracted						_-
+centralized						_" 
+syllabic							=	(or _=) e.g. n= (or n_=) 
+non-syllabic						_^ 
+rhoticity						`
+									
+breathy voiced					_t 
+creaky voiced					_k
+linguolabial						_N 
+labialized						_w 
+palatalized						'	(or _j) e.g. t' (or t_j) 
+velarized						_G 
+pharyngealized					_?\
+									
+dental							_d 
+apical							_a 
+laminal							_m
+nasalized						~	(or _~) e.g. A~ (or A_~) 
+nasal release					_n
+lateral release					_l 
+no audible release				_}
+
+velarized or pharyngealized		_e 
+velarized l, alternatively		5 
+raised							_r 
+lowered							_o 
+advanced tongue root				_A 
+retracted tongue root			_q
 * * *
-<small>This (part of) documentation was generated from [../src/transcriptions/transcriptor-abbrevs2text.lexc](http://github.com/giellalt/lang-rus/blob/main/../src/transcriptions/transcriptor-abbrevs2text.lexc)</small>
+<small>This (part of) documentation was generated from [../src/phonetics/txt2ipa.xfscript](http://github.com/giellalt/lang-rus/blob/main/../src/phonetics/txt2ipa.xfscript)</small>
 
 
 
@@ -2705,6 +2914,23 @@ For example:
 
 * * *
 <small>This (part of) documentation was generated from [../src/transcriptions/transcriptor-numbers-digit2text.lexc](http://github.com/giellalt/lang-rus/blob/main/../src/transcriptions/transcriptor-numbers-digit2text.lexc)</small>
+
+
+We describe here how abbreviations are in Russian are read out, e.g.
+for text-to-speech systems.
+
+For example:
+
+* s.:syntynyt # ;  
+* os.:omaa% sukua # ;  
+* v.:vuosi # ;  
+* v.:vuonna # ;  
+* esim.:esimerkki # ; 
+* esim.:esimerkiksi # ; 
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/transcriptions/transcriptor-abbrevs2text.lexc](http://github.com/giellalt/lang-rus/blob/main/../src/transcriptions/transcriptor-abbrevs2text.lexc)</small>
 R U S S I A N   G R A M M A R   C H E C K E R
 
 
@@ -2828,4 +3054,160 @@ Grammarchecker rules begin here
 
 
 * * *
-<small>This (part of) documentation was generated from [../tools/grammarcheckers/grammarchecker.cg3](http://github.com/giellalt/lang-rus/blob/main/../tools/grammarcheckers/grammarchecker.cg3)</small>
+<small>This (part of) documentation was generated from [../tools/grammarcheckers/grammarchecker.cg3](http://github.com/giellalt/lang-rus/blob/main/../tools/grammarcheckers/grammarchecker.cg3)</small>Requires a recent version of HFST (3.10.0 / git revision>=3aecdbc)
+Then just:
+$ make
+$ echo "ja, ja" | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
+
+Issues:
+- [X] Ambiguous input
+- Seems to work fine
+- [X] Ambiguous multiword expessions with ambiguous tokenisation
+- Seems to work – represented within lexc now; hfst-tokenise also
+supports forms on the analyses now
+- [X] Ambiguous multiword expessions need reorganising after CG
+- The module cg-mwesplit takes wordforms from readings and turns them into
+new cohorts
+- [X] Unknown words
+- The set-difference method only works for words without
+flag diacritics (even though we should be working only on the form-side?)
+and leads to binary blow-up: With only lower unknowns, we get 45M;
+lower+upper gives 67M, while no unknowns gives 27M
+- Fixed instead by treating empty analyses as unknown-tokens in
+hfst-tokenise, and outputting unmatched strings with a prefix
+- [ ] Treat input that's within superblanks as unmatched
+- probably requires a change in hfst-tokenise itself
+- [X] Try >1 space for ambiguous MWE's? – represented within lexc now
+- [ ] Try set-difference-unknowns method with regular hfst commands?
+
+More usage examples:
+$ echo "Juos gorreválggain lea (dárbbašlaš) deavdit gáibádusa boasttu olmmoš, man mielde lahtuid." | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
+$ echo "(gáfe) 'ja' ja 3. ja? ц jaja ukjend \"ukjend\"" | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
+$ echo "márffibiillagáffe" | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
+
+Pmatch documentation:
+https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstPmatch
+
+
+
+
+
+
+Characters which have analyses in the lexicon, but can appear without spaces
+before/after, that is, with no context conditions, and adjacent to words:
+* Punct contains ASCII punctuation marks
+* The symbol after m-dash is soft-hyphen `U+00AD`
+* The symbol following {•} is byte-order-mark / zero-width no-break space
+`U+FEFF`.
+
+Whitespace contains ASCII white space and
+the List contains some unicode white space characters
+* En Quad U+2000 to Zero-Width Joiner U+200d'
+* Narrow No-Break Space U+202F
+* Medium Mathematical Space U+205F
+* Word joiner U+2060
+
+
+
+
+Apart from what's in our morphology, there are
+1) unknown word-like forms, and
+2) unmatched strings
+We want to give 1) a match, but let 2) be treated specially by hfst-tokenise -a
+* select extended latin symbols
+* select symbols
+* various symbols from Private area (probably Microsoft),
+so far:
+* U+F0B7 for "x in box"
+
+TODO: Could use something like this, but built-in's don't include šžđčŋ:
+
+
+Simply give an empty reading when something is unknown:
+hfst-tokenise --giella-cg will treat such empty analyses as unknowns, and
+remove empty analyses from other readings. Empty readings are also
+legal in CG, they get a default baseform equal to the wordform, but
+no tag to check, so it's safer to let hfst-tokenise handle them.
+
+
+
+Finally we mark as a token any sequence making up a:
+* known word in context
+* unknown (OOV) token in context
+* sequence of word and punctuation
+* URL in context
+
+* * *
+<small>This (part of) documentation was generated from [../tools/tokenisers/tokeniser-gramcheck-gt-desc.pmscript](http://github.com/giellalt/lang-rus/blob/main/../tools/tokenisers/tokeniser-gramcheck-gt-desc.pmscript)</small># Tokeniser for rus
+
+Usage:
+```
+$ make
+$ echo "ja, ja" | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
+$ echo "Juos gorreválggain lea (dárbbašlaš) deavdit gáibádusa boasttu olmmoš, man mielde lahtuid." | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
+$ echo "(gáfe) 'ja' ja 3. ja? ц jaja ukjend \"ukjend\"" | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
+$ echo "márffibiillagáffe" | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
+```
+
+Pmatch documentation:
+https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstPmatch
+
+
+
+
+
+
+Characters which have analyses in the lexicon, but can appear without spaces
+before/after, that is, with no context conditions, and adjacent to words:
+* Punct contains ASCII punctuation marks
+* The symbol after m-dash is soft-hyphen `U+00AD`
+* The symbol following {•} is byte-order-mark / zero-width no-break space
+`U+FEFF`.
+
+Whitespace contains ASCII white space and
+the List contains some unicode white space characters
+* En Quad U+2000 to Zero-Width Joiner U+200d'
+* Narrow No-Break Space U+202F
+* Medium Mathematical Space U+205F
+* Word joiner U+2060
+
+
+
+
+Apart from what's in our morphology, there are
+1. unknown word-like forms, and
+2. unmatched strings
+We want to give 1) a match, but let 2) be treated specially by
+`hfst-tokenise -a`
+Unknowns are made of:
+* lower-case ASCII
+* upper-case ASCII
+* some cyrillics
+* select extended latin symbols
+* extended cyrillics
+ASCII digits
+* select symbols
+* Combining diacritics as individual symbols,
+* various symbols from Private area (probably Microsoft),
+so far:
+* U+F0B7 for "x in box"
+
+
+
+## Unknown handling
+Unknowns are tagged ?? and treated specially with `hfst-tokenise`
+hfst-tokenise --giella-cg will treat such empty analyses as unknowns, and
+remove empty analyses from other readings. Empty readings are also
+legal in CG, they get a default baseform equal to the wordform, but
+no tag to check, so it's safer to let hfst-tokenise handle them.
+
+
+
+Finally we mark as a token any sequence making up a:
+* known word in context
+* unknown (OOV) token in context
+* sequence of word and punctuation
+* URL in context
+
+* * *
+<small>This (part of) documentation was generated from [../tools/tokenisers/tokeniser-disamb-gt-desc.pmscript](http://github.com/giellalt/lang-rus/blob/main/../tools/tokenisers/tokeniser-disamb-gt-desc.pmscript)</small>

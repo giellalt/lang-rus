@@ -12,8 +12,6 @@
 
 ## Symbols that need to be escaped on the lower side (towards twolc): (copied from sme)
 
-
-
 ## Markers
 
 * ¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ⁰  = Used to enumerate homonymous lemmas
@@ -155,7 +153,6 @@
 * +Err/L2_SRy      = L2 error: Failure to change ы to и after hushers and velars, e.g. книгы (compare книги). +Err/L2+SRo only occurs in nouns and modifiers with stems in hushers or velars
 * +Err/L2_y2i      = L2 error: Misspelling (и should be ы)
 
-
 # Key lexicon
 
 * LEXICON Root    
@@ -178,5 +175,10 @@
 * Punctuation ;   
 * Symbols     ;   
 * LexicalizedParticiple ;   
+
 * * *
-<small>This (part of) documentation was generated from [../src/fst/root.lexc](http://github.com/giellalt/lang-rus/blob/main/../src/fst/root.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/root.lexc](https://github.com/giellalt/lang-rus/blob/main/src/fst/root.lexc)</small>
+
+---
+

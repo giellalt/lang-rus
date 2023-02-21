@@ -61,9 +61,6 @@
 /src/fst/lexicon*
 /src/fst/phonology-err-L2_*.twolc
 /src/fst/url.lexc
-/src/orthography/spellrelax-nfc2nfd.regex
-/src/orthography/spellrelax-nfc2nfd.regex.sigma.nfc
-/src/orthography/spellrelax-nfc2nfd.regex.sigma.nfd
 /src/phonetics/tests/*.sh
 /test/run-morph-tester.sh
 /test/run-yaml-testcases.sh
@@ -73,15 +70,6 @@
 /test/src/morphology/generate-*-lemmas.sh
 /test/src/morphology/generated*.txt
 /test/src/morphology/missing_*.txt
-/src/orthography/spellrelax-nfc2nfd.regex
-/src/orthography/spellrelax-nfc2nfd.regex.sigma.nfc
-/src/orthography/spellrelax-nfc2nfd.regex.sigma.nfd
-/src/orthography/spellrelax-nfd2nfc.regex
-/src/orthography/spellrelax-nfd2nfc.regex.sigma.nfc
-/src/orthography/spellrelax-nfd2nfc.regex.sigma.nfd
-/src/orthography/spellrestrict-nfd2nfc.regex
-/src/orthography/spellrestrict-nfd2nfc.regex.sigma.nfc
-/src/orthography/spellrestrict-nfd2nfc.regex.sigma.nfd
 /test/src/phonology/negative-*.txt
 /test/src/phonology/pair-*.txt
 /test/src/phonology/pair-test-*.sh

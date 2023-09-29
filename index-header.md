@@ -1,9 +1,10 @@
 # Russian documentation
 
 [![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)](https://giellalt.github.io/MaturityClassification.html)
+![Endpoint Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2Flang-rus%2Fgh-pages%2Flemmacount.json)
 [![License](https://img.shields.io/github/license/giellalt/lang-rus)](https://github.com/giellalt/lang-rus/blob/main/LICENSE)
 [![Issues](https://img.shields.io/github/issues/giellalt/lang-rus)](https://github.com/giellalt/lang-rus/issues)
-[![Build Status](https://divvun-tc.thetc.se/api/github/v1/repository/giellalt/lang-rus/main/badge.svg)](https://github.com/giellalt/lang-rus/actions)
+[![Build Status](https://divvun-tc.giellalt.org/api/github/v1/repository/giellalt/lang-rus/main/badge.svg)](https://github.com/giellalt/lang-rus/actions)
 
 This page documents the work on the [Russian language model](https://github.com/github/lang-rus). The lexicon is a full-size lexicon of Russian (appr 125000 lemmata), and the morphological analysis is in place. The analyser contains stress marking. The syntactic disambiguation is still work in progress. 
 

@@ -1,6 +1,7 @@
 The Russian morphology and tools
 ==========================================
 
+![Lemma count](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2Flang-rus%2Fgh-pages%2Flemmacount.json)
 [![GitHub issues](https://img.shields.io/github/issues-raw/giellalt/lang-rus)](https://github.com/giellalt/lang-rus/issues)
 [![Build Status](https://divvun-tc.giellalt.org/api/github/v1/repository/giellalt/lang-rus/main/badge.svg)](https://github.com/giellalt/lang-rus/actions)
 [![License](https://img.shields.io/github/license/giellalt/lang-rus)](https://github.com/giellalt/lang-rus/blob/main/LICENSE)

@@ -23,8 +23,11 @@ GIELLA_FILTER_LOCAL_REGEX_SRCS=\
 					downcase_UCletters.regex \
 					make-optional-cyrillic-jo.regex \
 					make-ambiguous-AnIn.regex \
-					make-ambiguous-MFN.regex
-
+					make-ambiguous-MFN.regex \
+					remove-DNorm-tags.regex \
+					remove-derivation-position-tags.regex \
+					remove-norm-comp-tags.regex \
+					rename-POS_before_Der-tags.regex
 # List any local filter xfscript files here:
 GIELLA_FILTER_LOCAL_XFSCRIPT_SRCS=
 

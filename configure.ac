@@ -213,9 +213,7 @@ gt_CONFIG_FILES
 ##########################################################
 ##### BEGIN: Add language-specific list of files to ######
 ########## be processed by autoconf below here: ##########
-#AC_CONFIG_FILES([test/src/morphology/generate-adj-lemmas.sh], \
-#      [chmod a+x test/src/morphology/generate-adj-lemmas.sh])
-#this is duplicate of generate-adjective-lemmas.sh, above
+AC_CONFIG_FILES([tools/spellcheckers/index.accented.xml])
 
 ############ END: Language-specific scripts. #############
 

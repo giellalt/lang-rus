@@ -24,3 +24,4 @@ XFAIL_TESTS=
 ####### Other targets: ###########
 clean-local:
 	-rm -f *.txt
+include $(top_srcdir)/../giella-core/am-shared/devtest-include.am

@@ -129,7 +129,7 @@ Multichar_Symbols
 +LPAR    !!= * @CODE@ = Left parenthesis/bracket
 +RPAR    !!= * @CODE@ = Right parenthesis/bracket
 +LEFT    !!= * @CODE@ = Left parenthesis/bracket/quote/etc.
-+RIGHT    !!= * @CODE@ = Right parenthesis/bracket/quote/etc.
++RIGHT +MIDDLE !!= * @CODE@ = Right parenthesis/bracket/quote/etc.
 
 !! ## Other tags
 +Prb     !!= * @CODE@ = +Prb(lematic): затруднительно - предположительно - нет

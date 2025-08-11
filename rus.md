@@ -622,7 +622,7 @@ Verbal prefix fleeting vowels and voicing assimilation
 * +LPAR     = Left parenthesis/bracket
 * +RPAR     = Right parenthesis/bracket
 * +LEFT     = Left parenthesis/bracket/quote/etc.
-* +RIGHT     = Right parenthesis/bracket/quote/etc.
+* +RIGHT +MIDDLE  = Right parenthesis/bracket/quote/etc.
 
 ## Other tags
 * +Prb      = +Prb(lematic): затруднительно - предположительно - нет

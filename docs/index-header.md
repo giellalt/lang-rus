@@ -5,6 +5,7 @@
 [![License](https://img.shields.io/github/license/giellalt/lang-rus)](https://github.com/giellalt/lang-rus/blob/main/LICENSE)
 [![Issues](https://img.shields.io/github/issues/giellalt/lang-rus)](https://github.com/giellalt/lang-rus/issues)
 [![Build Status](https://builds.giellalt.org/api/badge/lang-rus?label=CI)](https://builds.giellalt.org/pipelines/lang-rus/builds/latest)
+[![Glottolog](https://img.shields.io/badge/Glottolog-green)](https://glottolog.org/resource/languoid/id/russ1263)
 
 This page documents the work on the [Russian language model](https://github.com/github/lang-rus). The lexicon is a full-size lexicon of Russian (appr 125000 lemmata), and the morphological analysis is in place. The analyser contains stress marking. The syntactic disambiguation is still work in progress. 
 

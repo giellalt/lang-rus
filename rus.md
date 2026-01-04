@@ -1006,9 +1006,7 @@ We want to give 1) a match, but let 2) be treated specially by
 Unknowns are made of:
 * lower-case ASCII
 * upper-case ASCII
-* some cyrillics
-* select extended latin symbols
-* extended cyrillics
+* Cyrillic block (U+0400 - U+04FF)
 ASCII digits
 * select symbols
 * Combining diacritics as individual symbols,

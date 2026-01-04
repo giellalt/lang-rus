@@ -44,13 +44,13 @@ Define incondform      Punct|
 !! * Medium Mathematical Space U+205F
 !! * Word joiner U+2060
 Define blank           Whitespace | incondform
-                       | Lst({           ​‌‍  ⁠})
+                       | Lst({         ​‌‍  ⁠})
                        ;
 
 Define nonprintable [ 0:? | inputmark | flags ];
 Define any          [ ? | nonprintable ];
 
-Define incondword       morphology & [ any* incondform:[?*] nonprintable* ] ; 
+Define incondword       morphology & [ any* incondform:[?*] nonprintable* ] ;
 ! Ends in punctuation – no context condition
 
 Define morphoword       morphology            LC([blank | #]) RC([blank | # ]);
@@ -64,14 +64,10 @@ Define urlword          url                   LC([blank | #]) RC([blank | # ]);
 !! Unknowns are made of:
 Define alphabet "a-z" !! * lower-case ASCII
                |"A-Z" !! * upper-case ASCII
-               |"Ѐ-ӿ" !! * some cyrillics
-               |Lst({àáâãāăȧäảåǎȁȃąạḁæǽǣèéêẽēĕėëẻěȅȇẹȩęḙḛìíîĩīīĭi̇ïỉǐịįȉȋḭɨòóôõōŏȯöỏőǒȍȏơǫọɵøờớỡởợǭộǿœùúûũūŭüủůűǔȕȗưụṳųṷṵừứữửựʉỳýŷỹȳẏÿỷƴỵɏÀÁÂÃĀĂȦÄẢÅǍȀȂĄẠḀÆǼǢÈÉÊẼĒĔĖËẺĚȄȆẸȨĘḘḚÌÍÎĨĪĪĬİÏỈǏỊĮȈȊḬƗÒÓÔÕŌŎȮÖỎŐǑȌȎƠǪỌƟØỜỚỠỞỢǬỘǾŒÙÚÛŨŪŬÜỦŮŰǓȔȖƯỤṲŲṶṴỪỨỮỬỰɄỲÝŶỸȲẎŸỶƳỴɎšžčđðíŋňŧñńŠŽČĐÐÍŊŇŦÑ})
-               !! * select extended latin symbols
-               ! Then followed by all Cyrillic letters:
-               | Lst({{ЁАА́БВГДЕЕ́ЁЖЗИИ́ЙЙКЛМНОО́ПРСТУУ́ФХЦЧШЩЪЫЬЭЭ́ЮЮ́ЯЯ́аа̀а́бвгдеѐе́ёжзиѝи́ййклмноо̀о́прстуу̀у́фхцчшщъыы̀ы́ьээ̀э́юю̀ю́яя̀я́ёё̀})
-               !! * extended cyrillics
+               |"Ѐ-ӿ" !! * Cyrillic block (U+0400 - U+04FF)
+               |Lst({àâãāăȧäảåǎȁȃąạḁæǽǣèéêẽēĕėëẻěȅȇẹȩęḙḛìíîĩīīĭ̇ïỉǐịįȉȋḭɨòóôõōŏȯöỏőǒȍȏơǫọɵøờớỡởợǭộǿœùúûũūŭüủůűǔȕȗưụṳųṷṵừứữửựʉỳýŷỹȳẏÿỷƴỵɏÀÂÃĀĂȦÄẢÅǍȀȂĄẠḀÆǼǢÈÉÊẼĒĔĖËẺĚȄȆẸȨĘḘḚÌÍÎĨĪĪĬİÏỈǏỊĮȈȊḬƗÒÓÔÕŌŎȮÖỎŐǑȌȎƠǪỌƟØỜỚỠỞỢǬỘǾŒÙÚÛŨŪŬÜỦŮŰǓȔȖƯỤṲŲṶṴỪỨỮỬỰɄỲÝŶỸȲẎŸỶƳỴɎðíňñńÐÍŇÑ})
                | "0-9" !! ASCII digits
-               | Lst({_§°†}) !! * select symbols
+               | Lst({_†}) !! * select symbols
                !! * Combining diacritics as individual symbols,
                ! to be able to analyse unknown words with
                ! decomposed diacritics. All combining diacritics
@@ -79,7 +75,7 @@ Define alphabet "a-z" !! * lower-case ASCII
                ! to position relative to base char, then more or
                ! less according to Unicode number.
                ! NB: The following list will look odd in many editors!
-               | Lst({̶̴̵̶̷̸⃥⃦⃪⃫⃒⃓⃘⃙⃚̡̢̧̨᷐᷎̛᷹̖̗̘̟̠̣̤̥̦̩̪̫̬̭̮̯̰̱̲̳̹̺̻̼͇͈͉͍͎͙͚͓͔͕͖⃨⃬⃭⃮⃯᷂᷏᷹᷽᷿᷊᷷᷸̀́̂̌̃̄̅̆̇̈⃰̉̊̋̍̎̏̐̑̒̓̔̽̾̿̀́͂̓̈́͆͊͋͌͐͑͒͗͛⃐⃑⃔⃕⃖⃗⃛⃜⃡⃧⃩᷀᷁᷃᷄᷅᷆᷇᷈᷉᷋᷌᷵᷻᷾ͣͤͥͦͧͨͩͪͫͬͭͮͯ᷑᷒ᷓᷔᷕᷖᷗᷘᷙᷚᷛᷜᷝᷞᷟᷠᷡᷢᷣᷤᷥᷦᷧᷨᷩᷪᷫᷬᷭᷮᷯᷰᷱᷲᷳᷴ̕̚͘᷶͜͟͢᷼͝͞͠͡᷍ͅ⃝⃞⃟⃠⃢⃣⃤})
+               | Lst({̶̴̵̶̷̸⃥⃦⃪⃫⃒⃓⃘⃙⃚̡̢̧̨᷐᷎̛᷹̖̗̘̟̠̣̤̥̦̩̪̫̬̭̮̯̰̱̲̳̹̺̻̼͇͈͉͍͎͙͚͓͔͕͖⃨⃬⃭⃮⃯᷂᷏᷹᷽᷿᷊᷷᷸̂̌̃̄̅̇⃰̉̊̋̍̎̏̐̑̒̓̔̽̾̿̀́͂̓̈́͆͊͋͌͐͑͒͗͛⃐⃑⃔⃕⃖⃗⃛⃜⃡⃧⃩᷀᷁᷃᷄᷅᷆᷇᷈᷉᷋᷌᷵᷻᷾ͣͤͥͦͧͨͩͪͫͬͭͮͯ᷑᷒ᷓᷔᷕᷖᷗᷘᷙᷚᷛᷜᷝᷞᷟᷠᷡᷢᷣᷤᷥᷦᷧᷨᷩᷪᷫᷬᷭᷮᷯᷰᷱᷲᷳᷴ̕̚͘᷶͜͟͢᷼͝͞͠͡᷍ͅ⃝⃞⃟⃠⃢⃣⃤})
                !! * various symbols from Private area (probably Microsoft),
                !!   so far:
                !!   * U+F0B7 for "x in box"

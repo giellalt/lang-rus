@@ -2,8 +2,6 @@
 
 # usage: ./add_L2_orth_err.sh <src_transducer> <tag1> <tag2> <tag3> ...
 
-# TODO: probably more efficient way to clear metadata than `hfst-fst2txt | hfst-txt2fst` (hfst-edit-metadata?)
-
 set -x
 
 src_tr=$1
@@ -26,8 +24,6 @@ compile_fst () {
         | hfst-remove-epsilons \
         | hfst-determinize \
         | hfst-minimize \
-        | hfst-fst2txt \
-	| hfst-txt2fst --format=foma \
         > $1.tmp.hfst
     rm $1.uniq.tmp.hfst
 }
@@ -52,8 +48,6 @@ hfst-prune-alphabet ${tmp_tr1} \
     | hfst-remove-epsilons \
     | hfst-determinize \
     | hfst-minimize \
-    | hfst-fst2txt \
-    | hfst-txt2fst --format=foma \
     > ${src_tr}
 
 rm ${tmp_tr1}

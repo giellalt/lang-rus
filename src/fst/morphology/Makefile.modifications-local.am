@@ -17,4 +17,10 @@
 
 # Add local build rules and shared here...
 
+if WANT_L2
+rus-phon-L2.compose.hfst:
+	$(AM_V_at)echo "0 0" | hfst-txt2fst -e epsilon -o $@
 
+rus-phon-L2.lookup.hfst:
+	$(AM_V_at)echo "0 0" | hfst-txt2fst -e epsilon -o $@
+endif

@@ -32,7 +32,7 @@
 
 # Colourised versions of autoconf messaging... add some checks here if it looks
 # too bad in logs and stuffs
-# we allow some CI builds to blatantly ignore errors but if users use this 
+# we allow some CI builds to blatantly ignore errors but if users use this
 # feature they are on their own
 
 AC_ARG_ENABLE([configure-errors],
@@ -182,7 +182,7 @@ AM_CONDITIONAL([CAN_YAML_TEST], [test "x$GTMORPHTEST" != xfalse])
 AS_IF([test x$GTMORPHTEST = xfalse],
       [gt_MSG_ERROR([gtmorphtest or morph-test2 is needed for YAML testings
         pipx install git+https://github.com/divvun/morph-test
-        
+
         Alternatively, install morph-test2, see https://github.com/divvun/morph-test-rs])])
 
 
@@ -207,9 +207,9 @@ AC_SUBST([SED], [$ac_cv_path_SED])
 
 # Check for uconv for some automated unicode recoding
 AC_PATH_PROG([UCONV], [uconv], [false])
-AS_IF([test x$UCONV = xfalse], 
+AS_IF([test x$UCONV = xfalse],
       [gt_MSG_ERROR([needs uconv for unicode support
-       uconv is a part of ICU 
+       uconv is a part of ICU
        on debian/ubuntu: apt install icu-devtools
        on macports: port install icu
        on macbrew: brew install icu4c (and follow instructions)
@@ -688,7 +688,7 @@ AC_MSG_CHECKING([whether the gtgramtool version is at least $_gtgramtool_min_ver
 AX_COMPARE_VERSION([$_gtgramtool_version], [ge], [$_gtgramtool_min_version],
                    [gtgramtool_version_ok=yes], [gtgramtool_version_ok=no])
 AC_MSG_RESULT([$gtgramtool_version_ok])
-AS_IF([test "x$enable_grammarchecker" != "xno"], 
+AS_IF([test "x$enable_grammarchecker" != "xno"],
     AS_IF([test "x${gtgramtool_version_ok}" != xno],,
           [gt_MSG_ERROR([$gtgramtool_too_old_message])]))
 ################ gtlextools for lexcy checking ################
@@ -821,10 +821,9 @@ AC_ARG_ENABLE([L2],
                               [enable L2 analyser for Oahpa @<:@default=no@:>@])],
               [enable_L2=$enableval],
               [enable_L2=no])
-AS_IF([test x$enable_oahpa = xno], [enable_L2=no],
-    [AS_IF([test x$enable_L2 != xno -a \
+AS_IF([test x$enable_L2 != xno -a \
       "$(find ${srcdir}/src/fst -name "*-L2.*" | head -n 1)" = "" ],
-      [gt_MSG_ERROR([You asked for the L2 analyser, but no L2 files were found])])])
+      [gt_MSG_ERROR([You asked for the L2 analyser, but no L2 files were found])])
 AM_CONDITIONAL([WANT_L2], [test "x$enable_L2" != xno])
 
 # Enable downcasing error fst's for Oahpa:

@@ -78,14 +78,32 @@ if HAVE_SHARED_COMMON
 	$(MAKE) $(GENDIR)
 	$(AM_V_CP)cp -f $< $@
 
+.generated/emojis.tmp.lexc: $(gt_SHARED_common)/src/fst/emojis.lexc
+	$(MAKE) $(GENDIR)
+	$(AM_V_CP)cp -f $< $@
+
 generated_files/mul-$(GLANG)-%.lexc: $(gt_SHARED_common)/src/fst/stems/%.lexc
 	$(AM_V_at)$(MKDIR_P) generated_files
 	$(AM_V_CP)cp -f $< $@
 else
 # this is "safe" fallback (compiles but you miss everything)
 .generated/url.tmp.lexc:
+	$(MAKE) $(GENDIR)
 	echo "LEXICON Root" > $@
 	echo "< h t t p (s) %: %/ %/ ?*> # ;" >> $@
+
+# No shared common: create a minimal lexc that compiles.
+# This keeps the build working, but contains no actual emoji inventory.
+.generated/emojis.tmp.lexc:
+	$(MAKE) $(GENDIR)
+	echo "Multichar_Symbols" > $@
+	echo "" >> $@
+	echo "+N" >> $@
+	echo "+Sym" >> $@
+	echo "+Emoji" >> $@
+	echo "" >> $@
+	echo "LEXICON Root" >> $@
+	echo "0 ;" >> $@
 
 .generated/mul-$(GLANG)-%.lexc:
 	$(MAKE) $(GENDIR)

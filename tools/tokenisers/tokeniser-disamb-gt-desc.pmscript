@@ -21,6 +21,8 @@ Define morphology [ lexmorph | UpCase(lexmorph, U) ] ;
 
 Define url @bin"analyser-url-gt-desc.hfst" ;
 
+Define emoji @bin"analyser-emojis-gt-desc.hfst" ;
+
 ! explicit list of flags, since `?` does not match flags; the list is
 ! dynamically built, since it is language dep:
 Define flags @bin"filters/disamb-tokeniser-flags.hfst" ;
@@ -47,14 +49,17 @@ Define blank           Whitespace | incondform
                        | Lst({         ​‌‍  ⁠})
                        ;
 
+Define boundary        [ blank | # | emoji ] ;
+
 Define nonprintable [ 0:? | inputmark | flags ];
 Define any          [ ? | nonprintable ];
 
 Define incondword       morphology & [ any* incondform:[?*] nonprintable* ] ;
 ! Ends in punctuation – no context condition
 
-Define morphoword       morphology            LC([blank | #]) RC([blank | # ]);
-Define urlword          url                   LC([blank | #]) RC([blank | # ]);
+Define morphoword       morphology            LC(boundary) RC(boundary);
+Define urlword          url                   LC(boundary) RC(boundary);
+Define emojiword        emoji ;
 
 !! Apart from what's in our morphology, there are
 !! 1. unknown word-like forms, and
@@ -93,7 +98,7 @@ Define alphaword alphabet+ ( alphamiddle alphabet+ );
 Define unknownform [alphaword].u ;
 !! Unknowns are tagged ?? and treated specially with `hfst-tokenise`
 Define unknownword unknownform 0:% %?%?::280284
-                        LC([blank | #]) RC([[blank ] | # ]);
+                        LC(boundary) RC(boundary);
 !! hfst-tokenise --giella-cg will treat such empty analyses as unknowns, and
 !! remove empty analyses from other readings. Empty readings are also
 !! legal in CG, they get a default baseform equal to the wordform, but
@@ -116,6 +121,6 @@ Define unknownword unknownform 0:% %?%?::280284
 !! * unknown (OOV) token in context
 !! * sequence of word and punctuation
 !! * URL in context
-Define token [ morphoword | unknownword | incondword | Ins(urlword) ] EndTag(token);
+Define token [ morphoword | unknownword | incondword | Ins(urlword) | Ins(emojiword) ] EndTag(token);
 
 regex token ;

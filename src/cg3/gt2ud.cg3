@@ -1,0 +1,182 @@
+DELIMITERS = "<.>" "<!>" "<?>" "<...>" "<¶>";
+
+# GT to UD tag mapping grammar for Russian
+# Converts GiellaLT morphological tags to Universal Dependencies format
+# Simple version - unconditional mappings
+
+# ========================================
+# First: Remove GT-specific problematic readings 
+# ========================================
+
+# Remove readings with error or dispreferred usage tags
+REMOVE (Err/Orth);
+REMOVE (Use/NG);
+REMOVE (Use/Ant);
+REMOVE (Use/Obs);
+
+# ========================================
+# Morphological Feature Mappings (before POS)
+# ========================================
+
+# Gender - substitute GT tags with UD equivalents
+SUBSTITUTE (Msc) (Gender=Masc) TARGET (Msc);
+SUBSTITUTE (Fem) (Gender=Fem) TARGET (Fem);
+SUBSTITUTE (Neu) (Gender=Neut) TARGET (Neu);
+# MFN is GT's way of marking plural forms that apply to all genders
+# In UD, plurals don't have gender, so just don't convert MFN (leave it or it gets removed later)
+
+# Number
+SUBSTITUTE (Sg) (Number=Sing) TARGET (Sg);
+SUBSTITUTE (Pl) (Number=Plur) TARGET (Pl);
+
+# Case
+SUBSTITUTE (Nom) (Case=Nom) TARGET (Nom);
+SUBSTITUTE (Gen) (Case=Gen) TARGET (Gen);
+SUBSTITUTE (Dat) (Case=Dat) TARGET (Dat);
+SUBSTITUTE (Acc) (Case=Acc) TARGET (Acc);
+SUBSTITUTE (Ins) (Case=Ins) TARGET (Ins);
+SUBSTITUTE (Loc) (Case=Loc) TARGET (Loc);
+SUBSTITUTE (Voc) (Case=Voc) TARGET (Voc);
+SUBSTITUTE (Par) (Case=Par) TARGET (Par);
+
+# Animacy
+SUBSTITUTE (Anim) (Animacy=Anim) TARGET (Anim);
+SUBSTITUTE (Inan) (Animacy=Inan) TARGET (Inan);
+SUBSTITUTE (AnIn) (Animacy=Inan) TARGET (AnIn);
+
+# Tense
+SUBSTITUTE (Prs) (Tense=Pres) TARGET (Prs);
+SUBSTITUTE (Pst) (Tense=Past) TARGET (Pst);
+SUBSTITUTE (Fut) (Tense=Fut) TARGET (Fut);
+
+# Aspect
+SUBSTITUTE (Perf) (Aspect=Perf) TARGET (Perf);
+SUBSTITUTE (Impf) (Aspect=Imp) TARGET (Impf);
+
+# Mood
+SUBSTITUTE (Ind) (Mood=Ind) TARGET (Ind);
+SUBSTITUTE (Imp) (Mood=Imp) TARGET (Imp);
+SUBSTITUTE (Cnd) (Mood=Cnd) TARGET (Cnd);
+
+# Voice
+SUBSTITUTE (Act) (Voice=Act) TARGET (Act);
+SUBSTITUTE (Pass) (Voice=Pass) TARGET (Pass);
+SUBSTITUTE (Mid) (Voice=Mid) TARGET (Mid);
+
+# VerbForm - handle participial forms
+SUBSTITUTE (Inf) (VerbForm=Inf) TARGET (Inf);
+SUBSTITUTE (Part) (VerbForm=Part) TARGET (Part);
+SUBSTITUTE (Ger) (VerbForm=Conv) TARGET (Ger);
+# Participle tags need VerbForm=Part and appropriate Tense
+SUBSTITUTE (PrsAct) (VerbForm=Part) TARGET (PrsAct);
+MAP (Tense=Pres) TARGET (PrsAct);
+SUBSTITUTE (PrsPss) (VerbForm=Part) TARGET (PrsPss);
+MAP (Tense=Pres) TARGET (PrsPss);
+MAP (Voice=Pass) TARGET (PrsPss);
+SUBSTITUTE (PstAct) (VerbForm=Part) TARGET (PstAct);
+MAP (Tense=Past) TARGET (PstAct);
+SUBSTITUTE (PstPss) (VerbForm=Part) TARGET (PstPss);
+MAP (Tense=Past) TARGET (PstPss);
+MAP (Voice=Pass) TARGET (PstPss);
+
+# Person (GT combines with number, so add Number and VerbForm together)
+ADD (Number=Sing VerbForm=Fin) TARGET (Sg1);
+ADD (Number=Sing VerbForm=Fin) TARGET (Sg2);
+ADD (Number=Sing VerbForm=Fin) TARGET (Sg3);
+ADD (Number=Plur VerbForm=Fin) TARGET (Pl1);
+ADD (Number=Plur VerbForm=Fin) TARGET (Pl2);
+ADD (Number=Plur VerbForm=Fin) TARGET (Pl3);
+
+# Now substitute the person+number tags with just Person
+SUBSTITUTE (Sg1) (Person=1) TARGET (Sg1);
+SUBSTITUTE (Sg2) (Person=2) TARGET (Sg2);
+SUBSTITUTE (Sg3) (Person=3) TARGET (Sg3);
+SUBSTITUTE (Pl1) (Person=1) TARGET (Pl1);
+SUBSTITUTE (Pl2) (Person=2) TARGET (Pl2);
+SUBSTITUTE (Pl3) (Person=3) TARGET (Pl3);
+
+# Degree (will apply to adjectives, adverbs, but also wrongly to Det/Pron - fix later)
+SUBSTITUTE (Comp) (Degree=Cmp) TARGET (Comp);
+SUBSTITUTE (Cmpar) (Degree=Cmp) TARGET (Cmpar);
+SUBSTITUTE (Superl) (Degree=Sup) TARGET (Superl);
+SUBSTITUTE (Pos) (Degree=Pos) TARGET (Pos);
+
+# Pronoun/Det features
+SUBSTITUTE (Pers) (PronType=Prs) TARGET (Pers);
+SUBSTITUTE (Dem) (PronType=Dem) TARGET (Dem);
+SUBSTITUTE (Interr) (PronType=Int) TARGET (Interr);
+SUBSTITUTE (Rel) (PronType=Rel) TARGET (Rel);
+SUBSTITUTE (Refl) (Reflex=Yes) TARGET (Refl);
+SUBSTITUTE (Poss) (Poss=Yes) TARGET (Poss);
+SUBSTITUTE (Indef) (PronType=Ind) TARGET (Indef);
+SUBSTITUTE (Tot) (PronType=Tot) TARGET (Tot);
+
+# Neg can be Polarity or PronType - map to Polarity for now
+SUBSTITUTE (Neg) (Polarity=Neg) TARGET (Neg);
+
+# Variant
+SUBSTITUTE (Short) (Variant=Short) TARGET (Short);
+
+# ========================================
+# Part of Speech Mappings
+# ========================================
+
+# Proper nouns (mark before converting N)
+MAP (PROPN) TARGET (N Prop);
+SUBSTITUTE (N) (PROPN) TARGET (PROPN);
+
+# Nouns
+SUBSTITUTE (N) (NOUN) TARGET (N);
+
+# Verbs
+SUBSTITUTE (V) (VERB) TARGET (V);
+
+# Adjectives
+SUBSTITUTE (A) (ADJ) TARGET (A);
+
+# Adverbs
+SUBSTITUTE (Adv) (ADV) TARGET (Adv);
+
+# Pronouns
+SUBSTITUTE (Pron) (PRON) TARGET (Pron);
+
+# Determiners
+SUBSTITUTE (Det) (DET) TARGET (Det);
+
+# Numerals
+SUBSTITUTE (Num) (NUM) TARGET (Num);
+
+# Adpositions
+SUBSTITUTE (Pr) (ADP) TARGET (Pr);
+SUBSTITUTE (Post) (ADP) TARGET (Post);
+
+# Conjunctions
+SUBSTITUTE (CC) (CCONJ) TARGET (CC);
+SUBSTITUTE (CS) (SCONJ) TARGET (CS);
+
+# Particles
+SUBSTITUTE (Pcle) (PART) TARGET (Pcle);
+
+# Interjections
+SUBSTITUTE (Interj) (INTJ) TARGET (Interj);
+
+# Punctuation
+SUBSTITUTE (CLB) (PUNCT) TARGET (CLB);
+SUBSTITUTE (SENT) (PUNCT) TARGET (SENT);
+
+# Auxiliaries
+SUBSTITUTE (Aux) (AUX) TARGET (Aux);
+
+# Predicatives -> ADJ
+SUBSTITUTE (Pred) (ADJ) TARGET (Pred);
+
+# Abbreviations
+SUBSTITUTE (Abbr) (X) TARGET (Abbr);
+MAP (Abbr=Yes) TARGET (Abbr);
+
+# ========================================
+# Cleanup done - grammar complete
+# ========================================
+# Note: Some tags like Degree=Pos may appear on DET/PRON
+# This is a known issue - refine gt2ud.cg3 further if needed
+

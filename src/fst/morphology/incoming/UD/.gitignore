@@ -1,0 +1,14 @@
+# UD treebanks (cloned from UniversalDependencies, not committed here)
+UD_Russian-*/
+
+# Generated output files
+gt_tokenized/
+*.pyc
+__pycache__/
+
+# Generated reports
+missing_lemmas.txt
+sentence_failures.txt
+
+# Backup files
+*.backup

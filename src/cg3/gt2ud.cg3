@@ -77,6 +77,11 @@ SUBSTITUTE (PrsPss) (VerbForm=Part Tense=Pres Voice=Pass) TARGET (PrsPss);
 SUBSTITUTE (PstAct) (VerbForm=Part Tense=Past Voice=Act) TARGET (PstAct);
 SUBSTITUTE (PstPss) (VerbForm=Part Tense=Past Voice=Pass) TARGET (PstPss);
 
+# Converbs (gerunds): GT marks them as Adv + verb forms  
+# They have VerbForm=Part from above, but should be VerbForm=Conv
+# Target verbs that still have the Adv tag (before it's converted to ADV)
+SUBSTITUTE (VerbForm=Part) (VerbForm=Conv) TARGET (Adv V VerbForm=Part);
+
 # Person (GT combines with number, so add Number only - VerbForm=Fin comes from tense)
 ADD (Number=Sing) TARGET (Sg1);
 ADD (Number=Sing) TARGET (Sg2);
@@ -93,11 +98,10 @@ SUBSTITUTE (Pl1) (Person=1) TARGET (Pl1);
 SUBSTITUTE (Pl2) (Person=2) TARGET (Pl2);
 SUBSTITUTE (Pl3) (Person=3) TARGET (Pl3);
 
-# Degree (will apply to adjectives, adverbs, but also wrongly to Det/Pron - fix later)
+# Degree
 SUBSTITUTE (Comp) (Degree=Cmp) TARGET (Comp);
 SUBSTITUTE (Cmpar) (Degree=Cmp) TARGET (Cmpar);
 SUBSTITUTE (Superl) (Degree=Sup) TARGET (Superl);
-SUBSTITUTE (Pos) (Degree=Pos) TARGET (Pos);
 
 # Pronoun/Det features
 SUBSTITUTE (Pers) (PronType=Prs) TARGET (Pers);
@@ -108,32 +112,61 @@ SUBSTITUTE (Refl) (Reflex=Yes) TARGET (Refl);
 SUBSTITUTE (Poss) (Poss=Yes) TARGET (Poss);
 SUBSTITUTE (Indef) (PronType=Ind) TARGET (Indef);
 SUBSTITUTE (Tot) (PronType=Tot) TARGET (Tot);
+SUBSTITUTE (All) (PronType=Tot) TARGET (All);
+SUBSTITUTE (Recipr) (PronType=Rcp) TARGET (Recipr);
 
-# Neg can be Polarity or PronType - map to Polarity for now
+# Possessive pronouns: GT uses "Pos" tag (e.g., мой+Det+Pos+...)
+# Convert to Poss=Yes and PronType=Prs
+SUBSTITUTE (Pos) (Poss=Yes PronType=Prs) TARGET (Pos);
+
+# Neg can be Polarity or PronType depending on context
+# For pronouns/adverbs it's PronType=Neg, for particles it's Polarity=Neg
+SUBSTITUTE (Neg) (PronType=Neg) TARGET (Neg PRON);
+SUBSTITUTE (Neg) (PronType=Neg) TARGET (Neg ADV);
 SUBSTITUTE (Neg) (Polarity=Neg) TARGET (Neg);
 
 # Variant
 SUBSTITUTE (Short) (Variant=Short) TARGET (Short);
+SUBSTITUTE (Pred) (Variant=Short) TARGET (Pred);
+
+# Numeral types
+SUBSTITUTE (Card) (NumType=Card) TARGET (Card);
+SUBSTITUTE (Ord) (NumType=Ord) TARGET (Ord);
+
+# Numeral forms
+SUBSTITUTE (Arab) (NumForm=Digit) TARGET (Arab);
+SUBSTITUTE (Roman) (NumForm=Roman) TARGET (Roman);
+
+# Name types (semantic tags on proper nouns)
+SUBSTITUTE (Sem/Sur) (NameType=Sur) TARGET (Sem/Sur);
+SUBSTITUTE (Sem/Ant) (NameType=Giv) TARGET (Sem/Ant);
+SUBSTITUTE (Sem/Alt) (NameType=Geo) TARGET (Sem/Alt);
+SUBSTITUTE (Sem/Pat) (NameType=Pat) TARGET (Sem/Pat);
 
 # ========================================
 # Part of Speech Mappings
 # ========================================
 
-# Proper nouns (mark before converting N)
-MAP (PROPN) TARGET (N Prop);
-SUBSTITUTE (N) (PROPN) TARGET (PROPN);
+# Proper nouns (convert N+Prop to PROPN)
+SUBSTITUTE (N) (PROPN) TARGET (N Prop);
+# Remove the Prop marker tag (it's GT-specific)
+SUBSTITUTE (Prop) (*) TARGET (Prop);
 
 # Nouns
 SUBSTITUTE (N) (NOUN) TARGET (N);
 
 # Verbs
 SUBSTITUTE (V) (VERB) TARGET (V);
+# Map auxiliary verb "быть" (to be) to AUX instead of VERB
+SUBSTITUTE (VERB) (AUX) TARGET (VERB) (0 ("быть"i));
 
 # Adjectives
 SUBSTITUTE (A) (ADJ) TARGET (A);
 
 # Adverbs
 SUBSTITUTE (Adv) (ADV) TARGET (Adv);
+# Remove ADV from converbs - UD wants them as pure VERB, not ADV+VERB
+SUBSTITUTE (ADV) (*) TARGET (ADV VERB VerbForm=Conv);
 
 # Pronouns
 SUBSTITUTE (Pron) (PRON) TARGET (Pron);
@@ -143,6 +176,10 @@ SUBSTITUTE (Det) (DET) TARGET (Det);
 
 # Numerals
 SUBSTITUTE (Num) (NUM) TARGET (Num);
+# Add NumForm=Word to spelled-out numerals (those without Digit or Roman form)
+MAP (NumForm=Word) TARGET (NUM) (NOT 0 (NumForm));
+# Add NumType=Card as default for numerals without a NumType
+MAP (NumType=Card) TARGET (NUM) (NOT 0 (NumType));
 
 # Adpositions
 SUBSTITUTE (Pr) (ADP) TARGET (Pr);
@@ -154,6 +191,8 @@ SUBSTITUTE (CS) (SCONJ) TARGET (CS);
 
 # Particles
 SUBSTITUTE (Pcle) (PART) TARGET (Pcle);
+# Add Polarity=Neg to the negative particle "не"
+MAP (Polarity=Neg) TARGET (PART) (0 ("не"i));
 
 # Interjections
 SUBSTITUTE (Interj) (INTJ) TARGET (Interj);
@@ -190,6 +229,12 @@ MAP (Voice=Act) TARGET (VERB TV) (NOT 0 (Voice));
 MAP (Voice=Act) TARGET (VERB IV) (NOT 0 (Voice));
 MAP (Voice=Act) TARGET (AUX IV) (NOT 0 (Voice));
 MAP (Voice=Act) TARGET (AUX TV) (NOT 0 (Voice));
+
+# 2b. Fix Voice=Mid for reflexive verbs (lemmas ending in -ся or -сь)
+# These are currently tagged as Voice=Act but should be Voice=Mid
+# Use SUBSTITUTE to replace Voice=Act with Voice=Mid for reflexive verbs
+SUBSTITUTE (Voice=Act) (Voice=Mid) TARGET (VERB) (0 (".*[сс]я"r)) (0 (Voice=Act));
+SUBSTITUTE (Voice=Act) (Voice=Mid) TARGET (VERB) (0 (".*[сс]ь"r)) (0 (Voice=Act));
 
 # 5. Remap certain pronouns to DET based on their type
 # This fixes the #5 failure (79,391 tokens, 7.4% of failures)

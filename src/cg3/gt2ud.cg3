@@ -45,17 +45,21 @@ SUBSTITUTE (Inan) (Animacy=Inan) TARGET (Inan);
 SUBSTITUTE (AnIn) (Animacy=Inan) TARGET (AnIn);
 
 # Tense
-SUBSTITUTE (Prs) (Tense=Pres) TARGET (Prs);
-SUBSTITUTE (Pst) (Tense=Past) TARGET (Pst);
-SUBSTITUTE (Fut) (Tense=Fut) TARGET (Fut);
+# In Russian, all finite verbs with tense are indicative mood
+# Add Mood=Ind and VerbForm=Fin along with tense conversion
+# (Note: Person markers will also add VerbForm=Fin separately)
+SUBSTITUTE (Prs) (Tense=Pres Mood=Ind VerbForm=Fin) TARGET (Prs);
+SUBSTITUTE (Pst) (Tense=Past Mood=Ind VerbForm=Fin) TARGET (Pst);
+SUBSTITUTE (Fut) (Tense=Fut Mood=Ind VerbForm=Fin) TARGET (Fut);
 
 # Aspect
 SUBSTITUTE (Perf) (Aspect=Perf) TARGET (Perf);
 SUBSTITUTE (Impf) (Aspect=Imp) TARGET (Impf);
 
-# Mood
-SUBSTITUTE (Ind) (Mood=Ind) TARGET (Ind);
-SUBSTITUTE (Imp) (Mood=Imp) TARGET (Imp);
+# Mood (for explicit mood markers, though most will get Mood=Ind from tense above)
+# Finite verbs are indicative or imperative in Russian, so add VerbForm=Fin
+SUBSTITUTE (Ind) (Mood=Ind VerbForm=Fin) TARGET (Ind);
+SUBSTITUTE (Imp) (Mood=Imp VerbForm=Fin) TARGET (Imp);
 SUBSTITUTE (Cnd) (Mood=Cnd) TARGET (Cnd);
 
 # Voice
@@ -67,25 +71,19 @@ SUBSTITUTE (Mid) (Voice=Mid) TARGET (Mid);
 SUBSTITUTE (Inf) (VerbForm=Inf) TARGET (Inf);
 SUBSTITUTE (Part) (VerbForm=Part) TARGET (Part);
 SUBSTITUTE (Ger) (VerbForm=Conv) TARGET (Ger);
-# Participle tags need VerbForm=Part and appropriate Tense
-SUBSTITUTE (PrsAct) (VerbForm=Part) TARGET (PrsAct);
-MAP (Tense=Pres) TARGET (PrsAct);
-SUBSTITUTE (PrsPss) (VerbForm=Part) TARGET (PrsPss);
-MAP (Tense=Pres) TARGET (PrsPss);
-MAP (Voice=Pass) TARGET (PrsPss);
-SUBSTITUTE (PstAct) (VerbForm=Part) TARGET (PstAct);
-MAP (Tense=Past) TARGET (PstAct);
-SUBSTITUTE (PstPss) (VerbForm=Part) TARGET (PstPss);
-MAP (Tense=Past) TARGET (PstPss);
-MAP (Voice=Pass) TARGET (PstPss);
+# Participle tags get VerbForm=Part, Tense, and Voice together
+SUBSTITUTE (PrsAct) (VerbForm=Part Tense=Pres Voice=Act) TARGET (PrsAct);
+SUBSTITUTE (PrsPss) (VerbForm=Part Tense=Pres Voice=Pass) TARGET (PrsPss);
+SUBSTITUTE (PstAct) (VerbForm=Part Tense=Past Voice=Act) TARGET (PstAct);
+SUBSTITUTE (PstPss) (VerbForm=Part Tense=Past Voice=Pass) TARGET (PstPss);
 
-# Person (GT combines with number, so add Number and VerbForm together)
-ADD (Number=Sing VerbForm=Fin) TARGET (Sg1);
-ADD (Number=Sing VerbForm=Fin) TARGET (Sg2);
-ADD (Number=Sing VerbForm=Fin) TARGET (Sg3);
-ADD (Number=Plur VerbForm=Fin) TARGET (Pl1);
-ADD (Number=Plur VerbForm=Fin) TARGET (Pl2);
-ADD (Number=Plur VerbForm=Fin) TARGET (Pl3);
+# Person (GT combines with number, so add Number only - VerbForm=Fin comes from tense)
+ADD (Number=Sing) TARGET (Sg1);
+ADD (Number=Sing) TARGET (Sg2);
+ADD (Number=Sing) TARGET (Sg3);
+ADD (Number=Plur) TARGET (Pl1);
+ADD (Number=Plur) TARGET (Pl2);
+ADD (Number=Plur) TARGET (Pl3);
 
 # Now substitute the person+number tags with just Person
 SUBSTITUTE (Sg1) (Person=1) TARGET (Sg1);
@@ -173,6 +171,41 @@ SUBSTITUTE (Pred) (ADJ) TARGET (Pred);
 # Abbreviations
 SUBSTITUTE (Abbr) (X) TARGET (Abbr);
 MAP (Abbr=Yes) TARGET (Abbr);
+
+# ========================================
+# Post-POS Default Feature Additions
+# ========================================
+# These rules add missing UD features that should be present by default
+
+# 1. Add Degree=Pos to adjectives and adverbs (unless they already have comparative/superlative)
+# This fixes the #1 failure (372,649 tokens, 34.6% of failures)
+MAP (Degree=Pos) TARGET (ADJ) (NOT 0 (Degree));
+MAP (Degree=Pos) TARGET (ADV) (NOT 0 (Degree));
+
+# 2. Add Voice=Act to verbs with TV (transitive) tag that don't have Voice yet
+# TV = transitive verb (active), IV = intransitive verb
+# Active voice is default for transitive verbs
+MAP (Voice=Act) TARGET (VERB TV) (NOT 0 (Voice));
+# Also add Voice=Act to IV verbs that don't have Voice (may be corrected later for middle voice)
+MAP (Voice=Act) TARGET (VERB IV) (NOT 0 (Voice));
+MAP (Voice=Act) TARGET (AUX IV) (NOT 0 (Voice));
+MAP (Voice=Act) TARGET (AUX TV) (NOT 0 (Voice));
+
+# 5. Remap certain pronouns to DET based on their type
+# This fixes the #5 failure (79,391 tokens, 7.4% of failures)
+# In UD, demonstrative and quantifying pronouns are often DET
+SUBSTITUTE (PRON) (DET) TARGET (PRON PronType=Dem);
+SUBSTITUTE (PRON) (DET) TARGET (PRON PronType=Tot);
+SUBSTITUTE (PRON) (DET) TARGET (PRON Poss=Yes);
+
+# 7-8. Add Case=Nom to short adjectives/participles that lack case
+# This partially fixes failures #7 and #8 (63,675 + 63,263 = ~127k tokens, ~11.8% of failures)
+# Short forms in Russian are typically nominative
+MAP (Case=Nom) TARGET (ADJ Variant=Short) (NOT 0 (Case));
+MAP (Case=Nom) TARGET (VERB Variant=Short) (NOT 0 (Case));
+
+# 9. Fix ADV tagging
+# This is mostly handled by earlier POS mappings
 
 # ========================================
 # Cleanup done - grammar complete

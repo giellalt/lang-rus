@@ -30,6 +30,9 @@ GENRSRCS:=
 #################################################
 #### Add language-specific build rules here: ####
 
+# No alt-orth tokenisers needed for Russian
+ALT_ORTHS =
+
 ##################################################################
 #### END: Add local processing instructions ABOVE this line ######
 ##################################################################

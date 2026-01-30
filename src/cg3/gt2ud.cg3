@@ -106,6 +106,19 @@ SUBSTITUTE (Superl) (Degree=Sup) TARGET (Superl);
 # Pronoun/Det features
 SUBSTITUTE (Pers) (PronType=Prs) TARGET (Pers);
 SUBSTITUTE (Dem) (PronType=Dem) TARGET (Dem);
+# Combined Interr+Rel: Words like "что", "кто", "какой", "чей", "кой" can be both interrogative and relative
+# UD uses the combined form PronType=Int,Rel for these ambiguous words
+SUBSTITUTE (Interr) (PronType=Int,Rel) TARGET (Interr) (0 ("что"i));
+SUBSTITUTE (Rel) (PronType=Int,Rel) TARGET (Rel) (0 ("что"i));
+SUBSTITUTE (Interr) (PronType=Int,Rel) TARGET (Interr) (0 ("кто"i));
+SUBSTITUTE (Rel) (PronType=Int,Rel) TARGET (Rel) (0 ("кто"i));
+SUBSTITUTE (Interr) (PronType=Int,Rel) TARGET (Interr) (0 ("какой"i));
+SUBSTITUTE (Rel) (PronType=Int,Rel) TARGET (Rel) (0 ("какой"i));
+SUBSTITUTE (Interr) (PronType=Int,Rel) TARGET (Interr) (0 ("чей"i));
+SUBSTITUTE (Rel) (PronType=Int,Rel) TARGET (Rel) (0 ("чей"i));
+SUBSTITUTE (Interr) (PronType=Int,Rel) TARGET (Interr) (0 ("кой"i));
+SUBSTITUTE (Rel) (PronType=Int,Rel) TARGET (Rel) (0 ("кой"i));
+# Individual conversions for purely interrogative or relative words
 SUBSTITUTE (Interr) (PronType=Int) TARGET (Interr);
 SUBSTITUTE (Rel) (PronType=Rel) TARGET (Rel);
 SUBSTITUTE (Refl) (Reflex=Yes) TARGET (Refl);
@@ -132,6 +145,7 @@ SUBSTITUTE (Pred) (Variant=Short) TARGET (Pred);
 # Numeral types
 SUBSTITUTE (Card) (NumType=Card) TARGET (Card);
 SUBSTITUTE (Ord) (NumType=Ord) TARGET (Ord);
+SUBSTITUTE (Coll) (NumType=Sets) TARGET (Coll);
 
 # Numeral forms
 SUBSTITUTE (Arab) (NumForm=Digit) TARGET (Arab);
@@ -142,6 +156,80 @@ SUBSTITUTE (Sem/Sur) (NameType=Sur) TARGET (Sem/Sur);
 SUBSTITUTE (Sem/Ant) (NameType=Giv) TARGET (Sem/Ant);
 SUBSTITUTE (Sem/Alt) (NameType=Geo) TARGET (Sem/Alt);
 SUBSTITUTE (Sem/Pat) (NameType=Pat) TARGET (Sem/Pat);
+
+# ========================================
+# Baseform-Based Feature Additions (Before POS Conversion)
+# ========================================
+# These rules add features based on lemma matching, before POS tags are converted
+# They must run BEFORE POS conversions because baseform matching doesn't work reliably after
+
+# Indefinite pronouns/adverbs with -то, -нибудь, -либо suffixes need PronType=Ind
+MAP (PronType=Ind) TARGET (Pron) IF (0 (".*-то"r));
+MAP (PronType=Ind) TARGET (Pron) IF (0 (".*-нибудь"r));
+MAP (PronType=Ind) TARGET (Pron) IF (0 (".*-либо"r));
+MAP (PronType=Ind) TARGET (Adv) IF (0 (".*-то"r));
+MAP (PronType=Ind) TARGET (Adv) IF (0 (".*-нибудь"r));
+MAP (PronType=Ind) TARGET (Adv) IF (0 (".*-либо"r));
+MAP (PronType=Ind) TARGET (Det) IF (0 (".*-то"r));
+MAP (PronType=Ind) TARGET (Det) IF (0 (".*-нибудь"r));
+MAP (PronType=Ind) TARGET (Det) IF (0 (".*-либо"r));
+
+# Negative pronouns/adverbs with ни- prefix need PronType=Neg
+MAP (PronType=Neg) TARGET (Pron) IF (0 ("ни.*"r));
+MAP (PronType=Neg) TARGET (Adv) IF (0 ("ни.*"r));
+MAP (PronType=Neg) TARGET (Det) IF (0 ("ни.*"r));
+
+# Demonstratives
+MAP (PronType=Dem) TARGET (Det) IF (0 ("такой"i));
+MAP (PronType=Dem) TARGET (Pron) IF (0 ("такой"i));
+MAP (PronType=Dem) TARGET (Det) IF (0 ("этот"i));
+MAP (PronType=Dem) TARGET (Pron) IF (0 ("этот"i));
+MAP (PronType=Dem) TARGET (Det) IF (0 ("тот"i));
+MAP (PronType=Dem) TARGET (Pron) IF (0 ("тот"i));
+# Demonstrative adverbs need both PronType=Dem and Degree=Pos
+# Adding both here because CG3 doesn't fire MAP rules after earlier MAPs
+MAP (PronType=Dem Degree=Pos) TARGET (Adv) IF (0 ("вон"i));
+MAP (PronType=Dem Degree=Pos) TARGET (Adv) IF (0 ("там"i));
+MAP (PronType=Dem Degree=Pos) TARGET (Adv) IF (0 ("тут"i));
+MAP (PronType=Dem Degree=Pos) TARGET (Adv) IF (0 ("здесь"i));
+MAP (PronType=Dem Degree=Pos) TARGET (Adv) IF (0 ("туда"i));
+MAP (PronType=Dem Degree=Pos) TARGET (Adv) IF (0 ("сюда"i));
+MAP (PronType=Dem Degree=Pos) TARGET (Adv) IF (0 ("оттуда"i));
+MAP (PronType=Dem Degree=Pos) TARGET (Adv) IF (0 ("отсюда"i));
+
+# Emphatic pronouns
+MAP (PronType=Emp) TARGET (Det) IF (0 ("сам"i));
+MAP (PronType=Emp) TARGET (Pron) IF (0 ("сам"i));
+MAP (PronType=Emp) TARGET (Det) IF (0 ("самый"i));
+MAP (PronType=Emp) TARGET (Pron) IF (0 ("самый"i));
+
+# Quantifiers
+MAP (PronType=Tot) TARGET (Det) IF (0 ("другой"i));
+MAP (PronType=Tot) TARGET (Det) IF (0 ("каждый"i));
+MAP (PronType=Tot) TARGET (Pron) IF (0 ("другой"i));
+MAP (PronType=Tot) TARGET (Pron) IF (0 ("каждый"i));
+
+# Collective/set numerals: "оба" (both) should be NumType=Sets
+# GT doesn't mark "оба" with Coll tag like it does for двое/трое, so add manually
+MAP (NumType=Sets) TARGET (Num) IF (0 ("оба"i));
+
+# Possessives
+MAP (Reflex=Yes) TARGET (Det Poss) IF (0 ("свой"i));
+MAP (Reflex=Yes) TARGET (Pron Poss) IF (0 ("свой"i));
+
+# Personal/reflexive pronouns
+MAP (PronType=Prs) TARGET (Pron) IF (0 ("себя"i));
+MAP (Reflex=Yes) TARGET (Pron) IF (0 ("себя"i));
+
+# Particles
+MAP (Polarity=Neg) TARGET (Pcle) IF (0 ("ни"i));
+MAP (Polarity=Neg) TARGET (Pcle) IF (0 ("нет"i));
+MAP (Polarity=Neg) TARGET (V) IF (0 ("нет"i));
+
+# Special handling for "нет" as predicative/negative existential verb
+# GT marks it as "Pred" but UD wants VERB with full morphology (no Variant=Short)
+MAP (VERB Polarity=Neg Tense=Pres Mood=Ind VerbForm=Fin Person=3 Number=Sing Aspect=Imp Voice=Act) TARGET (Variant=Short) IF (0 ("нет"i));
+SUBSTITUTE (Variant=Short) (*) TARGET (Variant=Short VERB) IF (0 ("нет"i));
 
 # ========================================
 # Part of Speech Mappings
@@ -217,7 +305,6 @@ MAP (Abbr=Yes) TARGET (Abbr);
 # These rules add missing UD features that should be present by default
 
 # 1. Add Degree=Pos to adjectives and adverbs (unless they already have comparative/superlative)
-# This fixes the #1 failure (372,649 tokens, 34.6% of failures)
 MAP (Degree=Pos) TARGET (ADJ) (NOT 0 (Degree));
 MAP (Degree=Pos) TARGET (ADV) (NOT 0 (Degree));
 
@@ -230,18 +317,24 @@ MAP (Voice=Act) TARGET (VERB IV) (NOT 0 (Voice));
 MAP (Voice=Act) TARGET (AUX IV) (NOT 0 (Voice));
 MAP (Voice=Act) TARGET (AUX TV) (NOT 0 (Voice));
 
-# 2b. Fix Voice=Mid for reflexive verbs (lemmas ending in -ся or -сь)
+# 2b. Fix Voice=Mid for reflexive verbs (lemmas ending in -ться or -тись)
 # These are currently tagged as Voice=Act but should be Voice=Mid
 # Use SUBSTITUTE to replace Voice=Act with Voice=Mid for reflexive verbs
-SUBSTITUTE (Voice=Act) (Voice=Mid) TARGET (VERB) (0 (".*[сс]я"r)) (0 (Voice=Act));
-SUBSTITUTE (Voice=Act) (Voice=Mid) TARGET (VERB) (0 (".*[сс]ь"r)) (0 (Voice=Act));
+SUBSTITUTE (Voice=Act) (Voice=Mid) TARGET (VERB) (0 (".*ться"r)) (0 (Voice=Act));
+SUBSTITUTE (Voice=Act) (Voice=Mid) TARGET (VERB) (0 (".*тись"r)) (0 (Voice=Act));
 
 # 5. Remap certain pronouns to DET based on their type
-# This fixes the #5 failure (79,391 tokens, 7.4% of failures)
 # In UD, demonstrative and quantifying pronouns are often DET
 SUBSTITUTE (PRON) (DET) TARGET (PRON PronType=Dem);
 SUBSTITUTE (PRON) (DET) TARGET (PRON PronType=Tot);
 SUBSTITUTE (PRON) (DET) TARGET (PRON Poss=Yes);
+
+# 6. Special particles and auxiliaries (after POS conversion)
+# Conditional particle "бы"/"б" is AUX with Mood=Cnd
+SUBSTITUTE (PART) (AUX) TARGET (PART) (0 ("бы"i));
+SUBSTITUTE (PART) (AUX) TARGET (PART) (0 ("б"i));
+MAP (Mood=Cnd) TARGET (AUX) IF (0 ("бы"i));
+MAP (Mood=Cnd) TARGET (AUX) IF (0 ("б"i));
 
 # 7-8. Add Case=Nom to short adjectives/participles that lack case
 # This partially fixes failures #7 and #8 (63,675 + 63,263 = ~127k tokens, ~11.8% of failures)

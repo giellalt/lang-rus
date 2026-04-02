@@ -18,6 +18,7 @@ Center location data taken from [Glottolog](https://glottolog.org/). Area extent
 
 </div>
 
+
 This page documents the work on the [Russian language model](https://github.com/github/lang-rus). The lexicon is a full-size lexicon of Russian (appr 125000 lemmata), and the morphological analysis is in place. The analyser contains stress marking. The syntactic disambiguation is still work in progress. 
 
 

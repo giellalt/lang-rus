@@ -4,15 +4,7 @@
 
 {% include_relative language-map.md %}
 
-<div class="badges" markdown="1">
-[![Maturity](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2Flang-rus%2Fgenerated%2Fdocs-data%2Ffst-maturity.json)](https://giellalt.github.io/MaturityClassification.html) <br/>
-![Lemma count](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2Flang-rus%2Fgenerated%2Fdocs-data%2Ffst-lemmacount.json) <br/>
-[![Speller suggestion quality](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2Flang-rus%2Fgenerated%2Fdocs-data%2Fspeller-suggestions.json)](typosreport/) <br/>
-[![License](https://img.shields.io/github/license/giellalt/lang-rus)](https://github.com/giellalt/lang-rus/blob/main/LICENSE) <br/>
-[![Issues](https://img.shields.io/github/issues/giellalt/lang-rus)](https://github.com/giellalt/lang-rus/issues) <br/>
-[![Build Status](https://builds.giellalt.org/api/badge/lang-rus?label=CI)](https://builds.giellalt.org/pipelines/lang-rus/builds/latest) <br/>
-[![Glottolog](https://img.shields.io/badge/Glottolog-green)](https://glottolog.org/resource/languoid/id/russ1263)
-</div>
+{% include language-badges.html glottolog_id="russ1263" %}
 
 Center location data taken from [Glottolog](https://glottolog.org/). Area extent is local data. Both can be adjusted if wrong - file a pull request!
 

@@ -1,0 +1,1 @@
+{"generated":"2026-10-07T10:15:58.855Z","commit":"c68ca59e79cfdfa9d3a7d117227547d3a6f7eeca","build_url":"https://builds.giellalt.org/pipelines/lang-rus/builds/56","suites":[{"id":"speller","title":"speller","kind":"speller","lexc":null,"lemmas":119827,"tested":119827,"success_pct":98.05970273811411,"truncated":false,"failures":2325}]}
